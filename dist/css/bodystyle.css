@@ -24965,6 +24965,9 @@ input.btn-cover-lg-o {
   top: 100px;
   right: 0;
 }
+.lista-scroll ul {
+  list-style: none !important;
+}
 .lista-scroll ul li a {
   position: relative;
   display: block;

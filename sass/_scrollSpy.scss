@@ -7,6 +7,7 @@
     @include mixim.posicionamiento-fixed(100px, 0, null, null);
     
     ul {
+        list-style: none !important;
         li {
             a {                
                 position: relative;

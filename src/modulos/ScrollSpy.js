@@ -86,9 +86,9 @@ import ERR from "./Errores"
 
 
 
-        for(var i = 0; i < cantidad; i++){
-            ids[i] = $(".scroll-item:nth-child("+ (i + 1) +")").attr("id") 
-        }
+        $(".scroll-item").each( (index, element) => {
+            ids.push($(element).attr("id"))
+        })
 
 
         c.ancho = ancho
@@ -110,12 +110,14 @@ import ERR from "./Errores"
         seleccionarIndice(1)
     } 
 
-    const eventoScroll = (e) => {
-        for(var i = 0; i < cantidad; i++){
-            if($(e.target).scrollTop() >= $("#" + ids[i]).offset().top - 200){
-                seleccionarIndice(i + 1)
+    const eventoScroll = (el) => {
+
+        ids.forEach((e) => {
+            if($(el.target).scrollTop() >= $("#" + e).offset().top - 200)
+            {
+                seleccionarIndice(ids.indexOf(e) - 1)
             }
-        }
+        })
     }
 
     var seleccionarIndice = (indice)=> {
@@ -132,23 +134,10 @@ import ERR from "./Errores"
         $(window).scroll(eventoScroll)
     }
 
-    var seleccionar = () => {
-        $(".lista-scroll ul li").click(function() {
-            $(".lista-scroll ul li a").css("color", c.colorNoSeleccionado)
-            $(".elemento-seleccionado").remove()
-            var elem = $("<p class='elemento-seleccionado " + c.colorBorde + "'></p>")
-            elem.css("height", c.alturaBorde)
-            $(this).children("a").before(elem);
-            $(this).children("a").css("color", c.colorSeleccionado)
-        })
-    }
-
     var ScrollSpy = {
         iniciar: (config) => {
             inicializarIds(config)
             inicializar()
-            seleccionar()
-            
         },
 
         destroy: () => destroy()
