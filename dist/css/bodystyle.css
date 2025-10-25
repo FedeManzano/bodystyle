@@ -20225,10 +20225,13 @@ table thead tr th {
 }
 
 .badge-mje-izq,
+.badge-mje-left,
 .badge-mje-der,
+.badge-mje-right,
 .badge-mje-arr,
+.badge-mje-top,
 .badge-mje-aba,
-.badge-mje-aba {
+.badge-mje-bottom {
   display: inline-block;
   position: relative;
   padding: 7px;
@@ -20238,23 +20241,26 @@ table thead tr th {
   border-radius: 5px;
   z-index: 10;
   margin-top: 12px;
-  background-color: white;
 }
 .badge-mje-izq::before,
+.badge-mje-left::before,
 .badge-mje-der::before,
+.badge-mje-right::before,
 .badge-mje-arr::before,
+.badge-mje-top::before,
 .badge-mje-aba::before,
-.badge-mje-aba::before {
+.badge-mje-bottom::before {
   content: "";
   height: 10px;
   width: 10px;
   position: absolute;
   transform: rotate(45deg);
-  z-index: -1;
+  z-index: 3;
   background-color: white;
 }
 
-.badge-mje-izq::before {
+.badge-mje-izq::before,
+.badge-mje-left::before {
   left: -5px;
   top: calc(50% - 5px);
   z-index: -1;
@@ -20262,7 +20268,8 @@ table thead tr th {
   border-right: 1px solid transparent !important;
 }
 
-.badge-mje-der::before {
+.badge-mje-der::before,
+.badge-mje-right::before {
   right: -5px;
   top: calc(50% - 5px);
   z-index: -1;
@@ -20270,7 +20277,8 @@ table thead tr th {
   border-left: 1px solid transparent !important;
 }
 
-.badge-mje-arr::before {
+.badge-mje-arr::before,
+.badge-mje-top::before {
   left: calc(50% - 5px);
   top: -5px;
   z-index: -1;
@@ -20278,7 +20286,8 @@ table thead tr th {
   border-right: 1px solid transparent !important;
 }
 
-.badge-mje-aba::before {
+.badge-mje-aba::before,
+.badge-mje-bottom::before {
   left: calc(50% - 5px);
   bottom: -5px;
   z-index: -1;
@@ -20286,52 +20295,76 @@ table thead tr th {
   border-left: 1px solid transparent !important;
 }
 
-.badge-mje-rojo {
+.badge-mje-rojo,
+.badge-mje-red {
   border: 1px solid rgb(228, 22, 22);
-  color: rgb(228, 22, 22);
-}
-.badge-mje-rojo::before {
-  border: 1px solid rgb(228, 22, 22);
-}
-
-.badge-mje-azul {
-  border: 1px solid rgb(16, 69, 183);
-  color: rgb(16, 69, 183);
-}
-.badge-mje-azul::before {
-  border: 1px solid rgb(16, 69, 183);
-}
-
-.badge-mje-verde {
-  border: 1px solid rgb(0, 124, 103);
-  color: rgb(0, 124, 103);
-}
-.badge-mje-verde::before {
-  border: 1px solid rgb(0, 124, 103);
-}
-
-.badge-mje-negro {
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-}
-.badge-mje-negro::before {
-  border: 1px solid rgb(0, 0, 0);
-}
-
-.badge-mje-blanco {
-  border: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
+  background-color: rgb(228, 22, 22);
 }
-.badge-mje-blanco::before {
-  border: 1px solid rgb(255, 255, 255);
+.badge-mje-rojo::before,
+.badge-mje-red::before {
+  border: 1px solid rgb(228, 22, 22);
+  background-color: rgb(228, 22, 22);
 }
 
-.badge-mje-gris {
-  border: 1px solid rgb(128, 128, 128);
-  color: rgb(128, 128, 128);
+.badge-mje-azul,
+.badge-mje-blue {
+  border: 1px solid rgb(16, 69, 183);
+  color: rgb(255, 255, 255);
+  background-color: rgb(16, 69, 183);
 }
-.badge-mje-gris::before {
+.badge-mje-azul::before,
+.badge-mje-blue::before {
+  border: 1px solid rgb(16, 69, 183);
+  background-color: rgb(16, 69, 183);
+}
+
+.badge-mje-verde,
+.badge-mje-green {
+  border: 1px solid rgb(0, 124, 103);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 124, 103);
+}
+.badge-mje-verde::before,
+.badge-mje-green::before {
+  border: 1px solid rgb(0, 124, 103);
+  background-color: rgb(0, 124, 103);
+}
+
+.badge-mje-negro,
+.badge-mje-black {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+.badge-mje-negro::before,
+.badge-mje-black::before {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+.badge-mje-blanco,
+.badge-mje-white {
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.badge-mje-blanco::before,
+.badge-mje-white::before {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.badge-mje-gris,
+.badge-mje-grey {
   border: 1px solid rgb(128, 128, 128);
+  color: rgb(0, 0, 0);
+  background-color: rgb(128, 128, 128);
+}
+.badge-mje-gris::before,
+.badge-mje-grey::before {
+  border: 1px solid rgb(128, 128, 128);
+  background-color: rgb(128, 128, 128);
 }
 
 .badge-social {
