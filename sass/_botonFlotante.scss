@@ -1,0 +1,63 @@
+@use "globales/funciones";
+@use "globales/mixim";
+@use "globales/variables";
+
+.btn-flotante {
+    @include mixim.ancho-alto(70px, 300px);
+    @include mixim.posicionamiento-fixed(210px, 80px,null,null);
+    z-index: funciones.superposicion(bf);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+   
+    .btn,
+    .btn-lg,
+    .btn-sm {
+        border-radius: 0 !important;
+        font-size: 12px !important;
+        padding: 3px !important;
+    }
+
+    .boton-menu {
+        @include mixim.ancho-alto(60px, 60px);
+        @include mixim.flex-box-centrado();
+        background-color: variables.$fd-rojo;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+        box-shadow: 0 0.5px 3px 1px rgba(0, 0, 0, 0.534);
+    }
+
+    .boton-menu:hover {
+        background-color: variables.$btn-rojo-hover;
+    }
+
+    .submenu {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        .boton-opciones {
+            @include mixim.flex-box-centrado();
+            @include mixim.ancho-alto(40px, 40px);
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0.5px 3px 1px rgba(0, 0, 0, 0.534);
+        }
+        .boton-opciones:hover {
+            background-color: rgba(2, 34, 48, 0.877) !important;
+        }
+    }
+}
+
+
+
+

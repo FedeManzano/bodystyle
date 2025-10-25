@@ -1,0 +1,74 @@
+/*!
+ * BodyStyle v4.0.0
+ * Copyright Federico Manzano
+ * Licencia MIT
+ * Repositorio (https://github.com/FedeManzano/bodystyle)
+ */
+
+
+
+//Generales 
+@use "sass:math";
+@use "globales";
+@use "generales";
+@use "utilitariosExp";
+//@usert "iconos";
+@use "fondos";
+
+//Aliniamiento 
+@use "alineamiento";
+
+
+//CSS 
+@use "efecto-borde";
+@use "tabla";
+@use "alertas";
+@use "badges";
+@use "efectoTresD";
+//@import "decoracionTitulo";
+@use "formas";
+@use "conEtiquetados";
+@use "hover";
+@use "breadcrumbs";
+//@import "social";
+@use "coleccionesFlotantes";
+
+
+// JS
+
+@use "efecto-waves";
+@use "imagenes";
+@use "botonFlotante";
+@use "scroollSpy";
+@use "paralax";
+@use "botonInicio";
+//@import "efecto-scroll";
+
+
+// Componentes
+@use "preloader";
+@use "progressBar";
+@use "botones";
+@use "card";
+@use "modal";
+@use "menu";
+@use "nav";
+@use "sidebar_fixed";
+@use "slider";
+@use "colecciones";
+@use "tab";
+
+
+// Formularios
+@use "switch";
+@use "inputText";
+@use "inputRadioCheck";
+@use "inputGrupo";
+@use "select";
+@use "selectModificado";
+@use "formularios";
+@use "range";
+@use "templateFormularios";
+
+
+@import url("https://rawcdn.githack.com/FedericoManzano/dynamics-tips/b3bd24a6c9eb8cd9762c74cdd0dafdcb4fdfe90a/dist/css/estilos-dynamics.min.css");

@@ -1,0 +1,74 @@
+@use "../globales/funciones";
+
+
+@function multiplo5($num) {
+    @return $num % 5 == 0;
+}
+
+@for $i from 8 through 300 {
+    .fz-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+
+@media (max-width: funciones.dameMedida(m)){
+    @for $i from 8 through 300 {
+        .fz-m-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+
+
+@media (max-width: funciones.dameMedida(s)){
+    @for $i from 8 through 300 {
+        .fz-s-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+
+@media (max-width: funciones.dameMedida(xs)){
+    @for $i from 8 through 300 {
+        .fz-xs-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+
+
+@for $i from 15 through 100 {
+    .lh-#{$i} {
+        line-height: #{$i}px !important;
+    }
+}
+
+
+@media (max-width: funciones.dameMedida(m)){
+    @for $i from 15 through 100 {
+        .lh-m-#{$i} {
+            line-height: #{$i}px !important;
+        }
+    }
+}
+
+
+@media (max-width: funciones.dameMedida(s)){
+    @for $i from 15 through 100 {
+        .lh-s-#{$i} {
+            line-height: #{$i}px !important;
+        }
+    }
+}
+
+@media (max-width: funciones.dameMedida(xs)){
+    @for $i from 15 through 100 {
+        .lh-xs-#{$i} {
+            line-height: #{$i}px !important;
+        }
+    }
+}
+
+
+

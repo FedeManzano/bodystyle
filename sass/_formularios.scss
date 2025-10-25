@@ -1,0 +1,63 @@
+@use "globales/funciones";
+
+.form-grupo,
+.form-grupo-linea  {
+    // 1 EM
+    font-size: 16px;
+
+
+    small {
+        padding: 0;
+        margin: 0;
+        font-size: .875em;
+        color: grey;
+    }
+
+    label {
+        font-size: 1.125em !important;
+        line-height: 2.5em;
+        color: black;
+        
+        white-space: nowrap;
+    }
+}
+
+.form-grupo-linea {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    input, 
+    .input-icon {
+        margin-bottom: 10px;
+    }
+
+    *:last-child:not(input):not(select):not(.input-icon){
+        margin-left: 10px;
+    }
+
+    *:last-child {
+        margin-bottom: 10px;
+    }
+
+    label {
+        padding-right: 1.25em;
+        display: flex;
+        align-items: center;
+        min-width: 7.5em;
+        height: 2.1em;
+    }
+
+
+    @media (max-width: funciones.dameMedida(s) ){
+        display: block;
+        *:last-child:not(input):not(select):not(.input-icon){
+            margin-left: 0;
+        }
+        input, .input-icon {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+}

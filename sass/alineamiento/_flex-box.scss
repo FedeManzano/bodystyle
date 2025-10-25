@@ -1,0 +1,446 @@
+@use "../globales/funciones";
+
+
+.d-flex {
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+}
+
+.flex-fila,
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-columna,
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-fila-reversa,
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-columna-reversa,
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-no-wrap {
+    flex-wrap: nowrap !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.flex-wrap-reversa,
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+}
+
+
+.just-inicio,
+.just-start {
+    justify-content: flex-start !important;
+}
+
+.just-final,
+.just-end {
+    justify-content: flex-end !important;
+}
+
+.just-centrada,
+.just-center {
+    justify-content: center !important;
+}
+
+.just-cobertura,
+.just-around {
+    justify-content: space-around !important;
+}
+
+.just-cobertura-tope,
+.just-between {
+    justify-content: space-between !important;
+}
+
+.ali-centrada,
+.ali-center {
+    align-items: center !important;
+}
+
+.ali-inicio,
+.ali-start {
+    align-items: flex-start !important;
+}
+
+.ali-final,
+.ali-end {
+    align-items: flex-end !important;
+}
+
+.ali-fuente,
+.ali-baseline {
+    align-items: baseline !important;
+}
+
+.ali-cobertura,
+.ali-stretch {
+    align-items: stretch !important;
+}
+
+.ali-contenido-centrada {
+    align-content: center;
+}
+
+.ali-contenido-inicio {
+    align-content: flex-start;
+}
+
+.ali-contenido-final {
+    align-content: flex-end;
+}
+
+.ali-contenido-cobertura {
+    align-content: stretch;
+}
+
+
+
+@media (max-width: funciones.dameMedida(m)){
+    .d-flex-m {
+        display: flex !important;
+        -webkit-display: flex !important;
+        -moz-display: flex !important;
+        -o-display: flex !important;
+        -ms-display: flex !important;
+    }
+    
+    .flex-fila-m,
+    .flex-row-m {
+        flex-direction: row !important;
+    }
+    
+    .flex-columna-m,
+    .flex-column-m {
+        flex-direction: column !important;
+    }
+    
+    .flex-fila-reversa-m,
+    .flex-row-reverse-m {
+        flex-direction: row-reverse !important;
+    }
+    
+    .flex-columna-reversa-m,
+    .flex-column-reverse-m {
+        flex-direction: column-reverse !important;
+    }
+    
+    .flex-no-wrap-m {
+        flex-wrap: nowrap !important;
+    }
+    
+    .flex-wrap-m {
+        flex-wrap: wrap !important;
+    }
+    
+    .flex-wrap-reversa-m,
+    .flex-wrap-reverse-m {
+        flex-wrap: wrap-reverse !important;
+    }
+    
+    
+    .just-inicio-m,
+    .just-start-m {
+        justify-content: flex-start !important;
+    }
+    
+    .just-final-m,
+    .just-end-m {
+        justify-content: flex-end !important;
+    }
+    
+    .just-centrada-m,
+    .just-center-m {
+        justify-content: center !important;
+    }
+    
+    .just-cobertura-m,
+    .just-around-m {
+        justify-content: space-around !important;
+    }
+    
+    .just-cobertura-tope-m,
+    .just-between-m {
+        justify-content: space-between !important;
+    }
+    
+    .ali-centrada-m,
+    .ali-center-m {
+        align-items: center !important;
+    }
+    
+    .ali-inicio-m,
+    .ali-start-m {
+        align-items: flex-start !important;
+    }
+    
+    .ali-final-m,
+    .ali-end-m {
+        align-items: flex-end !important;
+    }
+    
+    .ali-fuente-m,
+    .ali-baseline-m {
+        align-items: baseline !important;
+    }
+    
+    .ali-cobertura-m,
+    .ali-stretch-m {
+        align-items: stretch !important;
+    }
+    
+    .ali-contenido-centrada-m,
+    .ali-centent-center-m {
+        align-content: center !important;
+    }
+    
+    .ali-contenido-inicio-m {
+        align-content: flex-start;
+    }
+    
+    .ali-contenido-final-m {
+        align-content: flex-end;
+    }
+    
+    .ali-contenido-cobertura-m {
+        align-content: stretch;
+    }
+    
+}
+
+@media (max-width: funciones.dameMedida(s)){
+    .d-flex-s {
+        display: flex !important;
+        -webkit-display: flex !important;
+        -moz-display: flex !important;
+        -o-display: flex !important;
+        -ms-display: flex !important;
+    }
+    
+    .flex-fila-s,
+    .flex-row-s {
+        flex-direction: row !important;
+    }
+    
+    .flex-columna-s,
+    .flex-column-s {
+        flex-direction: column !important;
+    }
+    
+    .flex-fila-reversa-s,
+    .flex-row-reverse-s {
+        flex-direction: row-reverse !important;
+    }
+    
+    .flex-columna-reversa-s,
+    .flex-column-reverse-s {
+        flex-direction: column-reverse !important;
+    }
+    
+    .flex-no-wrap-s {
+        flex-wrap: nowrap !important;
+    }
+    
+    .flex-wrap-s {
+        flex-wrap: wrap !important;
+    }
+    
+    .flex-wrap-reversa-s,
+    .flex-wrap-reverse-s {
+        flex-wrap: wrap-reverse !important;
+    }
+    
+    .just-inicio-s,
+    .just-start-s {
+        justify-content: flex-start !important;
+    }
+    
+    .just-final-s,
+    .just-end-s {
+        justify-content: flex-end !important;
+    }
+    
+    .just-centrada-s,
+    .just-center-s {
+        justify-content: center !important;
+    }
+    
+    .just-cobertura-s,
+    .just-around-s {
+        justify-content: space-around !important;
+    }
+    
+    .just-cobertura-tope-s,
+    .just-between-s {
+        justify-content: space-between !important;
+    }
+    
+    .ali-centrada-s,
+    .ali-center-s {
+        align-items: center !important;
+    }
+    
+    .ali-inicio-s,
+    .ali-start-s {
+        align-items: flex-start !important;
+    }
+    
+    .ali-final-s,
+    .ali-end-s {
+        align-items: flex-end !important;
+    }
+    
+    .ali-fuente-s,
+    .ali-baseline-s {
+        align-items: baseline !important;
+    }
+    
+    .ali-cobertura-s,
+    .ali-stretch-s {
+        align-items: stretch !important;
+    }
+    
+    .ali-contenido-centrada-s {
+        align-content: center;
+    }
+    
+    .ali-contenido-inicio-s {
+        align-content: flex-start;
+    }
+    
+    .ali-contenido-final-s {
+        align-content: flex-end;
+    }
+    
+    .ali-contenido-cobertura-s {
+        align-content: stretch;
+    }
+    
+}
+
+
+@media (max-width: funciones.dameMedida(xs)){
+    .d-flex-xs {
+        display: flex !important;
+        -webkit-display: flex !important;
+        -moz-display: flex !important;
+        -o-display: flex !important;
+        -ms-display: flex !important;
+    }
+    
+    .flex-fila-xs,
+    .flex-row-xs {
+        flex-direction: row !important;
+    }
+    
+    .flex-columna-xs,
+    .flex-column-xs {
+        flex-direction: column !important;
+    }
+    
+    .flex-fila-reversa-xs,
+    .flex-row-reverse-xs {
+        flex-direction: row-reverse !important;
+    }
+    
+    .flex-columna-reversa-xs,
+    .flex-column-reverse-xs {
+        flex-direction: column-reverse !important;
+    }
+    
+    .flex-no-wrap-xs {
+        flex-wrap: nowrap !important;
+    }
+    
+    .flex-wrap-xs {
+        flex-wrap: wrap !important;
+    }
+    
+    .flex-wrap-reversa-xs,
+    .flex-wrap-reverse-xs {
+        flex-wrap: wrap-reverse !important;
+    }
+    
+    .just-inicio-xs,
+    .just-start-xs {
+        justify-content: flex-start !important;
+    }
+    
+    .just-final-xs,
+    .just-end-xs {
+        justify-content: flex-end !important;
+    }
+    
+    .just-centrada-xs,
+    .just-center-xs {
+        justify-content: center !important;
+    }
+    
+    .just-cobertura-xs,
+    .just-around-xs {
+        justify-content: space-around !important;
+    }
+    
+    .just-cobertura-tope-xs,
+    .just-between-xs {
+        justify-content: space-between !important;
+    }
+
+    
+    .ali-centrada-xs,
+    .ali-center-xs {
+        align-items: center !important;
+    }
+    
+    .ali-inicio-xs,
+    .ali-start-xs {
+        align-items: flex-start !important;
+    }
+    
+    .ali-final-xs,
+    .ali-end-xs {
+        align-items: flex-end !important;
+    }
+    
+    .ali-fuente-xs,
+    .ali-baseline-xs {
+        align-items: baseline !important;
+    }
+    
+    .ali-cobertura-xs,
+    .ali-stretch-xs {
+        align-items: stretch !important;
+    }
+    
+    .ali-contenido-centrada-xs {
+        align-content: center;
+    }
+    
+    .ali-contenido-inicio-xs {
+        align-content: flex-start;
+    }
+    
+    .ali-contenido-final-xs {
+        align-content: flex-end;
+    }
+    
+    .ali-contenido-cobertura-xs {
+        align-content: stretch;
+    }
+    
+}

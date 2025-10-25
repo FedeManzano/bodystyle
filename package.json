@@ -1,0 +1,45 @@
+{
+  "name": "bodyui2",
+  "version": "4.0.4",
+  "description": "Librería de estilos estáticos y dinámicos para la creación del Front-End WEB.",
+  "main": "dist/js/bodystyle.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedeManzano/bodystyle"
+  },
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "src/{modulos}/**/*.{js}",
+    "src/**/*.js",
+    "sass/**/*.scss"
+  ],
+  "keywords": [
+    "librería",
+    "css",
+    "framework",
+    "ui",
+    "sass"
+  ],
+  "author": "Federico Manzano",
+  "license": "MIT",
+  "style": "dist/css/bodystyle.css",
+  "sass": "sass/bodystyle.scss",
+  "dependencies": {
+    "dynamics-tips": "^1.8.0",
+    "jquery": "^3.5.1",
+    "show-sintax": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^4.1.0"
+  }
+}

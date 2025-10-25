@@ -1,0 +1,203 @@
+@use "globales/variables";
+
+.efecto-borde-rojo,
+.efecto-borde-azul,
+.efecto-borde-verde,
+.efecto-borde-negro,
+.efecto-borde-gris,
+.efecto-borde-blanco{
+    position: relative; 
+    &::before {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+}
+.efecto-borde-rojo::before {
+    background-color: variables.$fd-rojo;
+}
+
+
+.efecto-borde-azul::before {
+    background-color: variables.$fd-azul;
+}
+
+.efecto-borde-verde::before {
+    background-color: variables.$fd-verde;
+}
+
+.efecto-borde-gris::before {
+    background-color: variables.$fd-gris;
+}
+
+.efecto-borde-negro::before {
+    background-color: black;
+}
+
+.efecto-borde-blanco::before {
+    background-color: white;
+}
+
+
+
+.derecha::before {
+    right: 0 !important;
+}
+
+.izquierda::before {
+    left: 0 !important;
+}
+
+.centro {
+    &::before {
+        left: 50% !important;
+    }
+
+    &:hover::before {
+        left: 0 !important;
+    }
+}
+
+
+
+@for $i from 1 to 11 {
+    
+    .e-borde-izq-rojo-#{$i},
+    .e-borde-izq-verde-#{$i},
+    .e-borde-izq-azul-#{$i},
+    .e-borde-izq-gris-#{$i},
+    .e-borde-izq-negro-#{$i},
+    .e-borde-izq-blanco-#{$i} {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: #{$i}px;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+            background-color: variables.$fd-rojo;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+
+    .e-borde-izq-verde-#{$i}{
+        &::before {
+            background-color: variables.$fd-verde;
+        }
+    }
+
+
+    .e-borde-izq-azul-#{$i}{
+        &::before {
+            background-color: variables.$fd-azul;
+        }
+    }
+
+
+    .e-borde-izq-gris-#{$i}{
+        &::before {
+            background-color: variables.$fd-gris;
+        }
+    }
+
+
+    .e-borde-izq-negro-#{$i}{
+        &::before {
+            background-color: variables.$fd-negro;
+        }
+    }
+
+    .e-borde-izq-blanco-#{$i}{
+        &::before {
+            background-color: variables.$fd-blanco;
+        }
+    }
+
+}
+
+
+@for $i from 1 to 11 {
+    
+    .e-borde-der-rojo-#{$i},
+    .e-borde-der-verde-#{$i},
+    .e-borde-der-azul-#{$i},
+    .e-borde-der-gris-#{$i},
+    .e-borde-der-negro-#{$i},
+    .e-borde-der-blanco-#{$i} {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: #{$i}px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+            background-color: variables.$fd-rojo;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+
+    .e-borde-der-verde-#{$i}{
+        &::before {
+            background-color: variables.$fd-verde;
+        }
+    }
+
+
+    .e-borde-der-azul-#{$i}{
+        &::before {
+            background-color: variables.$fd-azul;
+        }
+    }
+
+
+    .e-borde-der-gris-#{$i}{
+        &::before {
+            background-color: variables.$fd-gris;
+        }
+    }
+
+
+    .e-borde-der-negro-#{$i}{
+        &::before {
+            background-color: variables.$fd-negro;
+        }
+    }
+
+    .e-borde-der-blanco-#{$i}{
+        &::before {
+            background-color: variables.$fd-blanco;
+        }
+    }
+
+}
+
+
+
+
+

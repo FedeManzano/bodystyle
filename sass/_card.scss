@@ -1,0 +1,494 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+.tarjeta {
+    --deprecated: "WARNING: Use .other-class instead";
+    font-size: 16px;  // 1EM
+
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    position: relative;
+    background-color: white;
+
+    .tarjeta-titulo {
+        font-size: 1.3em;
+        font-weight: 600;
+        letter-spacing: 0.075em;
+        margin-bottom: 0.7em;
+    }
+ 
+    .tarjeta-cabecera,
+    .tarjeta-pie {
+        padding: .9375em;
+        font-size: 1em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    .tarjeta-cuerpo {
+        padding: .9375em;
+        line-height: 1.5625em;
+        color: variables.$fd-gris-az;
+        font-size: 1em !important;
+    }
+
+    .tarjeta-pie {
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        border-bottom: none;
+    }
+
+    .tarjeta-link {
+        border: none;
+        font-size: 1.2em;
+        color: rgb(0, 80, 185);
+        letter-spacing: 1.2px;
+    }
+    .tarjeta-link:hover {
+        color: rgb(26, 110, 219);
+    }
+
+    .tarjeta-img {
+        overflow: hidden;
+     
+        width: 100%;
+
+
+        max-height: 30%;
+        min-height: 30%;
+
+
+        cursor: pointer;
+        color: white;
+        position: relative;
+
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .tarjeta-capa {
+            @include mixim.posicionamiento-absoluto(0, null, 0, -100%);
+            width: 100%;
+            max-height: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.795);
+            z-index: 10;
+            transition: left 0.3s ease;
+        }
+    }
+
+    .tarjeta-img:hover > .tarjeta-capa {
+        left: 0;
+    }
+
+    small{
+        font-size: .8125em;
+        color: rgb(143, 143, 143);
+    }
+
+
+    .tarjeta-cobertura {
+        @include mixim.posicionamiento-absoluto(100%, 0,null, 0);
+        @include mixim.ancho-alto(100%, 100%);
+        transition: top 0.3s ease;
+        background-color: white;
+        z-index: 10;
+        color: black;
+        line-height: 1.5em;
+        overflow: auto;
+    }
+
+    &:hover >  .tarjeta-cobertura{
+        top: 0; 
+    }
+}
+
+
+.card {
+
+    *{
+
+        font-family: 'Roboto','Roboto', -apple-system, 
+                    BlinkMacSystemFont, 
+                    "Segoe UI", 
+                    "Helvetica Neue", 
+                    Arial, 
+                    "Noto Sans", 
+                    sans-serif, 
+                    "Apple Color Emoji", 
+                    "Segoe UI Emoji", 
+                    "Segoe UI Symbol", 
+                    "Noto Color Emoji";
+    }
+
+    font-size: 16px !important; // 1EM
+
+    // Bordes para todas las cards
+    $borde_claro:   2px solid rgb(98, 100, 119);
+    $borde_oscuro:  2px solid rgba(60, 59, 65, 0.685);
+    $borde_redondeado: 10px;
+
+    // Medidas variables de las cards
+    $ancho_maximo:  415px;
+    $ancho_minimo:  280px;
+
+    // Colores de fondo
+    $bg_dark: rgb(29, 29, 29);
+    $bg_light: rgb(248, 248, 248);
+
+    // Colores de texto tarjetas oscuras
+    $color_dark_cabeceras_h: rgb(205, 205, 205);
+    $color_dark_cabeceras_p: rgb(186, 186, 186);
+    $color_dark_cabeceras_sm: rgb(160, 160, 160);
+
+    // Colores de texto tarjetas claras
+    $color_light_cabeceras_h: rgb(20, 20, 20);
+    $color_light_cabeceras_p: rgb(40, 40, 40);
+    $color_light_cabeceras_sm: rgb(156, 156, 156);
+
+
+    // Padding 
+    $padding: 15px;
+
+    .card-cover 
+    {
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    .card-simple-dark,
+    .card-simple-light 
+    {
+        padding: $padding !important;
+        border-radius: $borde_redondeado !important;
+        
+        max-width: 385px;
+        min-width: 295px;
+
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 22px !important;
+            font-weight: 500 !important;
+            margin: 0 !important;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            margin-top: 10px !important;
+        }
+
+        small {
+            font-size: 0.8em !important;
+            line-height: 90% !important;
+        }
+    }
+    .card-simple-dark {
+        background-color: $bg_dark !important;
+        border: $borde_claro !important;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_dark_cabeceras_h;  
+        }
+
+        p,span {
+            color: $color_dark_cabeceras_p;
+        }
+
+        small {
+            color: $color_dark_cabeceras_sm;
+        }
+    }
+    .card-simple-light
+    {
+        background-color: $bg_light !important;
+        border: $borde_oscuro !important;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_light_cabeceras_h;  
+        }
+
+        p,span {
+            color: $color_light_cabeceras_p;
+        }
+
+        small {
+            color: $color_light_cabeceras_sm;
+        }
+    }
+    
+
+    .card-icon-dark,
+    .card-icon-light 
+    {
+        padding: $padding !important;
+        border-radius: $borde_redondeado !important;
+        
+        max-width: 320px;
+        min-width: 295px;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .image-container {
+            height: 70px !important;
+            width: 70px !important;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 22px !important;
+            font-weight: 500 !important;
+            text-wrap: none;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            margin-top: 10px !important;
+        }
+
+        small {
+            font-size: 0.8em !important;
+            line-height: 90% !important;
+        }
+    }
+    .card-icon-dark {
+        background-color: $bg_dark !important;
+        border: $borde_claro !important;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_dark_cabeceras_h;  
+        }
+
+        p,span {
+            color: $color_dark_cabeceras_p;
+        }
+
+        small {
+            color: $color_dark_cabeceras_sm;
+        }
+    }
+    .card-icon-light {
+        background-color: $bg_light !important;
+        border: $borde_oscuro !important;
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_light_cabeceras_h;  
+        }
+
+        p,span {
+            color: $color_light_cabeceras_p;
+        }
+
+        small {
+            color: $color_light_cabeceras_sm;
+        }
+    }
+
+
+    .card-perfil-dark,
+    .card-perfil-light 
+    {
+        padding: $padding !important;
+        border-radius: $borde_redondeado !important;
+        min-height: 200px;
+        max-width: 320px;
+        min-width: 320px;
+        position:relative;
+
+        .image-container {
+            position: absolute;
+
+            left: 90px;
+            top: -70px;
+            max-width: 140px !important;
+            min-width: 140px !important;
+            max-height: 140px !important;
+            min-height: 140px !important;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:  4px solid rgb(98, 100, 119);
+            display: flex;
+            justify-content: center;
+            img {
+                width: 132px !important;
+                height: 132px !important;
+                border-radius: 50%;
+            }
+        }
+
+        
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 22px !important;
+            font-weight: 500 !important;
+            text-wrap: none;
+            text-align: center;
+            margin-top: 60px !important;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            text-align: center !important;
+        }
+
+        small {
+            font-size: 0.8em !important;
+            line-height: 90% !important;
+        }
+    }
+    .card-perfil-dark {
+
+        background-color: $bg_dark !important;
+        border: $borde_claro !important;
+
+
+         h1,h2,h3,h4,h5,h6 {
+            color: $color_dark_cabeceras_h;
+        }
+
+        .divisor {
+            border: 0.2px solid rgb(15, 15, 15);
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            color: $color_dark_cabeceras_p;
+        }
+        small {
+            color: $color_dark_cabeceras_sm;
+        }
+    }
+    .card-perfil-light {
+
+        background-color: $bg_light !important;
+        border: $borde_oscuro !important;
+
+
+         h1,h2,h3,h4,h5,h6 {
+            color: $color_light_cabeceras_h;
+        }
+
+        .divisor {
+            border: 0.2px solid rgb(233, 233, 233);
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            color: $color_light_cabeceras_p;
+        }
+        small {
+            color: $color_light_cabeceras_sm;
+        }
+    }
+
+
+    .card-description-dark,
+    .card-description-light 
+    {
+        padding: $padding !important;
+        border-radius: $borde_redondeado !important;
+        
+        max-width: 40%;
+        min-width: 295px;
+
+
+        .content
+        {
+            margin-top: 10px !important;
+            height: 150px !important;
+        }
+        .image-container 
+        {
+            border-radius: $borde_redondeado;
+            width: 100% !important;
+            overflow: hidden !important;
+            background-color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img 
+            {
+                max-width: 100% !important;
+                min-width: 100% !important;
+                border-radius: $borde_redondeado;
+            }
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 22px !important;
+            font-weight: 500 !important;
+            margin: 0 !important;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            margin-top: 10px !important;
+        }
+
+        small {
+            font-size: 0.8em !important;
+            line-height: 90% !important;
+        }
+    }
+    .card-description-dark
+    {
+        background-color: $bg_dark !important;
+        border: $borde_claro !important;
+
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_dark_cabeceras_h;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            color: $color_dark_cabeceras_p;
+        }
+        small {
+            color: $color_dark_cabeceras_sm;
+        }
+    }
+    .card-description-light
+    {
+        background-color: $bg_light !important;
+        border: $borde_oscuro !important;
+
+
+        h1,h2,h3,h4,h5,h6 {
+            color: $color_light_cabeceras_h;
+        }
+
+        p {
+            font-size: 1em !important;
+            line-height: 120% !important;
+            color: $color_light_cabeceras_p;
+        }
+        small {
+            color: $color_light_cabeceras_sm;
+        }
+    }
+}

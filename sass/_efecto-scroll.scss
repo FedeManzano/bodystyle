@@ -1,0 +1,43 @@
+.efecto-scroll {
+
+    //1EM 
+    font-size: 16px;
+
+    // Posicionemiento
+    position: relative;
+    overflow: hidden;
+    .c-efecto {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include posicionamiento-absoluto(0,0,0,0);
+        @include ancho-alto(100%, 100%);
+
+        z-index: 10;
+
+        .izquierda,
+        .derecha,
+        .arriba,
+        .abajo {
+            position: absolute;
+            transition: all 1s;
+            opacity: 0;
+        }
+        .izquierda{
+            left: calc(-100% - 100px);
+        }
+
+        .derecha {
+            right: calc(-100% - 100px);
+        }
+
+        .arriba {
+            top: calc(-100% - 100px);
+        }
+
+        .abajo {
+            bottom: calc(-100% - 100px);
+        }
+    }
+}

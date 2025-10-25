@@ -1,0 +1,47 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+@mixin progressBar($color) {
+    border-radius: 3px;
+    height: 100%;
+    background-color: $color;
+}
+
+.progress-bar, 
+.progress-bar-sm, 
+.progress-bar-lg{
+    @include mixim.ancho-alto(100%, 10px);
+
+    
+    background-color: rgb(204, 204, 204);
+    border-radius: 3px;
+        
+    .progress-rojo {
+        @include progressBar(variables.$fd-rojo);
+    }
+
+    .progress-verde {
+        @include progressBar(variables.$fd-verde);
+    }
+
+    .progress-azul {
+        @include progressBar(variables.$fd-azul);
+    }
+
+    .progress-gris {
+        @include progressBar(variables.$fd-gris);
+    }
+
+    .progress-negro {
+        @include progressBar(variables.$fd-gris-n);
+    }
+}
+
+.progress-bar-sm {
+    height: 5px;
+}
+
+.progress-bar-lg {
+    height: 15px;
+}
+

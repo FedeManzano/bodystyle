@@ -1,0 +1,1089 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: variables.$b-fz;
+    font-weight: variables.$b-grosor;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: auto;
+    border-radius: variables.$b-bor-rad;
+    margin-left: 3px;
+}
+
+.badge-verde,
+.badge-green {
+    background-color: variables.$b-verde;
+    color: white !important;
+}
+
+.badge-rojo,
+.badge-red {
+    background-color: variables.$b-rojo;
+    color: white !important;
+}
+
+.badge-gris,
+.badge-grey {
+    background-color: variables.$b-gris;
+    color: white !important;
+}
+
+.badge-azul,
+.badge-blue {
+    background-color: variables.$b-azul;
+    color: white !important;
+}
+
+.badge-negro,
+.badge-black {
+    background-color: variables.$b-negro;
+    color: white !important;
+}
+
+.badge-blanco,
+.badge-white {
+    background-color: variables.$b-blanco;
+    color: rgb(0, 0, 0) !important;
+}
+
+
+.b-redondo,
+.b-circle {
+    border-radius: 50% !important;
+}
+
+
+
+.badges-etiqueta,
+.badges-etiqueta-sm,
+.badges-etiqueta-lg{
+
+    display: inline-block;
+    position: relative;
+    @include mixim.flex-box-centrado();
+
+    font-size: variables.$b-etiqueta-fz;
+    padding: 5px 11px;
+    height: variables.$b-etiqueta-altura;
+    min-width: variables.$b-etiqueta-minw;
+    max-width: variables.$b-etiqueta-maxw;
+    
+    
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+
+    &::before {
+        content: "";
+        width: 21.6px;
+        height: 21.6px;
+        transform: rotate(45deg);
+        left: -10.5px;
+        top: 4px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        position: absolute;
+        left: -3px;
+        top:8px;
+        border-radius: 50%;
+        box-shadow: inset 1px 1px rgba(0, 0, 0, 0.685);
+        z-index: 4;
+    }
+}
+
+
+
+.badges-etiqueta-lg {
+    font-size: 16px;
+    padding: 7px 13px;
+    height: 33px;
+    min-width: 170px;
+    max-width: 210px;
+
+    &::before {
+        content: "";
+        width: 23.5px;
+        height: 23.5px;
+        transform: rotate(45deg);
+        left: -12px;
+        top: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        left: -3px;
+        top:8px;
+    }
+}
+
+
+.badges-etiqueta-sm {
+    font-size: 13px;
+    padding: 4px 10px;
+    height: 28px;
+    min-width: 130px;
+    max-width: 150px;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        left: -10px;
+        top: 4px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        left: -3px;
+        top:7px;
+    }
+}
+
+
+
+.badges-etiqueta-rojo,
+.badges-etiqueta-verde,
+.badges-etiqueta-azul,
+.badges-etiqueta-verde, 
+.badges-etiqueta-gris,
+.badges-etiqueta-negro,
+.badges-etiqueta-blanco{
+    font-weight: variables.$b-etiqueta-fw;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    background-color: variables.$b-etiqueta-rojo;
+    color: white;
+
+
+    &:hover {
+        background-color: variables.$b-etiqueta-rojo-h;
+    }
+
+    &:hover::before {
+        background-color: variables.$b-etiqueta-rojo-h;
+    }
+
+
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-rojo;
+        z-index: 2;
+    }
+}
+
+
+
+.badges-etiqueta-verde {
+    background-color: variables.$b-etiqueta-verde;
+
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-verde;
+        
+    }
+
+
+    &:hover {
+        background-color: variables.$b-etiqueta-verde;
+    }
+
+
+    &:hover::before {
+        background-color: variables.$b-etiqueta-verde-h;
+    }
+}
+
+.badges-etiqueta-azul {
+    background-color: variables.$b-etiqueta-azul;
+
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-azul;
+        
+    }
+
+
+    &:hover {
+        background-color: variables.$b-etiqueta-azul-h;
+    }
+
+
+    &:hover::before {
+        background-color: variables.$b-etiqueta-azul-h;
+    }
+}
+
+
+.badges-etiqueta-negro {
+    background-color: variables.$b-etiqueta-negro;
+
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-negro;
+        
+    }
+
+
+    &:hover {
+        background-color: variables.$b-etiqueta-negro-h;
+    }
+
+
+    &:hover::before {
+        background-color: variables.$b-etiqueta-negro-h;
+    }
+}
+
+.badges-etiqueta-blanco {
+    background-color: variables.$b-etiqueta-blanco;
+    color: black;
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-blanco;
+        
+    }
+
+
+    &:hover {
+        background-color: variables.$b-etiqueta-blanco-h;
+    }
+
+
+    &:hover::before {
+        background-color: variables.$b-etiqueta-blanco-h;
+    }
+}
+
+
+
+
+.badges-etiqueta-gris {
+    background-color: variables.$b-etiqueta-gris;
+    color: black;
+    &::before {
+        content: "";
+        background-color: variables.$b-etiqueta-gris;
+    }
+    &:hover {
+        background-color: variables.$b-etiqueta-gris-h;
+    }
+    &:hover::before {
+        background-color: variables.$b-etiqueta-gris-h;
+    }
+}
+
+
+.badge-mje-izq,
+.badge-mje-der,
+.badge-mje-arr,
+.badge-mje-aba,
+.badge-mje-aba{
+    display: inline-block;
+    position: relative;
+    padding: 7px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    border-radius: 5px;
+    z-index: 10;
+    margin-top: 12px;
+    background-color: white;
+    &::before {
+        content: "";
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+        background-color: white;
+    }
+}
+
+
+.badge-mje-izq {
+    &::before {
+        left: -5px;
+        top: calc(50% - 5px);
+        z-index: -1;
+        border-top: 1px solid transparent !important;
+        border-right: 1px solid transparent !important;
+    }
+}
+
+
+.badge-mje-der {
+    &::before {
+        right: -5px;
+        top: calc(50% - 5px);
+        z-index: -1;
+        border-bottom: 1px solid transparent !important;
+        border-left: 1px solid transparent !important;
+    }
+}
+
+.badge-mje-arr {
+    &::before {
+        left: calc(50% - 5px);
+        top: -5px;
+        z-index: -1;
+        border-bottom: 1px solid transparent !important;
+        border-right: 1px solid transparent !important;
+    }
+}
+
+.badge-mje-aba {
+    &::before {
+        left: calc(50% - 5px);
+        bottom: -5px;
+        z-index: -1;
+        border-top: 1px solid transparent !important;
+        border-left: 1px solid transparent !important;
+    }
+}
+
+
+.badge-mje-rojo{
+    border: 1px solid variables.$fd-rojo;
+    color: variables.$fd-rojo;
+    &::before {
+        border: 1px solid variables.$fd-rojo;
+    }
+}
+
+.badge-mje-azul{
+    border: 1px solid variables.$fd-azul;
+    color: variables.$fd-azul;
+    &::before {
+        border: 1px solid variables.$fd-azul;
+    }
+}
+
+.badge-mje-verde{
+    border: 1px solid variables.$fd-verde;
+    color: variables.$fd-verde;
+    &::before {
+        border: 1px solid variables.$fd-verde;
+    }
+}
+
+
+.badge-mje-negro{
+    border: 1px solid variables.$fd-negro;
+    color: variables.$fd-negro;
+    &::before {
+        border: 1px solid variables.$fd-negro;
+    }
+}
+
+.badge-mje-blanco{
+    border: 1px solid variables.$fd-blanco;
+    color: variables.$fd-blanco;
+    &::before {
+        border: 1px solid variables.$fd-blanco;
+    }
+}
+
+.badge-mje-gris{
+    border: 1px solid variables.$fd-gris;
+    color: variables.$fd-gris;
+    &::before {
+        border: 1px solid variables.$fd-gris;
+    }
+}
+
+
+
+
+.badge-social {
+    overflow: hidden;
+    display: flex;
+    .badge-like {
+        background-color: variables.$fd-azul;
+        color: white;
+        font-size: 70%;
+        vertical-align: middle;
+        font-weight: 600;
+        padding: 4px;
+        border-radius: 3px;
+        min-width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color: variables.$fd-azul-o-2;
+        }
+    }
+
+    .badge-cantidad{
+        border: 1px solid rgba(0, 0, 0, 0.336);
+        padding: 5px;
+        font-size: 10px;
+        background-color: rgb(241, 241, 241);
+        text-align: center;
+        min-width: 70px;
+        margin-left: 7px;
+        position: relative;
+        font-weight: 600;
+        border-radius: 3px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+            border-left: 1px solid rgba(0, 0, 0, 0.336);
+            transform: rotate(45deg);
+            background-color: rgb(241, 241, 241);
+            left: -5px;
+            top: calc(50% - 3.5px);
+        }
+    }
+}
+
+.badge-compartir-gris,
+.badge-compartir-rojo,
+.badge-compartir-verde,
+.badge-compartir-azul,
+.badge-compartir-negro,
+.badge-compartir-blanco {
+    padding: 9px;
+    background-color: rgb(218, 218, 218);
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 75%;
+    text-transform: uppercase;
+    min-width: 60px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 0;
+    color: rgb(34, 34, 34);
+    position: relative;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.219);
+    }
+
+    span {
+        display: inline-block;
+        position: absolute;
+        min-width: 100%;
+        max-width: 100%;
+        border: 1px solid rgb(121, 121, 121);
+        text-align: center;
+        white-space: nowrap;
+        bottom: 130%;
+        left: 0;
+        padding: 7px 5px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.493);
+        &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            transform: rotate(45deg);
+            bottom: -4px;
+            left: calc(50% - 3.5px);
+            border-right: 1px solid rgb(121, 121, 121);
+            border-bottom: 1px solid rgb(121, 121, 121);
+            background-color: white;
+        }
+    }
+}
+
+.badge-compartir-rojo {
+    background-color: variables.$fd-rojo;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: variables.$fd-rojo-o-1;
+    }
+}
+
+.badge-compartir-verde {
+    background-color: variables.$fd-verde;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+
+    &:hover {
+        background-color: variables.$fd-verde-o-2;
+    }
+}
+
+.badge-compartir-azul {
+    background-color: variables.$fd-azul;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+
+    &:hover {
+        background-color: variables.$fd-azul-o-2;
+    }
+}
+
+
+.badge-compartir-negro {
+    background-color: variables.$fd-negro;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: variables.$fd-gris-o-1;
+    }
+}
+
+.badge-compartir-blanco {
+    background-color: variables.$fd-blanco;
+    color: black;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: variables.$fd-gris-o-1;
+        color: white;
+    }
+}
+
+.badge-solapa-rojo,
+.badge-solapa-azul,
+.badge-solapa-verde,
+.badge-solapa-blanco,
+.badge-solapa-negro,
+.badge-solapa-gris {
+
+    @include mixim.posicionamiento-absoluto(30px, null, null, -19px);
+    @include mixim.flex-box-centrado();
+    padding: 5px 20px;
+    padding-left: 30px;
+    background-color: variables.$fd-rojo;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 600;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    &::before {
+        content: "";
+        @include mixim.posicionamiento-absoluto(null, null, -9px,0);
+        @include mixim.ancho-alto(20px, 30px);
+        clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
+        -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
+        background-color: variables.$fd-rojo-o-2;
+        z-index: -1;
+    }
+}
+
+
+.badge-solapa-azul {
+    background-color: variables.$fd-azul;
+    &::before {
+        background-color: variables.$fd-azul-o-2;
+    }
+}
+
+.badge-solapa-verde {
+    background-color: variables.$fd-verde;
+    &::before {
+        background-color: variables.$fd-verde-o-2;
+    }
+}
+
+.badge-solapa-gris {
+    background-color: variables.$fd-gris-c;
+    color: black;
+    &::before {
+        background-color: variables.$fd-gris-o-1;
+    }
+}
+
+.badge-solapa-blanco {
+    background-color: variables.$fd-blanco;
+    color: black;
+    &::before {
+        background-color: variables.$fd-gris-c;
+    }
+}
+
+.badge-solapa-negro {
+    background-color: variables.$fd-negro;
+    &::before {
+        background-color: variables.$fd-gris-o-1;
+    }
+}
+
+.contenedor-relativo {
+    position:  relative !important;
+}
+
+
+.badge-esquina-sup-izq-rojo,
+.badge-esquina-sup-izq-verde,
+.badge-esquina-sup-izq-azul,
+.badge-esquina-sup-izq-gris,
+.badge-esquina-sup-izq-blanco,
+.badge-esquina-sup-izq-negro,
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-der-negro,
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-der-negro,
+.badge-esquina-inf-izq-rojo,
+.badge-esquina-inf-izq-verde,
+.badge-esquina-inf-izq-azul,
+.badge-esquina-inf-izq-gris,
+.badge-esquina-inf-izq-blanco,
+.badge-esquina-inf-izq-negro {
+    @include mixim.posicionamiento-absoluto(-50px, null, null, -50px);
+    @include mixim.flex-box-centrado();
+    @include mixim.ancho-alto(100px, 100px);
+    z-index: 10000;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.904);
+    * {
+        @include mixim.posicionamiento-absoluto(45px, null, null, 70px);
+        transform: rotate(-45deg);
+    }
+}
+
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-der-negro {
+    transform: rotate(-45deg);
+    left: calc(100% - 50px);
+    background-color: variables.$fd-rojo;
+
+    * {
+        @include mixim.posicionamiento-absoluto(40px, null, null, 10px);
+        transform: rotate(45deg);
+    }
+}
+
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-der-negro {
+    transform: rotate(45deg);
+    left: calc(100% - 50px);
+    top: calc(100% - 50px);
+    background-color: variables.$fd-rojo;
+
+    * {
+        @include mixim.posicionamiento-absoluto(40px, null, null, 10px);
+        transform: rotate(-45deg);
+    }
+}
+
+.badge-esquina-inf-izq-rojo,
+.badge-esquina-inf-izq-verde,
+.badge-esquina-inf-izq-azul,
+.badge-esquina-inf-izq-gris,
+.badge-esquina-inf-izq-blanco,
+.badge-esquina-inf-izq-negro {
+    transform: rotate(-45deg);
+    left: -50px;
+    top: calc(100% - 50px);
+    background-color: variables.$fd-rojo;
+
+    * {
+        @include mixim.posicionamiento-absoluto(40px, null, null, 70px);
+        transform: rotate(45deg);
+    }
+}
+
+
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-izq-rojo,
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-izq-rojo {
+    background-color: variables.$fd-rojo;
+    color: white;
+}
+
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-izq-azul,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-izq-azul {
+    background-color: variables.$fd-azul;
+    color: white;
+}
+
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-izq-verde,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-izq-verde {
+    background-color: variables.$fd-verde;
+    color: white;
+}
+
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-izq-gris,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-izq-gris {
+    background-color: variables.$fd-gris;
+    color: black;
+}
+
+.badge-esquina-sup-der-negro,
+.badge-esquina-sup-izq-negro,
+.badge-esquina-inf-der-negro,
+.badge-esquina-inf-izq-negro {
+    background-color: variables.$fd-negro;
+    color: white;
+}
+
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-izq-blanco,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-izq-blanco {
+    background-color: variables.$fd-blanco;
+    color: black;
+}
+
+
+
+.badge-red-rojo,
+.badge-red-gris, 
+.badge-red-blanco,
+.badge-red-verde,
+.badge-red-azul, 
+.badge-red-negro{
+    display: inline-block;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 10px;
+    font-size:70%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    span {
+        display: inline-block;
+        position: absolute;
+        color: white;
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7.5px);
+        left: calc(50% - 7.5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+    }
+}
+
+.badge-red-rojo{
+    background-color: variables.$fd-rojo;
+}
+
+.badge-red-verde{
+    background-color: variables.$fd-verde;
+}
+
+.badge-red-azul{
+    background-color: variables.$fd-azul;
+}
+
+.badge-red-gris{
+    background-color: variables.$fd-gris;
+}
+
+.badge-red-negro{
+    background-color: variables.$fd-negro;
+}
+
+.badge-red-blanco{
+    background-color: variables.$fd-blanco;
+    span {
+        color: black;
+    }
+}
+
+.badge-imagen {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(233, 233, 233);
+    max-width: 300px;
+    min-width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    &:active {
+        background-color: rgb(212, 212, 212);
+    }
+
+    &:hover .elementos span {
+        color: #212121;
+    }
+    .elementos {
+        @include mixim.flex-box-centrado();
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+    
+        span {
+            font-size: 15px;
+            font-weight: 600;
+            color: #555555;
+        }
+    }
+
+    .seguidores {
+        position: absolute;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80px;
+        text-align: center;
+        background-color: rgb(247, 247, 247);
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        top: -50px;
+        left: calc(50% - 40px);
+        font-size: 13px;
+        font-weight: 600;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background-color: rgb(247, 247, 247);
+            transform: rotate(45deg);
+            bottom: -5px;
+            left: calc(50% - 5px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+            border-right: 1px solid rgba(0, 0, 0, 0.288);
+        }
+    }
+}
+
+.badge-cierre-rojo,
+.badge-cierre-verde,
+.badge-cierre-azul,
+.badge-cierre-gris,
+.badge-cierre-blanco,
+.badge-cierre-negro {
+    
+    padding: 5px;
+    padding-right: 20px;
+    border-radius: 3px;
+    background-color: variables.$fd-rojo;
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+
+    &:hover {
+        background-color: variables.$fd-rojo-o-1;
+    }
+    .cerrar {
+        width: 10px;
+        height: 2px;
+        border-radius: 10px;
+        position: absolute;
+        right: 4px;
+        top: calc(50% - 1.5px);
+        transform: rotate(45deg);
+        background-color: white;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 2px;
+            border-radius: 10px;
+            position: absolute;
+            right: 0px;
+            top: calc(50%  - 1px);
+            transform: rotate(-90deg);
+            background-color: white;
+        }
+    }
+}
+
+
+.badge-cierre-verde {
+    background-color: variables.$fd-verde;
+    &:hover {
+        background-color: variables.$fd-verde-o-2;
+    }
+}
+
+
+.badge-cierre-azul {
+    background-color: variables.$fd-azul;
+    &:hover {
+        background-color: variables.$fd-azul-o-2;
+    }
+}
+
+
+.badge-cierre-gris {
+    background-color: variables.$fd-gris;
+    &:hover {
+        background-color: variables.$fd-gris-o-1;
+    }
+}
+
+
+.badge-cierre-negro {
+    background-color: variables.$fd-gris-n;
+    &:hover {
+        background-color: variables.$fd-negro;
+    }
+}
+
+
+.badge-cierre-blanco {
+    background-color: variables.$fd-blanco;
+    color: black;
+    &:hover {
+        background-color: variables.$fd-gris-c;
+    }
+    .cerrar {
+        background-color: black;
+        &::before {
+            background-color: black;
+        }
+    }
+}
+.badge-xs,
+.badge-md,
+.badge-sm,
+.badge-lg,
+.badge-xl {
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.badge-xs {
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+
+.badge-md {
+    padding: 7px 10px;
+    font-size: 15px;
+}
+
+.badge-sm {
+    padding: 5px 7px;
+    font-size: 12px;
+}
+
+.badge-lg {
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.badge-xl {
+    padding: 12px 18px;
+    font-size: 20px;
+}
+
+.badge-sub {
+    display: inline-block;
+    padding: 7px;
+    font-size: 70%;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    position: relative;
+    background-color: variables.$fd-rojo;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(170, 31, 31);
+    }
+
+    &:active {
+        background-color: variables.$fd-rojo-c;
+    }
+
+    span {
+        position: absolute;
+        padding: 7px 10px;
+        background-color: whitesmoke;
+        right: -107px;
+        top: 0;
+        max-width: 100%;
+        min-width: 100px;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.192);
+        border-radius: 3px;
+        &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            background-color: whitesmoke;
+            transform: rotate(45deg);
+            left: -4px;
+            top: calc(50% - 3.5px);
+            border-left: 1px solid rgba(0, 0, 0, 0.192);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+        }
+    }
+}
+
+.badge-flot {
+    position: absolute !important;
+    top: -10px !important;
+    right: 5px !important;
+}
+
+

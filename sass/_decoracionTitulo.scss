@@ -1,0 +1,45 @@
+.dec-rojo,
+.dec-verde,
+.dec-azul,
+.dec-negro,
+.dec-gris,
+.dec-blanco{
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.dec-rojo::before,
+.dec-azul::before,
+.dec-verde::before,
+.dec-negro::before,
+.dec-gris::before,
+.dec-blanco::before
+ {
+    content: "";
+    position: absolute;
+    background-color: $fd-rojo;
+    height: 4px;
+    width: 50px;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.dec-azul::before {
+    background-color: $fd-azul;
+}
+
+.dec-verde::before {
+    background-color: $fd-verde;
+}
+
+.dec-negro::before {
+    background-color: $fd-negro;
+}
+.dec-blanco::before {
+    background-color: $fd-blanco;
+}
+.dec-gris::before {
+    background-color: $fd-gris;
+}
+

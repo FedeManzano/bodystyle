@@ -1,0 +1,62 @@
+.breadcrumb-negro, 
+.breadcrumb-blanco{
+    display: flex;
+    
+    a {
+        display: block;
+        text-decoration: none;
+        color: rgb(53, 53, 53);
+        position: relative;
+        font-size: 15px;
+        white-space: nowrap;
+        &:hover {
+            color: black;
+        }
+    }
+
+    & a:nth-child(n-1){
+        padding-right: 30px;
+    }
+
+    & a:nth-child(n):not(:last-child)::before,
+    & a:nth-child(n):not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        transform: rotate(45deg);
+        background-color: rgb(34, 34, 34);
+        right: 13px;
+        top: calc(50% - 2px);
+    }
+
+    & a:nth-child(n):not(:last-child)::after {
+        transform: rotate(-45deg);
+        top: 60%;
+    }
+
+    .br-activo {
+        color: black !important;
+        font-weight: 600;
+    }
+
+}
+
+.breadcrumb-blanco {
+    a {
+        color: rgb(235, 235, 235);
+        &:hover {
+            color: rgb(185, 185, 185);
+        }
+    }
+
+    & a:nth-child(n):not(:last-child)::before,
+    & a:nth-child(n):not(:last-child)::after {
+        background-color: rgb(255, 255, 255) ;
+    }
+
+    .br-activo {
+        color: rgb(255, 255, 255) !important;
+        font-weight: 600;
+    }
+}

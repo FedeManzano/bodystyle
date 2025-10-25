@@ -1,0 +1,54 @@
+.footer {
+    background-color: $fd-gris-az-o;
+    padding: 50px 30px 100px 30px;
+    text-align: center;
+    position: relative;
+    .footer-titulo {
+        font-size: 25px;
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+    }
+    .footer-logo {
+        @include flex-box-centrado();
+        color: white;
+        height: 100%;
+        font-size: 60px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        display: block;
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+        &:hover {
+            color: rgb(52, 201, 206);
+        }
+    }
+
+    .footer-pie {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.363);
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 10px 10px;
+        border-top: 1px solid rgb(0, 0, 0);
+        color: white;
+
+    }
+
+    .footer-parrafo {
+        padding: 15px;
+        background-color: rgba(131, 131, 131, 0.233);
+        color: white;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+}

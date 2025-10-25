@@ -1,0 +1,84 @@
+@use "globales/funciones";
+
+.lista-float-izq,
+.lista-float-der{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: funciones.superposicion(ms);
+    transition: all 0.5s;
+    .lista-item {
+        position: relative;
+        min-width: 240px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 0 5px 5px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+        white-space: nowrap;
+        &:last-child {
+            border-bottom: none !important;
+        }
+        cursor: pointer;
+        .borde {
+            position: absolute;
+            width: 8px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            transition: all 0.3s;
+        }
+
+        a {
+            display: block;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        &:hover .borde {
+            width: 100%;
+        }
+        &:hover a {
+            z-index: 20000;
+        }
+    }
+
+    .abrir,
+    .cerrar {
+        padding: 5px;
+        position: absolute;
+        top: -30px;
+    }
+}
+.lista-float-izq {
+    left: 0;
+    .abrir,
+    .cerrar {
+        right:  -15px;
+    }
+}
+
+.lista-float-der{
+    right: 0;
+    z-index: funciones.superposicion(ms);
+    
+    .lista-item {
+        border-radius: 5px 0 0 5px;
+        .borde {
+            left: 0;
+        }
+    }
+
+    .abrir,
+    .cerrar {
+        left: -15px;
+    }
+}

@@ -1,0 +1,188 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+/**
+    Input de tipo texto e email
+    con la clase validación para poder mostrar 
+    que la informacion del campo es erronea
+*/
+
+input[type='text'], 
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='url'],
+input[type='search'], 
+textarea{
+    // sass/globales/mixim
+    @include mixim.configInput();
+
+    &.desactivado {
+        background-color: variables.$fd-gris-c !important;
+        border: 1px solid rgb(224, 224, 224) !important;
+    }
+
+    &:focus.desactivado {
+        background-color: variables.$fd-gris-c !important;
+        box-shadow: none !important;
+        border: 1px solid rgb(224, 224, 224) !important;
+    }
+}
+
+.input-file {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    opacity: 0;
+}
+
+
+.f-label {
+    position: relative;
+    width: 20%;
+    min-width: 60px !important;
+    appearance: none;
+    padding: 10px;
+    background-color: variables.$fd-azul;
+    color: white;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    border-radius: 3px;
+}
+
+
+
+.f-label:hover {
+    background-color: rgb(0, 55, 175);
+}
+
+
+.archivo-seleccionado {
+    overflow: auto;
+    width: 300%;
+    height: 70%;
+    position: absolute;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    color: rgb(56, 56, 56);
+    left: calc(100% + 10px);
+    bottom: 0;
+    padding-bottom: 1px;
+    font-size: 15px;
+}
+
+@media (max-width: 500px ){
+    .f-label .archivo-seleccionado {
+        left: 0;
+        top: calc(100% + 10px);
+        width: 500%;
+    }
+}
+
+input[type='text']:focus, 
+input[type='email']:focus,
+input[type='number']:focus, 
+input[type='password']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(111, 196, 245, 0.582);
+    border: 1px solid rgba(111, 196, 245);
+    z-index: 2;
+}
+
+
+input[type='text']::placeholder, 
+input[type='email']::placeholder,
+input[type='number']::placeholder,
+input[type='password']::placeholder,
+input[type='url']::placeholder,
+input[type='search']::placeholder,
+textarea::placeholder {
+    color: variables.$fd-gris;
+}
+
+
+.i-error {
+    border: 2px solid rgb(250, 92, 92) !important;
+    z-index: 2;
+}
+
+.input-sm {
+    height: 2.1em !important;
+    font-size: 0.9em !important;
+}
+
+
+.input-lg {
+    height: 2.2em !important;
+    font-size: 1.3em !important;
+}
+
+.input-icon {
+    @include mixim.configInput();
+    position: relative;
+    display: flex;
+    padding:6px 10px;
+    justify-content: space-between;
+    height: 2.1em;
+    background-color: white;
+
+
+
+    input[type='text'], 
+    input[type='email'],
+    input[type='number'], 
+    input[type='password'],
+    input[type='url'],
+    input[type='search']{
+        box-shadow: none !important;
+        border: none;
+        z-index: 1;
+        height: 1em;
+        font-size: 1.1em;
+        top: 0.25em;
+        left: 0;
+        &:focus {
+            box-shadow: none !important;
+            border: none !important;
+        }
+    }
+    & .elemento:first-child {
+        color: rgb(131, 131, 131);
+        font-size: 1.1em;
+    }
+
+    
+    input[type='text']:focus, 
+    input[type='email']:focus,
+    input[type='number']:focus, 
+    input[type='password']:focus,
+    input[type='url']:focus,
+    input[type='search']:focus {
+        box-shadow: none !important;
+        border: none;
+    }
+
+    input[type='text']:focus ~ .elemento, 
+    input[type='email']:focus + .elemento,
+    input[type='number']:focus + .elemento, 
+    input[type='password']:focus + .elemento,
+    input[type='url']:focus + .elemento,
+    input[type='search']:focus + .elemento{
+        color: #212121;
+    }
+}
+
+.input-cargando {
+    background-color: rgb(192, 192, 192) !important;
+}
+
+.input-cargando:focus {
+    border: none;
+    box-shadow: none;
+}

@@ -1,0 +1,58 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+
+.lista-scroll {
+    width: 15%;
+    @include mixim.posicionamiento-fixed(100px, 0, null, null);
+    
+    ul {
+        li {
+            a {                
+                position: relative;
+                display: block;
+                padding: 6px 15px;
+                color: rgb(94, 94, 94);
+                font-weight: 300;
+                font-size: 18px;
+            }
+        }
+    }
+}
+.elemento-seleccionado {
+    width: 3px;
+    height: 29px;
+    background-color: variables.$fd-azul-c;
+    position: absolute;
+    left: 0;
+}
+
+.scroll-spy {
+    @include mixim.posicionamiento-fixed(100px, 0, null, null);
+    width: 15%;
+
+    .titulo {
+        font-size: 1em;
+        color: black;
+        font-weight: 500;
+
+    }
+
+    .lista {
+        li {
+            a {
+                display: block;
+                padding: 3px 0 3px 15px;
+                color: grey;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            .seleccionado {
+                color: black;
+            }
+        }
+    }
+}

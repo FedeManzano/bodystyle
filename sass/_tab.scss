@@ -1,0 +1,110 @@
+.tab {
+    box-sizing: border-box;
+    $borde: 1px solid rgba(0, 0, 0, 0.185);
+
+    .op-tab {
+        overflow-y: auto; 
+        .op-listado{
+            max-height: 100%;
+            display: flex;
+            border-bottom: $borde;
+            label{
+                white-space: nowrap;
+                display: block;
+                color: #464646;
+                padding: 11px;
+                background-color: transparent;
+                cursor: pointer;
+                &:hover {
+                    color: black;
+                }
+
+                &.desactivado {
+                    color: rgb(196, 196, 196) !important;
+                    &:hover {
+                        color: rgb(196, 196, 196) !important; 
+                        font-weight: 100 !important;
+                    }
+                }
+            }
+
+            .activo {
+                border: $borde;
+                border-bottom: none;
+                border-radius: 5px 5px 0 0;
+                position: relative;
+                font-weight: 600;
+                color: black;
+                background-color: white !important;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    bottom: -1px;
+                    background-color: white;
+                    z-index: 15;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+
+    .contenido-tab {
+        padding: 15px;
+        border: $borde;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        background-color: white;
+    }
+}
+
+.tab-borde {
+    box-sizing: border-box;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.178);
+    .op-tab-borde {
+        
+        ul {
+            overflow-x: auto;
+            display: flex;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.226);
+            width: 100%;
+            
+            label {
+                white-space: nowrap;
+                position: relative;
+                display: block;
+                padding: 15px;
+                color: rgb(68, 68, 68);
+                cursor: pointer;
+
+                &.desactivado {
+                    color: rgb(196, 196, 196) !important;
+                    &:hover {
+                        color: rgb(196, 196, 196) !important; 
+                        font-weight: 100 !important;
+                    }
+                }
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.63);
+                }
+                .activo {
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background-color: black;
+                    bottom: 0;
+                    left: 0; 
+                }
+            }
+        }
+    }
+
+    .contenido-tab {
+        background-color: white;
+    }
+}
+

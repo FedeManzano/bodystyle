@@ -1,0 +1,117 @@
+
+.tem-formulario {
+    h3 {
+        font-size: 1.5em !important;
+        margin-bottom: 30px !important;
+        font-weight: 300 !important;
+        color: rgb(20, 20, 20) !important;
+        letter-spacing: 0 !important;
+    }
+
+    h4 {
+        font-size: 1.2em !important;
+        margin-bottom: 15px !important;
+        font-weight: 300 !important;
+        color: rgb(73, 73, 73) !important;
+        letter-spacing: 0 !important;
+    }
+
+
+    .division {
+        border: 0.5px solid rgba(0, 0, 0, 0.075);
+        margin: 40px 0;
+    }
+
+    .tem-input {
+        position: relative;
+        width: 100%;
+        height: 3em;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.171);
+        border-radius: 5px;
+        
+        input, .select {
+            border: none;
+            background: none;
+            position: absolute;
+            z-index: 1;
+            top: 0.2em;
+            font-size: 15px;
+            color: rgb(59, 59, 59);
+            appearance:none;
+
+            &:focus {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+
+        select {
+            top: 0.35em;
+            height: 86%;
+        }
+
+        .flechas {
+            position: absolute;
+            width:0px;
+            height: 0px;
+            border-top: 5px solid grey;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            right: 30px;
+            top: calc(50% - 2.5px);
+
+        }
+
+        .flechas::before {
+            content: "";
+            position: absolute;
+            width:30px;
+            height: 2.7em;
+            background-color: white;
+            right: -35px;
+            top: -24px;
+            z-index: 2;
+        }
+
+        input:focus {
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        label {
+            position: absolute;
+            font-size: 15px;
+            top: calc(50% - 9px);
+            left: 8px;
+            color: rgb(128, 128, 128) !important;
+            transition: all 0.3s;
+        }
+    } 
+
+    small {
+        margin: 0;
+        padding: 0;
+        font-size: 12px !important;
+        color: rgb(73, 73, 73);
+    }
+
+    .checkbox, 
+    .radiobtn {
+        color: rgb(88, 88, 88) !important;
+    }
+
+    .tem-error {
+        border: 2px solid rgb(255, 75, 75) !important;
+    }
+    
+    
+    .tem-ok {
+        border: 2px solid rgb(23, 221, 145) !important;
+    }
+    
+}
+
+
+    

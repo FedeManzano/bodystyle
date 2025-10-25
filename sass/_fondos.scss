@@ -1,0 +1,439 @@
+@use "globales/variables";
+
+
+.fd-rojo,
+.bg-red {
+    background-color: variables.$fd-rojo !important;
+}
+
+.fd-rojo-c,
+.bg-red-s {
+    background-color: variables.$fd-rojo-c !important;;
+}
+
+.fd-rojo-o-1,
+.bg-red-d-1 {
+    background-color: variables.$fd-rojo-o-1 !important;;
+}
+
+.fd-rojo-o-2,
+.bg-red-d-2 {
+    background-color: variables.$fd-rojo-o-2 !important;;
+}
+
+.fd-rojo-o-3,
+.bg-red-d-3 {
+    background-color: variables.$fd-rojo-o-3 !important;;
+}
+
+.fd-rojo-o-4,
+.bg-red-d-4 {
+    background-color: variables.$fd-rojo-o-4 !important;;
+}
+
+.fd-rojo-t {
+    background-color: variables.$fd-rojo-t !important;;
+}
+
+.fd-rojo-an,
+.bg-red-or {
+    background-color: variables.$fd-rojo-an !important;
+}
+
+.fd-rojo-ro,
+.bg-red-pi {
+    background-color: variables.$fd-rojo-ro !important;
+}
+
+// Tonalidades de Rosa
+.fd-rosa,
+.bg-pink {
+    background-color: variables.$fd-rosa !important;
+}
+
+.fd-rosa-c,
+.bg-pink-s {
+    background-color: variables.$fd-rosa-c !important;;
+}
+
+.fd-rosa-o-1,
+.bg-pink-d-1 {
+    background-color: variables.$fd-rosa-o-1 !important;;
+}
+
+.fd-rosa-o-2,
+.bg-pink-d-2 {
+    background-color: variables.$fd-rosa-o-2 !important;;
+}
+
+.fd-rosa-o-3,
+.bg-pink-d-3 {
+    background-color: variables.$fd-rosa-o-3 !important;;
+}
+
+.fd-rosa-o-4,
+.bg-pink-d-4 {
+    background-color: variables.$fd-rosa-o-4 !important;;
+}
+
+.fd-rosa-t {
+    background-color: variables.$fd-rosa-t !important;;
+}
+
+.fd-azul,
+.bg-blue {
+    background-color: variables.$fd-azul !important;
+}
+
+.fd-azul-c,
+.bg-blue-s {
+    background-color: variables.$fd-azul-c !important;
+}
+
+.fd-azul-o-1,
+.bg-blue-d-1{
+    background-color: variables.$fd-azul-o-1 !important;
+}
+
+.fd-azul-o-2,
+.bg-blue-d-2{
+    background-color: variables.$fd-azul-o-2 !important;
+}
+
+
+.fd-azul-o-3,
+.bg-blue-d-3{
+    background-color: variables.$fd-azul-o-3 !important;
+}
+
+
+.fd-azul-o-4,
+.bg-blue-d-4{
+    background-color: variables.$fd-azul-o-4 !important;
+}
+
+
+.fd-azul-ve {
+    background-color: variables.$fd-azul-ve !important;
+}
+
+.fd-azul-ve-s {
+    background-color: variables.$fd-azul-ve-s !important;
+}
+
+.fd-azul-ve-c {
+    background-color: variables.$fd-azul-ve-c !important;
+}
+
+.fd-azul-t {
+    background-color: variables.$fd-azul-t !important;
+}
+
+.fd-azul-vi {
+    background-color: variables.$fd-azul-vi !important;
+}
+
+// *** Verde  *** //
+.fd-verde,
+.bg-green {
+    background-color: variables.$fd-verde !important;
+}
+
+.fd-verde-c,
+.bg-green-s {
+    background-color: variables.$fd-verde-c !important;
+}
+
+.fd-verde-o-1,
+.bg-green-d-1 {
+    background-color: variables.$fd-verde-o-1 !important;
+}
+
+.fd-verde-o-2,
+.bg-green-d-2 {
+    background-color: variables.$fd-verde-o-2 !important;
+}
+
+.fd-verde-o-3,
+.bg-green-d-3 {
+    background-color: variables.$fd-verde-o-3 !important;
+}
+.fd-verde-o-4,
+.bg-green-d-4 {
+    background-color: variables.$fd-verde-o-4 !important;
+}
+.fd-verde-t {
+    background-color: variables.$fd-verde-t !important;
+}
+.fd-verde-az {
+    background-color: variables.$fd-verde-az !important;
+}
+
+.fd-verde-am {
+    background-color: variables.$fd-verde-am !important;
+}
+
+.fd-gris,
+.bg-grey {
+    background-color: variables.$fd-gris !important;
+}
+.fd-gris-c,
+.bg-grey-s {
+    background-color: variables.$fd-gris-c !important;
+}
+
+.fd-gris-o-1,
+.bg-grey-d-1 {
+    background-color: variables.$fd-gris-o-1 !important;
+}
+
+.fd-gris-o-2,
+.bg-grey-d-2 {
+    background-color: variables.$fd-gris-o-2 !important;
+}
+
+.fd-gris-o-3,
+.bg-grey-d-3 {
+    background-color: variables.$fd-gris-o-3 !important;
+}
+
+.fd-gris-o-4,
+.bg-grey-d-4 {
+    background-color: variables.$fd-gris-o-4 !important;
+}
+
+.fd-gris-t {
+    background-color: variables.$fd-gris-t !important;
+}
+.fd-gris-az {
+    background-color: variables.$fd-gris-az !important;
+}
+
+.fd-gris-az-c {
+    background-color: variables.$fd-gris-az-c !important ;
+}
+
+.fd-gris-az-o {
+    background-color: variables.$fd-gris-az-o !important;
+}
+
+.fd-gris-n,
+.bg-grey-d {
+    background-color: variables.$fd-gris-n !important;
+}
+
+.fd-blanco,
+.bg-white {
+    background-color: variables.$fd-blanco !important;
+}
+
+.fd-negro,
+.bg-black {
+    background-color: variables.$fd-negro !important;
+}
+
+.fd-violeta,
+.bg-violet {
+    background-color: variables.$fd-violeta !important;
+}
+
+.fd-violeta-c,
+.bg-violet-s {
+    background-color: variables.$fd-violeta-c !important;
+}
+
+.fd-violeta-o-1,
+.bg-violet-d-1 {
+    background-color: variables.$fd-violeta-o-1 !important;
+}
+
+.fd-violeta-o-2,
+.bg-violet-d-2 {
+    background-color: variables.$fd-violeta-o-2 !important;
+}
+
+
+.fd-violeta-o-3,
+.bg-violet-d-3 {
+    background-color: variables.$fd-violeta-o-3 !important;
+}
+
+
+.fd-violeta-o-4,
+.bg-violet-d-4 {
+    background-color: variables.$fd-violeta-o-4 !important;
+}
+
+
+.fd-violeta-t {
+    background-color: variables.$fd-violeta-t !important;
+}
+
+.fd-violeta-az {
+    background-color: variables.$fd-violeta-az !important;
+}
+
+.fd-violeta-ro {
+    background-color: variables.$fd-violeta-ro !important;
+}
+
+
+// Tonalidades naranja
+.fd-naranja,
+.bg-orange {
+    background-color: variables.$fd-naranja !important;
+}
+
+.fd-naranja-o-1,
+.bg-orange-d-1 {
+    background-color: variables.$fd-naranja-o-1 !important;
+}
+
+.fd-naranja-o-2,
+.bg-orange-d-2 {
+    background-color: variables.$fd-naranja-o-2 !important;
+}
+
+.fd-naranja-o-3,
+.bg-orange-d-3 {
+    background-color: variables.$fd-naranja-o-3 !important;
+}
+
+.fd-naranja-o-4,
+.bg-orange-d-4 {
+    background-color: variables.$fd-naranja-o-4 !important;
+}
+
+.fd-naranja-c,
+.bg-orange-s {
+    background-color: variables.$fd-naranja-c !important;
+}
+
+.fd-naranja-t {
+    background-color: variables.$fd-naranja-t !important;
+}
+
+.fd-naranja-ro {
+    background-color: variables.$fd-naranja-ro !important;
+}
+
+.fd-naranja-am {
+    background-color: variables.$fd-naranja-am !important;
+}
+
+// *** Tonalidadesd de amarillo
+.fd-amarillo,
+.bg-yellow {
+    background-color: variables.$fd-amarillo !important;
+}
+
+.fd-amarillo-c,
+.bg-yellow-s {
+    background-color: variables.$fd-amarillo-c !important;
+}
+
+.fd-amarillo-o-1,
+.bg-yellow-d-1 {
+    background-color: variables.$fd-amarillo-o-1 !important;
+}
+
+.fd-amarillo-o-2,
+.bg-yellow-d-2 {
+    background-color: variables.$fd-amarillo-o-2 !important;
+}
+.fd-amarillo-o-3
+.bg-yellow-d-3 {
+    background-color: variables.$fd-amarillo-o-3 !important;
+}
+
+.fd-amarillo-o-4,
+.bg-yellow-d-4 {
+    background-color: variables.$fd-amarillo-o-4 !important;
+}
+
+.fd-amarillo-t {
+    background-color: variables.$fd-amarillo-t !important;
+}
+
+.fd-amarillo-ve{
+    background-color: variables.$fd-amarillo-ve !important;
+}
+
+.fd-amarillo-an {
+    background-color: variables.$fd-amarillo-an !important;
+}
+
+.fd-trasparente {
+    background-color: transparent !important;
+}
+
+.fd-negro-trasp {
+    background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
+.fd-facebook {
+    background-color: #3b5998 !important;
+}
+
+.fd-youtube {
+    background-color: #bb0000 !important;
+}
+
+.fd-twiter {
+    background-color: #55acee !important;
+}
+
+
+.fd-linkedin {
+    background-color: #007bb5 !important;
+}
+
+.fd-instagram {
+    background-color: #125688 !important;
+}
+
+.fd-pinterest {
+    background-color: #cb2027 !important;
+}
+
+.fd-tumblr {
+    background-color: #32506d !important;
+}
+
+.fd-imgur {
+    background-color: #32506d !important;
+}
+
+.fd-telegram {
+    background-color: #32506d !important;
+}
+
+.fd-flickr {
+    background-color: #ff0084 !important;
+}
+
+.fd-vimeo {
+    background-color: #aad450 !important;
+}
+
+.fd-whatsapp {
+    background-color: #4dc247 !important;
+}
+
+
+.fd-soundcloud {
+    background-color: #fffc00 !important;
+}
+
+
+.fd-snapchat {
+    background-color: #fffc00 !important;
+}
+
+.fd-periscope {
+    background-color: #35A3C6 !important;
+}
+
+.fd-tinder {
+    background-color: #E34514 !important;
+}

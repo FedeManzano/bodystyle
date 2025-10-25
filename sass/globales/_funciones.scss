@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "variables";
+
+// ***Funciones de la libreria bodyStyle v2.0.0***
+
+// *! Funciones para el contenido de texto
+// *************************************************
+
+// Funcion que devuelve el tamaño de letra para 
+// una etqueta html predefinida en la variable $letras.
+@function tamLetra($hashLetras, $etiqueta) {
+    @if(map.has-key($hashLetras, $etiqueta )) {
+        @return map.get($hashLetras , $etiqueta);
+    }@else{
+        @warn "La etiqueta html no existe";
+    }
+}
+
+//Función para establecer el grosor de las 
+// Fuentes 
+@function get-grosor($grosor, $val) {
+    @if(map.has-key($grosor, $val )) {
+        @return map.get($grosor , $val);
+    }@else{
+        @warn "El grosor seleccionado no existe";
+    }
+}
+
+
+// Función que devuelve el nivel del componente
+@function superposicion($al) {
+    @if map.has-key(variables.$superposicion, $al) {
+        @return map.get(variables.$superposicion, $al);
+    }@else {
+        @warn "El componente no existe";
+    }
+}
+
+// Devuelve el breackpoint 
+@function dameMedida($med) {
+    @if map.has-key(variables.$tamaños, $med) {
+        @return map.get(variables.$tamaños, $med);
+    }
+}
+
+// Verifica si un valor es multiplo de 5
+@function multiplo5($num){
+    @return $num % 5 == 0;
+}
+
+@function inicializarVariable() {
+    @return 0;
+}
+
+@function incrementar($var) {
+    @return $var + 0.5;
+}

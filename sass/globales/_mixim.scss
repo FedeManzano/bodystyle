@@ -1,0 +1,274 @@
+@use "sass:map";
+@use "funciones";
+@use "variables";
+
+@mixin agregar-a-medida-maxima($tam) { 
+    @if map.has-key(variables.$tamaños, $tam) {
+        @media (max-width: #{map.get(variables.$tamaños, $tam)}) {
+            @content;
+        }
+    }
+  
+    @else {
+      @warn "El tamaño seleccionado no existe";
+    }
+};
+
+@mixin agregar-a-medida-minima($tam) { 
+    @if map.has-key(variables.$tamaños, $tam) {
+        @media (min-width: #{map.get(variables.$tamaños, $tam)}) {
+            @content;
+        }
+    }
+
+    @else {
+      @warn "El tamaño seleccionado no existe";;
+    }
+};
+
+@mixin flex-box-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-box-centrado-derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-box-centrado-izquierda {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
+    position: absolute;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin posicionamiento-fixed($top, $rigth, $botton, $left) {
+    position: fixed;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin ancho-alto($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+
+@mixin menu() {
+    display: flex;
+    flex-direction: column;
+    padding: 6.7px;
+
+    span {
+        @include ancho-alto(18px, 2px);
+        margin-bottom: 3px;
+        background-color: white;
+        
+    }
+}
+
+@mixin flechas() {
+    position: absolute;
+    @include ancho-alto(0, 0);
+    right: 20px;
+    top: calc(50% - 5px);
+    display: flex;
+}
+
+
+
+// ************** Mixim botones ********************* //
+
+@mixin inicializar-botones {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397); 
+    user-select: none;
+    appearance: none;
+    white-space: nowrap; 
+}
+@mixin configuracion-botones() {
+    //Inicializar componentes de html puro
+    border-style: none;
+    outline: none;
+    line-height: 0;
+    box-shadow: none;
+    background: none;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    max-height: unset;
+    display: flex;
+}
+
+@mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
+    padding: $patb $palr ;
+    min-width: 35px;
+    max-width: 200px !important;
+    max-height: $maxh;
+    min-height: $maxh;
+}
+
+@mixin btn-cubrir ($pbt, $plr, $fz, $display, $w, $m) {
+    padding: $pbt $plr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $w;
+    font-size: $fz;
+    margin:$m;
+}
+
+
+@mixin btn-colores($bg, $color, $fz) {
+    background-color: $bg;
+    color: $color;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    transition: all 0.3s ease;
+}
+
+
+@mixin btn-colores-outline($bgr, $btipo, $bcolor, $color, $fzm) {
+    border: $bgr $btipo $bcolor !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: $color !important;
+    transition: all 0.7s ease;
+}
+
+
+// ********* Mixim Input ********* //
+@mixin configInput() {
+    outline: none;
+    height: 2.1em;
+    width: 100%;
+    border: 1px solid variables.$gris-input;
+    padding: 0.6em;
+    border-radius: 3px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+
+// ************** Menú ************ //
+
+
+@mixin menu-general {
+    @include flex-box-centrado();
+    padding: 0 20px;
+    width: 100%;
+    background-color: variables.$fd-gris-n;
+    z-index: funciones.superposicion(ms); // altura menu superior ms
+}
+
+
+@mixin menu-lista {
+    @include flex-box-centrado-izquierda();
+    width: 80%;
+    
+    li {
+        a {
+            display: block;
+            padding: 1em;
+            height: 100%;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1em;
+            &.desactivado {
+                color: rgba(117, 117, 117);
+                &:hover {
+                    color: grey;
+                }
+            }
+            &:hover {
+                color: variables.$fd-gris-c;
+            }
+        }
+        
+    }
+}
+
+@mixin  menu-ext {
+    background-color: white;
+    display: block;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            min-width:100px ;
+            a {
+                display: flex;
+                flex-direction: column;
+                color: rgb(78, 78, 78);
+                text-align: center;
+                padding: 10px 0;
+                &:hover {
+                    color: black;
+                }
+
+                & span:first-child {
+                    font-size: 30px;
+                    margin-bottom: 7px;
+                }
+                & span:last-child {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin menu-lateral-boton() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-end;
+    padding: 1em;
+    cursor: pointer;
+  
+    span {
+        @include ancho-alto(22px, 2px);
+        margin-bottom: 5px;
+        background-color: white;
+    }
+    width: 80%;
+    color: white;
+    
+    @include agregar-a-medida-minima(m){
+        display: none !important;
+    }
+    z-index: 100000000;
+}
+
+@mixin menu-logo {
+    @include flex-box-centrado();
+    width: 10%;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: auto;
+    color: white;
+}

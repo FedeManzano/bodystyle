@@ -1,0 +1,392 @@
+@use "globales/variables";
+
+
+variables.$borde: 1px solid rgba(0, 0, 0, 0.2);
+$fw-td: 300;
+$fw-th: 500;
+
+table, 
+.tabla-oscura,
+.table-dark, 
+.tabla-roja,
+.table-red,
+.tabla-verde,
+.table-green,
+.tabla-azul,
+.table-blue {
+
+     font-family: 'Roboto', -apple-system, 
+                    BlinkMacSystemFont, 
+                    "Segoe UI", 
+                    "Helvetica Neue", 
+                    Arial, 
+                    "Noto Sans", 
+                    sans-serif, 
+                    "Apple Color Emoji", 
+                    "Segoe UI Emoji", 
+                    "Segoe UI Symbol", 
+                    "Noto Color Emoji";
+
+
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-collapse:collapse; 
+    border: none;
+    width: 100%;
+}
+
+table.selector tbody tr:nth-child(2n+1) >td{
+    background-color: rgba(0, 0, 0, 0.145) !important;;
+}
+
+
+.centrada {
+    text-align: center !important;
+}
+
+.tabla-responsive::-webkit-scrollbar{
+    width: 10px !important;
+    height: 10px;
+    background-color: rgb(39, 39, 39) !important;
+}
+
+.tabla-responsive::-webkit-scrollbar-thumb{
+    background-color: rgba(138, 138, 138, 0.527) !important;
+    border-radius: 5px !important;
+}
+
+table thead tr,
+table tbody tr, 
+.tabla-roja thead tr,
+.tabla-roja tbody tr,
+.tabla-roja thead tr,
+.tabla-roja tbody tr,
+.tabla-azul thead tr,
+.tabla-azul tbody tr,
+.tabla-oscura thead tr,
+.tabla-oscura tbody tr{
+   color: #212121;
+}
+
+
+table thead tr td,
+table thead tr th,
+table tbody tr td,
+.tabla-roja  thead tr td,
+.tabla-roja  thead tr th,
+.tabla-roja  tbody tr td,
+.table-red  thead tr td,
+.table-red  thead tr th,
+.table-red  tbody tr td,
+.tabla-verde  thead tr td,
+.tabla-verde  thead tr th,
+.tabla-verde  tbody tr td,
+.table-green  thead tr td,
+.table-green  thead tr th,
+.table-green  tbody tr td,
+.tabla-azul  thead tr td,
+.tabla-azul  thead tr th,
+.tabla-azul  tbody tr td,
+.table-blue  thead tr td,
+.table-blue  thead tr th,
+.table-blue  tbody tr td,
+.tabla-oscura  thead tr td,
+.tabla-oscura  thead tr th,
+.tabla-oscura  tbody tr td,
+.table-dark  thead tr td,
+.table-dark  thead tr th,
+.table-dark  tbody tr td
+{
+    padding: 1em 1em;
+    border-bottom:  variables.$borde;
+    border-top:  variables.$borde;
+    border-left:  none;
+    font-weight: 600;
+}
+
+table tbody tr td{
+    border-top: none;
+    cursor: pointer;
+    color: #212121;
+}
+
+table thead{
+    background-color: rgba(0, 0, 0, 0.034) !important;
+}
+
+table tbody tr td {
+    border-radius: 0;
+    font-weight: $fw-td;
+}
+
+table thead tr th {
+    border-radius: 0;
+    font-weight: $fw-th;
+    background-color: #00000039;
+}
+
+.tabla-oscura,
+.table-dark {
+    background-color: variables.$fd-gris-az-c;
+}
+
+.tabla-oscura tbody tr td,
+.table-dark tbody tr td,
+.tabla-oscura thead tr th,
+.table-dark thead tr th {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-td;
+}
+
+.tabla-oscura thead tr th,
+.table-dark thead tr th  {
+    font-weight: $fw-th;
+}
+
+.tabla-oscura thead tr,
+.tabla-oscura tbody tr,
+.table-dark thead tr,
+.table-dark tbody tr {
+   color: white;
+}
+
+.tabla-oscura thead tr td:nth-child(1),
+.tabla-oscura thead tr th:nth-child(1),
+.tabla-oscura tbody tr td:nth-child(1),
+.table-dark thead tr td:nth-child(1),
+.table-dark thead tr th:nth-child(1),
+.table-dark tbody tr td:nth-child(1){
+    border-left: none;
+}
+
+
+.tabla-oscura thead tr,
+.table-dark thead tr  {
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+    background-color: #00000027;
+}
+
+
+// Tabla roja
+
+.tabla-roja,
+.table-red {
+    background-color: variables.$fd-rojo !important;
+}
+
+.tabla-roja tbody tr td,
+.table-red tbody tr td {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-td;
+}
+
+.tabla-roja thead tr th,
+.table-red thead tr th {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-th;
+}
+
+.tabla-roja thead tr,
+.table-red  thead tr,
+.tabla-roja tbody tr,
+.table-red tbody tr {
+   background-color: variables.$fd-rojo;
+   color: white;
+}
+
+.tabla-roja thead tr td:nth-child(1),
+.tabla-roja thead tr th:nth-child(1),
+.tabla-roja tbody tr td:nth-child(1),
+.table-red thead tr td:nth-child(1),
+.table-red thead tr th:nth-child(1),
+.table-red tbody tr td:nth-child(1){
+    border-left: none;
+}
+
+
+.tabla-roja thead tr,
+.table-red thead tr {
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+    background-color: #00000020;
+}
+
+// tabla azul
+
+
+.tabla-azul,
+.table-blue{
+    background-color: variables.$fd-azul-c !important;
+}
+
+.tabla-azul tbody tr td,
+.table-blue tbody tr td{
+    border-top:  none;
+    color: white;
+    font-weight: $fw-td;
+}
+
+.tabla-azul thead tr th,
+.table-blue thead tr th {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-th;
+}
+
+.tabla-azul thead tr,
+.tabla-azul tbody tr,
+.table-blue thead tr,
+.table-blue tbody tr {
+   color: white;
+}
+
+.tabla-azul thead tr td:nth-child(1),
+.tabla-azul thead tr th:nth-child(1),
+.tabla-azul tbody tr td:nth-child(1),
+.table-blue thead tr td:nth-child(1),
+.table-blue thead tr th:nth-child(1),
+.table-blue tbody tr td:nth-child(1){
+    border-left: none;
+}
+.tabla-azul thead tr,
+.table-blue thead tr {
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+    background-color: #00000020;
+}
+
+
+// verde 
+
+.tabla-verde,
+.table-green {
+    background-color: rgb(0, 117, 133) !important;
+}
+.tabla-verde tbody tr td,
+.table-green tbody tr td {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-td;
+}
+
+.tabla-verde thead tr th,
+.table-green thead tr th  {
+    border-top:  none;
+    color: white;
+    font-weight: $fw-th;
+}
+
+
+.tabla-verde thead tr,
+.tabla-verde tbody tr,
+.table-green thead tr,
+.table-green tbody tr {
+   color: white;
+}
+
+.tabla-verde thead tr td:nth-child(1),
+.tabla-verde thead tr th:nth-child(1),
+.tabla-verde tbody tr td:nth-child(1),
+.table-green thead tr td:nth-child(1),
+.table-green thead tr th:nth-child(1),
+.table-green tbody tr td:nth-child(1){
+    border-left: none;
+}
+.tabla-verde thead tr,
+.table-green thead tr  {
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+    background-color: #00000020;
+}
+
+
+.hover tbody tr:hover > td{
+    background-color: rgba(0, 0, 0, 0.147) !important;
+}
+
+.tabla-sm thead tr td,
+.tabla-sm thead tr th,
+.tabla-sm tbody tr td,
+.table-sm thead tr td,
+.table-sm thead tr th,
+.table-sm tbody tr td{
+    padding: 0.5em 1em;
+}
+
+.tabla-bor-rojo thead,
+.table-bor-red thead{
+    border-top: 3px solid variables.$fd-rojo;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-verde thead,
+.table-bor-green thead{
+    border-top: 3px solid variables.$fd-verde;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-azul thead,
+.table-bor-blue thead{
+    border-top: 3px solid variables.$fd-azul;
+    border-radius: 3px  !important;
+}
+
+
+.tabla-bor-gris thead,
+.table-bor-grey thead{
+    border-top: 3px solid variables.$fd-gris;
+    border-radius: 3px  !important;
+}
+
+
+.tabla-bor-negro thead,
+.table-bor-black thead{
+    border-top: 3px solid variables.$fd-negro;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-blanco thead,
+.table-bor-white thead{
+    border-top: 3px solid variables.$fd-blanco;
+    border-radius: 3px  !important;
+}
+
+@media (max-width: 1200px) {
+    .tabla-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow: scroll;
+    }
+    .tabla-responsive > table {
+        margin-bottom: 0;
+    }
+    .tabla-responsive > table > thead > tr > th,
+    .tabla-responsive > table > tbody > tr > th,
+    .tabla-responsive > table > tfoot > tr > th,
+    .tabla-responsive > table > thead > tr > td,
+    .tabla-responsive > table > tbody > tr > td,
+    .tabla-responsive > table > tfoot > tr > td {
+        white-space: nowrap !important;
+    }
+}
+
+.borde-vertical  thead ,
+.borde-vertical  tbody,
+.vertical-border  thead ,
+.vertical-border  tbody{
+    tr {
+        td,th {
+            border-left: variables.$borde;
+        }
+
+        & td:last-child,
+        & th:last-child {
+            border-right: variables.$borde;
+        }
+    }
+}

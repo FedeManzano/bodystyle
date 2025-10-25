@@ -1,0 +1,164 @@
+@use "../globales/variables";
+
+/** Borde radio % y px*/
+@for $i from 1 through 50 {
+    .bor-rad-por-#{$i} {
+        border-radius: 0% + $i !important;
+    }
+}
+
+.bor-negro-trans,
+.bor-black-trans {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.055) !important;
+}
+
+.bor-pill {
+    border-radius: 9999px !important;
+}
+
+@for $i from 1 through 20 {
+    .bor-rad-#{$i} {
+        border-radius: 0px + $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-#{$i} {
+        border: 0px + $i solid rgb(0,0,0) !important;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-grey-#{$i} {
+        border: 0px + $i solid variables.$fd-gris !important;
+    }
+
+    .bor-grey-#{$i} {
+        border: 0px + $i solid variables.$fd-gris !important;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-grey-c-#{$i} {
+        border: 0px + $i solid variables.$fd-gris-c !important;
+    }
+
+    .bor-grey-s-#{$i} {
+        border: 0px + $i solid variables.$fd-gris-c !important;
+    }
+}
+
+
+/** Bordes rojos */
+@for $i from 1 through 10 {
+    .bor-rojo-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo !important;
+    }
+
+    .bor-red-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo !important;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-rojo-c-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo-c !important;
+    }
+
+    .bor-red-s-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo-c !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-t-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo-t !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-o-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo-o-1 !important;
+    }
+
+    .bor-red-d-#{$i} {
+        border: 0px + $i solid variables.$fd-rojo-o-1 !important;
+    }
+}
+
+/** Bordes rojos verdes*/
+@for $i from 1 through 10 {
+    .bor-verde-#{$i} {
+        border: 0px + $i solid variables.$fd-verde !important;
+    }
+
+    .bor-green-#{$i} {
+        border: 0px + $i solid variables.$fd-verde !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-c-#{$i} {
+        border: 0px + $i solid variables.$fd-verde-c !important;
+    }
+
+    .bor-green-s-#{$i} {
+        border: 0px + $i solid variables.$fd-verde-c !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-o-#{$i} {
+        border: 0px + $i solid variables.$fd-verde-o-2 !important;
+    }
+    .bor-green-d-#{$i} {
+        border: 0px + $i solid variables.$fd-verde-o-2 !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-az-#{$i} {
+        border: 0px + $i solid variables.$fd-verde-az !important;
+    }
+}
+
+/*bordes azules*/
+@for $i from 1 through 10 {
+    .bor-azul-#{$i} {
+        border: 0px + $i solid variables.$fd-azul !important;
+    }
+
+    .bor-blue-#{$i} {
+        border: 0px + $i solid variables.$fd-azul !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-ve-#{$i} {
+        border: 0px + $i solid variables.$fd-azul-ve !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-c-#{$i} {
+        border: 0px + $i solid variables.$fd-azul-c !important;
+    }
+
+    .bor-blue-s-#{$i} {
+        border: 0px + $i solid variables.$fd-azul-c !important;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-azul-o-#{$i} {
+        border: 0px + $i solid variables.$fd-azul-o-2 !important;
+    }
+
+    .bor-blue-d-#{$i} {
+        border: 0px + $i solid variables.$fd-azul-o-2 !important;
+    }
+}

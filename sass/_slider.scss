@@ -1,0 +1,230 @@
+@use "globales/funciones";
+
+.slider-show {
+    position: relative;
+    min-height:550px;
+    overflow: hidden;
+    .slider {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        .item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            img {
+                min-width: 100%;
+                animation: aumentar 30s none 0s infinite  linear;
+            }
+
+            & .info:nth-child(2n) {
+                animation: derecha .5s none 0s 1  linear;
+            }
+            .info {
+                position: absolute;
+                text-align: center;
+                color: white;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 50px 100px;
+                display: flex;
+               // justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.541);
+                animation: opa 4s none 0s infinite  linear;
+                * {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .f {
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            top: calc(50% - 15px);
+            left: 0;
+            z-index: 100000;
+            .f-der,
+            .f-izq {
+                width: 30px;
+                height: 30px;
+                z-index: 350000000;
+                cursor: pointer;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 4px;
+                    right: 7.5px;
+                    background-color: rgba(255, 255, 255, 0.842);
+                    cursor: pointer;
+                    z-index: 3000;
+                }
+
+                &:hover ::before,
+                &::after ::after {
+                    background-color: white;
+                }
+
+                &::before {
+                    top: 7px; 
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    bottom: 7px;
+                    transform: rotate(-45deg);
+                }
+            }
+            .f-izq {
+                &:before,
+                &:after {
+                    left: 7.5px;
+                }
+
+                &::before {
+                    top: 7px; 
+                    transform: rotate(-45deg);
+                }
+
+                &:after {
+                    bottom: 7px;
+                    transform: rotate(45deg);
+                }
+
+            }
+        }
+        .selectores {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            span {
+                margin-left: 8px;
+                height: 4px;
+                width: 20px;
+                background-color: grey;
+                cursor: pointer;
+
+                &.activo {
+                    background-color: orangered;
+                }
+            }
+        } 
+    }
+
+    @media (max-width: funciones.dameMedida(m)) {
+        & {
+            min-height:350px;
+        }
+    }
+
+    @media (max-width: funciones.dameMedida(s)) {
+        & {
+            min-height:300px;
+            .slider {
+                .item {
+                    p {
+                        display:none
+                    }
+                    h4 {
+                        font-size: 20px;
+                    }
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: funciones.dameMedida(xs)) {
+        & {
+            min-height:250px;
+            .slider {
+                .item {
+                    h4 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes aumentar {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform:  scale(1.5);
+    }
+
+    70% {
+        transform:  scale(1.2);
+    }
+
+    100% {
+        transform:  scale(1);
+    }
+}
+
+@keyframes opa {
+    from {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+@keyframes izquierda {
+    0% {
+        left: -30%;
+    }
+    20% {
+        left: -15%;
+    }
+
+    50% {
+        left: -7%;
+    }
+
+    70% {
+        left: -3%;
+    }
+
+    100% {
+        left: 0;
+        
+    }
+}
+
+@keyframes derecha {
+    from {
+        right: -30%;
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 1;
+
+    }
+}

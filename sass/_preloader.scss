@@ -1,0 +1,67 @@
+@use "globales/mixim";
+@use "globales/variables";
+
+
+@mixin preloader ($color){
+    border-radius: 50%;
+    border-top: 5px solid $color;
+    border-left: 5px solid $color;
+    border-bottom: 5px solid $color;
+    animation: girar-preloader 0.5s  0s infinite  linear;
+}
+
+
+.preloader,
+.preloader-sm,
+.preloader-lg {
+    @include mixim.ancho-alto(40px, 40px);
+    border-radius: 50%;
+    border: 5px solid rgb(214, 214, 214);
+    position: relative;
+}
+
+.preloader-sm{
+    @include mixim.ancho-alto(20px, 20px);
+}
+
+.preloader-lg {
+    @include mixim.ancho-alto(60px, 60px);
+}
+
+
+.pre-rojo {
+    @include preloader(variables.$fd-rojo);
+}
+
+
+.pre-verde {
+    @include preloader(variables.$fd-verde);
+}
+
+.pre-azul {
+    @include preloader(variables.$fd-azul-c);
+}
+
+
+.pre-negro {
+    @include preloader(variables.$fd-gris-n);
+}
+
+
+.pre-gris {
+    @include preloader(variables.$fd-gris);
+}
+
+.pre-blanco {
+    @include preloader(white);
+}
+
+
+
+@keyframes girar-preloader {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(360deg);
+    }
+}

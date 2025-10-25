@@ -1,0 +1,130 @@
+.forma-circulo {
+    -webkit-clip-path: circle(50% at 50% 50%) !important;
+    clip-path: circle(50% at 50% 50%) !important;
+}
+
+.forma-elipse {
+    -webkit-clip-path: ellipse(25% 40% at 50% 50%) !important;
+    clip-path: ellipse(25% 40% at 50% 50%) !important;
+}
+
+.forma-triangulo {
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%) !important;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%) !important;
+}
+
+.forma-triangulo-recto-inf{
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%) !important;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%) !important;
+}
+
+.forma-triangulo-recto-sup{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%) !important;
+}
+
+.forma-triangulo-recto-inf-der{
+    -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%) !important;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%) !important;
+}
+
+.forma-triangulo-invertido{
+    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%) !important;
+    clip-path: polygon(0 0, 100% 0, 50% 100%) !important; 
+}
+
+.forma-trapecio {
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%) !important;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%) !important;
+}
+
+.forma-rombo {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+}
+
+.forma-pentagono {
+    -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+}
+
+.forma-hexagono {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+}
+
+.forma-heptagono {
+    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.forma-octagono {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%) !important;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%) !important;
+}
+
+.forma-flecha-izquierda {
+    -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%) !important;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%) !important;
+}
+
+.forma-flecha-derecha {
+    -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%) !important;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%) !important;
+}
+
+.forma-punto-izquierda {
+    -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%) !important;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%) !important;
+}
+
+.forma-punto-derecha {
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) !important;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) !important;
+}
+
+.forma-punto-abajo {
+    -webkit-clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0% 70%, 0 0) !important;
+    clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0% 70%, 0 0) !important;
+}
+
+.forma-punto-arriba {
+    -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%) !important;
+    clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%) !important;
+}
+
+.forma-banda-izquierda {
+    -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%) !important;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%) !important;
+}
+
+
+.forma-banda-derecha {
+    -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%) !important;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%) !important;
+}
+
+.forma-mensaje {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%) !important;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%) !important;
+}
+
+.forma-estrella {
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%) !important;
+clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%) !important;
+}
+
+.forma-cruz {
+    -webkit-clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%) !important;
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%) !important;
+}
+
+.forma-cerrar {
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%) !important;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%) !important;
+}
+
+.forma-ventana {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%) !important;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%) !important;
+}

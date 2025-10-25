@@ -1,0 +1,334 @@
+.check-radio-grupo,
+.check-radio-grupo{
+    &.desactivado [class^=cb],
+    &.desactivado [class^=rd]{
+        background-color: rgb(231, 231, 231) !important;
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado [class^=cb]::before,
+    &.desactivado [class^=rd]::before{
+        border: 2px solid rgb(194, 194, 194) !important;
+    }
+
+    &.desactivado .checkbox,
+    &.desactivado .radiobtn{
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado .checkbox::before,
+    &.desactivado .radiobtn::before{
+        border: 2px solid rgb(228, 228, 228) !important;
+        background-color: rgb(236, 236, 236) !important;
+    }
+}
+
+
+.check-radio-grupo input[type="checkbox"],
+.check-radio-grupo input[type="radio"] {
+    display: none;
+
+    &.desactivado + [class^=cb],
+    &.desactivado + [class^=rd]{
+        background-color: rgb(231, 231, 231) !important;
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado + [class^=cb]::before,
+    &.desactivado + [class^=rd]::before{
+        border: 2px solid rgb(194, 194, 194) !important;
+    }
+
+    &.desactivado + .checkbox,
+    &.desactivado + .radiobtn{
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado + .checkbox::before,
+    &.desactivado + .radiobtn::before{
+        border: 2px solid rgb(228, 228, 228) !important;
+        background-color: rgb(236, 236, 236) !important;
+    }
+}
+
+.cb-rojo,
+.cb-azul,
+.cb-verde,
+.cb-gris,
+.cb-negro,
+.cb-blanco,
+.rd-rojo,
+.rd-azul, 
+.rd-verde,
+.rd-gris,
+.rd-negro,
+.rd-blanco {
+    display: inline-block;
+    font-size: 17px;
+    padding: .5em;
+    padding-right: 17px;
+    padding-left: 51px;
+    position: relative;
+    background-color: rgba(255, 0, 0, 0.404);
+    border-radius: 4px;
+    color: black;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    user-select: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    
+}
+
+.cb-azul, 
+.rd-azul {
+    background-color: rgba(17, 101, 226, 0.39);
+}
+
+.cb-verde,
+.rd-verde {
+    background-color: rgba(2, 194, 146, 0.39);
+}
+
+.cb-gris,
+.rd-gris {
+    background-color: rgba(212, 212, 212, 0.39);
+}
+
+.cb-negro,
+.rd-negro {
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+.cb-blanco,
+.rd-blanco {
+    background-color: rgba(255, 255, 255, 0.397);
+    color: black;
+}
+
+.cb-rojo::before,
+.cb-verde::before,
+.cb-azul::before,
+.cb-gris::before,
+.cb-negro::before,
+.cb-blanco::before,
+.rd-rojo::before,
+.rd-verde::before,
+.rd-azul::before,
+.rd-gris::before,
+.rd-negro::before,
+.rd-blanco::before{
+    content: "";
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border: 2px solid red;
+    border-radius: 4px;
+    left: 17px;
+}
+
+.rd-rojo::before,
+.rd-verde::before,
+.rd-azul::before,
+.rd-gris::before,
+.rd-negro::before,
+.rd-blanco::before{
+    content: "";
+    border-radius: 50%;
+}
+
+
+.cb-verde::before {
+    content: "";
+    border: 2px solid rgb(2, 194, 146);
+}
+
+.rd-verde::before {
+    content: "";
+    border: 2px solid rgb(2, 194, 146);
+}
+
+
+.cb-azul::before {
+    content: "";
+    border: 2px solid rgb(17, 101, 226);
+}
+
+.rd-azul::before {
+    content: "";
+    border: 2px solid rgb(17, 101, 226);
+}
+
+.cb-gris::before {
+    content: "";
+    border: 2px solid rgb(212, 212, 212);
+}
+
+.rd-gris::before {
+    content: "";
+    border: 2px solid rgb(212, 212, 212);
+}
+
+.cb-negro::before {
+    content: "";
+    border: 2px solid black;
+}
+
+.rd-negro::before {
+    content: "";
+    border: 2px solid black;
+}
+
+.cb-blanco::before {
+    content: "";
+    border: 2px solid black;
+}
+
+.rd-blanco::before {
+    content: "";
+    border: 2px solid black;
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo::before,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-verde::before,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-azul::before,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-gris::before,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-negro::before,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-rojo::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-verde::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-azul::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-gris::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-negro::before,
+.check-radio-grupo input[type="radio"]:checked + .rd-blanco::before{
+    display: none;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-verde,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-azul,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-gris,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-negro,
+.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco,
+.check-radio-grupo input[type="radio"]:checked + .rd-rojo,
+.check-radio-grupo input[type="radio"]:checked + .rd-verde,
+.check-radio-grupo input[type="radio"]:checked + .rd-azul,
+.check-radio-grupo input[type="radio"]:checked + .rd-gris,
+.check-radio-grupo input[type="radio"]:checked + .rd-negro,
+.check-radio-grupo input[type="radio"]:checked + .rd-blanco {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo,
+.check-radio-grupo input[type="radio"]:checked + .rd-rojo {
+   background-color: rgb(255, 0, 0);
+   color: white;
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-verde,
+.check-radio-grupo input[type="radio"]:checked + .rd-verde {
+    background-color: rgb(2, 194, 146);
+    color: white;
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-azul,
+.check-radio-grupo input[type="radio"]:checked + .rd-azul {
+    background-color: rgb(17, 101, 226);
+    color: white;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-gris,
+.check-radio-grupo input[type="radio"]:checked + .rd-gris {
+    background-color: rgb(212, 212, 212);
+    color: black;
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-negro,
+.check-radio-grupo input[type="radio"]:checked + .rd-negro {
+    background-color: black;
+    color: white;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco,
+.check-radio-grupo input[type="radio"]:checked + .rd-blanco {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+.checkbox, .radiobtn {
+    display: inline-block;
+    font-size: 1em;
+    padding: 5px;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(26, 26, 26);
+    &:active {
+        color: black;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border-radius: 2px;
+        border: 1px solid rgb(214, 214, 214);
+        left: 0;
+        top: 5px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 1em;
+        height: 1em;
+        clip-path: polygon(30% 36%, 17% 52%, 49% 77%, 87% 30%, 72% 17%, 47% 50%);
+        background-color: black;
+        display: none;
+    }
+
+
+}
+
+.radiobtn {
+    &::before {
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 9px;
+        clip-path: none;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        display: none;
+    }
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .checkbox::after,
+.check-radio-grupo input[type="radio"]:checked + .radiobtn::after{
+    display: inline-block;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .checkbox::before, 
+.check-radio-grupo input[type="radio"]:checked + .radiobtn::before {
+    border: 1px solid rgba(45, 206, 255, 0.418);
+}

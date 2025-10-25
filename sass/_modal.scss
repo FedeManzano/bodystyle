@@ -1,0 +1,85 @@
+@use "globales/mixim";
+
+.modal-fondo {
+    @include mixim.posicionamiento-fixed(0,0,0,0);
+    @include mixim.flex-box-centrado();
+    background-color: rgba(0, 0, 0, 0.349);
+    z-index: 300;
+    overflow: auto;
+    .complemento {
+        @include mixim.posicionamiento-fixed(0,0,0,0);
+        z-index: 299;
+    }
+}
+
+.modal {
+
+    // Generales
+    font-size: 16px; // 1EM
+
+    
+    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    margin: auto;
+    z-index: 10000000;
+    background-color: white;
+
+    .modal-cabecera,
+    .modal-pie {
+        padding: 0.8em 1.5em;
+        background-color: rgba(0, 0, 0, 0.034);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+        font-size: 1.25em;
+    }
+
+    .modal-pie {
+        border-top: 1px solid rgba(0, 0, 0, 0.24);
+    }
+
+    .modal-cuerpo {
+        padding: 1.5em;
+        
+    }
+
+    .modal-titulo {
+        font-size: 1.375em;
+        color: black;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    .modal-scroll {
+        overflow: auto;
+        height: 200px;
+    }
+
+    .modal-salir {
+        height: 0;
+        width: 0;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .modal-salir::before{
+        content: "";
+        height: 3px;
+        width: 15px;
+        position: absolute;
+        background-color: black;
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .modal-salir::after{
+        content: "";
+        height: 3px;
+        width: 15px;
+        position: absolute;
+        background-color: black;
+        transform: rotate(-45deg);
+        top: 10px;
+    }
+}

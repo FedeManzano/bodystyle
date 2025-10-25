@@ -1,0 +1,14 @@
+.f-abajo {
+    @include flechas();
+    border-top: 5px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.f-derecha {
+    @include flechas();
+    border-left: 5px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+

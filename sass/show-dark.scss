@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+pre[class^=cod-] {
+  overflow: auto;
+  font-weight: 300;
+  background-color: white !important;
+  color: black !important;
+  font-size: 0.9em;
+  position: relative;
+  font-family: "Source Code Pro" !important;
+}
+pre[class^=cod-] .numeracion {
+  position: absolute;
+  border-right: 2px solid #01db92;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 30px;
+}
+pre[class^=cod-] .numeracion span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
+  padding: 0 7px;
+}
+
+pre[class^=cod-] {
+  background-color: #10151a !important;
+  color: #c5c5c5 !important;
+}
+pre[class^=cod-] .numeracion {
+  background-color: #10151a;
+}
+pre[class^=cod-] .numeracion span {
+  background-color: #10151a;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  color: #c5c5c5 !important;
+}
+
+.show-eti {
+  color: #ff1f1f !important;
+}
+
+.show-ang {
+  color: white !important;
+  font-weight: 500;
+}
+
+.show-attr {
+  color: #00c99d !important;
+}
+
+.show-string {
+  color: #ff8800 !important;
+}
+
+.show-com {
+  color: #45d164 !important;
+}
+
+/**
+    CSS
+*/
+.show-selectores {
+  color: #ffe135 !important;
+}
+
+.show-claves {
+  color: #c46cff !important;
+  font-weight: 500;
+}
+
+.show-prop {
+  color: #5bbdff !important;
+}
+
+.show-valor {
+  color: #fda027 !important;
+}
+
+.show-llaves {
+  color: white !important;
+}
+
+.show-res {
+  color: #cf2727 !important;
+  font-weight: 500;
+}
+
+.show-nombres {
+  color: #af6a1b !important;
+}
+
+.show-control {
+  color: #dc2dff !important;
+  font-weight: 500;
+}
+
+.show-op {
+  color: #04a064 !important;
+  font-weight: 500;
+}
+
+.show-var {
+  color: #0ec7d4 !important;
+  font-weight: 500;
+}
+
+.show-sistema {
+  color: #00ce7f !important;
+  font-weight: 500;
+}
+
+.show-numeros {
+  color: #ff8800 !important;
+}
+
+.show-ajava {
+  color: #14f178 !important;
+  font-weight: 300;
+}
+
+.show-sobre {
+  color: #c9c9c9 !important;
+  font-style: italic;
+}
+
+.show-met {
+  color: #ffb005 !important;
+  font-weight: 500;
+}
+
+.show-retorno {
+  color: white !important;
+  font-weight: 600;
+}
+
+.show-llamadas {
+  color: #ffb005 !important;
+  font-weight: 300;
+}
+
+.show-objetos {
+  color: #005a7e !important;
+  font-weight: 600;
+}
+
+.show-json {
+  color: #22d6d6 !important;
+}
+
+.show-error {
+  color: red !important;
+}
+
+.show-c {
+  color: #df3c3c !important;
+  font-weight: 500;
+}
+
+.show-inc {
+  color: #ff8800 !important;
+  font-weight: 600;
+}

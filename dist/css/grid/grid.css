@@ -1,0 +1,6262 @@
+/****
+    Grilla para acomodar los elementos dentro del sitio
+    Contiene 4 medidas disponibles
+    cxs: MxtraSmall para dispositivos de 400px de ancho max
+    cs: Small para dispositivos de 768px de ancho max
+    cm: Medium para dispositivos de 1024px de ancho max
+    cl: Large para dispositivos de mas de 1100px de ancho max
+*/
+.fila,
+.row {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr) !important;
+}
+.fila .cxs-1,
+.row .cxs-1 {
+  grid-column: span 1;
+}
+.fila .cxs-2,
+.row .cxs-2 {
+  grid-column: span 2;
+}
+.fila .cxs-3,
+.row .cxs-3 {
+  grid-column: span 3;
+}
+.fila .cxs-4,
+.row .cxs-4 {
+  grid-column: span 4;
+}
+.fila .cxs-5,
+.row .cxs-5 {
+  grid-column: span 5;
+}
+.fila .cxs-6,
+.row .cxs-6 {
+  grid-column: span 6;
+}
+.fila .cxs-7,
+.row .cxs-7 {
+  grid-column: span 7;
+}
+.fila .cxs-8,
+.row .cxs-8 {
+  grid-column: span 8;
+}
+.fila .cxs-9,
+.row .cxs-9 {
+  grid-column: span 9;
+}
+.fila .cxs-10,
+.row .cxs-10 {
+  grid-column: span 10;
+}
+.fila .cxs-11,
+.row .cxs-11 {
+  grid-column: span 11;
+}
+.fila .cxs-12,
+.row .cxs-12 {
+  grid-column: span 12;
+}
+.fila .cs-1,
+.row .cs-1 {
+  grid-column: span 1;
+}
+.fila .cs-2,
+.row .cs-2 {
+  grid-column: span 2;
+}
+.fila .cs-3,
+.row .cs-3 {
+  grid-column: span 3;
+}
+.fila .cs-4,
+.row .cs-4 {
+  grid-column: span 4;
+}
+.fila .cs-5,
+.row .cs-5 {
+  grid-column: span 5;
+}
+.fila .cs-6,
+.row .cs-6 {
+  grid-column: span 6;
+}
+.fila .cs-7,
+.row .cs-7 {
+  grid-column: span 7;
+}
+.fila .cs-8,
+.row .cs-8 {
+  grid-column: span 8;
+}
+.fila .cs-9,
+.row .cs-9 {
+  grid-column: span 9;
+}
+.fila .cs-10,
+.row .cs-10 {
+  grid-column: span 10;
+}
+.fila .cs-11,
+.row .cs-11 {
+  grid-column: span 11;
+}
+.fila .cs-12,
+.row .cs-12 {
+  grid-column: span 12;
+}
+.fila .cm-1,
+.row .cm-1 {
+  grid-column: span 1;
+}
+.fila .cm-2,
+.row .cm-2 {
+  grid-column: span 2;
+}
+.fila .cm-3,
+.row .cm-3 {
+  grid-column: span 3;
+}
+.fila .cm-4,
+.row .cm-4 {
+  grid-column: span 4;
+}
+.fila .cm-5,
+.row .cm-5 {
+  grid-column: span 5;
+}
+.fila .cm-6,
+.row .cm-6 {
+  grid-column: span 6;
+}
+.fila .cm-7,
+.row .cm-7 {
+  grid-column: span 7;
+}
+.fila .cm-8,
+.row .cm-8 {
+  grid-column: span 8;
+}
+.fila .cm-9,
+.row .cm-9 {
+  grid-column: span 9;
+}
+.fila .cm-10,
+.row .cm-10 {
+  grid-column: span 10;
+}
+.fila .cm-11,
+.row .cm-11 {
+  grid-column: span 11;
+}
+.fila .cm-12,
+.row .cm-12 {
+  grid-column: span 12;
+}
+.fila .cl-1,
+.row .cl-1 {
+  grid-column: span 1;
+}
+.fila .cl-2,
+.row .cl-2 {
+  grid-column: span 2;
+}
+.fila .cl-3,
+.row .cl-3 {
+  grid-column: span 3;
+}
+.fila .cl-4,
+.row .cl-4 {
+  grid-column: span 4;
+}
+.fila .cl-5,
+.row .cl-5 {
+  grid-column: span 5;
+}
+.fila .cl-6,
+.row .cl-6 {
+  grid-column: span 6;
+}
+.fila .cl-7,
+.row .cl-7 {
+  grid-column: span 7;
+}
+.fila .cl-8,
+.row .cl-8 {
+  grid-column: span 8;
+}
+.fila .cl-9,
+.row .cl-9 {
+  grid-column: span 9;
+}
+.fila .cl-10,
+.row .cl-10 {
+  grid-column: span 10;
+}
+.fila .cl-11,
+.row .cl-11 {
+  grid-column: span 11;
+}
+.fila .cl-12,
+.row .cl-12 {
+  grid-column: span 12;
+}
+.fila .offset-xs-1-1,
+.row .offset-xs-1-1 {
+  grid-column: 2/span 1;
+}
+.fila .offset-xs-1-2,
+.row .offset-xs-1-2 {
+  grid-column: 2/span 2;
+}
+.fila .offset-xs-1-3,
+.row .offset-xs-1-3 {
+  grid-column: 2/span 3;
+}
+.fila .offset-xs-1-4,
+.row .offset-xs-1-4 {
+  grid-column: 2/span 4;
+}
+.fila .offset-xs-1-5,
+.row .offset-xs-1-5 {
+  grid-column: 2/span 5;
+}
+.fila .offset-xs-1-6,
+.row .offset-xs-1-6 {
+  grid-column: 2/span 6;
+}
+.fila .offset-xs-1-7,
+.row .offset-xs-1-7 {
+  grid-column: 2/span 7;
+}
+.fila .offset-xs-1-8,
+.row .offset-xs-1-8 {
+  grid-column: 2/span 8;
+}
+.fila .offset-xs-1-9,
+.row .offset-xs-1-9 {
+  grid-column: 2/span 9;
+}
+.fila .offset-xs-1-10,
+.row .offset-xs-1-10 {
+  grid-column: 2/span 10;
+}
+.fila .offset-xs-1-11,
+.row .offset-xs-1-11 {
+  grid-column: 2/span 11;
+}
+.fila .offset-xs-1-12,
+.row .offset-xs-1-12 {
+  grid-column: 2/span 12;
+}
+.fila .offset-xs-2-1,
+.row .offset-xs-2-1 {
+  grid-column: 3/span 1;
+}
+.fila .offset-xs-2-2,
+.row .offset-xs-2-2 {
+  grid-column: 3/span 2;
+}
+.fila .offset-xs-2-3,
+.row .offset-xs-2-3 {
+  grid-column: 3/span 3;
+}
+.fila .offset-xs-2-4,
+.row .offset-xs-2-4 {
+  grid-column: 3/span 4;
+}
+.fila .offset-xs-2-5,
+.row .offset-xs-2-5 {
+  grid-column: 3/span 5;
+}
+.fila .offset-xs-2-6,
+.row .offset-xs-2-6 {
+  grid-column: 3/span 6;
+}
+.fila .offset-xs-2-7,
+.row .offset-xs-2-7 {
+  grid-column: 3/span 7;
+}
+.fila .offset-xs-2-8,
+.row .offset-xs-2-8 {
+  grid-column: 3/span 8;
+}
+.fila .offset-xs-2-9,
+.row .offset-xs-2-9 {
+  grid-column: 3/span 9;
+}
+.fila .offset-xs-2-10,
+.row .offset-xs-2-10 {
+  grid-column: 3/span 10;
+}
+.fila .offset-xs-2-11,
+.row .offset-xs-2-11 {
+  grid-column: 3/span 11;
+}
+.fila .offset-xs-2-12,
+.row .offset-xs-2-12 {
+  grid-column: 3/span 12;
+}
+.fila .offset-xs-3-1,
+.row .offset-xs-3-1 {
+  grid-column: 4/span 1;
+}
+.fila .offset-xs-3-2,
+.row .offset-xs-3-2 {
+  grid-column: 4/span 2;
+}
+.fila .offset-xs-3-3,
+.row .offset-xs-3-3 {
+  grid-column: 4/span 3;
+}
+.fila .offset-xs-3-4,
+.row .offset-xs-3-4 {
+  grid-column: 4/span 4;
+}
+.fila .offset-xs-3-5,
+.row .offset-xs-3-5 {
+  grid-column: 4/span 5;
+}
+.fila .offset-xs-3-6,
+.row .offset-xs-3-6 {
+  grid-column: 4/span 6;
+}
+.fila .offset-xs-3-7,
+.row .offset-xs-3-7 {
+  grid-column: 4/span 7;
+}
+.fila .offset-xs-3-8,
+.row .offset-xs-3-8 {
+  grid-column: 4/span 8;
+}
+.fila .offset-xs-3-9,
+.row .offset-xs-3-9 {
+  grid-column: 4/span 9;
+}
+.fila .offset-xs-3-10,
+.row .offset-xs-3-10 {
+  grid-column: 4/span 10;
+}
+.fila .offset-xs-3-11,
+.row .offset-xs-3-11 {
+  grid-column: 4/span 11;
+}
+.fila .offset-xs-3-12,
+.row .offset-xs-3-12 {
+  grid-column: 4/span 12;
+}
+.fila .offset-xs-4-1,
+.row .offset-xs-4-1 {
+  grid-column: 5/span 1;
+}
+.fila .offset-xs-4-2,
+.row .offset-xs-4-2 {
+  grid-column: 5/span 2;
+}
+.fila .offset-xs-4-3,
+.row .offset-xs-4-3 {
+  grid-column: 5/span 3;
+}
+.fila .offset-xs-4-4,
+.row .offset-xs-4-4 {
+  grid-column: 5/span 4;
+}
+.fila .offset-xs-4-5,
+.row .offset-xs-4-5 {
+  grid-column: 5/span 5;
+}
+.fila .offset-xs-4-6,
+.row .offset-xs-4-6 {
+  grid-column: 5/span 6;
+}
+.fila .offset-xs-4-7,
+.row .offset-xs-4-7 {
+  grid-column: 5/span 7;
+}
+.fila .offset-xs-4-8,
+.row .offset-xs-4-8 {
+  grid-column: 5/span 8;
+}
+.fila .offset-xs-4-9,
+.row .offset-xs-4-9 {
+  grid-column: 5/span 9;
+}
+.fila .offset-xs-4-10,
+.row .offset-xs-4-10 {
+  grid-column: 5/span 10;
+}
+.fila .offset-xs-4-11,
+.row .offset-xs-4-11 {
+  grid-column: 5/span 11;
+}
+.fila .offset-xs-4-12,
+.row .offset-xs-4-12 {
+  grid-column: 5/span 12;
+}
+.fila .offset-xs-5-1,
+.row .offset-xs-5-1 {
+  grid-column: 6/span 1;
+}
+.fila .offset-xs-5-2,
+.row .offset-xs-5-2 {
+  grid-column: 6/span 2;
+}
+.fila .offset-xs-5-3,
+.row .offset-xs-5-3 {
+  grid-column: 6/span 3;
+}
+.fila .offset-xs-5-4,
+.row .offset-xs-5-4 {
+  grid-column: 6/span 4;
+}
+.fila .offset-xs-5-5,
+.row .offset-xs-5-5 {
+  grid-column: 6/span 5;
+}
+.fila .offset-xs-5-6,
+.row .offset-xs-5-6 {
+  grid-column: 6/span 6;
+}
+.fila .offset-xs-5-7,
+.row .offset-xs-5-7 {
+  grid-column: 6/span 7;
+}
+.fila .offset-xs-5-8,
+.row .offset-xs-5-8 {
+  grid-column: 6/span 8;
+}
+.fila .offset-xs-5-9,
+.row .offset-xs-5-9 {
+  grid-column: 6/span 9;
+}
+.fila .offset-xs-5-10,
+.row .offset-xs-5-10 {
+  grid-column: 6/span 10;
+}
+.fila .offset-xs-5-11,
+.row .offset-xs-5-11 {
+  grid-column: 6/span 11;
+}
+.fila .offset-xs-5-12,
+.row .offset-xs-5-12 {
+  grid-column: 6/span 12;
+}
+.fila .offset-xs-6-1,
+.row .offset-xs-6-1 {
+  grid-column: 7/span 1;
+}
+.fila .offset-xs-6-2,
+.row .offset-xs-6-2 {
+  grid-column: 7/span 2;
+}
+.fila .offset-xs-6-3,
+.row .offset-xs-6-3 {
+  grid-column: 7/span 3;
+}
+.fila .offset-xs-6-4,
+.row .offset-xs-6-4 {
+  grid-column: 7/span 4;
+}
+.fila .offset-xs-6-5,
+.row .offset-xs-6-5 {
+  grid-column: 7/span 5;
+}
+.fila .offset-xs-6-6,
+.row .offset-xs-6-6 {
+  grid-column: 7/span 6;
+}
+.fila .offset-xs-6-7,
+.row .offset-xs-6-7 {
+  grid-column: 7/span 7;
+}
+.fila .offset-xs-6-8,
+.row .offset-xs-6-8 {
+  grid-column: 7/span 8;
+}
+.fila .offset-xs-6-9,
+.row .offset-xs-6-9 {
+  grid-column: 7/span 9;
+}
+.fila .offset-xs-6-10,
+.row .offset-xs-6-10 {
+  grid-column: 7/span 10;
+}
+.fila .offset-xs-6-11,
+.row .offset-xs-6-11 {
+  grid-column: 7/span 11;
+}
+.fila .offset-xs-6-12,
+.row .offset-xs-6-12 {
+  grid-column: 7/span 12;
+}
+.fila .offset-xs-7-1,
+.row .offset-xs-7-1 {
+  grid-column: 8/span 1;
+}
+.fila .offset-xs-7-2,
+.row .offset-xs-7-2 {
+  grid-column: 8/span 2;
+}
+.fila .offset-xs-7-3,
+.row .offset-xs-7-3 {
+  grid-column: 8/span 3;
+}
+.fila .offset-xs-7-4,
+.row .offset-xs-7-4 {
+  grid-column: 8/span 4;
+}
+.fila .offset-xs-7-5,
+.row .offset-xs-7-5 {
+  grid-column: 8/span 5;
+}
+.fila .offset-xs-7-6,
+.row .offset-xs-7-6 {
+  grid-column: 8/span 6;
+}
+.fila .offset-xs-7-7,
+.row .offset-xs-7-7 {
+  grid-column: 8/span 7;
+}
+.fila .offset-xs-7-8,
+.row .offset-xs-7-8 {
+  grid-column: 8/span 8;
+}
+.fila .offset-xs-7-9,
+.row .offset-xs-7-9 {
+  grid-column: 8/span 9;
+}
+.fila .offset-xs-7-10,
+.row .offset-xs-7-10 {
+  grid-column: 8/span 10;
+}
+.fila .offset-xs-7-11,
+.row .offset-xs-7-11 {
+  grid-column: 8/span 11;
+}
+.fila .offset-xs-7-12,
+.row .offset-xs-7-12 {
+  grid-column: 8/span 12;
+}
+.fila .offset-xs-8-1,
+.row .offset-xs-8-1 {
+  grid-column: 9/span 1;
+}
+.fila .offset-xs-8-2,
+.row .offset-xs-8-2 {
+  grid-column: 9/span 2;
+}
+.fila .offset-xs-8-3,
+.row .offset-xs-8-3 {
+  grid-column: 9/span 3;
+}
+.fila .offset-xs-8-4,
+.row .offset-xs-8-4 {
+  grid-column: 9/span 4;
+}
+.fila .offset-xs-8-5,
+.row .offset-xs-8-5 {
+  grid-column: 9/span 5;
+}
+.fila .offset-xs-8-6,
+.row .offset-xs-8-6 {
+  grid-column: 9/span 6;
+}
+.fila .offset-xs-8-7,
+.row .offset-xs-8-7 {
+  grid-column: 9/span 7;
+}
+.fila .offset-xs-8-8,
+.row .offset-xs-8-8 {
+  grid-column: 9/span 8;
+}
+.fila .offset-xs-8-9,
+.row .offset-xs-8-9 {
+  grid-column: 9/span 9;
+}
+.fila .offset-xs-8-10,
+.row .offset-xs-8-10 {
+  grid-column: 9/span 10;
+}
+.fila .offset-xs-8-11,
+.row .offset-xs-8-11 {
+  grid-column: 9/span 11;
+}
+.fila .offset-xs-8-12,
+.row .offset-xs-8-12 {
+  grid-column: 9/span 12;
+}
+.fila .offset-xs-9-1,
+.row .offset-xs-9-1 {
+  grid-column: 10/span 1;
+}
+.fila .offset-xs-9-2,
+.row .offset-xs-9-2 {
+  grid-column: 10/span 2;
+}
+.fila .offset-xs-9-3,
+.row .offset-xs-9-3 {
+  grid-column: 10/span 3;
+}
+.fila .offset-xs-9-4,
+.row .offset-xs-9-4 {
+  grid-column: 10/span 4;
+}
+.fila .offset-xs-9-5,
+.row .offset-xs-9-5 {
+  grid-column: 10/span 5;
+}
+.fila .offset-xs-9-6,
+.row .offset-xs-9-6 {
+  grid-column: 10/span 6;
+}
+.fila .offset-xs-9-7,
+.row .offset-xs-9-7 {
+  grid-column: 10/span 7;
+}
+.fila .offset-xs-9-8,
+.row .offset-xs-9-8 {
+  grid-column: 10/span 8;
+}
+.fila .offset-xs-9-9,
+.row .offset-xs-9-9 {
+  grid-column: 10/span 9;
+}
+.fila .offset-xs-9-10,
+.row .offset-xs-9-10 {
+  grid-column: 10/span 10;
+}
+.fila .offset-xs-9-11,
+.row .offset-xs-9-11 {
+  grid-column: 10/span 11;
+}
+.fila .offset-xs-9-12,
+.row .offset-xs-9-12 {
+  grid-column: 10/span 12;
+}
+.fila .offset-xs-10-1,
+.row .offset-xs-10-1 {
+  grid-column: 11/span 1;
+}
+.fila .offset-xs-10-2,
+.row .offset-xs-10-2 {
+  grid-column: 11/span 2;
+}
+.fila .offset-xs-10-3,
+.row .offset-xs-10-3 {
+  grid-column: 11/span 3;
+}
+.fila .offset-xs-10-4,
+.row .offset-xs-10-4 {
+  grid-column: 11/span 4;
+}
+.fila .offset-xs-10-5,
+.row .offset-xs-10-5 {
+  grid-column: 11/span 5;
+}
+.fila .offset-xs-10-6,
+.row .offset-xs-10-6 {
+  grid-column: 11/span 6;
+}
+.fila .offset-xs-10-7,
+.row .offset-xs-10-7 {
+  grid-column: 11/span 7;
+}
+.fila .offset-xs-10-8,
+.row .offset-xs-10-8 {
+  grid-column: 11/span 8;
+}
+.fila .offset-xs-10-9,
+.row .offset-xs-10-9 {
+  grid-column: 11/span 9;
+}
+.fila .offset-xs-10-10,
+.row .offset-xs-10-10 {
+  grid-column: 11/span 10;
+}
+.fila .offset-xs-10-11,
+.row .offset-xs-10-11 {
+  grid-column: 11/span 11;
+}
+.fila .offset-xs-10-12,
+.row .offset-xs-10-12 {
+  grid-column: 11/span 12;
+}
+.fila .offset-xs-11-1,
+.row .offset-xs-11-1 {
+  grid-column: 12/span 1;
+}
+.fila .offset-xs-11-2,
+.row .offset-xs-11-2 {
+  grid-column: 12/span 2;
+}
+.fila .offset-xs-11-3,
+.row .offset-xs-11-3 {
+  grid-column: 12/span 3;
+}
+.fila .offset-xs-11-4,
+.row .offset-xs-11-4 {
+  grid-column: 12/span 4;
+}
+.fila .offset-xs-11-5,
+.row .offset-xs-11-5 {
+  grid-column: 12/span 5;
+}
+.fila .offset-xs-11-6,
+.row .offset-xs-11-6 {
+  grid-column: 12/span 6;
+}
+.fila .offset-xs-11-7,
+.row .offset-xs-11-7 {
+  grid-column: 12/span 7;
+}
+.fila .offset-xs-11-8,
+.row .offset-xs-11-8 {
+  grid-column: 12/span 8;
+}
+.fila .offset-xs-11-9,
+.row .offset-xs-11-9 {
+  grid-column: 12/span 9;
+}
+.fila .offset-xs-11-10,
+.row .offset-xs-11-10 {
+  grid-column: 12/span 10;
+}
+.fila .offset-xs-11-11,
+.row .offset-xs-11-11 {
+  grid-column: 12/span 11;
+}
+.fila .offset-xs-11-12,
+.row .offset-xs-11-12 {
+  grid-column: 12/span 12;
+}
+.fila .offset-xs-12-1,
+.row .offset-xs-12-1 {
+  grid-column: 13/span 1;
+}
+.fila .offset-xs-12-2,
+.row .offset-xs-12-2 {
+  grid-column: 13/span 2;
+}
+.fila .offset-xs-12-3,
+.row .offset-xs-12-3 {
+  grid-column: 13/span 3;
+}
+.fila .offset-xs-12-4,
+.row .offset-xs-12-4 {
+  grid-column: 13/span 4;
+}
+.fila .offset-xs-12-5,
+.row .offset-xs-12-5 {
+  grid-column: 13/span 5;
+}
+.fila .offset-xs-12-6,
+.row .offset-xs-12-6 {
+  grid-column: 13/span 6;
+}
+.fila .offset-xs-12-7,
+.row .offset-xs-12-7 {
+  grid-column: 13/span 7;
+}
+.fila .offset-xs-12-8,
+.row .offset-xs-12-8 {
+  grid-column: 13/span 8;
+}
+.fila .offset-xs-12-9,
+.row .offset-xs-12-9 {
+  grid-column: 13/span 9;
+}
+.fila .offset-xs-12-10,
+.row .offset-xs-12-10 {
+  grid-column: 13/span 10;
+}
+.fila .offset-xs-12-11,
+.row .offset-xs-12-11 {
+  grid-column: 13/span 11;
+}
+.fila .offset-xs-12-12,
+.row .offset-xs-12-12 {
+  grid-column: 13/span 12;
+}
+.fila .offset-s-1-1,
+.row .offset-s-1-1 {
+  grid-column: 2/span 1;
+}
+.fila .offset-s-1-2,
+.row .offset-s-1-2 {
+  grid-column: 2/span 2;
+}
+.fila .offset-s-1-3,
+.row .offset-s-1-3 {
+  grid-column: 2/span 3;
+}
+.fila .offset-s-1-4,
+.row .offset-s-1-4 {
+  grid-column: 2/span 4;
+}
+.fila .offset-s-1-5,
+.row .offset-s-1-5 {
+  grid-column: 2/span 5;
+}
+.fila .offset-s-1-6,
+.row .offset-s-1-6 {
+  grid-column: 2/span 6;
+}
+.fila .offset-s-1-7,
+.row .offset-s-1-7 {
+  grid-column: 2/span 7;
+}
+.fila .offset-s-1-8,
+.row .offset-s-1-8 {
+  grid-column: 2/span 8;
+}
+.fila .offset-s-1-9,
+.row .offset-s-1-9 {
+  grid-column: 2/span 9;
+}
+.fila .offset-s-1-10,
+.row .offset-s-1-10 {
+  grid-column: 2/span 10;
+}
+.fila .offset-s-1-11,
+.row .offset-s-1-11 {
+  grid-column: 2/span 11;
+}
+.fila .offset-s-1-12,
+.row .offset-s-1-12 {
+  grid-column: 2/span 12;
+}
+.fila .offset-s-2-1,
+.row .offset-s-2-1 {
+  grid-column: 3/span 1;
+}
+.fila .offset-s-2-2,
+.row .offset-s-2-2 {
+  grid-column: 3/span 2;
+}
+.fila .offset-s-2-3,
+.row .offset-s-2-3 {
+  grid-column: 3/span 3;
+}
+.fila .offset-s-2-4,
+.row .offset-s-2-4 {
+  grid-column: 3/span 4;
+}
+.fila .offset-s-2-5,
+.row .offset-s-2-5 {
+  grid-column: 3/span 5;
+}
+.fila .offset-s-2-6,
+.row .offset-s-2-6 {
+  grid-column: 3/span 6;
+}
+.fila .offset-s-2-7,
+.row .offset-s-2-7 {
+  grid-column: 3/span 7;
+}
+.fila .offset-s-2-8,
+.row .offset-s-2-8 {
+  grid-column: 3/span 8;
+}
+.fila .offset-s-2-9,
+.row .offset-s-2-9 {
+  grid-column: 3/span 9;
+}
+.fila .offset-s-2-10,
+.row .offset-s-2-10 {
+  grid-column: 3/span 10;
+}
+.fila .offset-s-2-11,
+.row .offset-s-2-11 {
+  grid-column: 3/span 11;
+}
+.fila .offset-s-2-12,
+.row .offset-s-2-12 {
+  grid-column: 3/span 12;
+}
+.fila .offset-s-3-1,
+.row .offset-s-3-1 {
+  grid-column: 4/span 1;
+}
+.fila .offset-s-3-2,
+.row .offset-s-3-2 {
+  grid-column: 4/span 2;
+}
+.fila .offset-s-3-3,
+.row .offset-s-3-3 {
+  grid-column: 4/span 3;
+}
+.fila .offset-s-3-4,
+.row .offset-s-3-4 {
+  grid-column: 4/span 4;
+}
+.fila .offset-s-3-5,
+.row .offset-s-3-5 {
+  grid-column: 4/span 5;
+}
+.fila .offset-s-3-6,
+.row .offset-s-3-6 {
+  grid-column: 4/span 6;
+}
+.fila .offset-s-3-7,
+.row .offset-s-3-7 {
+  grid-column: 4/span 7;
+}
+.fila .offset-s-3-8,
+.row .offset-s-3-8 {
+  grid-column: 4/span 8;
+}
+.fila .offset-s-3-9,
+.row .offset-s-3-9 {
+  grid-column: 4/span 9;
+}
+.fila .offset-s-3-10,
+.row .offset-s-3-10 {
+  grid-column: 4/span 10;
+}
+.fila .offset-s-3-11,
+.row .offset-s-3-11 {
+  grid-column: 4/span 11;
+}
+.fila .offset-s-3-12,
+.row .offset-s-3-12 {
+  grid-column: 4/span 12;
+}
+.fila .offset-s-4-1,
+.row .offset-s-4-1 {
+  grid-column: 5/span 1;
+}
+.fila .offset-s-4-2,
+.row .offset-s-4-2 {
+  grid-column: 5/span 2;
+}
+.fila .offset-s-4-3,
+.row .offset-s-4-3 {
+  grid-column: 5/span 3;
+}
+.fila .offset-s-4-4,
+.row .offset-s-4-4 {
+  grid-column: 5/span 4;
+}
+.fila .offset-s-4-5,
+.row .offset-s-4-5 {
+  grid-column: 5/span 5;
+}
+.fila .offset-s-4-6,
+.row .offset-s-4-6 {
+  grid-column: 5/span 6;
+}
+.fila .offset-s-4-7,
+.row .offset-s-4-7 {
+  grid-column: 5/span 7;
+}
+.fila .offset-s-4-8,
+.row .offset-s-4-8 {
+  grid-column: 5/span 8;
+}
+.fila .offset-s-4-9,
+.row .offset-s-4-9 {
+  grid-column: 5/span 9;
+}
+.fila .offset-s-4-10,
+.row .offset-s-4-10 {
+  grid-column: 5/span 10;
+}
+.fila .offset-s-4-11,
+.row .offset-s-4-11 {
+  grid-column: 5/span 11;
+}
+.fila .offset-s-4-12,
+.row .offset-s-4-12 {
+  grid-column: 5/span 12;
+}
+.fila .offset-s-5-1,
+.row .offset-s-5-1 {
+  grid-column: 6/span 1;
+}
+.fila .offset-s-5-2,
+.row .offset-s-5-2 {
+  grid-column: 6/span 2;
+}
+.fila .offset-s-5-3,
+.row .offset-s-5-3 {
+  grid-column: 6/span 3;
+}
+.fila .offset-s-5-4,
+.row .offset-s-5-4 {
+  grid-column: 6/span 4;
+}
+.fila .offset-s-5-5,
+.row .offset-s-5-5 {
+  grid-column: 6/span 5;
+}
+.fila .offset-s-5-6,
+.row .offset-s-5-6 {
+  grid-column: 6/span 6;
+}
+.fila .offset-s-5-7,
+.row .offset-s-5-7 {
+  grid-column: 6/span 7;
+}
+.fila .offset-s-5-8,
+.row .offset-s-5-8 {
+  grid-column: 6/span 8;
+}
+.fila .offset-s-5-9,
+.row .offset-s-5-9 {
+  grid-column: 6/span 9;
+}
+.fila .offset-s-5-10,
+.row .offset-s-5-10 {
+  grid-column: 6/span 10;
+}
+.fila .offset-s-5-11,
+.row .offset-s-5-11 {
+  grid-column: 6/span 11;
+}
+.fila .offset-s-5-12,
+.row .offset-s-5-12 {
+  grid-column: 6/span 12;
+}
+.fila .offset-s-6-1,
+.row .offset-s-6-1 {
+  grid-column: 7/span 1;
+}
+.fila .offset-s-6-2,
+.row .offset-s-6-2 {
+  grid-column: 7/span 2;
+}
+.fila .offset-s-6-3,
+.row .offset-s-6-3 {
+  grid-column: 7/span 3;
+}
+.fila .offset-s-6-4,
+.row .offset-s-6-4 {
+  grid-column: 7/span 4;
+}
+.fila .offset-s-6-5,
+.row .offset-s-6-5 {
+  grid-column: 7/span 5;
+}
+.fila .offset-s-6-6,
+.row .offset-s-6-6 {
+  grid-column: 7/span 6;
+}
+.fila .offset-s-6-7,
+.row .offset-s-6-7 {
+  grid-column: 7/span 7;
+}
+.fila .offset-s-6-8,
+.row .offset-s-6-8 {
+  grid-column: 7/span 8;
+}
+.fila .offset-s-6-9,
+.row .offset-s-6-9 {
+  grid-column: 7/span 9;
+}
+.fila .offset-s-6-10,
+.row .offset-s-6-10 {
+  grid-column: 7/span 10;
+}
+.fila .offset-s-6-11,
+.row .offset-s-6-11 {
+  grid-column: 7/span 11;
+}
+.fila .offset-s-6-12,
+.row .offset-s-6-12 {
+  grid-column: 7/span 12;
+}
+.fila .offset-s-7-1,
+.row .offset-s-7-1 {
+  grid-column: 8/span 1;
+}
+.fila .offset-s-7-2,
+.row .offset-s-7-2 {
+  grid-column: 8/span 2;
+}
+.fila .offset-s-7-3,
+.row .offset-s-7-3 {
+  grid-column: 8/span 3;
+}
+.fila .offset-s-7-4,
+.row .offset-s-7-4 {
+  grid-column: 8/span 4;
+}
+.fila .offset-s-7-5,
+.row .offset-s-7-5 {
+  grid-column: 8/span 5;
+}
+.fila .offset-s-7-6,
+.row .offset-s-7-6 {
+  grid-column: 8/span 6;
+}
+.fila .offset-s-7-7,
+.row .offset-s-7-7 {
+  grid-column: 8/span 7;
+}
+.fila .offset-s-7-8,
+.row .offset-s-7-8 {
+  grid-column: 8/span 8;
+}
+.fila .offset-s-7-9,
+.row .offset-s-7-9 {
+  grid-column: 8/span 9;
+}
+.fila .offset-s-7-10,
+.row .offset-s-7-10 {
+  grid-column: 8/span 10;
+}
+.fila .offset-s-7-11,
+.row .offset-s-7-11 {
+  grid-column: 8/span 11;
+}
+.fila .offset-s-7-12,
+.row .offset-s-7-12 {
+  grid-column: 8/span 12;
+}
+.fila .offset-s-8-1,
+.row .offset-s-8-1 {
+  grid-column: 9/span 1;
+}
+.fila .offset-s-8-2,
+.row .offset-s-8-2 {
+  grid-column: 9/span 2;
+}
+.fila .offset-s-8-3,
+.row .offset-s-8-3 {
+  grid-column: 9/span 3;
+}
+.fila .offset-s-8-4,
+.row .offset-s-8-4 {
+  grid-column: 9/span 4;
+}
+.fila .offset-s-8-5,
+.row .offset-s-8-5 {
+  grid-column: 9/span 5;
+}
+.fila .offset-s-8-6,
+.row .offset-s-8-6 {
+  grid-column: 9/span 6;
+}
+.fila .offset-s-8-7,
+.row .offset-s-8-7 {
+  grid-column: 9/span 7;
+}
+.fila .offset-s-8-8,
+.row .offset-s-8-8 {
+  grid-column: 9/span 8;
+}
+.fila .offset-s-8-9,
+.row .offset-s-8-9 {
+  grid-column: 9/span 9;
+}
+.fila .offset-s-8-10,
+.row .offset-s-8-10 {
+  grid-column: 9/span 10;
+}
+.fila .offset-s-8-11,
+.row .offset-s-8-11 {
+  grid-column: 9/span 11;
+}
+.fila .offset-s-8-12,
+.row .offset-s-8-12 {
+  grid-column: 9/span 12;
+}
+.fila .offset-s-9-1,
+.row .offset-s-9-1 {
+  grid-column: 10/span 1;
+}
+.fila .offset-s-9-2,
+.row .offset-s-9-2 {
+  grid-column: 10/span 2;
+}
+.fila .offset-s-9-3,
+.row .offset-s-9-3 {
+  grid-column: 10/span 3;
+}
+.fila .offset-s-9-4,
+.row .offset-s-9-4 {
+  grid-column: 10/span 4;
+}
+.fila .offset-s-9-5,
+.row .offset-s-9-5 {
+  grid-column: 10/span 5;
+}
+.fila .offset-s-9-6,
+.row .offset-s-9-6 {
+  grid-column: 10/span 6;
+}
+.fila .offset-s-9-7,
+.row .offset-s-9-7 {
+  grid-column: 10/span 7;
+}
+.fila .offset-s-9-8,
+.row .offset-s-9-8 {
+  grid-column: 10/span 8;
+}
+.fila .offset-s-9-9,
+.row .offset-s-9-9 {
+  grid-column: 10/span 9;
+}
+.fila .offset-s-9-10,
+.row .offset-s-9-10 {
+  grid-column: 10/span 10;
+}
+.fila .offset-s-9-11,
+.row .offset-s-9-11 {
+  grid-column: 10/span 11;
+}
+.fila .offset-s-9-12,
+.row .offset-s-9-12 {
+  grid-column: 10/span 12;
+}
+.fila .offset-s-10-1,
+.row .offset-s-10-1 {
+  grid-column: 11/span 1;
+}
+.fila .offset-s-10-2,
+.row .offset-s-10-2 {
+  grid-column: 11/span 2;
+}
+.fila .offset-s-10-3,
+.row .offset-s-10-3 {
+  grid-column: 11/span 3;
+}
+.fila .offset-s-10-4,
+.row .offset-s-10-4 {
+  grid-column: 11/span 4;
+}
+.fila .offset-s-10-5,
+.row .offset-s-10-5 {
+  grid-column: 11/span 5;
+}
+.fila .offset-s-10-6,
+.row .offset-s-10-6 {
+  grid-column: 11/span 6;
+}
+.fila .offset-s-10-7,
+.row .offset-s-10-7 {
+  grid-column: 11/span 7;
+}
+.fila .offset-s-10-8,
+.row .offset-s-10-8 {
+  grid-column: 11/span 8;
+}
+.fila .offset-s-10-9,
+.row .offset-s-10-9 {
+  grid-column: 11/span 9;
+}
+.fila .offset-s-10-10,
+.row .offset-s-10-10 {
+  grid-column: 11/span 10;
+}
+.fila .offset-s-10-11,
+.row .offset-s-10-11 {
+  grid-column: 11/span 11;
+}
+.fila .offset-s-10-12,
+.row .offset-s-10-12 {
+  grid-column: 11/span 12;
+}
+.fila .offset-s-11-1,
+.row .offset-s-11-1 {
+  grid-column: 12/span 1;
+}
+.fila .offset-s-11-2,
+.row .offset-s-11-2 {
+  grid-column: 12/span 2;
+}
+.fila .offset-s-11-3,
+.row .offset-s-11-3 {
+  grid-column: 12/span 3;
+}
+.fila .offset-s-11-4,
+.row .offset-s-11-4 {
+  grid-column: 12/span 4;
+}
+.fila .offset-s-11-5,
+.row .offset-s-11-5 {
+  grid-column: 12/span 5;
+}
+.fila .offset-s-11-6,
+.row .offset-s-11-6 {
+  grid-column: 12/span 6;
+}
+.fila .offset-s-11-7,
+.row .offset-s-11-7 {
+  grid-column: 12/span 7;
+}
+.fila .offset-s-11-8,
+.row .offset-s-11-8 {
+  grid-column: 12/span 8;
+}
+.fila .offset-s-11-9,
+.row .offset-s-11-9 {
+  grid-column: 12/span 9;
+}
+.fila .offset-s-11-10,
+.row .offset-s-11-10 {
+  grid-column: 12/span 10;
+}
+.fila .offset-s-11-11,
+.row .offset-s-11-11 {
+  grid-column: 12/span 11;
+}
+.fila .offset-s-11-12,
+.row .offset-s-11-12 {
+  grid-column: 12/span 12;
+}
+.fila .offset-s-12-1,
+.row .offset-s-12-1 {
+  grid-column: 13/span 1;
+}
+.fila .offset-s-12-2,
+.row .offset-s-12-2 {
+  grid-column: 13/span 2;
+}
+.fila .offset-s-12-3,
+.row .offset-s-12-3 {
+  grid-column: 13/span 3;
+}
+.fila .offset-s-12-4,
+.row .offset-s-12-4 {
+  grid-column: 13/span 4;
+}
+.fila .offset-s-12-5,
+.row .offset-s-12-5 {
+  grid-column: 13/span 5;
+}
+.fila .offset-s-12-6,
+.row .offset-s-12-6 {
+  grid-column: 13/span 6;
+}
+.fila .offset-s-12-7,
+.row .offset-s-12-7 {
+  grid-column: 13/span 7;
+}
+.fila .offset-s-12-8,
+.row .offset-s-12-8 {
+  grid-column: 13/span 8;
+}
+.fila .offset-s-12-9,
+.row .offset-s-12-9 {
+  grid-column: 13/span 9;
+}
+.fila .offset-s-12-10,
+.row .offset-s-12-10 {
+  grid-column: 13/span 10;
+}
+.fila .offset-s-12-11,
+.row .offset-s-12-11 {
+  grid-column: 13/span 11;
+}
+.fila .offset-s-12-12,
+.row .offset-s-12-12 {
+  grid-column: 13/span 12;
+}
+.fila .offset-m-1-1,
+.row .offset-m-1-1 {
+  grid-column: 2/span 1;
+}
+.fila .offset-m-1-2,
+.row .offset-m-1-2 {
+  grid-column: 2/span 2;
+}
+.fila .offset-m-1-3,
+.row .offset-m-1-3 {
+  grid-column: 2/span 3;
+}
+.fila .offset-m-1-4,
+.row .offset-m-1-4 {
+  grid-column: 2/span 4;
+}
+.fila .offset-m-1-5,
+.row .offset-m-1-5 {
+  grid-column: 2/span 5;
+}
+.fila .offset-m-1-6,
+.row .offset-m-1-6 {
+  grid-column: 2/span 6;
+}
+.fila .offset-m-1-7,
+.row .offset-m-1-7 {
+  grid-column: 2/span 7;
+}
+.fila .offset-m-1-8,
+.row .offset-m-1-8 {
+  grid-column: 2/span 8;
+}
+.fila .offset-m-1-9,
+.row .offset-m-1-9 {
+  grid-column: 2/span 9;
+}
+.fila .offset-m-1-10,
+.row .offset-m-1-10 {
+  grid-column: 2/span 10;
+}
+.fila .offset-m-1-11,
+.row .offset-m-1-11 {
+  grid-column: 2/span 11;
+}
+.fila .offset-m-1-12,
+.row .offset-m-1-12 {
+  grid-column: 2/span 12;
+}
+.fila .offset-m-2-1,
+.row .offset-m-2-1 {
+  grid-column: 3/span 1;
+}
+.fila .offset-m-2-2,
+.row .offset-m-2-2 {
+  grid-column: 3/span 2;
+}
+.fila .offset-m-2-3,
+.row .offset-m-2-3 {
+  grid-column: 3/span 3;
+}
+.fila .offset-m-2-4,
+.row .offset-m-2-4 {
+  grid-column: 3/span 4;
+}
+.fila .offset-m-2-5,
+.row .offset-m-2-5 {
+  grid-column: 3/span 5;
+}
+.fila .offset-m-2-6,
+.row .offset-m-2-6 {
+  grid-column: 3/span 6;
+}
+.fila .offset-m-2-7,
+.row .offset-m-2-7 {
+  grid-column: 3/span 7;
+}
+.fila .offset-m-2-8,
+.row .offset-m-2-8 {
+  grid-column: 3/span 8;
+}
+.fila .offset-m-2-9,
+.row .offset-m-2-9 {
+  grid-column: 3/span 9;
+}
+.fila .offset-m-2-10,
+.row .offset-m-2-10 {
+  grid-column: 3/span 10;
+}
+.fila .offset-m-2-11,
+.row .offset-m-2-11 {
+  grid-column: 3/span 11;
+}
+.fila .offset-m-2-12,
+.row .offset-m-2-12 {
+  grid-column: 3/span 12;
+}
+.fila .offset-m-3-1,
+.row .offset-m-3-1 {
+  grid-column: 4/span 1;
+}
+.fila .offset-m-3-2,
+.row .offset-m-3-2 {
+  grid-column: 4/span 2;
+}
+.fila .offset-m-3-3,
+.row .offset-m-3-3 {
+  grid-column: 4/span 3;
+}
+.fila .offset-m-3-4,
+.row .offset-m-3-4 {
+  grid-column: 4/span 4;
+}
+.fila .offset-m-3-5,
+.row .offset-m-3-5 {
+  grid-column: 4/span 5;
+}
+.fila .offset-m-3-6,
+.row .offset-m-3-6 {
+  grid-column: 4/span 6;
+}
+.fila .offset-m-3-7,
+.row .offset-m-3-7 {
+  grid-column: 4/span 7;
+}
+.fila .offset-m-3-8,
+.row .offset-m-3-8 {
+  grid-column: 4/span 8;
+}
+.fila .offset-m-3-9,
+.row .offset-m-3-9 {
+  grid-column: 4/span 9;
+}
+.fila .offset-m-3-10,
+.row .offset-m-3-10 {
+  grid-column: 4/span 10;
+}
+.fila .offset-m-3-11,
+.row .offset-m-3-11 {
+  grid-column: 4/span 11;
+}
+.fila .offset-m-3-12,
+.row .offset-m-3-12 {
+  grid-column: 4/span 12;
+}
+.fila .offset-m-4-1,
+.row .offset-m-4-1 {
+  grid-column: 5/span 1;
+}
+.fila .offset-m-4-2,
+.row .offset-m-4-2 {
+  grid-column: 5/span 2;
+}
+.fila .offset-m-4-3,
+.row .offset-m-4-3 {
+  grid-column: 5/span 3;
+}
+.fila .offset-m-4-4,
+.row .offset-m-4-4 {
+  grid-column: 5/span 4;
+}
+.fila .offset-m-4-5,
+.row .offset-m-4-5 {
+  grid-column: 5/span 5;
+}
+.fila .offset-m-4-6,
+.row .offset-m-4-6 {
+  grid-column: 5/span 6;
+}
+.fila .offset-m-4-7,
+.row .offset-m-4-7 {
+  grid-column: 5/span 7;
+}
+.fila .offset-m-4-8,
+.row .offset-m-4-8 {
+  grid-column: 5/span 8;
+}
+.fila .offset-m-4-9,
+.row .offset-m-4-9 {
+  grid-column: 5/span 9;
+}
+.fila .offset-m-4-10,
+.row .offset-m-4-10 {
+  grid-column: 5/span 10;
+}
+.fila .offset-m-4-11,
+.row .offset-m-4-11 {
+  grid-column: 5/span 11;
+}
+.fila .offset-m-4-12,
+.row .offset-m-4-12 {
+  grid-column: 5/span 12;
+}
+.fila .offset-m-5-1,
+.row .offset-m-5-1 {
+  grid-column: 6/span 1;
+}
+.fila .offset-m-5-2,
+.row .offset-m-5-2 {
+  grid-column: 6/span 2;
+}
+.fila .offset-m-5-3,
+.row .offset-m-5-3 {
+  grid-column: 6/span 3;
+}
+.fila .offset-m-5-4,
+.row .offset-m-5-4 {
+  grid-column: 6/span 4;
+}
+.fila .offset-m-5-5,
+.row .offset-m-5-5 {
+  grid-column: 6/span 5;
+}
+.fila .offset-m-5-6,
+.row .offset-m-5-6 {
+  grid-column: 6/span 6;
+}
+.fila .offset-m-5-7,
+.row .offset-m-5-7 {
+  grid-column: 6/span 7;
+}
+.fila .offset-m-5-8,
+.row .offset-m-5-8 {
+  grid-column: 6/span 8;
+}
+.fila .offset-m-5-9,
+.row .offset-m-5-9 {
+  grid-column: 6/span 9;
+}
+.fila .offset-m-5-10,
+.row .offset-m-5-10 {
+  grid-column: 6/span 10;
+}
+.fila .offset-m-5-11,
+.row .offset-m-5-11 {
+  grid-column: 6/span 11;
+}
+.fila .offset-m-5-12,
+.row .offset-m-5-12 {
+  grid-column: 6/span 12;
+}
+.fila .offset-m-6-1,
+.row .offset-m-6-1 {
+  grid-column: 7/span 1;
+}
+.fila .offset-m-6-2,
+.row .offset-m-6-2 {
+  grid-column: 7/span 2;
+}
+.fila .offset-m-6-3,
+.row .offset-m-6-3 {
+  grid-column: 7/span 3;
+}
+.fila .offset-m-6-4,
+.row .offset-m-6-4 {
+  grid-column: 7/span 4;
+}
+.fila .offset-m-6-5,
+.row .offset-m-6-5 {
+  grid-column: 7/span 5;
+}
+.fila .offset-m-6-6,
+.row .offset-m-6-6 {
+  grid-column: 7/span 6;
+}
+.fila .offset-m-6-7,
+.row .offset-m-6-7 {
+  grid-column: 7/span 7;
+}
+.fila .offset-m-6-8,
+.row .offset-m-6-8 {
+  grid-column: 7/span 8;
+}
+.fila .offset-m-6-9,
+.row .offset-m-6-9 {
+  grid-column: 7/span 9;
+}
+.fila .offset-m-6-10,
+.row .offset-m-6-10 {
+  grid-column: 7/span 10;
+}
+.fila .offset-m-6-11,
+.row .offset-m-6-11 {
+  grid-column: 7/span 11;
+}
+.fila .offset-m-6-12,
+.row .offset-m-6-12 {
+  grid-column: 7/span 12;
+}
+.fila .offset-m-7-1,
+.row .offset-m-7-1 {
+  grid-column: 8/span 1;
+}
+.fila .offset-m-7-2,
+.row .offset-m-7-2 {
+  grid-column: 8/span 2;
+}
+.fila .offset-m-7-3,
+.row .offset-m-7-3 {
+  grid-column: 8/span 3;
+}
+.fila .offset-m-7-4,
+.row .offset-m-7-4 {
+  grid-column: 8/span 4;
+}
+.fila .offset-m-7-5,
+.row .offset-m-7-5 {
+  grid-column: 8/span 5;
+}
+.fila .offset-m-7-6,
+.row .offset-m-7-6 {
+  grid-column: 8/span 6;
+}
+.fila .offset-m-7-7,
+.row .offset-m-7-7 {
+  grid-column: 8/span 7;
+}
+.fila .offset-m-7-8,
+.row .offset-m-7-8 {
+  grid-column: 8/span 8;
+}
+.fila .offset-m-7-9,
+.row .offset-m-7-9 {
+  grid-column: 8/span 9;
+}
+.fila .offset-m-7-10,
+.row .offset-m-7-10 {
+  grid-column: 8/span 10;
+}
+.fila .offset-m-7-11,
+.row .offset-m-7-11 {
+  grid-column: 8/span 11;
+}
+.fila .offset-m-7-12,
+.row .offset-m-7-12 {
+  grid-column: 8/span 12;
+}
+.fila .offset-m-8-1,
+.row .offset-m-8-1 {
+  grid-column: 9/span 1;
+}
+.fila .offset-m-8-2,
+.row .offset-m-8-2 {
+  grid-column: 9/span 2;
+}
+.fila .offset-m-8-3,
+.row .offset-m-8-3 {
+  grid-column: 9/span 3;
+}
+.fila .offset-m-8-4,
+.row .offset-m-8-4 {
+  grid-column: 9/span 4;
+}
+.fila .offset-m-8-5,
+.row .offset-m-8-5 {
+  grid-column: 9/span 5;
+}
+.fila .offset-m-8-6,
+.row .offset-m-8-6 {
+  grid-column: 9/span 6;
+}
+.fila .offset-m-8-7,
+.row .offset-m-8-7 {
+  grid-column: 9/span 7;
+}
+.fila .offset-m-8-8,
+.row .offset-m-8-8 {
+  grid-column: 9/span 8;
+}
+.fila .offset-m-8-9,
+.row .offset-m-8-9 {
+  grid-column: 9/span 9;
+}
+.fila .offset-m-8-10,
+.row .offset-m-8-10 {
+  grid-column: 9/span 10;
+}
+.fila .offset-m-8-11,
+.row .offset-m-8-11 {
+  grid-column: 9/span 11;
+}
+.fila .offset-m-8-12,
+.row .offset-m-8-12 {
+  grid-column: 9/span 12;
+}
+.fila .offset-m-9-1,
+.row .offset-m-9-1 {
+  grid-column: 10/span 1;
+}
+.fila .offset-m-9-2,
+.row .offset-m-9-2 {
+  grid-column: 10/span 2;
+}
+.fila .offset-m-9-3,
+.row .offset-m-9-3 {
+  grid-column: 10/span 3;
+}
+.fila .offset-m-9-4,
+.row .offset-m-9-4 {
+  grid-column: 10/span 4;
+}
+.fila .offset-m-9-5,
+.row .offset-m-9-5 {
+  grid-column: 10/span 5;
+}
+.fila .offset-m-9-6,
+.row .offset-m-9-6 {
+  grid-column: 10/span 6;
+}
+.fila .offset-m-9-7,
+.row .offset-m-9-7 {
+  grid-column: 10/span 7;
+}
+.fila .offset-m-9-8,
+.row .offset-m-9-8 {
+  grid-column: 10/span 8;
+}
+.fila .offset-m-9-9,
+.row .offset-m-9-9 {
+  grid-column: 10/span 9;
+}
+.fila .offset-m-9-10,
+.row .offset-m-9-10 {
+  grid-column: 10/span 10;
+}
+.fila .offset-m-9-11,
+.row .offset-m-9-11 {
+  grid-column: 10/span 11;
+}
+.fila .offset-m-9-12,
+.row .offset-m-9-12 {
+  grid-column: 10/span 12;
+}
+.fila .offset-m-10-1,
+.row .offset-m-10-1 {
+  grid-column: 11/span 1;
+}
+.fila .offset-m-10-2,
+.row .offset-m-10-2 {
+  grid-column: 11/span 2;
+}
+.fila .offset-m-10-3,
+.row .offset-m-10-3 {
+  grid-column: 11/span 3;
+}
+.fila .offset-m-10-4,
+.row .offset-m-10-4 {
+  grid-column: 11/span 4;
+}
+.fila .offset-m-10-5,
+.row .offset-m-10-5 {
+  grid-column: 11/span 5;
+}
+.fila .offset-m-10-6,
+.row .offset-m-10-6 {
+  grid-column: 11/span 6;
+}
+.fila .offset-m-10-7,
+.row .offset-m-10-7 {
+  grid-column: 11/span 7;
+}
+.fila .offset-m-10-8,
+.row .offset-m-10-8 {
+  grid-column: 11/span 8;
+}
+.fila .offset-m-10-9,
+.row .offset-m-10-9 {
+  grid-column: 11/span 9;
+}
+.fila .offset-m-10-10,
+.row .offset-m-10-10 {
+  grid-column: 11/span 10;
+}
+.fila .offset-m-10-11,
+.row .offset-m-10-11 {
+  grid-column: 11/span 11;
+}
+.fila .offset-m-10-12,
+.row .offset-m-10-12 {
+  grid-column: 11/span 12;
+}
+.fila .offset-m-11-1,
+.row .offset-m-11-1 {
+  grid-column: 12/span 1;
+}
+.fila .offset-m-11-2,
+.row .offset-m-11-2 {
+  grid-column: 12/span 2;
+}
+.fila .offset-m-11-3,
+.row .offset-m-11-3 {
+  grid-column: 12/span 3;
+}
+.fila .offset-m-11-4,
+.row .offset-m-11-4 {
+  grid-column: 12/span 4;
+}
+.fila .offset-m-11-5,
+.row .offset-m-11-5 {
+  grid-column: 12/span 5;
+}
+.fila .offset-m-11-6,
+.row .offset-m-11-6 {
+  grid-column: 12/span 6;
+}
+.fila .offset-m-11-7,
+.row .offset-m-11-7 {
+  grid-column: 12/span 7;
+}
+.fila .offset-m-11-8,
+.row .offset-m-11-8 {
+  grid-column: 12/span 8;
+}
+.fila .offset-m-11-9,
+.row .offset-m-11-9 {
+  grid-column: 12/span 9;
+}
+.fila .offset-m-11-10,
+.row .offset-m-11-10 {
+  grid-column: 12/span 10;
+}
+.fila .offset-m-11-11,
+.row .offset-m-11-11 {
+  grid-column: 12/span 11;
+}
+.fila .offset-m-11-12,
+.row .offset-m-11-12 {
+  grid-column: 12/span 12;
+}
+.fila .offset-m-12-1,
+.row .offset-m-12-1 {
+  grid-column: 13/span 1;
+}
+.fila .offset-m-12-2,
+.row .offset-m-12-2 {
+  grid-column: 13/span 2;
+}
+.fila .offset-m-12-3,
+.row .offset-m-12-3 {
+  grid-column: 13/span 3;
+}
+.fila .offset-m-12-4,
+.row .offset-m-12-4 {
+  grid-column: 13/span 4;
+}
+.fila .offset-m-12-5,
+.row .offset-m-12-5 {
+  grid-column: 13/span 5;
+}
+.fila .offset-m-12-6,
+.row .offset-m-12-6 {
+  grid-column: 13/span 6;
+}
+.fila .offset-m-12-7,
+.row .offset-m-12-7 {
+  grid-column: 13/span 7;
+}
+.fila .offset-m-12-8,
+.row .offset-m-12-8 {
+  grid-column: 13/span 8;
+}
+.fila .offset-m-12-9,
+.row .offset-m-12-9 {
+  grid-column: 13/span 9;
+}
+.fila .offset-m-12-10,
+.row .offset-m-12-10 {
+  grid-column: 13/span 10;
+}
+.fila .offset-m-12-11,
+.row .offset-m-12-11 {
+  grid-column: 13/span 11;
+}
+.fila .offset-m-12-12,
+.row .offset-m-12-12 {
+  grid-column: 13/span 12;
+}
+.fila .offset-l-1-1,
+.row .offset-l-1-1 {
+  grid-column: 1/span 1;
+}
+.fila .offset-l-1-2,
+.row .offset-l-1-2 {
+  grid-column: 1/span 2;
+}
+.fila .offset-l-1-3,
+.row .offset-l-1-3 {
+  grid-column: 1/span 3;
+}
+.fila .offset-l-1-4,
+.row .offset-l-1-4 {
+  grid-column: 1/span 4;
+}
+.fila .offset-l-1-5,
+.row .offset-l-1-5 {
+  grid-column: 1/span 5;
+}
+.fila .offset-l-1-6,
+.row .offset-l-1-6 {
+  grid-column: 1/span 6;
+}
+.fila .offset-l-1-7,
+.row .offset-l-1-7 {
+  grid-column: 1/span 7;
+}
+.fila .offset-l-1-8,
+.row .offset-l-1-8 {
+  grid-column: 1/span 8;
+}
+.fila .offset-l-1-9,
+.row .offset-l-1-9 {
+  grid-column: 1/span 9;
+}
+.fila .offset-l-1-10,
+.row .offset-l-1-10 {
+  grid-column: 1/span 10;
+}
+.fila .offset-l-1-11,
+.row .offset-l-1-11 {
+  grid-column: 1/span 11;
+}
+.fila .offset-l-1-12,
+.row .offset-l-1-12 {
+  grid-column: 1/span 12;
+}
+.fila .offset-l-2-1,
+.row .offset-l-2-1 {
+  grid-column: 2/span 1;
+}
+.fila .offset-l-2-2,
+.row .offset-l-2-2 {
+  grid-column: 2/span 2;
+}
+.fila .offset-l-2-3,
+.row .offset-l-2-3 {
+  grid-column: 2/span 3;
+}
+.fila .offset-l-2-4,
+.row .offset-l-2-4 {
+  grid-column: 2/span 4;
+}
+.fila .offset-l-2-5,
+.row .offset-l-2-5 {
+  grid-column: 2/span 5;
+}
+.fila .offset-l-2-6,
+.row .offset-l-2-6 {
+  grid-column: 2/span 6;
+}
+.fila .offset-l-2-7,
+.row .offset-l-2-7 {
+  grid-column: 2/span 7;
+}
+.fila .offset-l-2-8,
+.row .offset-l-2-8 {
+  grid-column: 2/span 8;
+}
+.fila .offset-l-2-9,
+.row .offset-l-2-9 {
+  grid-column: 2/span 9;
+}
+.fila .offset-l-2-10,
+.row .offset-l-2-10 {
+  grid-column: 2/span 10;
+}
+.fila .offset-l-2-11,
+.row .offset-l-2-11 {
+  grid-column: 2/span 11;
+}
+.fila .offset-l-2-12,
+.row .offset-l-2-12 {
+  grid-column: 2/span 12;
+}
+.fila .offset-l-3-1,
+.row .offset-l-3-1 {
+  grid-column: 3/span 1;
+}
+.fila .offset-l-3-2,
+.row .offset-l-3-2 {
+  grid-column: 3/span 2;
+}
+.fila .offset-l-3-3,
+.row .offset-l-3-3 {
+  grid-column: 3/span 3;
+}
+.fila .offset-l-3-4,
+.row .offset-l-3-4 {
+  grid-column: 3/span 4;
+}
+.fila .offset-l-3-5,
+.row .offset-l-3-5 {
+  grid-column: 3/span 5;
+}
+.fila .offset-l-3-6,
+.row .offset-l-3-6 {
+  grid-column: 3/span 6;
+}
+.fila .offset-l-3-7,
+.row .offset-l-3-7 {
+  grid-column: 3/span 7;
+}
+.fila .offset-l-3-8,
+.row .offset-l-3-8 {
+  grid-column: 3/span 8;
+}
+.fila .offset-l-3-9,
+.row .offset-l-3-9 {
+  grid-column: 3/span 9;
+}
+.fila .offset-l-3-10,
+.row .offset-l-3-10 {
+  grid-column: 3/span 10;
+}
+.fila .offset-l-3-11,
+.row .offset-l-3-11 {
+  grid-column: 3/span 11;
+}
+.fila .offset-l-3-12,
+.row .offset-l-3-12 {
+  grid-column: 3/span 12;
+}
+.fila .offset-l-4-1,
+.row .offset-l-4-1 {
+  grid-column: 4/span 1;
+}
+.fila .offset-l-4-2,
+.row .offset-l-4-2 {
+  grid-column: 4/span 2;
+}
+.fila .offset-l-4-3,
+.row .offset-l-4-3 {
+  grid-column: 4/span 3;
+}
+.fila .offset-l-4-4,
+.row .offset-l-4-4 {
+  grid-column: 4/span 4;
+}
+.fila .offset-l-4-5,
+.row .offset-l-4-5 {
+  grid-column: 4/span 5;
+}
+.fila .offset-l-4-6,
+.row .offset-l-4-6 {
+  grid-column: 4/span 6;
+}
+.fila .offset-l-4-7,
+.row .offset-l-4-7 {
+  grid-column: 4/span 7;
+}
+.fila .offset-l-4-8,
+.row .offset-l-4-8 {
+  grid-column: 4/span 8;
+}
+.fila .offset-l-4-9,
+.row .offset-l-4-9 {
+  grid-column: 4/span 9;
+}
+.fila .offset-l-4-10,
+.row .offset-l-4-10 {
+  grid-column: 4/span 10;
+}
+.fila .offset-l-4-11,
+.row .offset-l-4-11 {
+  grid-column: 4/span 11;
+}
+.fila .offset-l-4-12,
+.row .offset-l-4-12 {
+  grid-column: 4/span 12;
+}
+.fila .offset-l-5-1,
+.row .offset-l-5-1 {
+  grid-column: 5/span 1;
+}
+.fila .offset-l-5-2,
+.row .offset-l-5-2 {
+  grid-column: 5/span 2;
+}
+.fila .offset-l-5-3,
+.row .offset-l-5-3 {
+  grid-column: 5/span 3;
+}
+.fila .offset-l-5-4,
+.row .offset-l-5-4 {
+  grid-column: 5/span 4;
+}
+.fila .offset-l-5-5,
+.row .offset-l-5-5 {
+  grid-column: 5/span 5;
+}
+.fila .offset-l-5-6,
+.row .offset-l-5-6 {
+  grid-column: 5/span 6;
+}
+.fila .offset-l-5-7,
+.row .offset-l-5-7 {
+  grid-column: 5/span 7;
+}
+.fila .offset-l-5-8,
+.row .offset-l-5-8 {
+  grid-column: 5/span 8;
+}
+.fila .offset-l-5-9,
+.row .offset-l-5-9 {
+  grid-column: 5/span 9;
+}
+.fila .offset-l-5-10,
+.row .offset-l-5-10 {
+  grid-column: 5/span 10;
+}
+.fila .offset-l-5-11,
+.row .offset-l-5-11 {
+  grid-column: 5/span 11;
+}
+.fila .offset-l-5-12,
+.row .offset-l-5-12 {
+  grid-column: 5/span 12;
+}
+.fila .offset-l-6-1,
+.row .offset-l-6-1 {
+  grid-column: 6/span 1;
+}
+.fila .offset-l-6-2,
+.row .offset-l-6-2 {
+  grid-column: 6/span 2;
+}
+.fila .offset-l-6-3,
+.row .offset-l-6-3 {
+  grid-column: 6/span 3;
+}
+.fila .offset-l-6-4,
+.row .offset-l-6-4 {
+  grid-column: 6/span 4;
+}
+.fila .offset-l-6-5,
+.row .offset-l-6-5 {
+  grid-column: 6/span 5;
+}
+.fila .offset-l-6-6,
+.row .offset-l-6-6 {
+  grid-column: 6/span 6;
+}
+.fila .offset-l-6-7,
+.row .offset-l-6-7 {
+  grid-column: 6/span 7;
+}
+.fila .offset-l-6-8,
+.row .offset-l-6-8 {
+  grid-column: 6/span 8;
+}
+.fila .offset-l-6-9,
+.row .offset-l-6-9 {
+  grid-column: 6/span 9;
+}
+.fila .offset-l-6-10,
+.row .offset-l-6-10 {
+  grid-column: 6/span 10;
+}
+.fila .offset-l-6-11,
+.row .offset-l-6-11 {
+  grid-column: 6/span 11;
+}
+.fila .offset-l-6-12,
+.row .offset-l-6-12 {
+  grid-column: 6/span 12;
+}
+.fila .offset-l-7-1,
+.row .offset-l-7-1 {
+  grid-column: 7/span 1;
+}
+.fila .offset-l-7-2,
+.row .offset-l-7-2 {
+  grid-column: 7/span 2;
+}
+.fila .offset-l-7-3,
+.row .offset-l-7-3 {
+  grid-column: 7/span 3;
+}
+.fila .offset-l-7-4,
+.row .offset-l-7-4 {
+  grid-column: 7/span 4;
+}
+.fila .offset-l-7-5,
+.row .offset-l-7-5 {
+  grid-column: 7/span 5;
+}
+.fila .offset-l-7-6,
+.row .offset-l-7-6 {
+  grid-column: 7/span 6;
+}
+.fila .offset-l-7-7,
+.row .offset-l-7-7 {
+  grid-column: 7/span 7;
+}
+.fila .offset-l-7-8,
+.row .offset-l-7-8 {
+  grid-column: 7/span 8;
+}
+.fila .offset-l-7-9,
+.row .offset-l-7-9 {
+  grid-column: 7/span 9;
+}
+.fila .offset-l-7-10,
+.row .offset-l-7-10 {
+  grid-column: 7/span 10;
+}
+.fila .offset-l-7-11,
+.row .offset-l-7-11 {
+  grid-column: 7/span 11;
+}
+.fila .offset-l-7-12,
+.row .offset-l-7-12 {
+  grid-column: 7/span 12;
+}
+.fila .offset-l-8-1,
+.row .offset-l-8-1 {
+  grid-column: 8/span 1;
+}
+.fila .offset-l-8-2,
+.row .offset-l-8-2 {
+  grid-column: 8/span 2;
+}
+.fila .offset-l-8-3,
+.row .offset-l-8-3 {
+  grid-column: 8/span 3;
+}
+.fila .offset-l-8-4,
+.row .offset-l-8-4 {
+  grid-column: 8/span 4;
+}
+.fila .offset-l-8-5,
+.row .offset-l-8-5 {
+  grid-column: 8/span 5;
+}
+.fila .offset-l-8-6,
+.row .offset-l-8-6 {
+  grid-column: 8/span 6;
+}
+.fila .offset-l-8-7,
+.row .offset-l-8-7 {
+  grid-column: 8/span 7;
+}
+.fila .offset-l-8-8,
+.row .offset-l-8-8 {
+  grid-column: 8/span 8;
+}
+.fila .offset-l-8-9,
+.row .offset-l-8-9 {
+  grid-column: 8/span 9;
+}
+.fila .offset-l-8-10,
+.row .offset-l-8-10 {
+  grid-column: 8/span 10;
+}
+.fila .offset-l-8-11,
+.row .offset-l-8-11 {
+  grid-column: 8/span 11;
+}
+.fila .offset-l-8-12,
+.row .offset-l-8-12 {
+  grid-column: 8/span 12;
+}
+.fila .offset-l-9-1,
+.row .offset-l-9-1 {
+  grid-column: 9/span 1;
+}
+.fila .offset-l-9-2,
+.row .offset-l-9-2 {
+  grid-column: 9/span 2;
+}
+.fila .offset-l-9-3,
+.row .offset-l-9-3 {
+  grid-column: 9/span 3;
+}
+.fila .offset-l-9-4,
+.row .offset-l-9-4 {
+  grid-column: 9/span 4;
+}
+.fila .offset-l-9-5,
+.row .offset-l-9-5 {
+  grid-column: 9/span 5;
+}
+.fila .offset-l-9-6,
+.row .offset-l-9-6 {
+  grid-column: 9/span 6;
+}
+.fila .offset-l-9-7,
+.row .offset-l-9-7 {
+  grid-column: 9/span 7;
+}
+.fila .offset-l-9-8,
+.row .offset-l-9-8 {
+  grid-column: 9/span 8;
+}
+.fila .offset-l-9-9,
+.row .offset-l-9-9 {
+  grid-column: 9/span 9;
+}
+.fila .offset-l-9-10,
+.row .offset-l-9-10 {
+  grid-column: 9/span 10;
+}
+.fila .offset-l-9-11,
+.row .offset-l-9-11 {
+  grid-column: 9/span 11;
+}
+.fila .offset-l-9-12,
+.row .offset-l-9-12 {
+  grid-column: 9/span 12;
+}
+.fila .offset-l-10-1,
+.row .offset-l-10-1 {
+  grid-column: 10/span 1;
+}
+.fila .offset-l-10-2,
+.row .offset-l-10-2 {
+  grid-column: 10/span 2;
+}
+.fila .offset-l-10-3,
+.row .offset-l-10-3 {
+  grid-column: 10/span 3;
+}
+.fila .offset-l-10-4,
+.row .offset-l-10-4 {
+  grid-column: 10/span 4;
+}
+.fila .offset-l-10-5,
+.row .offset-l-10-5 {
+  grid-column: 10/span 5;
+}
+.fila .offset-l-10-6,
+.row .offset-l-10-6 {
+  grid-column: 10/span 6;
+}
+.fila .offset-l-10-7,
+.row .offset-l-10-7 {
+  grid-column: 10/span 7;
+}
+.fila .offset-l-10-8,
+.row .offset-l-10-8 {
+  grid-column: 10/span 8;
+}
+.fila .offset-l-10-9,
+.row .offset-l-10-9 {
+  grid-column: 10/span 9;
+}
+.fila .offset-l-10-10,
+.row .offset-l-10-10 {
+  grid-column: 10/span 10;
+}
+.fila .offset-l-10-11,
+.row .offset-l-10-11 {
+  grid-column: 10/span 11;
+}
+.fila .offset-l-10-12,
+.row .offset-l-10-12 {
+  grid-column: 10/span 12;
+}
+.fila .offset-l-11-1,
+.row .offset-l-11-1 {
+  grid-column: 11/span 1;
+}
+.fila .offset-l-11-2,
+.row .offset-l-11-2 {
+  grid-column: 11/span 2;
+}
+.fila .offset-l-11-3,
+.row .offset-l-11-3 {
+  grid-column: 11/span 3;
+}
+.fila .offset-l-11-4,
+.row .offset-l-11-4 {
+  grid-column: 11/span 4;
+}
+.fila .offset-l-11-5,
+.row .offset-l-11-5 {
+  grid-column: 11/span 5;
+}
+.fila .offset-l-11-6,
+.row .offset-l-11-6 {
+  grid-column: 11/span 6;
+}
+.fila .offset-l-11-7,
+.row .offset-l-11-7 {
+  grid-column: 11/span 7;
+}
+.fila .offset-l-11-8,
+.row .offset-l-11-8 {
+  grid-column: 11/span 8;
+}
+.fila .offset-l-11-9,
+.row .offset-l-11-9 {
+  grid-column: 11/span 9;
+}
+.fila .offset-l-11-10,
+.row .offset-l-11-10 {
+  grid-column: 11/span 10;
+}
+.fila .offset-l-11-11,
+.row .offset-l-11-11 {
+  grid-column: 11/span 11;
+}
+.fila .offset-l-11-12,
+.row .offset-l-11-12 {
+  grid-column: 11/span 12;
+}
+.fila .offset-l-12-1,
+.row .offset-l-12-1 {
+  grid-column: 12/span 1;
+}
+.fila .offset-l-12-2,
+.row .offset-l-12-2 {
+  grid-column: 12/span 2;
+}
+.fila .offset-l-12-3,
+.row .offset-l-12-3 {
+  grid-column: 12/span 3;
+}
+.fila .offset-l-12-4,
+.row .offset-l-12-4 {
+  grid-column: 12/span 4;
+}
+.fila .offset-l-12-5,
+.row .offset-l-12-5 {
+  grid-column: 12/span 5;
+}
+.fila .offset-l-12-6,
+.row .offset-l-12-6 {
+  grid-column: 12/span 6;
+}
+.fila .offset-l-12-7,
+.row .offset-l-12-7 {
+  grid-column: 12/span 7;
+}
+.fila .offset-l-12-8,
+.row .offset-l-12-8 {
+  grid-column: 12/span 8;
+}
+.fila .offset-l-12-9,
+.row .offset-l-12-9 {
+  grid-column: 12/span 9;
+}
+.fila .offset-l-12-10,
+.row .offset-l-12-10 {
+  grid-column: 12/span 10;
+}
+.fila .offset-l-12-11,
+.row .offset-l-12-11 {
+  grid-column: 12/span 11;
+}
+.fila .offset-l-12-12,
+.row .offset-l-12-12 {
+  grid-column: 12/span 12;
+}
+@media (max-width: 1030px) {
+  .fila .cxs-1,
+  .row .cxs-1 {
+    grid-column: span 1;
+  }
+  .fila .cxs-2,
+  .row .cxs-2 {
+    grid-column: span 2;
+  }
+  .fila .cxs-3,
+  .row .cxs-3 {
+    grid-column: span 3;
+  }
+  .fila .cxs-4,
+  .row .cxs-4 {
+    grid-column: span 4;
+  }
+  .fila .cxs-5,
+  .row .cxs-5 {
+    grid-column: span 5;
+  }
+  .fila .cxs-6,
+  .row .cxs-6 {
+    grid-column: span 6;
+  }
+  .fila .cxs-7,
+  .row .cxs-7 {
+    grid-column: span 7;
+  }
+  .fila .cxs-8,
+  .row .cxs-8 {
+    grid-column: span 8;
+  }
+  .fila .cxs-9,
+  .row .cxs-9 {
+    grid-column: span 9;
+  }
+  .fila .cxs-10,
+  .row .cxs-10 {
+    grid-column: span 10;
+  }
+  .fila .cxs-11,
+  .row .cxs-11 {
+    grid-column: span 11;
+  }
+  .fila .cxs-12,
+  .row .cxs-12 {
+    grid-column: span 12;
+  }
+  .fila .cs-1,
+  .row .cs-1 {
+    grid-column: span 1;
+  }
+  .fila .cs-2,
+  .row .cs-2 {
+    grid-column: span 2;
+  }
+  .fila .cs-3,
+  .row .cs-3 {
+    grid-column: span 3;
+  }
+  .fila .cs-4,
+  .row .cs-4 {
+    grid-column: span 4;
+  }
+  .fila .cs-5,
+  .row .cs-5 {
+    grid-column: span 5;
+  }
+  .fila .cs-6,
+  .row .cs-6 {
+    grid-column: span 6;
+  }
+  .fila .cs-7,
+  .row .cs-7 {
+    grid-column: span 7;
+  }
+  .fila .cs-8,
+  .row .cs-8 {
+    grid-column: span 8;
+  }
+  .fila .cs-9,
+  .row .cs-9 {
+    grid-column: span 9;
+  }
+  .fila .cs-10,
+  .row .cs-10 {
+    grid-column: span 10;
+  }
+  .fila .cs-11,
+  .row .cs-11 {
+    grid-column: span 11;
+  }
+  .fila .cs-12,
+  .row .cs-12 {
+    grid-column: span 12;
+  }
+  .fila .cm-1,
+  .row .cm-1 {
+    grid-column: span 1;
+  }
+  .fila .cm-2,
+  .row .cm-2 {
+    grid-column: span 2;
+  }
+  .fila .cm-3,
+  .row .cm-3 {
+    grid-column: span 3;
+  }
+  .fila .cm-4,
+  .row .cm-4 {
+    grid-column: span 4;
+  }
+  .fila .cm-5,
+  .row .cm-5 {
+    grid-column: span 5;
+  }
+  .fila .cm-6,
+  .row .cm-6 {
+    grid-column: span 6;
+  }
+  .fila .cm-7,
+  .row .cm-7 {
+    grid-column: span 7;
+  }
+  .fila .cm-8,
+  .row .cm-8 {
+    grid-column: span 8;
+  }
+  .fila .cm-9,
+  .row .cm-9 {
+    grid-column: span 9;
+  }
+  .fila .cm-10,
+  .row .cm-10 {
+    grid-column: span 10;
+  }
+  .fila .cm-11,
+  .row .cm-11 {
+    grid-column: span 11;
+  }
+  .fila .cm-12,
+  .row .cm-12 {
+    grid-column: span 12;
+  }
+  .fila .offset-xs-1-1,
+  .row .offset-xs-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-xs-1-2,
+  .row .offset-xs-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-xs-1-3,
+  .row .offset-xs-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-xs-1-4,
+  .row .offset-xs-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-xs-1-5,
+  .row .offset-xs-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-xs-1-6,
+  .row .offset-xs-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-xs-1-7,
+  .row .offset-xs-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-xs-1-8,
+  .row .offset-xs-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-xs-1-9,
+  .row .offset-xs-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-xs-1-10,
+  .row .offset-xs-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-xs-1-11,
+  .row .offset-xs-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-xs-1-12,
+  .row .offset-xs-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-xs-2-1,
+  .row .offset-xs-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-xs-2-2,
+  .row .offset-xs-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-xs-2-3,
+  .row .offset-xs-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-xs-2-4,
+  .row .offset-xs-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-xs-2-5,
+  .row .offset-xs-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-xs-2-6,
+  .row .offset-xs-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-xs-2-7,
+  .row .offset-xs-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-xs-2-8,
+  .row .offset-xs-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-xs-2-9,
+  .row .offset-xs-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-xs-2-10,
+  .row .offset-xs-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-xs-2-11,
+  .row .offset-xs-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-xs-2-12,
+  .row .offset-xs-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-xs-3-1,
+  .row .offset-xs-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-xs-3-2,
+  .row .offset-xs-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-xs-3-3,
+  .row .offset-xs-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-xs-3-4,
+  .row .offset-xs-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-xs-3-5,
+  .row .offset-xs-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-xs-3-6,
+  .row .offset-xs-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-xs-3-7,
+  .row .offset-xs-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-xs-3-8,
+  .row .offset-xs-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-xs-3-9,
+  .row .offset-xs-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-xs-3-10,
+  .row .offset-xs-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-xs-3-11,
+  .row .offset-xs-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-xs-3-12,
+  .row .offset-xs-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-xs-4-1,
+  .row .offset-xs-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-xs-4-2,
+  .row .offset-xs-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-xs-4-3,
+  .row .offset-xs-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-xs-4-4,
+  .row .offset-xs-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-xs-4-5,
+  .row .offset-xs-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-xs-4-6,
+  .row .offset-xs-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-xs-4-7,
+  .row .offset-xs-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-xs-4-8,
+  .row .offset-xs-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-xs-4-9,
+  .row .offset-xs-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-xs-4-10,
+  .row .offset-xs-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-xs-4-11,
+  .row .offset-xs-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-xs-4-12,
+  .row .offset-xs-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-xs-5-1,
+  .row .offset-xs-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-xs-5-2,
+  .row .offset-xs-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-xs-5-3,
+  .row .offset-xs-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-xs-5-4,
+  .row .offset-xs-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-xs-5-5,
+  .row .offset-xs-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-xs-5-6,
+  .row .offset-xs-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-xs-5-7,
+  .row .offset-xs-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-xs-5-8,
+  .row .offset-xs-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-xs-5-9,
+  .row .offset-xs-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-xs-5-10,
+  .row .offset-xs-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-xs-5-11,
+  .row .offset-xs-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-xs-5-12,
+  .row .offset-xs-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-xs-6-1,
+  .row .offset-xs-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-xs-6-2,
+  .row .offset-xs-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-xs-6-3,
+  .row .offset-xs-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-xs-6-4,
+  .row .offset-xs-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-xs-6-5,
+  .row .offset-xs-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-xs-6-6,
+  .row .offset-xs-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-xs-6-7,
+  .row .offset-xs-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-xs-6-8,
+  .row .offset-xs-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-xs-6-9,
+  .row .offset-xs-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-xs-6-10,
+  .row .offset-xs-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-xs-6-11,
+  .row .offset-xs-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-xs-6-12,
+  .row .offset-xs-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-xs-7-1,
+  .row .offset-xs-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-xs-7-2,
+  .row .offset-xs-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-xs-7-3,
+  .row .offset-xs-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-xs-7-4,
+  .row .offset-xs-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-xs-7-5,
+  .row .offset-xs-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-xs-7-6,
+  .row .offset-xs-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-xs-7-7,
+  .row .offset-xs-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-xs-7-8,
+  .row .offset-xs-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-xs-7-9,
+  .row .offset-xs-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-xs-7-10,
+  .row .offset-xs-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-xs-7-11,
+  .row .offset-xs-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-xs-7-12,
+  .row .offset-xs-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-xs-8-1,
+  .row .offset-xs-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-xs-8-2,
+  .row .offset-xs-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-xs-8-3,
+  .row .offset-xs-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-xs-8-4,
+  .row .offset-xs-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-xs-8-5,
+  .row .offset-xs-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-xs-8-6,
+  .row .offset-xs-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-xs-8-7,
+  .row .offset-xs-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-xs-8-8,
+  .row .offset-xs-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-xs-8-9,
+  .row .offset-xs-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-xs-8-10,
+  .row .offset-xs-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-xs-8-11,
+  .row .offset-xs-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-xs-8-12,
+  .row .offset-xs-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-xs-9-1,
+  .row .offset-xs-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-xs-9-2,
+  .row .offset-xs-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-xs-9-3,
+  .row .offset-xs-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-xs-9-4,
+  .row .offset-xs-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-xs-9-5,
+  .row .offset-xs-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-xs-9-6,
+  .row .offset-xs-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-xs-9-7,
+  .row .offset-xs-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-xs-9-8,
+  .row .offset-xs-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-xs-9-9,
+  .row .offset-xs-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-xs-9-10,
+  .row .offset-xs-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-xs-9-11,
+  .row .offset-xs-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-xs-9-12,
+  .row .offset-xs-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-xs-10-1,
+  .row .offset-xs-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-xs-10-2,
+  .row .offset-xs-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-xs-10-3,
+  .row .offset-xs-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-xs-10-4,
+  .row .offset-xs-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-xs-10-5,
+  .row .offset-xs-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-xs-10-6,
+  .row .offset-xs-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-xs-10-7,
+  .row .offset-xs-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-xs-10-8,
+  .row .offset-xs-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-xs-10-9,
+  .row .offset-xs-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-xs-10-10,
+  .row .offset-xs-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-xs-10-11,
+  .row .offset-xs-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-xs-10-12,
+  .row .offset-xs-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-xs-11-1,
+  .row .offset-xs-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-xs-11-2,
+  .row .offset-xs-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-xs-11-3,
+  .row .offset-xs-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-xs-11-4,
+  .row .offset-xs-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-xs-11-5,
+  .row .offset-xs-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-xs-11-6,
+  .row .offset-xs-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-xs-11-7,
+  .row .offset-xs-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-xs-11-8,
+  .row .offset-xs-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-xs-11-9,
+  .row .offset-xs-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-xs-11-10,
+  .row .offset-xs-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-xs-11-11,
+  .row .offset-xs-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-xs-11-12,
+  .row .offset-xs-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-xs-12-1,
+  .row .offset-xs-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-xs-12-2,
+  .row .offset-xs-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-xs-12-3,
+  .row .offset-xs-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-xs-12-4,
+  .row .offset-xs-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-xs-12-5,
+  .row .offset-xs-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-xs-12-6,
+  .row .offset-xs-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-xs-12-7,
+  .row .offset-xs-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-xs-12-8,
+  .row .offset-xs-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-xs-12-9,
+  .row .offset-xs-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-xs-12-10,
+  .row .offset-xs-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-xs-12-11,
+  .row .offset-xs-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-xs-12-12,
+  .row .offset-xs-12-12 {
+    grid-column: 12/span 12;
+  }
+  .fila .offset-s-1-1,
+  .row .offset-s-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-s-1-2,
+  .row .offset-s-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-s-1-3,
+  .row .offset-s-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-s-1-4,
+  .row .offset-s-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-s-1-5,
+  .row .offset-s-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-s-1-6,
+  .row .offset-s-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-s-1-7,
+  .row .offset-s-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-s-1-8,
+  .row .offset-s-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-s-1-9,
+  .row .offset-s-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-s-1-10,
+  .row .offset-s-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-s-1-11,
+  .row .offset-s-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-s-1-12,
+  .row .offset-s-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-s-2-1,
+  .row .offset-s-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-s-2-2,
+  .row .offset-s-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-s-2-3,
+  .row .offset-s-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-s-2-4,
+  .row .offset-s-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-s-2-5,
+  .row .offset-s-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-s-2-6,
+  .row .offset-s-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-s-2-7,
+  .row .offset-s-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-s-2-8,
+  .row .offset-s-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-s-2-9,
+  .row .offset-s-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-s-2-10,
+  .row .offset-s-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-s-2-11,
+  .row .offset-s-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-s-2-12,
+  .row .offset-s-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-s-3-1,
+  .row .offset-s-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-s-3-2,
+  .row .offset-s-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-s-3-3,
+  .row .offset-s-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-s-3-4,
+  .row .offset-s-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-s-3-5,
+  .row .offset-s-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-s-3-6,
+  .row .offset-s-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-s-3-7,
+  .row .offset-s-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-s-3-8,
+  .row .offset-s-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-s-3-9,
+  .row .offset-s-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-s-3-10,
+  .row .offset-s-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-s-3-11,
+  .row .offset-s-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-s-3-12,
+  .row .offset-s-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-s-4-1,
+  .row .offset-s-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-s-4-2,
+  .row .offset-s-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-s-4-3,
+  .row .offset-s-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-s-4-4,
+  .row .offset-s-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-s-4-5,
+  .row .offset-s-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-s-4-6,
+  .row .offset-s-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-s-4-7,
+  .row .offset-s-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-s-4-8,
+  .row .offset-s-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-s-4-9,
+  .row .offset-s-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-s-4-10,
+  .row .offset-s-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-s-4-11,
+  .row .offset-s-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-s-4-12,
+  .row .offset-s-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-s-5-1,
+  .row .offset-s-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-s-5-2,
+  .row .offset-s-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-s-5-3,
+  .row .offset-s-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-s-5-4,
+  .row .offset-s-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-s-5-5,
+  .row .offset-s-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-s-5-6,
+  .row .offset-s-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-s-5-7,
+  .row .offset-s-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-s-5-8,
+  .row .offset-s-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-s-5-9,
+  .row .offset-s-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-s-5-10,
+  .row .offset-s-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-s-5-11,
+  .row .offset-s-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-s-5-12,
+  .row .offset-s-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-s-6-1,
+  .row .offset-s-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-s-6-2,
+  .row .offset-s-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-s-6-3,
+  .row .offset-s-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-s-6-4,
+  .row .offset-s-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-s-6-5,
+  .row .offset-s-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-s-6-6,
+  .row .offset-s-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-s-6-7,
+  .row .offset-s-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-s-6-8,
+  .row .offset-s-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-s-6-9,
+  .row .offset-s-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-s-6-10,
+  .row .offset-s-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-s-6-11,
+  .row .offset-s-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-s-6-12,
+  .row .offset-s-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-s-7-1,
+  .row .offset-s-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-s-7-2,
+  .row .offset-s-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-s-7-3,
+  .row .offset-s-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-s-7-4,
+  .row .offset-s-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-s-7-5,
+  .row .offset-s-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-s-7-6,
+  .row .offset-s-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-s-7-7,
+  .row .offset-s-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-s-7-8,
+  .row .offset-s-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-s-7-9,
+  .row .offset-s-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-s-7-10,
+  .row .offset-s-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-s-7-11,
+  .row .offset-s-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-s-7-12,
+  .row .offset-s-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-s-8-1,
+  .row .offset-s-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-s-8-2,
+  .row .offset-s-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-s-8-3,
+  .row .offset-s-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-s-8-4,
+  .row .offset-s-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-s-8-5,
+  .row .offset-s-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-s-8-6,
+  .row .offset-s-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-s-8-7,
+  .row .offset-s-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-s-8-8,
+  .row .offset-s-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-s-8-9,
+  .row .offset-s-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-s-8-10,
+  .row .offset-s-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-s-8-11,
+  .row .offset-s-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-s-8-12,
+  .row .offset-s-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-s-9-1,
+  .row .offset-s-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-s-9-2,
+  .row .offset-s-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-s-9-3,
+  .row .offset-s-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-s-9-4,
+  .row .offset-s-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-s-9-5,
+  .row .offset-s-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-s-9-6,
+  .row .offset-s-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-s-9-7,
+  .row .offset-s-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-s-9-8,
+  .row .offset-s-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-s-9-9,
+  .row .offset-s-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-s-9-10,
+  .row .offset-s-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-s-9-11,
+  .row .offset-s-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-s-9-12,
+  .row .offset-s-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-s-10-1,
+  .row .offset-s-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-s-10-2,
+  .row .offset-s-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-s-10-3,
+  .row .offset-s-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-s-10-4,
+  .row .offset-s-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-s-10-5,
+  .row .offset-s-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-s-10-6,
+  .row .offset-s-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-s-10-7,
+  .row .offset-s-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-s-10-8,
+  .row .offset-s-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-s-10-9,
+  .row .offset-s-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-s-10-10,
+  .row .offset-s-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-s-10-11,
+  .row .offset-s-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-s-10-12,
+  .row .offset-s-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-s-11-1,
+  .row .offset-s-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-s-11-2,
+  .row .offset-s-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-s-11-3,
+  .row .offset-s-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-s-11-4,
+  .row .offset-s-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-s-11-5,
+  .row .offset-s-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-s-11-6,
+  .row .offset-s-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-s-11-7,
+  .row .offset-s-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-s-11-8,
+  .row .offset-s-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-s-11-9,
+  .row .offset-s-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-s-11-10,
+  .row .offset-s-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-s-11-11,
+  .row .offset-s-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-s-11-12,
+  .row .offset-s-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-s-12-1,
+  .row .offset-s-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-s-12-2,
+  .row .offset-s-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-s-12-3,
+  .row .offset-s-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-s-12-4,
+  .row .offset-s-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-s-12-5,
+  .row .offset-s-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-s-12-6,
+  .row .offset-s-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-s-12-7,
+  .row .offset-s-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-s-12-8,
+  .row .offset-s-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-s-12-9,
+  .row .offset-s-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-s-12-10,
+  .row .offset-s-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-s-12-11,
+  .row .offset-s-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-s-12-12,
+  .row .offset-s-12-12 {
+    grid-column: 12/span 12;
+  }
+  .fila .offset-m-1-1,
+  .row .offset-m-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-m-1-2,
+  .row .offset-m-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-m-1-3,
+  .row .offset-m-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-m-1-4,
+  .row .offset-m-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-m-1-5,
+  .row .offset-m-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-m-1-6,
+  .row .offset-m-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-m-1-7,
+  .row .offset-m-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-m-1-8,
+  .row .offset-m-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-m-1-9,
+  .row .offset-m-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-m-1-10,
+  .row .offset-m-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-m-1-11,
+  .row .offset-m-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-m-1-12,
+  .row .offset-m-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-m-2-1,
+  .row .offset-m-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-m-2-2,
+  .row .offset-m-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-m-2-3,
+  .row .offset-m-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-m-2-4,
+  .row .offset-m-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-m-2-5,
+  .row .offset-m-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-m-2-6,
+  .row .offset-m-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-m-2-7,
+  .row .offset-m-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-m-2-8,
+  .row .offset-m-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-m-2-9,
+  .row .offset-m-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-m-2-10,
+  .row .offset-m-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-m-2-11,
+  .row .offset-m-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-m-2-12,
+  .row .offset-m-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-m-3-1,
+  .row .offset-m-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-m-3-2,
+  .row .offset-m-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-m-3-3,
+  .row .offset-m-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-m-3-4,
+  .row .offset-m-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-m-3-5,
+  .row .offset-m-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-m-3-6,
+  .row .offset-m-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-m-3-7,
+  .row .offset-m-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-m-3-8,
+  .row .offset-m-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-m-3-9,
+  .row .offset-m-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-m-3-10,
+  .row .offset-m-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-m-3-11,
+  .row .offset-m-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-m-3-12,
+  .row .offset-m-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-m-4-1,
+  .row .offset-m-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-m-4-2,
+  .row .offset-m-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-m-4-3,
+  .row .offset-m-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-m-4-4,
+  .row .offset-m-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-m-4-5,
+  .row .offset-m-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-m-4-6,
+  .row .offset-m-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-m-4-7,
+  .row .offset-m-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-m-4-8,
+  .row .offset-m-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-m-4-9,
+  .row .offset-m-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-m-4-10,
+  .row .offset-m-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-m-4-11,
+  .row .offset-m-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-m-4-12,
+  .row .offset-m-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-m-5-1,
+  .row .offset-m-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-m-5-2,
+  .row .offset-m-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-m-5-3,
+  .row .offset-m-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-m-5-4,
+  .row .offset-m-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-m-5-5,
+  .row .offset-m-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-m-5-6,
+  .row .offset-m-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-m-5-7,
+  .row .offset-m-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-m-5-8,
+  .row .offset-m-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-m-5-9,
+  .row .offset-m-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-m-5-10,
+  .row .offset-m-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-m-5-11,
+  .row .offset-m-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-m-5-12,
+  .row .offset-m-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-m-6-1,
+  .row .offset-m-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-m-6-2,
+  .row .offset-m-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-m-6-3,
+  .row .offset-m-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-m-6-4,
+  .row .offset-m-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-m-6-5,
+  .row .offset-m-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-m-6-6,
+  .row .offset-m-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-m-6-7,
+  .row .offset-m-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-m-6-8,
+  .row .offset-m-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-m-6-9,
+  .row .offset-m-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-m-6-10,
+  .row .offset-m-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-m-6-11,
+  .row .offset-m-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-m-6-12,
+  .row .offset-m-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-m-7-1,
+  .row .offset-m-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-m-7-2,
+  .row .offset-m-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-m-7-3,
+  .row .offset-m-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-m-7-4,
+  .row .offset-m-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-m-7-5,
+  .row .offset-m-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-m-7-6,
+  .row .offset-m-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-m-7-7,
+  .row .offset-m-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-m-7-8,
+  .row .offset-m-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-m-7-9,
+  .row .offset-m-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-m-7-10,
+  .row .offset-m-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-m-7-11,
+  .row .offset-m-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-m-7-12,
+  .row .offset-m-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-m-8-1,
+  .row .offset-m-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-m-8-2,
+  .row .offset-m-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-m-8-3,
+  .row .offset-m-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-m-8-4,
+  .row .offset-m-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-m-8-5,
+  .row .offset-m-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-m-8-6,
+  .row .offset-m-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-m-8-7,
+  .row .offset-m-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-m-8-8,
+  .row .offset-m-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-m-8-9,
+  .row .offset-m-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-m-8-10,
+  .row .offset-m-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-m-8-11,
+  .row .offset-m-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-m-8-12,
+  .row .offset-m-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-m-9-1,
+  .row .offset-m-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-m-9-2,
+  .row .offset-m-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-m-9-3,
+  .row .offset-m-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-m-9-4,
+  .row .offset-m-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-m-9-5,
+  .row .offset-m-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-m-9-6,
+  .row .offset-m-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-m-9-7,
+  .row .offset-m-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-m-9-8,
+  .row .offset-m-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-m-9-9,
+  .row .offset-m-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-m-9-10,
+  .row .offset-m-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-m-9-11,
+  .row .offset-m-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-m-9-12,
+  .row .offset-m-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-m-10-1,
+  .row .offset-m-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-m-10-2,
+  .row .offset-m-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-m-10-3,
+  .row .offset-m-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-m-10-4,
+  .row .offset-m-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-m-10-5,
+  .row .offset-m-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-m-10-6,
+  .row .offset-m-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-m-10-7,
+  .row .offset-m-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-m-10-8,
+  .row .offset-m-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-m-10-9,
+  .row .offset-m-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-m-10-10,
+  .row .offset-m-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-m-10-11,
+  .row .offset-m-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-m-10-12,
+  .row .offset-m-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-m-11-1,
+  .row .offset-m-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-m-11-2,
+  .row .offset-m-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-m-11-3,
+  .row .offset-m-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-m-11-4,
+  .row .offset-m-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-m-11-5,
+  .row .offset-m-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-m-11-6,
+  .row .offset-m-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-m-11-7,
+  .row .offset-m-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-m-11-8,
+  .row .offset-m-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-m-11-9,
+  .row .offset-m-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-m-11-10,
+  .row .offset-m-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-m-11-11,
+  .row .offset-m-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-m-11-12,
+  .row .offset-m-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-m-12-1,
+  .row .offset-m-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-m-12-2,
+  .row .offset-m-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-m-12-3,
+  .row .offset-m-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-m-12-4,
+  .row .offset-m-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-m-12-5,
+  .row .offset-m-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-m-12-6,
+  .row .offset-m-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-m-12-7,
+  .row .offset-m-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-m-12-8,
+  .row .offset-m-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-m-12-9,
+  .row .offset-m-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-m-12-10,
+  .row .offset-m-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-m-12-11,
+  .row .offset-m-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-m-12-12,
+  .row .offset-m-12-12 {
+    grid-column: 12/span 12;
+  }
+}
+@media (max-width: 770px) {
+  .fila .cxs-1,
+  .row .cxs-1 {
+    grid-column: span 1;
+  }
+  .fila .cxs-2,
+  .row .cxs-2 {
+    grid-column: span 2;
+  }
+  .fila .cxs-3,
+  .row .cxs-3 {
+    grid-column: span 3;
+  }
+  .fila .cxs-4,
+  .row .cxs-4 {
+    grid-column: span 4;
+  }
+  .fila .cxs-5,
+  .row .cxs-5 {
+    grid-column: span 5;
+  }
+  .fila .cxs-6,
+  .row .cxs-6 {
+    grid-column: span 6;
+  }
+  .fila .cxs-7,
+  .row .cxs-7 {
+    grid-column: span 7;
+  }
+  .fila .cxs-8,
+  .row .cxs-8 {
+    grid-column: span 8;
+  }
+  .fila .cxs-9,
+  .row .cxs-9 {
+    grid-column: span 9;
+  }
+  .fila .cxs-10,
+  .row .cxs-10 {
+    grid-column: span 10;
+  }
+  .fila .cxs-11,
+  .row .cxs-11 {
+    grid-column: span 11;
+  }
+  .fila .cxs-12,
+  .row .cxs-12 {
+    grid-column: span 12;
+  }
+  .fila .cs-1,
+  .row .cs-1 {
+    grid-column: span 1;
+  }
+  .fila .cs-2,
+  .row .cs-2 {
+    grid-column: span 2;
+  }
+  .fila .cs-3,
+  .row .cs-3 {
+    grid-column: span 3;
+  }
+  .fila .cs-4,
+  .row .cs-4 {
+    grid-column: span 4;
+  }
+  .fila .cs-5,
+  .row .cs-5 {
+    grid-column: span 5;
+  }
+  .fila .cs-6,
+  .row .cs-6 {
+    grid-column: span 6;
+  }
+  .fila .cs-7,
+  .row .cs-7 {
+    grid-column: span 7;
+  }
+  .fila .cs-8,
+  .row .cs-8 {
+    grid-column: span 8;
+  }
+  .fila .cs-9,
+  .row .cs-9 {
+    grid-column: span 9;
+  }
+  .fila .cs-10,
+  .row .cs-10 {
+    grid-column: span 10;
+  }
+  .fila .cs-11,
+  .row .cs-11 {
+    grid-column: span 11;
+  }
+  .fila .cs-12,
+  .row .cs-12 {
+    grid-column: span 12;
+  }
+  .fila .offset-xs-1-1,
+  .row .offset-xs-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-xs-1-2,
+  .row .offset-xs-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-xs-1-3,
+  .row .offset-xs-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-xs-1-4,
+  .row .offset-xs-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-xs-1-5,
+  .row .offset-xs-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-xs-1-6,
+  .row .offset-xs-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-xs-1-7,
+  .row .offset-xs-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-xs-1-8,
+  .row .offset-xs-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-xs-1-9,
+  .row .offset-xs-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-xs-1-10,
+  .row .offset-xs-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-xs-1-11,
+  .row .offset-xs-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-xs-1-12,
+  .row .offset-xs-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-xs-2-1,
+  .row .offset-xs-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-xs-2-2,
+  .row .offset-xs-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-xs-2-3,
+  .row .offset-xs-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-xs-2-4,
+  .row .offset-xs-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-xs-2-5,
+  .row .offset-xs-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-xs-2-6,
+  .row .offset-xs-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-xs-2-7,
+  .row .offset-xs-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-xs-2-8,
+  .row .offset-xs-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-xs-2-9,
+  .row .offset-xs-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-xs-2-10,
+  .row .offset-xs-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-xs-2-11,
+  .row .offset-xs-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-xs-2-12,
+  .row .offset-xs-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-xs-3-1,
+  .row .offset-xs-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-xs-3-2,
+  .row .offset-xs-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-xs-3-3,
+  .row .offset-xs-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-xs-3-4,
+  .row .offset-xs-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-xs-3-5,
+  .row .offset-xs-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-xs-3-6,
+  .row .offset-xs-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-xs-3-7,
+  .row .offset-xs-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-xs-3-8,
+  .row .offset-xs-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-xs-3-9,
+  .row .offset-xs-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-xs-3-10,
+  .row .offset-xs-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-xs-3-11,
+  .row .offset-xs-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-xs-3-12,
+  .row .offset-xs-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-xs-4-1,
+  .row .offset-xs-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-xs-4-2,
+  .row .offset-xs-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-xs-4-3,
+  .row .offset-xs-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-xs-4-4,
+  .row .offset-xs-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-xs-4-5,
+  .row .offset-xs-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-xs-4-6,
+  .row .offset-xs-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-xs-4-7,
+  .row .offset-xs-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-xs-4-8,
+  .row .offset-xs-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-xs-4-9,
+  .row .offset-xs-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-xs-4-10,
+  .row .offset-xs-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-xs-4-11,
+  .row .offset-xs-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-xs-4-12,
+  .row .offset-xs-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-xs-5-1,
+  .row .offset-xs-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-xs-5-2,
+  .row .offset-xs-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-xs-5-3,
+  .row .offset-xs-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-xs-5-4,
+  .row .offset-xs-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-xs-5-5,
+  .row .offset-xs-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-xs-5-6,
+  .row .offset-xs-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-xs-5-7,
+  .row .offset-xs-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-xs-5-8,
+  .row .offset-xs-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-xs-5-9,
+  .row .offset-xs-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-xs-5-10,
+  .row .offset-xs-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-xs-5-11,
+  .row .offset-xs-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-xs-5-12,
+  .row .offset-xs-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-xs-6-1,
+  .row .offset-xs-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-xs-6-2,
+  .row .offset-xs-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-xs-6-3,
+  .row .offset-xs-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-xs-6-4,
+  .row .offset-xs-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-xs-6-5,
+  .row .offset-xs-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-xs-6-6,
+  .row .offset-xs-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-xs-6-7,
+  .row .offset-xs-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-xs-6-8,
+  .row .offset-xs-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-xs-6-9,
+  .row .offset-xs-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-xs-6-10,
+  .row .offset-xs-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-xs-6-11,
+  .row .offset-xs-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-xs-6-12,
+  .row .offset-xs-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-xs-7-1,
+  .row .offset-xs-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-xs-7-2,
+  .row .offset-xs-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-xs-7-3,
+  .row .offset-xs-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-xs-7-4,
+  .row .offset-xs-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-xs-7-5,
+  .row .offset-xs-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-xs-7-6,
+  .row .offset-xs-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-xs-7-7,
+  .row .offset-xs-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-xs-7-8,
+  .row .offset-xs-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-xs-7-9,
+  .row .offset-xs-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-xs-7-10,
+  .row .offset-xs-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-xs-7-11,
+  .row .offset-xs-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-xs-7-12,
+  .row .offset-xs-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-xs-8-1,
+  .row .offset-xs-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-xs-8-2,
+  .row .offset-xs-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-xs-8-3,
+  .row .offset-xs-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-xs-8-4,
+  .row .offset-xs-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-xs-8-5,
+  .row .offset-xs-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-xs-8-6,
+  .row .offset-xs-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-xs-8-7,
+  .row .offset-xs-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-xs-8-8,
+  .row .offset-xs-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-xs-8-9,
+  .row .offset-xs-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-xs-8-10,
+  .row .offset-xs-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-xs-8-11,
+  .row .offset-xs-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-xs-8-12,
+  .row .offset-xs-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-xs-9-1,
+  .row .offset-xs-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-xs-9-2,
+  .row .offset-xs-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-xs-9-3,
+  .row .offset-xs-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-xs-9-4,
+  .row .offset-xs-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-xs-9-5,
+  .row .offset-xs-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-xs-9-6,
+  .row .offset-xs-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-xs-9-7,
+  .row .offset-xs-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-xs-9-8,
+  .row .offset-xs-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-xs-9-9,
+  .row .offset-xs-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-xs-9-10,
+  .row .offset-xs-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-xs-9-11,
+  .row .offset-xs-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-xs-9-12,
+  .row .offset-xs-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-xs-10-1,
+  .row .offset-xs-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-xs-10-2,
+  .row .offset-xs-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-xs-10-3,
+  .row .offset-xs-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-xs-10-4,
+  .row .offset-xs-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-xs-10-5,
+  .row .offset-xs-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-xs-10-6,
+  .row .offset-xs-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-xs-10-7,
+  .row .offset-xs-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-xs-10-8,
+  .row .offset-xs-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-xs-10-9,
+  .row .offset-xs-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-xs-10-10,
+  .row .offset-xs-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-xs-10-11,
+  .row .offset-xs-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-xs-10-12,
+  .row .offset-xs-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-xs-11-1,
+  .row .offset-xs-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-xs-11-2,
+  .row .offset-xs-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-xs-11-3,
+  .row .offset-xs-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-xs-11-4,
+  .row .offset-xs-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-xs-11-5,
+  .row .offset-xs-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-xs-11-6,
+  .row .offset-xs-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-xs-11-7,
+  .row .offset-xs-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-xs-11-8,
+  .row .offset-xs-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-xs-11-9,
+  .row .offset-xs-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-xs-11-10,
+  .row .offset-xs-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-xs-11-11,
+  .row .offset-xs-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-xs-11-12,
+  .row .offset-xs-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-xs-12-1,
+  .row .offset-xs-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-xs-12-2,
+  .row .offset-xs-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-xs-12-3,
+  .row .offset-xs-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-xs-12-4,
+  .row .offset-xs-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-xs-12-5,
+  .row .offset-xs-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-xs-12-6,
+  .row .offset-xs-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-xs-12-7,
+  .row .offset-xs-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-xs-12-8,
+  .row .offset-xs-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-xs-12-9,
+  .row .offset-xs-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-xs-12-10,
+  .row .offset-xs-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-xs-12-11,
+  .row .offset-xs-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-xs-12-12,
+  .row .offset-xs-12-12 {
+    grid-column: 12/span 12;
+  }
+  .fila .offset-s-1-1,
+  .row .offset-s-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-s-1-2,
+  .row .offset-s-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-s-1-3,
+  .row .offset-s-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-s-1-4,
+  .row .offset-s-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-s-1-5,
+  .row .offset-s-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-s-1-6,
+  .row .offset-s-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-s-1-7,
+  .row .offset-s-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-s-1-8,
+  .row .offset-s-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-s-1-9,
+  .row .offset-s-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-s-1-10,
+  .row .offset-s-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-s-1-11,
+  .row .offset-s-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-s-1-12,
+  .row .offset-s-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-s-2-1,
+  .row .offset-s-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-s-2-2,
+  .row .offset-s-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-s-2-3,
+  .row .offset-s-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-s-2-4,
+  .row .offset-s-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-s-2-5,
+  .row .offset-s-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-s-2-6,
+  .row .offset-s-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-s-2-7,
+  .row .offset-s-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-s-2-8,
+  .row .offset-s-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-s-2-9,
+  .row .offset-s-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-s-2-10,
+  .row .offset-s-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-s-2-11,
+  .row .offset-s-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-s-2-12,
+  .row .offset-s-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-s-3-1,
+  .row .offset-s-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-s-3-2,
+  .row .offset-s-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-s-3-3,
+  .row .offset-s-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-s-3-4,
+  .row .offset-s-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-s-3-5,
+  .row .offset-s-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-s-3-6,
+  .row .offset-s-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-s-3-7,
+  .row .offset-s-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-s-3-8,
+  .row .offset-s-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-s-3-9,
+  .row .offset-s-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-s-3-10,
+  .row .offset-s-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-s-3-11,
+  .row .offset-s-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-s-3-12,
+  .row .offset-s-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-s-4-1,
+  .row .offset-s-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-s-4-2,
+  .row .offset-s-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-s-4-3,
+  .row .offset-s-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-s-4-4,
+  .row .offset-s-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-s-4-5,
+  .row .offset-s-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-s-4-6,
+  .row .offset-s-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-s-4-7,
+  .row .offset-s-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-s-4-8,
+  .row .offset-s-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-s-4-9,
+  .row .offset-s-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-s-4-10,
+  .row .offset-s-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-s-4-11,
+  .row .offset-s-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-s-4-12,
+  .row .offset-s-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-s-5-1,
+  .row .offset-s-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-s-5-2,
+  .row .offset-s-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-s-5-3,
+  .row .offset-s-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-s-5-4,
+  .row .offset-s-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-s-5-5,
+  .row .offset-s-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-s-5-6,
+  .row .offset-s-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-s-5-7,
+  .row .offset-s-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-s-5-8,
+  .row .offset-s-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-s-5-9,
+  .row .offset-s-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-s-5-10,
+  .row .offset-s-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-s-5-11,
+  .row .offset-s-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-s-5-12,
+  .row .offset-s-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-s-6-1,
+  .row .offset-s-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-s-6-2,
+  .row .offset-s-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-s-6-3,
+  .row .offset-s-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-s-6-4,
+  .row .offset-s-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-s-6-5,
+  .row .offset-s-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-s-6-6,
+  .row .offset-s-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-s-6-7,
+  .row .offset-s-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-s-6-8,
+  .row .offset-s-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-s-6-9,
+  .row .offset-s-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-s-6-10,
+  .row .offset-s-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-s-6-11,
+  .row .offset-s-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-s-6-12,
+  .row .offset-s-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-s-7-1,
+  .row .offset-s-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-s-7-2,
+  .row .offset-s-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-s-7-3,
+  .row .offset-s-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-s-7-4,
+  .row .offset-s-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-s-7-5,
+  .row .offset-s-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-s-7-6,
+  .row .offset-s-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-s-7-7,
+  .row .offset-s-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-s-7-8,
+  .row .offset-s-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-s-7-9,
+  .row .offset-s-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-s-7-10,
+  .row .offset-s-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-s-7-11,
+  .row .offset-s-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-s-7-12,
+  .row .offset-s-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-s-8-1,
+  .row .offset-s-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-s-8-2,
+  .row .offset-s-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-s-8-3,
+  .row .offset-s-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-s-8-4,
+  .row .offset-s-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-s-8-5,
+  .row .offset-s-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-s-8-6,
+  .row .offset-s-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-s-8-7,
+  .row .offset-s-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-s-8-8,
+  .row .offset-s-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-s-8-9,
+  .row .offset-s-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-s-8-10,
+  .row .offset-s-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-s-8-11,
+  .row .offset-s-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-s-8-12,
+  .row .offset-s-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-s-9-1,
+  .row .offset-s-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-s-9-2,
+  .row .offset-s-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-s-9-3,
+  .row .offset-s-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-s-9-4,
+  .row .offset-s-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-s-9-5,
+  .row .offset-s-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-s-9-6,
+  .row .offset-s-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-s-9-7,
+  .row .offset-s-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-s-9-8,
+  .row .offset-s-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-s-9-9,
+  .row .offset-s-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-s-9-10,
+  .row .offset-s-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-s-9-11,
+  .row .offset-s-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-s-9-12,
+  .row .offset-s-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-s-10-1,
+  .row .offset-s-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-s-10-2,
+  .row .offset-s-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-s-10-3,
+  .row .offset-s-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-s-10-4,
+  .row .offset-s-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-s-10-5,
+  .row .offset-s-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-s-10-6,
+  .row .offset-s-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-s-10-7,
+  .row .offset-s-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-s-10-8,
+  .row .offset-s-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-s-10-9,
+  .row .offset-s-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-s-10-10,
+  .row .offset-s-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-s-10-11,
+  .row .offset-s-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-s-10-12,
+  .row .offset-s-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-s-11-1,
+  .row .offset-s-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-s-11-2,
+  .row .offset-s-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-s-11-3,
+  .row .offset-s-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-s-11-4,
+  .row .offset-s-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-s-11-5,
+  .row .offset-s-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-s-11-6,
+  .row .offset-s-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-s-11-7,
+  .row .offset-s-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-s-11-8,
+  .row .offset-s-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-s-11-9,
+  .row .offset-s-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-s-11-10,
+  .row .offset-s-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-s-11-11,
+  .row .offset-s-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-s-11-12,
+  .row .offset-s-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-s-12-1,
+  .row .offset-s-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-s-12-2,
+  .row .offset-s-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-s-12-3,
+  .row .offset-s-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-s-12-4,
+  .row .offset-s-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-s-12-5,
+  .row .offset-s-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-s-12-6,
+  .row .offset-s-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-s-12-7,
+  .row .offset-s-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-s-12-8,
+  .row .offset-s-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-s-12-9,
+  .row .offset-s-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-s-12-10,
+  .row .offset-s-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-s-12-11,
+  .row .offset-s-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-s-12-12,
+  .row .offset-s-12-12 {
+    grid-column: 12/span 12;
+  }
+}
+@media (max-width: 400px) {
+  .fila .cxs-1,
+  .row .cxs-1 {
+    grid-column: span 1;
+  }
+  .fila .cxs-2,
+  .row .cxs-2 {
+    grid-column: span 2;
+  }
+  .fila .cxs-3,
+  .row .cxs-3 {
+    grid-column: span 3;
+  }
+  .fila .cxs-4,
+  .row .cxs-4 {
+    grid-column: span 4;
+  }
+  .fila .cxs-5,
+  .row .cxs-5 {
+    grid-column: span 5;
+  }
+  .fila .cxs-6,
+  .row .cxs-6 {
+    grid-column: span 6;
+  }
+  .fila .cxs-7,
+  .row .cxs-7 {
+    grid-column: span 7;
+  }
+  .fila .cxs-8,
+  .row .cxs-8 {
+    grid-column: span 8;
+  }
+  .fila .cxs-9,
+  .row .cxs-9 {
+    grid-column: span 9;
+  }
+  .fila .cxs-10,
+  .row .cxs-10 {
+    grid-column: span 10;
+  }
+  .fila .cxs-11,
+  .row .cxs-11 {
+    grid-column: span 11;
+  }
+  .fila .cxs-12,
+  .row .cxs-12 {
+    grid-column: span 12;
+  }
+  .fila .offset-xs-1-1,
+  .row .offset-xs-1-1 {
+    grid-column: 1/span 1;
+  }
+  .fila .offset-xs-1-2,
+  .row .offset-xs-1-2 {
+    grid-column: 1/span 2;
+  }
+  .fila .offset-xs-1-3,
+  .row .offset-xs-1-3 {
+    grid-column: 1/span 3;
+  }
+  .fila .offset-xs-1-4,
+  .row .offset-xs-1-4 {
+    grid-column: 1/span 4;
+  }
+  .fila .offset-xs-1-5,
+  .row .offset-xs-1-5 {
+    grid-column: 1/span 5;
+  }
+  .fila .offset-xs-1-6,
+  .row .offset-xs-1-6 {
+    grid-column: 1/span 6;
+  }
+  .fila .offset-xs-1-7,
+  .row .offset-xs-1-7 {
+    grid-column: 1/span 7;
+  }
+  .fila .offset-xs-1-8,
+  .row .offset-xs-1-8 {
+    grid-column: 1/span 8;
+  }
+  .fila .offset-xs-1-9,
+  .row .offset-xs-1-9 {
+    grid-column: 1/span 9;
+  }
+  .fila .offset-xs-1-10,
+  .row .offset-xs-1-10 {
+    grid-column: 1/span 10;
+  }
+  .fila .offset-xs-1-11,
+  .row .offset-xs-1-11 {
+    grid-column: 1/span 11;
+  }
+  .fila .offset-xs-1-12,
+  .row .offset-xs-1-12 {
+    grid-column: 1/span 12;
+  }
+  .fila .offset-xs-2-1,
+  .row .offset-xs-2-1 {
+    grid-column: 2/span 1;
+  }
+  .fila .offset-xs-2-2,
+  .row .offset-xs-2-2 {
+    grid-column: 2/span 2;
+  }
+  .fila .offset-xs-2-3,
+  .row .offset-xs-2-3 {
+    grid-column: 2/span 3;
+  }
+  .fila .offset-xs-2-4,
+  .row .offset-xs-2-4 {
+    grid-column: 2/span 4;
+  }
+  .fila .offset-xs-2-5,
+  .row .offset-xs-2-5 {
+    grid-column: 2/span 5;
+  }
+  .fila .offset-xs-2-6,
+  .row .offset-xs-2-6 {
+    grid-column: 2/span 6;
+  }
+  .fila .offset-xs-2-7,
+  .row .offset-xs-2-7 {
+    grid-column: 2/span 7;
+  }
+  .fila .offset-xs-2-8,
+  .row .offset-xs-2-8 {
+    grid-column: 2/span 8;
+  }
+  .fila .offset-xs-2-9,
+  .row .offset-xs-2-9 {
+    grid-column: 2/span 9;
+  }
+  .fila .offset-xs-2-10,
+  .row .offset-xs-2-10 {
+    grid-column: 2/span 10;
+  }
+  .fila .offset-xs-2-11,
+  .row .offset-xs-2-11 {
+    grid-column: 2/span 11;
+  }
+  .fila .offset-xs-2-12,
+  .row .offset-xs-2-12 {
+    grid-column: 2/span 12;
+  }
+  .fila .offset-xs-3-1,
+  .row .offset-xs-3-1 {
+    grid-column: 3/span 1;
+  }
+  .fila .offset-xs-3-2,
+  .row .offset-xs-3-2 {
+    grid-column: 3/span 2;
+  }
+  .fila .offset-xs-3-3,
+  .row .offset-xs-3-3 {
+    grid-column: 3/span 3;
+  }
+  .fila .offset-xs-3-4,
+  .row .offset-xs-3-4 {
+    grid-column: 3/span 4;
+  }
+  .fila .offset-xs-3-5,
+  .row .offset-xs-3-5 {
+    grid-column: 3/span 5;
+  }
+  .fila .offset-xs-3-6,
+  .row .offset-xs-3-6 {
+    grid-column: 3/span 6;
+  }
+  .fila .offset-xs-3-7,
+  .row .offset-xs-3-7 {
+    grid-column: 3/span 7;
+  }
+  .fila .offset-xs-3-8,
+  .row .offset-xs-3-8 {
+    grid-column: 3/span 8;
+  }
+  .fila .offset-xs-3-9,
+  .row .offset-xs-3-9 {
+    grid-column: 3/span 9;
+  }
+  .fila .offset-xs-3-10,
+  .row .offset-xs-3-10 {
+    grid-column: 3/span 10;
+  }
+  .fila .offset-xs-3-11,
+  .row .offset-xs-3-11 {
+    grid-column: 3/span 11;
+  }
+  .fila .offset-xs-3-12,
+  .row .offset-xs-3-12 {
+    grid-column: 3/span 12;
+  }
+  .fila .offset-xs-4-1,
+  .row .offset-xs-4-1 {
+    grid-column: 4/span 1;
+  }
+  .fila .offset-xs-4-2,
+  .row .offset-xs-4-2 {
+    grid-column: 4/span 2;
+  }
+  .fila .offset-xs-4-3,
+  .row .offset-xs-4-3 {
+    grid-column: 4/span 3;
+  }
+  .fila .offset-xs-4-4,
+  .row .offset-xs-4-4 {
+    grid-column: 4/span 4;
+  }
+  .fila .offset-xs-4-5,
+  .row .offset-xs-4-5 {
+    grid-column: 4/span 5;
+  }
+  .fila .offset-xs-4-6,
+  .row .offset-xs-4-6 {
+    grid-column: 4/span 6;
+  }
+  .fila .offset-xs-4-7,
+  .row .offset-xs-4-7 {
+    grid-column: 4/span 7;
+  }
+  .fila .offset-xs-4-8,
+  .row .offset-xs-4-8 {
+    grid-column: 4/span 8;
+  }
+  .fila .offset-xs-4-9,
+  .row .offset-xs-4-9 {
+    grid-column: 4/span 9;
+  }
+  .fila .offset-xs-4-10,
+  .row .offset-xs-4-10 {
+    grid-column: 4/span 10;
+  }
+  .fila .offset-xs-4-11,
+  .row .offset-xs-4-11 {
+    grid-column: 4/span 11;
+  }
+  .fila .offset-xs-4-12,
+  .row .offset-xs-4-12 {
+    grid-column: 4/span 12;
+  }
+  .fila .offset-xs-5-1,
+  .row .offset-xs-5-1 {
+    grid-column: 5/span 1;
+  }
+  .fila .offset-xs-5-2,
+  .row .offset-xs-5-2 {
+    grid-column: 5/span 2;
+  }
+  .fila .offset-xs-5-3,
+  .row .offset-xs-5-3 {
+    grid-column: 5/span 3;
+  }
+  .fila .offset-xs-5-4,
+  .row .offset-xs-5-4 {
+    grid-column: 5/span 4;
+  }
+  .fila .offset-xs-5-5,
+  .row .offset-xs-5-5 {
+    grid-column: 5/span 5;
+  }
+  .fila .offset-xs-5-6,
+  .row .offset-xs-5-6 {
+    grid-column: 5/span 6;
+  }
+  .fila .offset-xs-5-7,
+  .row .offset-xs-5-7 {
+    grid-column: 5/span 7;
+  }
+  .fila .offset-xs-5-8,
+  .row .offset-xs-5-8 {
+    grid-column: 5/span 8;
+  }
+  .fila .offset-xs-5-9,
+  .row .offset-xs-5-9 {
+    grid-column: 5/span 9;
+  }
+  .fila .offset-xs-5-10,
+  .row .offset-xs-5-10 {
+    grid-column: 5/span 10;
+  }
+  .fila .offset-xs-5-11,
+  .row .offset-xs-5-11 {
+    grid-column: 5/span 11;
+  }
+  .fila .offset-xs-5-12,
+  .row .offset-xs-5-12 {
+    grid-column: 5/span 12;
+  }
+  .fila .offset-xs-6-1,
+  .row .offset-xs-6-1 {
+    grid-column: 6/span 1;
+  }
+  .fila .offset-xs-6-2,
+  .row .offset-xs-6-2 {
+    grid-column: 6/span 2;
+  }
+  .fila .offset-xs-6-3,
+  .row .offset-xs-6-3 {
+    grid-column: 6/span 3;
+  }
+  .fila .offset-xs-6-4,
+  .row .offset-xs-6-4 {
+    grid-column: 6/span 4;
+  }
+  .fila .offset-xs-6-5,
+  .row .offset-xs-6-5 {
+    grid-column: 6/span 5;
+  }
+  .fila .offset-xs-6-6,
+  .row .offset-xs-6-6 {
+    grid-column: 6/span 6;
+  }
+  .fila .offset-xs-6-7,
+  .row .offset-xs-6-7 {
+    grid-column: 6/span 7;
+  }
+  .fila .offset-xs-6-8,
+  .row .offset-xs-6-8 {
+    grid-column: 6/span 8;
+  }
+  .fila .offset-xs-6-9,
+  .row .offset-xs-6-9 {
+    grid-column: 6/span 9;
+  }
+  .fila .offset-xs-6-10,
+  .row .offset-xs-6-10 {
+    grid-column: 6/span 10;
+  }
+  .fila .offset-xs-6-11,
+  .row .offset-xs-6-11 {
+    grid-column: 6/span 11;
+  }
+  .fila .offset-xs-6-12,
+  .row .offset-xs-6-12 {
+    grid-column: 6/span 12;
+  }
+  .fila .offset-xs-7-1,
+  .row .offset-xs-7-1 {
+    grid-column: 7/span 1;
+  }
+  .fila .offset-xs-7-2,
+  .row .offset-xs-7-2 {
+    grid-column: 7/span 2;
+  }
+  .fila .offset-xs-7-3,
+  .row .offset-xs-7-3 {
+    grid-column: 7/span 3;
+  }
+  .fila .offset-xs-7-4,
+  .row .offset-xs-7-4 {
+    grid-column: 7/span 4;
+  }
+  .fila .offset-xs-7-5,
+  .row .offset-xs-7-5 {
+    grid-column: 7/span 5;
+  }
+  .fila .offset-xs-7-6,
+  .row .offset-xs-7-6 {
+    grid-column: 7/span 6;
+  }
+  .fila .offset-xs-7-7,
+  .row .offset-xs-7-7 {
+    grid-column: 7/span 7;
+  }
+  .fila .offset-xs-7-8,
+  .row .offset-xs-7-8 {
+    grid-column: 7/span 8;
+  }
+  .fila .offset-xs-7-9,
+  .row .offset-xs-7-9 {
+    grid-column: 7/span 9;
+  }
+  .fila .offset-xs-7-10,
+  .row .offset-xs-7-10 {
+    grid-column: 7/span 10;
+  }
+  .fila .offset-xs-7-11,
+  .row .offset-xs-7-11 {
+    grid-column: 7/span 11;
+  }
+  .fila .offset-xs-7-12,
+  .row .offset-xs-7-12 {
+    grid-column: 7/span 12;
+  }
+  .fila .offset-xs-8-1,
+  .row .offset-xs-8-1 {
+    grid-column: 8/span 1;
+  }
+  .fila .offset-xs-8-2,
+  .row .offset-xs-8-2 {
+    grid-column: 8/span 2;
+  }
+  .fila .offset-xs-8-3,
+  .row .offset-xs-8-3 {
+    grid-column: 8/span 3;
+  }
+  .fila .offset-xs-8-4,
+  .row .offset-xs-8-4 {
+    grid-column: 8/span 4;
+  }
+  .fila .offset-xs-8-5,
+  .row .offset-xs-8-5 {
+    grid-column: 8/span 5;
+  }
+  .fila .offset-xs-8-6,
+  .row .offset-xs-8-6 {
+    grid-column: 8/span 6;
+  }
+  .fila .offset-xs-8-7,
+  .row .offset-xs-8-7 {
+    grid-column: 8/span 7;
+  }
+  .fila .offset-xs-8-8,
+  .row .offset-xs-8-8 {
+    grid-column: 8/span 8;
+  }
+  .fila .offset-xs-8-9,
+  .row .offset-xs-8-9 {
+    grid-column: 8/span 9;
+  }
+  .fila .offset-xs-8-10,
+  .row .offset-xs-8-10 {
+    grid-column: 8/span 10;
+  }
+  .fila .offset-xs-8-11,
+  .row .offset-xs-8-11 {
+    grid-column: 8/span 11;
+  }
+  .fila .offset-xs-8-12,
+  .row .offset-xs-8-12 {
+    grid-column: 8/span 12;
+  }
+  .fila .offset-xs-9-1,
+  .row .offset-xs-9-1 {
+    grid-column: 9/span 1;
+  }
+  .fila .offset-xs-9-2,
+  .row .offset-xs-9-2 {
+    grid-column: 9/span 2;
+  }
+  .fila .offset-xs-9-3,
+  .row .offset-xs-9-3 {
+    grid-column: 9/span 3;
+  }
+  .fila .offset-xs-9-4,
+  .row .offset-xs-9-4 {
+    grid-column: 9/span 4;
+  }
+  .fila .offset-xs-9-5,
+  .row .offset-xs-9-5 {
+    grid-column: 9/span 5;
+  }
+  .fila .offset-xs-9-6,
+  .row .offset-xs-9-6 {
+    grid-column: 9/span 6;
+  }
+  .fila .offset-xs-9-7,
+  .row .offset-xs-9-7 {
+    grid-column: 9/span 7;
+  }
+  .fila .offset-xs-9-8,
+  .row .offset-xs-9-8 {
+    grid-column: 9/span 8;
+  }
+  .fila .offset-xs-9-9,
+  .row .offset-xs-9-9 {
+    grid-column: 9/span 9;
+  }
+  .fila .offset-xs-9-10,
+  .row .offset-xs-9-10 {
+    grid-column: 9/span 10;
+  }
+  .fila .offset-xs-9-11,
+  .row .offset-xs-9-11 {
+    grid-column: 9/span 11;
+  }
+  .fila .offset-xs-9-12,
+  .row .offset-xs-9-12 {
+    grid-column: 9/span 12;
+  }
+  .fila .offset-xs-10-1,
+  .row .offset-xs-10-1 {
+    grid-column: 10/span 1;
+  }
+  .fila .offset-xs-10-2,
+  .row .offset-xs-10-2 {
+    grid-column: 10/span 2;
+  }
+  .fila .offset-xs-10-3,
+  .row .offset-xs-10-3 {
+    grid-column: 10/span 3;
+  }
+  .fila .offset-xs-10-4,
+  .row .offset-xs-10-4 {
+    grid-column: 10/span 4;
+  }
+  .fila .offset-xs-10-5,
+  .row .offset-xs-10-5 {
+    grid-column: 10/span 5;
+  }
+  .fila .offset-xs-10-6,
+  .row .offset-xs-10-6 {
+    grid-column: 10/span 6;
+  }
+  .fila .offset-xs-10-7,
+  .row .offset-xs-10-7 {
+    grid-column: 10/span 7;
+  }
+  .fila .offset-xs-10-8,
+  .row .offset-xs-10-8 {
+    grid-column: 10/span 8;
+  }
+  .fila .offset-xs-10-9,
+  .row .offset-xs-10-9 {
+    grid-column: 10/span 9;
+  }
+  .fila .offset-xs-10-10,
+  .row .offset-xs-10-10 {
+    grid-column: 10/span 10;
+  }
+  .fila .offset-xs-10-11,
+  .row .offset-xs-10-11 {
+    grid-column: 10/span 11;
+  }
+  .fila .offset-xs-10-12,
+  .row .offset-xs-10-12 {
+    grid-column: 10/span 12;
+  }
+  .fila .offset-xs-11-1,
+  .row .offset-xs-11-1 {
+    grid-column: 11/span 1;
+  }
+  .fila .offset-xs-11-2,
+  .row .offset-xs-11-2 {
+    grid-column: 11/span 2;
+  }
+  .fila .offset-xs-11-3,
+  .row .offset-xs-11-3 {
+    grid-column: 11/span 3;
+  }
+  .fila .offset-xs-11-4,
+  .row .offset-xs-11-4 {
+    grid-column: 11/span 4;
+  }
+  .fila .offset-xs-11-5,
+  .row .offset-xs-11-5 {
+    grid-column: 11/span 5;
+  }
+  .fila .offset-xs-11-6,
+  .row .offset-xs-11-6 {
+    grid-column: 11/span 6;
+  }
+  .fila .offset-xs-11-7,
+  .row .offset-xs-11-7 {
+    grid-column: 11/span 7;
+  }
+  .fila .offset-xs-11-8,
+  .row .offset-xs-11-8 {
+    grid-column: 11/span 8;
+  }
+  .fila .offset-xs-11-9,
+  .row .offset-xs-11-9 {
+    grid-column: 11/span 9;
+  }
+  .fila .offset-xs-11-10,
+  .row .offset-xs-11-10 {
+    grid-column: 11/span 10;
+  }
+  .fila .offset-xs-11-11,
+  .row .offset-xs-11-11 {
+    grid-column: 11/span 11;
+  }
+  .fila .offset-xs-11-12,
+  .row .offset-xs-11-12 {
+    grid-column: 11/span 12;
+  }
+  .fila .offset-xs-12-1,
+  .row .offset-xs-12-1 {
+    grid-column: 12/span 1;
+  }
+  .fila .offset-xs-12-2,
+  .row .offset-xs-12-2 {
+    grid-column: 12/span 2;
+  }
+  .fila .offset-xs-12-3,
+  .row .offset-xs-12-3 {
+    grid-column: 12/span 3;
+  }
+  .fila .offset-xs-12-4,
+  .row .offset-xs-12-4 {
+    grid-column: 12/span 4;
+  }
+  .fila .offset-xs-12-5,
+  .row .offset-xs-12-5 {
+    grid-column: 12/span 5;
+  }
+  .fila .offset-xs-12-6,
+  .row .offset-xs-12-6 {
+    grid-column: 12/span 6;
+  }
+  .fila .offset-xs-12-7,
+  .row .offset-xs-12-7 {
+    grid-column: 12/span 7;
+  }
+  .fila .offset-xs-12-8,
+  .row .offset-xs-12-8 {
+    grid-column: 12/span 8;
+  }
+  .fila .offset-xs-12-9,
+  .row .offset-xs-12-9 {
+    grid-column: 12/span 9;
+  }
+  .fila .offset-xs-12-10,
+  .row .offset-xs-12-10 {
+    grid-column: 12/span 10;
+  }
+  .fila .offset-xs-12-11,
+  .row .offset-xs-12-11 {
+    grid-column: 12/span 11;
+  }
+  .fila .offset-xs-12-12,
+  .row .offset-xs-12-12 {
+    grid-column: 12/span 12;
+  }
+}
+
+/*# sourceMappingURL=grid.css.map */
