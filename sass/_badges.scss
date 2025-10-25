@@ -59,9 +59,9 @@
 
 
 
-.badges-etiqueta,
-.badges-etiqueta-sm,
-.badges-etiqueta-lg{
+.badge-etiqueta,
+.badge-etiqueta-sm,
+.badge-etiqueta-lg{
 
     display: inline-block;
     position: relative;
@@ -105,7 +105,7 @@
 
 
 
-.badges-etiqueta-lg {
+.badge-etiqueta-lg {
     font-size: 16px;
     padding: 7px 13px;
     height: 33px;
@@ -133,7 +133,7 @@
 }
 
 
-.badges-etiqueta-sm {
+.badge-etiqueta-sm {
     font-size: 13px;
     padding: 4px 10px;
     height: 28px;
@@ -162,13 +162,13 @@
 
 
 
-.badges-etiqueta-rojo,
-.badges-etiqueta-verde,
-.badges-etiqueta-azul,
-.badges-etiqueta-verde, 
-.badges-etiqueta-gris,
-.badges-etiqueta-negro,
-.badges-etiqueta-blanco{
+.badge-etiqueta-rojo,
+.badge-etiqueta-verde,
+.badge-etiqueta-azul,
+.badge-etiqueta-verde, 
+.badge-etiqueta-gris,
+.badge-etiqueta-negro,
+.badge-etiqueta-blanco{
     font-weight: variables.$b-etiqueta-fw;
     text-align: center;
     border-radius: 0 5px 5px 0;
@@ -194,7 +194,7 @@
 
 
 
-.badges-etiqueta-verde {
+.badge-etiqueta-verde {
     background-color: variables.$b-etiqueta-verde;
 
     &::before {
@@ -210,11 +210,11 @@
 
 
     &:hover::before {
-        background-color: variables.$b-etiqueta-verde-h;
+        background-color: variables.$b-etiqueta-verde;
     }
 }
 
-.badges-etiqueta-azul {
+.badge-etiqueta-azul {
     background-color: variables.$b-etiqueta-azul;
 
     &::before {
@@ -235,7 +235,7 @@
 }
 
 
-.badges-etiqueta-negro {
+.badge-etiqueta-negro {
     background-color: variables.$b-etiqueta-negro;
 
     &::before {
@@ -255,7 +255,7 @@
     }
 }
 
-.badges-etiqueta-blanco {
+.badge-etiqueta-blanco {
     background-color: variables.$b-etiqueta-blanco;
     color: black;
     &::before {
@@ -278,7 +278,7 @@
 
 
 
-.badges-etiqueta-gris {
+.badge-etiqueta-gris {
     background-color: variables.$b-etiqueta-gris;
     color: black;
     &::before {
