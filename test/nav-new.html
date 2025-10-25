@@ -6,36 +6,25 @@
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="../dist/css/bodystyle.css">
     </head>
-    <body class="">
-        <nav id="nav" class="bs-nav fd-gris-n bs-nav-bor-grey bs-nav-fixed" data-target="#bs-nav-sidebar">
-            <div class="bs-nav-lg align-left-list align-right-list">
+    <body class="bg-black">
+        <nav id="nav" class="bs-nav fd-gris-az bs-nav-bor-grey-s bs-nav-fixed" data-target="#bs-nav-sidebar">
+            <div class="bs-nav-md align-left-list align-right-list">
                 <label class="btn-menu ocultar-solo-grandes" ></label>
                 <a href="#" class="logo-container">
                     <img src="../logo/logo.png" alt="Logo de Bodystyle">
                 </a>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Porfolio</a></li>
-                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Repositorio</a></li>
                 </ul>
-                <div class="right-content">
-                    <div class="btn-grupo">
-                        <button class="btn-sm bg-white c-black bor-pill">Login</button>
-                        <button class="btn-sm bg-red bor-pill mi-1">Sign Up</button>
-                    </div>
+                <div class="right-content pr-13">
+                    <a class="badge-sub tips-ele"
+                    data-tips="Descarga del procesado de bodystyle">Descarga<span>4.5.0</span></a>
                 </div>
             </div>
         </nav>
 
-
-        
-
-
-        <div class="container mt-10">
-            <lebel class="badges-etiqueta badges-etiqueta-rojo mt-10">
-                Etiqueta
-            </lebel>
-        </div>
+       
 
 
         <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-n">
@@ -51,6 +40,7 @@
         <script src="../dist/js/bodystyle.js"></script>
         <script>
             BS.NavigationInit("#nav", true)
+            BS.ToolTipsInit()
         </script>
     </body>
 </html>
