@@ -621,7 +621,7 @@
 .badge-solapa-negro,
 .badge-solapa-gris {
 
-    @include mixim.posicionamiento-absoluto(30px, null, null, -19px);
+    @include mixim.posicionamiento-absoluto(15px, null, null, -19px);
     @include mixim.flex-box-centrado();
     padding: 5px 20px;
     padding-left: 30px;
@@ -680,7 +680,8 @@
     }
 }
 
-.contenedor-relativo {
+.contenedor-relativo,
+.relative-container {
     position:  relative !important;
 }
 

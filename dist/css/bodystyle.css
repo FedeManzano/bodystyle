@@ -20542,7 +20542,7 @@ table thead tr th {
 .badge-solapa-negro,
 .badge-solapa-gris {
   position: absolute;
-  top: 30px;
+  top: 15px;
   left: -19px;
   display: flex;
   justify-content: center;
@@ -20611,7 +20611,8 @@ table thead tr th {
   background-color: rgb(51, 51, 51);
 }
 
-.contenedor-relativo {
+.contenedor-relativo,
+.relative-container {
   position: relative !important;
 }
 
