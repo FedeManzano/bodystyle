@@ -19957,8 +19957,11 @@ table thead tr th {
 }
 
 .badge-etiqueta,
+.badge-label,
 .badge-etiqueta-sm,
-.badge-etiqueta-lg {
+.badge-label-sm,
+.badge-etiqueta-lg,
+.badge-label-lg {
   display: inline-block;
   position: relative;
   display: flex;
@@ -19974,8 +19977,11 @@ table thead tr th {
   z-index: 10;
 }
 .badge-etiqueta::before,
+.badge-label::before,
 .badge-etiqueta-sm::before,
-.badge-etiqueta-lg::before {
+.badge-label-sm::before,
+.badge-etiqueta-lg::before,
+.badge-label-lg::before {
   content: "";
   width: 21.6px;
   height: 21.6px;
@@ -19986,8 +19992,11 @@ table thead tr th {
   z-index: 2;
 }
 .badge-etiqueta::after,
+.badge-label::after,
 .badge-etiqueta-sm::after,
-.badge-etiqueta-lg::after {
+.badge-label-sm::after,
+.badge-etiqueta-lg::after,
+.badge-label-lg::after {
   content: "";
   width: 14px;
   height: 14px;
@@ -20000,14 +20009,16 @@ table thead tr th {
   z-index: 4;
 }
 
-.badge-etiqueta-lg {
+.badge-etiqueta-lg,
+.badge-label-lg {
   font-size: 16px;
   padding: 7px 13px;
   height: 33px;
   min-width: 170px;
   max-width: 210px;
 }
-.badge-etiqueta-lg::before {
+.badge-etiqueta-lg::before,
+.badge-label-lg::before {
   content: "";
   width: 23.5px;
   height: 23.5px;
@@ -20017,7 +20028,8 @@ table thead tr th {
   position: absolute;
   z-index: 2;
 }
-.badge-etiqueta-lg::after {
+.badge-etiqueta-lg::after,
+.badge-label-lg::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -20025,14 +20037,16 @@ table thead tr th {
   top: 8px;
 }
 
-.badge-etiqueta-sm {
+.badge-etiqueta-sm,
+.badge-label-sm {
   font-size: 13px;
   padding: 4px 10px;
   height: 28px;
   min-width: 130px;
   max-width: 150px;
 }
-.badge-etiqueta-sm::before {
+.badge-etiqueta-sm::before,
+.badge-label-sm::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -20042,7 +20056,8 @@ table thead tr th {
   position: absolute;
   z-index: 2;
 }
-.badge-etiqueta-sm::after {
+.badge-etiqueta-sm::after,
+.badge-label-sm::after {
   content: "";
   width: 13px;
   height: 13px;
@@ -20056,7 +20071,13 @@ table thead tr th {
 .badge-etiqueta-verde,
 .badge-etiqueta-gris,
 .badge-etiqueta-negro,
-.badge-etiqueta-blanco {
+.badge-etiqueta-blanco,
+.badge-label-red,
+.badge-label-green,
+.badge-label-blue,
+.badge-label-grey,
+.badge-label-white,
+.badge-label-black {
   font-weight: 300;
   text-align: center;
   border-radius: 0 5px 5px 0;
@@ -20069,7 +20090,13 @@ table thead tr th {
 .badge-etiqueta-verde:hover,
 .badge-etiqueta-gris:hover,
 .badge-etiqueta-negro:hover,
-.badge-etiqueta-blanco:hover {
+.badge-etiqueta-blanco:hover,
+.badge-label-red:hover,
+.badge-label-green:hover,
+.badge-label-blue:hover,
+.badge-label-grey:hover,
+.badge-label-white:hover,
+.badge-label-black:hover {
   background-color: rgb(201, 0, 0);
 }
 .badge-etiqueta-rojo:hover::before,
@@ -20078,7 +20105,13 @@ table thead tr th {
 .badge-etiqueta-verde:hover::before,
 .badge-etiqueta-gris:hover::before,
 .badge-etiqueta-negro:hover::before,
-.badge-etiqueta-blanco:hover::before {
+.badge-etiqueta-blanco:hover::before,
+.badge-label-red:hover::before,
+.badge-label-green:hover::before,
+.badge-label-blue:hover::before,
+.badge-label-grey:hover::before,
+.badge-label-white:hover::before,
+.badge-label-black:hover::before {
   background-color: rgb(201, 0, 0);
 }
 .badge-etiqueta-rojo::before,
@@ -20087,81 +20120,107 @@ table thead tr th {
 .badge-etiqueta-verde::before,
 .badge-etiqueta-gris::before,
 .badge-etiqueta-negro::before,
-.badge-etiqueta-blanco::before {
+.badge-etiqueta-blanco::before,
+.badge-label-red::before,
+.badge-label-green::before,
+.badge-label-blue::before,
+.badge-label-grey::before,
+.badge-label-white::before,
+.badge-label-black::before {
   content: "";
   background-color: red;
   z-index: 2;
 }
 
-.badge-etiqueta-verde {
+.badge-etiqueta-verde,
+.badge-label-green {
   background-color: rgb(0, 109, 94);
 }
-.badge-etiqueta-verde::before {
+.badge-etiqueta-verde::before,
+.badge-label-green::before {
   content: "";
   background-color: rgb(0, 109, 94);
 }
-.badge-etiqueta-verde:hover {
-  background-color: rgb(0, 109, 94);
+.badge-etiqueta-verde:hover,
+.badge-label-green:hover {
+  background-color: rgb(0, 77, 66);
 }
-.badge-etiqueta-verde:hover::before {
-  background-color: rgb(0, 109, 94);
+.badge-etiqueta-verde:hover::before,
+.badge-label-green:hover::before {
+  background-color: rgb(0, 77, 66);
 }
 
-.badge-etiqueta-azul {
+.badge-etiqueta-azul,
+.badge-label-blue {
   background-color: rgb(34, 72, 145);
 }
-.badge-etiqueta-azul::before {
+.badge-etiqueta-azul::before,
+.badge-label-blue::before {
   content: "";
   background-color: rgb(34, 72, 145);
 }
-.badge-etiqueta-azul:hover {
+.badge-etiqueta-azul:hover,
+.badge-label-blue:hover {
   background-color: rgb(16, 44, 95);
 }
-.badge-etiqueta-azul:hover::before {
+.badge-etiqueta-azul:hover::before,
+.badge-label-blue:hover::before {
   background-color: rgb(16, 44, 95);
 }
 
-.badge-etiqueta-negro {
+.badge-etiqueta-negro,
+.badge-label-black {
   background-color: rgb(0, 0, 0);
 }
-.badge-etiqueta-negro::before {
+.badge-etiqueta-negro::before,
+.badge-label-black::before {
   content: "";
   background-color: rgb(0, 0, 0);
 }
-.badge-etiqueta-negro:hover {
+.badge-etiqueta-negro:hover,
+.badge-label-black:hover {
   background-color: rgb(29, 29, 29);
 }
-.badge-etiqueta-negro:hover::before {
+.badge-etiqueta-negro:hover::before,
+.badge-label-black:hover::before {
   background-color: rgb(29, 29, 29);
 }
 
-.badge-etiqueta-blanco {
+.badge-etiqueta-blanco,
+.badge-label-white {
   background-color: rgb(255, 255, 255);
   color: black;
 }
-.badge-etiqueta-blanco::before {
+.badge-etiqueta-blanco::before,
+.badge-label-white::before {
   content: "";
   background-color: rgb(255, 255, 255);
 }
-.badge-etiqueta-blanco:hover {
+.badge-etiqueta-blanco:hover,
+.badge-label-white:hover {
   background-color: rgb(228, 228, 228);
 }
-.badge-etiqueta-blanco:hover::before {
+.badge-etiqueta-blanco:hover::before,
+.badge-label-white:hover::before {
   background-color: rgb(228, 228, 228);
 }
 
-.badge-etiqueta-gris {
+.badge-etiqueta-gris,
+.badge-label-grey {
   background-color: rgb(231, 231, 231);
   color: black;
 }
-.badge-etiqueta-gris::before {
+.badge-etiqueta-gris::before,
+.badge-label-grey::before {
   content: "";
   background-color: rgb(231, 231, 231);
 }
-.badge-etiqueta-gris:hover {
+.badge-etiqueta-gris:hover,
+.badge-label-grey:hover {
   background-color: rgb(196, 196, 196);
 }
-.badge-etiqueta-gris:hover::before {
+.badge-etiqueta-gris:hover::before,
+.badge-label-grey:hover::before {
   background-color: rgb(196, 196, 196);
 }
 
