@@ -24,35 +24,14 @@
 
 $radio: 20;
 @for $i from 1 through 100 {
-    .img-redonda-#{$radio} {
+    .img-redonda-#{$radio},
+    .circle-image-#{$radio} {
         height: #{$radio}px;
         width: #{$radio}px;
         border-radius: 50%;
     }
     $radio: $radio +  5;
 }
-
-.usuario-imagen {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 250px;
-    min-width: 160px;
-    img {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-    }
-
-    a {
-        display: block;
-        height: 100%;
-        color: black;
-        margin-left: 10px;
-    }
-
-}
-
 
 .img-display-enc {
     padding: 5px !important;

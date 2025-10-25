@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    </head>
+    <body>
+
+        <nav id="nav" class="bs-nav fd-gris-n bs-nav-bor-grey-s mb-0 bs-nav-fixed" data-target="#bs-nav-sidebar">
+            <div class="bs-nav-sm align-left-list align-right-list">
+                <label class="btn-menu ocultar-solo-grandes" ></label>
+                <a href="#" class="logo-container">
+                    <img src="../logo/logo.png" alt="Logo de Bodystyle">
+                </a>
+                <div class="ocultar-desde-medianos">
+                    <ul >
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Repositorio</a></li>
+                        <li><a href="#">Licencia</a></li>
+                    </ul>
+                </div>
+                
+                <div class="right-content pr-13 pr-s-6">
+                    <a class="badge-sub tips-ele"
+                    data-tips="Descarga del procesado de bodystyle">Descarga<span class="ocultar-desde-chicos">v4.5.0</span></a>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="d-flex just-center ta-c fd-gris-n "   style="position: relative; width: 100%;min-height: 100%; position: absolute;">
+            <div class="forma-triangulo-recto-inf-der ov-visible" style="z-index: 1;position: absolute; min-width: 100%; min-height: 100%; background-color: rgba(152, 0, 0, 0.21);">
+                
+            </div>
+            <div class="ancho-50 pt-8 ancho-m-70 ancho-s-85 ancho-xs-95 d-flex flex-column just-center" style="z-index: 2;">
+                <div class="d-flex just-center mb-2">
+                    <div class="img-display-256 d-flex just-center ">
+                        <img src="../logo/logo.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+                
+                <p class="mt-1 c-gris-c fz-28 fz-s-25">Librería para la creación del Front-End</p>
+                <p class="mt-1 c-gris fz-18 fz-s-16">Funcionalidades que permiten la rápida creación del Front-End en aplicaciones y sitios web.</p>
+                <div class="d-flex just-center flex-wrap-s mt-5">
+                    <a href="" class="btn-lg-o btn-white-o mr-1 mr-xs-0 mb-xs-1">Get Started</a>
+                    <a href="" class="btn-lg-o btn-red-o">Repositorio</a>
+                </div>
+
+                <div class="mt-2">
+                    <a href="" class="link">Released 4.5.0</a>
+                </div>
+                
+
+            </div>
+        </section>
+
+
+        <div id="bs-nav-sidebar" class="bs-nav-sidebar fd-gris-n">
+            <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Repositorio</a></li>
+                <li><a href="#">Licencia</a></li>
+            </ul>
+        </div>
+        <script src="../dist/js/bodystyle.js"></script>
+        <script>
+            BS.ToolTipsInit()
+            BS.NavigationInit("#nav", true)
+        </script>
+    </body>
+</html>
