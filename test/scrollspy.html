@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    </head>
+    <body>
+        
+
+        
+        <div class="lista-scroll" >
+            <ul>
+                <li>
+                    <a href="#1">Seccion 1</a>
+                </li>
+                <li>
+                    <a href="#2">Seccion 2</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div  class="bg-red" style="height: 2000px">
+                <h2  class="scroll-item" id="1">Seccion 1</h2>
+            </div>
+            <div class=" bg-red mt-3" style="height: 2000px">
+                <h2  class="scroll-item" id="2">Seccion 2</h2>
+            </div>
+        </div>
+
+
+        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+        <script>
+            BS.ScrollSpyInit()
+        </script>
+    </body>
+</html>

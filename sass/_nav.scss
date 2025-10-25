@@ -153,10 +153,22 @@
 
     .bs-nav-md {
         height: 65px;
+
+        .logo-container {
+            min-width: 70px !important;
+            max-width: 70px !important;
+        }
     }
 
     .bs-nav-lg {
         height: 75px;
+    }
+
+    .bs-nav-sm {
+        .logo-container {
+            min-width: 65px !important;
+            max-width: 65px !important;
+        }
     }
 }
 

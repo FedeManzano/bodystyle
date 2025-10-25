@@ -22776,52 +22776,6 @@ table thead tr th {
   background-color: rgba(2, 34, 48, 0.877) !important;
 }
 
-.lista-scroll {
-  width: 15%;
-  position: fixed;
-  top: 100px;
-  right: 0;
-}
-.lista-scroll ul li a {
-  position: relative;
-  display: block;
-  padding: 6px 15px;
-  color: rgb(94, 94, 94);
-  font-weight: 300;
-  font-size: 18px;
-}
-
-.elemento-seleccionado {
-  width: 3px;
-  height: 29px;
-  background-color: rgb(0, 108, 255);
-  position: absolute;
-  left: 0;
-}
-
-.scroll-spy {
-  position: fixed;
-  top: 100px;
-  right: 0;
-  width: 15%;
-}
-.scroll-spy .titulo {
-  font-size: 1em;
-  color: black;
-  font-weight: 500;
-}
-.scroll-spy .lista li a {
-  display: block;
-  padding: 3px 0 3px 15px;
-  color: grey;
-}
-.scroll-spy .lista li a:hover {
-  color: black;
-}
-.scroll-spy .lista li .seleccionado {
-  color: black;
-}
-
 .paralax-contenedor {
   width: 100%;
   height: 100%;
@@ -24747,8 +24701,16 @@ input.btn-cover-lg-o {
 .bs-nav .bs-nav-md {
   height: 65px;
 }
+.bs-nav .bs-nav-md .logo-container {
+  min-width: 70px !important;
+  max-width: 70px !important;
+}
 .bs-nav .bs-nav-lg {
   height: 75px;
+}
+.bs-nav .bs-nav-sm .logo-container {
+  min-width: 65px !important;
+  max-width: 65px !important;
 }
 
 .bs-nav-fixed {
@@ -25309,6 +25271,52 @@ input.btn-cover-lg-o {
 }
 .tab-borde .contenido-tab {
   background-color: white;
+}
+
+.lista-scroll {
+  width: 15%;
+  position: fixed;
+  top: 100px;
+  right: 0;
+}
+.lista-scroll ul li a {
+  position: relative;
+  display: block;
+  padding: 6px 15px;
+  color: rgb(94, 94, 94);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.elemento-seleccionado {
+  width: 3px;
+  height: 29px;
+  background-color: rgb(0, 108, 255);
+  position: absolute;
+  left: 0;
+}
+
+.scroll-spy {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 15%;
+}
+.scroll-spy .titulo {
+  font-size: 1em;
+  color: black;
+  font-weight: 500;
+}
+.scroll-spy .lista li a {
+  display: block;
+  padding: 3px 0 3px 15px;
+  color: grey;
+}
+.scroll-spy .lista li a:hover {
+  color: black;
+}
+.scroll-spy .lista li .seleccionado {
+  color: black;
 }
 
 .switch-grupo input[type=checkbox] {
