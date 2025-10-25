@@ -24377,13 +24377,6 @@ input.btn-cover-lg-o {
 .bs-nav .bs-nav-lg ul li a:hover {
   background-color: rgba(255, 255, 255, 0.127);
 }
-@media (max-width: 1030px) {
-  .bs-nav .bs-nav-sm ul,
-  .bs-nav .bs-nav-md ul,
-  .bs-nav .bs-nav-lg ul {
-    display: none !important;
-  }
-}
 .bs-nav .bs-nav-md {
   height: 65px;
 }
@@ -24962,7 +24955,7 @@ input.btn-cover-lg-o {
 .lista-scroll {
   width: 100px;
   position: fixed;
-  right: 10px;
+  right: -30px;
   top: 100px;
 }
 .lista-scroll ul {
