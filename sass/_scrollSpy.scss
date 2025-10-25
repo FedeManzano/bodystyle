@@ -3,8 +3,11 @@
 
 
 .lista-scroll {
-    width: 15%;
-    @include mixim.posicionamiento-fixed(100px, 0, null, null);
+    width: 100px;
+    position: fixed;
+    right: 10px;
+    top: 100px;
+    left: calc(100% - 210px);
     
     ul {
         list-style: none !important;
@@ -12,16 +15,16 @@
             a {                
                 position: relative;
                 display: block;
-                padding: 6px 15px;
+                padding: 5px 15px;
                 color: rgb(94, 94, 94);
-                font-weight: 300;
+                font-weight: 400;
                 font-size: 18px;
             }
         }
     }
 }
 .elemento-seleccionado {
-    width: 3px;
+    width: 5px;
     height: 29px;
     background-color: variables.$fd-azul-c;
     position: absolute;

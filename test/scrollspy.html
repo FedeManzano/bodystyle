@@ -7,11 +7,11 @@
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="../dist/css/bodystyle.css">
     </head>
-    <body>
+    <body class="bg-black">
         <div class="lista-scroll ocultar-desde-medianos" >
             <ul>
                 <li>
-                    <a href="#1">Seccion 1</a>
+                    <a href="#1">Seccion Completa Rompe</a>
                 </li>
                 <li>
                     <a href="#2">Seccion 2</a>
@@ -34,7 +34,18 @@
 
         <script src="../dist/js/bodystyle.js"></script>
         <script>
-            BS.ScrollSpyInit()
+
+            let conf = {
+                    ancho : 50, 
+                    tamFuente : 17, 
+                    colorBorde : "fd-rojo",
+                    alturaBorde : 30, 
+                    separacion : 100, 
+                    colorSeleccionado : "#fff", 
+                    colorNoSeleccionado : "#ccc"
+                } 
+
+            BS.ScrollSpyInit(conf)
         </script>
     </body>
 </html>
