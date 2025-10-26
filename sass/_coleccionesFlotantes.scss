@@ -13,11 +13,17 @@
         min-width: 240px;
         height: 50px;
         overflow: hidden;
-        border-radius: 0 5px 5px 0;
+        
         border-bottom: 1px solid rgba(0, 0, 0, 0.164);
         white-space: nowrap;
-        &:last-child {
+        border-radius: 0;
+        &:first-child{
+            border-radius: 0 5px 0 0;
+        }
+
+        &:first-child{
             border-bottom: none !important;
+            border-radius: 0 0 5px 0;
         }
         cursor: pointer;
         .borde {
@@ -71,7 +77,15 @@
     z-index: funciones.superposicion(ms);
     
     .lista-item {
-        border-radius: 5px 0 0 5px;
+
+        &:first-child {
+            border-radius: 5px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 0 5px;
+        }
+
         .borde {
             left: 0;
         }

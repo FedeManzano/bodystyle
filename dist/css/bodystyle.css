@@ -19407,8 +19407,8 @@ table tbody tr td,
 .table-dark thead tr th,
 .table-dark tbody tr td {
   padding: 1em 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
   border-left: none;
   font-weight: 600;
 }
@@ -19679,7 +19679,7 @@ table thead tr th {
 .vertical-border thead tr th,
 .vertical-border tbody tr td,
 .vertical-border tbody tr th {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.123);
 }
 .borde-vertical thead tr td:last-child, .borde-vertical thead tr th:last-child,
 .borde-vertical tbody tr td:last-child,
@@ -19688,7 +19688,7 @@ table thead tr th {
 .vertical-border thead tr th:last-child,
 .vertical-border tbody tr td:last-child,
 .vertical-border tbody tr th:last-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.123);
 }
 
 .alerta-roja *,
@@ -21229,13 +21229,18 @@ table thead tr th {
   min-width: 240px;
   height: 50px;
   overflow: hidden;
-  border-radius: 0 5px 5px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.164);
   white-space: nowrap;
+  border-radius: 0;
 }
-.lista-float-izq .lista-item:last-child,
-.lista-float-der .lista-item:last-child {
+.lista-float-izq .lista-item:first-child,
+.lista-float-der .lista-item:first-child {
+  border-radius: 0 5px 0 0;
+}
+.lista-float-izq .lista-item:first-child,
+.lista-float-der .lista-item:first-child {
   border-bottom: none !important;
+  border-radius: 0 0 5px 0;
 }
 .lista-float-izq .lista-item,
 .lista-float-der .lista-item {
@@ -21293,8 +21298,11 @@ table thead tr th {
   right: 0;
   z-index: 100000;
 }
-.lista-float-der .lista-item {
-  border-radius: 5px 0 0 5px;
+.lista-float-der .lista-item:first-child {
+  border-radius: 5px 0 0 0;
+}
+.lista-float-der .lista-item:last-child {
+  border-radius: 0 0 0 5px;
 }
 .lista-float-der .lista-item .borde {
   left: 0;
@@ -24822,9 +24830,9 @@ input.btn-cover-lg-o {
 .list-container .list-item {
   padding: 7px 10px;
   font-size: 1.1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+  border-left: 1px solid rgba(0, 0, 0, 0.123);
+  border-right: 1px solid rgba(0, 0, 0, 0.123);
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -24865,15 +24873,15 @@ input.btn-cover-lg-o {
 .lista-contenedor .lista-item:first-child, .lista-contenedor .list-item:first-child,
 .list-container .lista-item:first-child,
 .list-container .list-item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
 }
 .lista-contenedor .lista-item-img,
 .list-container .lista-item-img {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+  border-left: 1px solid rgba(0, 0, 0, 0.123);
+  border-right: 1px solid rgba(0, 0, 0, 0.123);
   padding: 10px;
 }
 .lista-contenedor .lista-item-img .img-cont,
@@ -24903,7 +24911,7 @@ input.btn-cover-lg-o {
 }
 .lista-contenedor .lista-item-img:first-child,
 .list-container .lista-item-img:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.123);
 }
 .lista-contenedor .desplegable,
 .list-container .desplegable {
@@ -24939,7 +24947,7 @@ input.btn-cover-lg-o {
 }
 .lista-usuario .lista-item {
   padding: 5px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
   display: flex;
   justify-content: space-between;
   align-items: center;
