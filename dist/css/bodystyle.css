@@ -2457,6 +2457,11 @@ a.link:hover {
   color: rgb(255, 166, 0) !important;
 }
 
+.c-bodyui,
+.c-bodyui {
+  background-color: rgb(187, 0, 56) !important;
+}
+
 .f-grosor-1,
 .f-w-1 {
   font-weight: 100 !important;
@@ -7834,6 +7839,11 @@ a.link:hover {
 
 .fd-negro-trasp {
   background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
+.fd-bodyui,
+.bg-bodyui {
+  background-color: rgb(187, 0, 56) !important;
 }
 
 .fd-facebook {
