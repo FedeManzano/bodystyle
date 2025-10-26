@@ -19961,6 +19961,11 @@ table thead tr th {
   color: rgb(0, 0, 0) !important;
 }
 
+.badge-bodyui {
+  background-color: rgb(187, 0, 56);
+  color: rgb(255, 255, 255) !important;
+}
+
 .b-redondo,
 .b-circle {
   border-radius: 50% !important;
@@ -23051,6 +23056,25 @@ input.btn-cover-lg-o {
 .btn-cover-lg:hover[class*=bg-pink] {
   background-color: rgb(211, 32, 136) !important;
 }
+.btn:hover[class*=bg-bodyui], .btn:hover[class*=fd-bodyui],
+.btn-lg:hover[class*=bg-bodyui],
+.btn-lg:hover[class*=fd-bodyui],
+.btn-sm:hover[class*=bg-bodyui],
+.btn-sm:hover[class*=fd-bodyui],
+.btn-cubrir:hover[class*=bg-bodyui],
+.btn-cubrir:hover[class*=fd-bodyui],
+.btn-cubrir-sm:hover[class*=bg-bodyui],
+.btn-cubrir-sm:hover[class*=fd-bodyui],
+.btn-cubrir-lg:hover[class*=bg-bodyui],
+.btn-cubrir-lg:hover[class*=fd-bodyui],
+.btn-cover:hover[class*=bg-bodyui],
+.btn-cover:hover[class*=fd-bodyui],
+.btn-cover-sm:hover[class*=bg-bodyui],
+.btn-cover-sm:hover[class*=fd-bodyui],
+.btn-cover-lg:hover[class*=bg-bodyui],
+.btn-cover-lg:hover[class*=fd-bodyui] {
+  background-color: rgb(167, 0, 56) !important;
+}
 .btn,
 .btn-lg,
 .btn-sm,
@@ -23173,6 +23197,20 @@ input.btn-cover-lg-o {
   background-color: rgb(161, 35, 35) !important;
   color: rgb(255, 255, 255) !important;
   box-shadow: 0 0 2px 4px rgba(199, 60, 60, 0.7) !important;
+}
+
+.btn-bodyui-o {
+  border: 1px solid rgb(187, 0, 56) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: rgb(187, 24, 24) !important;
+  transition: all 0.7s ease;
+}
+
+.btn-bodyui-o:hover {
+  background-color: rgb(187, 0, 56) !important;
+  color: rgb(255, 255, 255) !important;
+  box-shadow: 0 0 2px 4px rgba(197, 0, 56, 0.3) !important;
 }
 
 .btn-verde-o,
@@ -23478,99 +23516,6 @@ input.btn-cover-lg-o {
   max-height: 25px !important;
   min-height: 25px !important;
   font-size: 10px !important;
-}
-
-.tarjeta {
-  --deprecated: "WARNING: Use .other-class instead";
-  font-size: 16px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-sizing: content-box;
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.24);
-  position: relative;
-  background-color: white;
-}
-.tarjeta .tarjeta-titulo {
-  font-size: 1.3em;
-  font-weight: 600;
-  letter-spacing: 0.075em;
-  margin-bottom: 0.7em;
-}
-.tarjeta .tarjeta-cabecera,
-.tarjeta .tarjeta-pie {
-  padding: 0.9375em;
-  font-size: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  background-color: rgba(0, 0, 0, 0.03);
-}
-.tarjeta .tarjeta-cuerpo {
-  padding: 0.9375em;
-  line-height: 1.5625em;
-  color: rgb(30, 32, 41);
-  font-size: 1em !important;
-}
-.tarjeta .tarjeta-pie {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  border-bottom: none;
-}
-.tarjeta .tarjeta-link {
-  border: none;
-  font-size: 1.2em;
-  color: rgb(0, 80, 185);
-  letter-spacing: 1.2px;
-}
-.tarjeta .tarjeta-link:hover {
-  color: rgb(26, 110, 219);
-}
-.tarjeta .tarjeta-img {
-  overflow: hidden;
-  width: 100%;
-  max-height: 30%;
-  min-height: 30%;
-  cursor: pointer;
-  color: white;
-  position: relative;
-}
-.tarjeta .tarjeta-img img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.tarjeta .tarjeta-img .tarjeta-capa {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -100%;
-  width: 100%;
-  max-height: 100%;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.795);
-  z-index: 10;
-  transition: left 0.3s ease;
-}
-.tarjeta .tarjeta-img:hover > .tarjeta-capa {
-  left: 0;
-}
-.tarjeta small {
-  font-size: 0.8125em;
-  color: rgb(143, 143, 143);
-}
-.tarjeta .tarjeta-cobertura {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: top 0.3s ease;
-  background-color: white;
-  z-index: 10;
-  color: black;
-  line-height: 1.5em;
-  overflow: auto;
-}
-.tarjeta:hover > .tarjeta-cobertura {
-  top: 0;
 }
 
 .card * {

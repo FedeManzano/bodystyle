@@ -172,6 +172,11 @@ input.btn-cover-lg-o  {
         background-color: rgb(211, 32, 136) !important;
     }
 
+    &:hover[class*="bg-bodyui"],
+    &:hover[class*="fd-bodyui"] {
+        background-color: variables.$fd-rosa-o-2 !important;
+    }
+
     @include mixim.btn-colores(variables.$fd-azul-c,variables.$fd-blanco , 1.1em);
 }
 
@@ -243,6 +248,17 @@ input.btn-cover-lg-o  {
     color: variables.$fd-blanco !important;
     box-shadow: 0 0 2px 4px variables.$btn-rojo-sombra !important;
 }
+
+.btn-bodyui-o {
+    @include mixim.btn-colores-outline(1px, solid, variables.$fd-rosa-o-1, variables.$btn-rojo, 1em);
+}
+
+.btn-bodyui-o:hover {
+    background-color:variables.$fd-rosa-o-1 !important;
+    color: variables.$fd-blanco !important;
+    box-shadow: 0 0 2px 4px variables.$fd-rosa-t !important;
+}
+
 
 // Botones fondo verde
 .btn-verde-o,
