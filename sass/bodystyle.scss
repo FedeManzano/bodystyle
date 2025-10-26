@@ -1,5 +1,5 @@
 /*!
- * BodyStyle v4.0.0
+ * BodyStyle v4.5.0
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
@@ -12,7 +12,6 @@
 @use "globales";
 @use "generales";
 @use "utilitariosExp";
-//@usert "iconos";
 @use "fondos";
 
 //Aliniamiento 
@@ -25,17 +24,14 @@
 @use "alertas";
 @use "badges";
 @use "efectoTresD";
-//@import "decoracionTitulo";
 @use "formas";
 @use "conEtiquetados";
 @use "hover";
 @use "breadcrumbs";
-//@import "social";
 @use "coleccionesFlotantes";
 
 
 // JS
-
 @use "efecto-waves";
 @use "imagenes";
 @use "botonFlotante";
