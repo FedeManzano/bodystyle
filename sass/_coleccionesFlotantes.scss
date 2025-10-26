@@ -16,15 +16,7 @@
         
         border-bottom: 1px solid rgba(0, 0, 0, 0.164);
         white-space: nowrap;
-        border-radius: 0;
-        &:first-child{
-            border-radius: 0 5px 0 0;
-        }
-
-        &:first-child{
-            border-bottom: none !important;
-            border-radius: 0 0 5px 0;
-        }
+     
         cursor: pointer;
         .borde {
             position: absolute;
@@ -78,19 +70,14 @@
     
     .lista-item {
 
-        &:first-child {
-            border-radius: 5px 0 0 0;
-        }
-
-        &:last-child {
-            border-radius: 0 0 0 5px;
-        }
-
         .borde {
             left: 0;
         }
-    }
 
+        &:first-child{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+        }
+    }
     .abrir,
     .cerrar {
         left: -15px;

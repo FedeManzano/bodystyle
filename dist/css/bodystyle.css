@@ -21231,19 +21231,6 @@ table thead tr th {
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.164);
   white-space: nowrap;
-  border-radius: 0;
-}
-.lista-float-izq .lista-item:first-child,
-.lista-float-der .lista-item:first-child {
-  border-radius: 0 5px 0 0;
-}
-.lista-float-izq .lista-item:first-child,
-.lista-float-der .lista-item:first-child {
-  border-bottom: none !important;
-  border-radius: 0 0 5px 0;
-}
-.lista-float-izq .lista-item,
-.lista-float-der .lista-item {
   cursor: pointer;
 }
 .lista-float-izq .lista-item .borde,
@@ -21298,14 +21285,11 @@ table thead tr th {
   right: 0;
   z-index: 100000;
 }
-.lista-float-der .lista-item:first-child {
-  border-radius: 5px 0 0 0;
-}
-.lista-float-der .lista-item:last-child {
-  border-radius: 0 0 0 5px;
-}
 .lista-float-der .lista-item .borde {
   left: 0;
+}
+.lista-float-der .lista-item:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.164);
 }
 .lista-float-der .abrir,
 .lista-float-der .cerrar {
