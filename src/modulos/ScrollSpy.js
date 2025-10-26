@@ -87,7 +87,8 @@ import ERR from "./Errores"
 
 
         $(".scroll-item").each( (index, element) => {
-            ids.push($(element).attr("id"))
+            if($(element).attr("id") !== null && $(element).attr("id") !== undefined )
+                ids.push($(element).attr("id"))
         })
 
 
