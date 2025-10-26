@@ -20329,6 +20329,16 @@ table thead tr th {
   border-left: 1px solid transparent !important;
 }
 
+.badge-mje-bodyui {
+  border: 1px solid rgb(187, 0, 56);
+  color: rgb(255, 255, 255);
+  background-color: rgb(187, 0, 56);
+}
+.badge-mje-bodyui::before {
+  border: 1px solid rgb(187, 0, 56);
+  background-color: rgb(187, 0, 56);
+}
+
 .badge-mje-rojo,
 .badge-mje-red {
   border: 1px solid rgb(228, 22, 22);
