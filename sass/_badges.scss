@@ -406,6 +406,17 @@
 }
 
 
+.badge-mje-bodyui {
+    border: 1px solid variables.$fd-rosa-o-1;
+    color: variables.$fd-blanco;
+    background-color: variables.$fd-rosa-o-1;
+
+    &::before {
+        border: 1px solid variables.$fd-rosa-o-1;
+        background-color: variables.$fd-rosa-o-1;
+    }
+}
+
 .badge-mje-rojo,
 .badge-mje-red {
     border: 1px solid variables.$fd-rojo;
