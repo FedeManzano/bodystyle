@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    </head>
+    <body>
+        <div class="container mt-1 p-2 bg-black bor-rad-10">
+            <h3 class="c-white mb-3">Registro de Usuario</h3>
+
+            <div class="row">
+                <div class="tem-formulario cm-12 cl-6">
+                    <div class="tem-input fd-gris-az" >
+                        <input type="text" name="nombre" class="c-white" required>
+                        <label class="c-white">Nombre</label>
+                    </div>
+                </div>
+                <div class="tem-formulario cm-12 cl-6">
+                    <div class="tem-input" >
+                        <input type="text" name="apellido" class="c-white" readonly>
+                        <label class="c-white">Apellido</label>
+                    </div>
+                </div>
+
+                <!-- ID Seleccionado es s_dark -->
+                <div  class="select-mod-dark cxs-12"  id="s_dark">
+                    <select  name="Selector">
+                        <option  value="Localidad">Localidad</option>
+                        <option  value="Ramos Mejía">Ramos Mejía</option>
+                        <option  value="Villa Lizuriaga">Villa Luzuriaga</option>
+                        <option  value="Flores">Flores</option>
+                    </select>
+                </div>
+
+                <div class="tem-formulario cxs-12">
+                    <div class="tem-input fd-gris-az" >
+                        <input type="email" name="email" class="c-white" required>
+                        <label class="c-white">Email</label>
+                    </div>
+                </div>
+    
+                
+            </div>
+        </div>
+        <script src="../dist/js/bodystyle.js"></script>
+        <script>
+            BS.ToolTipsInit()
+             BS.SelectInit().iniciar("#s_dark", "borde");
+        </script>
+    </body>
+</html>

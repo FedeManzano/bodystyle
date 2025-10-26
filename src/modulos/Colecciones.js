@@ -67,15 +67,19 @@ class Coleccion {
 
     cargarConfiguracion(c) {
 
-        $(c.contexto + " .lista-contenedor").addClass(c.colorFondo)
+        $(c.contexto + " .lista-contenedor, .list-container").addClass(c.colorFondo)
         $(c.contexto + " .lista-item").addClass(c.colorFondo)
+        $(c.contexto + " .list-item").addClass(c.colorFondo)
         $(c.contexto + " a").addClass(c.colorTexto)
         $(c.contexto + " p").addClass(c.colorTexto)
         $(c.contexto + " b").addClass(c.colorTexto)
         $(c.contexto + " i").addClass(c.colorTexto)
         $(c.contexto + " .lista-cabecera").addClass(c.colorTexto)
+        $(c.contexto + " .list-header").addClass(c.colorTexto)
         $(c.contexto + " .lista-pie").addClass(c.colorTexto)
+        $(c.contexto + " .list-footer").addClass(c.colorTexto)
         $(c.contexto + " .lista-contenedor .desplegable ul li a").addClass(c.colorTexto)
+        $(c.contexto + " .list-container .dropdown ul li a").addClass(c.colorTexto)
     }
 
     validarConfig(c) {
