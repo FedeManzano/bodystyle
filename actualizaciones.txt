@@ -7,3 +7,4 @@
 - colecciones acordeon
 - alias colecciones 
 - imagenes
+- Color de bodystyle
