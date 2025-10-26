@@ -73,6 +73,13 @@
             font-size: 15px;
             color: black
         }
+
+        .f-der,
+        .f-aba{
+            position: absolute !important;
+            top: calc(50% - 5px) !important;
+            left: calc(100% - 20px);
+        }
     }
 
     & .lista-item:first-child,
@@ -120,19 +127,27 @@
     .desplegable {
         background-color: rgba(0, 0, 0, 0.096);
         font-size: 15px !important;
-        padding: 7px;
+   
         p {
             padding: 5px !important;
             line-height: 22px !important;
             margin: 0 !important;
         }
 
-        ul li a {
-            display: block;
-            padding: 5px;
+        ul 
+        {
             list-style: none;
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.096);
+            display: flex;
+            flex-direction: column;
+            
+            a {
+                display: block !important;
+                width: 100% !important;
+                padding: 10px 10px;
+                
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.096);
+                }
             }
         }
     }

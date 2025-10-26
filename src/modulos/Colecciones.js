@@ -13,23 +13,24 @@ class Coleccion {
     acordeon(c) {
         $(c.contexto + " .l-colapso .lista-item").each(function () {
             if (!$(this).hasClass("desactivado") && $($(this)).data("target") !== undefined) {
-                $(this).append("<i class='f-derecha'></i>");
-                $(this).append("<i class='f-abajo'></i>");
+                $(this).append("<i class='f-der'></i>");
+                $(this).append("<i class='f-aba'></i>");
 
-                $(this).children(".f-derecha").css("border-left", "5px solid " + c.colorFlechas)
-                $(this).children(".f-derecha").css("border-bottom", "5px solid transparent")
-                $(this).children(".f-derecha").css("border-top", "5px solid transparent")
-
-
-                $(this).children(".f-abajo").css("border-top", "5px solid " + c.colorFlechas)
-                $(this).children(".f-abajo").css("border-left", "5px solid transparent")
-                $(this).children(".f-abajo").css("border-right", "5px solid transparent")
+                $(this).children(".f-der").css("border-left", "5px solid " + c.colorFlechas)
+                $(this).children(".f-der").css("border-bottom", "5px solid transparent")
+                $(this).children(".f-der").css("border-top", "5px solid transparent")
 
 
-                $(this).children(".f-derecha").css("top", 13);
-                $(this).children(".f-abajo").css("top", 13);
+                $(this).children(".f-aba").css("border-top", "5px solid " + c.colorFlechas)
+                $(this).children(".f-aba").css("border-left", "5px solid transparent")
+                $(this).children(".f-aba").css("border-right", "5px solid transparent")
 
-                $(this).children(".f-abajo").hide();
+
+                $(this).children(".f-der").css("top", "calc(50% - 2.5px)");
+                $(this).children(".f-der").css("height", 5);
+                $(this).children(".f-aba").css("top", 13);
+
+                $(this).children(".f-aba").hide();
                 $(c.contexto + " .l-colapso > .desplegable").hide();
             }
         })
@@ -41,8 +42,8 @@ class Coleccion {
         var cerrarTodos = () => {
             $(c.contexto + " .l-colapso .lista-item").each(function () {
                 $(($(this)).data("target")).slideUp(300)
-                $(this).children(".f-abajo").hide()
-                $(this).children(".f-derecha").show()
+                $(this).children(".f-aba").hide()
+                $(this).children(".f-der").show()
             })
         }
 
@@ -51,13 +52,14 @@ class Coleccion {
                 return
             cerrarTodos(c)
             var desplegable = $($(this).data("target"))
+            console.log($(desplegable).is(":visible"))
             if ($(desplegable).is(":visible")) {
-                $(this).children(".f-abajo").hide()
-                $(this).children(".f-derecha").show()
+                $(this).children(".f-aba").hide()
+                $(this).children(".f-der").show()
                 $(desplegable).slideUp(300)
             } else {
-                $(this).children(".f-derecha").hide()
-                $(this).children(".f-abajo").show()
+                $(this).children(".f-der").hide()
+                $(this).children(".f-aba").show()
                 $(desplegable).slideDown(300)
             }
         })

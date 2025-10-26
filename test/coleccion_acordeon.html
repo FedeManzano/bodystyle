@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    </head>
+    <body>
+        <div  class="container mar-3">
+            <div  class="lista-contenedor bg-white">
+                <div id="col1">
+                    <div class="l-colapso">
+                         <a class="lista-item" data-target="#m1">Desp</a>
+                        
+                         <div class="desplegable fd-gris-az" id="m1">
+                            <ul>
+                                <li><a href="" >Inicio</a></li>
+                                <li><a href="" >Servicios</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                    
+                    <div class="l-colapso">
+                        <a class="lista-item" data-target="#m2">desp2</a>
+
+                        <div class="desplegable fd-gris-az" id="m2">
+                            <ul>
+                                <li>
+                                    <a href="#">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#" >Servicios</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <script src="../dist/js/bodystyle.js"></script>
+        <script>
+           // { contexto = "SinContexto", colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000" }
+            BS.ToolTipsInit()
+            BS.Colecciones().iniciar({ contexto : "#col1", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+        </script>
+    </body>
+</html>

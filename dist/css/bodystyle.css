@@ -24833,6 +24833,18 @@ input.btn-cover-lg-o {
   font-size: 15px;
   color: black;
 }
+.lista-contenedor .lista-item .f-der,
+.lista-contenedor .lista-item .f-aba,
+.lista-contenedor .list-item .f-der,
+.lista-contenedor .list-item .f-aba,
+.list-container .lista-item .f-der,
+.list-container .lista-item .f-aba,
+.list-container .list-item .f-der,
+.list-container .list-item .f-aba {
+  position: absolute !important;
+  top: calc(50% - 5px) !important;
+  left: calc(100% - 20px);
+}
 .lista-contenedor .lista-item:first-child, .lista-contenedor .list-item:first-child,
 .list-container .lista-item:first-child,
 .list-container .list-item:first-child {
@@ -24880,7 +24892,6 @@ input.btn-cover-lg-o {
 .list-container .desplegable {
   background-color: rgba(0, 0, 0, 0.096);
   font-size: 15px !important;
-  padding: 7px;
 }
 .lista-contenedor .desplegable p,
 .list-container .desplegable p {
@@ -24888,14 +24899,20 @@ input.btn-cover-lg-o {
   line-height: 22px !important;
   margin: 0 !important;
 }
-.lista-contenedor .desplegable ul li a,
-.list-container .desplegable ul li a {
-  display: block;
-  padding: 5px;
+.lista-contenedor .desplegable ul,
+.list-container .desplegable ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
-.lista-contenedor .desplegable ul li a:hover,
-.list-container .desplegable ul li a:hover {
+.lista-contenedor .desplegable ul a,
+.list-container .desplegable ul a {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 10px;
+}
+.lista-contenedor .desplegable ul a:hover,
+.list-container .desplegable ul a:hover {
   background-color: rgba(0, 0, 0, 0.096);
 }
 
