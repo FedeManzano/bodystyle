@@ -19653,12 +19653,14 @@ table thead tr th {
 }
 
 @media (max-width: 1200px) {
-  .tabla-responsive {
+  .tabla-responsive,
+  .table-responsive {
     width: 100%;
     margin-bottom: 15px;
     overflow: scroll;
   }
-  .tabla-responsive > table {
+  .tabla-responsive > table,
+  .table-respossive > table {
     margin-bottom: 0;
   }
   .tabla-responsive > table > thead > tr > th,
