@@ -20580,11 +20580,18 @@ table thead tr th {
 }
 
 .badge-solapa-rojo,
+.badge-flap-red,
 .badge-solapa-azul,
+.badge-flap-blue,
 .badge-solapa-verde,
+.badge-flap-green,
 .badge-solapa-blanco,
+.badge-flap-white,
 .badge-solapa-negro,
-.badge-solapa-gris {
+.badge-flap-black,
+.badge-solapa-gris,
+.badge-flap-grey,
+.badge-flap-bodyui {
   position: absolute;
   top: 15px;
   left: -19px;
@@ -20601,11 +20608,18 @@ table thead tr th {
   border-radius: 0 3px 3px 0;
 }
 .badge-solapa-rojo::before,
+.badge-flap-red::before,
 .badge-solapa-azul::before,
+.badge-flap-blue::before,
 .badge-solapa-verde::before,
+.badge-flap-green::before,
 .badge-solapa-blanco::before,
+.badge-flap-white::before,
 .badge-solapa-negro::before,
-.badge-solapa-gris::before {
+.badge-flap-black::before,
+.badge-solapa-gris::before,
+.badge-flap-grey::before,
+.badge-flap-bodyui::before {
   content: "";
   position: absolute;
   bottom: -9px;
@@ -20618,41 +20632,58 @@ table thead tr th {
   z-index: -1;
 }
 
-.badge-solapa-azul {
+.badge-solapa-azul,
+.badge-flap-blue {
   background-color: rgb(16, 69, 183);
 }
-.badge-solapa-azul::before {
+.badge-solapa-azul::before,
+.badge-flap-blue::before {
   background-color: rgb(0, 30, 94);
 }
 
-.badge-solapa-verde {
+.badge-solapa-verde,
+.badge-flap-green {
   background-color: rgb(0, 124, 103);
 }
-.badge-solapa-verde::before {
+.badge-solapa-verde::before,
+.badge-flap-green::before {
   background-color: rgb(0, 96, 85);
 }
 
-.badge-solapa-gris {
+.badge-solapa-gris,
+.badge-flap-grey {
   background-color: rgb(236, 236, 236);
   color: black;
 }
-.badge-solapa-gris::before {
+.badge-solapa-gris::before,
+.badge-flap-grey::before {
   background-color: rgb(51, 51, 51);
 }
 
-.badge-solapa-blanco {
+.badge-solapa-blanco,
+.badge-flap-white {
   background-color: rgb(255, 255, 255);
   color: black;
 }
-.badge-solapa-blanco::before {
+.badge-solapa-blanco::before,
+.badge-flap-white::before {
   background-color: rgb(236, 236, 236);
 }
 
-.badge-solapa-negro {
+.badge-solapa-negro,
+.badge-flap-black {
   background-color: rgb(0, 0, 0);
 }
-.badge-solapa-negro::before {
+.badge-solapa-negro::before,
+.badge-flap-black::before {
   background-color: rgb(51, 51, 51);
+}
+
+.badge-flap-bodyui {
+  background-color: rgb(187, 0, 56);
+}
+.badge-flap-bodyui::before {
+  background-color: rgb(147, 0, 56);
 }
 
 .contenedor-relativo,

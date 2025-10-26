@@ -647,11 +647,18 @@
 }
 
 .badge-solapa-rojo,
+.badge-flap-red,
 .badge-solapa-azul,
+.badge-flap-blue,
 .badge-solapa-verde,
+.badge-flap-green,
 .badge-solapa-blanco,
+.badge-flap-white,
 .badge-solapa-negro,
-.badge-solapa-gris {
+.badge-flap-black,
+.badge-solapa-gris,
+.badge-flap-grey,
+.badge-flap-bodyui {
 
     @include mixim.posicionamiento-absoluto(15px, null, null, -19px);
     @include mixim.flex-box-centrado();
@@ -675,21 +682,24 @@
 }
 
 
-.badge-solapa-azul {
+.badge-solapa-azul,
+.badge-flap-blue {
     background-color: variables.$fd-azul;
     &::before {
         background-color: variables.$fd-azul-o-2;
     }
 }
 
-.badge-solapa-verde {
+.badge-solapa-verde,
+.badge-flap-green {
     background-color: variables.$fd-verde;
     &::before {
         background-color: variables.$fd-verde-o-2;
     }
 }
 
-.badge-solapa-gris {
+.badge-solapa-gris,
+.badge-flap-grey {
     background-color: variables.$fd-gris-c;
     color: black;
     &::before {
@@ -697,7 +707,8 @@
     }
 }
 
-.badge-solapa-blanco {
+.badge-solapa-blanco,
+.badge-flap-white {
     background-color: variables.$fd-blanco;
     color: black;
     &::before {
@@ -705,10 +716,18 @@
     }
 }
 
-.badge-solapa-negro {
+.badge-solapa-negro,
+.badge-flap-black {
     background-color: variables.$fd-negro;
     &::before {
         background-color: variables.$fd-gris-o-1;
+    }
+}
+
+.badge-flap-bodyui {
+    background-color: variables.$fd-rosa-o-1;
+    &::before {
+        background-color: variables.$fd-rosa-o-3;
     }
 }
 
