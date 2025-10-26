@@ -184,7 +184,8 @@
 .badge-label-blue,
 .badge-label-grey,
 .badge-label-white,
-.badge-label-black{
+.badge-label-black,
+.badge-label-bodyui{
     font-weight: variables.$b-etiqueta-fw;
     text-align: center;
     border-radius: 0 5px 5px 0;
@@ -311,6 +312,21 @@
     }
     &:hover::before {
         background-color: variables.$b-etiqueta-gris-h;
+    }
+}
+
+.badge-label-bodyui {
+    background-color: variables.$fd-rosa-o-1;
+    color: white;
+    &::before {
+        content: "";
+        background-color: variables.$fd-rosa-o-1;
+    }
+    &:hover {
+        background-color: variables.$fd-rosa-o-2;
+    }
+    &:hover::before {
+        background-color: variables.$fd-rosa-o-2;
     }
 }
 

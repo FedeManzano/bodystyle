@@ -2459,7 +2459,7 @@ a.link:hover {
 
 .c-bodyui,
 .c-bodyui {
-  background-color: rgb(187, 0, 56) !important;
+  color: rgb(187, 0, 56) !important;
 }
 
 .f-grosor-1,
@@ -20092,7 +20092,8 @@ table thead tr th {
 .badge-label-blue,
 .badge-label-grey,
 .badge-label-white,
-.badge-label-black {
+.badge-label-black,
+.badge-label-bodyui {
   font-weight: 300;
   text-align: center;
   border-radius: 0 5px 5px 0;
@@ -20111,7 +20112,8 @@ table thead tr th {
 .badge-label-blue:hover,
 .badge-label-grey:hover,
 .badge-label-white:hover,
-.badge-label-black:hover {
+.badge-label-black:hover,
+.badge-label-bodyui:hover {
   background-color: rgb(201, 0, 0);
 }
 .badge-etiqueta-rojo:hover::before,
@@ -20126,7 +20128,8 @@ table thead tr th {
 .badge-label-blue:hover::before,
 .badge-label-grey:hover::before,
 .badge-label-white:hover::before,
-.badge-label-black:hover::before {
+.badge-label-black:hover::before,
+.badge-label-bodyui:hover::before {
   background-color: rgb(201, 0, 0);
 }
 .badge-etiqueta-rojo::before,
@@ -20141,7 +20144,8 @@ table thead tr th {
 .badge-label-blue::before,
 .badge-label-grey::before,
 .badge-label-white::before,
-.badge-label-black::before {
+.badge-label-black::before,
+.badge-label-bodyui::before {
   content: "";
   background-color: red;
   z-index: 2;
@@ -20237,6 +20241,21 @@ table thead tr th {
 .badge-etiqueta-gris:hover::before,
 .badge-label-grey:hover::before {
   background-color: rgb(196, 196, 196);
+}
+
+.badge-label-bodyui {
+  background-color: rgb(187, 0, 56);
+  color: white;
+}
+.badge-label-bodyui::before {
+  content: "";
+  background-color: rgb(187, 0, 56);
+}
+.badge-label-bodyui:hover {
+  background-color: rgb(167, 0, 56);
+}
+.badge-label-bodyui:hover::before {
+  background-color: rgb(167, 0, 56);
 }
 
 .badge-mje-izq,
