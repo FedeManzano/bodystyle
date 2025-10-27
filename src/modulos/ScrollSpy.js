@@ -88,7 +88,7 @@ import ERR from "./Errores"
 
         $(".scroll-item").each( (index, element) => {
             if($(element).attr("id") !== null && $(element).attr("id") !== undefined )
-                ids.push($(element).attr("id"))
+                ids[index]= $(element).attr("id")
         })
 
 
@@ -107,16 +107,15 @@ import ERR from "./Errores"
         $(".elemento-seleccionado").addClass(c.colorBorde)
         $(".lista-scroll").css("top", c.separacion)
 
-
-        seleccionarIndice(1)
+        eventoScroll(null)
     } 
 
     const eventoScroll = (el) => {
 
         ids.forEach((e) => {
-            if($(el.target).scrollTop() >= $("#" + e).offset().top - 200)
+            if($(window).scrollTop() >= $("#" + e).offset().top - 200)
             {
-                seleccionarIndice(ids.indexOf(e) - 1)
+                seleccionarIndice(ids.indexOf(e) + 1)
             }
         })
     }
@@ -132,7 +131,7 @@ import ERR from "./Errores"
     }
 
     var inicializar = () => {
-        $(window).scroll(eventoScroll)
+        $(window).scroll((e) => eventoScroll(e))
     }
 
     var ScrollSpy = {
