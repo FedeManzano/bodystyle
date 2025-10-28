@@ -28,7 +28,7 @@ se encuentra en los siguientes enlaces:
 
 ### :arrow_down: Descarga de la Documentación
 
-- :link: [Documentación v4.5.0](https://mega.nz/file/cJEzHBJD#cIRF8aVdoRhwX34H5e1kuK0CLvZDeO330vchtoTY_FM) **Última Versión**
+- :link: [Documentación v4.5.0](https://mega.nz/file/pFNnHbZJ#ZgwVdzib3uVitWNvJSyQhFpD9ZD0DQlhcG6Cs4qxN-o) **Última Versión**
 - :link: [Documentación v4.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
 
