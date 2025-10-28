@@ -6,10 +6,10 @@
 # :dvd: Bodystyle
 
 ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
-![VERSION](https://img.shields.io/badge/VERSION-4.0.0-red)
+![VERSION](https://img.shields.io/badge/VERSION-4.5.0-red)
 ![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)
 ![MEGA](https://img.shields.io/badge/MEGA-Download-green)
-![DOCS-VERSION](https://img.shields.io/badge/Documentation-V1.0.0-blue)
+![DOCS-VERSION](https://img.shields.io/badge/Documentation-V1.5.0-blue)
 ![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)
 
 Bodystyle es una librería de Software libre para la creación del ```Front-End``` de sitios y aplicacines 
@@ -29,7 +29,8 @@ descarga directa como se muestra a continuación:
 
 ### :arrow_down: Descarga de la Documentación
 
-- :link: [Descargar documentación Bodystyle 4.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
+- :link: [Documentación v4.5.0](https://mega.nz/file/tcdUFBBL#xtHmVTqQo-EMatjHXAq_MRWgvGLp5qjurlaHhWwBLv4) **Última Versión**
+- :link: [Documentación v4.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
 
 ### :information_source: Estructura de la documentación
@@ -54,16 +55,19 @@ descarga directa como se muestra a continuación:
         - :page_facing_up: <i>colecciones_flotantes.html</i>
         - :page_facing_up: <i>colores.html</i>
         - :page_facing_up: <i>comentarios.html</i>
+        - :page_facing_up: <i>compartir.html</i>
         - :page_facing_up: <i>contenedor.html</i>
         - :page_facing_up: <i>dropdown.html</i>
         - :page_facing_up: <i>efecto_hover.html</i>
         - :page_facing_up: <i>efecto3d.html</i>
+        - :page_facing_up: <i>etiquetas.html</i>
         - :page_facing_up: <i>flexbox.html</i>
         - :page_facing_up: <i>formas.html</i>
         - :page_facing_up: <i>formularios.html</i>
         - :page_facing_up: <i>get_started.html</i>
         - :page_facing_up: <i>grid.html</i>
         - :page_facing_up: <i>grupo_botones.html</i>
+        - :page_facing_up: <i>imagenes.html</i>
         - :page_facing_up: <i>input.html</i>
         - :page_facing_up: <i>margin.html</i>
         - :page_facing_up: <i>medidas.html</i>
@@ -75,6 +79,7 @@ descarga directa como se muestra a continuación:
         - :page_facing_up: <i>progressbar.html</i>
         - :page_facing_up: <i>radio.html</i>
         - :page_facing_up: <i>select.html</i>
+        - :page_facing_up: <i>solapas.html</i>
         - :page_facing_up: <i>switch.html</i>
         - :page_facing_up: <i>tablas.html</i>
         - :page_facing_up: <i>tabs.html</i>
@@ -84,7 +89,6 @@ descarga directa como se muestra a continuación:
         - :page_facing_up: <i>tooltips.html</i>
     - :page_facing_up: <i>index.html</i>
     - :page_facing_up: <i>logo.ico</i>
-
 
 ## :books: Core de Bodystyle
 
@@ -119,6 +123,7 @@ Para disponer de la librería contamos con tres formas:
 Existen varias formas de disponer de la librería, una de ellas es a través de la descarga de los archivos procesados de Bodystyle
 a través del siguiente enlace:
 
+:link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0) **Última Versión**
 :link: [Descarga de Bodystyle 4.0.0](https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw)
 
 ### :pencil2: Plantilla
