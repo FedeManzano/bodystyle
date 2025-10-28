@@ -21,7 +21,7 @@ diseños innovadores y se enfoquen en la mejora continua de la ```experiencia de
 
 > La versión Actual ```v4.0.0```.
 
-## :green_book: [Documentación](https://bodystyle.webcindario.com)
+## :green_book: Documentación
 
 Para poder utilizar totas las funcionalidades y elementos provistos por la librería es necesario disponer de la **documentación**. La cual 
 se encuentra a un 80% de su finalización y es accesible desde el siguiente enlace [docs](https://bodystyle.webcindario.com/) o de la 
