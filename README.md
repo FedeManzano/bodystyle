@@ -122,7 +122,7 @@ Para disponer de la librería contamos con tres formas:
 Existen varias formas de disponer de la librería, una de ellas es a través de la descarga de los archivos procesados de Bodystyle
 a través del siguiente enlace:
 
-- :link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/ZEkV0ZQI#a0-_5aoELyOirQGbHlT7xM7a_mApM0GifHGOHAM9hH0) **Última Versión**
+- :link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww) **Última Versión**
 - :link: [Descarga de Bodystyle 4.0.0](https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw)
 
 ### :pencil2: Plantilla
