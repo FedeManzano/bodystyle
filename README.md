@@ -139,10 +139,46 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
     </head>
-    <body class="bg-black">
+    <body class="bg-black">	
+        <!--
+            Es necesario asignarle un ID al nav en este caso id="nav".. Puede ser cualquiera
+            Luego asignar el attr data-target=#bs-nav-sidebar Id del sidebar a desplegar
+        -->
+        <nav  id="nav"  class="bs-nav bg-pink-d-1 bs-nav-bor-grey-s"  data-target="#bs-nav-sidebar">
+            <div  class="bs-nav-md align-right-list">
 
+                <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
+                <a  class="btn-menu ocultar-solo-grandes"></a>
 
-        <section class="d-flex just-center ali-center ta-c pt-10" style="width: 100%; height: 100%;">
+                <div  class="ocultar-desde-medianos">
+                    <ul>
+                        <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='tips-ele' data-tips='Descargar la última versión de bodystyle'>Descarga</a></li>
+                	    <li><a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
+                	    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="tips-ele" data-tips="Repositorio Oficial">Repositorio</a></li>
+                    </ul>
+                </div>
+                <div  class="right-content">
+                    <a href="#" class='btn-sm bg-black com-trigger' 
+                    data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww' class='link'>Descarga Bodystyle 4.5.0</a>." data-evt="click">v4.5.0</a>
+                </div>
+            </div>
+        </nav> 
+        
+        <!-- 
+            Lista lateral la misma contiene un ID = al configurado en el (data-target) del nav
+            y lleva la clase [bs-nav-sidebar] para configurarle los estilos de este elemento.
+            Este elemento puede estar en cualquier parte del dom, no tiene limitaciones 
+            ya que el enlace del sidebar con el nav es a través del data-target.
+        -->
+        <div  id="bs-nav-sidebar"  class="bs-nav-sidebar fd-gris-n">
+            <ul>
+                <li><a target="_blank" href="#" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
+                <li><a target="_blank" href="#" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
+                <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
+            </ul>
+        </div>
+    
+        <section class="d-flex just-center ali-center ta-c pt-11" style="width: 100%; height: 100%;">
             <div class="d-flex flex-column">
                 <div class="img-display-256 m-a">
                     <img class="img-responsive" src="https://fotos.miarroba.com/th/ef04/3069AFC52D27690194AC286901949B.png" alt="Logo de la librería">
@@ -158,16 +194,16 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                 </div>
                 <div class="mt-4 ta-c">
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.5.0" class="link com-trigger"
-                    data-info="Última actualización de la librería y sus agregados.">Releases 4.5.0</a>
+                    data-info="Última actualización de la librería y sus agregados." data-pos='top'>Releases 4.5.0</a>
                 </div>
             </div>
         </section>
 
-        
         <!-- Archivo con las funcionalidades JS -->
         <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
         <script>
           BS.ToolTipsInit() // INICIO DE LOS TOOLTIPS
+	      BS.NavigationInit("#nav", true)
         </script>
     </body>
 </html>
