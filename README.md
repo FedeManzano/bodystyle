@@ -185,13 +185,11 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
             </ul>
         </div>
     
-        <section class="d-flex just-center ali-center ta-c pt-11" style="width: 100%; height: 100%;">
+        <section class="d-flex just-center ali-center ta-c pt-7" style="width: 100%; height: 100%;">
             <div class="d-flex flex-column">
-                <div class="img-display-256 m-a">
-                    <img class="img-responsive" src="https://fotos.miarroba.com/th/ef04/3069AFC52D27690194AC286901949B.png" alt="Logo de la librería">
-                </div>
-                <h1 class="mt-1 fz-45 ta-c c-white">Bodystyle</h1>
-                <div class="d-flex mt-6 flex-column-s just-center">
+                
+                <h1 class="mt-1 fz-120 fz-m-150 fz-s-90 fz-xs-70 ta-c c-white">Bodystyle</h1>
+                <div class="d-flex mt-12 flex-column-s just-center">
                     <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
                     data-info="Descarga de los archivos de la librería transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
                     <a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
@@ -199,7 +197,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-cover-lg-o btn-green-o bor-pill com-trigger ml-1 m-s-0"
                     data-info="Repositorio oficial de la librería <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
                 </div>
-                <div class="mt-4 ta-c">
+                <div class="mt-8 ta-c">
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.5.0" class="link com-trigger"
                     data-info="Última actualización de la librería y sus agregados." data-pos='top'>Releases 4.5.0</a>
                 </div>
