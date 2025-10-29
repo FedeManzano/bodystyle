@@ -147,7 +147,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
             Luego asignar el attr data-target=#bs-nav-sidebar Id del sidebar a desplegar
         -->
         <nav  id="nav"  class="bs-nav bg-pink-d-1 bs-nav-bor-grey-s"  data-target="#bs-nav-sidebar">
-            <div  class="bs-nav-md align-right-list">
+            <div  class="bs-nav-sm align-right-list">
 
                 <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
                 <a  class="btn-menu ocultar-solo-grandes"></a>
@@ -159,9 +159,14 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                 	    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="tips-ele" data-tips="Repositorio Oficial">Repositorio</a></li>
                     </ul>
                 </div>
-                <div  class="right-content">
-                    <a href="#" class='btn-sm bg-black com-trigger' 
-                    data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww' class='link'>Descarga Bodystyle 4.5.0</a>." data-evt="click">v4.5.0</a>
+                <div  class="right-content pt-0">
+
+                    <div class="d-flex ali-center">
+                        <label  class="badge-mje-right badge-mje-white mr-2 mb-2">v4.5.0</label>
+                        <a href="#" class='btn-sm bg-black com-trigger bor-pill' 
+                        data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww' class='link'>Descarga Bodystyle 4.5.0</a>." data-evt="click">Descarga</a>
+                    </div>
+                  
                 </div>
             </div>
         </nav> 
