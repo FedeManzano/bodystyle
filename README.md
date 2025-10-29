@@ -146,6 +146,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <!--ENLACE A LA DOCUMENTACIÓN -->
         <a 
             class="link tips-ele" 
+            target="_blank"
             href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" 
             data-tips="Documentación de la librería <span class='badge badge-red'>Bodystyle">
               Documentación Bodystyle
