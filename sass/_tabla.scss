@@ -368,11 +368,17 @@ table thead tr th {
         margin-bottom: 0;
     }
     .tabla-responsive > table > thead > tr > th,
+    .table-responsive > table > thead > tr > th,
     .tabla-responsive > table > tbody > tr > th,
+    .table-responsive > table > tbody > tr > th,
     .tabla-responsive > table > tfoot > tr > th,
+    .table-responsive > table > tfoot > tr > th,
     .tabla-responsive > table > thead > tr > td,
+    .table-responsive > table > thead > tr > td,
     .tabla-responsive > table > tbody > tr > td,
-    .tabla-responsive > table > tfoot > tr > td {
+    .table-responsive > table > tbody > tr > td,
+    .tabla-responsive > table > tfoot > tr > td,
+    .table-responsive > table > tfoot > tr > td  {
         white-space: nowrap !important;
     }
 }
