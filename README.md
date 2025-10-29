@@ -127,7 +127,7 @@ a través del siguiente enlace:
 
 ### :pencil2: Plantilla
 
-Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten disponer de Bodystyle 4.0.0.
+Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten disponer de la última versión de Bodystyle.
 
 ```html
 <!DOCTYPE html>
