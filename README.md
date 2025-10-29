@@ -139,7 +139,9 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
     </head>
-    <body class="bg-black">	
+    <body class="bg-black">
+
+	
         <!--
             Es necesario asignarle un ID al nav en este caso id="nav".. Puede ser cualquiera
             Luego asignar el attr data-target=#bs-nav-sidebar Id del sidebar a desplegar
@@ -172,8 +174,8 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         -->
         <div  id="bs-nav-sidebar"  class="bs-nav-sidebar fd-gris-n">
             <ul>
-                <li><a target="_blank" href="#" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
-                <li><a target="_blank" href="#" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
+                <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
+                <li><a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
                 <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             </ul>
         </div>
@@ -199,6 +201,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
             </div>
         </section>
 
+        
         <!-- Archivo con las funcionalidades JS -->
         <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
         <script>
