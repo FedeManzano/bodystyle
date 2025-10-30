@@ -1,11 +1,5 @@
-- alias de las tablas (table-resposive)
-- scroll-spy generado
-- fix del nav para tamaños pequeños
-- alias de los badges
-- nuevos badges
-- alias helpers
-- colecciones acordeon
-- alias colecciones 
-- imagenes
-- Color de bodystyle
-- Template Formularios
+- Iconos
+- Mejorado el Core de Posicionamiento
+- Alertas para cerrar
+- Alias de los helpers 
+- Fix Icono del Nav
