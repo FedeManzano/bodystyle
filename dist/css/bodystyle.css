@@ -24433,12 +24433,6 @@ input.btn-cover-lg-o {
   white-space: nowrap;
   cursor: pointer;
 }
-.bs-nav .bs-nav-sm .logo-container img,
-.bs-nav .bs-nav-md .logo-container img,
-.bs-nav .bs-nav-lg .logo-container img {
-  min-width: 80px !important;
-  max-width: 80px !important;
-}
 .bs-nav .bs-nav-sm .right-content,
 .bs-nav .bs-nav-md .right-content,
 .bs-nav .bs-nav-lg .right-content {
@@ -24482,8 +24476,8 @@ input.btn-cover-lg-o {
   max-width: 40px !important;
 }
 .bs-nav .bs-nav-md .logo-container img {
-  min-width: 40px !important;
-  max-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 .bs-nav .bs-nav-lg {
   height: 75px;
@@ -24493,16 +24487,16 @@ input.btn-cover-lg-o {
   max-width: 45px !important;
 }
 .bs-nav .bs-nav-lg .logo-container img {
-  min-width: 45px !important;
-  max-width: 45px !important;
+  width: 45px !important;
+  height: 45px !important;
 }
 .bs-nav .bs-nav-sm .logo-container {
   min-width: 35px !important;
   max-width: 35px !important;
 }
 .bs-nav .bs-nav-sm .logo-container img {
-  min-width: 35px !important;
-  max-width: 35px !important;
+  width: 35px !important;
+  height: 35px !important;
 }
 
 .bs-nav-fixed {
