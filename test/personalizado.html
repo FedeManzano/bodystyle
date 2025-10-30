@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="../dist/css/bodystyle.css">
+
+
+        <style>
+            .persona_vinc {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #0000007c;
+                color: white;
+                position: absolute;
+                max-width: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <a href="" class="btn bg-red disparador" data-pos="top"  data-info="<span class='badge badge-bodyui'> Esto es una alerta </span>adsasdasdas dasdasda sdasdasdasdasd" data-evt="hover"></a>
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+        <script src="../dist/js/bodystyle.js"></script>
+        <script>
+            BS.ToolTipsInit()
+            BS.PersonalizadoInit({ori: "disparador", ele: "alert-op-black" })
+
+
+            function contenido() {
+                return  `
+                <div>
+                    <h3>Esto es un titulo</h3>
+                </div>
+                `
+            }
+
+
+        </script>
+    </body>
+</html>
