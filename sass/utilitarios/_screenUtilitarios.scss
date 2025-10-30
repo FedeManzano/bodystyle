@@ -1,38 +1,44 @@
 @use "../globales/mixim";
 
-.ocultar-solo-grandes {
+.ocultar-solo-grandes,
+.hide-only-large {
     @include mixim.agregar-a-medida-minima(m){
         display: none !important;
     }
 }
 
 
-.ocultar-desde-medianos {
+.ocultar-desde-medianos,
+.hide-from-medium {
     @include mixim.agregar-a-medida-maxima(m){
         display: none !important;
     }
 }
 
-.ocultar-desde-chicos {
+.ocultar-desde-chicos,
+.hide-from-small {
     @include mixim.agregar-a-medida-maxima(s){
         display: none !important;
     }
 }
 
-.ocultar-desde-x-chicos {
+.ocultar-desde-x-chicos,
+.hide-from-x-small {
     @include mixim.agregar-a-medida-maxima(xs){
         display: none !important;
     }
 }
 
 
-.mostrar-solo-x-chicos {
+.mostrar-solo-x-chicos,
+.show-only-x-small {
     @include mixim.agregar-a-medida-minima(xs){
         display: none !important;
     }
 }
 
-.mostrar-solo-chicos {
+.mostrar-solo-chicos,
+.show-only-small {
     @include mixim.agregar-a-medida-minima(s){
         display: none !important;
     }
@@ -43,7 +49,8 @@
 }
 
 
-.mostrar-solo-medianos {
+.mostrar-solo-medianos,
+.show-only-medium {
     @include mixim.agregar-a-medida-minima(m){
         display: none !important;
     }
@@ -53,20 +60,9 @@
     }
 }
 
-.mostrar-solo-grandes {
+.mostrar-solo-grandes,
+.show-only-large {
     @include mixim.agregar-a-medida-maxima(m){
         display: none !important;
     }
-}
-
-.derecha {
-    justify-content: flex-end !important;
-}
-
-.izquierda {
-    justify-content: flex-start !important;
-}
-
-.centrado {
-    justify-content: center !important;
 }
