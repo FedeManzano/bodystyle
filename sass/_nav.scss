@@ -100,15 +100,15 @@
         .logo-container {
             text-decoration: none;
             color: white;
-            min-width: 80px !important;
-            max-width: 80px !important;
-            display: block;
-            padding: 0 20px 0 5px;
+            display: flex;
+            align-items: center;
+            padding: 0 50px 0 5px;
+            white-space : nowrap;
+            cursor: pointer;
             img 
             {
-                max-width: 100%;
-                min-width: 100%;
-                border-radius: 50%;
+                min-width: 80px !important;
+                max-width: 80px !important;
             }
         }
 
@@ -146,21 +146,37 @@
 
     .bs-nav-md {
         height: 65px;
-
         .logo-container {
-            min-width: 70px !important;
-            max-width: 70px !important;
+            min-width: 40px !important;
+            max-width: 40px !important;
+            img {
+                min-width: 40px !important;
+                max-width: 40px !important;
+            }
         }
     }
 
     .bs-nav-lg {
         height: 75px;
+        .logo-container {
+            min-width: 45px !important;
+            max-width: 45px !important;
+            img {
+                min-width: 45px !important;
+                max-width: 45px !important;
+            }
+        }
     }
 
     .bs-nav-sm {
         .logo-container {
-            min-width: 65px !important;
-            max-width: 65px !important;
+            min-width: 35px !important;
+            max-width: 35px !important;
+
+            img {
+                min-width: 35px !important;
+                max-width: 35px !important;
+            }
         }
     }
 }
