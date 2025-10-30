@@ -131,13 +131,17 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
+        <meta charset="UTF-8">
         <!-- META obligatorio para poder utilizar la libreria -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Librería de estilos para el desarrollo del Front-End">
 
+        <link rel="x-icon" href="favicon.ico" type="image/x-icon">
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+        <title>Plantilla de la librería Bodystyle</title>
     </head>
     <body class="bg-black">
 
@@ -148,14 +152,14 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         -->
         <nav  id="nav"  class="bs-nav bg-pink-d-1 bs-nav-bor-grey-s"  data-target="#bs-nav-sidebar">
             <div  class="bs-nav-sm align-right-list">
-
+                
                 <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
                 <a  class="btn-menu ocultar-solo-grandes"></a>
 
                 <div  class="ocultar-desde-medianos">
                     <ul>
                         <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='tips-ele' data-tips='Descargar la última versión de bodystyle'>Descarga</a></li>
-                	    <li><a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
+                	    <li><a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
                 	    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="tips-ele" data-tips="Repositorio Oficial">Repositorio</a></li>
                     </ul>
                 </div>
@@ -180,7 +184,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <div  id="bs-nav-sidebar"  class="bs-nav-sidebar fd-gris-n">
             <ul>
                 <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
-                <li><a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
+                <li><a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
                 <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             </ul>
         </div>
@@ -188,11 +192,13 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <section class="d-flex just-center ali-center ta-c pt-7" style="width: 100%; height: 100%;">
             <div class="d-flex flex-column">
                 
-                <h1 class="mt-1 fz-120 fz-m-150 fz-s-90 fz-xs-70 ta-c c-white">Bodystyle</h1>
+                <h1 class="mt-1 fz-120 fz-m-150 fz-s-90 fz-xs-70 ta-c c-white">
+                    Bodystyle
+                </h1>
                 <div class="d-flex mt-12 flex-column-s just-center">
                     <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
                     data-info="Descarga de los archivos de la librería transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
-                    <a target="_blank" href="https://mega.nz/file/AB02GRBb#1LebAkqSwl6XyfexR97FLLZOLdgDKR-4uC0uP6E9wYo" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
+                    <a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
                     data-info='Descarga de la Documenatación en su versión mas actual.'>Docs v1.5.0</a>
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-cover-lg-o btn-green-o bor-pill com-trigger ml-1 m-s-0"
                     data-info="Repositorio oficial de la librería <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
