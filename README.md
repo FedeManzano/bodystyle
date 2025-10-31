@@ -159,17 +159,17 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
 
                 <div  class="ocultar-desde-medianos">
                     <ul>
-                        <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='tips-ele' data-tips='Descargar la última versión de bodystyle'>Descarga</a></li>
-                	    <li><a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
+                        <li><a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class='tips-ele' data-tips='Descargar la última versión de bodystyle'>Descarga</a></li>
+                	    <li><a target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
                 	    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="tips-ele" data-tips="Repositorio Oficial">Repositorio</a></li>
                     </ul>
                 </div>
                 <div  class="right-content pt-0">
 
                     <div class="d-flex ali-center">
-                        <label  class="badge-mje-right badge-mje-white mr-2 mb-2">v4.5.0</label>
+                        <label  class="badge-mje-right badge-mje-white mr-2 mb-2">v4.8.0</label>
                         <a href="#" class='btn-sm bg-black com-trigger bor-pill' 
-                        data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww' class='link'>Descarga Bodystyle 4.5.0</a>." data-evt="click">Descarga</a>
+                        data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58' class='link'>Descarga Bodystyle 4.8.0</a>." data-evt="click">Descarga</a>
                     </div>
                   
                 </div>
@@ -184,8 +184,8 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         -->
         <div  id="bs-nav-sidebar"  class="bs-nav-sidebar fd-gris-n">
             <ul>
-                <li><a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
-                <li><a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
+                <li><a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class='com-trigger' data-info='Descargar la última versión de Bodystyle' data-pos='right'>Descarga</a></li>
+                <li><a target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class='com-trigger' data-info='Descargar la última versión la Docs' data-pos='right'>Docs</a></li>
                 <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle">Repositorio</a></li>
             </ul>
         </div>
@@ -197,16 +197,16 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                     Bodystyle
                 </h1>
                 <div class="d-flex mt-12 flex-column-s just-center">
-                    <a target="_blank" href="https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
+                    <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
                     data-info="Descarga de los archivos de la librería transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
-                    <a target="_blank" href="https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
+                    <a target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
                     data-info='Descarga de la Documenatación en su versión mas actual.'>Docs v1.5.0</a>
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-cover-lg-o btn-green-o bor-pill com-trigger ml-1 m-s-0"
                     data-info="Repositorio oficial de la librería <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
                 </div>
                 <div class="mt-8 ta-c">
-                    <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.5.0" class="link com-trigger"
-                    data-info="Última actualización de la librería y sus agregados." data-pos='top'>Releases 4.5.0</a>
+                    <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0" class="link com-trigger"
+                    data-info="Última actualización de la librería y sus agregados." data-pos='top'>Releases 4.8.0</a>
                 </div>
             </div>
         </section>
