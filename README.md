@@ -32,6 +32,10 @@ se encuentra en los siguientes enlaces:
 - :link: [Documentación v1.5.0](https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0) 
 - :link: [Documentación v1.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
 
+### Sitio de la Documentación
+
+- [Sitio Bodystyle](https://bodystyle.webcindario.com)
+
 
 ### :information_source: Estructura de la documentación
 
@@ -122,8 +126,8 @@ Para disponer de la librería contamos con tres formas:
 
 Existen varias formas de disponer de la librería, una de ellas es a través de la descarga de los archivos procesados de Bodystyle
 a través del siguiente enlace:
-- :link: [Descarga de Bodystyle 4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
-- :link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww) **Última Versión**
+- :link: [Descarga de Bodystyle 4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58) **Última Versión**
+- :link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww) 
 - :link: [Descarga de Bodystyle 4.0.0](https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw)
 
 ### :pencil2: Plantilla
