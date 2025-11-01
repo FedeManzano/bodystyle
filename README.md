@@ -4,13 +4,14 @@
 </p>
 
 # :dvd: Bodystyle
+[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
+[![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA)
+[![DOCS](https://img.shields.io/badge/Documentation-V1.8.0-blue)](https://bodystyle.webcindario.com)
+[![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)](https://www.npmjs.com/package/bodyui2)
+[![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
+[![VERSION](https://img.shields.io/badge/VERSION-4.8.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
 
-![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)
-![VERSION](https://img.shields.io/badge/VERSION-4.8.0-red)
-![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)
-![MEGA](https://img.shields.io/badge/MEGA-Download-green)
-![DOCS-VERSION](https://img.shields.io/badge/Documentation-V1.8.0-blue)
-![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)
+
 
 Bodystyle es una librería de Software libre para la creación del ```Front-End``` de sitios y aplicacines 
 web conformada, como se analizará en aprtados posteriores, por cuatro módulos que conforman el ```core``` de 
