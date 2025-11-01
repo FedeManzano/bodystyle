@@ -4,8 +4,8 @@
 </p>
 
 # :dvd: Bodystyle
-[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58){:target="_blank"}
-[![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA){:target="_blank"}
+[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
+[![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA)
 [![DOCS](https://img.shields.io/badge/Documentation-V1.8.0-blue)](https://bodystyle.webcindario.com)
 [![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)](https://www.npmjs.com/package/bodyui2)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
