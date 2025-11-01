@@ -1,5 +1,0 @@
-- Iconos
-- Mejorado el Core de Posicionamiento
-- Alertas para cerrar
-- Alias de los helpers 
-- Fix Icono del Nav
