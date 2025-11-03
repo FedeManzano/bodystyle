@@ -146,7 +146,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
 
         <link rel="x-icon" href="favicon.ico" type="image/x-icon">
         <!-- Link con el CDN de los estilos css  -->
-        <link rel="stylesheet" href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+        <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
         <title>Plantilla de la librería Bodystyle</title>
     </head>
     <body class="bg-black">
@@ -218,7 +218,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
 
         
         <!-- Archivo con las funcionalidades JS -->
-        <script src="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+        <script src="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
         <script>
           BS.ToolTipsInit() // INICIO DE LOS TOOLTIPS
 	      BS.NavigationInit("#nav", true)
