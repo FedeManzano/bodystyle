@@ -5,7 +5,7 @@
 
 # :dvd: Bodystyle
 [![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
-[![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA)
+[![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI)
 [![DOCS](https://img.shields.io/badge/Documentation-V1.8.0-blue)](https://bodystyle.webcindario.com)
 [![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)](https://www.npmjs.com/package/bodyui2)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
@@ -29,9 +29,7 @@ se encuentra en los siguientes enlaces:
 
 ### :arrow_down: Descarga de la Documentación
 
-- :link: [Documentación v1.8.0](https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA) **Última Versión**
-- :link: [Documentación v1.5.0](https://mega.nz/file/9dEiFLqI#BENkkxx-qk1H7VqVE5Uh80pQ72ny_MucQH9BHaNlNQ0) 
-- :link: [Documentación v1.0.0](https://mega.nz/file/Eds0HSgL#r8pNNctkK8UQ5cpNeH_zQk6loqFp7--uUAn9pb-Wn1g)
+- :link: [Documentación v1.8.0](https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI)
 
 ### Sitio de la Documentación
 
@@ -165,7 +163,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                 <div  class="ocultar-desde-medianos">
                     <ul>
                         <li><a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class='tips-ele' data-tips='Descargar la última versión de bodystyle'>Descarga</a></li>
-                	    <li><a target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
+                	    <li><a target="_blank" href="https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI" class='tips-ele' data-tips="<span class='f-w-7'>Bodystyle Docs:</span> Descarga de la última versión de la documentación">Docs</a></li>
                 	    <li><a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="tips-ele" data-tips="Repositorio Oficial">Repositorio</a></li>
                     </ul>
                 </div>
@@ -204,8 +202,8 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                 <div class="d-flex mt-12 flex-column-s just-center">
                     <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
                     data-info="Descarga de los archivos de la librería transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
-                    <a target="_blank" href="https://mega.nz/file/lYURlIqR#m1svvvF4HoXmy6vwsTaSZCJmOy2O1FzExELVTQ1XZfA" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
-                    data-info='Descarga de la Documenatación en su versión mas actual.'>Docs v1.5.0</a>
+                    <a target="_blank" href="https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
+                    data-info='Descarga de la Documenatación en su versión mas actual.'>Docs v1.8.0</a>
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-cover-lg-o btn-green-o bor-pill com-trigger ml-1 m-s-0"
                     data-info="Repositorio oficial de la librería <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
                 </div>
