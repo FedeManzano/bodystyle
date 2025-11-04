@@ -13,9 +13,9 @@
 
 
 
-Bodystyle es una librería de Software libre para la creación del ```Front-End``` de sitios y aplicacines 
+Bodystyle es una biblioteca de Software libre para la creación del ```Front-End``` de sitios y aplicacines 
 web conformada, como se analizará en aprtados posteriores, por cuatro módulos que conforman el ```core``` de 
-la librería. A partir del core se podrán agrupar elementos de diferentes características y distribuirlos
+la biblioteca. A partir del core se podrán agrupar elementos de diferentes características y distribuirlos
 de manera correcta por toda la ```Interfaz Usuario UI```. <br>
 El objetivo de este trabajo es brindarle herramientas a los desarrolladores para que puedan crear 
 diseños innovadores y se enfoquen en la mejora continua de la ```experiencia de usuario UX```.
@@ -24,7 +24,7 @@ diseños innovadores y se enfoquen en la mejora continua de la ```experiencia de
 
 ## :green_book: Documentación
 
-Para poder utilizar totas las funcionalidades y elementos provistos por la librería es necesario disponer de la **documentación**. La cual 
+Para poder utilizar totas las funcionalidades y elementos provistos por la biblioteca es necesario disponer de la **documentación**. La cual 
 se encuentra en los siguientes enlaces:
 
 ### :arrow_down: Descarga de la Documentación
@@ -95,8 +95,8 @@ se encuentra en los siguientes enlaces:
 
 ## :books: Core de Bodystyle
 
-Bodystyle está compuesto por cuatro módulos independientes que son agrupados para conformar la librería, todos ellos 
-puede descargarse de manera separada para disponer de sus funcionalidades sin agregar toda la librería.
+Bodystyle está compuesto por cuatro módulos independientes que son agrupados para conformar la biblioteca, todos ellos 
+puede descargarse de manera separada para disponer de sus funcionalidades sin agregar toda la biblioteca.
 
 :pencil2: **Módulos**
 
@@ -114,16 +114,16 @@ puede descargarse de manera separada para disponer de sus funcionalidades sin ag
 
 ## :dvd: Disponer de Bodystyle 4.8.0
 
-Para disponer de la librería contamos con tres formas:
+Para disponer de la biblioteca contamos con tres formas:
 - La descarga directa.
 - La plantilla html a través de los enlaces de CDN.
 - La descarga del Package a través de NPM.
 
-> Importante: Leer la licencia de la librería antes de ser utilizada.
+> Importante: Leer la licencia de la biblioteca antes de ser utilizada.
 
 ### :arrow_down: Descarga
 
-Existen varias formas de disponer de la librería, una de ellas es a través de la descarga de los archivos procesados de Bodystyle
+Existen varias formas de disponer de la biblioteca, una de ellas es a través de la descarga de los archivos procesados de Bodystyle
 a través del siguiente enlace:
 - :link: [Descarga de Bodystyle 4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58) **Última Versión**
 - :link: [Descarga de Bodystyle 4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww) 
@@ -140,12 +140,12 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
         <meta charset="UTF-8">
         <!-- META obligatorio para poder utilizar la libreria -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Librería de estilos para el desarrollo del Front-End">
+        <meta name="description" content="biblioteca de estilos para el desarrollo del Front-End">
 
         <link rel="x-icon" href="favicon.ico" type="image/x-icon">
         <!-- Link con el CDN de los estilos css  -->
         <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
-        <title>Plantilla de la librería Bodystyle</title>
+        <title>Plantilla de la biblioteca Bodystyle</title>
     </head>
     <body class="bg-black">
 
@@ -172,7 +172,7 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                     <div class="d-flex ali-center">
                         <label  class="badge-mje-right badge-mje-white mr-2 mb-2">v4.8.0</label>
                         <a href="#" class='btn-sm bg-black com-trigger bor-pill' 
-                        data-info="Este botón permite descargar los acrivos procesados y transpilados de la librería. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58' class='link'>Descarga Bodystyle 4.8.0</a>." data-evt="click">Descarga</a>
+                        data-info="Este botón permite descargar los acrivos procesados y transpilados de la biblioteca. <span class='f-w-7'>No incluye los archivos con el código fuente.</span> <br> <a href='https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58' class='link'>Descarga Bodystyle 4.8.0</a>." data-evt="click">Descarga</a>
                     </div>
                   
                 </div>
@@ -201,15 +201,15 @@ Podemos utilizar la plantilla predefinida con los enlaces CDN que permiten dispo
                 </h1>
                 <div class="d-flex mt-12 flex-column-s just-center">
                     <a target="_blank" href="https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58" class="btn-cover-lg bg-bodyui bor-pill com-trigger mr-1 m-s-0"
-                    data-info="Descarga de los archivos de la librería transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
+                    data-info="Descarga de los archivos de la biblioteca transpilados y procesados. Desde este enlace no se incluye el código fuente.">Descarga</a>
                     <a target="_blank" href="https://mega.nz/file/gAEUwYRI#BsVB4AXRzkke4Qbo4D8PR7LcvvwDqQYXnjDvCs5MOKI" class="btn-cover-lg-o btn-white-o bor-pill com-trigger mt-s-1"
                     data-info='Descarga de la Documenatación en su versión mas actual.'>Docs v1.8.0</a>
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle" class="btn-cover-lg-o btn-green-o bor-pill com-trigger ml-1 m-s-0"
-                    data-info="Repositorio oficial de la librería <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
+                    data-info="Repositorio oficial de la biblioteca <a class='link'> @FedeManzano/bodystyle</a>">Repositorio</a>
                 </div>
                 <div class="mt-8 ta-c">
                     <a target="_blank" href="https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0" class="link com-trigger"
-                    data-info="Última actualización de la librería y sus agregados." data-pos='top'>Releases 4.8.0</a>
+                    data-info="Última actualización de la biblioteca y sus agregados." data-pos='top'>Releases 4.8.0</a>
                 </div>
             </div>
         </section>
