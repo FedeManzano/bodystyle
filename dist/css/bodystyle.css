@@ -22660,14 +22660,17 @@ table thead tr th {
   opacity: 1;
 }
 
-.bs-sidebar-drop {
+.bs-sidebar-drop-light,
+.bs-sidebar-drop-dark {
   overflow-y: auto !important;
   z-index: 9999;
 }
-.bs-sidebar-drop * {
+.bs-sidebar-drop-light *,
+.bs-sidebar-drop-dark * {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.bs-sidebar-drop {
+.bs-sidebar-drop-light,
+.bs-sidebar-drop-dark {
   position: fixed !important;
   left: 0;
   bottom: 0;
@@ -22676,18 +22679,36 @@ table thead tr th {
   padding-top: 75px;
   background-color: black;
 }
-.bs-sidebar-drop .bs-sidebar-title {
+.bs-sidebar-drop-light .bs-sidebar-drop-list ul,
+.bs-sidebar-drop-dark .bs-sidebar-drop-list ul {
+  list-style: none;
+}
+.bs-sidebar-drop-light .bs-sidebar-drop-list ul li a,
+.bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a {
+  display: block;
+  padding: 5px 0 5px 35px;
+  color: #bbbbbb;
+  font-size: 17px;
+}
+.bs-sidebar-drop-light .bs-sidebar-drop-list ul li a:hover,
+.bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a:hover {
+  color: white;
+}
+.bs-sidebar-drop-light .bs-sidebar-title,
+.bs-sidebar-drop-dark .bs-sidebar-title {
   position: relative;
   padding: 8px 5px 7px 15px !important;
   cursor: pointer;
 }
-.bs-sidebar-drop .bs-sidebar-title label {
+.bs-sidebar-drop-light .bs-sidebar-title label,
+.bs-sidebar-drop-dark .bs-sidebar-title label {
   cursor: pointer;
   color: white;
   font-size: 20px;
   font-weight: 700;
 }
-.bs-sidebar-drop .bs-sidebar-title .bs-arrow-right {
+.bs-sidebar-drop-light .bs-sidebar-title .arrow-right,
+.bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
   height: 5px !important;
   border-left: 5px solid white;
   border-top: 5px solid transparent;
@@ -22696,17 +22717,70 @@ table thead tr th {
   top: calc(50% - 2.5px);
   right: 15px;
 }
-.bs-sidebar-drop .bs-sidebar-drop-list ul {
-  list-style: none;
+.bs-sidebar-drop-light .bs-sidebar-title .arrow-bottom,
+.bs-sidebar-drop-dark .bs-sidebar-title .arrow-bottom {
+  height: 5px !important;
+  border-top: 5px solid white;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  right: 15px;
 }
-.bs-sidebar-drop .bs-sidebar-drop-list ul li a {
-  display: block;
-  padding: 5px 0 5px 35px;
-  color: #bbbbbb;
-  font-size: 17px;
+
+.bs-sidebar-drop-light .bs-sidebar-title {
+  position: relative;
+  padding: 8px 5px 7px 15px !important;
+  cursor: pointer;
 }
-.bs-sidebar-drop .bs-sidebar-drop-list ul li a:hover {
-  color: white;
+.bs-sidebar-drop-light .bs-sidebar-title label {
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+.bs-sidebar-drop-light .bs-sidebar-title .arrow-right {
+  border-left: 5px solid black;
+}
+.bs-sidebar-drop-light .bs-sidebar-title .arrow-bottom {
+  border-top: 5px solid black;
+}
+.bs-sidebar-drop-light .bs-sidebar-drop-list ul li a {
+  color: #444444;
+}
+.bs-sidebar-drop-light .bs-sidebar-drop-list ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+.bs-sidebar-drop-light {
+  background-color: #ccc;
+}
+
+.bs-sidebar-drop-dark .bs-sidebar-title {
+  position: relative;
+  padding: 8px 5px 7px 15px !important;
+  cursor: pointer;
+}
+.bs-sidebar-drop-dark .bs-sidebar-title label {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+}
+.bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
+  height: 5px !important;
+  border-left: 5px solid rgb(255, 255, 255);
+}
+.bs-sidebar-drop-dark .bs-sidebar-title .arrow-bottom {
+  border-top: 5px solid rgb(255, 255, 255);
+}
+.bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a {
+  color: #c3c3c3;
+}
+.bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+.bs-sidebar-drop-dark {
+  background-color: #1e2022;
 }
 
 .preloader,
