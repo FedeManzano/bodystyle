@@ -11,7 +11,6 @@
 import Modal from "./modulos/Modal"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
-import BotonFlotante from "./modulos/BotonFlotante"
 import Toast from "./modulos/Toast"
 import ScrollSpy from "./modulos/ScrollSpy"
 import ToolTips from "./modulos/ToolTips"
@@ -83,15 +82,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
     } 
 
     const ParalaxInit = () => Paralax.iniciar()
-
-
-    const BotonFlotanteInit = (config) => {
-        BotonFlotante.iniciar(config)
-    }
-
-    var BotonFlotanteDestroy = () => {
-        BotonFlotante.destroy()
-    }
 
     const ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
     const ScrollSpyDestroy = () => ScrollSpy.destroy()
@@ -209,10 +199,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // ScrollSpy
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         ScrollSpyDestroy: () => ScrollSpyDestroy(),
-
-        // BotonFlotante
-        BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
-        BotonFlotanteDestroy: () => BotonFlotanteDestroy(),
 
         // Imagenes
         ImagenesInit: () => ImagenesInit(),
