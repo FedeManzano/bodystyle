@@ -26,6 +26,7 @@ $a-color-hover-light: #000;
 {
     overflow-y: auto !important;
     z-index: 9999;
+    user-select: none;
     *{
          font-family: $font-family
     }

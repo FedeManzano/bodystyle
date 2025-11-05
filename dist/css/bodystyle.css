@@ -22665,6 +22665,7 @@ table thead tr th {
 .bs-sidebar-drop-dark {
   overflow-y: auto !important;
   z-index: 9999;
+  user-select: none;
 }
 .bs-sidebar-drop-light *,
 .bs-sidebar-drop-dark * {
