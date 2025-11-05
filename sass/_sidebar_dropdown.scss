@@ -13,12 +13,13 @@ $font-family: 'Roboto', -apple-system,
 
 /** SIDEBAR LIGHT */
 $bg-light: #ccc;
-$border-right-light: 2px solid rgb(123, 123, 123);
+$border-right-light: 1px solid rgb(123, 123, 123);
 $color-title-light: #000;
 $border-arrow-right-light: 5px solid black;
 $border-arrow-bottom-light: 5px solid black;
 $a-color-light: #444444;
 $a-color-hover-light: #000;
+$fw: 500;
 
 
 .bs-sidebar-drop-light,
@@ -41,6 +42,7 @@ $a-color-hover-light: #000;
     background-color: black; // Defecto
 
     .bs-sidebar-drop-list {
+        display: none;
         ul {
             list-style: none;
             li {
@@ -67,7 +69,6 @@ $a-color-hover-light: #000;
             cursor: pointer;   
             color: white;
             font-size: 20px;
-            font-weight: 700;
         }
 
         .arrow-right{
@@ -103,7 +104,7 @@ $a-color-hover-light: #000;
             cursor: pointer;   
             color: $color-title-light;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: $fw;
         }
 
         .arrow-right{
@@ -143,7 +144,7 @@ $a-color-hover-light: #000;
             cursor: pointer;   
             color: rgb(255, 255, 255);
             font-size: 20px;
-            font-weight: 700;
+            font-weight: $fw;
         }
 
         .arrow-right{

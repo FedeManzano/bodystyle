@@ -22681,6 +22681,10 @@ table thead tr th {
   padding-top: 75px;
   background-color: black;
 }
+.bs-sidebar-drop-light .bs-sidebar-drop-list,
+.bs-sidebar-drop-dark .bs-sidebar-drop-list {
+  display: none;
+}
 .bs-sidebar-drop-light .bs-sidebar-drop-list ul,
 .bs-sidebar-drop-dark .bs-sidebar-drop-list ul {
   list-style: none;
@@ -22707,7 +22711,6 @@ table thead tr th {
   cursor: pointer;
   color: white;
   font-size: 20px;
-  font-weight: 700;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right,
 .bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
@@ -22739,7 +22742,7 @@ table thead tr th {
   cursor: pointer;
   color: #000;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right {
   border-left: 5px solid black;
@@ -22757,7 +22760,7 @@ table thead tr th {
   color: #000;
 }
 .bs-sidebar-drop-light {
-  border-right: 2px solid rgb(123, 123, 123);
+  border-right: 1px solid rgb(123, 123, 123);
   background-color: #ccc;
 }
 
@@ -22770,7 +22773,7 @@ table thead tr th {
   cursor: pointer;
   color: rgb(255, 255, 255);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
   height: 5px !important;
