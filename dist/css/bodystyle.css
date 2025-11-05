@@ -22674,7 +22674,7 @@ table thead tr th {
 .bs-sidebar-drop-light,
 .bs-sidebar-drop-dark {
   position: fixed !important;
-  left: -260;
+  left: -260px;
   bottom: 0;
   top: 0;
   width: 260px;
@@ -22765,7 +22765,7 @@ table thead tr th {
 }
 .bs-sidebar-drop-light {
   border-right: 1px solid rgb(123, 123, 123);
-  background-color: #ccc;
+  background-color: #eeeeee;
 }
 
 .bs-sidebar-drop-dark .bs-sidebar-title {
