@@ -1,12 +1,14 @@
 import $ from "jquery"
 import ERR from "./Errores"
+import SidebarHandler from "./SidebarHandler"
 
 (function() {
 
 
-   let elements = []
-
-
+    let elements = []
+    const arrow_right = `<i class="arrow-right"></i>`
+    const arrow_bottom = `<i class="arrow-bottom"></i>`
+    const time = 150
 
     const cantElements = $(".bs-sidebar-title").length
     const conf = {
@@ -15,7 +17,7 @@ import ERR from "./Errores"
     }
 
 
-    const Init = ({idNav = "SinID", idSidebar = "SinID"}) => {
+    const Init = ({idNav = "SinID", idSidebar = "SinID", submenu = "n/a"}) => {
     
         if(!ERR.id.validacion.test(idNav))
         {
@@ -40,6 +42,28 @@ import ERR from "./Errores"
             }
             elements[index] = ele
         }) 
+
+        $(idSidebar + " .bs-sidebar-title").append(arrow_right)
+
+
+        if(submenu != "n/a" && submenu !== undefined && submenu !== null)
+        {
+            if(ERR.id.validacion.test(idSidebar))
+            {
+                elements.forEach((e) => {
+                    if(e.target == submenu)
+                    {
+                        $(submenu).slideDown(time)
+                        $(e.obj).children("i").remove()
+                        $(e.obj).append(arrow_bottom)
+                        e.state = true
+                    }
+                })
+            }
+        }
+
+        SidebarHandler.Init(idNav, idSidebar)
+
         EventClick()
     }
 
@@ -54,13 +78,16 @@ import ERR from "./Errores"
         elements.forEach((ele) =>{
             if($(targetElement).data("target") === $(ele.obj).data("target"))
             {
+                $(targetElement).children("i").remove()
                 if(!ele.state)
                 {
-                    $(ele.target).slideDown(150)
+                    $(ele.target).slideDown(time)
+                    $(targetElement).append(arrow_bottom)
                 }
                 else 
                 {
-                    $(ele.target).slideUp(150)
+                    $(ele.target).slideUp(time)
+                    $(targetElement).append(arrow_right)
                 }
                 ele.state = !ele.state
             }

@@ -33,13 +33,18 @@ $fw: 500;
     }
 
     position: fixed !important;
-    left: 0; // 540 px ancho
+    left: -260px; 
     bottom: 0;
     top: 0;
-    width: 240px;
+    width: 260px;
     padding-top: 75px;
 
     background-color: black; // Defecto
+
+    transition: left .3s ease;
+    -o-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    -webkit-transition: left .3s ease;
 
     .bs-sidebar-drop-list {
         display: none;
@@ -55,6 +60,7 @@ $fw: 500;
                     &:hover {
                         color: white;
                     }
+
                 }
             }
         }
@@ -68,7 +74,7 @@ $fw: 500;
         {
             cursor: pointer;   
             color: white;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .arrow-right{
@@ -169,7 +175,7 @@ $fw: 500;
             }
         }
     }
-    background-color: #1e2022; // Defecto
-    border-right: 2px solid #ccc;
+    background-color: #1c2127; // Defecto
+    border-right: 2px solid #373737;
 }
 

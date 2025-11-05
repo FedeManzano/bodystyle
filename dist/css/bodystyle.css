@@ -22674,12 +22674,16 @@ table thead tr th {
 .bs-sidebar-drop-light,
 .bs-sidebar-drop-dark {
   position: fixed !important;
-  left: 0;
+  left: -260;
   bottom: 0;
   top: 0;
-  width: 240px;
+  width: 260px;
   padding-top: 75px;
   background-color: black;
+  transition: left 0.3s ease;
+  -o-transition: left 0.3s ease;
+  -moz-transition: left 0.3s ease;
+  -webkit-transition: left 0.3s ease;
 }
 .bs-sidebar-drop-light .bs-sidebar-drop-list,
 .bs-sidebar-drop-dark .bs-sidebar-drop-list {
@@ -22710,7 +22714,7 @@ table thead tr th {
 .bs-sidebar-drop-dark .bs-sidebar-title label {
   cursor: pointer;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right,
 .bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
@@ -22789,8 +22793,8 @@ table thead tr th {
   color: rgb(255, 255, 255);
 }
 .bs-sidebar-drop-dark {
-  background-color: #1e2022;
-  border-right: 2px solid #ccc;
+  background-color: #1c2127;
+  border-right: 2px solid #373737;
 }
 
 .preloader,
