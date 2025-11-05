@@ -28,7 +28,6 @@ import ColeccionFlotante from "./modulos/ColeccionFlotante"
 import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 import InputHandler from "./modulos/InputHandler"
 import Select from "./modulos/Select"
-import Nav from "./modulos/Nav"
 import Html from "./modulos/CodigoHtml"
 import Js from "./modulos/CodigoJs"
 import Css from "./modulos/CodigoCss"
@@ -72,17 +71,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
     const TemplateDestroy = () => {
         Template.destroy()
     }
-
-    
-
-    const NavInit = (contexto) => {
-        Nav.iniciar(contexto)
-    }
-
-    const NavDestroy = () => {
-        Nav.destroy()
-    }
-
 
     const NavigationInit = (id, border) => Navigation.Init(id, border)
 
@@ -259,10 +247,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         // Select 
         SelectInit: () => SelectInit(),
-
-        // Navs
-        NavInit: (contexto) => NavInit(contexto),
-        NavDestroy: () => NavDestroy(),
 
         // Template
         TemplateDestroy: () => TemplateDestroy(),

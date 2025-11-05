@@ -24,7 +24,7 @@ import $ from "jquery"
     // FALSE Oculto
     let state = false
 
-    const width = 260 // Ancho del Sidebar
+    const width = 240 // Ancho del Sidebar
 
 
     /**
