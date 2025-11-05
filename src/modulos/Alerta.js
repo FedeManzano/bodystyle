@@ -7,8 +7,8 @@ import $ from 'jquery'
 (function() {
 
     var cerrar = () => {
-        $(".alerta-cerrar, .alert-close").on("click", () => {
-            $(this).hide(300);
+        $(".alerta-cerrar, .alert-close").on("click", (evt) => {
+            $(evt.target).hide(300);
         })
     }
     var Alerta = {

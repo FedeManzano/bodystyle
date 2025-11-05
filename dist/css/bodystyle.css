@@ -19900,11 +19900,14 @@ table thead tr th {
   color: rgb(128, 128, 128);
 }
 
-.alerta-cerrar .alert-close {
+.alerta-cerrar,
+.alert-close {
   position: relative;
   cursor: pointer;
 }
-.alerta-cerrar .alert-close::before, .alerta-cerrar .alert-close::after {
+.alerta-cerrar::before, .alerta-cerrar::after,
+.alert-close::before,
+.alert-close::after {
   content: "";
   position: absolute;
   background-color: black;
@@ -19914,7 +19917,8 @@ table thead tr th {
   top: 10px;
   transform: rotate(45deg);
 }
-.alerta-cerrar .alert-close::after {
+.alerta-cerrar::after,
+.alert-close::after {
   transform: rotate(-45deg);
 }
 
