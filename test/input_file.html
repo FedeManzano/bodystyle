@@ -9,10 +9,42 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container mt-3">
-        <label for="file" class="f-label com-trigger fd-rojo" data-info="Seleccionar un Archivo"><i class="bs-file"></i></label>
-        <input type="file" name="file" id="file" class="input-file">
+    
+
+    <div class="contenedor p-1 bor-rad-10 fd-gris-az-c bor-grey-1">
+        <form autocomplete="off">
+            <div class="row">
+                <div class="form-grupo  cl-6">
+                    <label>Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-grupo cl-6">
+                    <label>Name</label>
+                    <input type="text">
+                    <small>Nombre</small>
+                </div>
+                <div class="input-g cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo">@</span>
+                        <input type="text" name="Apellido" required>
+                    </div>
+                </div>
+                <div class="input-g cl-6">
+                    <div class="grupo">
+                        <span class="span-grupo fd-bodyui c-white">@</span>
+                        <input type="text" class="fd-gris-n c-white" name="Apellido" required>
+                    </div>
+                </div>
+                <div class="cl-6">
+                     <label for="file" class="f-label com-trigger fd-rojo c-white" data-info="Imagen"><i class="bs-file"></i></label>
+                     <input type="file" name="file" id="file" class="input-file">
+                </div>
+            </div>
+        </form>
+
+        
     </div>
+    
     <script src="../dist/js/bodystyle.js"></script>
 </body>
 </html>
