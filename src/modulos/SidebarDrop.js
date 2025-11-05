@@ -4,13 +4,11 @@ import SidebarHandler from "./SidebarHandler"
 
 (function() {
 
-
     let elements = []
     const arrow_right = `<i class="arrow-right"></i>`
     const arrow_bottom = `<i class="arrow-bottom"></i>`
     const time = 150
 
-    const cantElements = $(".bs-sidebar-title").length
     const conf = {
         idSidebar : "SinID",
         idNav: "SinID"
