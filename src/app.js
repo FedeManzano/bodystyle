@@ -17,11 +17,9 @@ import ScrollSpy from "./modulos/ScrollSpy"
 import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
-import Slider from "./modulos/Slider"
 import Paralax from "./modulos/Paralax"
 import BotonInicio from "./modulos/BotonInicio"
 import Alerta from "./modulos/Alerta"
-import Template from "./modulos/Template"
 import Tab from "./modulos/Tabs"
 import GruposInput from "./modulos/GruposInput"
 import Desactivado from "./modulos/Desactivado"
@@ -30,7 +28,6 @@ import ColeccionFlotante from "./modulos/ColeccionFlotante"
 import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 import InputHandler from "./modulos/InputHandler"
 import Select from "./modulos/Select"
-import Contenedores from "./modulos/Contenedores"
 import Nav from "./modulos/Nav"
 import Html from "./modulos/CodigoHtml"
 import Js from "./modulos/CodigoJs"
@@ -46,7 +43,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
     Waves.iniciar()
     Range.iniciar()
     Alerta.iniciar()
-    Template.iniciar()
     GruposInput.iniciar()
     Desactivado.iniciar();
     InputHandler.iniciar()
@@ -93,8 +89,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
     const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
 
-
-    const ContenedoresInit = () => Contenedores.iniciar()
 
     const Colecciones = () => {
         return new Coleccion
@@ -169,14 +163,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         Personalizado.destroy()
     }
 
-    const SliderInit = (config) => {
-        Slider.iniciar(config)
-    }
-
-    const SliderDestroy= () => {
-        Slider.destroy()
-    }
-
     const Deshabilitar = () => {
         desactivar(".deshabilitado")
         desactivar(".input-cargando")
@@ -247,10 +233,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // Deshabilitado
         Deshabilitar: () => Deshabilitar(),
 
-        // Slider
-        SliderInit: (config = {}) => SliderInit(config),
-        SliderDestroy: () => SliderDestroy(),
-
 
         // Paralax
         ParalaxInit: () => ParalaxInit(),
@@ -277,9 +259,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         // Select 
         SelectInit: () => SelectInit(),
-
-        // Contenedores DEPRECATE
-        ContenedoresInit: () => ContenedoresInit(),
 
         // Navs
         NavInit: (contexto) => NavInit(contexto),
