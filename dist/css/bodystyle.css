@@ -22660,6 +22660,7 @@ table thead tr th {
   opacity: 1;
 }
 
+/** SIDEBAR LIGHT */
 .bs-sidebar-drop-light,
 .bs-sidebar-drop-dark {
   overflow-y: auto !important;
@@ -22735,9 +22736,9 @@ table thead tr th {
 }
 .bs-sidebar-drop-light .bs-sidebar-title label {
   cursor: pointer;
-  color: black;
+  color: #000;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right {
   border-left: 5px solid black;
@@ -22745,13 +22746,17 @@ table thead tr th {
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-bottom {
   border-top: 5px solid black;
 }
+.bs-sidebar-drop-light .bs-sidebar-drop-list {
+  display: none;
+}
 .bs-sidebar-drop-light .bs-sidebar-drop-list ul li a {
   color: #444444;
 }
 .bs-sidebar-drop-light .bs-sidebar-drop-list ul li a:hover {
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 .bs-sidebar-drop-light {
+  border-right: 2px solid rgb(123, 123, 123);
   background-color: #ccc;
 }
 
@@ -22781,6 +22786,7 @@ table thead tr th {
 }
 .bs-sidebar-drop-dark {
   background-color: #1e2022;
+  border-right: 2px solid #ccc;
 }
 
 .preloader,

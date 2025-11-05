@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
     <title>Document</title>
 </head>
-<body>
+<body class="">
 
-    <nav  id="nav"  class="bs-nav bg-pink-d-1 bs-nav-bor-black bs-nav-fixed"  data-target="#bs-nav-sidebar">
+    <nav  id="nav"  class="bs-nav bg-pink-d-1 bs-nav-bor-grey bs-nav-fixed"  data-target="#bs-nav-sidebar">
             <div  class="bs-nav-md align-right-list">
 
                 <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
@@ -40,13 +40,17 @@
                 </div>
             </div>
         </nav> 
-    <div class="bs-sidebar-drop-dark">
-        <div class="bs-sidebar-title">
+
+
+    <div id="sidebar" class="bs-sidebar-drop-light">
+
+
+        <div class="bs-sidebar-title" data-target="#l1">
             <label><i class="bs-home fz-22">&nbsp;</i>Inicio</label>
             <i class="arrow-right"></i>
         </div>
         
-        <div class="bs-sidebar-drop-list">
+        <div class="bs-sidebar-drop-list" id="l1">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Perfiles</a></li>
@@ -55,12 +59,12 @@
             </ul>
         </div>
 
-        <div class="bs-sidebar-title">
+        <div class="bs-sidebar-title" data-target="#l2">
             <label><i class="bs-github-2 fz-22">&nbsp;</i>Repositorios</label>
-            <i class="arrow-bottom"></i>
+            <i class="arrow-right"></i>
         </div>
         
-        <div class="bs-sidebar-drop-list">
+        <div class="bs-sidebar-drop-list" id="l2">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Perfiles</a></li>
@@ -69,5 +73,10 @@
             </ul>
         </div>
     </div>
+
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar"})
+    </script>
 </body>
 </html>

@@ -1,11 +1,5 @@
 
-.bs-sidebar-drop-light,
-.bs-sidebar-drop-dark
-{
-    overflow-y: auto !important;
-    z-index: 9999;
-    *{
-         font-family: 'Roboto', -apple-system, 
+$font-family: 'Roboto', -apple-system, 
                     BlinkMacSystemFont, 
                     "Segoe UI", 
                     "Helvetica Neue", 
@@ -16,6 +10,24 @@
                     "Segoe UI Emoji", 
                     "Segoe UI Symbol", 
                     "Noto Color Emoji";
+
+/** SIDEBAR LIGHT */
+$bg-light: #ccc;
+$border-right-light: 2px solid rgb(123, 123, 123);
+$color-title-light: #000;
+$border-arrow-right-light: 5px solid black;
+$border-arrow-bottom-light: 5px solid black;
+$a-color-light: #444444;
+$a-color-hover-light: #000;
+
+
+.bs-sidebar-drop-light,
+.bs-sidebar-drop-dark
+{
+    overflow-y: auto !important;
+    z-index: 9999;
+    *{
+         font-family: $font-family
     }
 
     position: fixed !important;
@@ -88,33 +100,35 @@
         label
         {
             cursor: pointer;   
-            color: black;
+            color: $color-title-light;
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .arrow-right{
-            border-left: 5px solid black;
+            border-left: $border-arrow-bottom-light
         }
 
         .arrow-bottom{
-            border-top: 5px solid black;
+            border-top: $border-arrow-bottom-light;
         }
     }
 
     .bs-sidebar-drop-list {
+       display: none;
         ul {
             li {
                 a {
-                    color: #444444;
+                    color: $a-color-light;
                     &:hover {
-                        color: rgb(0, 0, 0);
+                        color: $a-color-hover-light;
                     }
                 }
             }
         }
     }
-    background-color: #ccc; // Defecto
+    border-right: $border-right-light;
+    background-color: $bg-light; // Defecto
 }
 
 .bs-sidebar-drop-dark {
@@ -154,5 +168,6 @@
         }
     }
     background-color: #1e2022; // Defecto
+    border-right: 2px solid #ccc;
 }
 

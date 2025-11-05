@@ -1,7 +1,7 @@
 
 
 /*!
- * BodyStyle v4.5.0
+ * BodyStyle v5.0.0
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
@@ -40,7 +40,7 @@ import C from "./modulos/CodigoC"
 import ComentarioDinamico from "./modulos/ComentarioDinamico"
 import Personalizado from "./modulos/Personalizado"
 import Navigation from "./modulos/Navigation"
-
+import SidebarDrop from "./modulos/SidebarDrop"
 
 (function(){
     Waves.iniciar()
@@ -89,6 +89,10 @@ import Navigation from "./modulos/Navigation"
 
 
     const NavigationInit = (id, border) => Navigation.Init(id, border)
+
+
+    const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
+
 
     const ContenedoresInit = () => Contenedores.iniciar()
 
@@ -209,6 +213,8 @@ import Navigation from "./modulos/Navigation"
         BotonInicio.destroy()
     }
 
+    
+
 
 
     const BS = {
@@ -287,7 +293,7 @@ import Navigation from "./modulos/Navigation"
         PersonalizadoInit: (config) => PersonalizadoInit(config),
         PersonalizadoDestroy: () => PersonalizadoDestroy(),
 
-
+        SidebarDropInit: (conf)=> SidebarDropInit(conf),
         NavigationInit: (id, border) => NavigationInit(id, border),
 
         // Codigo 
