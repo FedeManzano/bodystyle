@@ -7,7 +7,7 @@ import SidebarHandler from "./SidebarHandler"
     let elements = []
     const arrow_right = `<i class="arrow-right"></i>`
     const arrow_bottom = `<i class="arrow-bottom"></i>`
-    const time = 150
+    const time = 50
 
     const conf = {
         idSidebar : "SinID",

@@ -22637,7 +22637,7 @@ table thead tr th {
 .bs-sidebar-drop-light .bs-sidebar-drop-list ul li a,
 .bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a {
   display: block;
-  padding: 5px 0 5px 35px;
+  padding: 8px 0 8px 35px;
   color: #bbbbbb;
   font-size: 17px;
 }
@@ -22653,9 +22653,15 @@ table thead tr th {
 }
 .bs-sidebar-drop-light .bs-sidebar-title label,
 .bs-sidebar-drop-dark .bs-sidebar-title label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   color: white;
   font-size: 18px;
+}
+.bs-sidebar-drop-light .bs-sidebar-title label i,
+.bs-sidebar-drop-dark .bs-sidebar-title label i {
+  margin-bottom: 4px;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right,
 .bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
@@ -22685,8 +22691,7 @@ table thead tr th {
 }
 .bs-sidebar-drop-light .bs-sidebar-title label {
   cursor: pointer;
-  color: #000;
-  font-size: 20px;
+  color: #1d1d1d;
   font-weight: 500;
 }
 .bs-sidebar-drop-light .bs-sidebar-title .arrow-right {
@@ -22716,8 +22721,7 @@ table thead tr th {
 }
 .bs-sidebar-drop-dark .bs-sidebar-title label {
   cursor: pointer;
-  color: #fff;
-  font-size: 20px;
+  color: #f3f3f3;
   font-weight: 500;
 }
 .bs-sidebar-drop-dark .bs-sidebar-title .arrow-right {
@@ -22734,7 +22738,7 @@ table thead tr th {
   color: #fff;
 }
 .bs-sidebar-drop-dark {
-  background-color: #121031;
+  background-color: #222130;
   border-right: 2px solid #373737;
 }
 
