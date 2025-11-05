@@ -24,10 +24,13 @@ import $ from "jquery"
         $("body").append("<div class='bs-nav-complement'></div>")
 
         $(conf.nav + " .bs-nav-md .btn-menu").append("<label></label><label></label><label></label>")
+        $(conf.nav + " .bs-nav-sm .btn-menu").append("<label></label><label></label><label></label>")
+        $(conf.nav + " .bs-nav-lg .btn-menu").append("<label></label><label></label><label></label>")
+
 
         $(window).on("resize", () => show_hide())
 
-        $(conf.nav + " .bs-nav-md").on("click",".btn-menu", (e) => {
+        $(conf.nav + " .bs-nav-md, " + conf.nav + " .bs-nav-sm, " + conf.nav + " .bs-nav-lg").on("click",".btn-menu", (e) => {
             if(!state)
                 show()
             else
