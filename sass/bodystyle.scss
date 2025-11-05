@@ -1,5 +1,5 @@
 /*!
- * BodyStyle v4.5.0
+ * BodyStyle v5.0.0
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
@@ -25,7 +25,6 @@
 @use "badges";
 @use "efectoTresD";
 @use "formas";
-@use "conEtiquetados";
 @use "hover";
 @use "breadcrumbs";
 @use "coleccionesFlotantes";
@@ -38,7 +37,6 @@
 @use "paralax";
 @use "botonInicio";
 @use "sidebar_dropdown";
-//@import "efecto-scroll";
 
 
 // Componentes
@@ -50,7 +48,6 @@
 @use "menu";
 @use "nav";
 @use "sidebar_fixed";
-@use "slider";
 @use "colecciones";
 @use "tab";
 @use "scrollSpy";
@@ -61,7 +58,6 @@
 @use "inputText";
 @use "inputRadioCheck";
 @use "inputGrupo";
-@use "select";
 @use "selectModificado";
 @use "formularios";
 @use "range";
