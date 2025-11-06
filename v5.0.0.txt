@@ -9,3 +9,4 @@ Actualizaciones de la versión 5.0.0
 - Cerrar Alertas
 - Metodos destroy
 - Inicialización automática de los elementos dinámicos
+- Efecto waves función de inicialización
