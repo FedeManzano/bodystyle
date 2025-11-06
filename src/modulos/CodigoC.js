@@ -1,17 +1,17 @@
 
 import CodigoC from "show-sintax/src/modulos/CodigoC"
 
-
+/**
+ * Módulo de la dependencia de Bodystyle para colorear el código en lenguaje 
+ * C dentro las etiquetas PRE de Html.
+ * Repositorio: https://github.com/FedericoManzano/show-sintax
+ */
 (function() {
    
-    const inicializar = (config) => {
-        CodigoC.iniciar(config)
-    }
+    const inicializar = (config) => CodigoC.iniciar(config)
 
     const C = {
-        iniciar: (config) => {
-            inicializar(config)
-        }
+        iniciar: (config) => inicializar(config)
     }
 
     window.C = C
