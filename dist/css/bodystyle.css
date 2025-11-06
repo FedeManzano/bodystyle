@@ -22580,7 +22580,7 @@ table thead tr th {
 .bs-sidebar-drop-light .bs-sidebar-drop-list ul li a,
 .bs-sidebar-drop-dark .bs-sidebar-drop-list ul li a {
   display: block;
-  padding: 8px 0 8px 35px;
+  padding: 7px 0 7px 35px;
   color: #bbbbbb;
   font-size: 17px;
 }
