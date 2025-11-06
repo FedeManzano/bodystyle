@@ -23,7 +23,11 @@ class ColeccionFlotante {
         $(contexto + " .lista-float-izq .abrir").off()
     }
 
-
+    /**
+     * Este método permite cargar la configuración 
+     * de los elementos que conforman la colección
+     * @param {JSON de Configuración de la lista} c 
+     */
     inicializarElemento(c){
 
         $(c.contexto + " .lista-float-der").css("top", c.altura)
