@@ -30,6 +30,11 @@ import ERR from "./GestionErrores"
         "border": 0
     }
 
+    const Destroy = () => {
+        $(state.context + ".bs-nav-sidebar .btn-menu").off()
+        $(state.context + ".bs-nav-sidebar .btn-menu").children("label").remove()
+    }
+
     const InitialNavigation = (id = null, border = false) => 
     {
 
@@ -105,7 +110,8 @@ import ERR from "./GestionErrores"
 
 
     let Navigation = {
-        Init: (id, border) => InitialNavigation(id, border)
+        Init: (id, border) => InitialNavigation(id, border),
+        Destroy: () => Destroy()
     }
 
    window.Navigation = Navigation  
