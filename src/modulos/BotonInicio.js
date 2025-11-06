@@ -22,6 +22,7 @@ import $ from 'jquery'
     // Permite limpiar el buffer de eventos
     const destroy = () => {
         $(boton).off()
+        $(boton).remove()
     }
 
     /**
@@ -42,8 +43,8 @@ import $ from 'jquery'
         // Evento scroll del evento 
         // de la ventana cuando supera 
         // a 100px se muestra el botón
-        $(window).on("scroll", () => {
-            if($(this).scrollTop() > conf.limit){
+        $(window).on("scroll", (e) => {
+            if($(e.target).scrollTop() > conf.limit){
                 $(boton).show(conf.show_hide) 
             }else {
                 $(boton).hide(conf.show_hide)
