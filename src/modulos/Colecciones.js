@@ -2,13 +2,16 @@
 import $ from 'jquery'
 import ERR from "./Errores"
 
+
+const timeEffect = 300 // tiempo del efecto acordeón
+
 /**
  * Clase que permite establecer el el efecto acordeón 
  * en las colecciones de la biblioteca.
  */
 class Coleccion {
 
-    timeEffect = 300 // tiempo del efecto acordeón
+    
     /**
      * Función que permite borrar los eventos asociados 
      * a las colecciones, luego de esto el efecto acordeón
@@ -70,7 +73,7 @@ class Coleccion {
                 return
             cerrarTodos(c)
             var desplegable = $($(this).data("target"))
-            console.log($(desplegable).is(":visible"))
+
             if ($(desplegable).is(":visible")) {
                 $(this).children(".f-aba").hide()
                 $(this).children(".f-der").show()

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+        <div  class="container mar-3">
+        
+
+            <div  class="list-container bg-white">
+                <div  class="lista-cabecera bg-bodyui c-white f-w-7">
+                    Cabecera
+                </div>
+                <div  id="coleccion_desplegable">
+                    <div  class="l-colapso">
+                        <a  class="lista-item"  data-target="#menu1">Servicios</a>
+                        <div  class="desplegable fd-gris-o-2"  id="menu1">
+                            <ul>
+                                <li><a  href="">500 GB de Almacenamiento</a></li>
+                                <li><a  href="">Ventas de Productos</a></li>
+                                <li><a  href="">4G / Gigabits de Datos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div  class="l-colapso">
+                        <a  class="lista-item"  data-target="#menu2">Facturación</a>
+                        <div  class="desplegable fd-gris-o-2"  id="menu2">
+                            <ul>
+                                <li><a  href="#">Medios de Pagos</a></li>
+                                <li><a  href="#">Precios</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div  class="lista-pie bg-bodyui c-white f-w-7">
+                    Esto es el Pie
+                </div>
+            </div> 
+        </div>
+
+    
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        let coleccion = BS.Colecciones()
+        coleccion.iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
+     //   coleccion.destroy("#coleccion_desplegable")
+        
+    </script>
+</body>
+</html>
