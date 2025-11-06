@@ -1,11 +1,22 @@
 import $ from 'jquery'
 import ERR from "./GestionErrores"
 
+/**
+ * Módulo que controla a la barra de navegación y al sidebar simple
+ * Permite mostrar un sidebar que ocupa el foco completo de la pantalla
+ * y puede ser utilizada por el usuario hasta el momento que presiona fuera
+ * del área del elemento y el sidebar se oculta.
+ */
 (function() {
 
+    /**
+     * JSON con que permite controlar toda la barra de navegación
+     * junto con el sidebar simple que se mostrará luego de presionar 
+     * el botón menu que se encuentra en el NAV.
+     */
     let state = {
-        "context": "",
-        "open": false,
+        "context": "", // ID del nav necesario para poder controlar el elemento
+        "open": false, // Guarda el estado del sidebar visible: true, no visible: false
         "classBtnMenu": "btn-menu",
         "widthSidebar": 240,
         "fixed": "bs-nav-fixed",
@@ -66,15 +77,7 @@ import ERR from "./GestionErrores"
         state.complementElement = $(`<div class="${state.complement}"></div>`)
         $("body").append(state.complementElement)
 
-        $(state.btnMenu).on("click", (e) => {
-            if ( $(window).width() <= 1030)
-            {
-                Toggle()
-            } else 
-            {
-                Clear()
-            }
-        })
+        $(state.btnMenu).on("click", Toggle)
 
         $(window).on("resize", Clear)
 
