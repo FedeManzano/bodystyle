@@ -9,6 +9,7 @@ import ERR from "./GestionErrores"
  */
 (function() {
 
+    const MODULO = "Módulo-18(NAVIGATION) "
     /**
      * JSON con que permite controlar toda la barra de navegación
      * junto con el sidebar simple que se mostrará luego de presionar 
@@ -17,36 +18,60 @@ import ERR from "./GestionErrores"
     let state = {
         "context": "", // ID del nav necesario para poder controlar el elemento
         "open": false, // Guarda el estado del sidebar visible: true, no visible: false
-        "classBtnMenu": "btn-menu",
-        "widthSidebar": 240,
-        "fixed": "bs-nav-fixed",
-        "sidebar": null,
-        "btnMenu": null,
-        "complement": "bs-nav-complement",
-        "complementElement": null,
-        "sm": 55,
-        "md": 65,
-        "lg": 75,
-        "border": 0
+        "classBtnMenu": "btn-menu", // Clase del Botón disparador del evento para mostrar el sidebar
+        "widthSidebar": 240, // Ancho del sidebar
+        "fixed": "bs-nav-fixed", // Clase para que el NAV tenga un posicionamiento FIJO
+        "sidebar": null, // Almacena el ID del Sidebar
+        "btnMenu": null, // Almacena el botón de menú disparador del evento
+        "complement": "bs-nav-complement", // Clase del complemento, permite ocultar el sidebar
+        "complementElement": null, // Complemento elemento de JQUERY
+        "sm": 55, // Altura del nav pequeño SM
+        "md": 65, // Altura del nav mediamo MD
+        "lg": 75, // Altura del nav grande LG
+        "border": 0 // Estado del borde inferior del nav 1:ON 0:OFF
     }
 
+    /**
+     * Función que elimina los eventos y borra el botón de menú,
+     * elimina el evento resize del de la ventana
+     */
     const Destroy = () => {
-        $(state.context + ".bs-nav-sidebar .btn-menu").off()
-        $(state.context + ".bs-nav-sidebar .btn-menu").children("label").remove()
+
+        // Retira el evento click del botón de menú
+        $(state.btnMenu).off()
+
+        // Retira las etquetas label dentro del botón que le dan su apariencia
+        $(state.btnMenu).children("label").remove()
+
+        // Retira el evento resize de la ventana
+        $(window).on("resize").off()
+
+        // Elimina el evento click del complemento
+        $(state.complementElement).on("click").off()
     }
 
+    /**
+     * Función de inicialización del nav, que permite disparar un evento 
+     * que muestra un sidebar simple complementado al menú principal.
+     * @param {id del nav que se utiliza como contexto} id 
+     * @param {variable que define si el nav tiene borde inferior} border 
+     * @returns void
+     */
     const InitialNavigation = (id = null, border = false) => 
     {
 
+        // Validación del ID de contexto
         if(!ERR.contexto.val(id))
         {
-            console.error(ERR.contexto.mje)
+            // Si el ID no posee el formato adecuado 
+            // El módulo no se inicializa
+            console.error(MODULO + ERR.contexto.mje)
             return
         }
 
         if(!ERR.bool.val(border))
         {
-            console.error(ERR.bool.mje)
+            console.error(MODULO + ERR.bool.mje)
             return
         }
         
@@ -55,7 +80,7 @@ import ERR from "./GestionErrores"
         
         if(!$(state.sidebar).hasClass("bs-nav-sidebar"))
         {
-            console.error("Error en el elemento referenciado por el data-target.")
+            console.error(MODULO + "Error en el elemento referenciado por el data-target.")
             return
         }
 
@@ -63,7 +88,7 @@ import ERR from "./GestionErrores"
 
         if(!$(state.btnMenu).hasClass("btn-menu"))
         {
-            console.error("El botón de menú no posee la clase .btn-menu.")
+            console.error(MODULO + "El botón de menú no posee la clase .btn-menu.")
             return
         }
 

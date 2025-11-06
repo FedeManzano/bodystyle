@@ -72,7 +72,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
     }
 
     const NavigationInit = (id, border) => Navigation.Init(id, border)
-
+    const NavigationDestroy = () => Navigation.Destroy()
 
     const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
 
@@ -244,6 +244,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         SidebarDropInit: (conf)=> SidebarDropInit(conf),
         NavigationInit: (id, border) => NavigationInit(id, border),
+        NavigationDestroy: () => NavigationDestroy(),
 
         // Codigo 
         CodigoHtmlInit: (config) =>  CodigoHtmlInit(config),
