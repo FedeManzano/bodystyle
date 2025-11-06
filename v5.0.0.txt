@@ -1,0 +1,9 @@
+Actualizaciones de la versión 5.0.0
+
+- Nueva sidebar desplegable
+- Nuevo handler del sidebar 
+- Documentación del código de los módulos
+- Refactorización del código fuente
+- Optimización del código CSS y JS
+- Nuevos estilos de formularios
+- Cerrar Alertas
