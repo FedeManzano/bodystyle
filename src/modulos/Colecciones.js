@@ -2,20 +2,38 @@
 import $ from 'jquery'
 import ERR from "./Errores"
 
-
+/**
+ * Clase que permite establecer el el efecto acordeón 
+ * en las colecciones de la biblioteca.
+ */
 class Coleccion {
 
+    timeEffect = 300 // tiempo del efecto acordeón
+    /**
+     * Función que permite borrar los eventos asociados 
+     * a las colecciones, luego de esto el efecto acordeón
+     * desaparecerá.
+     * @param {ID} contexto id que envuelve a la lista 
+     *  se utiliza como contexto del elemento 
+     */
     destroy(contexto) {
         $(contexto + " .l-colapso .lista-item").off()
     }
 
 
+    /**
+     * Permite definir el efecto acordeón en la lista
+     * @param {*} c Configuración de la colección
+     */
     acordeon(c) {
         $(c.contexto + " .l-colapso .lista-item").each(function () {
+
+            /** Si el item no está desactivado y está definido */
             if (!$(this).hasClass("desactivado") && $($(this)).data("target") !== undefined) {
+
+                // Añade las flechas al elemento
                 $(this).append("<i class='f-der'></i>");
                 $(this).append("<i class='f-aba'></i>");
-
                 $(this).children(".f-der").css("border-left", "5px solid " + c.colorFlechas)
                 $(this).children(".f-der").css("border-bottom", "5px solid transparent")
                 $(this).children(".f-der").css("border-top", "5px solid transparent")
@@ -60,7 +78,7 @@ class Coleccion {
             } else {
                 $(this).children(".f-der").hide()
                 $(this).children(".f-aba").show()
-                $(desplegable).slideDown(300)
+                $(desplegable).slideDown(timeEffect)
             }
         })
     }
