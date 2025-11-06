@@ -1,9 +1,21 @@
 import $ from 'jquery'
 import ERR from './Errores'
 
+/**
+ * Clase que permite la gestión de las colecciones flotantes
+ * generando un conjunto de enlaces que pueden ser utilizados 
+ * con diferentes propositos en función de las necesidades del
+ * desarrollador.
+ */
 class ColeccionFlotante {
 
 
+    /**
+     * En poryectos web dinámicos es necesario en muchas oportunidades 
+     * desvincular los eventos asociados a los elementos, en este caso 
+     * limpia el buffer de eventos.
+     * @param {ID de la colección que permite gestionar su lógica} contexto 
+     */
     destroy (contexto) {
         $(contexto + " .lista-float-der .cerrar").off()
         $(contexto + " .lista-float-der .abrir").off()
