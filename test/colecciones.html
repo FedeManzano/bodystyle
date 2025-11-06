@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
+     <link  rel="stylesheet"  href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/show-code/show-light.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -47,13 +48,216 @@
             </div> 
         </div>
 
+<div class="container mt-3">
+    <pre class="cod-js">
+        import $ from 'jquery'
+        import ERR from "./Errores"
+
+
+        const timeEffect = 300 // tiempo del efecto acordeón
+
+        /**
+        * Clase que permite establecer el el efecto acordeón 
+        * en las colecciones de la biblioteca.
+        */
+        class Coleccion {
+
+
+            /**
+            * Función que permite borrar los eventos asociados 
+            * a las colecciones, luego de esto el efecto acordeón
+            * desaparecerá.
+            * @param {ID} contexto id que envuelve a la lista 
+            *  se utiliza como contexto del elemento 
+            */
+            destroy(contexto) {
+                $(contexto + " .l-colapso .lista-item").off()
+                $(contexto + " .l-colapso .lista-item").each((i, e) => {
+                    $(e).children("i").remove()
+                })
+            }
+
+
+            /**
+            * Permite definir los estilos de las lista 
+            * que poseen el efecto acordeón para desplegar
+            * submenus asociados.
+            * @param {*} c Configuración de la colección
+            */
+            acordeon(c) {
+                $(c.contexto + " .l-colapso .lista-item").each(function () {
+
+                    /** Si el item no está desactivado y está definido */
+                    if (!$(this).hasClass("desactivado") && $($(this)).data("target") !== undefined) {
+
+                        // Añade las flechas al elemento indicando
+                        // Que es un elemento que permite desplegar a otros elementos
+                        $(this).append("<i class='f-der'></i>");
+                        $(this).append("<i class='f-aba'></i>");
+
+                        // Configura las clases CSS de la pariencia de las flecha que apuntan a la derecha
+                        $(this).children(".f-der").css("border-left", "5px solid " + c.colorFlechas)
+                        $(this).children(".f-der").css("border-bottom", "5px solid transparent")
+                        $(this).children(".f-der").css("border-top", "5px solid transparent")
+
+                        // Configura las clases CSS de la pariencia de las flecha que apuntan hacia abajo
+                        $(this).children(".f-aba").css("border-top", "5px solid " + c.colorFlechas)
+                        $(this).children(".f-aba").css("border-left", "5px solid transparent")
+                        $(this).children(".f-aba").css("border-right", "5px solid transparent")
+
+                        /**
+                        * Reacomoda las flechas para que se visualicen justo al final 
+                        * de cada item de la lista y con un alineamiento vertical 
+                        * centrado.
+                        */
+                        $(this).children(".f-der").css("top", "calc(50% - 2.5px)");
+                        $(this).children(".f-der").css("height", 5);
+                        $(this).children(".f-aba").css("top", 13);
+
+                        $(this).children(".f-aba").hide();
+                        $(c.contexto + " .l-colapso > .desplegable").hide();
+                    }
+                })
+            }
+
+
+            desplegable(c) {
+
+                /**
+                * Esta función permite cerrar todos los sub-memus desplegables,
+                * Esto de debe a que solo puede estar un abiero a la vez. 
+                */
+                var cerrarTodos = () => {
+
+                    // Recorre todos los elementos que contienen la clase .lista-item
+                    // Dentro del contexto suministrado por parámetro a través 
+                    // de la configuración.
+                    $(c.contexto + " .l-colapso .lista-item").each(function () {
+
+                        // Ingresa al contenido almacenado en el 
+                        // data-target (en este caso un ID) de la sub-lista 
+                        // a guardar o ocultar.
+                        $(($(this)).data("target")).slideUp(300)
+
+                        /**
+                        * Cambia la flecha derecha por la flecha 
+                        * debajo, para representar que el submenú 
+                        * está desplegado.
+                        */
+                        $(this).children(".f-aba").hide()
+                        $(this).children(".f-der").show()
+                    })
+                }
+
+                /**
+                * Ebento click que permite asociar este evento al despliegue del 
+                * submenu de la lista asociaso al item que sirve como disparador.
+                */
+                $(c.contexto + " .l-colapso .lista-item").click(function () {
+
+                    // Si el item de la lista tiene la clase desactivado 
+                    // el submenú no se desplegará
+                    if ($(this).hasClass("desactivado"))
+                        return
+
+                    // Cuando unsubmenú tiene que ser desplagado 
+                    // es necesario asegurarse que los demás 
+                    // no sean visibles y así lograr obtener el efecto acordeón.
+                    cerrarTodos(c)
+
+                    // obtiene el ID del submenu configurado en el attr 
+                    // data-target del elemento disparador
+                    var desplegable = $($(this).data("target"))
+
+                    /**
+                    * 
+                    */
+                    if ($(desplegable).is(":visible")) {
+                        $(this).children(".f-aba").hide()
+                        $(this).children(".f-der").show()
+                        $(desplegable).slideUp(300)
+                    } else {
+                        $(this).children(".f-der").hide()
+                        $(this).children(".f-aba").show()
+                        $(desplegable).slideDown(timeEffect)
+                    }
+                })
+            }
+
+            cargarConfiguracion(c) {
+
+                $(c.contexto + " .lista-contenedor, .list-container").addClass(c.colorFondo)
+                $(c.contexto + " .lista-item").addClass(c.colorFondo)
+                $(c.contexto + " .list-item").addClass(c.colorFondo)
+                $(c.contexto + " a").addClass(c.colorTexto)
+                $(c.contexto + " p").addClass(c.colorTexto)
+                $(c.contexto + " b").addClass(c.colorTexto)
+                $(c.contexto + " i").addClass(c.colorTexto)
+                $(c.contexto + " .lista-cabecera").addClass(c.colorTexto)
+                $(c.contexto + " .list-header").addClass(c.colorTexto)
+                $(c.contexto + " .lista-pie").addClass(c.colorTexto)
+                $(c.contexto + " .list-footer").addClass(c.colorTexto)
+                $(c.contexto + " .lista-contenedor .desplegable ul li a").addClass(c.colorTexto)
+                $(c.contexto + " .list-container .dropdown ul li a").addClass(c.colorTexto)
+            }
+
+            validarConfig(c) {
+                const MODULO = "Error bodystyle dice: M03"
+                if (!ERR.id.validacion.test(c.contexto)) {
+                    console.log(MODULO + ERR.id.mensaje)
+                    return false
+                }
+
+                if (!ERR.clasesColorFondo.validacion.test(c.colorFondo)) {
+                    console.log(MODULO + ERR.clasesColorFondo.mensaje)
+                    return false
+                }
+
+                if (!ERR.clasesColorTexto.validacion.test(c.colorTexto)) {
+                    console.log(MODULO + ERR.clasesColorTexto.mensaje)
+                    return false
+                }
+
+                if (!ERR.hexadecimal.validacion.test(c.colorFlechas)) {
+                    console.log(MODULO + ERR.hexadecimal.mensaje)
+                    return false
+                }
+
+                return true
+
+            }
+
+
+            iniciar(
+                { contexto = "SinContexto", colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000" } = {}) {
+
+                var c = {
+                    contexto: contexto,
+                    colorFondo: colorFondo,
+                    colorTexto: colorTexto,
+                    colorFlechas: colorFlechas
+                }
+                if (!this.validarConfig(c)) {
+                    return
+                }
+
+                this.cargarConfiguracion(c)
+                this.acordeon(c)
+                this.desplegable(c)
+            }
+        }
+
+            export default Coleccion
+            </pre>
+        </div>
+
     
     <script src="../dist/js/bodystyle.js"></script>
     <script>
         let coleccion = BS.Colecciones()
         coleccion.iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
-     //   coleccion.destroy("#coleccion_desplegable")
-        
+        coleccion.destroy("#coleccion_desplegable")
+        BS.CodigoJsInit()
     </script>
 </body>
 </html>
