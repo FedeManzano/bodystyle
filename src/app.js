@@ -45,7 +45,19 @@ import SidebarDrop from "./modulos/SidebarDrop"
     Desactivado.iniciar();
     InputHandler.iniciar()
     ComentarioDinamico.iniciar()
-    
+
+    const DynamicsInit = () => {
+        ComentarioDinamico.destroy()
+        ComentarioDinamico.iniciar()
+        ToolTips.iniciar()
+        DropDown.iniciar()
+    }
+
+    const DynamicsDestroy = () => {
+        ComentarioDinamico.destroy()
+        ToolTips.destroy()
+        DropDown.destroy()
+    }
 
     const CodigoHtmlInit = (config) => {
         Html.iniciar(config)
@@ -120,18 +132,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         return new EfectoHoverBorde
     }
 
-    const AutoInit = ()=> {
-        ModalInit()
-        DropDownInit({})
-        ScrollSpyInit({})
-        BotonFlotanteInit({})
-        ImagenesInit()
-        SliderInit({})
-        ParalaxInit()
-        ToolTipsInit()
-        NavInit()
-    }
-
 
     const PersonalizadoInit = (config) => {
         Personalizado.iniciar(config)
@@ -177,13 +177,10 @@ import SidebarDrop from "./modulos/SidebarDrop"
         BotonInicio.destroy()
     }
 
-    
-
-
-
     const BS = {
-        AutoInit: () => AutoInit(),
-
+        
+        DynamicsAuto: () => DynamicsInit(),
+        DynamicsAutoDestroy: () => DynamicsDestroy(),
         // Modales
         ModalInit: (config) => ModalInit(config),
         ModalDestroy: () => ModalDestroy(),
