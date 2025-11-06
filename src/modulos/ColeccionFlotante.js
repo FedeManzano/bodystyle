@@ -30,29 +30,44 @@ class ColeccionFlotante {
      */
     inicializarElemento(c){
 
+        // Configuración de la propiedad TOP
+        // Distancia entre la lista y el inicio de la página
         $(c.contexto + " .lista-float-der").css("top", c.altura)
         $(c.contexto + " .lista-float-izq").css("top", c.altura)
 
+        // Configurar la visibilidad del botón para mostrar
+        // o ocultar la lista en lista flotantes que se 
+        // encuentran a la derecha.
         $(c.contexto + " .lista-float-der .cerrar").show()
         $(c.contexto + " .lista-float-der .abrir").hide()
 
+        // Configurar la visibilidad del botón para mostrar
+        // o ocultar la lista en lista flotantes que se 
+        // encuentran a la derecha.
         $(c.contexto + " .lista-float-izq .cerrar").show()
         $(c.contexto + " .lista-float-izq .abrir").hide()
 
-
+        /// Configuración del color de fondo de la lista
         $(c.contexto + " .lista-float-der .lista-item").addClass(c.fondoItem)
         $(c.contexto + " .lista-float-izq .lista-item").addClass(c.fondoItem)
 
+        // Configuración del color del texto de los elementos internos de la lista
         $(c.contexto + " .lista-float-der .lista-item *").addClass(c.colorTexto)
         $(c.contexto + " .lista-float-izq .lista-item *").addClass(c.colorTexto)
 
 
+        /**
+         * evento click para el botón que oculta la lista
+         */
         $(c.contexto + " .lista-float-der .cerrar").click(function(){
             $(this).parent().css("right", "-230px")
             $(this).hide()
             $(c.contexto + " .lista-float-der .abrir").show()
         })
 
+        /**
+         * evento click para el botón que muestra la lista
+         */
         $(c.contexto + " .lista-float-der .abrir").click(function(){
             $(this).parent().css("right", 0)
             $(this).hide()
@@ -60,12 +75,18 @@ class ColeccionFlotante {
         })
 
 
+        /**
+         * evento click para el botón que oculta la lista
+         */
         $(c.contexto + " .lista-float-izq .cerrar").click(function(){
             $(this).parent().css("left", "-230px")
             $(this).hide()
             $(c.contexto + " .lista-float-izq .abrir").show()
         })
 
+        /**
+         * evento click para el botón que muestra la lista
+         */
         $(c.contexto + " .lista-float-izq .abrir").click(function(){
             $(this).parent().css("left", 0)
             $(this).hide()
@@ -73,6 +94,19 @@ class ColeccionFlotante {
         })
     }
 
+    /**
+     * Función de validación de los datos ingresados por parámetro 
+     * a través de objeto JSON destinado a esta función.
+     * {
+     *    contexto: "ID DE LA LISTA FLOTANTE" Ej: #lista1
+     *    fondoItem: "Color del fondo" Ej: fd-gris-n clazse de bodystyle
+     *    colorTexto: "Color del texto de los elementos" Ej: c-white
+     *    altura: distancia entre la lista y el inicio de la página (INT) positivo
+     * }
+     * @param {JSON de configuración del elemento ColecciónFlotante} c 
+     * @returns false si no son válidos los datos de entrada al elemento.
+     *          true si son válidos
+     */
     validarColeecion(c) {
         const MODULO = "Error BodyStyle dice: M05"
         if(!ERR.id.validacion.test(c.contexto)){
