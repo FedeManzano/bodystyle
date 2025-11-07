@@ -50,204 +50,157 @@
 
 <div class="container mt-3">
     <pre class="cod-js">
-        import $ from 'jquery'
-        import ERR from "./Errores"
-
-
-        const timeEffect = 300 // tiempo del efecto acordeón
-
+        
         /**
-        * Clase que permite establecer el el efecto acordeón 
-        * en las colecciones de la biblioteca.
-        */
-        class Coleccion {
-
-
+         * Clase que permite la gestión de las colecciones flotantes
+         * generando un conjunto de enlaces que pueden ser utilizados 
+         * con diferentes propositos en función de las necesidades del
+         * desarrollador.
+         */
+        class ColeccionFlotante {
+        
+        
             /**
-            * Función que permite borrar los eventos asociados 
-            * a las colecciones, luego de esto el efecto acordeón
-            * desaparecerá.
-            * @param {ID} contexto id que envuelve a la lista 
-            *  se utiliza como contexto del elemento 
-            */
-            destroy(contexto) {
-                $(contexto + " .l-colapso .lista-item").off()
-                $(contexto + " .l-colapso .lista-item").each((i, e) => {
-                    $(e).children("i").remove()
-                })
+             * En poryectos web dinámicos es necesario en muchas oportunidades 
+             * desvincular los eventos asociados a los elementos, en este caso 
+             * limpia el buffer de eventos.
+             * @param {ID de la colección que permite gestionar su lógica} contexto 
+             */
+            destroy (contexto) {
+                $(contexto + " .lista-float-der .cerrar").off()
+                $(contexto + " .lista-float-der .abrir").off()
+                $(contexto + " .lista-float-izq .cerrar").off()
+                $(contexto + " .lista-float-izq .abrir").off()
             }
-
-
+        
             /**
-            * Permite definir los estilos de las lista 
-            * que poseen el efecto acordeón para desplegar
-            * submenus asociados.
-            * @param {*} c Configuración de la colección
-            */
-            acordeon(c) {
-                $(c.contexto + " .l-colapso .lista-item").each(function () {
-
-                    /** Si el item no está desactivado y está definido */
-                    if (!$(this).hasClass("desactivado") && $($(this)).data("target") !== undefined) {
-
-                        // Añade las flechas al elemento indicando
-                        // Que es un elemento que permite desplegar a otros elementos
-                        $(this).append("<i class='f-der'></i>");
-                        $(this).append("<i class='f-aba'></i>");
-
-                        // Configura las clases CSS de la pariencia de las flecha que apuntan a la derecha
-                        $(this).children(".f-der").css("border-left", "5px solid " + c.colorFlechas)
-                        $(this).children(".f-der").css("border-bottom", "5px solid transparent")
-                        $(this).children(".f-der").css("border-top", "5px solid transparent")
-
-                        // Configura las clases CSS de la pariencia de las flecha que apuntan hacia abajo
-                        $(this).children(".f-aba").css("border-top", "5px solid " + c.colorFlechas)
-                        $(this).children(".f-aba").css("border-left", "5px solid transparent")
-                        $(this).children(".f-aba").css("border-right", "5px solid transparent")
-
-                        /**
-                        * Reacomoda las flechas para que se visualicen justo al final 
-                        * de cada item de la lista y con un alineamiento vertical 
-                        * centrado.
-                        */
-                        $(this).children(".f-der").css("top", "calc(50% - 2.5px)");
-                        $(this).children(".f-der").css("height", 5);
-                        $(this).children(".f-aba").css("top", 13);
-
-                        $(this).children(".f-aba").hide();
-                        $(c.contexto + " .l-colapso > .desplegable").hide();
-                    }
+             * Este método permite cargar la configuración 
+             * de los elementos que conforman la colección
+             * @param {JSON de Configuración de la lista} c 
+             */
+            inicializarElemento(c){
+            
+                // Configuración de la propiedad TOP
+                // Distancia entre la lista y el inicio de la página
+                $(c.contexto + " .lista-float-der").css("top", c.altura)
+                $(c.contexto + " .lista-float-izq").css("top", c.altura)
+            
+                // Configurar la visibilidad del botón para mostrar
+                // o ocultar la lista en lista flotantes que se 
+                // encuentran a la derecha.
+                $(c.contexto + " .lista-float-der .cerrar").show()
+                $(c.contexto + " .lista-float-der .abrir").hide()
+            
+                // Configurar la visibilidad del botón para mostrar
+                // o ocultar la lista en lista flotantes que se 
+                // encuentran a la derecha.
+                $(c.contexto + " .lista-float-izq .cerrar").show()
+                $(c.contexto + " .lista-float-izq .abrir").hide()
+            
+                /// Configuración del color de fondo de la lista
+                $(c.contexto + " .lista-float-der .lista-item").addClass(c.fondoItem)
+                $(c.contexto + " .lista-float-izq .lista-item").addClass(c.fondoItem)
+            
+                // Configuración del color del texto de los elementos internos de la lista
+                $(c.contexto + " .lista-float-der .lista-item *").addClass(c.colorTexto)
+                $(c.contexto + " .lista-float-izq .lista-item *").addClass(c.colorTexto)
+            
+            
+                /**
+                 * evento click para el botón que oculta la lista
+                 */
+                $(c.contexto + " .lista-float-der .cerrar").click(function(){
+                    $(this).parent().css("right", "-230px")
+                    $(this).hide()
+                    $(c.contexto + " .lista-float-der .abrir").show()
+                })
+            
+                /**
+                 * evento click para el botón que muestra la lista
+                 */
+                $(c.contexto + " .lista-float-der .abrir").click(function(){
+                    $(this).parent().css("right", 0)
+                    $(this).hide()
+                    $(c.contexto + " .lista-float-der .cerrar").show()
+                })
+            
+            
+                /**
+                 * evento click para el botón que oculta la lista
+                 */
+                $(c.contexto + " .lista-float-izq .cerrar").click(function(){
+                    $(this).parent().css("left", "-230px")
+                    $(this).hide()
+                    $(c.contexto + " .lista-float-izq .abrir").show()
+                })
+            
+                /**
+                 * evento click para el botón que muestra la lista
+                 */
+                $(c.contexto + " .lista-float-izq .abrir").click(function(){
+                    $(this).parent().css("left", 0)
+                    $(this).hide()
+                    $(c.contexto + " .lista-float-izq .cerrar").show()
                 })
             }
-
-
-            desplegable(c) {
-
-                /**
-                * Esta función permite cerrar todos los sub-memus desplegables,
-                * Esto de debe a que solo puede estar un abiero a la vez. 
-                */
-                var cerrarTodos = () => {
-
-                    // Recorre todos los elementos que contienen la clase .lista-item
-                    // Dentro del contexto suministrado por parámetro a través 
-                    // de la configuración.
-                    $(c.contexto + " .l-colapso .lista-item").each(function () {
-
-                        // Ingresa al contenido almacenado en el 
-                        // data-target (en este caso un ID) de la sub-lista 
-                        // a guardar o ocultar.
-                        $(($(this)).data("target")).slideUp(300)
-
-                        /**
-                        * Cambia la flecha derecha por la flecha 
-                        * debajo, para representar que el submenú 
-                        * está desplegado.
-                        */
-                        $(this).children(".f-aba").hide()
-                        $(this).children(".f-der").show()
-                    })
-                }
-
-                /**
-                * Ebento click que permite asociar este evento al despliegue del 
-                * submenu de la lista asociaso al item que sirve como disparador.
-                */
-                $(c.contexto + " .l-colapso .lista-item").click(function () {
-
-                    // Si el item de la lista tiene la clase desactivado 
-                    // el submenú no se desplegará
-                    if ($(this).hasClass("desactivado"))
-                        return
-
-                    // Cuando unsubmenú tiene que ser desplagado 
-                    // es necesario asegurarse que los demás 
-                    // no sean visibles y así lograr obtener el efecto acordeón.
-                    cerrarTodos(c)
-
-                    // obtiene el ID del submenu configurado en el attr 
-                    // data-target del elemento disparador
-                    var desplegable = $($(this).data("target"))
-
-                    /**
-                    * 
-                    */
-                    if ($(desplegable).is(":visible")) {
-                        $(this).children(".f-aba").hide()
-                        $(this).children(".f-der").show()
-                        $(desplegable).slideUp(300)
-                    } else {
-                        $(this).children(".f-der").hide()
-                        $(this).children(".f-aba").show()
-                        $(desplegable).slideDown(timeEffect)
-                    }
-                })
-            }
-
-            cargarConfiguracion(c) {
-
-                $(c.contexto + " .lista-contenedor, .list-container").addClass(c.colorFondo)
-                $(c.contexto + " .lista-item").addClass(c.colorFondo)
-                $(c.contexto + " .list-item").addClass(c.colorFondo)
-                $(c.contexto + " a").addClass(c.colorTexto)
-                $(c.contexto + " p").addClass(c.colorTexto)
-                $(c.contexto + " b").addClass(c.colorTexto)
-                $(c.contexto + " i").addClass(c.colorTexto)
-                $(c.contexto + " .lista-cabecera").addClass(c.colorTexto)
-                $(c.contexto + " .list-header").addClass(c.colorTexto)
-                $(c.contexto + " .lista-pie").addClass(c.colorTexto)
-                $(c.contexto + " .list-footer").addClass(c.colorTexto)
-                $(c.contexto + " .lista-contenedor .desplegable ul li a").addClass(c.colorTexto)
-                $(c.contexto + " .list-container .dropdown ul li a").addClass(c.colorTexto)
-            }
-
-            validarConfig(c) {
-                const MODULO = "Error bodystyle dice: M03"
-                if (!ERR.id.validacion.test(c.contexto)) {
-                    console.log(MODULO + ERR.id.mensaje)
+        
+            /**
+             * Función de validación de los datos ingresados por parámetro 
+             * a través de objeto JSON destinado a esta función.
+             * {
+             *    contexto: "ID DE LA LISTA FLOTANTE" Ej: #lista1
+             *    fondoItem: "Color del fondo" Ej: fd-gris-n clazse de bodystyle
+             *    colorTexto: "Color del texto de los elementos" Ej: c-white
+             *    altura: distancia entre la lista y el inicio de la página (INT) positivo
+             * }
+             * @param {JSON de configuración del elemento ColecciónFlotante} c 
+             * @returns false si no son válidos los datos de entrada al elemento.
+             *          true si son válidos
+             */
+            validarColeecion(c) {
+                const MODULO = "Error BodyStyle dice: M05"
+                if(!ERR.id.validacion.test(c.contexto)){
+                    console.error(MODULO + ERR.id.mensaje)
                     return false
                 }
-
-                if (!ERR.clasesColorFondo.validacion.test(c.colorFondo)) {
-                    console.log(MODULO + ERR.clasesColorFondo.mensaje)
+            
+            
+                if(!ERR.clasesColorFondo.validacion.test(c.fondoItem)){
+                    console.error(MODULO + ERR.clasesColorFondo.mensaje)
                     return false
                 }
-
-                if (!ERR.clasesColorTexto.validacion.test(c.colorTexto)) {
-                    console.log(MODULO + ERR.clasesColorTexto.mensaje)
+            
+            
+                if(!ERR.clasesColorTexto.validacion.test(c.colorTexto)){
+                    console.error(MODULO + ERR.clasesColorTexto.mensaje)
                     return false
                 }
-
-                if (!ERR.hexadecimal.validacion.test(c.colorFlechas)) {
-                    console.log(MODULO + ERR.hexadecimal.mensaje)
+            
+                if(!ERR.positivos.validacion(c.altura)){
+                    console.error(MODULO + ERR.positivos.mensaje)
                     return false
                 }
-
+            
                 return true
-
             }
-
-
-            iniciar(
-                { contexto = "SinContexto", colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000" } = {}) {
-
+        
+        
+            iniciar({contexto="vacio", fondoItem="fd-gris-az-o", colorTexto="c-blanco", altura = 100} = {}) {
+            
                 var c = {
-                    contexto: contexto,
-                    colorFondo: colorFondo,
-                    colorTexto: colorTexto,
-                    colorFlechas: colorFlechas
+                    contexto,
+                    fondoItem,
+                    colorTexto,
+                    altura
                 }
-                if (!this.validarConfig(c)) {
+                if(!this.validarColeecion(c))
                     return
-                }
 
-                this.cargarConfiguracion(c)
-                this.acordeon(c)
-                this.desplegable(c)
+                this.inicializarElemento(c)
             }
         }
 
-            export default Coleccion
+        export default ColeccionFlotantecion
             </pre>
         </div>
 
@@ -256,7 +209,7 @@
     <script>
         let coleccion = BS.Colecciones()
         coleccion.iniciar({ contexto : "#coleccion_desplegable", colorFondo : "bg-pink-d-1",colorTexto : "c-blanco",  colorFlechas : "#fff" })
-        coleccion.destroy("#coleccion_desplegable")
+    //    coleccion.destroy("#coleccion_desplegable")
         BS.CodigoJsInit()
     </script>
 </body>
