@@ -36,7 +36,11 @@ import ERR from "./GestionErrores"
     var Waves = {
         iniciar: function(){
             efecto()
+        },
+        destroy: () => {
+            $(".waves").off()
         }
+
     }
     window.Waves = Waves
 })()

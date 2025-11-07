@@ -46,6 +46,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
     InputHandler.iniciar()
     ComentarioDinamico.iniciar()
 
+    /************************* Objetos Dinámicos  **********************************/
     const DynamicsInit = () => {
         ComentarioDinamico.destroy()
         ComentarioDinamico.iniciar()
@@ -58,6 +59,42 @@ import SidebarDrop from "./modulos/SidebarDrop"
         ToolTips.destroy()
         DropDown.destroy()
     }
+
+    const ComentariosInit = () => {
+        ComentarioDinamico.destroy()
+        ComentarioDinamico.iniciar()
+    }
+
+    const ComentariosDestroy = () => {
+        ComentarioDinamico.destroy()
+    }
+
+    const PersonalizadoInit = (config) => {
+        Personalizado.iniciar(config)
+    }
+
+    const PersonalizadoDestroy = () => {
+        Personalizado.destroy()
+    }
+
+    const DropDownInit = (config) => {
+        DropDown.iniciar(config)
+    }
+
+    const DropDownDestroy = (elemento) => {
+        DropDown.destroy(elemento)
+    }
+
+    const ToolTipsInit = () => {
+        ToolTips.iniciar()
+    }
+
+    const ToolTipsDestroy = () => {
+        ToolTips.destroy()
+    }
+    /*********************FIN Objetos Dinámicos ****************************************** */
+
+    
 
     const CodigoHtmlInit = (config) => {
         Html.iniciar(config)
@@ -77,10 +114,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
     const CodigoCInit = (config) => {
         C.iniciar(config)
-    }
-
-    const TemplateDestroy = () => {
-        Template.destroy()
     }
 
     const NavigationInit = (id, border) => Navigation.Init(id, border)
@@ -133,13 +166,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
     }
 
 
-    const PersonalizadoInit = (config) => {
-        Personalizado.iniciar(config)
-    }
-
-    const PersonalizadoDestroy = () => {
-        Personalizado.destroy()
-    }
+   
 
     const Deshabilitar = () => {
         desactivar(".deshabilitado")
@@ -152,22 +179,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         desactivar(".b-negro-cargando")
         desactivar(".b-blanco-cargando")
     }
-    
-    const DropDownInit = (config) => {
-        DropDown.iniciar(config)
-    }
-
-    const DropDownDestroy = (elemento) => {
-        DropDown.destroy(elemento)
-    }
-
-    const ToolTipsInit = () => {
-        ToolTips.iniciar()
-    }
-
-    const ToolTipsDestroy = () => {
-        ToolTips.destroy()
-    }
 
     const SelectInit = () => {
         return new Select
@@ -179,20 +190,40 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
     const BS = {
         
-        DynamicsAuto: () => DynamicsInit(),
+        //////////////////////////////////////////////////
+        /////////////////////DINÁMICOS ///////////////////
+        DynamicsAutoInit: () => DynamicsInit(),
         DynamicsAutoDestroy: () => DynamicsDestroy(),
-        // Modales
-        ModalInit: (config) => ModalInit(config),
-        ModalDestroy: () => ModalDestroy(),
 
+        // Personalizado
+        PersonalizadoInit: (config) => PersonalizadoInit(config),
+        PersonalizadoDestroy: () => PersonalizadoDestroy(),
 
-        // Dropdown
+        PersonalizedInit: (conf) => PersonalizadoInit(conf),
+        PersonalizedDestroy: () => PersonalizadoDestroy(),
+
+         // Dropdown
         DropDownInit: (config) => DropDownInit(config),
         DropDownDestroy: (elemento) => DropDownDestroy(elemento),
 
         // Toast
         Toast: (config) => Toast.ejecutar(config),
 
+        // Tooltips
+        ToolTipsInit: () =>  ToolTipsInit(),
+        ToolTipsDestroy: () => ToolTipsDestroy(),
+
+        // Comentarios
+        CommentInit: () => ComentariosInit(),
+        CommentDestroy: () => ComentariosDestroy(),
+
+        //////////////////////////////////////////////////
+        ///////////////////// FIN DINÁMICOS ///////////////////
+
+        // Modales
+        ModalInit: (config) => ModalInit(config),
+        ModalDestroy: () => ModalDestroy(),
+        
         // ScrollSpy
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         ScrollSpyDestroy: () => ScrollSpyDestroy(),
@@ -204,7 +235,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // Deshabilitado
         Deshabilitar: () => Deshabilitar(),
 
-
         // Paralax
         ParalaxInit: () => ParalaxInit(),
 
@@ -212,14 +242,8 @@ import SidebarDrop from "./modulos/SidebarDrop"
         BotonInicioInit: () => BotonInicioInit(),
         BotonInicioDestroy: () => BotonInicioDestroy(),
 
-
         // Tabs
         TabInit: () => TabInit(),
-
-        // Tooltips
-        ToolTipsInit: () =>  ToolTipsInit(),
-        ToolTipsDestroy: () => ToolTipsDestroy(),
-
 
         // Colecciones
         Colecciones: () => Colecciones(),
@@ -233,11 +257,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         // Template
         TemplateDestroy: () => TemplateDestroy(),
-
-
-        // Personalizado
-        PersonalizadoInit: (config) => PersonalizadoInit(config),
-        PersonalizadoDestroy: () => PersonalizadoDestroy(),
 
         SidebarDropInit: (conf)=> SidebarDropInit(conf),
         NavigationInit: (id, border) => NavigationInit(id, border),

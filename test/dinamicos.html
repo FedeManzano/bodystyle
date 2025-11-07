@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <button class="btn bg-bodyui tips-ele mb-3" data-tips="Esto es un tips">HOVER</button>
+        <button class="btn bg-bodyui com-trigger mb-3" data-info="Esto es un comentario">HOVER</button>
+         <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">Disparador</button>
+    </div>
+
+    <div id="btn_dim" class="container mt-3">
+        <button class="btn bg-bodyui disparador" data-info="Esto es un tips personalizado">Personalizado</button>
+    </div>
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div  class="dropdown"  id="drop-default"  style="user-select: none;">
+        <a  href="#">Ventas</a>
+        <a  href="#">Compras</a>
+        <a  href="#">Perfil</a>
+        <a  href="#">Precio</a>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+
+        window.onload = () => {
+            setTimeout( () => {
+                BS.DynamicsAutoInit()
+                BS.PersonalizedInit({ori: "disparador", ele:"alert-op-red"})
+            }, 100)
+        }
+
+        
+        //BS.DynamicsAutoDestroy()
+
+        $("#btn_dim").append(`
+            <buttom class='btn fd-bodyui disparador' data-info="Esto es un tips personal">Dinámico</buttom>
+            <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">DROP</button>
+        `)
+    </script>
+</body>
+</html>
