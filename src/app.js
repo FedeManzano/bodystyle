@@ -46,6 +46,18 @@ import SidebarDrop from "./modulos/SidebarDrop"
     InputHandler.iniciar()
     ComentarioDinamico.iniciar()
 
+
+    /**************************** WAVES EFFECT *************************************/
+
+    const WavesInit =  () => {
+        Waves.destroy() 
+        Waves.iniciar() 
+    }
+    const WavesDestroy = () => Waves.destroy() 
+
+    /****************************FIN WAVES EFFECT *************************************/
+
+
     /************************* Objetos Dinámicos  **********************************/
     const DynamicsInit = () => {
         ComentarioDinamico.destroy()
@@ -94,8 +106,8 @@ import SidebarDrop from "./modulos/SidebarDrop"
     }
     /*********************FIN Objetos Dinámicos ****************************************** */
 
+    /************************* Código Pintado  **********************************/
     
-
     const CodigoHtmlInit = (config) => {
         Html.iniciar(config)
     }
@@ -115,6 +127,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
     const CodigoCInit = (config) => {
         C.iniciar(config)
     }
+    /************************* FIN Código Pintado  **********************************/
 
     const NavigationInit = (id, border) => Navigation.Init(id, border)
     const NavigationDestroy = () => Navigation.Destroy()
@@ -217,6 +230,10 @@ import SidebarDrop from "./modulos/SidebarDrop"
         CommentInit: () => ComentariosInit(),
         CommentDestroy: () => ComentariosDestroy(),
 
+        // Comentarios Alias
+        ComentariosInit: () => ComentariosInit(),
+        ComentariosDestroy: () => ComentariosDestroy(),
+
         //////////////////////////////////////////////////
         ///////////////////// FIN DINÁMICOS ///////////////////
 
@@ -261,6 +278,9 @@ import SidebarDrop from "./modulos/SidebarDrop"
         SidebarDropInit: (conf)=> SidebarDropInit(conf),
         NavigationInit: (id, border) => NavigationInit(id, border),
         NavigationDestroy: () => NavigationDestroy(),
+
+        WavesInit: () => WavesInit(),
+        WavesDestroy: () => WavesDestroy(),
 
         // Codigo 
         CodigoHtmlInit: (config) =>  CodigoHtmlInit(config),

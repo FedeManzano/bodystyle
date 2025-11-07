@@ -38,14 +38,17 @@
             setTimeout( () => {
                 BS.DynamicsAutoInit()
                 BS.PersonalizedInit({ori: "disparador", ele:"alert-op-red"})
+                BS.WavesInit()
+                BS.ToolTipsDestroy()
+                
             }, 100)
         }
 
         
         //BS.DynamicsAutoDestroy()
-
+        
         $("#btn_dim").append(`
-            <buttom class='btn fd-bodyui disparador' data-info="Esto es un tips personal">Dinámico</buttom>
+            <buttom class='btn fd-bodyui disparador waves' data-info="Esto es un tips personal">Dinámico</buttom>
             <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-default">DROP</button>
         `)
     </script>
