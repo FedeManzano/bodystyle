@@ -405,7 +405,24 @@ import SidebarDrop from "./modulos/SidebarDrop"
         CodeCssInit: (config) =>  CodigoCssInit(config),
         CodeJsInit: (config) =>  CodigoJsInit(config),
         CodeJavaInit: (config) =>  CodigoJavaInit(config),
-        CodeCInit: (config) =>  CodigoCInit(config)
+        CodeCInit: (config) =>  CodigoCInit(config),
+
+
+        CodeAutoInit: (config) => {
+            CodigoHtmlInit(config)
+            CodigoCssInit(config)
+            CodigoJsInit(config)
+            CodigoJavaInit(config)
+            CodigoCInit(config)
+        },
+
+        CodigoAutoInit: (config) => {
+            CodigoHtmlInit(config)
+            CodigoCssInit(config)
+            CodigoJsInit(config)
+            CodigoJavaInit(config)
+            CodigoCInit(config)
+        }
 
         //////////////////////////////////////////////////
         /////////////////////FIN CÓDIGO PINTADO /////////////
