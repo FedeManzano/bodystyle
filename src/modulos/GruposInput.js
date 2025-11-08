@@ -15,6 +15,7 @@ import $ from 'jquery'
             }
         })
         $(".combo-box").each(function () {
+            $(".drop-complemento").hide()
             var idDrop = $($(this)).data("target")
 
             $(idDrop).children().children().children().click(function () {
@@ -24,10 +25,11 @@ import $ from 'jquery'
                     if ($(this).attr("data-target") === idDrop)
                         combobox = this
                 })
-                $(combobox).children(".c-drop-grupo").text($(this).text())
+                
+                $(combobox).text($(this).text())
+                $(".input-g .grupo .dropdown-toggle").append("<span class='f-abajo-grupo'></span>")
             })
         })
-
     }
 
 

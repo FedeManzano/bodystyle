@@ -179,7 +179,13 @@ import SidebarDrop from "./modulos/SidebarDrop"
     }
 
 
-   
+    const SelectInit = () => {
+        return new Select
+    }
+
+    const BotonInicioDestroy = () => {
+        BotonInicio.destroy()
+    }
 
     const Deshabilitar = () => {
         desactivar(".deshabilitado")
@@ -191,14 +197,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         desactivar(".b-gris-cargando")
         desactivar(".b-negro-cargando")
         desactivar(".b-blanco-cargando")
-    }
-
-    const SelectInit = () => {
-        return new Select
-    }
-
-    const BotonInicioDestroy = () => {
-        BotonInicio.destroy()
     }
 
     const BS = {
@@ -282,12 +280,24 @@ import SidebarDrop from "./modulos/SidebarDrop"
         WavesInit: () => WavesInit(),
         WavesDestroy: () => WavesDestroy(),
 
-        // Codigo 
+        //////////////////////////////////////////////////
+        ///////////////////// CÓDIGO PINTADO /////////////
+       
         CodigoHtmlInit: (config) =>  CodigoHtmlInit(config),
         CodigoCssInit: (config) =>  CodigoCssInit(config),
         CodigoJsInit: (config) =>  CodigoJsInit(config),
         CodigoJavaInit: (config) =>  CodigoJavaInit(config),
-        CodigoCInit: (config) =>  CodigoCInit(config)
+        CodigoCInit: (config) =>  CodigoCInit(config),
+
+        // Alias
+        CodeHtmlInit: (config) =>  CodigoHtmlInit(config),
+        CodeCssInit: (config) =>  CodigoCssInit(config),
+        CodeJsInit: (config) =>  CodigoJsInit(config),
+        CodeJavaInit: (config) =>  CodigoJavaInit(config),
+        CodeCInit: (config) =>  CodigoCInit(config)
+
+        //////////////////////////////////////////////////
+        /////////////////////FIN CÓDIGO PINTADO /////////////
     }
     
     window.BS = BS

@@ -16,23 +16,22 @@
             <div class="row">
                 <div class="form-grupo  cl-6">
                     <label>Name</label>
-                    <input type="text" required>
+                    <input type="text" >
                 </div>
                 <div class="form-grupo cl-6">
                     <label>Name</label>
                     <input type="text">
                     <small>Nombre</small>
                 </div>
-                <div class="input-g cl-6">
-                    <div class="grupo">
-                        <span class="span-grupo">@</span>
-                        <input type="text" name="Apellido" required>
-                    </div>
-                </div>
-                <div class="input-g cl-6">
+                
+                <div class="input-g cl-12">
                     <div class="grupo">
                         <span class="span-grupo fd-bodyui c-white">@</span>
-                        <input type="text" class="fd-gris-n c-white" name="Apellido" required>
+                        <input type="text" class="fd-gris-n c-white" name="Apellido">
+                        <a class="btn bg-bodyui dropdown-toggle c-black" data-target="#combo">
+                            enviar
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="cl-6">
@@ -42,6 +41,19 @@
             </div>
         </form>
 
+
+        <div   id="combo" class="dropdown" >
+                            <ul>
+                                <li><a>Item1</a></li>
+                                <li><a>Item2</a></li>
+                                <li><a>Item3</a></li>
+                            </ul>                                       
+                        </div>
+
+        
+        
+    
+
         <div class="alert-op-red alert-close">
      
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error quasi,
@@ -49,7 +61,12 @@
              debitis! Sed quasi molestiae cumque. In, cupiditate!
         </div>
     </div>
+
+    
     
     <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        BS.DropDownInit()
+    </script>
 </body>
 </html>
