@@ -38,7 +38,8 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
 (function(){
 
-    /*************************MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
+    /************************** MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
+    /******************************************************************************/
 
     // Inicia automáticamente el efecto WAVES
     // Para elementos dinámicos es necesario la inicialización manual
@@ -57,23 +58,40 @@ import SidebarDrop from "./modulos/SidebarDrop"
     // Remueve todos los eventos html del elemento afectado
     Desactivado.iniciar()
 
-    
+    // Permite manejar a los input file    
     InputHandler.iniciar()
+
+    // Inicializa al módulo de comentarios dinámicos
+    // Para elementos dinámicos se tiene que inicializar manulamente
+    // con la función correspondiente.
     ComentarioDinamico.iniciar()
 
 
     /**************************** WAVES EFFECT *************************************/
 
+    /**
+     * Función de iniciación del efecto Waves
+     */
     const WavesInit =  () => {
         Waves.destroy() 
         Waves.iniciar() 
     }
-    const WavesDestroy = () => Waves.destroy() 
 
-    /****************************FIN WAVES EFFECT *************************************/
+    /**
+     * Desvincula los eventos involucrados 
+     * en el efecto liberando recursos no utilizados
+     * @returns 
+     */
+    const WavesDestroy = () => Waves.destroy() 
 
 
     /************************* Objetos Dinámicos  **********************************/
+
+    /**
+     * Función de inicialización de los elementos dinámicos
+     * Dropdown, Comentarios y tootips. Consume más recursos 
+     * que inicializar cada uno de estos elementos por separado.
+     */
     const DynamicsInit = () => {
         ComentarioDinamico.destroy()
         ComentarioDinamico.iniciar()
@@ -81,37 +99,78 @@ import SidebarDrop from "./modulos/SidebarDrop"
         DropDown.iniciar()
     }
 
+    /**
+     * Función de desvinculación de eventos que producen
+     * los elementos dinámicos, Dropdown, Tooltips y Comentarios.
+     * Tiene el problema que desvincula a todos los elementos antes mencionados
+     * Si solo queremos devincular uno de ellos hay que utilizar su función 
+     * específica.
+     */
     const DynamicsDestroy = () => {
         ComentarioDinamico.destroy()
         ToolTips.destroy()
         DropDown.destroy()
     }
 
+    /**
+     * Función que inicializa los comentarios dinámicos,
+     * los mismos se inicializan automáticamente cuando se 
+     * dispone del archivo transpilado de bodystyle, pero para 
+     * utilizar este elemento en objetos dinámicos es necesario 
+     * utilizar esta función.
+     */
     const ComentariosInit = () => {
         ComentarioDinamico.destroy()
         ComentarioDinamico.iniciar()
     }
 
+    /**
+     * Comentarios desvinculados de los elementos asociados. 
+     * Se liberan los recursos utilizados cuando ya no se necesite 
+     * utilizar este elemento.
+     */
     const ComentariosDestroy = () => {
         ComentarioDinamico.destroy()
     }
 
+    /**
+     * @param {ori,ele} config deonde ori es la clase asociada al elemento disparador,
+     * y ele es la/s clases asociadas al elemento dinámico personalizado.
+     */
     const PersonalizadoInit = (config) => {
         Personalizado.iniciar(config)
     }
 
+    /**
+     * Función de destrucción y desvinculación de eventos 
+     * asociados al tips personalizado.
+     */
     const PersonalizadoDestroy = () => {
         Personalizado.destroy()
     }
 
-    const DropDownInit = (config) => {
-        DropDown.iniciar(config)
+    /**
+     * Menú desplegable asociado a un determinado elemento
+     * esta función vincula esta lista con un elemento del DOM. 
+     */
+    const DropDownInit = () => {
+        DropDown.iniciar()
     }
 
-    const DropDownDestroy = (elemento) => {
-        DropDown.destroy(elemento)
+    /**
+     * Desvinculación de eventos entre el elemento disparador 
+     * y el drop.
+     */
+    const DropDownDestroy = () => {
+        DropDown.destroy()
     }
 
+    /**
+     * Elementos dinámicos asociados a un elemento que permiten 
+     * una breve descripción de lo que realizan. Esta función 
+     * permite su inicialización, esto de debe a que no se inica de 
+     * manera automática.
+     */
     const ToolTipsInit = () => {
         ToolTips.iniciar()
     }

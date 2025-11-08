@@ -9,7 +9,7 @@ import ERR from "./GestionErrores"
  */
 (function() {
 
-    const MODULO = "Módulo-18(NAVIGATION) "
+    const MODULO = "Error BodyStyle dice: M18"
     /**
      * JSON con que permite controlar toda la barra de navegación
      * junto con el sidebar simple que se mostrará luego de presionar 
