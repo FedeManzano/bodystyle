@@ -175,7 +175,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * Perimite inicializar el módulo para pintar el código
      * html dentro las etiquetas pre de html.
      */
-    const CodigoHtmlInit = () => Html.iniciar()
+    const CodigoHtmlInit = (config) => Html.iniciar(config)
 
      /**
      * Perimite inicializar el módulo para pintar el código
