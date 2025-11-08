@@ -37,11 +37,27 @@ import Navigation from "./modulos/Navigation"
 import SidebarDrop from "./modulos/SidebarDrop"
 
 (function(){
+
+    /*************************MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
+
+    // Inicia automáticamente el efecto WAVES
+    // Para elementos dinámicos es necesario la inicialización manual
     Waves.iniciar()
+
+    // Inicia las funcionalidades del input range
     Range.iniciar()
+
+    // Permite cerrar una alerta
     Alerta.iniciar()
+
+    // Permite agregar un dropdown al input-g
+    // de la librería
     GruposInput.iniciar()
-    Desactivado.iniciar();
+
+    // Remueve todos los eventos html del elemento afectado
+    Desactivado.iniciar()
+
+    
     InputHandler.iniciar()
     ComentarioDinamico.iniciar()
 
