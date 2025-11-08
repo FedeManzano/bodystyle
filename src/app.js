@@ -7,7 +7,6 @@
  * Repositorio (https://github.com/FedeManzano/bodystyle)
  */
 
-
 import Modal from "./modulos/Modal"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
@@ -129,41 +128,31 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * Se liberan los recursos utilizados cuando ya no se necesite 
      * utilizar este elemento.
      */
-    const ComentariosDestroy = () => {
-        ComentarioDinamico.destroy()
-    }
+    const ComentariosDestroy = () => ComentarioDinamico.destroy()
 
     /**
      * @param {ori,ele} config deonde ori es la clase asociada al elemento disparador,
      * y ele es la/s clases asociadas al elemento dinámico personalizado.
      */
-    const PersonalizadoInit = (config) => {
-        Personalizado.iniciar(config)
-    }
+    const PersonalizadoInit = (config) => Personalizado.iniciar(config)
 
     /**
      * Función de destrucción y desvinculación de eventos 
      * asociados al tips personalizado.
      */
-    const PersonalizadoDestroy = () => {
-        Personalizado.destroy()
-    }
+    const PersonalizadoDestroy = () => Personalizado.destroy()
 
     /**
      * Menú desplegable asociado a un determinado elemento
      * esta función vincula esta lista con un elemento del DOM. 
      */
-    const DropDownInit = () => {
-        DropDown.iniciar()
-    }
+    const DropDownInit = () => DropDown.iniciar()
 
     /**
      * Desvinculación de eventos entre el elemento disparador 
      * y el drop.
      */
-    const DropDownDestroy = () => {
-        DropDown.destroy()
-    }
+    const DropDownDestroy = () => DropDown.destroy()
 
     /**
      * Elementos dinámicos asociados a un elemento que permiten 
@@ -171,90 +160,89 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * permite su inicialización, esto de debe a que no se inica de 
      * manera automática.
      */
-    const ToolTipsInit = () => {
-        ToolTips.iniciar()
-    }
+    const ToolTipsInit = () => ToolTips.iniciar()
 
-    const ToolTipsDestroy = () => {
-        ToolTips.destroy()
-    }
-    /*********************FIN Objetos Dinámicos ****************************************** */
+    /**
+     * Desvinculación de los eventos asociados a 
+     * los tootips.
+     */
+    const ToolTipsDestroy = () => ToolTips.destroy()
+
 
     /************************* Código Pintado  **********************************/
-    
-    const CodigoHtmlInit = (config) => {
-        Html.iniciar(config)
-    }
 
-    const CodigoJsInit = (config) => {
-        Js.iniciar(config)
-    }
+    /**
+     * Perimite inicializar el módulo para pintar el código
+     * html dentro las etiquetas pre de html.
+     */
+    const CodigoHtmlInit = () => Html.iniciar()
 
-    const CodigoCssInit = (config) => {
-        Css.iniciar(config)
-    }
+     /**
+     * Perimite inicializar el módulo para pintar el código
+     * JS dentro las etiquetas pre de html.
+     */
+    const CodigoJsInit = (config) => Js.iniciar(config)
 
-    const CodigoJavaInit = (config) => {
-        Java.iniciar(config)
-    }
+    /**
+     * Perimite inicializar el módulo para pintar el código
+     * CSS dentro las etiquetas pre de html.
+     */
+    const CodigoCssInit = (config) => Css.iniciar(config)
 
-    const CodigoCInit = (config) => {
-        C.iniciar(config)
-    }
-    /************************* FIN Código Pintado  **********************************/
+    /**
+     * Perimite inicializar el módulo para pintar el código
+     * JAVA dentro las etiquetas pre de html.
+     */
+    const CodigoJavaInit = (config) => Java.iniciar(config)
 
+    /**
+     * Perimite inicializar el módulo para pintar el código
+     * C dentro las etiquetas pre de html.
+     */
+    const CodigoCInit = (config) => C.iniciar(config)
+
+    /************************* Navegación **********************************/
+
+    /**
+     * Permite inicializar la barra de navegación y vincular 
+     * este elemento con el sidebar simple.
+     * @param {ID de contexto de la barra de navegación} id 
+     * @param {Establece si la navegación tiene borde o no} border 
+     */
     const NavigationInit = (id, border) => Navigation.Init(id, border)
-    const NavigationDestroy = () => Navigation.Destroy()
 
+    /**
+     * Permite desvincular los eventos que se utilizan para 
+     * mostrar el sidebar simple asociados al NAV.
+     */
+    const NavigationDestroy = () => Navigation.Destroy()
     const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
 
 
-    const Colecciones = () => {
-        return new Coleccion
-    } 
+    const Colecciones = () => new Coleccion 
 
     const ParalaxInit = () => Paralax.iniciar()
 
     const ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
     const ScrollSpyDestroy = () => ScrollSpy.destroy()
 
+    const ModalInit = () => Modal.iniciar(conf)
+    const ModalDestroy = () => Modal.destroy()
 
-    const ModalInit = function(conf){
-        Modal.iniciar(conf)
-    }
+    const ImagenesInit = ()=> Imagenes.iniciar()
 
-    const ModalDestroy = function(){
-        Modal.destroy()
-    }
-
-    const ImagenesInit = ()=> {
-        Imagenes.iniciar()
-    }
-
-    const ImagenesDestroy = ()=> {
-        Imagenes.destroy()
-    }
+    const ImagenesDestroy = ()=> Imagenes.destroy()
 
 
-    const BotonInicioInit = () => {
-        BotonInicio.iniciar()
-    }
+    const BotonInicioInit = () => BotonInicio.iniciar()
 
-    const BotonInicioDestroy = () => {
-        BotonInicio.destroy()
-    }
+    const BotonInicioDestroy = () => BotonInicio.destroy()
 
-    const TabInit = () => {
-        return new Tab
-    }
+    const TabInit = () => new Tab
 
-    const ColeccionFlot = () => {
-        return new ColeccionFlotante
-    }
+    const ColeccionFlot = () => new ColeccionFlotante
 
-    const SelectInit = () => {
-        return new Select
-    }
+    const SelectInit = () => new Select
 
     const Deshabilitar = () => {
         desactivar(".deshabilitado")
