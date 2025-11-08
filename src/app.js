@@ -24,7 +24,6 @@ import GruposInput from "./modulos/GruposInput"
 import Desactivado from "./modulos/Desactivado"
 import Coleccion from "./modulos/Colecciones"
 import ColeccionFlotante from "./modulos/ColeccionFlotante"
-import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 import InputHandler from "./modulos/InputHandler"
 import Select from "./modulos/Select"
 import Html from "./modulos/CodigoHtml"
@@ -166,6 +165,10 @@ import SidebarDrop from "./modulos/SidebarDrop"
         BotonInicio.iniciar()
     }
 
+    const BotonInicioDestroy = () => {
+        BotonInicio.destroy()
+    }
+
     const TabInit = () => {
         return new Tab
     }
@@ -174,17 +177,8 @@ import SidebarDrop from "./modulos/SidebarDrop"
         return new ColeccionFlotante
     }
 
-    const EfectoHoverBordeInit = () => {
-        return new EfectoHoverBorde
-    }
-
-
     const SelectInit = () => {
         return new Select
-    }
-
-    const BotonInicioDestroy = () => {
-        BotonInicio.destroy()
     }
 
     const Deshabilitar = () => {
@@ -263,9 +257,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // Colecciones
         Colecciones: () => Colecciones(),
         ColeccionFlot: () => ColeccionFlot(),
-
-        // Efecti Hover Borde
-        EfectoHoverBordeInit: () => EfectoHoverBordeInit(),
 
         // Select 
         SelectInit: () => SelectInit(),

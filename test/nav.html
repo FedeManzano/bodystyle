@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
-    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.min.css">
     <title>Document</title>
 </head>
 <body>
+
+
+    <h1 id="t1" class="mt-15 ml-15">Efecto</h1>
     
     
         <!--
@@ -58,10 +61,12 @@
         </div>
     
     
+        
     <script src="../dist/js/bodystyle.js"></script>
     <script>
         BS.NavigationInit("#nav", true)
        // BS.NavigationDestroy()
+       BS.EfectoHoverBordeInit().iniciar({contexto: "#t1"})
     </script>
 </body>
 </html>
