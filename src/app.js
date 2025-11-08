@@ -274,16 +274,22 @@ import SidebarDrop from "./modulos/SidebarDrop"
     const ScrollSpyDestroy = () => ScrollSpy.destroy()
 
     /************************* Modal *******************************************/
-
-    
+    /**
+     * Inicializa el módulo de las ventanas Modales
+     */
     const ModalInit = () => Modal.iniciar(conf)
+
+    /**
+     * Desvincula los eventos de las ventanas modales
+     */
     const ModalDestroy = () => Modal.destroy()
 
-
+    /************************* Botón de Inicio *******************************************/
 
     const BotonInicioInit = () => BotonInicio.iniciar()
-
     const BotonInicioDestroy = () => BotonInicio.destroy()
+
+    
 
     const TabInit = () => new Tab
 
@@ -304,7 +310,8 @@ import SidebarDrop from "./modulos/SidebarDrop"
     }
 
     /**
-     * 
+     * Objeto JSON visible desde el exterior que permite acceder e inicializar 
+     * todos los módulos de la librería.
      */
     const BS = {
         
@@ -403,10 +410,14 @@ import SidebarDrop from "./modulos/SidebarDrop"
         //////////////////////////////////////////////////
         /////////////////////FIN CÓDIGO PINTADO /////////////
     }
+
     
     window.BS = BS
 })()
 
+
+// Exporta obj que posee todos los accesos
+// a las funcionalidades de la biblioteca
 export default BS
 
 
