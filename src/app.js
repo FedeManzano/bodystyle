@@ -216,22 +216,69 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * mostrar el sidebar simple asociados al NAV.
      */
     const NavigationDestroy = () => Navigation.Destroy()
+
+    /**
+     * Permite inicializar el vínculo entre el NAV con el SIDEBAR 
+     * plegable.
+     * @param {idNav, idSidebar} conf Objeto JSON que contiene el ID del NAV y el ID del SIDEBAR 
+     */
     const SidebarDropInit = (conf) => SidebarDrop.Init(conf)
 
+    /************************* Colecciones **********************************/
 
+    /**
+     * @returns Instancia del objeto Coleccon
+     * @see /modulos/Coleccion
+     */
     const Colecciones = () => new Coleccion 
 
+    /************************* Imagenes *******************************************/
+
+    /**
+     * Permite inicializar módulo que genera el efecto 
+     * paralax.
+     */
     const ParalaxInit = () => Paralax.iniciar()
 
+    /**
+     * Inicializa el módulo que permite realizarle 
+     * zoom a la imagen.
+     */
+    const ImagenesInit = ()=> Imagenes.iniciar()
+
+    /**
+     * Desvincula los eventos asociados al click que permite 
+     * establecer el zoom en una imagen.
+     */
+    const ImagenesDestroy = ()=> Imagenes.destroy()
+
+    /************************* ScrollSpy *******************************************/
+    /**
+     * Elemento que se utiliza como guia para el usuario dentro de la página
+     * los atributos de inicialización son:
+     *      - ancho: PX ancho del scrollspy
+     *      - tamFuente: Tamaño de la fuente de los enlaces
+     *      - colorBorde: fd-[color] bg-[color] define el color del borde señalador
+     *      - alturaBorde: PX altura del borde que compone el señalador de enlaces
+     *      - separacion:  Separación del scrollspy respecto el inicio de la página
+     *      - colorSeleccionado: Color hexadecimal que define el enlace seleccionado
+     *      - colorNoSeleccionado: Color Hexadecimal que define el color de los enlaces no seleccionados
+     * @param {ancho, tamFuente, colorBorde, alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado} config  
+     */
     const ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
+
+    /**
+     * Permite desvincular el evento scroll de la ventana
+     * para maximixar recursos.
+     */
     const ScrollSpyDestroy = () => ScrollSpy.destroy()
 
+    /************************* Modal *******************************************/
+
+    
     const ModalInit = () => Modal.iniciar(conf)
     const ModalDestroy = () => Modal.destroy()
 
-    const ImagenesInit = ()=> Imagenes.iniciar()
-
-    const ImagenesDestroy = ()=> Imagenes.destroy()
 
 
     const BotonInicioInit = () => BotonInicio.iniciar()
@@ -256,6 +303,9 @@ import SidebarDrop from "./modulos/SidebarDrop"
         desactivar(".b-blanco-cargando")
     }
 
+    /**
+     * 
+     */
     const BS = {
         
         //////////////////////////////////////////////////
