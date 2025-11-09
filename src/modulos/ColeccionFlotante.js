@@ -108,7 +108,7 @@ class ColeccionFlotante {
      *          true si son válidos
      */
     validarColeecion(c) {
-        const MODULO = "Error BodyStyle dice: M05"
+        const MODULO = "Error BodyStyle dice: M09" // Módulo N°9
         if(!ERR.id.validacion.test(c.contexto)){
             console.error(MODULO + ERR.id.mensaje)
             return false

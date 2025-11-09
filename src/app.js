@@ -326,17 +326,6 @@ import SidebarDrop from "./modulos/SidebarDrop"
      */
     const SelectInit = () => new Select
 
-    const Deshabilitar = () => {
-        desactivar(".deshabilitado")
-        desactivar(".input-cargando")
-        desactivar(".input-cargando input")
-        desactivar(".b-rojo-cargando")
-        desactivar(".b-verde-cargando")
-        desactivar(".b-azul-cargando")
-        desactivar(".b-gris-cargando")
-        desactivar(".b-negro-cargando")
-        desactivar(".b-blanco-cargando")
-    }
 
     /**
      * Objeto JSON visible desde el exterior que permite acceder e inicializar 

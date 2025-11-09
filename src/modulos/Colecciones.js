@@ -165,7 +165,7 @@ class Coleccion {
      */
     validarConfig(c) {
         // Nombre del MODULO e Identificador
-        const MODULO = "Error bodystyle dice: M03"
+        const MODULO = "Error bodystyle dice: M08" // Módulo N°8
 
         // Validar el ID que sirve como contecto de la colección
         // Si el formato del ID es erroneo, el módulo no permitirá
