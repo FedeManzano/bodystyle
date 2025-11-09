@@ -1,5 +1,10 @@
 import $ from 'jquery'
 
+/**
+ * Módulo (14) Se encarga de la gestión de imágenes 
+ * brindando la posibilidad de realizarle zoom a la imágen
+ * seleccionada.
+ */
 (function() {
 
    var desplegarImagen = (e) => {

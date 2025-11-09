@@ -1,6 +1,9 @@
 import $ from 'jquery'
 
-
+/**
+ * Módulo (13) Permite agregar un dropdown al input-g 
+ * de los formularios de bodystyle.
+ */
 (function () {
 
     var inicializar = () => {

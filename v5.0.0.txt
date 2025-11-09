@@ -11,3 +11,4 @@ Actualizaciones de la versión 5.0.0
 - Auto Iniciación de los elementos dinámicos
 - Inicialización automática de los elementos dinámicos
 - Efecto waves función de inicialización (Dinámicos)
+- Footers

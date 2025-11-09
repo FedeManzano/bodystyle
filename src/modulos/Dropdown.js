@@ -2,7 +2,9 @@
 import Drop from "dynamics-tips/src/modulos/DropDown"
 
 /**
- * Módulo (12) 
+ * Módulo (12) Perimite desplegar un listado asociado a un elemento
+ * con un conjunto de opciones que le permitirá al usuario diregirse
+ * a diferentes lugares.
  */
 (function () {
 
