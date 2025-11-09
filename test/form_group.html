@@ -10,37 +10,37 @@
 </head>
 <body>
     
-    <div class="container mt-3 bor-grey-1 bor-rad-10 p-2 " style="background-color: rgb(249, 249, 249);">
-        <h2>Registro de Usuario</h2>
+    <div class="container mt-3 bor-grey-1 bor-rad-10 p-3 " style="background-color: rgb(249, 249, 249);">
+        <h2 class="fz-30">Registro de Usuario</h2>
         <div class="divisor my-2"></div>
         <form autocomplete="off">
             <div class="row">
                 <div class="form-group cm-12 cl-6">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required >
                     <small>Su primer nombre Ej: Alberto</small>
                 </div>
                 <div class="form-group cm-12 cl-6">
                     <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" required>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
                     <small>Su primer apellido Ej: Perez</small>
                 </div>
-                <div class="form-group  cl-6">
+                <div class="form-group cxs-12 cs-6 cl-6 m-xs-0">
                     <label for="email">Correo</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su correo" required>
                     <small>Ej: jhondoe@mail.com</small>
                 </div>
-                <div class="btn-group-lg  cl-6 mt-3 just-start">
+                <div class="btn-group-lg cxs-12 cs-6 cl-6 mt-3 just-start">
                     <button class="btn fd-azul bor-pill waves com-trigger" data-info="Botón utilizado para saber si el correo existe dentro de los datos de la aplicación.">Verificar</button>
                 </div>
                 <div class="form-group cm-12 cl-6">
                     <label for="pass">Clave</label>
-                    <input type="password" name="password" id="pass" required>
+                    <input type="password" name="password" id="pass" placeholder="Seleccione una clave" required>
                     <small>De 8 a 16 con mayusculas, minusculas y caracter.</small>
                 </div>
                 <div class="form-group cm-12 cl-6">
                     <label for="repetir">Repetir</label>
-                    <input type="password" name="repetir" id="repetir" required>
+                    <input type="password" name="repetir" id="repetir" placeholder="Repita la clave" required>
                     <small>Repetir la clave.</small>
                 </div>
                 <div class="cl-12 d-flex just-end">

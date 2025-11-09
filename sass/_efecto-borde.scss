@@ -1,11 +1,17 @@
 @use "globales/variables";
 
 .efecto-borde-rojo,
+.effect-border-red,
 .efecto-borde-azul,
+.effect-border-blue,
 .efecto-borde-verde,
+.effect-border-green,
 .efecto-borde-negro,
+.effect-border-black,
 .efecto-borde-gris,
-.efecto-borde-blanco{
+.effect-border-grey,
+.efecto-borde-blanco,
+.effect-border-white{
     position: relative; 
     &::before {
         content: "";
@@ -23,42 +29,51 @@
         width: 100%;
     }
 }
-.efecto-borde-rojo::before {
+.efecto-borde-rojo::before,
+.effect-border-red::before {
     background-color: variables.$fd-rojo;
 }
 
 
-.efecto-borde-azul::before {
+.efecto-borde-azul::before,
+.effect-border-blue::before {
     background-color: variables.$fd-azul;
 }
 
-.efecto-borde-verde::before {
+.efecto-borde-verde::before,
+.effect-border-green::before {
     background-color: variables.$fd-verde;
 }
 
-.efecto-borde-gris::before {
+.efecto-borde-gris::before,
+.effect-border-grey::before {
     background-color: variables.$fd-gris;
 }
 
-.efecto-borde-negro::before {
+.efecto-borde-negro::before,
+.effect-border-black::before {
     background-color: black;
 }
 
-.efecto-borde-blanco::before {
+.efecto-borde-blanco::before,
+.effect-border-white::before {
     background-color: white;
 }
 
 
 
-.derecha::before {
+.derecha::before,
+.right::before {
     right: 0 !important;
 }
 
-.izquierda::before {
+.izquierda::before,
+.left::before {
     left: 0 !important;
 }
 
-.centro {
+.centro,
+.center {
     &::before {
         left: 50% !important;
     }
@@ -73,11 +88,17 @@
 @for $i from 1 to 11 {
     
     .e-borde-izq-rojo-#{$i},
+    .e-border-left-red-#{$i},
     .e-borde-izq-verde-#{$i},
+    .e-border-left-green-#{$i},
     .e-borde-izq-azul-#{$i},
+    .e-border-left-blue-#{$i},
     .e-borde-izq-gris-#{$i},
+    .e-border-left-grey-#{$i},
     .e-borde-izq-negro-#{$i},
-    .e-borde-izq-blanco-#{$i} {
+    .e-border-left-black-#{$i},
+    .e-borde-izq-blanco-#{$i},
+    .e-border-left-white-#{$i} {
         position: relative;
 
         &::before {
@@ -98,50 +119,60 @@
     }
 
 
-    .e-borde-izq-verde-#{$i}{
+    .e-borde-izq-verde-#{$i},
+    .e-border-left-green-#{$i} {
         &::before {
             background-color: variables.$fd-verde;
         }
     }
 
 
-    .e-borde-izq-azul-#{$i}{
+    .e-borde-izq-azul-#{$i},
+    .e-border-left-blue-#{$i}{
         &::before {
             background-color: variables.$fd-azul;
         }
     }
 
 
-    .e-borde-izq-gris-#{$i}{
+    .e-borde-izq-gris-#{$i},
+    .e-border-left-grey-#{$i}{
         &::before {
             background-color: variables.$fd-gris;
         }
     }
 
 
-    .e-borde-izq-negro-#{$i}{
+    .e-borde-izq-negro-#{$i},
+    .e-border-left-black-#{$i} {
         &::before {
             background-color: variables.$fd-negro;
         }
     }
 
-    .e-borde-izq-blanco-#{$i}{
+    .e-borde-izq-blanco-#{$i},
+    .e-border-left-white-#{$i} {
         &::before {
             background-color: variables.$fd-blanco;
         }
     }
-
 }
 
 
 @for $i from 1 to 11 {
     
     .e-borde-der-rojo-#{$i},
+    .e-border-right-red-#{$i},
     .e-borde-der-verde-#{$i},
+    .e-border-right-green-#{$i},
     .e-borde-der-azul-#{$i},
+    .e-border-right-blue-#{$i},
     .e-borde-der-gris-#{$i},
+    .e-border-right-grey-#{$i},
     .e-borde-der-negro-#{$i},
-    .e-borde-der-blanco-#{$i} {
+    .e-border-right-black-#{$i},
+    .e-borde-der-blanco-#{$i},
+    .e-border-right-white-#{$i} {
         position: relative;
 
         &::before {
@@ -162,39 +193,43 @@
     }
 
 
-    .e-borde-der-verde-#{$i}{
+    .e-borde-der-verde-#{$i},
+    .e-border-right-green-#{$i}{
         &::before {
             background-color: variables.$fd-verde;
         }
     }
 
 
-    .e-borde-der-azul-#{$i}{
+    .e-borde-der-azul-#{$i},
+    .e-border-right-blue-#{$i} {
         &::before {
             background-color: variables.$fd-azul;
         }
     }
 
 
-    .e-borde-der-gris-#{$i}{
+    .e-borde-der-gris-#{$i},
+    .e-border-right-grey-#{$i} {
         &::before {
             background-color: variables.$fd-gris;
         }
     }
 
 
-    .e-borde-der-negro-#{$i}{
+    .e-borde-der-negro-#{$i},
+    .e-border-right-black-#{$i} {
         &::before {
             background-color: variables.$fd-negro;
         }
     }
 
-    .e-borde-der-blanco-#{$i}{
+    .e-borde-der-blanco-#{$i},
+    .e-border-right-white-#{$i} {
         &::before {
             background-color: variables.$fd-blanco;
         }
     }
-
 }
 
 

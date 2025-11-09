@@ -1,13 +1,26 @@
 import $ from "jquery"
 import ERR from "./Errores"
 
+/**
+ * Módulo (21) Clase que permite gestionar el Select de bodystyle
+ */
 class Select {
 
+    /**
+     * Método que permite desasociar la lógica del elemento SELECT
+     * pide como parámetro el ID del select a desasociar.
+     * @param {ID} contexto id del select 
+     */
     destroy(contexto) {
         $(contexto).off()
         $(contexto + " .lista ul li").off()
     }
 
+    /**
+     * 
+     * @param {ID del select} contexto 
+     * @param {Efecto hover asociado} efecto 
+     */
     inicializar(contexto, efecto){
         const MODULO = "Error BodyStyle dice: M20"
       

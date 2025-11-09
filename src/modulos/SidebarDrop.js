@@ -2,6 +2,9 @@ import $ from "jquery"
 import ERR from "./Errores"
 import SidebarHandler from "./SidebarHandler"
 
+/**
+ * 
+ */
 (function() {
 
     let elements = []
