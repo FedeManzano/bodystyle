@@ -308,8 +308,22 @@ import SidebarDrop from "./modulos/SidebarDrop"
      */
     const TabInit = () => new Tab
 
+    /************************* Colecciones Flotantes *******************************************/
+
+    /**
+     * Devuelve una instancia que permite a través de ella 
+     * gestionar la lógica de las colecciones fijas dentro 
+     * del DOM.
+     */
     const ColeccionFlot = () => new ColeccionFlotante
 
+    /************************* Colecciones Flotantes *******************************************/
+
+    /**
+     * Devuelve una instancia que permite gestionar 
+     * los elementos Select de html brindando estilos 
+     * nuevos a este lemento. 
+     */
     const SelectInit = () => new Select
 
     const Deshabilitar = () => {
