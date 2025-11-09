@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,10 +27,37 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-3">
+        <div class="btn-group-lg d-flex just-start">
+            <a href="#" class="btn fd-gris-n"><i class=" bs-home fz-22">&nbsp;</i>Inicio</a>
+            <a href="#" class="btn fd-gris-n"><i class=" bs-picture-2 fz-22">&nbsp;</i>Galeria</a>
+            <a href="#" class="btn fd-gris-n"><i class=" bs-tag fz-22">&nbsp;</i>Versión</a>
+           <a  class="btn fd-gris-n dropdown-toggle pr-8" data-target="#list"><i class=" bs-menu-list-2 fz-22">&nbsp;</i>Opciones<span class="pr-3"></span></a>
+        </div>
+    </div>
+
+    <a  class="btn bg-bodyui dropdown-toggle" data-target="#list">Inicio</a>
+
+    <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
+    <div  class="dropdown fd-bodyui bor-rad-20"  id="list" >
+        <ul>
+            <li><a href="" class="c-white"><i class=" bs-refresh-2 fz-16">&nbsp;</i>Ventas</a></li>
+            <li><a href="" class="c-white"><i class=" bs-mac fz-16">&nbsp;</i>Compras</a></li>
+            <li><a href="" class="c-white"><i class=" bs-minus fz-16">&nbsp;</i>Perfil</a></li>
+            <li><a href="" class="c-white"><i class=" bs-phone-call fz-16">&nbsp;</i>Precio</a></li>
+            <div class="divisor mt-2"></div>
+            <li><a href="" class="c-white">Ventas</a></li>
+            <li><a href="" class="c-white">Compras</a></li>
+            <li><a href="" class="c-white">Perfil</a></li>
+            <li><a href="" class="c-white">Precio</a></li>
+        </ul>
+    </div>
  
     <script src="../dist/js/bodystyle.js"></script>
     <script>
         BS.DynamicsAutoInit()
+       
     </script>
 </body>
 </html>
