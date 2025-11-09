@@ -12,7 +12,7 @@
 
 
     <h1 id="t1" class="mt-15 ml-15">Efecto <a href="#" class="link desactivado">Enlace</a></h1>
-    
+    <button id="activar" class="btn fd-bodyui mt-1 ml-15">Activar Enlace</button>
     
         <!--
             Es necesario asignarle un ID al nav en este caso id="nav".. Puede ser cualquiera
@@ -71,13 +71,17 @@
     
     
     
-        
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../dist/js/bodystyle.js"></script>
     <script>
         BS.NavigationInit("#nav", true)
        // BS.NavigationDestroy()
       
        BS.DropDownInit()
+
+       $("#activar").on("click", () => {
+         $("#t1 a").removeClass("desactivado")
+       })
     </script>
 </body>
 </html>

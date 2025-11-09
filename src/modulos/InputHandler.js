@@ -15,20 +15,36 @@ import $ from "jquery"
          * a través de la clase .i-error.
          */
         $(".form-grupo input").each(function(){
+
+            // Evento asociado a la perdida del FOCO
             $(this).blur(function(){
+                // Si el attr required no esta indefinido
+                // y el input está vacío se añade la clase
+                // i-error.
                 if($(this).attr("required") !== undefined)
                     if($(this).val() === "")
                         $(this).addClass("i-error")
             })
 
+            // Cuando se gana el FOCO se reemueve 
+            // la clase i-error
             $(this).focus(function(){
                 $(this).removeClass("i-error")
             })
         })
 
 
+        /**
+         * Permite agregar la clase i-error a los 
+         * campos de los input-icon cuando el usuario
+         * no respeta al attr requerido. 
+         */
         $(".input-icon input").each(function(){
-            
+
+            // Evento de perdida de foco 
+            // aplica los estilos en función al evento foco 
+            // y mostrar de esta manera estilos acordes a la situación 
+            // que el usuario debe afrontar con este elemento.
             $(this).blur(function(){
                 $(this).parent().css("border", "1px solid rgb(163, 163, 163)")
                     if($(this).val() === "")
@@ -40,7 +56,7 @@ import $ from "jquery"
                         $(this).parent(".input-icon").addClass("i-error")
                 }
             })
-
+            // Reacomoda los estilos cuando el FOCO se gana nuevamente.
             $(this).focus(function(){
                 
                 $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
