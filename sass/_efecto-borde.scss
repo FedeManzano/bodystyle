@@ -11,7 +11,9 @@
 .efecto-borde-gris,
 .effect-border-grey,
 .efecto-borde-blanco,
-.effect-border-white{
+.effect-border-white,
+.efecto-borde-bodyui,
+.effect-border-bodyui{
     position: relative; 
     &::before {
         content: "";
@@ -60,6 +62,11 @@
     background-color: white;
 }
 
+.efecto-borde-bodyui::before,
+.effect-border-bodyui::before {
+    background-color: variables.$fd-rosa-o-1;
+}
+
 
 
 .derecha::before,
@@ -98,7 +105,9 @@
     .e-borde-izq-negro-#{$i},
     .e-border-left-black-#{$i},
     .e-borde-izq-blanco-#{$i},
-    .e-border-left-white-#{$i} {
+    .e-border-left-white-#{$i},
+    .e-borde-izq-bodyui-#{$i},
+    .e-border-left-bodyui-#{$i}{
         position: relative;
 
         &::before {
@@ -154,6 +163,13 @@
     .e-border-left-white-#{$i} {
         &::before {
             background-color: variables.$fd-blanco;
+        }
+    }
+
+    .e-borde-izq-bodyui-#{$i},
+    .e-border-left-bodyui-#{$i} {
+        &::before {
+            background-color: variables.$fd-rosa-o-1;
         }
     }
 }
