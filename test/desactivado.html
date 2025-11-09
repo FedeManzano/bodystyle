@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <a href="#" class="link desactivado tips-ele"
+        data-tips="Esto es un enlace desactivado">Enlace Desactivado</a>
+
+        <a href="#" class="btn bg-bodyui desactivado tips-ele"
+        data-tips="Esto es un enlace desactivado">Botón Desactivado</a>
+
+        <input type="text" class="desactivado" placeholder="Esto es input desactivado">
+
+        <div class="input-g">
+            <div class="grupo-lg">
+                <span class="span-grupo">@</span>
+                <input type="email" class="desactivado">
+            </div>
+        </div>
+    </div>
+ 
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        BS.DynamicsAutoInit()
+    </script>
+</body>
+</html>

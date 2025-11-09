@@ -11,7 +11,7 @@
 <body>
 
 
-    <h1 id="t1" class="mt-15 ml-15">Efecto</h1>
+    <h1 id="t1" class="mt-15 ml-15">Efecto <a href="#" class="link desactivado">Enlace</a></h1>
     
     
         <!--
@@ -30,16 +30,15 @@
                 </a>
                 <div  class="ocultar-desde-medianos">
                     <ul>
-                        <li><a  href="#">Inicio</a></li>
+                        <li><a  href="#" class="desactivado">Inicio</a></li>
                         <li><a  href="#">Porfolio</a></li>
                         <li><a  href="#">Galeria</a></li>
                     </ul>
                 </div>
                 <div  class="right-content">
-                    <div  class="btn-grupo">
-                        <button  class="btn-sm bg-white c-black">Login</button>
-                        <button  class="btn-sm fd-gris-n">Sign Up</button>
-                    </div>
+
+                    <button  class="btn-sm-o btn-white-o dropdown-toggle pr-3 bor-pill" data-target="#list">Login</button>
+                     
                 </div>
             </div>
         </nav> 
@@ -59,6 +58,17 @@
                 <li><a  href="#">Repositorio</a></li>
             </ul>
         </div>
+
+        <div  id="list"  class="dropdown fd-gris-n">
+            <ul>
+                <li><a  href="#">Inicio</a></li>
+                <li><a  href="#">Servicios</a></li>
+                <li><a  href="#">Porfolio</a></li>
+                <li><a  href="#">Graleria</a></li>
+                <li><a  href="#">Repositorio</a></li>
+            </ul>
+        </div>
+    
     
     
         
@@ -66,7 +76,8 @@
     <script>
         BS.NavigationInit("#nav", true)
        // BS.NavigationDestroy()
-       BS.EfectoHoverBordeInit().iniciar({contexto: "#t1"})
+      
+       BS.DropDownInit()
     </script>
 </body>
 </html>
