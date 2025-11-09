@@ -13,3 +13,4 @@ Actualizaciones de la versión 5.0.0
 - Efecto waves función de inicialización (Dinámicos)
 - Footers
 - Desactivado
+- Alias Helpers
