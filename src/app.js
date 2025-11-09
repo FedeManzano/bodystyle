@@ -286,11 +286,26 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
     /************************* Botón de Inicio *******************************************/
 
+    /**
+     * Permite la inicialización del módulo para crear y mostrar
+     * el botón que le brinda la posibilidad al usuario volver 
+     * al scroll = 0. 
+     */
     const BotonInicioInit = () => BotonInicio.iniciar()
+
+    /**
+     * Permite desvincular el evento window.scroll y
+     * el evento click asociados el botón.
+     */
     const BotonInicioDestroy = () => BotonInicio.destroy()
 
-    
+    /************************* Tabs *******************************************/
 
+    /**
+     * Devuelve una instancia de la clase Tab
+     * a través de ella se inicializa el módulo corrspondiente
+     * y poder gestionar la lógica de este elemento.
+     */
     const TabInit = () => new Tab
 
     const ColeccionFlot = () => new ColeccionFlotante

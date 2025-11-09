@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+<body>
+            <div class="container mt-3">
+                <div  id="tab3">
+                    <div  class="tab-borde">
+                        <div  class="op-tab-borde">
+                            <ul>
+                                <label  data-target="#inicio3">Inicio</label>
+                                <label  data-target="#servicios3">Servicios</label>
+                                <label  data-target="#galeria3">Galeria</label>
+                                <label  data-target="#porfolio3">Porfolio</label>
+                            </ul>
+                        </div>
+                        <div  id="inicio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n c-white">
+                            <p>Hola soy el inicio del tab!!</p>
+                        </div>
+                        <div  id="servicios3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n c-white">
+                            <p>Hola soy los servicios del tab!!</p>
+                        </div>
+                        <div  id="galeria3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n c-white">
+                            <p>Hola soy la galeria del tab!!</p>
+                        </div>
+                        <div  id="porfolio3"  class="contenido-tab p-1 d-flex just-center ali-center fd-gris-n c-white">
+                            <p>Hola soy el porfolio del tab!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+       let tabs = BS.TabInit()
+       tabs.iniciarBorde({contexto: "#tab3",colorFuente: "c-white", colorFondo: "bg-bodyui", colorBorde: "fd-blanco"})
+       //tabs.destroy("#tab3")
+    </script>
+</body>
+</html>
