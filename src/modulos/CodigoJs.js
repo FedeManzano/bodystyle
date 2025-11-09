@@ -1,7 +1,7 @@
 import CodigoJs from "show-sintax/src/modulos/CodigoJs"
 
 /**
- * Módulo de la dependencia de Bodystyle para colorear el código en lenguaje 
+ * Módulo (07) de la dependencia de Bodystyle para colorear el código en lenguaje 
  * JS dentro las etiquetas PRE de Html.
  * Repositorio: https://github.com/FedericoManzano/show-sintax
  */

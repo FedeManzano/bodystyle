@@ -1,6 +1,9 @@
 
 import Drop from "dynamics-tips/src/modulos/DropDown"
 
+/**
+ * Módulo (12) 
+ */
 (function () {
 
    

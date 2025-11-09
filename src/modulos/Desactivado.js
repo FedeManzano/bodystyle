@@ -1,6 +1,9 @@
 import $ from 'jquery'
 
-
+/**
+ * Módulo (11) Se encarga se retirarle todos los eventos html
+ * a los elementos que contengan la clase .desactivado.
+ */
 (function(){
 
     const inicializar = () => {

@@ -2,7 +2,7 @@
 import CodigoCss from "show-sintax/src/modulos/CodigoCss"
 
 /**
- * Módulo de la dependencia de Bodystyle para colorear el código en lenguaje 
+ * Módulo (04) de la dependencia de Bodystyle para colorear el código en lenguaje 
  * CSS dentro las etiquetas PRE de Html.
  * Repositorio: https://github.com/FedericoManzano/show-sintax
  */

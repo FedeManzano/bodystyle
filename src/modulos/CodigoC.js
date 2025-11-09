@@ -2,7 +2,7 @@
 import CodigoC from "show-sintax/src/modulos/CodigoC"
 
 /**
- * Módulo de la dependencia de Bodystyle para colorear el código en lenguaje 
+ * Módulo (03) de la dependencia de Bodystyle para colorear el código en lenguaje 
  * C dentro las etiquetas PRE de Html.
  * Repositorio: https://github.com/FedericoManzano/show-sintax
  */

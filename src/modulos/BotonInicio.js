@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 /**
- * Botoón que permite volver al inició de la 
+ * Módulo (02) botón que permite volver al inició de la 
  * página (scroll top = 0) desde cualquier lugar 
  * hacia el inicio.
  */

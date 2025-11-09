@@ -1,6 +1,6 @@
 import $ from 'jquery'
 /**
- * Módulo de Bodystyle que permite cerrar una alerta
+ * Módulo (01) de Bodystyle que permite cerrar una alerta
  * De manera tal de bridarle al usuario la posibilidad 
  * de desaparecer este elemento cuando no lo necesite.
  */
