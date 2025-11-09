@@ -14,6 +14,16 @@
     <h1 id="t1" class="mt-15 ml-15">Efecto <a href="#" class="link desactivado">Enlace</a></h1>
     <button id="activar" class="btn fd-bodyui mt-1 ml-15">Activar Enlace</button>
     
+    <div class="container mt-6">
+        <!-- ID Seleccionado es s_dark -->
+        <div  class="select-mod-dark mt-3"   id="s_dark">
+            <select  name="Selector" >
+                <option  value="rojo" >Rojo</option>
+                <option  value="verde">Verde</option>
+                <option  value="azul" >Azul</option>
+            </select>
+        </div>
+    </div>
         <!--
             Es necesario asignarle un ID al nav en este caso id="nav".. Puede ser cualquiera
             Luego asignar el attr data-target=#bs-nav-sidebar Id del sidebar a desplegar
@@ -82,6 +92,11 @@
        $("#activar").on("click", () => {
          $("#t1 a").removeClass("desactivado")
        })
+
+
+       let select = BS.SelectInit()
+       select.iniciar("#s_dark", "borde")
+       select.destroy("#s_dark")
     </script>
 </body>
 </html>

@@ -2,14 +2,14 @@ import $ from 'jquery'
 import ERR from "./GestionErrores"
 
 /**
- * Módulo que controla a la barra de navegación y al sidebar simple
+ * Módulo (17) que controla a la barra de navegación y al sidebar simple
  * Permite mostrar un sidebar que ocupa el foco completo de la pantalla
  * y puede ser utilizada por el usuario hasta el momento que presiona fuera
  * del área del elemento y el sidebar se oculta.
  */
 (function() {
 
-    const MODULO = "Error BodyStyle dice: M18"
+    const MODULO = "Error BodyStyle dice: M17"
     /**
      * JSON con que permite controlar toda la barra de navegación
      * junto con el sidebar simple que se mostrará luego de presionar 
