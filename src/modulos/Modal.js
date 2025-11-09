@@ -1,6 +1,10 @@
 
 import $ from 'jquery'
 
+/**
+ * Módulo: (16) Perimte crear una ventana fija dentro del dom 
+ * mostrada a partir de un evento click proporcionado por un disparador.
+ */
 (function(){
 
 

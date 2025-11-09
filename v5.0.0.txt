@@ -14,3 +14,4 @@ Actualizaciones de la versión 5.0.0
 - Footers
 - Desactivado
 - Alias Helpers
+- Input Íconos

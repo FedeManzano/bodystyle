@@ -1,11 +1,19 @@
 import $ from "jquery"
 
+/**
+ * Módulo: (15) Manejador de los inputs que permite seleccionar un archivo
+ * El manejador brida la funcionalizadad necesaria para cargar el path en el elemento 
+ * oculto detras de la apariencia del elemento, también controla los campos 
+ * requeridos añadiendole el la clase i-error a los campos vacíos.
+ */
 (function(){
     var inicializar = () => {
 
-        var elemento = $("<span class='archivo-seleccionado'>Seleccionar un archivo ...</span>")
-        $(".f-label").append(elemento)
-
+        /**
+         * Si el input pierde el foco y el campo posee el attr required
+         * y está vacío esta función le asignará un borde rojo al input 
+         * a través de la clase .i-error.
+         */
         $(".form-grupo input").each(function(){
             $(this).blur(function(){
                 if($(this).attr("required") !== undefined)
@@ -18,17 +26,6 @@ import $ from "jquery"
             })
         })
 
-        $(".tem-input input").each(function(){
-            $(this).blur(function(){
-                if($(this).attr("required") !== undefined)
-                    if($(this).val() === "")
-                        $(this).parent(".tem-input").addClass("tem-error")
-            })
-
-            $(this).focus(function(){
-                $(this).parent(".tem-input").removeClass("tem-error")
-            })
-        })
 
         $(".input-icon input").each(function(){
             
@@ -55,19 +52,21 @@ import $ from "jquery"
 
 
     var archivoSeleccionado = () => {
+        /// Crea el elemento que permite mostrar la leyenda 
+        /// Seleccionar archivo ...
+        var elemento = $("<span class='archivo-seleccionado'>Seleccionar un archivo ...</span>")
+        $(".f-label").append(elemento)
+        
         $(".input-file").change(function() {
-            var texto = $(this).val()
-
-            if(texto === ""){
+            if($(this).val() === ""){
                 $(this).siblings(".f-label").children(".archivo-seleccionado").text("Seleccionar un archivo ...")
                 $(this).siblings(".f-label").children(".archivo-seleccionado").css("color", "rgb(56, 56, 56)")
                 $(this).siblings(".f-label").children(".archivo-seleccionado").css("border-bottom", "1px solid rgb(136, 136, 136)")
             }else {
-                $(this).siblings(".f-label").children(".archivo-seleccionado").text(texto)
+                $(this).siblings(".f-label").children(".archivo-seleccionado").text($(this).val())
                 $(this).siblings(".f-label").children(".archivo-seleccionado").css("color", "rgb(22, 112, 60)")
                 $(this).siblings(".f-label").children(".archivo-seleccionado").css("border-bottom", "1px solid rgb(22, 112, 60)")
             }
-            
         })
     }
 
