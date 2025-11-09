@@ -1,6 +1,10 @@
 import Per from "dynamics-tips/src/modulos/Personalizado";
 
-
+/**
+ * Módulo (19) Permite desplegar un elemento dinámico personalizado y 
+ * descriptivo asociado a un elemento y permitirle al
+ * usuario orientarse respecto al contenido de la página.
+ */
 (function(){
 
     const inicializar = (config) => {

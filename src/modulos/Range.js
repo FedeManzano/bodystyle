@@ -1,6 +1,10 @@
 
 import $ from 'jquery'
 
+/**
+ * Módulo (20) Permite darle estilos dinámicos al los 
+ * input range.
+ */
 (function() {
     var inicializar = () => {
         $(".input-range input").on("mousemove" , function(e) {

@@ -14,7 +14,7 @@ import $ from "jquery"
          * y está vacío esta función le asignará un borde rojo al input 
          * a través de la clase .i-error.
          */
-        $(".form-grupo input").each(function(){
+        $(".form-grupo input, .form-group input").each(function(){
 
             // Evento asociado a la perdida del FOCO
             $(this).blur(function(){

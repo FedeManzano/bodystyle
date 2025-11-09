@@ -25900,10 +25900,12 @@ textarea::placeholder {
 }
 
 .form-grupo,
+.form-group,
 .form-grupo-linea {
   font-size: 16px;
 }
 .form-grupo small,
+.form-group small,
 .form-grupo-linea small {
   padding: 0;
   margin: 0;
@@ -25911,6 +25913,7 @@ textarea::placeholder {
   color: grey;
 }
 .form-grupo label,
+.form-group label,
 .form-grupo-linea label {
   font-size: 1.125em !important;
   line-height: 2.5em;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container mt-3 bor-grey-1 bor-rad-10 p-2 " style="background-color: rgb(249, 249, 249);">
+        <h2>Registro de Usuario</h2>
+        <div class="divisor my-2"></div>
+        <form autocomplete="off">
+            <div class="row">
+                <div class="form-group cm-12 cl-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <small>Su primer nombre Ej: Alberto</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" required>
+                    <small>Su primer apellido Ej: Perez</small>
+                </div>
+                <div class="form-group  cl-6">
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" required>
+                    <small>Ej: jhondoe@mail.com</small>
+                </div>
+                <div class="btn-group-lg  cl-6 mt-3 just-start">
+                    <button class="btn fd-azul bor-pill waves com-trigger" data-info="Botón utilizado para saber si el correo existe dentro de los datos de la aplicación.">Verificar</button>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="pass">Clave</label>
+                    <input type="password" name="password" id="pass" required>
+                    <small>De 8 a 16 con mayusculas, minusculas y caracter.</small>
+                </div>
+                <div class="form-group cm-12 cl-6">
+                    <label for="repetir">Repetir</label>
+                    <input type="password" name="repetir" id="repetir" required>
+                    <small>Repetir la clave.</small>
+                </div>
+                <div class="cl-12 d-flex just-end">
+                    <input id="enviar" type="submit" class="btn-lg bor-pill fd-verde desactivado com-trigger" data-info="Botón que envía el formulario, permanece desactivado hasta que se completen los campos de manera adecuada." >
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>
+        BS.DropDownInit()
+        BS.CommentInit()
+
+        $("#repetir, #pass, #nombre, #apellido, #email").keyup( () => {
+            
+            let clave = $("#pass").val()
+            let rep = $("#repetir").val()
+            if( 
+                $("#nombre").val()    !== ""  &&  $("#nombre").val()    !== undefined   && 
+                $("#apellido").val()  !== ""  &&  $("#apellido").val()  !== undefined   &&
+                $("#email").val()     !== ""  &&  $("#email").val()     !== undefined   &&
+                $("#pass").val()      !== ""  &&  $("#pass").val()      !== undefined   &&
+                clave === rep
+            )
+            {
+                $("#enviar").removeClass("desactivado")
+            }   
+            else 
+            {
+                $("#enviar").addClass("desactivado")
+            }
+        })
+    </script>
+</body>
+</html>

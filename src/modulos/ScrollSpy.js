@@ -1,7 +1,11 @@
 import $ from 'jquery'
 import ERR from "./Errores"
 
-
+/**
+ * Módulo (21) Elemento que sirve como guia para el usuario
+ * de manera tal que el usuario conozca en cada momento 
+ * el lugar de la página en la cual se encuentra. 
+ */
 (function() {
 
     var c = {}

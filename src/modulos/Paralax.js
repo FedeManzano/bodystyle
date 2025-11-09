@@ -1,5 +1,8 @@
 import $ from 'jquery'
-
+/**
+ * Módulo (18) Permite establecer el efecto paralax
+ * en las imágenes seleccionadas.
+ */
 (function(){
 
     var inicializar = () => {
