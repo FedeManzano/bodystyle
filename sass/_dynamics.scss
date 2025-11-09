@@ -1,0 +1,273 @@
+.tips {
+
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute; 
+    padding: 20px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 5px;
+    
+    white-space: nowrap;
+    max-height: 40px !important;
+    min-height: 40px !important;
+
+    z-index: superposicion(ms) !important;
+    transform: translate(0);
+    transition: transform 0.3s ease;
+}
+
+    .tips .mueca-aba,
+    .tips .mueca-izq,
+    .tips .mueca-der,
+    .tips .mueca-arr {
+        position: absolute !important;
+        width: 0 ;
+        height: 0;
+    }
+
+    .tips .mueca-aba {
+        border-top: 5px solid rgba(0, 0, 0, 0.863) !important;
+        border-left: 5px solid transparent !important;
+        border-right: 5px solid transparent !important;
+    }
+
+    .tips .mueca-arr {
+        border-bottom: 5px solid rgba(0, 0, 0, 0.863) !important;
+        border-left: 5px solid transparent !important;
+        border-right: 5px solid transparent !important;
+    }
+
+    .tips .mueca-izq {
+        border-right: 5px solid rgba(0, 0, 0, 0.863) !important;
+        border-top: 5px solid transparent !important;
+        border-bottom: 5px solid transparent !important;
+    }
+
+    .tips .mueca-der {
+        border-left: 5px solid rgba(0, 0, 0, 0.863) !important;
+        border-top: 5px solid transparent !important;
+        border-bottom: 5px solid transparent !important;
+    }
+
+.tips-ele {
+    z-index: 0;
+    position: relative ;
+    overflow: visible !important;
+}
+
+.tips {
+    position: absolute;
+    padding: 10px;
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white;
+    border-radius: 5px;
+    transform: translate(0);
+    transition: transform 0.3s;
+}
+
+.tips .mueca-der {
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid rgba(0, 0, 0, 0.863);
+    top: calc(50% - 7px);
+    left: 100%
+}
+
+.tips .mueca-izq {
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.863);
+    top: calc(50% - 7px);
+    left: -5px
+}
+
+
+.tips .mueca-arr {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.863);
+    border-right: 10px solid transparent;
+    top: -5px;
+    left: calc(50% - 5px)
+}
+
+
+.tips .mueca-aba {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 0.863);
+    border-right: 10px solid transparent;
+    bottom: -5px;
+    left: calc(50% - 5px)
+}
+
+.tips-ele {
+    overflow: visible !important;
+    z-index: 10000;
+}
+
+.tips-complemento {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    display: none;
+}
+
+.com-dinamico {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    max-width: 270px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    color: rgb(48, 48, 48);
+    z-index: 100000000;
+    display: none;
+    line-height: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    transform: translate(0);
+    transition: transform 0.3s;
+}
+
+.com-trigger {
+    overflow: visible !important;
+}
+
+.com-complemento {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    display: none;
+}
+
+
+.dropdown-toggle {
+    z-index: 1000000;
+    position: relative;
+    padding-right: 20px;
+}
+
+.dropdown-toggle .f-abajo {
+    position: absolute;
+    
+}
+
+
+.dropdown {
+    position: absolute;
+    background-color: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    min-width: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    z-index: 10000000;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 10px 0;
+    display: none;
+    transform: translate(0);
+    transition: transform 0.3s;
+}
+
+.dropdown ul {
+    list-style: none !important;
+}
+
+
+.dropdown a {
+    display: block;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    padding: 5px 12px;
+    white-space: nowrap;
+}
+
+.dropdown a:hover {
+    background-color: rgba(0, 0, 0, 0.068);
+}
+
+.drop-complemento {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    display: none;
+}
+
+.toast {
+    position: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding: 15px;
+    border-radius: 5px;
+    right: 30px;
+    top: 250px;
+    transition: top 1s;
+    background-color: rgb(21, 23, 32);
+    color: white;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: subir 1s  0s 1  linear;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.137);
+}
+
+.toast .cerrar {
+    position: relative;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.toast .cerrar:hover {
+    background-color: rgba(255, 255, 255, 0.397);
+}
+
+.toast .cerrar::before,
+.toast .cerrar::after  {
+    content:  "";
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: white;
+    left:  calc(50% - 7.2px);
+    top:  calc(50% - 3px);
+}
+.toast .cerrar::before {
+    transform: rotate(45deg);
+}
+
+
+.toast .cerrar::after {
+    transform: rotate(-45deg);
+}
+
+@keyframes subir {
+    from {
+        top: 300px;
+    }to {
+        top: 75px;
+    }
+}
