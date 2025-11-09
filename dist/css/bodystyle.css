@@ -23256,6 +23256,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=fd-gris],
 .btn-cover-lg:hover[class*=fd-gris] {
   background-color: rgb(34, 34, 34) !important;
+  color: rgb(255, 255, 255);
 }
 .btn:hover[class*=bg-grey],
 .btn-lg:hover[class*=bg-grey],
@@ -23267,6 +23268,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=bg-grey],
 .btn-cover-lg:hover[class*=bg-grey] {
   background-color: rgb(34, 34, 34) !important;
+  color: rgb(255, 255, 255);
 }
 .btn:hover[class*=fd-negro],
 .btn-lg:hover[class*=fd-negro],
@@ -23279,16 +23281,38 @@ input.btn-cover-lg-o {
 .btn-cover-lg:hover[class*=fd-negro] {
   background-color: rgb(34, 34, 34) !important;
 }
-.btn:hover[class*=bg-black],
-.btn-lg:hover[class*=bg-black],
-.btn-sm:hover[class*=bg-black],
-.btn-cubrir:hover[class*=bg-black],
-.btn-cubrir-sm:hover[class*=bg-black],
-.btn-cubrir-lg:hover[class*=bg-black],
-.btn-cover:hover[class*=bg-black],
-.btn-cover-sm:hover[class*=bg-black],
-.btn-cover-lg:hover[class*=bg-black] {
+.btn[class*=bg-black],
+.btn-lg[class*=bg-black],
+.btn-sm[class*=bg-black],
+.btn-cubrir[class*=bg-black],
+.btn-cubrir-sm[class*=bg-black],
+.btn-cubrir-lg[class*=bg-black],
+.btn-cover[class*=bg-black],
+.btn-cover-sm[class*=bg-black],
+.btn-cover-lg[class*=bg-black] {
   background-color: rgb(34, 34, 34) !important;
+}
+.btn[class*=fd-blanco],
+.btn-lg[class*=fd-blanco],
+.btn-sm[class*=fd-blanco],
+.btn-cubrir[class*=fd-blanco],
+.btn-cubrir-sm[class*=fd-blanco],
+.btn-cubrir-lg[class*=fd-blanco],
+.btn-cover[class*=fd-blanco],
+.btn-cover-sm[class*=fd-blanco],
+.btn-cover-lg[class*=fd-blanco] {
+  color: rgb(0, 0, 0) !important;
+}
+.btn[class*=bg-white],
+.btn-lg[class*=bg-white],
+.btn-sm[class*=bg-white],
+.btn-cubrir[class*=bg-white],
+.btn-cubrir-sm[class*=bg-white],
+.btn-cubrir-lg[class*=bg-white],
+.btn-cover[class*=bg-white],
+.btn-cover-sm[class*=bg-white],
+.btn-cover-lg[class*=bg-white] {
+  color: rgb(0, 0, 0) !important;
 }
 .btn:hover[class*=fd-blanco],
 .btn-lg:hover[class*=fd-blanco],
@@ -23300,6 +23324,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=fd-blanco],
 .btn-cover-lg:hover[class*=fd-blanco] {
   background-color: rgb(201, 201, 201) !important;
+  color: rgb(0, 0, 0) !important;
 }
 .btn:hover[class*=bg-white],
 .btn-lg:hover[class*=bg-white],
@@ -23311,6 +23336,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=bg-white],
 .btn-cover-lg:hover[class*=bg-white] {
   background-color: rgb(201, 201, 201) !important;
+  color: rgb(0, 0, 0) !important;
 }
 .btn:hover[class*=fd-violeta],
 .btn-lg:hover[class*=fd-violeta],

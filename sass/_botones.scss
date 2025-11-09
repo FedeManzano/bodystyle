@@ -118,26 +118,38 @@ input.btn-cover-lg-o  {
 
     &:hover[class*="fd-gris"] {
         background-color: rgb(34, 34, 34) !important;
+        color: variables.$fd-blanco;
     }
 
     &:hover[class*="bg-grey"] {
         background-color: rgb(34, 34, 34) !important;
+        color: variables.$fd-blanco;
     }
 
     &:hover[class*="fd-negro"] {
         background-color: rgb(34, 34, 34) !important;
     }
 
-    &:hover[class*="bg-black"] {
+    &[class*="bg-black"] {
         background-color: rgb(34, 34, 34) !important;
+    }
+
+    &[class*="fd-blanco"] {
+        color: variables.$fd-negro !important;
+    }
+
+    &[class*="bg-white"] {
+        color: variables.$fd-negro !important; 
     }
 
     &:hover[class*="fd-blanco"] {
         background-color: rgb(201, 201, 201) !important;
+        color: variables.$fd-negro !important;
     }
 
     &:hover[class*="bg-white"] {
         background-color: rgb(201, 201, 201) !important;
+        color: variables.$fd-negro !important;
     }
 
     &:hover[class*="fd-violeta"] {
