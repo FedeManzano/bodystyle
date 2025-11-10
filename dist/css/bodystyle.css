@@ -424,6 +424,10 @@ a.link:hover {
 }
 
 /** Borde radio % y px*/
+.bor-rad-por-0 {
+  border-radius: 0% !important;
+}
+
 .bor-rad-por-1 {
   border-radius: 1% !important;
 }
@@ -631,6 +635,10 @@ a.link:hover {
 
 .bor-pill {
   border-radius: 9999px !important;
+}
+
+.bor-rad-0 {
+  border-radius: 0px !important;
 }
 
 .bor-rad-1 {

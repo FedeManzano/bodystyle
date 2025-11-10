@@ -1,7 +1,7 @@
 @use "../globales/variables";
 
 /** Borde radio % y px*/
-@for $i from 1 through 50 {
+@for $i from 0 through 50 {
     .bor-rad-por-#{$i} {
         border-radius: 0% + $i !important;
     }
@@ -16,7 +16,7 @@
     border-radius: 9999px !important;
 }
 
-@for $i from 1 through 20 {
+@for $i from 0 through 20 {
     .bor-rad-#{$i} {
         border-radius: 0px + $i !important;
     }
