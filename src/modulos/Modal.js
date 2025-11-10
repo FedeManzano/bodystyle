@@ -33,8 +33,8 @@ import $ from 'jquery'
     }
 
     var Modal = {
-        iniciar: function(conf){
-            estadoInicial(conf)
+        iniciar: function(){
+            estadoInicial()
             aparecerModal()
             desaparecerModal()
         },

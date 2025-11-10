@@ -282,7 +282,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
     /**
      * Inicializa el módulo de las ventanas Modales
      */
-    const ModalInit = () => Modal.iniciar(conf)
+    const ModalInit = () => Modal.iniciar()
 
     /**
      * Desvincula los eventos de las ventanas modales
