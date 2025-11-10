@@ -2,6 +2,7 @@ import $ from "jquery"
 
 
 /**
+ * Módulo (23)
  * Manejador del sidebar drop
  * Permite gestionar la visibilidad del Sidebar
  * El punto de inflexión del comportamiento es cuando 

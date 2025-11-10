@@ -3,7 +3,9 @@ import ERR from "./Errores"
 import SidebarHandler from "./SidebarHandler"
 
 /**
- * 
+ * Módulo (22) Didebar con menues desplegables dentro
+ * Nueva funcionalidad de bodystyle a partir de 
+ * la versión 5.0.0.
  */
 (function() {
 

@@ -14,7 +14,7 @@ class Tab {
      */
     inicializar(contexto) {
 
-        const MODULO = "Error BodyStyle dice: M28"
+        const MODULO = "Error BodyStyle dice: M24"
         if(!ERR.id.validacion.test(contexto)){
             console.error(MODULO + ERR.id.mensaje)
             return 

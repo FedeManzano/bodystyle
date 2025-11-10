@@ -3,6 +3,10 @@
 import $ from 'jquery'
 import ERR from "./GestionErrores"
 
+/**
+ * Módulo (27) Efecto que incorpora momentaneamente 
+ * un elemento dentro de otro para generar el efecto pretendido.
+ */
 (function(){
     const efecto = () => {
         $(".waves").click(function(e){
