@@ -65,6 +65,11 @@ import SidebarDrop from "./modulos/SidebarDrop"
     // con la función correspondiente.
     ComentarioDinamico.iniciar()
 
+    /**************************** Input Handler *************************************/
+    const InputHandlerInit = () => InputHandler.iniciar()
+
+    /**************************** Desactivado *************************************/
+    const DesactivadoInit = () => Desactivado.iniciar()
 
     /**************************** WAVES EFFECT *************************************/
 
@@ -440,10 +445,18 @@ import SidebarDrop from "./modulos/SidebarDrop"
             CodigoJsInit(config)
             CodigoJavaInit(config)
             CodigoCInit(config)
-        }
+        },
 
         //////////////////////////////////////////////////
         /////////////////////FIN CÓDIGO PINTADO /////////////
+
+        /**Inicializa la capacidad de modificar un elemento .desactivado */
+        DesactivadoInit: () => DesactivadoInit(),
+        InactiveInit: () => DesactivadoInit(),
+
+        // Permite cargar la clase i-error en campos requeridos
+        // Permite seleccionar un archivo desde input file
+        InputHandlerInit: () => InputHandlerInit()
     }
 
     
