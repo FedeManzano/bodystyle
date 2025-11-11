@@ -1,74 +1,76 @@
 @media (min-width: 1030px) {
-  .ocultar-solo-grandes {
+  .ocultar-solo-grandes,
+  .hide-only-large {
     display: none !important;
   }
 }
 
 @media (max-width: 1030px) {
-  .ocultar-desde-medianos {
+  .ocultar-desde-medianos,
+  .hide-from-medium {
     display: none !important;
   }
 }
 
 @media (max-width: 770px) {
-  .ocultar-desde-chicos {
+  .ocultar-desde-chicos,
+  .hide-from-small {
     display: none !important;
   }
 }
 
 @media (max-width: 400px) {
-  .ocultar-desde-x-chicos {
+  .ocultar-desde-x-chicos,
+  .hide-from-x-small {
     display: none !important;
   }
 }
 
 @media (min-width: 400px) {
-  .mostrar-solo-x-chicos {
+  .mostrar-solo-x-chicos,
+  .show-only-x-small {
     display: none !important;
   }
 }
 
 @media (min-width: 770px) {
-  .mostrar-solo-chicos {
+  .mostrar-solo-chicos,
+  .show-only-small {
     display: none !important;
   }
 }
 @media (max-width: 400px) {
-  .mostrar-solo-chicos {
+  .mostrar-solo-chicos,
+  .show-only-small {
     display: none !important;
   }
 }
 
 @media (min-width: 1030px) {
-  .mostrar-solo-medianos {
+  .mostrar-solo-medianos,
+  .show-only-medium {
     display: none !important;
   }
 }
 @media (max-width: 770px) {
-  .mostrar-solo-medianos {
+  .mostrar-solo-medianos,
+  .show-only-medium {
     display: none !important;
   }
 }
 
 @media (max-width: 1030px) {
-  .mostrar-solo-grandes {
+  .mostrar-solo-grandes,
+  .show-only-large {
     display: none !important;
   }
 }
 
-.derecha {
-  justify-content: flex-end !important;
-}
-
-.izquierda {
-  justify-content: flex-start !important;
-}
-
-.centrado {
-  justify-content: center !important;
-}
-
 /** Borde radio % y px*/
+.bor-rad-por-0 {
+  border-radius: 0% !important;
+}
+
 .bor-rad-por-1 {
   border-radius: 1% !important;
 }
@@ -276,6 +278,10 @@
 
 .bor-pill {
   border-radius: 9999px !important;
+}
+
+.bor-rad-0 {
+  border-radius: 0px !important;
 }
 
 .bor-rad-1 {
@@ -2119,7 +2125,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.164);
 }
 
-.divisorH {
+.vertical-divisor {
   height: 100%;
   width: 0;
   min-height: 30px;
@@ -2359,6 +2365,11 @@
 
 .c-amarillo-an {
   color: rgb(255, 166, 0) !important;
+}
+
+.c-bodyui,
+.c-bodyui {
+  color: rgb(187, 0, 56) !important;
 }
 
 .f-grosor-1,
