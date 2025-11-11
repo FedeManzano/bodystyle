@@ -4,12 +4,12 @@
 </p>
 
 # :dvd: Bodystyle
-[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
+[![MEGA](https://img.shields.io/badge/MEGA-Download-green)](https://mega.nz/file/5UkDQRTb#7TigjabmAZTkEyoey2IFnYsVJtSjNBTTRXjQ65HN1sM)
 [![DOCS-DOWNLOAD](https://img.shields.io/badge/Documentation-Download-blue)](https://mega.nz/file/4c1ggChQ#uPpobno10HaNf1il6-5KQu2ZL14WxJug75dGTCr3cHo)
 [![DOCS](https://img.shields.io/badge/Documentation-V2.0.0-blue)](https://bodystyle.webcindario.com)
 [![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)](https://www.npmjs.com/package/bodyui2)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
-[![VERSION](https://img.shields.io/badge/VERSION-5.0.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v5.0.0)
+[![VERSION](https://img.shields.io/badge/VERSION-4.8.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
 
 
 
@@ -20,7 +20,7 @@ de manera correcta por toda la ```Interfaz Usuario UI```. <br>
 El objetivo de este trabajo es brindarle herramientas a los desarrolladores para que puedan crear 
 diseños innovadores y se enfoquen en la mejora continua de la ```experiencia de usuario UX```.
 
-> La versión Actual ```v5.0.0```.
+> La versión Actual ```v4.8.0```.
 
 ## :green_book: Documentación
 
@@ -29,7 +29,7 @@ se encuentra en los siguientes enlaces:
 
 ### :arrow_down: Descarga de la Documentación
 
-- :link: [Documentación v2.0.0](https://mega.nz/file/4c1ggChQ#uPpobno10HaNf1il6-5KQu2ZL14WxJug75dGTCr3cHo) **Última Versión**
+- :link: [Documentación v1.8.0](https://mega.nz/file/4c1ggChQ#uPpobno10HaNf1il6-5KQu2ZL14WxJug75dGTCr3cHo) **Última Versión**
 - :link: [Todas las Versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
 ### Sitio de la Documentación
