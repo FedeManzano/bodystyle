@@ -276,11 +276,21 @@ npm run build # crea el archivo dist/js/bodystyle.min.js
 
 ## Mejoras desde la versión 4.8.0
 
-- Iconos
-- Mejorado el Core de Posicionamiento
-- Alertas para cerrar
-- Alias de los helpers 
-- Fix Icono del Nav
+- Nueva sidebar desplegable
+- Nuevo handler del sidebar 
+- Documentación del código de los módulos
+- Refactorización del código fuente
+- Optimización del código CSS y JS
+- Nuevos estilos de formularios
+- Cerrar Alertas
+- Metodos destroy
+- Auto Iniciación de los elementos dinámicos
+- Auto Iniciación del código fuente
+- Inicialización automática de los elementos dinámicos
+- Efecto waves función de inicialización (Dinámicos)
+- Desactivado
+- Alias Helpers
+- Input Íconos
 
 
 #### :exclamation: Licencia [MIT](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)

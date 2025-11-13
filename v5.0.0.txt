@@ -12,7 +12,6 @@ Actualizaciones de la versión 5.0.0
 - Auto Iniciación del código fuente
 - Inicialización automática de los elementos dinámicos
 - Efecto waves función de inicialización (Dinámicos)
-- Footers
 - Desactivado
 - Alias Helpers
 - Input Íconos
