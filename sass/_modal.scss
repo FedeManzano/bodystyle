@@ -1,23 +1,31 @@
-@use "globales/mixim";
+@use "globales/mixins";
 
+////
+/// @group Modales
+/// Estilos para ventanas modales y sus componentes
+////
+
+/// Fondo oscuro del modal (overlay)
 .modal-fondo {
-    @include mixim.posicionamiento-fixed(0,0,0,0);
-    @include mixim.flex-box-centrado();
+    @include mixins.posicionamiento-fixed(0, 0, 0, 0);
+    @include mixins.flex-box-centrado();
     background-color: rgba(0, 0, 0, 0.349);
     z-index: 300;
     overflow: auto;
+
     .complemento {
-        @include mixim.posicionamiento-fixed(0,0,0,0);
+        @include mixins.posicionamiento-fixed(0, 0, 0, 0);
         z-index: 299;
     }
 }
 
+/// Contenedor principal del modal
 .modal {
 
     // Generales
     font-size: 16px; // 1EM
 
-    
+
     width: 70%;
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: 5px;
@@ -41,7 +49,7 @@
 
     .modal-cuerpo {
         padding: 1.5em;
-        
+
     }
 
     .modal-titulo {
@@ -63,7 +71,7 @@
         cursor: pointer;
     }
 
-    .modal-salir::before{
+    .modal-salir::before {
         content: "";
         height: 3px;
         width: 15px;
@@ -73,7 +81,7 @@
         top: 10px;
     }
 
-    .modal-salir::after{
+    .modal-salir::after {
         content: "";
         height: 3px;
         width: 15px;

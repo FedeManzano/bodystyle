@@ -1,68 +1,78 @@
-@use "../globales/mixim";
+@use "../globales/mixins";
 
+////
+/// @group Layout
+/// Utilidades de visibilidad por tamaño de pantalla
+////
+
+/// Ocultar solo en pantallas grandes
 .ocultar-solo-grandes,
 .hide-only-large {
-    @include mixim.agregar-a-medida-minima(m){
+    @include mixins.agregar-a-medida-minima(m) {
         display: none !important;
     }
 }
 
-
+/// Ocultar desde pantallas medianas hacia abajo
 .ocultar-desde-medianos,
 .hide-from-medium {
-    @include mixim.agregar-a-medida-maxima(m){
+    @include mixins.agregar-a-medida-maxima(m) {
         display: none !important;
     }
 }
 
+/// Ocultar desde pantallas chicas hacia abajo
 .ocultar-desde-chicos,
 .hide-from-small {
-    @include mixim.agregar-a-medida-maxima(s){
+    @include mixins.agregar-a-medida-maxima(s) {
         display: none !important;
     }
 }
 
+/// Ocultar desde pantallas extra chicas hacia abajo
 .ocultar-desde-x-chicos,
 .hide-from-x-small {
-    @include mixim.agregar-a-medida-maxima(xs){
+    @include mixins.agregar-a-medida-maxima(xs) {
         display: none !important;
     }
 }
 
-
+/// Mostrar solo en pantallas extra chicas
 .mostrar-solo-x-chicos,
 .show-only-x-small {
-    @include mixim.agregar-a-medida-minima(xs){
+    @include mixins.agregar-a-medida-minima(xs) {
         display: none !important;
     }
 }
 
+/// Mostrar solo en pantallas chicas
 .mostrar-solo-chicos,
 .show-only-small {
-    @include mixim.agregar-a-medida-minima(s){
+    @include mixins.agregar-a-medida-minima(s) {
         display: none !important;
     }
 
-    @include mixim.agregar-a-medida-maxima(xs){
+    @include mixins.agregar-a-medida-maxima(xs) {
         display: none !important;
     }
 }
 
-
+/// Mostrar solo en pantallas medianas
 .mostrar-solo-medianos,
 .show-only-medium {
-    @include mixim.agregar-a-medida-minima(m){
+    @include mixins.agregar-a-medida-minima(m) {
         display: none !important;
     }
 
-    @include mixim.agregar-a-medida-maxima(s){
+    @include mixins.agregar-a-medida-maxima(s) {
         display: none !important;
     }
 }
 
+/// Mostrar solo en pantallas grandes
 .mostrar-solo-grandes,
 .show-only-large {
-    @include mixim.agregar-a-medida-maxima(m){
+    @include mixins.agregar-a-medida-maxima(m) {
         display: none !important;
     }
 }

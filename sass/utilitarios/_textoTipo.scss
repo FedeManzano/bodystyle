@@ -1,60 +1,81 @@
+////
+/// @group Utilitarios de Texto
+/// Grosor y transformación de texto
+////
+
+/// Grosor de fuente 100
 .f-grosor-1,
-.f-w-1{
+.f-w-1 {
     font-weight: 100 !important;
 }
 
+/// Grosor de fuente 200
 .f-grosor-2,
-.f-w-2{
+.f-w-2 {
     font-weight: 200 !important;
 }
 
+/// Grosor de fuente 300
 .f-grosor-3,
-.f-w-3{
+.f-w-3 {
     font-weight: 300 !important;
 }
 
+/// Grosor de fuente 400 (Normal)
 .f-grosor-4,
 .f-w-4 {
     font-weight: 400 !important;
 }
 
+/// Grosor de fuente 500
 .f-grosor-5,
 .f-w-5 {
     font-weight: 500 !important;
 }
 
+/// Grosor de fuente 600
 .f-grosor-6,
-.f-w-6{
+.f-w-6 {
     font-weight: 600 !important;
 }
+
+/// Grosor de fuente 700 (Bold)
 .f-grosor-7,
-.f-w-7{
+.f-w-7 {
     font-weight: 700 !important;
 }
+
+/// Grosor de fuente 800
 .f-grosor-8,
-.f-w-8{
+.f-w-8 {
     font-weight: 800 !important;
 }
 
+/// Grosor de fuente 900
 .f-grosor-9,
-.f-w-9{
+.f-w-9 {
     font-weight: 900 !important;
 }
+
+/// Grosor de fuente Bold
 .f-grosor-b,
-.f-w-b{
+.f-w-b {
     font-weight: bold !important;
 }
 
+/// Transformación: Mayúsculas
 .t-may,
 .t-up {
     text-transform: uppercase !important;
 }
 
+/// Transformación: Minúsculas
 .t-min,
 .t-lw {
     text-transform: lowercase !important;
 }
 
+/// Transformación: Capitalizar
 .t-cap {
     text-transform: capitalize !important;
 }

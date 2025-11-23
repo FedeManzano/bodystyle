@@ -1,34 +1,44 @@
 @use "../globales/variables";
 
-/** Borde radio % y px*/
+////
+/// @group Utilitarios Visuales
+/// Utilidades para bordes (radio, color, grosor)
+////
+
+/// Generador de radio de borde en porcentaje (0% - 50%)
 @for $i from 0 through 50 {
     .bor-rad-por-#{$i} {
         border-radius: 0% + $i !important;
     }
 }
 
+/// Borde inferior transparente (negro)
 .bor-negro-trans,
 .bor-black-trans {
     border-bottom: 1px solid rgba(0, 0, 0, 0.055) !important;
 }
 
+/// Borde redondeado completo (Pill)
 .bor-pill {
     border-radius: 9999px !important;
 }
 
+/// Generador de radio de borde en píxeles (0px - 20px)
 @for $i from 0 through 20 {
     .bor-rad-#{$i} {
         border-radius: 0px + $i !important;
     }
 }
 
+/// Generador de borde negro sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-#{$i} {
-        border: 0px + $i solid rgb(0,0,0) !important;
+        border: 0px + $i solid rgb(0, 0, 0) !important;
     }
 }
 
 
+/// Generador de borde gris sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-grey-#{$i} {
         border: 0px + $i solid variables.$fd-gris !important;
@@ -40,6 +50,7 @@
 }
 
 
+/// Generador de borde gris claro sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-grey-c-#{$i} {
         border: 0px + $i solid variables.$fd-gris-c !important;
@@ -51,7 +62,7 @@
 }
 
 
-/** Bordes rojos */
+/// Generador de borde rojo sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-rojo-#{$i} {
         border: 0px + $i solid variables.$fd-rojo !important;
@@ -63,6 +74,7 @@
 }
 
 
+/// Generador de borde rojo claro sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-rojo-c-#{$i} {
         border: 0px + $i solid variables.$fd-rojo-c !important;
@@ -73,12 +85,14 @@
     }
 }
 
+/// Generador de borde rojo transparente (1px - 10px)
 @for $i from 1 through 10 {
     .bor-rojo-t-#{$i} {
         border: 0px + $i solid variables.$fd-rojo-t !important;
     }
 }
 
+/// Generador de borde rojo oscuro (1px - 10px)
 @for $i from 1 through 10 {
     .bor-rojo-o-#{$i} {
         border: 0px + $i solid variables.$fd-rojo-o-1 !important;
@@ -89,7 +103,7 @@
     }
 }
 
-/** Bordes rojos verdes*/
+/// Generador de borde verde sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-verde-#{$i} {
         border: 0px + $i solid variables.$fd-verde !important;
@@ -100,6 +114,7 @@
     }
 }
 
+/// Generador de borde verde claro sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-verde-c-#{$i} {
         border: 0px + $i solid variables.$fd-verde-c !important;
@@ -110,22 +125,25 @@
     }
 }
 
+/// Generador de borde verde oscuro (1px - 10px)
 @for $i from 1 through 10 {
     .bor-verde-o-#{$i} {
         border: 0px + $i solid variables.$fd-verde-o-2 !important;
     }
+
     .bor-green-d-#{$i} {
         border: 0px + $i solid variables.$fd-verde-o-2 !important;
     }
 }
 
+/// Generador de borde verde azulado (1px - 10px)
 @for $i from 1 through 10 {
     .bor-verde-az-#{$i} {
         border: 0px + $i solid variables.$fd-verde-az !important;
     }
 }
 
-/*bordes azules*/
+/// Generador de borde azul sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-azul-#{$i} {
         border: 0px + $i solid variables.$fd-azul !important;
@@ -136,12 +154,14 @@
     }
 }
 
+/// Generador de borde azul verdoso (1px - 10px)
 @for $i from 1 through 10 {
     .bor-azul-ve-#{$i} {
         border: 0px + $i solid variables.$fd-azul-ve !important;
     }
 }
 
+/// Generador de borde azul claro sólido (1px - 10px)
 @for $i from 1 through 10 {
     .bor-azul-c-#{$i} {
         border: 0px + $i solid variables.$fd-azul-c !important;
@@ -153,6 +173,7 @@
 }
 
 
+/// Generador de borde azul oscuro (1px - 10px)
 @for $i from 1 through 10 {
     .bor-azul-o-#{$i} {
         border: 0px + $i solid variables.$fd-azul-o-2 !important;

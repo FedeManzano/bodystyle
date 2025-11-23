@@ -1,18 +1,24 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Navegación
+/// Componente ScrollSpy para navegación interna
+////
 
+/// Lista de navegación lateral para ScrollSpy
 .lista-scroll {
     width: 100px;
     position: fixed;
     right: -30px;
     top: 100px;
-   
-    
+
+
     ul {
         list-style: none !important;
+
         li {
-            a {                
+            a {
                 position: relative;
                 display: block;
                 padding: 5px 15px;
@@ -23,6 +29,8 @@
         }
     }
 }
+
+/// Indicador de elemento seleccionado en ScrollSpy
 .elemento-seleccionado {
     width: 5px;
     height: 29px;
@@ -31,8 +39,9 @@
     left: 0;
 }
 
+/// Contenedor principal ScrollSpy
 .scroll-spy {
-    @include mixim.posicionamiento-fixed(100px, 0, null, null);
+    @include mixins.posicionamiento-fixed(100px, 0, null, null);
     width: 15%;
 
     .titulo {

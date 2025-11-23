@@ -9,12 +9,11 @@
 [![DOCS](https://img.shields.io/badge/Documentation-V2.0.0-blue)](https://bodystyle.webcindario.com)
 [![NPM](https://img.shields.io/badge/NPM-bodyui2-orange)](https://www.npmjs.com/package/bodyui2)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-purple)](https://github.com/FedeManzano/bodystyle/blob/master/LICENSE)
-[![VERSION](https://img.shields.io/badge/VERSION-5.0.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v4.8.0)
+[![VERSION](https://img.shields.io/badge/VERSION-5.0.0-red)](https://github.com/FedeManzano/bodystyle/releases/tag/v5.0.0)
 
 
-
-Bodystyle es una biblioteca de Software libre para la creación del ```Front-End``` de sitios y aplicacines 
-web conformada, como se analizará en aprtados posteriores, por cuatro módulos que conforman el ```core``` de 
+Bodystyle es una biblioteca de Software libre para la creación del ```Front-End``` de sitios y aplicaciones 
+web conformada, como se analizará en apartados posteriores, por cuatro módulos que conforman el ```core``` de 
 la biblioteca. A partir del core se podrán agrupar elementos de diferentes características y distribuirlos
 de manera correcta por toda la ```Interfaz Usuario UI```. <br>
 El objetivo de este trabajo es brindarle herramientas a los desarrolladores para que puedan crear 
@@ -24,7 +23,7 @@ diseños innovadores y se enfoquen en la mejora continua de la ```experiencia de
 
 ## :green_book: Documentación
 
-Para poder utilizar totas las funcionalidades y elementos provistos por la biblioteca es necesario disponer de la **documentación**. La cual 
+Para poder utilizar todas las funcionalidades y elementos provistos por la biblioteca es necesario disponer de la **documentación**. La cual 
 se encuentra en los siguientes enlaces:
 
 ### :arrow_down: Descarga de la Documentación
@@ -40,6 +39,9 @@ se encuentra en los siguientes enlaces:
 ### :information_source: Estructura de la documentación
 
 
+
+<details>
+<summary><b>:open_file_folder: Ver estructura completa de archivos</b></summary>
 
 - :green_book: <b>Docs</b>
     - :open_file_folder: <b>css</b>
@@ -99,6 +101,8 @@ se encuentra en los siguientes enlaces:
         - :page_facing_up: <i>tooltips.html</i>
     - :page_facing_up: <i>index.html</i>
     - :page_facing_up: <i>logo.ico</i>
+
+</details>
 
 
 ## :books: Core de Bodystyle

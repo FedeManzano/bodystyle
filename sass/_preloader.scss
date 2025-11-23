@@ -1,31 +1,38 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Componentes
+/// Preloaders (spinners) de carga
+////
 
-@mixin preloader ($color){
+/// Mixin para crear el spinner
+/// @param {Color} $color - Color del borde del spinner
+@mixin preloader ($color) {
     border-radius: 50%;
     border-top: 5px solid $color;
     border-left: 5px solid $color;
     border-bottom: 5px solid $color;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    animation: girar-preloader 0.5s 0s infinite linear;
 }
 
 
+/// Preloader base
 .preloader,
 .preloader-sm,
 .preloader-lg {
-    @include mixim.ancho-alto(40px, 40px);
+    @include mixins.ancho-alto(40px, 40px);
     border-radius: 50%;
     border: 5px solid rgb(214, 214, 214);
     position: relative;
 }
 
-.preloader-sm{
-    @include mixim.ancho-alto(20px, 20px);
+.preloader-sm {
+    @include mixins.ancho-alto(20px, 20px);
 }
 
 .preloader-lg {
-    @include mixim.ancho-alto(60px, 60px);
+    @include mixins.ancho-alto(60px, 60px);
 }
 
 
@@ -61,7 +68,9 @@
 @keyframes girar-preloader {
     from {
         transform: rotate(0deg);
-    }to {
+    }
+
+    to {
         transform: rotate(360deg);
     }
 }

@@ -1,11 +1,17 @@
+////
+/// @group Inputs
+/// Estilos para interruptores (switches)
+////
+
+/// Grupo de interruptores
 .switch-grupo {
     input[type="checkbox"] {
         display: none;
     }
 
-    .switch-rojo, 
-    .switch-negro, 
-    .switch-verde, 
+    .switch-rojo,
+    .switch-negro,
+    .switch-verde,
     .switch-azul,
     .switch-gris {
         height: 15px;
@@ -15,6 +21,7 @@
         position: relative;
         display: inline-block;
         cursor: pointer;
+
         &::before {
             content: "";
             position: absolute;
@@ -27,6 +34,7 @@
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.37);
             transition: left 0.3s ease;
         }
+
         &::after {
             content: "";
             position: absolute;
@@ -40,71 +48,66 @@
             transition: all 0.5s ease;
             display: none;
         }
+
         &:active::after {
             display: inline-block;
         }
     }
 
-    input[type="checkbox"]:checked + .switch-rojo {
+    input[type="checkbox"]:checked+.switch-rojo {
         background-color: rgba(238, 0, 0, 0.5);
     }
-    
-    input[type="checkbox"]:checked + .switch-rojo::before{
+
+    input[type="checkbox"]:checked+.switch-rojo::before {
         background-color: rgb(238, 0, 0);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-rojo::after{
+
+    input[type="checkbox"]:checked+.switch-rojo::after {
         background-color: rgba(238, 0, 0, 0.123);
         left: calc(100% - 19px);
     }
-    
-    
-    input[type="checkbox"]:checked + .switch-negro {
+
+
+    input[type="checkbox"]:checked+.switch-negro {
         background-color: rgba(0, 0, 0, 0.5);
     }
-    
-    input[type="checkbox"]:checked + .switch-negro::before {
+
+    input[type="checkbox"]:checked+.switch-negro::before {
         background-color: rgb(0, 0, 0);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-negro::after {
+
+    input[type="checkbox"]:checked+.switch-negro::after {
         background-color: rgba(0, 0, 0, 0.123);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-verde {
+
+    input[type="checkbox"]:checked+.switch-verde {
         background-color: rgba(17, 187, 144, 0.5);
     }
-    
-    input[type="checkbox"]:checked + .switch-verde::before {
+
+    input[type="checkbox"]:checked+.switch-verde::before {
         background-color: rgb(17, 187, 144);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-verde::after {
+
+    input[type="checkbox"]:checked+.switch-verde::after {
         background-color: rgba(17, 187, 144, 0.200);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-azul {
+
+    input[type="checkbox"]:checked+.switch-azul {
         background-color: rgba(0, 72, 155, 0.5);
     }
-    
-    input[type="checkbox"]:checked + .switch-azul::before {
+
+    input[type="checkbox"]:checked+.switch-azul::before {
         background-color: rgb(0, 72, 155);
         left: calc(100% - 19px);
     }
-    
-    input[type="checkbox"]:checked + .switch-azul::after {
+
+    input[type="checkbox"]:checked+.switch-azul::after {
         background-color: rgba(0, 72, 155, 0.123);
         left: calc(100% - 19px);
     }
 }
-
-
-
-
-
-

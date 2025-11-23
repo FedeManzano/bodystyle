@@ -1,18 +1,24 @@
 @use "../globales/funciones";
 
+////
+/// @group Utilitarios de Texto
+/// Tamaños de fuente y altura de línea
+////
 
+/// Función auxiliar para múltiplos de 5
 @function multiplo5($num) {
-    @return $num % 5 == 0;
+    @return $num % 5==0;
 }
 
+/// Generador de tamaños de fuente (8px - 300px)
 @for $i from 8 through 300 {
     .fz-#{$i} {
         font-size: #{$i}px !important;
     }
 }
 
-
-@media (max-width: funciones.dameMedida(m)){
+/// Tamaños de fuente responsive (Medium)
+@media (max-width: funciones.dameMedida(m)) {
     @for $i from 8 through 300 {
         .fz-m-#{$i} {
             font-size: #{$i}px !important;
@@ -20,8 +26,8 @@
     }
 }
 
-
-@media (max-width: funciones.dameMedida(s)){
+/// Tamaños de fuente responsive (Small)
+@media (max-width: funciones.dameMedida(s)) {
     @for $i from 8 through 300 {
         .fz-s-#{$i} {
             font-size: #{$i}px !important;
@@ -29,7 +35,8 @@
     }
 }
 
-@media (max-width: funciones.dameMedida(xs)){
+/// Tamaños de fuente responsive (Extra Small)
+@media (max-width: funciones.dameMedida(xs)) {
     @for $i from 8 through 300 {
         .fz-xs-#{$i} {
             font-size: #{$i}px !important;
@@ -37,15 +44,15 @@
     }
 }
 
-
+/// Generador de altura de línea (15px - 100px)
 @for $i from 15 through 100 {
     .lh-#{$i} {
         line-height: #{$i}px !important;
     }
 }
 
-
-@media (max-width: funciones.dameMedida(m)){
+/// Altura de línea responsive (Medium)
+@media (max-width: funciones.dameMedida(m)) {
     @for $i from 15 through 100 {
         .lh-m-#{$i} {
             line-height: #{$i}px !important;
@@ -53,8 +60,8 @@
     }
 }
 
-
-@media (max-width: funciones.dameMedida(s)){
+/// Altura de línea responsive (Small)
+@media (max-width: funciones.dameMedida(s)) {
     @for $i from 15 through 100 {
         .lh-s-#{$i} {
             line-height: #{$i}px !important;
@@ -62,13 +69,11 @@
     }
 }
 
-@media (max-width: funciones.dameMedida(xs)){
+/// Altura de línea responsive (Extra Small)
+@media (max-width: funciones.dameMedida(xs)) {
     @for $i from 15 through 100 {
         .lh-xs-#{$i} {
             line-height: #{$i}px !important;
         }
     }
 }
-
-
-

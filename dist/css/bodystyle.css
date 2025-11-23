@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * BodyStyle v5.0.0
  * Copyright Federico Manzano
@@ -287,36 +286,43 @@ body {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2em;
   font-weight: 600;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.6em;
   font-weight: 500;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.2em;
   font-weight: 500;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.15em;
   font-weight: 500;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.1em;
   font-weight: 500;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1.1em;
   font-weight: 500;
 }
@@ -332,7 +338,8 @@ a:not[href] {
   border: none !important;
 }
 
-p, .p {
+p,
+.p {
   font-weight: 400;
   line-height: 155%;
 }
@@ -423,7 +430,6 @@ a.link:hover {
   }
 }
 
-/** Borde radio % y px*/
 .bor-rad-por-0 {
   border-radius: 0% !important;
 }
@@ -921,7 +927,6 @@ a.link:hover {
   border: 10px solid rgb(236, 236, 236) !important;
 }
 
-/** Bordes rojos */
 .bor-rojo-1 {
   border: 1px solid rgb(228, 22, 22) !important;
 }
@@ -1202,7 +1207,6 @@ a.link:hover {
   border: 10px solid rgb(164, 0, 0) !important;
 }
 
-/** Bordes rojos verdes*/
 .bor-verde-1 {
   border: 1px solid rgb(0, 124, 103) !important;
 }
@@ -1483,7 +1487,6 @@ a.link:hover {
   border: 10px solid rgb(0, 42, 48) !important;
 }
 
-/*bordes azules*/
 .bor-azul-1 {
   border: 1px solid rgb(16, 69, 183) !important;
 }
@@ -2491,9 +2494,6 @@ a.link:hover {
   margin: 0 10px;
 }
 
-/*
-    Trabajando con los textos 
-*/
 .a-c,
 .ta-c {
   text-align: center !important;
@@ -12202,14 +12202,6 @@ a.link:hover {
     align-content: stretch;
   }
 }
-/****
-    Grilla para acomodar los elementos dentro del sitio
-    Contiene 4 medidas disponibles
-    cxs: MxtraSmall para dispositivos de 400px de ancho max
-    cs: Small para dispositivos de 768px de ancho max
-    cm: Medium para dispositivos de 1024px de ancho max
-    cl: Large para dispositivos de mas de 1100px de ancho max
-*/
 .fila,
 .row {
   display: grid;
@@ -20554,7 +20546,8 @@ table thead tr th {
     white-space: nowrap !important;
   }
 }
-.borde-vertical thead tr td, .borde-vertical thead tr th,
+.borde-vertical thead tr td,
+.borde-vertical thead tr th,
 .borde-vertical tbody tr td,
 .borde-vertical tbody tr th,
 .vertical-border thead tr td,
@@ -21675,7 +21668,8 @@ table thead tr th {
   cursor: pointer;
 }
 .contenedor-efecto3d .adelante,
-.contenedor-efecto3d .atras-horizontal, .contenedor-efecto3d .atras-vertical {
+.contenedor-efecto3d .atras-horizontal,
+.contenedor-efecto3d .atras-vertical {
   transition: all 0.5s ease;
   width: 100%;
   height: 100%;
@@ -21684,7 +21678,8 @@ table thead tr th {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
 }
-.contenedor-efecto3d .atras-vertical, .contenedor-efecto3d .atras-horizontal {
+.contenedor-efecto3d .atras-vertical,
+.contenedor-efecto3d .atras-horizontal {
   position: absolute;
   z-index: 30000;
   top: 0;
@@ -24522,7 +24517,12 @@ input.btn-cover-lg-o {
   max-width: 385px;
   min-width: 295px;
 }
-.card .card-simple-dark h1, .card .card-simple-dark h2, .card .card-simple-dark h3, .card .card-simple-dark h4, .card .card-simple-dark h5, .card .card-simple-dark h6,
+.card .card-simple-dark h1,
+.card .card-simple-dark h2,
+.card .card-simple-dark h3,
+.card .card-simple-dark h4,
+.card .card-simple-dark h5,
+.card .card-simple-dark h6,
 .card .card-simple-light h1,
 .card .card-simple-light h2,
 .card .card-simple-light h3,
@@ -24548,10 +24548,16 @@ input.btn-cover-lg-o {
   background-color: rgb(29, 29, 29) !important;
   border: 2px solid rgb(98, 100, 119) !important;
 }
-.card .card-simple-dark h1, .card .card-simple-dark h2, .card .card-simple-dark h3, .card .card-simple-dark h4, .card .card-simple-dark h5, .card .card-simple-dark h6 {
+.card .card-simple-dark h1,
+.card .card-simple-dark h2,
+.card .card-simple-dark h3,
+.card .card-simple-dark h4,
+.card .card-simple-dark h5,
+.card .card-simple-dark h6 {
   color: rgb(205, 205, 205);
 }
-.card .card-simple-dark p, .card .card-simple-dark span {
+.card .card-simple-dark p,
+.card .card-simple-dark span {
   color: rgb(186, 186, 186);
 }
 .card .card-simple-dark small {
@@ -24561,10 +24567,16 @@ input.btn-cover-lg-o {
   background-color: rgb(248, 248, 248) !important;
   border: 2px solid rgba(60, 59, 65, 0.685) !important;
 }
-.card .card-simple-light h1, .card .card-simple-light h2, .card .card-simple-light h3, .card .card-simple-light h4, .card .card-simple-light h5, .card .card-simple-light h6 {
+.card .card-simple-light h1,
+.card .card-simple-light h2,
+.card .card-simple-light h3,
+.card .card-simple-light h4,
+.card .card-simple-light h5,
+.card .card-simple-light h6 {
   color: rgb(20, 20, 20);
 }
-.card .card-simple-light p, .card .card-simple-light span {
+.card .card-simple-light p,
+.card .card-simple-light span {
   color: rgb(40, 40, 40);
 }
 .card .card-simple-light small {
@@ -24592,7 +24604,12 @@ input.btn-cover-lg-o {
   min-width: 100%;
   min-height: 100%;
 }
-.card .card-icon-dark h1, .card .card-icon-dark h2, .card .card-icon-dark h3, .card .card-icon-dark h4, .card .card-icon-dark h5, .card .card-icon-dark h6,
+.card .card-icon-dark h1,
+.card .card-icon-dark h2,
+.card .card-icon-dark h3,
+.card .card-icon-dark h4,
+.card .card-icon-dark h5,
+.card .card-icon-dark h6,
 .card .card-icon-light h1,
 .card .card-icon-light h2,
 .card .card-icon-light h3,
@@ -24618,10 +24635,16 @@ input.btn-cover-lg-o {
   background-color: rgb(29, 29, 29) !important;
   border: 2px solid rgb(98, 100, 119) !important;
 }
-.card .card-icon-dark h1, .card .card-icon-dark h2, .card .card-icon-dark h3, .card .card-icon-dark h4, .card .card-icon-dark h5, .card .card-icon-dark h6 {
+.card .card-icon-dark h1,
+.card .card-icon-dark h2,
+.card .card-icon-dark h3,
+.card .card-icon-dark h4,
+.card .card-icon-dark h5,
+.card .card-icon-dark h6 {
   color: rgb(205, 205, 205);
 }
-.card .card-icon-dark p, .card .card-icon-dark span {
+.card .card-icon-dark p,
+.card .card-icon-dark span {
   color: rgb(186, 186, 186);
 }
 .card .card-icon-dark small {
@@ -24631,10 +24654,16 @@ input.btn-cover-lg-o {
   background-color: rgb(248, 248, 248) !important;
   border: 2px solid rgba(60, 59, 65, 0.685) !important;
 }
-.card .card-icon-light h1, .card .card-icon-light h2, .card .card-icon-light h3, .card .card-icon-light h4, .card .card-icon-light h5, .card .card-icon-light h6 {
+.card .card-icon-light h1,
+.card .card-icon-light h2,
+.card .card-icon-light h3,
+.card .card-icon-light h4,
+.card .card-icon-light h5,
+.card .card-icon-light h6 {
   color: rgb(20, 20, 20);
 }
-.card .card-icon-light p, .card .card-icon-light span {
+.card .card-icon-light p,
+.card .card-icon-light span {
   color: rgb(40, 40, 40);
 }
 .card .card-icon-light small {
@@ -24672,7 +24701,12 @@ input.btn-cover-lg-o {
   height: 132px !important;
   border-radius: 50%;
 }
-.card .card-perfil-dark h1, .card .card-perfil-dark h2, .card .card-perfil-dark h3, .card .card-perfil-dark h4, .card .card-perfil-dark h5, .card .card-perfil-dark h6,
+.card .card-perfil-dark h1,
+.card .card-perfil-dark h2,
+.card .card-perfil-dark h3,
+.card .card-perfil-dark h4,
+.card .card-perfil-dark h5,
+.card .card-perfil-dark h6,
 .card .card-perfil-light h1,
 .card .card-perfil-light h2,
 .card .card-perfil-light h3,
@@ -24700,7 +24734,12 @@ input.btn-cover-lg-o {
   background-color: rgb(29, 29, 29) !important;
   border: 2px solid rgb(98, 100, 119) !important;
 }
-.card .card-perfil-dark h1, .card .card-perfil-dark h2, .card .card-perfil-dark h3, .card .card-perfil-dark h4, .card .card-perfil-dark h5, .card .card-perfil-dark h6 {
+.card .card-perfil-dark h1,
+.card .card-perfil-dark h2,
+.card .card-perfil-dark h3,
+.card .card-perfil-dark h4,
+.card .card-perfil-dark h5,
+.card .card-perfil-dark h6 {
   color: rgb(205, 205, 205);
 }
 .card .card-perfil-dark .divisor {
@@ -24720,7 +24759,12 @@ input.btn-cover-lg-o {
   background-color: rgb(248, 248, 248) !important;
   border: 2px solid rgba(60, 59, 65, 0.685) !important;
 }
-.card .card-perfil-light h1, .card .card-perfil-light h2, .card .card-perfil-light h3, .card .card-perfil-light h4, .card .card-perfil-light h5, .card .card-perfil-light h6 {
+.card .card-perfil-light h1,
+.card .card-perfil-light h2,
+.card .card-perfil-light h3,
+.card .card-perfil-light h4,
+.card .card-perfil-light h5,
+.card .card-perfil-light h6 {
   color: rgb(20, 20, 20);
 }
 .card .card-perfil-light .divisor {
@@ -24764,7 +24808,12 @@ input.btn-cover-lg-o {
   min-width: 100% !important;
   border-radius: 10px;
 }
-.card .card-description-dark h1, .card .card-description-dark h2, .card .card-description-dark h3, .card .card-description-dark h4, .card .card-description-dark h5, .card .card-description-dark h6,
+.card .card-description-dark h1,
+.card .card-description-dark h2,
+.card .card-description-dark h3,
+.card .card-description-dark h4,
+.card .card-description-dark h5,
+.card .card-description-dark h6,
 .card .card-description-light h1,
 .card .card-description-light h2,
 .card .card-description-light h3,
@@ -24790,7 +24839,12 @@ input.btn-cover-lg-o {
   background-color: rgb(29, 29, 29) !important;
   border: 2px solid rgb(98, 100, 119) !important;
 }
-.card .card-description-dark h1, .card .card-description-dark h2, .card .card-description-dark h3, .card .card-description-dark h4, .card .card-description-dark h5, .card .card-description-dark h6 {
+.card .card-description-dark h1,
+.card .card-description-dark h2,
+.card .card-description-dark h3,
+.card .card-description-dark h4,
+.card .card-description-dark h5,
+.card .card-description-dark h6 {
   color: rgb(205, 205, 205);
 }
 .card .card-description-dark p {
@@ -24805,7 +24859,12 @@ input.btn-cover-lg-o {
   background-color: rgb(248, 248, 248) !important;
   border: 2px solid rgba(60, 59, 65, 0.685) !important;
 }
-.card .card-description-light h1, .card .card-description-light h2, .card .card-description-light h3, .card .card-description-light h4, .card .card-description-light h5, .card .card-description-light h6 {
+.card .card-description-light h1,
+.card .card-description-light h2,
+.card .card-description-light h3,
+.card .card-description-light h4,
+.card .card-description-light h5,
+.card .card-description-light h6 {
   color: rgb(20, 20, 20);
 }
 .card .card-description-light p {
@@ -25572,11 +25631,6 @@ input.btn-cover-lg-o {
   left: calc(100% - 19px);
 }
 
-/**
-    Input de tipo texto e email
-    con la clase validación para poder mostrar 
-    que la informacion del campo es erronea
-*/
 input[type=text],
 input[type=email],
 input[type=number],
@@ -26032,7 +26086,8 @@ textarea::placeholder {
   color: black;
 }
 
-.checkbox, .radiobtn {
+.checkbox,
+.radiobtn {
   display: inline-block;
   font-size: 1em;
   padding: 5px;
@@ -26042,10 +26097,12 @@ textarea::placeholder {
   user-select: none;
   color: rgb(26, 26, 26);
 }
-.checkbox:active, .radiobtn:active {
+.checkbox:active,
+.radiobtn:active {
   color: black;
 }
-.checkbox::before, .radiobtn::before {
+.checkbox::before,
+.radiobtn::before {
   content: "";
   position: absolute;
   width: 1em;
@@ -26055,7 +26112,8 @@ textarea::placeholder {
   left: 0;
   top: 5px;
 }
-.checkbox::after, .radiobtn::after {
+.checkbox::after,
+.radiobtn::after {
   content: "";
   position: absolute;
   left: 0;
@@ -26567,7 +26625,8 @@ textarea::placeholder {
   .form-grupo-linea *:last-child:not(input):not(select):not(.input-icon) {
     margin-left: 0;
   }
-  .form-grupo-linea input, .form-grupo-linea .input-icon {
+  .form-grupo-linea input,
+  .form-grupo-linea .input-icon {
     margin: 0;
     margin-bottom: 10px;
   }

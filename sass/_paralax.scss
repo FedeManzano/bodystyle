@@ -1,11 +1,17 @@
+////
+/// @group Efectos y Dinámicas
+/// Efecto Parallax
+////
+
+/// Contenedor para efecto parallax
 .paralax-contenedor {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
+/// Elemento con efecto parallax
 .paralax {
     width: 100%;
     height: 100%;
 }
-

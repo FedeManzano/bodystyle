@@ -2,205 +2,264 @@
 ///////////////////////// VARIABLES DE TODA LA LIBRERÍA //////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-
+////
+/// @group Tipografía
+/// Configuración de fuentes y tamaños de texto
+////
 
 // ************************************** //
 // ***************** TEXTO ************** //
 // ************************************** //
 
-// Listado de fuentes 
-$font-family:       'Roboto';
+/// Fuente principal de la aplicación
+/// @type String
+$font-family: 'Roboto';
 
-// Tamaños de letras
-$letras:(
-                    h1: 2.0em,
-                    h2: 1.6em,
-                    h3: 1.2em,
-                    h4: 1.15em,
-                    h5: 1.1em,
-                    h6: 1.1em,
-                    p: 1.1em,
-                    span: 1em,
-                    a: 1em
+/// Mapa de tamaños de fuentes para diferentes elementos
+/// @type Map
+$letras: (
+    h1: 2.0em,
+    h2: 1.6em,
+    h3: 1.2em,
+    h4: 1.15em,
+    h5: 1.1em,
+    h6: 1.1em,
+    p: 1.1em,
+    span: 1em,
+    a: 1em
 );
 
+/// Mapa de grosores de fuente
+/// @type Map
 $grosor: (
-                    "100": 100,
-                    "200": 200,
-                    "300": 300,
-                    "400": 400,
-                    "500": 500,
-                    "600": 600,
-                    "700": 700,
-                    "800": 800,
-                    "900": 900,
+    "100": 100,
+    "200": 200,
+    "300": 300,
+    "400": 400,
+    "500": 500,
+    "600": 600,
+    "700": 700,
+    "800": 800,
+    "900": 900,
 );
 
 // ************************************** //
 // ********** COLORES DE FONDO ********** //
 // ************************************** //
 
+////
+/// @group Colores
+/// Paleta de colores de la aplicación
+////
+
 // *** Tonalidades de rojo*** //
-$fd-rojo:           rgb(228, 22, 22);
-$fd-rojo-c:         rgb(255, 40, 40);
-$fd-rojo-t:         rgba(255, 51, 0, 0.3);
-$fd-rojo-o-1:       rgb(164, 0, 0);
-$fd-rojo-o-2:       rgb(141, 0, 0);
-$fd-rojo-o-3:       rgb(105, 0, 0);
-$fd-rojo-o-4:       rgb(73, 0, 0);
-$fd-rojo-an:        rgb(255, 17, 0);
-$fd-rojo-ro:        rgb(175, 52, 89);
+/// Color rojo principal
+/// @type Color
+$fd-rojo: rgb(228, 22, 22);
+$fd-rojo-c: rgb(255, 40, 40);
+$fd-rojo-t: rgba(255, 51, 0, 0.3);
+$fd-rojo-o-1: rgb(164, 0, 0);
+$fd-rojo-o-2: rgb(141, 0, 0);
+$fd-rojo-o-3: rgb(105, 0, 0);
+$fd-rojo-o-4: rgb(73, 0, 0);
+$fd-rojo-an: rgb(255, 17, 0);
+$fd-rojo-ro: rgb(175, 52, 89);
 
 // *** Tonalidades de Rosa **** //
-$fd-rosa:           rgb(231, 20, 80);
-$fd-rosa-c:         rgb(255, 82, 134);
-$fd-rosa-t:         rgba(197, 0, 56, 0.3);
-$fd-rosa-o-1:       rgb(187, 0, 56);
-$fd-rosa-o-2:       rgb(167, 0, 56);
-$fd-rosa-o-3:       rgb(147, 0, 56);
-$fd-rosa-o-4:       rgb(127, 0, 56);
+/// Color rosa principal
+/// @type Color
+$fd-rosa: rgb(231, 20, 80);
+$fd-rosa-c: rgb(255, 82, 134);
+$fd-rosa-t: rgba(197, 0, 56, 0.3);
+$fd-rosa-o-1: rgb(187, 0, 56);
+$fd-rosa-o-2: rgb(167, 0, 56);
+$fd-rosa-o-3: rgb(147, 0, 56);
+$fd-rosa-o-4: rgb(127, 0, 56);
 
 
 // **** Tonalidades de naranja *** //
-$fd-naranja:        rgb(212, 72, 16);
-$fd-naranja-c:      rgb(247, 88, 48);
-$fd-naranja-t:      rgba(212, 71, 16, 0.3);
-$fd-naranja-ro:     rgb(212, 45, 16);
-$fd-naranja-am:     rgb(240, 116, 0);
-$fd-naranja-o-1:    rgb(187, 32, 0);
-$fd-naranja-o-2:    rgb(167, 32, 0);
-$fd-naranja-o-3:    rgb(147, 32, 0);
-$fd-naranja-o-4:    rgb(127, 32, 0);
+/// Color naranja principal
+/// @type Color
+$fd-naranja: rgb(212, 72, 16);
+$fd-naranja-c: rgb(247, 88, 48);
+$fd-naranja-t: rgba(212, 71, 16, 0.3);
+$fd-naranja-ro: rgb(212, 45, 16);
+$fd-naranja-am: rgb(240, 116, 0);
+$fd-naranja-o-1: rgb(187, 32, 0);
+$fd-naranja-o-2: rgb(167, 32, 0);
+$fd-naranja-o-3: rgb(147, 32, 0);
+$fd-naranja-o-4: rgb(127, 32, 0);
 
 
 // *** Tonaalidadesd de amarillo *** //
-$fd-amarillo:       rgb(255, 208, 0);
-$fd-amarillo-c:     rgb(255, 255, 85);
-$fd-amarillo-an:    rgb(255, 166, 0);
-$fd-amarillo-ve:    rgb(182, 231, 4);
-$fd-amarillo-t:     rgba(255, 217, 0, 0.3);
-$fd-amarillo-o-1:   rgb(187, 110, 0);
-$fd-amarillo-o-2:   rgb(167, 100, 0);
-$fd-amarillo-o-3:   rgb(147, 100, 0);
-$fd-amarillo-o-4:   rgb(137, 100, 0);
+/// Color amarillo principal
+/// @type Color
+$fd-amarillo: rgb(255, 208, 0);
+$fd-amarillo-c: rgb(255, 255, 85);
+$fd-amarillo-an: rgb(255, 166, 0);
+$fd-amarillo-ve: rgb(182, 231, 4);
+$fd-amarillo-t: rgba(255, 217, 0, 0.3);
+$fd-amarillo-o-1: rgb(187, 110, 0);
+$fd-amarillo-o-2: rgb(167, 100, 0);
+$fd-amarillo-o-3: rgb(147, 100, 0);
+$fd-amarillo-o-4: rgb(137, 100, 0);
 
 
 // *** Tonalidades de verde *** //
-$fd-verde:          rgb(0, 124, 103);
-$fd-verde-c:        rgb(0, 197, 164);
-$fd-verde-o-1:      rgb(0, 116, 94);
-$fd-verde-o-2:      rgb(0, 96, 85);
-$fd-verde-o-3:      rgb(0, 85, 71);
-$fd-verde-o-4:      rgb(0, 59, 56);
-$fd-verde-t:        rgba(0, 110, 92, .3);
-$fd-verde-az:       rgb(0, 42, 48);
-$fd-verde-t:        rgba(0, 110, 92, .7);
-$fd-verde-am:       rgb(130, 230, 0);
+/// Color verde principal
+/// @type Color
+$fd-verde: rgb(0, 124, 103);
+$fd-verde-c: rgb(0, 197, 164);
+$fd-verde-o-1: rgb(0, 116, 94);
+$fd-verde-o-2: rgb(0, 96, 85);
+$fd-verde-o-3: rgb(0, 85, 71);
+$fd-verde-o-4: rgb(0, 59, 56);
+$fd-verde-t: rgba(0, 110, 92, .3);
+$fd-verde-az: rgb(0, 42, 48);
+$fd-verde-t: rgba(0, 110, 92, .7);
+$fd-verde-am: rgb(130, 230, 0);
 
 
 // *** Tonalidades azul *** //
-$fd-azul:           rgb(16, 69, 183);
-$fd-azul-c:         rgb(0, 108, 255);
-$fd-azul-o-1:       rgb(0, 35, 110);
-$fd-azul-o-2:       rgb(0, 30, 94);
-$fd-azul-o-3:       rgb(0, 25, 85);
-$fd-azul-o-4:       rgb(0, 15, 48);
-$fd-azul-ve:        rgb(6, 38, 63);
-$fd-azul-ve-s:      rgb(0,44,56);
-$fd-azul-ve-c:      rgb(19, 67, 80);
-$fd-azul-t:         rgba(16, 69, 183, .3);
-$fd-azul-vi:        rgb(41, 16, 183);
+/// Color azul principal
+/// @type Color
+$fd-azul: rgb(16, 69, 183);
+$fd-azul-c: rgb(0, 108, 255);
+$fd-azul-o-1: rgb(0, 35, 110);
+$fd-azul-o-2: rgb(0, 30, 94);
+$fd-azul-o-3: rgb(0, 25, 85);
+$fd-azul-o-4: rgb(0, 15, 48);
+$fd-azul-ve: rgb(6, 38, 63);
+$fd-azul-ve-s: rgb(0, 44, 56);
+$fd-azul-ve-c: rgb(19, 67, 80);
+$fd-azul-t: rgba(16, 69, 183, .3);
+$fd-azul-vi: rgb(41, 16, 183);
 
 // *** Tonalidades de gris *** //
-$fd-gris:           rgb(128, 128, 128);
-$fd-gris-c:         rgb(236, 236, 236);
-$fd-gris-o-1:       rgb(51, 51, 51);
-$fd-gris-o-2:       rgb(41, 41, 41);
-$fd-gris-o-3:       rgb(31, 31, 31);
-$fd-gris-o-4:       rgb(21, 21, 21);
-$fd-gris-az-c:      rgb(40, 46, 66);
-$fd-gris-az:        rgb(30, 32, 41);
-$fd-gris-az-o:      rgb(21, 22, 26);
-$fd-gris-n:         rgb(17, 17, 17);
-$fd-gris-t:         rgba(160, 160, 160, 0.3);
-$fd-blanco:         rgb(255,255,255);
-$fd-negro:          rgb(0, 0, 0);
-$gris-input:        rgb(163, 163, 163);
+/// Color gris principal
+/// @type Color
+$fd-gris: rgb(128, 128, 128);
+$fd-gris-c: rgb(236, 236, 236);
+$fd-gris-o-1: rgb(51, 51, 51);
+$fd-gris-o-2: rgb(41, 41, 41);
+$fd-gris-o-3: rgb(31, 31, 31);
+$fd-gris-o-4: rgb(21, 21, 21);
+$fd-gris-az-c: rgb(40, 46, 66);
+$fd-gris-az: rgb(30, 32, 41);
+$fd-gris-az-o: rgb(21, 22, 26);
+$fd-gris-n: rgb(17, 17, 17);
+$fd-gris-t: rgba(160, 160, 160, 0.3);
+$fd-blanco: rgb(255, 255, 255);
+$fd-negro: rgb(0, 0, 0);
+$gris-input: rgb(163, 163, 163);
 
 
 // *** Tonalidades de violeta *** //
-$fd-violeta:        rgb(115, 3, 185);
-$fd-violeta-c:      rgb(132, 2, 218);
-$fd-violeta-o-1:    rgb(80, 3, 124);
-$fd-violeta-o-2:    rgb(71, 0, 94);
-$fd-violeta-o-3:    rgb(58, 1, 63);
-$fd-violeta-o-4:    rgb(28, 0, 37);
-$fd-violeta-t:      rgba(30, 2, 32, 0.3);
-$fd-violeta-az:     rgb(16, 1, 58);
-$fd-violeta-ro:     rgb(70, 1, 76);
+/// Color violeta principal
+/// @type Color
+$fd-violeta: rgb(115, 3, 185);
+$fd-violeta-c: rgb(132, 2, 218);
+$fd-violeta-o-1: rgb(80, 3, 124);
+$fd-violeta-o-2: rgb(71, 0, 94);
+$fd-violeta-o-3: rgb(58, 1, 63);
+$fd-violeta-o-4: rgb(28, 0, 37);
+$fd-violeta-t: rgba(30, 2, 32, 0.3);
+$fd-violeta-az: rgb(16, 1, 58);
+$fd-violeta-ro: rgb(70, 1, 76);
 
 
 // ************************************** //
 // ********** COLORES BOTONES *********** //
 // ************************************** //
 
-$btn-rojo:          rgb(187, 24, 24);
-$btn-rojo-hover:    rgb(161, 35, 35);
-$btn-rojo-activo:   rgb(187, 24, 24);
+////
+/// @group Botones
+/// Variables de configuración para los botones
+////
+
+/// Color de fondo para botón rojo
+/// @type Color
+$btn-rojo: rgb(187, 24, 24);
+$btn-rojo-hover: rgb(161, 35, 35);
+$btn-rojo-activo: rgb(187, 24, 24);
 $btn-rojo-cargando: rgba(143, 0, 0, 0.5);
-$btn-rojo-sombra:   rgba(199, 60, 60, 0.7);
+$btn-rojo-sombra: rgba(199, 60, 60, 0.7);
 
 // Boton Verde
-$btn-verde:         rgb(0, 156, 128);
-$btn-verde-hover:   rgb(0, 136, 111);
-$btn-verde-activo:  rgb(0, 156, 128);
-$btn-verde-cargando:rgba(0, 156, 128, 0.5); 
-$btn-verde-sombra:  rgba(37, 145, 125, 0.7); 
+/// Color de fondo para botón verde
+/// @type Color
+$btn-verde: rgb(0, 156, 128);
+$btn-verde-hover: rgb(0, 136, 111);
+$btn-verde-activo: rgb(0, 156, 128);
+$btn-verde-cargando: rgba(0, 156, 128, 0.5);
+$btn-verde-sombra: rgba(37, 145, 125, 0.7);
 
 // Boton Azul
-$btn-azul:          rgb(0, 108, 255 );
-$btn-azul-hover:    rgb(0, 84, 201);
-$btn-azul-activo:   rgb(0, 108, 255 );
-$btn-azul-cargando: rgb(0, 108, 255 , 0.5); 
-$btn-azul-sombra:   rgba(58, 111, 185, 0.7); 
+/// Color de fondo para botón azul
+/// @type Color
+$btn-azul: rgb(0, 108, 255);
+$btn-azul-hover: rgb(0, 84, 201);
+$btn-azul-activo: rgb(0, 108, 255);
+$btn-azul-cargando: rgb(0, 108, 255, 0.5);
+$btn-azul-sombra: rgba(58, 111, 185, 0.7);
 
 // Boton Gris
-$btn-gris:          rgb(196, 196, 196);
-$btn-gris-hover:    rgb(63, 63, 63);
-$btn-gris-activo:   rgb(10, 10, 10);
-$btn-gris-cargando: rgba(233, 233, 233, 0.5); 
-$btn-gris-sombra:   rgba(65, 65, 65, 0.7); 
+/// Color de fondo para botón gris
+/// @type Color
+$btn-gris: rgb(196, 196, 196);
+$btn-gris-hover: rgb(63, 63, 63);
+$btn-gris-activo: rgb(10, 10, 10);
+$btn-gris-cargando: rgba(233, 233, 233, 0.5);
+$btn-gris-sombra: rgba(65, 65, 65, 0.7);
 
-$btn-negro:         rgb(26, 27, 36);
-$btn-negro-hover:   rgb(0, 0, 0);
-$btn-negro-activo:  rgb(0, 0, 0);
-$btn-negro-cargando:rgba(65, 65, 65, 0.5); 
-$btn-negro-sombra:  rgba(65, 65, 65, .7); 
+/// Color de fondo para botón negro
+/// @type Color
+$btn-negro: rgb(26, 27, 36);
+$btn-negro-hover: rgb(0, 0, 0);
+$btn-negro-activo: rgb(0, 0, 0);
+$btn-negro-cargando: rgba(65, 65, 65, 0.5);
+$btn-negro-sombra: rgba(65, 65, 65, .7);
 
-$btn-blanco:        rgb(255, 255, 255);
-$btn-blanco-hover:  rgb(241, 241, 241);
+/// Color de fondo para botón blanco
+/// @type Color
+$btn-blanco: rgb(255, 255, 255);
+$btn-blanco-hover: rgb(241, 241, 241);
 $btn-blanco-activo: rgb(202, 202, 202);
-$btn-blanco-cargando:rgba(255, 255, 255, 0.5); 
-$btn-blanco-sombra: rgba(255, 255, 255, 0.7); 
+$btn-blanco-cargando: rgba(255, 255, 255, 0.5);
+$btn-blanco-sombra: rgba(255, 255, 255, 0.7);
 
 
 // ************************************** //
 // *********** CONFIGURACIÓN ************ //
 // ************************************** //
 
-$tamaños:(
-            xs: 400px,
-            s: 770px,
-            m: 1030px,
-            l: 1200px, /// Mayor 
+////
+/// @group Configuración
+/// Variables globales de configuración (Breakpoints, Z-Index)
+////
+
+/// Mapa de breakpoints para diseño responsivo
+/// @type Map
+$tamaños: (
+    xs: 400px,
+    s: 770px,
+    m: 1030px,
+    l: 1200px,
+    /// Mayor 
 );
 
-$superposicion:(
-            ms: 100000, // superposición de los menus superiores
-            ml: 10000,  // superposición de los menus laterales
-            co: 3,      // superposición de los complementos
-            bf: 30000,  // superposición de los complementos
-            dd: 1000000 // superposición de los dropdown
+/// Mapa de z-index para controlar la superposición de elementos
+/// @type Map
+$superposicion: (
+    ms: 100000,
+    // superposición de los menus superiores
+    ml: 10000,
+    // superposición de los menus laterales
+    co: 3,
+    // superposición de los complementos
+    bf: 30000,
+    // superposición de los complementos
+    dd: 1000000 // superposición de los dropdown
 );
 
 
@@ -208,113 +267,127 @@ $superposicion:(
 // ************** ALERTAS *************** //
 // ************************************** //
 
+////
+/// @group Alertas
+/// Configuración de estilos para alertas
+////
+
 //**** Alertas Borde Izquierdo
 // Generales
-$alarta-fz:             1,0625em;
-$alerta-padding:        15px;
-$alerta-bg:             rgb(250, 250, 250) !important;
-$alerta-borde:          1px solid rgb(204, 204, 204) !important;
-$alerta-bor-rad:        5px;
-$alerta-lh:             1,5625em;
-$alerta-fw:             400; 
+$alarta-fz: 1, 0625em;
+$alerta-padding: 15px;
+$alerta-bg: rgb(250, 250, 250) !important;
+$alerta-borde: 1px solid rgb(204, 204, 204) !important;
+$alerta-bor-rad: 5px;
+$alerta-lh: 1, 5625em;
+$alerta-fw: 400;
 
 // Individuales
-$alerta-roja-borde:     4px solid $fd-rojo      !important;
-$alerta-azul-borde:     4px solid $fd-azul      !important;
-$alerta-verde-borde:    4px solid $fd-verde     !important;
-$alerta-negra-borde:    4px solid $fd-negro     !important;
-$alerta-blanca-borde:   4px solid $fd-blanco    !important;
-$alerta-gris-borde:     4px solid $fd-gris      !important;
+$alerta-roja-borde: 4px solid $fd-rojo !important;
+$alerta-azul-borde: 4px solid $fd-azul !important;
+$alerta-verde-borde: 4px solid $fd-verde !important;
+$alerta-negra-borde: 4px solid $fd-negro !important;
+$alerta-blanca-borde: 4px solid $fd-blanco !important;
+$alerta-gris-borde: 4px solid $fd-gris !important;
 
 
 //**** Alertas opacas 
-$alerta-op-padding:     15px;
-$alerta-op-fz:          1em;
-$alerta-op-lh:          1,5625em;
-$alerta-op-fw:          400;
-$alerta-op-bor-rad:     3px;
+$alerta-op-padding: 15px;
+$alerta-op-fz: 1em;
+$alerta-op-lh: 1, 5625em;
+$alerta-op-fw: 400;
+$alerta-op-bor-rad: 3px;
 
 // Alertas Opacas Colores
-$alerta-op-rojo-bg:     rgb(255, 223, 223);
-$alerta-op-rojo-borde:  1px solid $fd-rojo;
-$alerta-op-rojo-color:  $fd-rojo;
+$alerta-op-rojo-bg: rgb(255, 223, 223);
+$alerta-op-rojo-borde: 1px solid $fd-rojo;
+$alerta-op-rojo-color: $fd-rojo;
 
 
-$alerta-op-azul-bg:     rgb(225, 236, 252);
-$alerta-op-azul-borde:  1px solid $fd-azul;
-$alerta-op-azul-color:  $fd-azul;
+$alerta-op-azul-bg: rgb(225, 236, 252);
+$alerta-op-azul-borde: 1px solid $fd-azul;
+$alerta-op-azul-color: $fd-azul;
 
 
-$alerta-op-verde-bg:     rgb(226, 255, 226);
-$alerta-op-verde-borde:  1px solid $fd-verde;
-$alerta-op-verde-color:  $fd-verde;
+$alerta-op-verde-bg: rgb(226, 255, 226);
+$alerta-op-verde-borde: 1px solid $fd-verde;
+$alerta-op-verde-color: $fd-verde;
 
-$alerta-op-gris-bg:     rgb(240, 240, 240);
-$alerta-op-gris-borde:  1px solid $fd-gris;
-$alerta-op-gris-color:  $fd-gris-o-1;
+$alerta-op-gris-bg: rgb(240, 240, 240);
+$alerta-op-gris-borde: 1px solid $fd-gris;
+$alerta-op-gris-color: $fd-gris-o-1;
 
-$alerta-op-blanco-bg:     rgb(255, 255, 255);
-$alerta-op-blanco-borde:  1px solid $fd-gris;
-$alerta-op-blanco-color:  $fd-gris;
+$alerta-op-blanco-bg: rgb(255, 255, 255);
+$alerta-op-blanco-borde: 1px solid $fd-gris;
+$alerta-op-blanco-color: $fd-gris;
 
-$alerta-op-negro-bg:     rgb(212, 212, 212);
-$alerta-op-negro-borde:  1px solid $fd-negro;
-$alerta-op-negro-color:  $fd-negro;
+$alerta-op-negro-bg: rgb(212, 212, 212);
+$alerta-op-negro-borde: 1px solid $fd-negro;
+$alerta-op-negro-color: $fd-negro;
 
 // ************************************** //
 // ************** BADGES **************** //
 // ************************************** //
 
+////
+/// @group Badges
+/// Configuración de estilos para badges y etiquetas
+////
 
 // ****** Badge Notificaciones ******* //
-$b-fz:         75%;
-$b-grosor:     700;
-$b-bor-rad:    0.25rem; 
+$b-fz: 75%;
+$b-grosor: 700;
+$b-bor-rad: 0.25rem;
 
 // ****** Badge Notificaciones Colores ****** //
-$b-verde:      rgb(30, 190, 142);
-$b-azul:       rgb(0, 71, 153);
-$b-rojo:       rgb(212, 28, 28);
-$b-gris:       rgb(63, 63, 63);
-$b-negro:      rgb(0, 0, 0);
-$b-blanco:     rgb(255, 255, 255);
+$b-verde: rgb(30, 190, 142);
+$b-azul: rgb(0, 71, 153);
+$b-rojo: rgb(212, 28, 28);
+$b-gris: rgb(63, 63, 63);
+$b-negro: rgb(0, 0, 0);
+$b-blanco: rgb(255, 255, 255);
 
 
 // ****** Badge Etiquetas ******* //
-$b-etiqueta-fz:         14px;
-$b-etiqueta-altura:     30px;
-$b-etiqueta-minw:       170px;
-$b-etiqueta-maxw:       200px;
+$b-etiqueta-fz: 14px;
+$b-etiqueta-altura: 30px;
+$b-etiqueta-minw: 170px;
+$b-etiqueta-maxw: 200px;
 
 // ****** Badge Etiquetas Colores ******* //
-$b-etiqueta-rojo:       red;
-$b-etiqueta-rojo-h:     rgb(201, 0, 0);
-$b-etiqueta-fw:         300;
+$b-etiqueta-rojo: red;
+$b-etiqueta-rojo-h: rgb(201, 0, 0);
+$b-etiqueta-fw: 300;
 
 
-$b-etiqueta-verde:      rgb(0, 109, 94);
-$b-etiqueta-verde-h:    rgb(0, 77, 66);
+$b-etiqueta-verde: rgb(0, 109, 94);
+$b-etiqueta-verde-h: rgb(0, 77, 66);
 
-$b-etiqueta-azul:       rgb(34, 72, 145);
-$b-etiqueta-azul-h:     rgb(16, 44, 95);
-
-
-$b-etiqueta-blanco:     rgb(255, 255, 255);
-$b-etiqueta-blanco-h:   rgb(228, 228, 228);
+$b-etiqueta-azul: rgb(34, 72, 145);
+$b-etiqueta-azul-h: rgb(16, 44, 95);
 
 
-$b-etiqueta-negro:      rgb(0, 0, 0);
-$b-etiqueta-negro-h:    rgb(29, 29, 29);
+$b-etiqueta-blanco: rgb(255, 255, 255);
+$b-etiqueta-blanco-h: rgb(228, 228, 228);
 
 
-$b-etiqueta-gris:       rgb(231, 231, 231);
-$b-etiqueta-gris-h:     rgb(196, 196, 196);
+$b-etiqueta-negro: rgb(0, 0, 0);
+$b-etiqueta-negro-h: rgb(29, 29, 29);
+
+
+$b-etiqueta-gris: rgb(231, 231, 231);
+$b-etiqueta-gris-h: rgb(196, 196, 196);
 
 
 // ************************************** //
 // ************** COLECCIONES *********** //
 // ************************************** //
 
-$borde:                 1px solid rgba(0, 0, 0, 0.123);
-$borde-radio-cabecera:  5px 5px 0 0;
-$borde-radio-pie:       0 0 5px 5px;
+////
+/// @group Colecciones
+/// Estilos para listas y colecciones
+////
+
+$borde: 1px solid rgba(0, 0, 0, 0.123);
+$borde-radio-cabecera: 5px 5px 0 0;
+$borde-radio-pie: 0 0 5px 5px;

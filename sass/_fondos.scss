@@ -1,6 +1,11 @@
 @use "globales/variables";
 
+////
+/// @group Fondos
+/// Clases de utilidad para colores de fondo
+////
 
+/// Fondo rojo
 .fd-rojo,
 .bg-red {
     background-color: variables.$fd-rojo !important;
@@ -8,31 +13,35 @@
 
 .fd-rojo-c,
 .bg-red-s {
-    background-color: variables.$fd-rojo-c !important;;
+    background-color: variables.$fd-rojo-c !important;
 }
 
 .fd-rojo-o-1,
 .bg-red-d-1 {
-    background-color: variables.$fd-rojo-o-1 !important;;
+    background-color: variables.$fd-rojo-o-1 !important;
 }
 
 .fd-rojo-o-2,
 .bg-red-d-2 {
-    background-color: variables.$fd-rojo-o-2 !important;;
+    background-color: variables.$fd-rojo-o-2 !important;
+    ;
 }
 
 .fd-rojo-o-3,
 .bg-red-d-3 {
-    background-color: variables.$fd-rojo-o-3 !important;;
+    background-color: variables.$fd-rojo-o-3 !important;
+    ;
 }
 
 .fd-rojo-o-4,
 .bg-red-d-4 {
-    background-color: variables.$fd-rojo-o-4 !important;;
+    background-color: variables.$fd-rojo-o-4 !important;
+    ;
 }
 
 .fd-rojo-t {
-    background-color: variables.$fd-rojo-t !important;;
+    background-color: variables.$fd-rojo-t !important;
+    ;
 }
 
 .fd-rojo-an,
@@ -45,7 +54,7 @@
     background-color: variables.$fd-rojo-ro !important;
 }
 
-// Tonalidades de Rosa
+/// Tonalidades de Rosa
 .fd-rosa,
 .bg-pink {
     background-color: variables.$fd-rosa !important;
@@ -53,33 +62,40 @@
 
 .fd-rosa-c,
 .bg-pink-s {
-    background-color: variables.$fd-rosa-c !important;;
+    background-color: variables.$fd-rosa-c !important;
+    ;
 }
 
 .fd-rosa-o-1,
 .bg-pink-d-1 {
-    background-color: variables.$fd-rosa-o-1 !important;;
+    background-color: variables.$fd-rosa-o-1 !important;
+    ;
 }
 
 .fd-rosa-o-2,
 .bg-pink-d-2 {
-    background-color: variables.$fd-rosa-o-2 !important;;
+    background-color: variables.$fd-rosa-o-2 !important;
+    ;
 }
 
 .fd-rosa-o-3,
 .bg-pink-d-3 {
-    background-color: variables.$fd-rosa-o-3 !important;;
+    background-color: variables.$fd-rosa-o-3 !important;
+    ;
 }
 
 .fd-rosa-o-4,
 .bg-pink-d-4 {
-    background-color: variables.$fd-rosa-o-4 !important;;
+    background-color: variables.$fd-rosa-o-4 !important;
+    ;
 }
 
 .fd-rosa-t {
-    background-color: variables.$fd-rosa-t !important;;
+    background-color: variables.$fd-rosa-t !important;
+    ;
 }
 
+/// Tonalidades de Azul
 .fd-azul,
 .bg-blue {
     background-color: variables.$fd-azul !important;
@@ -91,24 +107,24 @@
 }
 
 .fd-azul-o-1,
-.bg-blue-d-1{
+.bg-blue-d-1 {
     background-color: variables.$fd-azul-o-1 !important;
 }
 
 .fd-azul-o-2,
-.bg-blue-d-2{
+.bg-blue-d-2 {
     background-color: variables.$fd-azul-o-2 !important;
 }
 
 
 .fd-azul-o-3,
-.bg-blue-d-3{
+.bg-blue-d-3 {
     background-color: variables.$fd-azul-o-3 !important;
 }
 
 
 .fd-azul-o-4,
-.bg-blue-d-4{
+.bg-blue-d-4 {
     background-color: variables.$fd-azul-o-4 !important;
 }
 
@@ -133,7 +149,7 @@
     background-color: variables.$fd-azul-vi !important;
 }
 
-// *** Verde  *** //
+/// Tonalidades de Verde
 .fd-verde,
 .bg-green {
     background-color: variables.$fd-verde !important;
@@ -158,13 +174,16 @@
 .bg-green-d-3 {
     background-color: variables.$fd-verde-o-3 !important;
 }
+
 .fd-verde-o-4,
 .bg-green-d-4 {
     background-color: variables.$fd-verde-o-4 !important;
 }
+
 .fd-verde-t {
     background-color: variables.$fd-verde-t !important;
 }
+
 .fd-verde-az {
     background-color: variables.$fd-verde-az !important;
 }
@@ -173,10 +192,12 @@
     background-color: variables.$fd-verde-am !important;
 }
 
+/// Tonalidades de Gris
 .fd-gris,
 .bg-grey {
     background-color: variables.$fd-gris !important;
 }
+
 .fd-gris-c,
 .bg-grey-s {
     background-color: variables.$fd-gris-c !important;
@@ -205,12 +226,13 @@
 .fd-gris-t {
     background-color: variables.$fd-gris-t !important;
 }
+
 .fd-gris-az {
     background-color: variables.$fd-gris-az !important;
 }
 
 .fd-gris-az-c {
-    background-color: variables.$fd-gris-az-c !important ;
+    background-color: variables.$fd-gris-az-c !important;
 }
 
 .fd-gris-az-o {
@@ -232,6 +254,7 @@
     background-color: variables.$fd-negro !important;
 }
 
+/// Tonalidades de Violeta
 .fd-violeta,
 .bg-violet {
     background-color: variables.$fd-violeta !important;
@@ -278,7 +301,7 @@
 }
 
 
-// Tonalidades naranja
+/// Tonalidades de Naranja
 .fd-naranja,
 .bg-orange {
     background-color: variables.$fd-naranja !important;
@@ -321,7 +344,7 @@
     background-color: variables.$fd-naranja-am !important;
 }
 
-// *** Tonalidadesd de amarillo
+/// Tonalidades de Amarillo
 .fd-amarillo,
 .bg-yellow {
     background-color: variables.$fd-amarillo !important;
@@ -341,8 +364,8 @@
 .bg-yellow-d-2 {
     background-color: variables.$fd-amarillo-o-2 !important;
 }
-.fd-amarillo-o-3
-.bg-yellow-d-3 {
+
+.fd-amarillo-o-3 .bg-yellow-d-3 {
     background-color: variables.$fd-amarillo-o-3 !important;
 }
 
@@ -355,7 +378,7 @@
     background-color: variables.$fd-amarillo-t !important;
 }
 
-.fd-amarillo-ve{
+.fd-amarillo-ve {
     background-color: variables.$fd-amarillo-ve !important;
 }
 
@@ -373,10 +396,12 @@
 
 .fd-bodyui,
 .bg-bodyui {
-    background-color: variables.$fd-rosa-o-1 !important;;
+    background-color: variables.$fd-rosa-o-1 !important;
+    ;
 }
 
 
+/// Fondos de Redes Sociales
 .fd-facebook {
     background-color: #3b5998 !important;
 }

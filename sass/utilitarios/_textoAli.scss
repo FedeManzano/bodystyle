@@ -1,17 +1,21 @@
+////
+/// @group Utilitarios de Texto
+/// Alineación de texto
+////
 
-/*
-    Trabajando con los textos 
-*/
+/// Alineación centrada
 .a-c,
-.ta-c{
+.ta-c {
     text-align: center !important;
 }
 
+/// Alineación derecha
 .a-d,
 .ta-r {
     text-align: right !important;
 }
 
+/// Alineación izquierda
 .a-i,
 .ta-l {
     text-align: left !important;

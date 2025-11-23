@@ -1,31 +1,38 @@
+////
+/// @group Efectos y Dinámicas
+/// Efectos 3D para tarjetas y contenedores
+////
 
+/// Contenedor principal para efecto 3D (Flip Card)
 .contenedor-efecto3d {
     width: 100%;
     height: 100%;
     z-index: 30000;
     cursor: pointer;
-    
+
     .adelante,
-    .atras-horizontal, .atras-vertical {
+    .atras-horizontal,
+    .atras-vertical {
         transition: all 0.5s ease;
         width: 100%;
         height: 100%;
-        
+
         backface-visibility: hidden;
-        -webkit-backface-visibility: hidden; 
+        -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -o-backface-visibility: hidden;
     }
 
-    .atras-vertical, .atras-horizontal {
+    .atras-vertical,
+    .atras-horizontal {
         position: absolute;
         z-index: 30000;
         top: 0;
         bottom: 0;
-        
+
     }
 
-    .contenedor-vertical, 
+    .contenedor-vertical,
     .contenedor-horizontal {
         width: 100%;
         height: 100%;
@@ -71,9 +78,9 @@
         -webkit-transform: perspective(600px) rotateY(180deg);
         -moz-transform: perspective(600px) rotateY(180deg);
         -o-transform: perspective(600px) rotateY(180deg);
-        -webkit-box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
-        -moz-box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
-        box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
+        -webkit-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        -moz-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
     }
 
     &:hover .contenedor-horizontal {
@@ -81,9 +88,9 @@
         -webkit-transform: perspective(600px) rotateX(180deg);
         -moz-transform: perspective(600px) rotateX(180deg);
         -o-transform: perspective(600px) rotateX(180deg);
-        -webkit-box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
-        -moz-box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
-        box-shadow: 0px 0px 14px 4px rgba(117,117,117,0.71);
+        -webkit-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        -moz-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+        box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
     }
 
 }

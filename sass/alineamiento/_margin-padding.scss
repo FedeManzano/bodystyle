@@ -1,487 +1,664 @@
 @use "../globales/funciones";
 
+////
+/// @group Layout
+/// Utilidades de Margen y Relleno (Padding)
+////
 
-// Clases para agregarle padding a los elementos
+/// Clases para agregarle padding a los elementos
+/// Generador de Padding (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .p-#{$i} { 
+    .p-#{$i} {
         padding: #{$p}em !important;
     }
-    $p: funciones.incrementar($p);
-} 
 
+    $p: funciones.incrementar($p);
+}
+
+/// Padding Left (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .pi-#{$i},
-    .pl-#{$i} { 
+    .pl-#{$i} {
         padding-left: #{$p}em !important;
     }
-    $p: funciones.incrementar($p);
-} 
 
+    $p: funciones.incrementar($p);
+}
+
+/// Padding Right (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .pd-#{$i},
-    .pr-#{$i} { 
+    .pr-#{$i} {
         padding-right: #{$p}em !important;
     }
+
     $p: funciones.incrementar($p);
 }
 
+/// Padding Bottom (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .pab-#{$i},
-    .pb-#{$i} { 
+    .pb-#{$i} {
         padding-bottom: #{$p}em !important;
     }
+
     $p: funciones.incrementar($p);
 }
 
+/// Padding Top (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .par-#{$i},
-    .pt-#{$i} { 
+    .pt-#{$i} {
         padding-top: #{$p}em !important;
     }
+
     $p: funciones.incrementar($p);
 }
 
+/// Padding Vertical (Y) (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .py-#{$i} { 
+    .py-#{$i} {
         padding-top: #{$p}em !important;
         padding-bottom: #{$p}em !important;
     }
+
     $p: funciones.incrementar($p);
 }
 
+/// Padding Horizontal (X) (0 - 15)
 $p: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .px-#{$i} { 
+    .px-#{$i} {
         padding-left: #{$p}em !important;
         padding-right: #{$p}em !important;
     }
+
     $p: funciones.incrementar($p);
 }
 
+/// Margin (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .m-#{$i} { 
+    .m-#{$i} {
         margin: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Left (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .mi-#{$i},
-    .ml-#{$i} { 
+    .ml-#{$i} {
         margin-left: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Right (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .md-#{$i},
-    .mr-#{$i} { 
+    .mr-#{$i} {
         margin-right: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Top (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .mar-#{$i},
-    .mt-#{$i} { 
+    .mt-#{$i} {
         margin-top: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Bottom (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
+
     .mab-#{$i},
-    .mb-#{$i} { 
+    .mb-#{$i} {
         margin-bottom: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Vertical (Y) (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .my-#{$i} { 
+    .my-#{$i} {
         margin-bottom: #{$m}em !important;
         margin-top: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Horizontal (X) (0 - 15)
 $m: funciones.inicializarVariable();
+
 @for $i from 0 through 15 {
-    .mx-#{$i} { 
+    .mx-#{$i} {
         margin-left: #{$m}em !important;
         margin-right: #{$m}em !important;
     }
+
     $m: funciones.incrementar($m);
 }
 
+/// Margin Auto
 .m-a {
-    margin:auto !important;
+    margin: auto !important;
 }
 
-@media (max-width: funciones.dameMedida(m)){
+/// Márgenes y Padding Responsivos (Medium)
+@media (max-width: funciones.dameMedida(m)) {
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .m-m-#{$i} { 
+        .m-m-#{$i} {
             margin: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mi-m-#{$i},
-        .ml-m-#{$i} { 
+        .ml-m-#{$i} {
             margin-left: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .md-m-#{$i},
-        .mr-m-#{$i} { 
+        .mr-m-#{$i} {
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mab-m-#{$i},
-        .mb-m-#{$i} { 
+        .mb-m-#{$i} {
             margin-bottom: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mar-m-#{$i},
-        .mt-m-#{$i} { 
+        .mt-m-#{$i} {
             margin-top: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .my-m-#{$i} { 
+        .my-m-#{$i} {
             margin-top: #{$m}em !important;
             margin-bottom: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .mx-m-#{$i} { 
+        .mx-m-#{$i} {
             margin-left: #{$m}em !important;
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .p-m-#{$i} { 
+        .p-m-#{$i} {
             padding: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
-    } 
+    }
+
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pi-m-#{$i},
-        .pl-m-#{$i} { 
+        .pl-m-#{$i} {
             padding-left: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
-    } 
+    }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pd-m-#{$i},
-        .pr-m-#{$i} { 
+        .pr-m-#{$i} {
             padding-right: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pab-m-#{$i},
-        .pb-m-#{$i} { 
+        .pb-m-#{$i} {
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .par-m-#{$i},
-        .pt-m-#{$i} { 
+        .pt-m-#{$i} {
             padding-top: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .py-m-#{$i} { 
+        .py-m-#{$i} {
             padding-top: #{$p}em !important;
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 }
 
-@media (max-width: funciones.dameMedida(s)){
+/// Márgenes y Padding Responsivos (Small)
+@media (max-width: funciones.dameMedida(s)) {
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .m-s-#{$i} { 
+        .m-s-#{$i} {
             margin: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mi-s-#{$i},
-        .ml-s-#{$i} { 
+        .ml-s-#{$i} {
             margin-left: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .md-s-#{$i},
-        .mr-s-#{$i} { 
+        .mr-s-#{$i} {
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mab-s-#{$i},
-        .mt-s-#{$i} { 
+        .mt-s-#{$i} {
             margin-bottom: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mar-s-#{$i},
-        .mt-s-#{$i} { 
+        .mt-s-#{$i} {
             margin-top: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .my-s-#{$i} { 
+        .my-s-#{$i} {
             margin-top: #{$m}em !important;
             margin-bottom: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .mx-s-#{$i} { 
+        .mx-s-#{$i} {
             margin-left: #{$m}em !important;
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .p-s-#{$i} { 
+        .p-s-#{$i} {
             padding: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
-    } 
+    }
+
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pi-s-#{$i},
-        .pl-s-#{$i} { 
+        .pl-s-#{$i} {
             padding-left: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
-    } 
+    }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pd-s-#{$i},
-        .pr-s-#{$i} { 
+        .pr-s-#{$i} {
             padding-right: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .pab-s-#{$i},
-        .pb-s-#{$i} { 
+        .pb-s-#{$i} {
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .par-s-#{$i},
-        .pt-s-#{$i} { 
+        .pt-s-#{$i} {
             padding-top: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .py-s-#{$i} { 
+        .py-s-#{$i} {
             padding-top: #{$p}em !important;
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .px-s-#{$i} { 
+        .px-s-#{$i} {
             padding-left: #{$p}em !important;
             padding-right: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 }
 
-@media (max-width: funciones.dameMedida(xs)){
+/// Márgenes y Padding Responsivos (Extra Small)
+@media (max-width: funciones.dameMedida(xs)) {
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .m-xs-#{$i} { 
+        .m-xs-#{$i} {
             margin: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mi-xs-#{$i},
-        .ml-xs-#{$i} { 
+        .ml-xs-#{$i} {
             margin-left: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
+
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .md-xs-#{$i},
-        .mr-xs-#{$i} { 
+        .mr-xs-#{$i} {
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .mab-xs-#{$i},
-        .mb-xs-#{$i} { 
+        .mb-xs-#{$i} {
             margin-bottom: #{$m}em !important;
         }
-        $m: funciones.incrementar($m);
-    }
-    $m: funciones.inicializarVariable();
-    @for $i from 0 through 15 {
-        .mar-xs-#{$i},
-        .mt-xs-#{$i} { 
-            margin-top: #{$m}em !important;
-        }
-        $m: funciones.incrementar($m);
-    }
-    $m: funciones.inicializarVariable();
-    @for $i from 0 through 15 {
-        .my-xs-#{$i} { 
-            margin-top: #{$m}em !important;
-            margin-bottom: #{$m}em !important;
-        }
+
         $m: funciones.incrementar($m);
     }
 
     $m: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .mx-xs-#{$i} { 
+
+        .mar-xs-#{$i},
+        .mt-xs-#{$i} {
+            margin-top: #{$m}em !important;
+        }
+
+        $m: funciones.incrementar($m);
+    }
+
+    $m: funciones.inicializarVariable();
+
+    @for $i from 0 through 15 {
+        .my-xs-#{$i} {
+            margin-top: #{$m}em !important;
+            margin-bottom: #{$m}em !important;
+        }
+
+        $m: funciones.incrementar($m);
+    }
+
+    $m: funciones.inicializarVariable();
+
+    @for $i from 0 through 15 {
+        .mx-xs-#{$i} {
             margin-left: #{$m}em !important;
             margin-right: #{$m}em !important;
         }
+
         $m: funciones.incrementar($m);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .p-xs-#{$i} { 
+        .p-xs-#{$i} {
             padding: #{$p}em !important;
         }
-        $p: funciones.incrementar($p);
-    } 
-    $p: funciones.inicializarVariable();
-    @for $i from 0 through 15 {
-        .pi-xs-#{$i},
-        .pl-xs-#{$i} { 
-            padding-left: #{$p}em !important;
-        }
-        $p: funciones.incrementar($p);
-    } 
 
-    $p: funciones.inicializarVariable();
-    @for $i from 0 through 15 {
-        .pd-xs-#{$i},
-        .pr-xs-#{$i} { 
-            padding-right: #{$p}em !important;
-        }
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
+        .pi-xs-#{$i},
+        .pl-xs-#{$i} {
+            padding-left: #{$p}em !important;
+        }
+
+        $p: funciones.incrementar($p);
+    }
+
+    $p: funciones.inicializarVariable();
+
+    @for $i from 0 through 15 {
+
+        .pd-xs-#{$i},
+        .pr-xs-#{$i} {
+            padding-right: #{$p}em !important;
+        }
+
+        $p: funciones.incrementar($p);
+    }
+
+    $p: funciones.inicializarVariable();
+
+    @for $i from 0 through 15 {
+
         .pab-xs-#{$i},
         .pb-xs-#{$i} {
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
+
         .par-xs-#{$i},
-        .pt-xs-#{$i} { 
+        .pt-xs-#{$i} {
             padding-top: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .py-xs-#{$i} { 
+        .py-xs-#{$i} {
             padding-top: #{$p}em !important;
             padding-bottom: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 
     $p: funciones.inicializarVariable();
+
     @for $i from 0 through 15 {
-        .px-xs-#{$i} { 
+        .px-xs-#{$i} {
             padding-left: #{$p}em !important;
             padding-right: #{$p}em !important;
         }
+
         $p: funciones.incrementar($p);
     }
 }

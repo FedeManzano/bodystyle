@@ -1,12 +1,19 @@
+////
+/// @group Utilitarios Visuales
+/// Utilidades de desbordamiento (overflow)
+////
+
+/// Ocultar desbordamiento
 .ov-hidden {
     overflow: hidden !important;
 }
 
+/// Mostrar desbordamiento
 .ov-visible {
     overflow: visible !important;
 }
 
+/// Scroll en desbordamiento
 .ov-scroll {
     overflow: scroll !important;
 }
-

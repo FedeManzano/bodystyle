@@ -1,7 +1,12 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Colecciones
+/// Estilos para listas y colecciones de elementos
+////
 
+/// Contenedor principal de la lista
 .lista-contenedor,
 .list-container {
 
@@ -17,12 +22,11 @@
     border-top: rgba(0, 0, 0, 0.055);
     border-bottom: rgba(0, 0, 0, 0.055);
 
-  
+
     .lista-cabecera,
     .list-header,
     .lista-pie,
-    .list-footer
-     {
+    .list-footer {
         text-align: center;
         background-color: rgba(0, 0, 0, 0.062);
         padding: 7px;
@@ -32,23 +36,23 @@
         border: 1px solid rgba(0, 0, 0, 0.055) !important;
 
     }
-    
+
     .lista-pie,
-    .list-footer{
+    .list-footer {
         border-radius: variables.$borde-radio-pie;
-        border-top:none !important;
+        border-top: none !important;
     }
 
-    
+
     * {
         list-style: none;
     }
 
     a {
-        cursor:  pointer !important;
+        cursor: pointer !important;
     }
-   
-   
+
+
     .lista-item,
     .list-item {
         padding: 7px 10px;
@@ -60,10 +64,11 @@
         justify-content: space-between;
         position: relative;
         cursor: pointer;
-        &.desactivado *{
+
+        &.desactivado * {
             color: rgb(175, 175, 175) !important;
 
-            &:hover{
+            &:hover {
                 color: rgb(175, 175, 175) !important;
             }
         }
@@ -75,7 +80,7 @@
         }
 
         .f-der,
-        .f-aba{
+        .f-aba {
             position: absolute !important;
             top: calc(50% - 5px) !important;
             left: calc(100% - 20px);
@@ -83,7 +88,7 @@
     }
 
     & .lista-item:first-child,
-    & .list-item:first-child  {
+    & .list-item:first-child {
         border-top: variables.$borde;
     }
 
@@ -95,10 +100,12 @@
         border-left: variables.$borde;
         border-right: variables.$borde;
         padding: 10px;
+
         .img-cont {
             overflow: hidden;
-            @include mixim.ancho-alto(30px, 30px);
+            @include mixins.ancho-alto(30px, 30px);
             border-radius: 50%;
+
             img {
                 max-width: 100%;
             }
@@ -123,28 +130,27 @@
         border-top: variables.$borde;
     }
 
-    
+
     .desplegable {
         background-color: rgba(0, 0, 0, 0.096);
         font-size: 15px !important;
-   
+
         p {
             padding: 5px !important;
             line-height: 22px !important;
             margin: 0 !important;
         }
 
-        ul 
-        {
+        ul {
             list-style: none;
             display: flex;
             flex-direction: column;
-            
+
             a {
                 display: block !important;
                 width: 100% !important;
                 padding: 10px 10px;
-                
+
                 &:hover {
                     background-color: rgba(0, 0, 0, 0.096);
                 }
@@ -154,33 +160,36 @@
 }
 
 
+/// Lista de usuarios con avatar
 .lista-usuario {
     display: flex;
     flex-direction: column;
 
     .lista-item {
         padding: 5px 20px;
-        border-bottom: variables.$borde; 
+        border-bottom: variables.$borde;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: white;
+
         .contenido {
             display: flex;
             align-items: center;
 
             .img-cont {
-                
-                @include mixim.ancho-alto(60px, 60px);
+
+                @include mixins.ancho-alto(60px, 60px);
                 border-radius: 50% !important;
                 overflow: hidden !important;
+
                 img {
                     width: 60px !important;
                     height: 60px !important;
                     border-radius: 50% !important;
                 }
             }
-    
+
             *:not(.img-cont) {
                 font-size: 20px;
                 color: rgb(15, 15, 15);

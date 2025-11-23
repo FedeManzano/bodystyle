@@ -1,37 +1,41 @@
-@use "../globales/mixim";
+@use "../globales/mixins";
 
-// ************************ 
-// Contenedor para centrar el contenido 
-// > 1024px ocupa 70% del ancho del contenedor padre
+////
+/// @group Layout
+/// Contenedor principal responsivo
+////
+
+/// Contenedor para centrar el contenido
+/// > 1024px ocupa 70% del ancho del contenedor padre
 .contenedor,
 .container {
-    width: 70% ;
-    margin: auto ;
+    width: 70%;
+    margin: auto;
 }
 
-// <= 1024px ocupa 75% del ancho del contenedor padre
+/// <= 1024px ocupa 75% del ancho del contenedor padre
 .contenedor,
 .container {
-    @include mixim.agregar-a-medida-maxima(m){
-        width: 75% ;
+    @include mixins.agregar-a-medida-maxima(m) {
+        width: 75%;
         margin: auto;
-    }  
+    }
 }
 
-//  s<768px<m ocupa 80% del ancho del contenedor padre
+/// s<768px<m ocupa 80% del ancho del contenedor padre
 .contenedor,
 .container {
-    @include mixim.agregar-a-medida-maxima(s){
-        width: 80% ;
-        margin: auto ;
-    }  
+    @include mixins.agregar-a-medida-maxima(s) {
+        width: 80%;
+        margin: auto;
+    }
 }
 
-//  >400px ocupa 90% del ancho del contenedor padre
+/// >400px ocupa 90% del ancho del contenedor padre
 .contenedor,
 .container {
-    @include mixim.agregar-a-medida-maxima(xs){
-        width: 90% ;
-        margin: auto ;
-    }  
+    @include mixins.agregar-a-medida-maxima(xs) {
+        width: 90%;
+        margin: auto;
+    }
 }

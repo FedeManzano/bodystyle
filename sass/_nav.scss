@@ -1,67 +1,70 @@
 @use "globales/variables";
 
+////
+/// @group Navegación
+/// Estilos para la barra de navegación principal
+////
 
-.bs-nav
-{
+/// Contenedor principal de la barra de navegación
+.bs-nav {
     z-index: 10000;
-    
-    *{
-         font-family: 'Roboto','Roboto', -apple-system, 
-                    BlinkMacSystemFont, 
-                    "Segoe UI", 
-                    "Helvetica Neue", 
-                    Arial, 
-                    "Noto Sans", 
-                    sans-serif, 
-                    "Apple Color Emoji", 
-                    "Segoe UI Emoji", 
-                    "Segoe UI Symbol", 
-                    "Noto Color Emoji";
+
+    * {
+        font-family: 'Roboto', 'Roboto', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";
         user-select: none;
     }
-    
+
     background-color: #000; // COLOR DEFAULT
-    @mixin flex_center()
-    {
-        display: flex !important; 
+
+    /// Mixin interno para centrar elementos flex
+    @mixin flex_center() {
+        display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         flex-wrap: nowrap !important;
     }
 
-    @mixin flex_right()
-    {
-        display: flex !important; 
+    /// Mixin interno para alinear a la derecha
+    @mixin flex_right() {
+        display: flex !important;
         justify-content: right !important;
         align-items: center !important;
         flex-wrap: nowrap !important;
     }
 
-    @mixin flex_left()
-    {
-        display: flex !important; 
+    /// Mixin interno para alinear a la izquierda
+    @mixin flex_left() {
+        display: flex !important;
         justify-content: left !important;
         align-items: center !important;
         flex-wrap: nowrap !important;
     }
 
 
-    .align-right-list
-    {
+    .align-right-list {
         @include flex_left();
         justify-content: space-between !important;
     }
 
-    .align-left-list
-    {
+    .align-left-list {
         @include flex_left();
     }
 
 
+    /// Variantes de tamaño para la barra de navegación
     .bs-nav-sm,
     .bs-nav-md,
-    .bs-nav-lg
-    {
+    .bs-nav-lg {
         height: 55px;
         width: 95%;
         margin: auto;
@@ -75,17 +78,17 @@
             min-width: 40px !important;
             min-height: 40px !important;
             border-radius: 4px !important;
-            
+
             cursor: pointer;
-            &:hover 
-            {
+
+            &:hover {
                 background-color: rgba(255, 255, 255, 0.127);
             }
+
             & label:nth-child(1),
             & label:nth-child(2),
-            & label:nth-child(3)
-            {
-                margin-top: 4px  !important;
+            & label:nth-child(3) {
+                margin-top: 4px !important;
                 cursor: pointer;
             }
 
@@ -103,18 +106,17 @@
             display: flex;
             align-items: center;
             padding: 0 50px 0 5px;
-            white-space : nowrap;
+            white-space: nowrap;
             cursor: pointer;
         }
 
-        .right-content
-        {
+        .right-content {
             @include flex_right();
             justify-content: space-between !important;
             margin-left: auto !important;
             margin-right: 15px !important;
 
-            
+
         }
 
         // LIST ITEMS
@@ -122,8 +124,8 @@
             @include flex_left();
             margin-right: 5px; // Prueba
             list-style: none;
-    
-            li{
+
+            li {
                 a {
                     text-decoration: none !important;
                     color: white; // color por default
@@ -141,9 +143,11 @@
 
     .bs-nav-md {
         height: 65px;
+
         .logo-container {
             min-width: 40px !important;
             max-width: 40px !important;
+
             img {
                 width: 40px !important;
                 height: 40px !important;
@@ -153,9 +157,11 @@
 
     .bs-nav-lg {
         height: 75px;
+
         .logo-container {
             min-width: 45px !important;
             max-width: 45px !important;
+
             img {
                 width: 45px !important;
                 height: 45px !important;
@@ -176,56 +182,56 @@
     }
 }
 
-.bs-nav-fixed
-{
+/// Barra de navegación fija en la parte superior
+.bs-nav-fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 
-.bs-nav-bor-red 
-{
+/// Borde inferior rojo
+.bs-nav-bor-red {
     border-bottom: 2px solid variables.$fd-rojo !important;
 }
 
-.bs-nav-bor-grey
-{
+/// Borde inferior gris
+.bs-nav-bor-grey {
     border-bottom: 2px solid variables.$fd-gris !important;
 }
 
-
-.bs-nav-bor-grey-s
-{
+/// Borde inferior gris claro
+.bs-nav-bor-grey-s {
     border-bottom: 2px solid variables.$fd-gris-c !important;
 }
 
-.bs-nav-bor-green
-{
+/// Borde inferior verde
+.bs-nav-bor-green {
     border-bottom: 2px solid variables.$fd-verde-c !important;
 }
 
-.bs-nav-bor-black
-{
+/// Borde inferior negro
+.bs-nav-bor-black {
     border-bottom: 2px solid variables.$fd-negro !important;
 }
 
-.bs-nav-bor-white
-{
+/// Borde inferior blanco
+.bs-nav-bor-white {
     border-bottom: 2px solid variables.$fd-blanco !important;
 }
 
-.bs-nav-bor-blue
-{
+/// Borde inferior azul
+.bs-nav-bor-blue {
     border-bottom: 2px solid variables.$fd-azul !important;
 }
 
-.bs-nav-bor-orange
-{
+/// Borde inferior naranja
+.bs-nav-bor-orange {
     border-bottom: 2px solid variables.$fd-naranja !important;
 }
 
 
+/// Complemento de navegación (overlay)
 .bs-nav-complement {
     display: none;
     position: fixed;

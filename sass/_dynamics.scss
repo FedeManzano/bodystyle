@@ -1,3 +1,9 @@
+////
+/// @group Efectos y Dinámicas
+/// Estilos para elementos dinámicos como tooltips, dropdowns y toasts
+////
+
+/// Tooltip básico
 .tips {
 
     font-size: 16px;
@@ -7,12 +13,12 @@
     align-items: center;
 
 
-    position: absolute; 
+    position: absolute;
     padding: 20px 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.863);
     border-radius: 5px;
-    
+
     white-space: nowrap;
     max-height: 40px !important;
     min-height: 40px !important;
@@ -22,42 +28,42 @@
     transition: transform 0.3s ease;
 }
 
-    .tips .mueca-aba,
-    .tips .mueca-izq,
-    .tips .mueca-der,
-    .tips .mueca-arr {
-        position: absolute !important;
-        width: 0 ;
-        height: 0;
-    }
+.tips .mueca-aba,
+.tips .mueca-izq,
+.tips .mueca-der,
+.tips .mueca-arr {
+    position: absolute !important;
+    width: 0;
+    height: 0;
+}
 
-    .tips .mueca-aba {
-        border-top: 5px solid rgba(0, 0, 0, 0.863) !important;
-        border-left: 5px solid transparent !important;
-        border-right: 5px solid transparent !important;
-    }
+.tips .mueca-aba {
+    border-top: 5px solid rgba(0, 0, 0, 0.863) !important;
+    border-left: 5px solid transparent !important;
+    border-right: 5px solid transparent !important;
+}
 
-    .tips .mueca-arr {
-        border-bottom: 5px solid rgba(0, 0, 0, 0.863) !important;
-        border-left: 5px solid transparent !important;
-        border-right: 5px solid transparent !important;
-    }
+.tips .mueca-arr {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.863) !important;
+    border-left: 5px solid transparent !important;
+    border-right: 5px solid transparent !important;
+}
 
-    .tips .mueca-izq {
-        border-right: 5px solid rgba(0, 0, 0, 0.863) !important;
-        border-top: 5px solid transparent !important;
-        border-bottom: 5px solid transparent !important;
-    }
+.tips .mueca-izq {
+    border-right: 5px solid rgba(0, 0, 0, 0.863) !important;
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+}
 
-    .tips .mueca-der {
-        border-left: 5px solid rgba(0, 0, 0, 0.863) !important;
-        border-top: 5px solid transparent !important;
-        border-bottom: 5px solid transparent !important;
-    }
+.tips .mueca-der {
+    border-left: 5px solid rgba(0, 0, 0, 0.863) !important;
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+}
 
 .tips-ele {
     z-index: 0;
-    position: relative ;
+    position: relative;
     overflow: visible !important;
 }
 
@@ -126,6 +132,7 @@
     display: none;
 }
 
+/// Comentario dinámico (popover)
 .com-dinamico {
     position: absolute;
     background-color: rgb(255, 255, 255);
@@ -158,6 +165,7 @@
 }
 
 
+/// Dropdown Menu
 .dropdown-toggle {
     z-index: 1000000;
     position: relative;
@@ -166,7 +174,7 @@
 
 .dropdown-toggle .f-abajo {
     position: absolute;
-    
+
 }
 
 
@@ -213,6 +221,7 @@
     display: none;
 }
 
+/// Toast Notification
 .toast {
     position: fixed;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -227,7 +236,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: subir 1s  0s 1  linear;
+    animation: subir 1s 0s 1 linear;
     box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.137);
 }
 
@@ -246,15 +255,16 @@
 }
 
 .toast .cerrar::before,
-.toast .cerrar::after  {
-    content:  "";
+.toast .cerrar::after {
+    content: "";
     position: absolute;
     width: 15px;
     height: 3px;
     background-color: white;
-    left:  calc(50% - 7.2px);
-    top:  calc(50% - 3px);
+    left: calc(50% - 7.2px);
+    top: calc(50% - 3px);
 }
+
 .toast .cerrar::before {
     transform: rotate(45deg);
 }
@@ -267,7 +277,9 @@
 @keyframes subir {
     from {
         top: 300px;
-    }to {
+    }
+
+    to {
         top: 75px;
     }
 }

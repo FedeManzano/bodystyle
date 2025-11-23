@@ -1,12 +1,17 @@
 @use "globales/funciones";
-@use "globales/mixim";
+@use "globales/mixins";
 
+////
+/// @group Inputs
+/// Estilos para grupos de inputs (input groups)
+////
 
+/// Contenedor de grupo de inputs
 .input-g {
 
     // Bordes de los elemento
     $borde: 1px solid rgb(206, 212, 218);
-    $borde-boton: 1px solid  rgb(63, 63, 63);
+    $borde-boton: 1px solid rgb(63, 63, 63);
     $bor-rad-izq: 4px 0 0 4px; // Radios elementos izquierda
     $bor-rad-der: 0 4px 4px 0; // Radios elementos izquierda
 
@@ -14,12 +19,12 @@
     // Fondo
     $bg-span: rgb(230, 237, 238);
     $letra-span: rgb(81, 85, 90);
-    
+
     // Tamaños
     $min-h: 40px;
     $min-h-lg: 50px;
     $min-h-sm: 30px;
-    
+
     $fz: 1em;
     $fz-lg: 1.3em;
     $fz-sm: 0.9em;
@@ -30,18 +35,18 @@
 
     // 1 EM 
     font-size: 16px;
-   
-    
 
-    input[type='text'], 
+
+
+    input[type='text'],
     input[type='email'],
     input[type='number'],
     input[type='password'],
     input[type='url'],
-    input[type='search'], 
+    input[type='search'],
     textarea {
-        
-        border: none ;
+
+        border: none;
         font-size: $fz;
 
         &:focus {
@@ -51,15 +56,16 @@
 
     .grupo,
     .grupo-sm,
-    .grupo-lg{
+    .grupo-lg {
         display: flex;
         border-radius: 4px;
-        .span-grupo{
+
+        .span-grupo {
             // Flex box just center align center
-            @include mixim.flex-box-centrado();
+            @include mixins.flex-box-centrado();
 
             // Tamaño
-            padding:$padding;
+            padding: $padding;
             font-size: $fz;
             min-height: $min-h;
 
@@ -68,19 +74,19 @@
             color: $letra-span;
 
             white-space: nowrap;
-            
-            *{
+
+            * {
                 border: none !important;
             }
         }
 
 
-        input[type='text'], 
+        input[type='text'],
         input[type='email'],
         input[type='number'],
         input[type='password'],
         input[type='url'],
-        input[type='search'], 
+        input[type='search'],
         textarea {
 
             // Define el tamaño mediano
@@ -96,27 +102,30 @@
         .btn-sm,
         .btn-sm-o,
         .btn-lg,
-        .btn-lg-o{
+        .btn-lg-o {
             // Bordes
             border-radius: 4px 0 0 4px;
             border: $borde-boton;
 
             // Tamaño
-            padding: $padding; 
+            padding: $padding;
             min-height: $min-h;
             font-size: $fz !important;
 
             box-shadow: none;
             min-width: none !important;
-            
+
             background-color: rgb(250, 253, 255) !important;
+
             &:hover {
                 background-color: $bg-span !important;
                 z-index: 1000000;
             }
-            *{
-               border: none !important;
+
+            * {
+                border: none !important;
             }
+
             .f-abajo-grupo {
                 border-top: 4px solid $letra-span !important;
                 border-left: 4px solid transparent !important;
@@ -151,32 +160,33 @@
         *:nth-child(2) {
             border-left: $borde !important;
         }
-        
-        
+
+
 
         .dropdown {
-            border: 1px solid rgb(209, 209, 209) !important; 
+            border: 1px solid rgb(209, 209, 209) !important;
             background-color: white !important;
             z-index: funciones.superposicion(ms);
 
-            *{
+            * {
                 border: none !important;
             }
         }
 
         .dropdown-toggle {
             z-index: funciones.superposicion(ms);
-            
+
         }
     }
 
     .grupo-sm {
-        input[type='text'], 
+
+        input[type='text'],
         input[type='email'],
         input[type='number'],
         input[type='password'],
         input[type='url'],
-        input[type='search'], 
+        input[type='search'],
         textarea {
             font-size: $fz-sm;
             min-height: $min-h-sm !important;
@@ -193,7 +203,7 @@
         .btn-sm,
         .btn-sm-o,
         .btn-lg,
-        .btn-lg-o{
+        .btn-lg-o {
             border-radius: $bor-rad-izq;
             min-height: $min-h-sm;
             padding: $padding-sm;
@@ -208,12 +218,13 @@
     }
 
     .grupo-lg {
-        input[type='text'], 
+
+        input[type='text'],
         input[type='email'],
         input[type='number'],
         input[type='password'],
         input[type='url'],
-        input[type='search'], 
+        input[type='search'],
         textarea {
             font-size: $fz-lg;
             min-height: $min-h-lg !important;
@@ -230,7 +241,7 @@
         .btn-sm,
         .btn-sm-o,
         .btn-lg,
-        .btn-lg-o{
+        .btn-lg-o {
             min-height: $min-h-lg;
             padding: $padding-lg;
             font-size: $fz-lg !important;

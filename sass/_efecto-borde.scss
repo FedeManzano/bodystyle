@@ -1,5 +1,11 @@
 @use "globales/variables";
 
+////
+/// @group Efectos y Dinámicas
+/// Efectos de borde animados
+////
+
+/// Efecto de borde inferior al hacer hover
 .efecto-borde-rojo,
 .effect-border-red,
 .efecto-borde-azul,
@@ -13,8 +19,9 @@
 .efecto-borde-blanco,
 .effect-border-white,
 .efecto-borde-bodyui,
-.effect-border-bodyui{
-    position: relative; 
+.effect-border-bodyui {
+    position: relative;
+
     &::before {
         content: "";
         width: 0;
@@ -27,10 +34,12 @@
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
     }
+
     &:hover::before {
         width: 100%;
     }
 }
+
 .efecto-borde-rojo::before,
 .effect-border-red::before {
     background-color: variables.$fd-rojo;
@@ -91,9 +100,9 @@
 }
 
 
-
+/// Generación de bordes izquierdos animados (1-10px)
 @for $i from 1 to 11 {
-    
+
     .e-borde-izq-rojo-#{$i},
     .e-border-left-red-#{$i},
     .e-borde-izq-verde-#{$i},
@@ -107,7 +116,7 @@
     .e-borde-izq-blanco-#{$i},
     .e-border-left-white-#{$i},
     .e-borde-izq-bodyui-#{$i},
-    .e-border-left-bodyui-#{$i}{
+    .e-border-left-bodyui-#{$i} {
         position: relative;
 
         &::before {
@@ -137,7 +146,7 @@
 
 
     .e-borde-izq-azul-#{$i},
-    .e-border-left-blue-#{$i}{
+    .e-border-left-blue-#{$i} {
         &::before {
             background-color: variables.$fd-azul;
         }
@@ -145,7 +154,7 @@
 
 
     .e-borde-izq-gris-#{$i},
-    .e-border-left-grey-#{$i}{
+    .e-border-left-grey-#{$i} {
         &::before {
             background-color: variables.$fd-gris;
         }
@@ -175,8 +184,9 @@
 }
 
 
+/// Generación de bordes derechos animados (1-10px)
 @for $i from 1 to 11 {
-    
+
     .e-borde-der-rojo-#{$i},
     .e-border-right-red-#{$i},
     .e-borde-der-verde-#{$i},
@@ -210,7 +220,7 @@
 
 
     .e-borde-der-verde-#{$i},
-    .e-border-right-green-#{$i}{
+    .e-border-right-green-#{$i} {
         &::before {
             background-color: variables.$fd-verde;
         }
@@ -247,8 +257,3 @@
         }
     }
 }
-
-
-
-
-

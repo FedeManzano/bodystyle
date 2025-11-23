@@ -1,14 +1,22 @@
-@use "globales/mixim";
+@use "globales/mixins";
 
+////
+/// @group Efectos y Dinámicas
+/// Efectos de revelado al hacer hover (deslizamiento de capas)
+////
+
+/// Contenedor para efectos de hover
 .hover-contenedor {
     overflow: hidden;
     display: block;
     position: relative;
     cursor: pointer;
+
     * {
-        @include mixim.ancho-alto(100%, 100%);
-        @include mixim.posicionamiento-absoluto(0, 0, 0, 0);
+        @include mixins.ancho-alto(100%, 100%);
+        @include mixins.posicionamiento-absoluto(0, 0, 0, 0);
     }
+
     &:hover .lateral-derecha {
         left: 100%;
         transition: left 0.3s;
@@ -48,7 +56,9 @@
     from {
         transform: rotate(0deg);
         left: 0;
-    }to {
+    }
+
+    to {
         transform: rotate(180deg);
         left: 100%;
     }
@@ -59,16 +69,20 @@
     from {
         transform: rotate(0deg);
         left: 0;
-    }to {
+    }
+
+    to {
         transform: rotate(-180deg);
         left: -100%;
     }
 }
 
 
+/// Efecto de borde animado al hacer hover
 .efecto-hover-borde {
     position: relative;
     z-index: 0;
+
     * {
         z-index: 20;
     }
@@ -79,11 +93,11 @@
     .borde-arr {
         position: absolute;
         transition: all 0.3s;
-        z-index:-1!important;
+        z-index: -1 !important;
     }
 
     .borde-der,
-    .borde-izq{
+    .borde-izq {
         height: 100%;
         width: 5px;
         top: 0;
@@ -122,4 +136,3 @@
         height: 100%;
     }
 }
-

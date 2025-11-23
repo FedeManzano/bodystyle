@@ -1,23 +1,30 @@
+////
+/// @group Inputs
+/// Estilos para checkboxes y radio buttons personalizados
+////
+
+/// Grupo de checkbox/radio
 .check-radio-grupo,
-.check-radio-grupo{
+.check-radio-grupo {
+
     &.desactivado [class^=cb],
-    &.desactivado [class^=rd]{
+    &.desactivado [class^=rd] {
         background-color: rgb(231, 231, 231) !important;
         color: rgb(211, 211, 211) !important;
     }
 
     &.desactivado [class^=cb]::before,
-    &.desactivado [class^=rd]::before{
+    &.desactivado [class^=rd]::before {
         border: 2px solid rgb(194, 194, 194) !important;
     }
 
     &.desactivado .checkbox,
-    &.desactivado .radiobtn{
+    &.desactivado .radiobtn {
         color: rgb(211, 211, 211) !important;
     }
 
     &.desactivado .checkbox::before,
-    &.desactivado .radiobtn::before{
+    &.desactivado .radiobtn::before {
         border: 2px solid rgb(228, 228, 228) !important;
         background-color: rgb(236, 236, 236) !important;
     }
@@ -28,29 +35,30 @@
 .check-radio-grupo input[type="radio"] {
     display: none;
 
-    &.desactivado + [class^=cb],
-    &.desactivado + [class^=rd]{
+    &.desactivado+[class^=cb],
+    &.desactivado+[class^=rd] {
         background-color: rgb(231, 231, 231) !important;
         color: rgb(211, 211, 211) !important;
     }
 
-    &.desactivado + [class^=cb]::before,
-    &.desactivado + [class^=rd]::before{
+    &.desactivado+[class^=cb]::before,
+    &.desactivado+[class^=rd]::before {
         border: 2px solid rgb(194, 194, 194) !important;
     }
 
-    &.desactivado + .checkbox,
-    &.desactivado + .radiobtn{
+    &.desactivado+.checkbox,
+    &.desactivado+.radiobtn {
         color: rgb(211, 211, 211) !important;
     }
 
-    &.desactivado + .checkbox::before,
-    &.desactivado + .radiobtn::before{
+    &.desactivado+.checkbox::before,
+    &.desactivado+.radiobtn::before {
         border: 2px solid rgb(228, 228, 228) !important;
         background-color: rgb(236, 236, 236) !important;
     }
 }
 
+/// Variantes de color para checkboxes y radio buttons
 .cb-rojo,
 .cb-azul,
 .cb-verde,
@@ -58,7 +66,7 @@
 .cb-negro,
 .cb-blanco,
 .rd-rojo,
-.rd-azul, 
+.rd-azul,
 .rd-verde,
 .rd-gris,
 .rd-negro,
@@ -82,10 +90,10 @@
     -webkit-transition: all .5s ease;
     user-select: none;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    
+
 }
 
-.cb-azul, 
+.cb-azul,
 .rd-azul {
     background-color: rgba(17, 101, 226, 0.39);
 }
@@ -122,7 +130,7 @@
 .rd-azul::before,
 .rd-gris::before,
 .rd-negro::before,
-.rd-blanco::before{
+.rd-blanco::before {
     content: "";
     position: absolute;
     height: 17px;
@@ -137,7 +145,7 @@
 .rd-azul::before,
 .rd-gris::before,
 .rd-negro::before,
-.rd-blanco::before{
+.rd-blanco::before {
     content: "";
     border-radius: 50%;
 }
@@ -195,78 +203,80 @@
 }
 
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo::before,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-verde::before,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-azul::before,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-gris::before,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-negro::before,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-rojo::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-verde::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-azul::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-gris::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-negro::before,
-.check-radio-grupo input[type="radio"]:checked + .rd-blanco::before{
+.check-radio-grupo input[type="checkbox"]:checked+.cb-rojo::before,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-verde::before,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-azul::before,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-gris::before,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-negro::before,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-blanco::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-rojo::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-verde::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-azul::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-gris::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-negro::before,
+.check-radio-grupo input[type="radio"]:checked+.rd-blanco::before {
     display: none;
 }
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-verde,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-azul,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-gris,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-negro,
-.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco,
-.check-radio-grupo input[type="radio"]:checked + .rd-rojo,
-.check-radio-grupo input[type="radio"]:checked + .rd-verde,
-.check-radio-grupo input[type="radio"]:checked + .rd-azul,
-.check-radio-grupo input[type="radio"]:checked + .rd-gris,
-.check-radio-grupo input[type="radio"]:checked + .rd-negro,
-.check-radio-grupo input[type="radio"]:checked + .rd-blanco {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-rojo,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-verde,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-azul,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-gris,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-negro,
+.check-radio-grupo input[type="checkbox"]:checked+.cb-blanco,
+.check-radio-grupo input[type="radio"]:checked+.rd-rojo,
+.check-radio-grupo input[type="radio"]:checked+.rd-verde,
+.check-radio-grupo input[type="radio"]:checked+.rd-azul,
+.check-radio-grupo input[type="radio"]:checked+.rd-gris,
+.check-radio-grupo input[type="radio"]:checked+.rd-negro,
+.check-radio-grupo input[type="radio"]:checked+.rd-blanco {
     padding-left: 34px;
     padding-right: 34px;
 }
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-rojo,
-.check-radio-grupo input[type="radio"]:checked + .rd-rojo {
-   background-color: rgb(255, 0, 0);
-   color: white;
+.check-radio-grupo input[type="checkbox"]:checked+.cb-rojo,
+.check-radio-grupo input[type="radio"]:checked+.rd-rojo {
+    background-color: rgb(255, 0, 0);
+    color: white;
 }
 
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-verde,
-.check-radio-grupo input[type="radio"]:checked + .rd-verde {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-verde,
+.check-radio-grupo input[type="radio"]:checked+.rd-verde {
     background-color: rgb(2, 194, 146);
     color: white;
 }
 
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-azul,
-.check-radio-grupo input[type="radio"]:checked + .rd-azul {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-azul,
+.check-radio-grupo input[type="radio"]:checked+.rd-azul {
     background-color: rgb(17, 101, 226);
     color: white;
 }
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-gris,
-.check-radio-grupo input[type="radio"]:checked + .rd-gris {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-gris,
+.check-radio-grupo input[type="radio"]:checked+.rd-gris {
     background-color: rgb(212, 212, 212);
     color: black;
 }
 
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-negro,
-.check-radio-grupo input[type="radio"]:checked + .rd-negro {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-negro,
+.check-radio-grupo input[type="radio"]:checked+.rd-negro {
     background-color: black;
     color: white;
 }
 
-.check-radio-grupo input[type="checkbox"]:checked + .cb-blanco,
-.check-radio-grupo input[type="radio"]:checked + .rd-blanco {
+.check-radio-grupo input[type="checkbox"]:checked+.cb-blanco,
+.check-radio-grupo input[type="radio"]:checked+.rd-blanco {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
 
-.checkbox, .radiobtn {
+/// Estilo base para checkbox y radio button
+.checkbox,
+.radiobtn {
     display: inline-block;
     font-size: 1em;
     padding: 5px;
@@ -275,9 +285,11 @@
     cursor: pointer;
     user-select: none;
     color: rgb(26, 26, 26);
+
     &:active {
         color: black;
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -323,12 +335,12 @@
 }
 
 
-.check-radio-grupo input[type="checkbox"]:checked + .checkbox::after,
-.check-radio-grupo input[type="radio"]:checked + .radiobtn::after{
+.check-radio-grupo input[type="checkbox"]:checked+.checkbox::after,
+.check-radio-grupo input[type="radio"]:checked+.radiobtn::after {
     display: inline-block;
 }
 
-.check-radio-grupo input[type="checkbox"]:checked + .checkbox::before, 
-.check-radio-grupo input[type="radio"]:checked + .radiobtn::before {
+.check-radio-grupo input[type="checkbox"]:checked+.checkbox::before,
+.check-radio-grupo input[type="radio"]:checked+.radiobtn::before {
     border: 1px solid rgba(45, 206, 255, 0.418);
 }

@@ -1,76 +1,94 @@
 @use "../globales/funciones";
 
-// Ancho y alto
+////
+/// @group Layout
+/// Utilidades de ancho y alto (porcentajes)
+////
+
+/// Generador de ancho y alto (múltiplos de 5%)
 @for $i from 1 through 100 {
-    @if(funciones.multiplo5($i)){ 
-        .width-#{$i}, 
-        .ancho-#{$i}{        
-            width: 0% + $i !important; 
+    @if(funciones.multiplo5($i)) {
+
+        .width-#{$i},
+        .ancho-#{$i} {
+            width: 0% + $i !important;
         }
     }
 }
+
 @for $i from 1 through 100 {
-    @if(funciones.multiplo5($i)){ 
-        .height-#{$i},   
-        .alto-#{$i}{        
-            height: 0% + $i !important; 
+    @if(funciones.multiplo5($i)) {
+
+        .height-#{$i},
+        .alto-#{$i} {
+            height: 0% + $i !important;
         }
     }
 }
 
 
-@media (max-width: funciones.dameMedida(m)){
+/// Ancho y alto responsive (Medium)
+@media (max-width: funciones.dameMedida(m)) {
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){  
+        @if(funciones.multiplo5($i)) {
+
             .width-m-#{$i},
-            .ancho-m-#{$i}{        
-                width: 0% + $i !important; 
+            .ancho-m-#{$i} {
+                width: 0% + $i !important;
             }
         }
     }
+
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){  
-            .height-m-#{$i}  
-            .alto-m-#{$i}{        
-                height: 0% + $i !important; 
+        @if(funciones.multiplo5($i)) {
+            .height-m-#{$i} .alto-m-#{$i} {
+                height: 0% + $i !important;
             }
         }
     }
 }
 
-@media (max-width: funciones.dameMedida(s)){
+/// Ancho y alto responsive (Small)
+@media (max-width: funciones.dameMedida(s)) {
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){  
-            .width-s-#{$i},  
-            .ancho-s-#{$i}{        
-                width: 0% + $i !important; 
+        @if(funciones.multiplo5($i)) {
+
+            .width-s-#{$i},
+            .ancho-s-#{$i} {
+                width: 0% + $i !important;
             }
         }
     }
+
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){ 
-            .height-s-#{$i},   
-            .alto-s-#{$i}{        
-                height: 0% + $i !important; 
+        @if(funciones.multiplo5($i)) {
+
+            .height-s-#{$i},
+            .alto-s-#{$i} {
+                height: 0% + $i !important;
             }
         }
     }
 }
 
-@media (max-width: funciones.dameMedida(xs)){
+/// Ancho y alto responsive (Extra Small)
+@media (max-width: funciones.dameMedida(xs)) {
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){   
-            .width-xs-#{$i}, 
-            .ancho-xs-#{$i}{        
-                width: 0% + $i !important; 
+        @if(funciones.multiplo5($i)) {
+
+            .width-xs-#{$i},
+            .ancho-xs-#{$i} {
+                width: 0% + $i !important;
             }
         }
     }
+
     @for $i from 1 through 100 {
-        @if(funciones.multiplo5($i)){   
-            .height-xs-#{$i}, 
-            .alto-xs-#{$i}{        
-                height: 0% + $i !important; 
+        @if(funciones.multiplo5($i)) {
+
+            .height-xs-#{$i},
+            .alto-xs-#{$i} {
+                height: 0% + $i !important;
             }
         }
     }

@@ -1,8 +1,14 @@
 @use "globales/funciones";
 
+////
+/// @group Formularios
+/// Estilos generales para contenedores de formularios
+////
+
+/// Grupo de formulario básico
 .form-grupo,
 .form-group,
-.form-grupo-linea  {
+.form-grupo-linea {
     // 1 EM
     font-size: 16px;
 
@@ -18,23 +24,24 @@
         font-size: 1.125em !important;
         line-height: 2.5em;
         color: black;
-        
+
         white-space: nowrap;
     }
 }
 
+/// Grupo de formulario en línea (horizontal)
 .form-grupo-linea {
 
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 
-    input, 
+    input,
     .input-icon {
         margin-bottom: 10px;
     }
 
-    *:last-child:not(input):not(select):not(.input-icon){
+    *:last-child:not(input):not(select):not(.input-icon) {
         margin-left: 10px;
     }
 
@@ -51,12 +58,15 @@
     }
 
 
-    @media (max-width: funciones.dameMedida(s) ){
+    @media (max-width: funciones.dameMedida(s)) {
         display: block;
-        *:last-child:not(input):not(select):not(.input-icon){
+
+        *:last-child:not(input):not(select):not(.input-icon) {
             margin-left: 0;
         }
-        input, .input-icon {
+
+        input,
+        .input-icon {
             margin: 0;
             margin-bottom: 10px;
         }

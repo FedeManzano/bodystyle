@@ -1,5 +1,11 @@
 @use "globales/variables";
 
+////
+/// @group Alertas
+/// Componentes de alerta para notificaciones
+////
+
+/// Estilos base para alertas
 .alerta-roja,
 .alert-red,
 .alerta-azul,
@@ -13,18 +19,18 @@
 .alerta-negra,
 .alert-black {
 
-    *{
-        font-family: 'Roboto', -apple-system, 
-                    BlinkMacSystemFont, 
-                    "Segoe UI", 
-                    "Helvetica Neue", 
-                    Arial, 
-                    "Noto Sans", 
-                    sans-serif, 
-                    "Apple Color Emoji", 
-                    "Segoe UI Emoji", 
-                    "Segoe UI Symbol", 
-                    "Noto Color Emoji";
+    * {
+        font-family: 'Roboto', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";
     }
 
     display: inline-block;
@@ -37,26 +43,31 @@
     font-weight: variables.$alerta-fw;
 }
 
+/// Alerta azul
 .alerta-azul,
 .alert-blue {
     border-left: variables.$alerta-azul-borde;
 }
 
+/// Alerta roja
 .alerta-roja,
 .alert-red {
     border-left: variables.$alerta-roja-borde;
 }
 
+/// Alerta verde
 .alerta-verde,
 .alert-green {
     border-left: variables.$alerta-verde-borde;
 }
 
+/// Alerta gris
 .alerta-gris,
-.alert-grey{
+.alert-grey {
     border-left: variables.$alerta-gris-borde;
 }
 
+/// Alerta negra
 .alerta-negra,
 .alert-black {
     border: none !important;
@@ -65,11 +76,13 @@
     color: rgb(191, 191, 191);
 }
 
+/// Alerta blanca
 .alerta-blanca,
-.alert-white{
+.alert-white {
     border-left: variables.$alerta-blanca-borde;
 }
 
+/// Estilos base para alertas opacas
 .alerta-op-rojo,
 .alert-op-red,
 .alerta-op-verde,
@@ -99,6 +112,7 @@
     }
 }
 
+/// Alerta opaca roja
 .alerta-op-rojo,
 .alert-op-red {
     background-color: variables.$alerta-op-rojo-bg;
@@ -106,6 +120,7 @@
     color: variables.$alerta-op-rojo-color;
 }
 
+/// Alerta opaca verde
 .alerta-op-verde,
 .alert-op-green {
     background-color: variables.$alerta-op-verde-bg;
@@ -113,6 +128,7 @@
     color: variables.$alerta-op-verde-color;
 }
 
+/// Alerta opaca azul
 .alerta-op-azul,
 .alert-op-blue {
     background-color: variables.$alerta-op-azul-bg;
@@ -120,6 +136,7 @@
     color: variables.$alerta-op-azul-color;
 }
 
+/// Alerta opaca negra
 .alerta-op-negro,
 .alert-op-black {
     background-color: variables.$alerta-op-negro-bg;
@@ -127,6 +144,7 @@
     color: variables.$alerta-op-negro-color;
 }
 
+/// Alerta opaca gris
 .alerta-op-gris,
 .alert-op-grey {
     background-color: variables.$alerta-op-gris-bg;
@@ -134,6 +152,7 @@
     color: variables.$alerta-op-gris-color;
 }
 
+/// Alerta opaca blanca
 .alerta-op-blanco,
 .alert-op-white {
     background-color: variables.$alerta-op-blanco-bg;
@@ -141,11 +160,13 @@
     color: variables.$alerta-op-blanco-color;
 }
 
+/// Botón para cerrar alerta
 .alerta-cerrar,
 .alert-close {
     position: relative;
     cursor: pointer;
-    &::before, 
+
+    &::before,
     &::after {
         content: "";
         position: absolute;
@@ -154,13 +175,10 @@
         height: 3px;
         right: 7px;
         top: 10px;
-        transform:  rotate(45deg);
+        transform: rotate(45deg);
     }
 
     &::after {
-        transform:  rotate(-45deg);
+        transform: rotate(-45deg);
     }
 }
-  
-  
-  

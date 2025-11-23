@@ -1,33 +1,39 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Cards
+/// Componentes de tarjetas para mostrar contenido
+////
+
+/// Estilos base para tarjetas
 .card {
 
-    *{
+    * {
 
-        font-family: 'Roboto','Roboto', -apple-system, 
-                    BlinkMacSystemFont, 
-                    "Segoe UI", 
-                    "Helvetica Neue", 
-                    Arial, 
-                    "Noto Sans", 
-                    sans-serif, 
-                    "Apple Color Emoji", 
-                    "Segoe UI Emoji", 
-                    "Segoe UI Symbol", 
-                    "Noto Color Emoji";
+        font-family: 'Roboto', 'Roboto', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";
     }
 
     font-size: 16px !important; // 1EM
 
     // Bordes para todas las cards
-    $borde_claro:   2px solid rgb(98, 100, 119);
-    $borde_oscuro:  2px solid rgba(60, 59, 65, 0.685);
+    $borde_claro: 2px solid rgb(98, 100, 119);
+    $borde_oscuro: 2px solid rgba(60, 59, 65, 0.685);
     $borde_redondeado: 10px;
 
     // Medidas variables de las cards
-    $ancho_maximo:  415px;
-    $ancho_minimo:  280px;
+    $ancho_maximo: 415px;
+    $ancho_minimo: 280px;
 
     // Colores de fondo
     $bg_dark: rgb(29, 29, 29);
@@ -47,22 +53,27 @@
     // Padding 
     $padding: 15px;
 
-    .card-cover 
-    {
+    /// Clase para imágenes que cubren la tarjeta
+    .card-cover {
         max-width: 100% !important;
         min-width: 100% !important;
     }
 
+    /// Tarjeta simple (oscura y clara)
     .card-simple-dark,
-    .card-simple-light 
-    {
+    .card-simple-light {
         padding: $padding !important;
         border-radius: $borde_redondeado !important;
-        
+
         max-width: 385px;
         min-width: 295px;
 
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: 22px !important;
             font-weight: 500 !important;
             margin: 0 !important;
@@ -79,15 +90,22 @@
             line-height: 90% !important;
         }
     }
+
     .card-simple-dark {
         background-color: $bg_dark !important;
         border: $borde_claro !important;
 
-        h1,h2,h3,h4,h5,h6 {
-            color: $color_dark_cabeceras_h;  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color_dark_cabeceras_h;
         }
 
-        p,span {
+        p,
+        span {
             color: $color_dark_cabeceras_p;
         }
 
@@ -95,16 +113,22 @@
             color: $color_dark_cabeceras_sm;
         }
     }
-    .card-simple-light
-    {
+
+    .card-simple-light {
         background-color: $bg_light !important;
         border: $borde_oscuro !important;
 
-        h1,h2,h3,h4,h5,h6 {
-            color: $color_light_cabeceras_h;  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color_light_cabeceras_h;
         }
 
-        p,span {
+        p,
+        span {
             color: $color_light_cabeceras_p;
         }
 
@@ -112,14 +136,13 @@
             color: $color_light_cabeceras_sm;
         }
     }
-    
 
+    /// Tarjeta con icono (oscura y clara)
     .card-icon-dark,
-    .card-icon-light 
-    {
+    .card-icon-light {
         padding: $padding !important;
         border-radius: $borde_redondeado !important;
-        
+
         max-width: 320px;
         min-width: 295px;
 
@@ -139,8 +162,13 @@
             }
         }
 
-        
-        h1,h2,h3,h4,h5,h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: 22px !important;
             font-weight: 500 !important;
             text-wrap: none;
@@ -157,15 +185,22 @@
             line-height: 90% !important;
         }
     }
+
     .card-icon-dark {
         background-color: $bg_dark !important;
         border: $borde_claro !important;
 
-        h1,h2,h3,h4,h5,h6 {
-            color: $color_dark_cabeceras_h;  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color_dark_cabeceras_h;
         }
 
-        p,span {
+        p,
+        span {
             color: $color_dark_cabeceras_p;
         }
 
@@ -173,15 +208,22 @@
             color: $color_dark_cabeceras_sm;
         }
     }
+
     .card-icon-light {
         background-color: $bg_light !important;
         border: $borde_oscuro !important;
 
-        h1,h2,h3,h4,h5,h6 {
-            color: $color_light_cabeceras_h;  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $color_light_cabeceras_h;
         }
 
-        p,span {
+        p,
+        span {
             color: $color_light_cabeceras_p;
         }
 
@@ -191,15 +233,15 @@
     }
 
 
+    /// Tarjeta de perfil (oscura y clara)
     .card-perfil-dark,
-    .card-perfil-light 
-    {
+    .card-perfil-light {
         padding: $padding !important;
         border-radius: $borde_redondeado !important;
         min-height: 200px;
         max-width: 320px;
         min-width: 320px;
-        position:relative;
+        position: relative;
 
         .image-container {
             position: absolute;
@@ -214,9 +256,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border:  4px solid rgb(98, 100, 119);
+            border: 4px solid rgb(98, 100, 119);
             display: flex;
             justify-content: center;
+
             img {
                 width: 132px !important;
                 height: 132px !important;
@@ -224,8 +267,13 @@
             }
         }
 
-        
-        h1,h2,h3,h4,h5,h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: 22px !important;
             font-weight: 500 !important;
             text-wrap: none;
@@ -244,13 +292,19 @@
             line-height: 90% !important;
         }
     }
+
     .card-perfil-dark {
 
         background-color: $bg_dark !important;
         border: $borde_claro !important;
 
 
-         h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: $color_dark_cabeceras_h;
         }
 
@@ -265,17 +319,24 @@
             line-height: 120% !important;
             color: $color_dark_cabeceras_p;
         }
+
         small {
             color: $color_dark_cabeceras_sm;
         }
     }
+
     .card-perfil-light {
 
         background-color: $bg_light !important;
         border: $borde_oscuro !important;
 
 
-         h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: $color_light_cabeceras_h;
         }
 
@@ -290,29 +351,29 @@
             line-height: 120% !important;
             color: $color_light_cabeceras_p;
         }
+
         small {
             color: $color_light_cabeceras_sm;
         }
     }
 
 
+    /// Tarjeta con descripción (oscura y clara)
     .card-description-dark,
-    .card-description-light 
-    {
+    .card-description-light {
         padding: $padding !important;
         border-radius: $borde_redondeado !important;
-        
+
         max-width: 40%;
         min-width: 295px;
 
 
-        .content
-        {
+        .content {
             margin-top: 10px !important;
             height: 150px !important;
         }
-        .image-container 
-        {
+
+        .image-container {
             border-radius: $borde_redondeado;
             width: 100% !important;
             overflow: hidden !important;
@@ -321,15 +382,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            img 
-            {
+
+            img {
                 max-width: 100% !important;
                 min-width: 100% !important;
                 border-radius: $borde_redondeado;
             }
         }
 
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-size: 22px !important;
             font-weight: 500 !important;
             margin: 0 !important;
@@ -346,13 +412,18 @@
             line-height: 90% !important;
         }
     }
-    .card-description-dark
-    {
+
+    .card-description-dark {
         background-color: $bg_dark !important;
         border: $borde_claro !important;
 
 
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: $color_dark_cabeceras_h;
         }
 
@@ -361,17 +432,23 @@
             line-height: 120% !important;
             color: $color_dark_cabeceras_p;
         }
+
         small {
             color: $color_dark_cabeceras_sm;
         }
     }
-    .card-description-light
-    {
+
+    .card-description-light {
         background-color: $bg_light !important;
         border: $borde_oscuro !important;
 
 
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: $color_light_cabeceras_h;
         }
 
@@ -380,6 +457,7 @@
             line-height: 120% !important;
             color: $color_light_cabeceras_p;
         }
+
         small {
             color: $color_light_cabeceras_sm;
         }

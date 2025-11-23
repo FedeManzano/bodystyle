@@ -1,21 +1,29 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Componentes
+/// Barras de progreso
+////
+
+/// Mixin para el color de la barra de progreso
+/// @param {Color} $color - Color de fondo de la barra
 @mixin progressBar($color) {
     border-radius: 3px;
     height: 100%;
     background-color: $color;
 }
 
-.progress-bar, 
-.progress-bar-sm, 
-.progress-bar-lg{
-    @include mixim.ancho-alto(100%, 10px);
+/// Contenedor de la barra de progreso
+.progress-bar,
+.progress-bar-sm,
+.progress-bar-lg {
+    @include mixins.ancho-alto(100%, 10px);
 
-    
+
     background-color: rgb(204, 204, 204);
     border-radius: 3px;
-        
+
     .progress-rojo {
         @include progressBar(variables.$fd-rojo);
     }
@@ -44,4 +52,3 @@
 .progress-bar-lg {
     height: 15px;
 }
-

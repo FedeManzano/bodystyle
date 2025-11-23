@@ -1,21 +1,21 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
-/**
-    Input de tipo texto e email
-    con la clase validación para poder mostrar 
-    que la informacion del campo es erronea
-*/
+////
+/// @group Inputs
+/// Estilos para inputs de texto y áreas de texto
+////
 
-input[type='text'], 
+/// Estilos base para inputs de texto
+input[type='text'],
 input[type='email'],
 input[type='number'],
 input[type='password'],
 input[type='url'],
-input[type='search'], 
-textarea{
-    // sass/globales/mixim
-    @include mixim.configInput();
+input[type='search'],
+textarea {
+    // sass/globales/mixins
+    @include mixins.configInput();
 
     &.desactivado {
         background-color: variables.$fd-gris-c !important;
@@ -29,6 +29,7 @@ textarea{
     }
 }
 
+/// Input tipo file oculto
 .input-file {
     outline: none;
     appearance: none;
@@ -38,6 +39,7 @@ textarea{
 }
 
 
+/// Etiqueta personalizada para input file
 .f-label {
     position: relative;
     width: 20%;
@@ -62,6 +64,7 @@ textarea{
 }
 
 
+/// Contenedor para mostrar archivo seleccionado
 .archivo-seleccionado {
     overflow: auto;
     width: 300%;
@@ -75,7 +78,7 @@ textarea{
     font-size: 15px;
 }
 
-@media (max-width: 500px ){
+@media (max-width: 500px) {
     .f-label .archivo-seleccionado {
         left: 0;
         top: calc(100% + 10px);
@@ -83,9 +86,10 @@ textarea{
     }
 }
 
-input[type='text']:focus, 
+// Estilos focus para inputs
+input[type='text']:focus,
 input[type='email']:focus,
-input[type='number']:focus, 
+input[type='number']:focus,
 input[type='password']:focus,
 input[type='url']:focus,
 input[type='search']:focus,
@@ -96,7 +100,8 @@ textarea:focus {
 }
 
 
-input[type='text']::placeholder, 
+// Estilos placeholder
+input[type='text']::placeholder,
 input[type='email']::placeholder,
 input[type='number']::placeholder,
 input[type='password']::placeholder,
@@ -107,39 +112,43 @@ textarea::placeholder {
 }
 
 
+/// Clase para indicar error en el input
 .i-error {
     border: 2px solid rgb(250, 92, 92) !important;
     z-index: 2;
 }
 
+/// Input pequeño
 .input-sm {
     height: 2.1em !important;
     font-size: 0.9em !important;
 }
 
 
+/// Input grande
 .input-lg {
     height: 2.2em !important;
     font-size: 1.3em !important;
 }
 
+/// Input con icono
 .input-icon {
-    @include mixim.configInput();
+    @include mixins.configInput();
     position: relative;
     display: flex;
-    padding:6px 10px;
+    padding: 6px 10px;
     justify-content: space-between;
     height: 2.1em;
     background-color: white;
 
 
 
-    input[type='text'], 
+    input[type='text'],
     input[type='email'],
-    input[type='number'], 
+    input[type='number'],
     input[type='password'],
     input[type='url'],
-    input[type='search']{
+    input[type='search'] {
         box-shadow: none !important;
         border: none;
         z-index: 1;
@@ -147,20 +156,22 @@ textarea::placeholder {
         font-size: 1.1em;
         top: 0.25em;
         left: 0;
+
         &:focus {
             box-shadow: none !important;
             border: none !important;
         }
     }
+
     & .elemento:first-child {
         color: rgb(131, 131, 131);
         font-size: 1.1em;
     }
 
-    
-    input[type='text']:focus, 
+
+    input[type='text']:focus,
     input[type='email']:focus,
-    input[type='number']:focus, 
+    input[type='number']:focus,
     input[type='password']:focus,
     input[type='url']:focus,
     input[type='search']:focus {
@@ -168,16 +179,17 @@ textarea::placeholder {
         border: none;
     }
 
-    input[type='text']:focus ~ .elemento, 
-    input[type='email']:focus + .elemento,
-    input[type='number']:focus + .elemento, 
-    input[type='password']:focus + .elemento,
-    input[type='url']:focus + .elemento,
-    input[type='search']:focus + .elemento{
+    input[type='text']:focus~.elemento,
+    input[type='email']:focus+.elemento,
+    input[type='number']:focus+.elemento,
+    input[type='password']:focus+.elemento,
+    input[type='url']:focus+.elemento,
+    input[type='search']:focus+.elemento {
         color: #212121;
     }
 }
 
+/// Estado de carga para input
 .input-cargando {
     background-color: rgb(192, 192, 192) !important;
 }

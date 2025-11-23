@@ -1,16 +1,27 @@
+@use "globales/mixins";
+@use "globales/variables";
+
+////
+/// @group Footer
+/// Estilos para el pie de página
+////
+
+/// Contenedor principal del footer
 .footer {
-    background-color: $fd-gris-az-o;
+    background-color: variables.$fd-gris-az-o;
     padding: 50px 30px 100px 30px;
     text-align: center;
     position: relative;
+
     .footer-titulo {
         font-size: 25px;
         color: white;
         font-weight: 600;
         padding: 10px;
     }
+
     .footer-logo {
-        @include flex-box-centrado();
+        @include mixins.flex-box-centrado();
         color: white;
         height: 100%;
         font-size: 60px;
@@ -22,6 +33,7 @@
         color: white;
         padding: 5px;
         font-size: 20px;
+
         &:hover {
             color: rgb(52, 201, 206);
         }
@@ -33,7 +45,7 @@
         display: flex;
         text-align: center;
         justify-content: space-between;
-        
+
         bottom: 0;
         width: 100%;
         left: 0;

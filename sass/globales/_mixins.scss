@@ -2,19 +2,30 @@
 @use "funciones";
 @use "variables";
 
-@mixin agregar-a-medida-maxima($tam) { 
+////
+/// @group Mixins Generales
+/// Utilidades para media queries y layout
+////
+
+/// Aplica estilos para pantallas menores a un tamaño específico
+/// @param {String} $tam - Clave del mapa de tamaños (xs, s, m, l)
+@mixin agregar-a-medida-maxima($tam) {
     @if map.has-key(variables.$tamaños, $tam) {
         @media (max-width: #{map.get(variables.$tamaños, $tam)}) {
             @content;
         }
     }
-  
-    @else {
-      @warn "El tamaño seleccionado no existe";
-    }
-};
 
-@mixin agregar-a-medida-minima($tam) { 
+    @else {
+        @warn "El tamaño seleccionado no existe";
+    }
+}
+
+;
+
+/// Aplica estilos para pantallas mayores a un tamaño específico
+/// @param {String} $tam - Clave del mapa de tamaños (xs, s, m, l)
+@mixin agregar-a-medida-minima($tam) {
     @if map.has-key(variables.$tamaños, $tam) {
         @media (min-width: #{map.get(variables.$tamaños, $tam)}) {
             @content;
@@ -22,28 +33,39 @@
     }
 
     @else {
-      @warn "El tamaño seleccionado no existe";;
+        @warn "El tamaño seleccionado no existe";
+        ;
     }
-};
+}
 
+;
+
+/// Centra elementos usando Flexbox
 @mixin flex-box-centrado {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/// Alinea elementos a la derecha usando Flexbox
 @mixin flex-box-centrado-derecha {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
+/// Alinea elementos a la izquierda usando Flexbox
 @mixin flex-box-centrado-izquierda {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+/// Posicionamiento absoluto con coordenadas
+/// @param {Length} $top - Posición superior
+/// @param {Length} $rigth - Posición derecha
+/// @param {Length} $botton - Posición inferior
+/// @param {Length} $left - Posición izquierda
 @mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
     position: absolute;
     top: $top;
@@ -52,6 +74,11 @@
     left: $left;
 }
 
+/// Posicionamiento fijo con coordenadas
+/// @param {Length} $top - Posición superior
+/// @param {Length} $rigth - Posición derecha
+/// @param {Length} $botton - Posición inferior
+/// @param {Length} $left - Posición izquierda
 @mixin posicionamiento-fixed($top, $rigth, $botton, $left) {
     position: fixed;
     top: $top;
@@ -60,12 +87,16 @@
     left: $left;
 }
 
+/// Define ancho y alto de un elemento
+/// @param {Length} $ancho - Ancho del elemento
+/// @param {Length} $alto - Alto del elemento
 @mixin ancho-alto($ancho, $alto) {
     width: $ancho;
     height: $alto;
 }
 
 
+/// Estilos base para menú tipo hamburguesa
 @mixin menu() {
     display: flex;
     flex-direction: column;
@@ -75,10 +106,11 @@
         @include ancho-alto(18px, 2px);
         margin-bottom: 3px;
         background-color: white;
-        
+
     }
 }
 
+/// Estilos para flechas indicadoras
 @mixin flechas() {
     position: absolute;
     @include ancho-alto(0, 0);
@@ -89,8 +121,14 @@
 
 
 
-// ************** Mixim botones ********************* //
+// ************** Mixins botones ********************* //
 
+////
+/// @group Mixins Botones
+/// Utilidades para la creación de botones
+////
+
+/// Inicializa los estilos base de un botón
 @mixin inicializar-botones {
     display: flex !important;
     justify-content: center !important;
@@ -100,11 +138,13 @@
     user-select: none;
     font-size: 18px;
     position: relative;
-    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397); 
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
     user-select: none;
     appearance: none;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
+
+/// Configuración base para botones (reset de estilos)
 @mixin configuracion-botones() {
     //Inicializar componentes de html puro
     border-style: none;
@@ -119,7 +159,14 @@
     display: flex;
 }
 
-@mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
+/// Estilos individuales para botones con tamaños personalizados
+/// @param {Length} $patb - Padding top/bottom
+/// @param {Length} $palr - Padding left/right
+/// @param {Length} $mw - Max width
+/// @param {Length} $maxh - Max height
+/// @param {Length} $minw - Min width
+/// @param {Length} $fz - Font size
+@mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw, $fz) {
     padding: $patb $palr ;
     min-width: 35px;
     max-width: 200px !important;
@@ -127,6 +174,13 @@
     min-height: $maxh;
 }
 
+/// Mixin para botones que cubren un área específica
+/// @param {Length} $pbt - Padding top/bottom
+/// @param {Length} $plr - Padding left/right
+/// @param {Length} $fz - Font size
+/// @param {String} $display - Propiedad display
+/// @param {Length} $w - Width
+/// @param {Length} $m - Margin
 @mixin btn-cubrir ($pbt, $plr, $fz, $display, $w, $m) {
     padding: $pbt $plr;
     display: flex;
@@ -134,10 +188,14 @@
     align-items: center;
     width: $w;
     font-size: $fz;
-    margin:$m;
+    margin: $m;
 }
 
 
+/// Aplica colores de fondo y texto a un botón
+/// @param {Color} $bg - Color de fondo
+/// @param {Color} $color - Color de texto
+/// @param {Length} $fz - Font size
 @mixin btn-colores($bg, $color, $fz) {
     background-color: $bg;
     color: $color;
@@ -146,6 +204,12 @@
 }
 
 
+/// Aplica estilos outline (borde) a un botón
+/// @param {Length} $bgr - Grosor del borde
+/// @param {String} $btipo - Tipo de borde (solid, dashed, etc)
+/// @param {Color} $bcolor - Color del borde
+/// @param {Color} $color - Color del texto
+/// @param {Length} $fzm - Font size (no usado en el mixin pero declarado)
 @mixin btn-colores-outline($bgr, $btipo, $bcolor, $color, $fzm) {
     border: $bgr $btipo $bcolor !important;
     background-color: transparent !important;
@@ -155,7 +219,14 @@
 }
 
 
-// ********* Mixim Input ********* //
+// ********* Mixins Input ********* //
+
+////
+/// @group Mixins Inputs
+/// Utilidades para campos de formulario
+////
+
+/// Configuración base para inputs de texto
 @mixin configInput() {
     outline: none;
     height: 2.1em;
@@ -172,7 +243,12 @@
 
 // ************** Menú ************ //
 
+////
+/// @group Mixins Menú
+/// Utilidades para menús de navegación
+////
 
+/// Estilos generales para el contenedor del menú
 @mixin menu-general {
     @include flex-box-centrado();
     padding: 0 20px;
@@ -182,10 +258,11 @@
 }
 
 
+/// Estilos para la lista de elementos del menú
 @mixin menu-lista {
     @include flex-box-centrado-izquierda();
     width: 80%;
-    
+
     li {
         a {
             display: block;
@@ -194,37 +271,44 @@
             color: white;
             cursor: pointer;
             font-size: 1.1em;
+
             &.desactivado {
                 color: rgba(117, 117, 117);
+
                 &:hover {
                     color: grey;
                 }
             }
+
             &:hover {
                 color: variables.$fd-gris-c;
             }
         }
-        
+
     }
 }
 
-@mixin  menu-ext {
+/// Estilos para menú extendido
+@mixin menu-ext {
     background-color: white;
     display: block;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
-    
+
     ul {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
         li {
-            min-width:100px ;
+            min-width: 100px;
+
             a {
                 display: flex;
                 flex-direction: column;
                 color: rgb(78, 78, 78);
                 text-align: center;
                 padding: 10px 0;
+
                 &:hover {
                     color: black;
                 }
@@ -233,6 +317,7 @@
                     font-size: 30px;
                     margin-bottom: 7px;
                 }
+
                 & span:last-child {
                     font-size: 1em;
                 }
@@ -242,6 +327,7 @@
 }
 
 
+/// Estilos para el botón del menú lateral (hamburguesa)
 @mixin menu-lateral-boton() {
     display: flex;
     flex-direction: column;
@@ -249,21 +335,24 @@
     align-items: flex-end;
     padding: 1em;
     cursor: pointer;
-  
+
     span {
         @include ancho-alto(22px, 2px);
         margin-bottom: 5px;
         background-color: white;
     }
+
     width: 80%;
     color: white;
-    
-    @include agregar-a-medida-minima(m){
+
+    @include agregar-a-medida-minima(m) {
         display: none !important;
     }
+
     z-index: 100000000;
 }
 
+/// Estilos para el logo del menú
 @mixin menu-logo {
     @include flex-box-centrado();
     width: 10%;

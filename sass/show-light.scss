@@ -4,7 +4,14 @@
  * Licencia MIT
  * Repositorio (https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
  */
+
+////
+/// @group Temas
+/// Tema claro para visualización de código (ShowCode)
+////
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 pre[class^=cod-] {
   overflow: auto;
   font-family: "Source Code Pro" !important;
@@ -14,6 +21,7 @@ pre[class^=cod-] {
   font-size: 0.9em;
   position: relative;
 }
+
 pre[class^=cod-] .numeracion {
   position: absolute;
   border-right: 2px solid #01db92;
@@ -24,6 +32,7 @@ pre[class^=cod-] .numeracion {
   flex-direction: column;
   min-width: 30px;
 }
+
 pre[class^=cod-] .numeracion span {
   display: flex;
   justify-content: center;
@@ -37,9 +46,11 @@ pre[class^=cod-] {
   color: black;
   font-weight: 300 !important;
 }
+
 pre[class^=cod-] .numeracion {
   background-color: #f0f0f0;
 }
+
 pre[class^=cod-] .numeracion span {
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.178);

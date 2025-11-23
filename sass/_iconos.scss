@@ -1,3 +1,9 @@
+////
+/// @group Iconos
+/// Iconos CSS puros (flechas)
+////
+
+/// Flecha hacia abajo
 .f-abajo {
     @include flechas();
     border-top: 5px solid white;
@@ -5,10 +11,10 @@
     border-right: 5px solid transparent;
 }
 
+/// Flecha hacia la derecha
 .f-derecha {
     @include flechas();
     border-left: 5px solid white;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
 }
-

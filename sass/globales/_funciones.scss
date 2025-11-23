@@ -1,57 +1,78 @@
 @use "sass:map";
 @use "variables";
 
-// ***Funciones de la libreria bodyStyle v2.0.0***
+////
+/// @group Funciones
+/// Funciones de la libreria bodyStyle v2.0.0
+////
 
-// *! Funciones para el contenido de texto
-// *************************************************
-
-// Funcion que devuelve el tamaño de letra para 
-// una etqueta html predefinida en la variable $letras.
+/// Función que devuelve el tamaño de letra para una etiqueta html predefinida en la variable $letras.
+/// @param {Map} $hashLetras - Mapa de tamaños de letras
+/// @param {String} $etiqueta - Etiqueta HTML (h1, h2, etc.)
+/// @return {Number} Tamaño de fuente
 @function tamLetra($hashLetras, $etiqueta) {
     @if(map.has-key($hashLetras, $etiqueta )) {
         @return map.get($hashLetras , $etiqueta);
-    }@else{
+    }
+
+    @else {
         @warn "La etiqueta html no existe";
     }
 }
 
-//Función para establecer el grosor de las 
-// Fuentes 
+/// Función para establecer el grosor de las Fuentes
+/// @param {Map} $grosor - Mapa de grosores
+/// @param {String} $val - Clave del grosor
+/// @return {Number} Valor del grosor
 @function get-grosor($grosor, $val) {
     @if(map.has-key($grosor, $val )) {
         @return map.get($grosor , $val);
-    }@else{
+    }
+
+    @else {
         @warn "El grosor seleccionado no existe";
     }
 }
 
 
-// Función que devuelve el nivel del componente
+/// Función que devuelve el nivel del componente (z-index)
+/// @param {String} $al - Nombre del nivel de superposición
+/// @return {Number} Valor z-index
 @function superposicion($al) {
     @if map.has-key(variables.$superposicion, $al) {
         @return map.get(variables.$superposicion, $al);
-    }@else {
+    }
+
+    @else {
         @warn "El componente no existe";
     }
 }
 
-// Devuelve el breackpoint 
+/// Devuelve el breakpoint
+/// @param {String} $med - Clave del tamaño (xs, s, m, l, xl)
+/// @return {Number} Valor del breakpoint
 @function dameMedida($med) {
     @if map.has-key(variables.$tamaños, $med) {
         @return map.get(variables.$tamaños, $med);
     }
 }
 
-// Verifica si un valor es multiplo de 5
-@function multiplo5($num){
-    @return $num % 5 == 0;
+/// Verifica si un valor es múltiplo de 5
+/// @param {Number} $num - Número a verificar
+/// @return {Boolean} True si es múltiplo de 5
+@function multiplo5($num) {
+    @return $num % 5==0;
 }
 
+/// Inicializa una variable en 0
+/// @return {Number} 0
 @function inicializarVariable() {
     @return 0;
 }
 
+/// Incrementa una variable en 0.5
+/// @param {Number} $var - Variable a incrementar
+/// @return {Number} Variable incrementada
 @function incrementar($var) {
-    @return $var + 0.5;
+    @return $var +0.5;
 }

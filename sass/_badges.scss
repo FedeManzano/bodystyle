@@ -1,7 +1,12 @@
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Badges
+/// Estilos para badges, etiquetas y notificaciones
+////
 
+/// Badge básico
 .badge {
     display: inline-block;
     padding: 0.25em 0.4em;
@@ -15,6 +20,7 @@
     margin-left: 3px;
 }
 
+/// Variantes de color para badges
 .badge-verde,
 .badge-green {
     background-color: variables.$b-verde;
@@ -57,31 +63,32 @@
 }
 
 
+/// Badge redondo
 .b-redondo,
 .b-circle {
     border-radius: 50% !important;
 }
 
 
-
+/// Badge tipo etiqueta
 .badge-etiqueta,
 .badge-label,
 .badge-etiqueta-sm,
 .badge-label-sm,
 .badge-etiqueta-lg,
-.badge-label-lg{
+.badge-label-lg {
 
     display: inline-block;
     position: relative;
-    @include mixim.flex-box-centrado();
+    @include mixins.flex-box-centrado();
 
     font-size: variables.$b-etiqueta-fz;
     padding: 5px 11px;
     height: variables.$b-etiqueta-altura;
     min-width: variables.$b-etiqueta-minw;
     max-width: variables.$b-etiqueta-maxw;
-    
-    
+
+
     cursor: pointer;
     user-select: none;
     z-index: 10;
@@ -104,7 +111,7 @@
         background-color: white;
         position: absolute;
         left: -3px;
-        top:8px;
+        top: 8px;
         border-radius: 50%;
         box-shadow: inset 1px 1px rgba(0, 0, 0, 0.685);
         z-index: 4;
@@ -137,7 +144,7 @@
         width: 15px;
         height: 15px;
         left: -3px;
-        top:8px;
+        top: 8px;
     }
 }
 
@@ -166,16 +173,16 @@
         width: 13px;
         height: 13px;
         left: -3px;
-        top:7px;
+        top: 7px;
     }
 }
 
 
-
+/// Variantes de color para etiquetas
 .badge-etiqueta-rojo,
 .badge-etiqueta-verde,
 .badge-etiqueta-azul,
-.badge-etiqueta-verde, 
+.badge-etiqueta-verde,
 .badge-etiqueta-gris,
 .badge-etiqueta-negro,
 .badge-etiqueta-blanco,
@@ -185,7 +192,7 @@
 .badge-label-grey,
 .badge-label-white,
 .badge-label-black,
-.badge-label-bodyui{
+.badge-label-bodyui {
     font-weight: variables.$b-etiqueta-fw;
     text-align: center;
     border-radius: 0 5px 5px 0;
@@ -218,7 +225,7 @@
     &::before {
         content: "";
         background-color: variables.$b-etiqueta-verde;
-        
+
     }
 
 
@@ -239,7 +246,7 @@
     &::before {
         content: "";
         background-color: variables.$b-etiqueta-azul;
-        
+
     }
 
 
@@ -261,7 +268,7 @@
     &::before {
         content: "";
         background-color: variables.$b-etiqueta-negro;
-        
+
     }
 
 
@@ -279,10 +286,11 @@
 .badge-label-white {
     background-color: variables.$b-etiqueta-blanco;
     color: black;
+
     &::before {
         content: "";
         background-color: variables.$b-etiqueta-blanco;
-        
+
     }
 
 
@@ -303,13 +311,16 @@
 .badge-label-grey {
     background-color: variables.$b-etiqueta-gris;
     color: black;
+
     &::before {
         content: "";
         background-color: variables.$b-etiqueta-gris;
     }
+
     &:hover {
         background-color: variables.$b-etiqueta-gris-h;
     }
+
     &:hover::before {
         background-color: variables.$b-etiqueta-gris-h;
     }
@@ -318,19 +329,23 @@
 .badge-label-bodyui {
     background-color: variables.$fd-rosa-o-1;
     color: white;
+
     &::before {
         content: "";
         background-color: variables.$fd-rosa-o-1;
     }
+
     &:hover {
         background-color: variables.$fd-rosa-o-2;
     }
+
     &:hover::before {
         background-color: variables.$fd-rosa-o-2;
     }
 }
 
 
+/// Badge de mensaje (tooltip style)
 .badge-mje-izq,
 .badge-mje-left,
 .badge-mje-der,
@@ -338,7 +353,7 @@
 .badge-mje-arr,
 .badge-mje-top,
 .badge-mje-aba,
-.badge-mje-bottom{
+.badge-mje-bottom {
     display: inline-block;
     position: relative;
     padding: 7px;
@@ -348,6 +363,7 @@
     border-radius: 5px;
     z-index: 10;
     margin-top: 12px;
+
     &::before {
         content: "";
         height: 10px;
@@ -430,10 +446,11 @@
 }
 
 .badge-mje-azul,
-.badge-mje-blue{
+.badge-mje-blue {
     border: 1px solid variables.$fd-azul;
     color: variables.$fd-blanco;
     background-color: variables.$fd-azul;
+
     &::before {
         border: 1px solid variables.$fd-azul;
         background-color: variables.$fd-azul;
@@ -441,10 +458,11 @@
 }
 
 .badge-mje-verde,
-.badge-mje-green{
+.badge-mje-green {
     border: 1px solid variables.$fd-verde;
     color: variables.$fd-blanco;
     background-color: variables.$fd-verde;
+
     &::before {
         border: 1px solid variables.$fd-verde;
         background-color: variables.$fd-verde;
@@ -453,10 +471,11 @@
 
 
 .badge-mje-negro,
-.badge-mje-black{
+.badge-mje-black {
     border: 1px solid variables.$fd-negro;
     color: variables.$fd-blanco;
     background-color: variables.$fd-negro;
+
     &::before {
         border: 1px solid variables.$fd-negro;
         background-color: variables.$fd-negro;
@@ -464,10 +483,11 @@
 }
 
 .badge-mje-blanco,
-.badge-mje-white{
+.badge-mje-white {
     border: 1px solid variables.$fd-blanco;
     color: variables.$fd-negro;
     background-color: variables.$fd-blanco;
+
     &::before {
         border: 1px solid variables.$fd-blanco;
         background-color: variables.$fd-blanco;
@@ -475,10 +495,11 @@
 }
 
 .badge-mje-gris,
-.badge-mje-grey{
+.badge-mje-grey {
     border: 1px solid variables.$fd-gris;
     color: variables.$fd-negro;
     background-color: variables.$fd-gris;
+
     &::before {
         border: 1px solid variables.$fd-gris;
         background-color: variables.$fd-gris;
@@ -488,9 +509,11 @@
 
 
 
+/// Badge social (con contador)
 .badge-social {
     overflow: hidden;
     display: flex;
+
     .badge-like {
         background-color: variables.$fd-azul;
         color: white;
@@ -504,12 +527,13 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
         &:hover {
             background-color: variables.$fd-azul-o-2;
         }
     }
 
-    .badge-cantidad{
+    .badge-cantidad {
         border: 1px solid rgba(0, 0, 0, 0.336);
         padding: 5px;
         font-size: 10px;
@@ -520,6 +544,7 @@
         position: relative;
         font-weight: 600;
         border-radius: 3px;
+
         &::before {
             content: "";
             position: absolute;
@@ -535,6 +560,7 @@
     }
 }
 
+/// Badge para compartir
 .badge-compartir-gris,
 .badge-compartir-rojo,
 .badge-compartir-verde,
@@ -555,6 +581,7 @@
     letter-spacing: 0;
     color: rgb(34, 34, 34);
     position: relative;
+
     &:hover {
         background-color: rgba(0, 0, 0, 0.219);
     }
@@ -572,6 +599,7 @@
         padding: 7px 5px;
         border-radius: 5px;
         background-color: rgb(255, 255, 255);
+
         &::before {
             content: "";
             width: 7px;
@@ -590,9 +618,11 @@
 .badge-compartir-rojo {
     background-color: variables.$fd-rojo;
     color: white;
+
     span {
         color: rgb(34, 34, 34);
     }
+
     &:hover {
         background-color: variables.$fd-rojo-o-1;
     }
@@ -601,6 +631,7 @@
 .badge-compartir-verde {
     background-color: variables.$fd-verde;
     color: white;
+
     span {
         color: rgb(34, 34, 34);
     }
@@ -613,6 +644,7 @@
 .badge-compartir-azul {
     background-color: variables.$fd-azul;
     color: white;
+
     span {
         color: rgb(34, 34, 34);
     }
@@ -626,9 +658,11 @@
 .badge-compartir-negro {
     background-color: variables.$fd-negro;
     color: white;
+
     span {
         color: rgb(34, 34, 34);
     }
+
     &:hover {
         background-color: variables.$fd-gris-o-1;
     }
@@ -637,15 +671,18 @@
 .badge-compartir-blanco {
     background-color: variables.$fd-blanco;
     color: black;
+
     span {
         color: rgb(34, 34, 34);
     }
+
     &:hover {
         background-color: variables.$fd-gris-o-1;
         color: white;
     }
 }
 
+/// Badge tipo solapa (flap)
 .badge-solapa-rojo,
 .badge-flap-red,
 .badge-solapa-azul,
@@ -660,8 +697,8 @@
 .badge-flap-grey,
 .badge-flap-bodyui {
 
-    @include mixim.posicionamiento-absoluto(15px, null, null, -19px);
-    @include mixim.flex-box-centrado();
+    @include mixins.posicionamiento-absoluto(15px, null, null, -19px);
+    @include mixins.flex-box-centrado();
     padding: 5px 20px;
     padding-left: 30px;
     background-color: variables.$fd-rojo;
@@ -670,10 +707,11 @@
     font-weight: 600;
     color: white;
     border-radius: 0 3px 3px 0;
+
     &::before {
         content: "";
-        @include mixim.posicionamiento-absoluto(null, null, -9px,0);
-        @include mixim.ancho-alto(20px, 30px);
+        @include mixins.posicionamiento-absoluto(null, null, -9px, 0);
+        @include mixins.ancho-alto(20px, 30px);
         clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         background-color: variables.$fd-rojo-o-2;
@@ -685,6 +723,7 @@
 .badge-solapa-azul,
 .badge-flap-blue {
     background-color: variables.$fd-azul;
+
     &::before {
         background-color: variables.$fd-azul-o-2;
     }
@@ -693,6 +732,7 @@
 .badge-solapa-verde,
 .badge-flap-green {
     background-color: variables.$fd-verde;
+
     &::before {
         background-color: variables.$fd-verde-o-2;
     }
@@ -702,6 +742,7 @@
 .badge-flap-grey {
     background-color: variables.$fd-gris-c;
     color: black;
+
     &::before {
         background-color: variables.$fd-gris-o-1;
     }
@@ -711,6 +752,7 @@
 .badge-flap-white {
     background-color: variables.$fd-blanco;
     color: black;
+
     &::before {
         background-color: variables.$fd-gris-c;
     }
@@ -719,6 +761,7 @@
 .badge-solapa-negro,
 .badge-flap-black {
     background-color: variables.$fd-negro;
+
     &::before {
         background-color: variables.$fd-gris-o-1;
     }
@@ -726,6 +769,7 @@
 
 .badge-flap-bodyui {
     background-color: variables.$fd-rosa-o-1;
+
     &::before {
         background-color: variables.$fd-rosa-o-3;
     }
@@ -733,10 +777,11 @@
 
 .contenedor-relativo,
 .relative-container {
-    position:  relative !important;
+    position: relative !important;
 }
 
 
+/// Tamaños de badges
 .badge-xs,
 .badge-md,
 .badge-sm,
@@ -778,6 +823,7 @@
     font-size: 20px;
 }
 
+/// Badge sub (pequeño)
 .badge-sub {
     display: inline-block;
     padding: 7px;
@@ -790,6 +836,7 @@
     color: white;
     user-select: none;
     cursor: pointer;
+
     &:hover {
         background-color: rgb(170, 31, 31);
     }
@@ -809,6 +856,7 @@
         color: black;
         border: 1px solid rgba(0, 0, 0, 0.192);
         border-radius: 3px;
+
         &::before {
             content: "";
             width: 7px;
@@ -829,5 +877,3 @@
     top: -10px !important;
     right: 5px !important;
 }
-
-

@@ -1,52 +1,72 @@
 @use "globales/funciones";
-@use "globales/mixim";
+@use "globales/mixins";
 
+////
+/// @group Imágenes
+/// Estilos y utilidades para imágenes
+////
+
+/// Cursor para imágenes expandibles
 .img-exp {
     cursor: zoom-in;
 }
 
+/// Contenedor para imagen expandida (lightbox)
 .contenedor-imagen {
-    @include mixim.posicionamiento-fixed(0,0,0,0);
-    @include mixim.flex-box-centrado();
-    @include mixim.ancho-alto(100%, 100%);
+    @include mixins.posicionamiento-fixed(0, 0, 0, 0);
+    @include mixins.flex-box-centrado();
+    @include mixins.ancho-alto(100%, 100%);
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.925);
-    z-index:  funciones.superposicion(ms);
+    z-index: funciones.superposicion(ms);
     padding: 0 30px;
+
     img {
         transform: scale(0.7);
     }
 }
 
+/// Imagen con bordes redondeados
 .img-red-bor {
     border-radius: 5px !important;
 }
 
+/// Generador de imágenes redondas (avatar)
+/// @param {Number} $radio - Tamaño en píxeles (20px a 520px)
 $radio: 20;
+
 @for $i from 1 through 100 {
+
     .img-redonda-#{$radio},
     .circle-image-#{$radio} {
         height: #{$radio}px;
         width: #{$radio}px;
         border-radius: 50%;
     }
-    $radio: $radio +  5;
+
+    $radio: $radio + 5;
 }
 
+/// Imagen de display (encabezado)
 .img-display-enc {
     padding: 5px !important;
     border: 1px solid rgba(0, 0, 0, 0.158);
 }
 
+/// Generador de tamaños de display
+/// @param {Number} $display - Tamaño en píxeles (8px a 808px)
 $display: 8;
+
 @for $i from 1 through 100 {
     .img-display-#{$display} {
         height: #{$display}px;
         width: #{$display}px;
     }
-    $display: $display +  8;
+
+    $display: $display + 8;
 }
 
+/// Imagen responsive (max-width 100%)
 .img-responsive {
     max-width: 100% !important;
 }

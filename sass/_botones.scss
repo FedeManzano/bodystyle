@@ -1,94 +1,103 @@
 @use "globales/funciones";
-@use "globales/mixim";
+@use "globales/mixins";
 @use "globales/variables";
 
+////
+/// @group Botones
+/// Estilos y variantes para los botones de la aplicación
+////
 
+/// Estilos base para todos los botones
 .btn,
-.btn-lg, 
-.btn-sm, 
+.btn-lg,
+.btn-sm,
 .btn-cubrir,
-.btn-cover, 
+.btn-cover,
 .btn-cubrir-sm,
-.btn-cover-sm, 
+.btn-cover-sm,
 .btn-cubrir-lg,
 .btn-cover-lg,
-.btn-o, 
-.btn-lg-o, 
-.btn-sm-o, 
-.btn-cubrir-o, 
-.btn-cubrir-sm-o, 
+.btn-o,
+.btn-lg-o,
+.btn-sm-o,
+.btn-cubrir-o,
+.btn-cubrir-sm-o,
 .btn-cubrir-lg-o,
-.btn-cover-o, 
-.btn-cover-sm-o, 
+.btn-cover-o,
+.btn-cover-sm-o,
 .btn-cover-lg-o {
-    font-family: 'Roboto', -apple-system, 
-                    BlinkMacSystemFont, 
-                    "Segoe UI", 
-                    "Helvetica Neue", 
-                    Arial, 
-                    "Noto Sans", 
-                    sans-serif, 
-                    "Apple Color Emoji", 
-                    "Segoe UI Emoji", 
-                    "Segoe UI Symbol", 
-                    "Noto Color Emoji";
-    @include mixim.inicializar-botones();
+    font-family: 'Roboto', -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    @include mixins.inicializar-botones();
 }
 
+/// Ajuste de ancho para elementos button
 button.btn,
-button.btn-lg , 
-button.btn-sm , 
-button.btn-cubrir, 
-button.btn-cubrir-sm, 
+button.btn-lg,
+button.btn-sm,
+button.btn-cubrir,
+button.btn-cubrir-sm,
 button.btn-cubrir-lg,
 button.btn-cover,
 button.btn-cover-sm,
 button.btn-cover-lg,
-button.btn-o, 
-button.btn-lg-o, 
-button.btn-sm-o, 
-button.btn-cubrir-o, 
-button.btn-cubrir-sm-o, 
+button.btn-o,
+button.btn-lg-o,
+button.btn-sm-o,
+button.btn-cubrir-o,
+button.btn-cubrir-sm-o,
 button.btn-cubrir-lg-o,
-button.btn-cover-o, 
-button.btn-cover-sm-o, 
-button.btn-cover-lg-o  {
+button.btn-cover-o,
+button.btn-cover-sm-o,
+button.btn-cover-lg-o {
     width: 100%;
 }
 
 
+/// Ajuste de ancho para elementos input
 input.btn,
-input.btn-lg , 
-input.btn-sm , 
-input.btn-cubrir, 
-input.btn-cubrir-sm, 
+input.btn-lg,
+input.btn-sm,
+input.btn-cubrir,
+input.btn-cubrir-sm,
 input.btn-cubrir-lg,
 input.btn-cover,
 input.btn-cover-sm,
 input.btn-cover-lg,
-input.btn-o, 
-input.btn-lg-o, 
-input.btn-sm-o, 
-input.btn-cubrir-o, 
-input.btn-cubrir-sm-o, 
+input.btn-o,
+input.btn-lg-o,
+input.btn-sm-o,
+input.btn-cubrir-o,
+input.btn-cubrir-sm-o,
 input.btn-cubrir-lg-o,
-input.btn-cover-o, 
-input.btn-cover-sm-o, 
-input.btn-cover-lg-o  {
+input.btn-cover-o,
+input.btn-cover-sm-o,
+input.btn-cover-lg-o {
     width: 100%;
 }
 
-.btn, 
-.btn-lg, 
-.btn-sm, 
-.btn-cubrir, 
-.btn-cubrir-sm, 
+/// Configuración de hover y estados para botones sólidos
+.btn,
+.btn-lg,
+.btn-sm,
+.btn-cubrir,
+.btn-cubrir-sm,
 .btn-cubrir-lg,
 .btn-cover,
 .btn-cover-sm,
 .btn-cover-lg {
-    @include mixim.configuracion-botones();
-    &:focus{
+    @include mixins.configuracion-botones();
+
+    &:focus {
         border: none !important;
     }
 
@@ -139,7 +148,7 @@ input.btn-cover-lg-o  {
     }
 
     &[class*="bg-white"] {
-        color: variables.$fd-negro !important; 
+        color: variables.$fd-negro !important;
     }
 
     &:hover[class*="fd-blanco"] {
@@ -189,9 +198,10 @@ input.btn-cover-lg-o  {
         background-color: variables.$fd-rosa-o-2 !important;
     }
 
-    @include mixim.btn-colores(variables.$fd-azul-c,variables.$fd-blanco , 1.1em);
+    @include mixins.btn-colores(variables.$fd-azul-c, variables.$fd-blanco , 1.1em);
 }
 
+/// Configuración base para botones outline
 .btn-sm-o,
 .btn-o,
 .btn-lg-o,
@@ -200,95 +210,105 @@ input.btn-cover-lg-o  {
 .btn-cubrir-sm-o,
 .btn-cover-o,
 .btn-cover-lg-o,
-.btn-cover-sm-o  {
-    @include mixim.configuracion-botones();
+.btn-cover-sm-o {
+    @include mixins.configuracion-botones();
 }
 
-.btn:hover, 
-.btn-lg:hover, 
+.btn:hover,
+.btn-lg:hover,
 .btn-sm:hover {
     z-index: 10;
 }
- 
+
+/// Botón estándar
 .btn,
-.btn-o{
-    @include mixim.estilos-individuales(20px, 25px,130px ,40px, 130px, 1.2em);
+.btn-o {
+    @include mixins.estilos-individuales(20px, 25px, 130px, 40px, 130px, 1.2em);
 }
 
 
+/// Botón grande
 .btn-lg,
 .btn-lg-o {
-    @include mixim.estilos-individuales(25px, 40px,160px ,50px , 150px, 1.2em);
+    @include mixins.estilos-individuales(25px, 40px, 160px, 50px, 150px, 1.2em);
 }
 
+/// Botón pequeño
 .btn-sm,
 .btn-sm-o {
-    @include mixim.estilos-individuales(15px, 18px,110px ,35px , 110px, 0.9em);
+    @include mixins.estilos-individuales(15px, 18px, 110px, 35px, 110px, 0.9em);
 }
 
+/// Botón cubrir pequeño
 .btn-cubrir-sm,
 .btn-cover-sm,
 .btn-cubrir-sm-o,
 .btn-cover-sm-o {
-    @include mixim.btn-cubrir(15px, 18px, 1em,flex ,100%, auto);
+    @include mixins.btn-cubrir(15px, 18px, 1em, flex, 100%, auto);
 }
 
+/// Botón cubrir estándar
 .btn-cubrir,
 .btn-cover,
 .btn-cubrir-o,
 .btn-cover-o {
-    @include mixim.btn-cubrir(20px, 25px, 1.2em,flex ,100% , auto);
+    @include mixins.btn-cubrir(20px, 25px, 1.2em, flex, 100%, auto);
 }
 
+/// Botón cubrir grande
 .btn-cubrir-lg,
 .btn-cover-lg,
 .btn-cubrir-lg-o,
 .btn-cover-lg-o {
-    @include mixim.btn-cubrir(35px, 40px , 1.4em,flex ,100% , auto);
+    @include mixins.btn-cubrir(35px, 40px, 1.4em, flex, 100%, auto);
 }
 
 
 //Botones fondo rojo
+/// Botón outline rojo
 .btn-rojo-o,
 .btn-red-o {
-    @include mixim.btn-colores-outline(1px, solid, variables.$btn-rojo, variables.$btn-rojo, 1em);
+    @include mixins.btn-colores-outline(1px, solid, variables.$btn-rojo, variables.$btn-rojo, 1em);
 }
 
 .btn-rojo-o:hover,
 .btn-red-o:hover {
-    background-color:variables.$btn-rojo-hover !important;
+    background-color: variables.$btn-rojo-hover !important;
     color: variables.$fd-blanco !important;
     box-shadow: 0 0 2px 4px variables.$btn-rojo-sombra !important;
 }
 
+/// Botón outline BodyUI (rosa)
 .btn-bodyui-o {
-    @include mixim.btn-colores-outline(1px, solid, variables.$fd-rosa-o-1, variables.$btn-rojo, 1em);
+    @include mixins.btn-colores-outline(1px, solid, variables.$fd-rosa-o-1, variables.$btn-rojo, 1em);
 }
 
 .btn-bodyui-o:hover {
-    background-color:variables.$fd-rosa-o-1 !important;
+    background-color: variables.$fd-rosa-o-1 !important;
     color: variables.$fd-blanco !important;
     box-shadow: 0 0 2px 4px variables.$fd-rosa-t !important;
 }
 
 
 // Botones fondo verde
+/// Botón outline verde
 .btn-verde-o,
 .btn-green-o {
-    @include mixim.btn-colores-outline(1px, solid, variables.$btn-verde, variables.$btn-verde, 1em);
+    @include mixins.btn-colores-outline(1px, solid, variables.$btn-verde, variables.$btn-verde, 1em);
 }
 
 .btn-verde-o:hover,
-.btn-green-o:hover  {
+.btn-green-o:hover {
     background-color: variables.$btn-verde-hover !important;
     color: variables.$fd-blanco !important;
     box-shadow: 0 0 2px 4px variables.$btn-verde-sombra !important;
 }
 
 // botones fondo azul
+/// Botón outline azul
 .btn-azul-o,
-.btn-blue-o  {
-    @include mixim.btn-colores-outline(1px, solid, variables.$btn-azul, variables.$btn-azul, 1em);
+.btn-blue-o {
+    @include mixins.btn-colores-outline(1px, solid, variables.$btn-azul, variables.$btn-azul, 1em);
 }
 
 .btn-azul-o:hover,
@@ -299,21 +319,23 @@ input.btn-cover-lg-o  {
 }
 
 // Botones grises
+/// Botón outline gris
 .btn-gris-o,
-.btn-grey-o  {
-    @include mixim.btn-colores-outline(1px, solid, #212121, #212121, 1em);
+.btn-grey-o {
+    @include mixins.btn-colores-outline(1px, solid, #212121, #212121, 1em);
 }
 
 .btn-gris-o:hover,
-.btn-grey-o:hover  {
+.btn-grey-o:hover {
     background-color: variables.$btn-gris-hover !important;
     color: variables.$fd-blanco !important;
     box-shadow: 0 0 2px 4px variables.$btn-gris-sombra !important;
 }
 
+/// Botón outline negro
 .btn-negro-o,
-.btn-black-o{
-    @include mixim.btn-colores-outline(1px, solid, black, black, 1em);
+.btn-black-o {
+    @include mixins.btn-colores-outline(1px, solid, black, black, 1em);
 }
 
 .btn-negro-o:hover,
@@ -324,9 +346,10 @@ input.btn-cover-lg-o  {
 }
 
 // Botones blancos
+/// Botón outline blanco
 .btn-blanco-o,
 .btn-white-o {
-    @include mixim.btn-colores-outline(1px, solid, white, white, 1em);
+    @include mixins.btn-colores-outline(1px, solid, white, white, 1em);
 }
 
 .btn-blanco-o:hover,
@@ -337,9 +360,10 @@ input.btn-cover-lg-o  {
 }
 
 
+/// Botón outline gris claro
 .btn-gris-c-o,
 .btn-grey-c-o {
-    @include mixim.btn-colores-outline(1px, solid, 1px solid rgb(63, 63, 63), rgb(89, 100, 110), 1em);
+    @include mixins.btn-colores-outline(1px, solid, 1px solid rgb(63, 63, 63), rgb(89, 100, 110), 1em);
 }
 
 .btn-gris-c-o:hover,
@@ -350,12 +374,14 @@ input.btn-cover-lg-o  {
 }
 
 
+/// Botón complemento (fijo)
 .btn-complemento {
-    @include mixim.posicionamiento-fixed(0,0,0,0);
+    @include mixins.posicionamiento-fixed(0, 0, 0, 0);
     z-index: funciones.superposicion(co);
 }
 
 
+/// Estilos para botones desactivados
 .btn.desactivado,
 .btn-sm.desactivado,
 .btn-lg.desactivado,
@@ -373,8 +399,7 @@ input.btn-cover-lg-o  {
 .btn-cubrir-lg:disabled,
 .btn-cover:disabled,
 .btn-cover-sm:disabled,
-.btn-cover-lg:disabled 
-.btn[disabled],
+.btn-cover-lg:disabled .btn[disabled],
 .btn-sm[disabled],
 .btn-lg[disabled],
 .btn-cubrir[disabled],
@@ -382,11 +407,11 @@ input.btn-cover-lg-o  {
 .btn-cubrir-lg[disabled],
 .btn-cover[disabled],
 .btn-cover-sm[disabled],
-.btn-cover-lg[disabled]{
+.btn-cover-lg[disabled] {
     background-color: variables.$fd-gris-c !important;
     color: variables.$fd-gris !important;
     box-shadow: none !important;
-    
+
     &:hover {
         background-color: variables.$fd-gris-c !important;
         color: variables.$fd-gris !important;
@@ -395,15 +420,16 @@ input.btn-cover-lg-o  {
     }
 }
 
+/// Estilos para botones outline desactivados
 .btn-o.desactivado,
 .btn-o-sm.desactivado,
 .btn-o-lg.desactivado,
 .btn-o:disabled,
 .btn-o-sm:disabled,
-.btn-o-lg:disabled{
-    border: 1px solid rgb(170, 170, 170)  !important;
+.btn-o-lg:disabled {
+    border: 1px solid rgb(170, 170, 170) !important;
     color: rgb(170, 170, 170) !important;
-    
+
 
     &:hover {
         background-color: transparent !important;
@@ -413,6 +439,7 @@ input.btn-cover-lg-o  {
 }
 
 
+/// Grupo de botones
 .btn-grupo,
 .btn-group,
 .btn-grupo-lg,
@@ -420,7 +447,7 @@ input.btn-cover-lg-o  {
 .btn-grupo-sm,
 .btn-group-sm {
 
-    @include mixim.flex-box-centrado();
+    @include mixins.flex-box-centrado();
 
 
 
@@ -429,17 +456,18 @@ input.btn-cover-lg-o  {
     .btn-lg {
         border-radius: 0;
         box-shadow: none;
-        font-size: 14px ;
-        padding: 6px 10px ;
+        font-size: 14px;
+        padding: 6px 10px;
         max-width: 150px;
-        max-height: 30px ;
-        min-height: 30px ;
-        font-size: 12px ;
+        max-height: 30px;
+        min-height: 30px;
+        font-size: 12px;
     }
 
     .fd-gris {
         background-color: #3b3b3b;
         color: white;
+
         &:hover {
             background-color: #111111;
         }
@@ -447,9 +475,9 @@ input.btn-cover-lg-o  {
 
     & .btn:first-child,
     & .btn-sm:first-child,
-    & .btn-lg:first-child{
+    & .btn-lg:first-child {
         border-radius: 5px 0 0 5px;
-        
+
     }
 
     & .btn:last-child,
@@ -463,8 +491,10 @@ input.btn-cover-lg-o  {
 
 
 
+/// Grupo de botones grande
 .btn-grupo-lg,
 .btn-group-lg {
+
     .btn,
     .btn-sm,
     .btn-lg {
@@ -477,8 +507,10 @@ input.btn-cover-lg-o  {
 }
 
 
+/// Grupo de botones pequeño
 .btn-grupo-sm,
 .btn-group-sm {
+
     .btn,
     .btn-sm,
     .btn-lg {
@@ -486,6 +518,6 @@ input.btn-cover-lg-o  {
         max-width: 140px;
         max-height: 25px !important;
         min-height: 25px !important;
-        font-size:10px !important;
+        font-size: 10px !important;
     }
 }
