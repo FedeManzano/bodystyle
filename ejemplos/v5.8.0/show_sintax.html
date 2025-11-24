@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <link rel="stylesheet"
+        href="https://raw.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/show-code/show-light.min.css">
+    <title>Show sintax</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="mb-3">Show sintax</h1>
+        <pre class="cod-html">
+            <div class="estoClase">
+                <p>Este es un parrafo</p>
+            </div>
+        </pre>
+
+        <pre class="cod-js mt-3">
+            const function = () => {
+                console.log("hola");   
+            }
+        </pre>
+
+        <pre class="cod-java mt-3">
+            public class Main {
+                public static void main(String[] args) {
+                    System.out.println("Hello World");
+                }
+            }
+        </pre>
+
+        <pre class="cod-css mt-3">
+            .miclase {
+                color: red;
+                background-color: green;
+            }
+        </pre>
+
+        <pre class="cod-c mt-3">
+            int main() {
+                printf("Hello World");
+                return 0;
+            }
+        </pre>
+    </div>
+
+
+
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.CodeAutoInit();
+    </script>
+</body>
+
+</html>
