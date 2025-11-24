@@ -156,7 +156,9 @@ import ERR from "./GestionErrores"
 
     // Exponer en el objeto window para compatibilidad con código legacy
     window.Waves = Waves;
-})()
 
-export default Waves
+    // Exportar el módulo
+    return Waves;
+})();
 
+export default Waves;
