@@ -1,11 +1,10 @@
-import $ from 'jquery'
 
 /**
  * Módulo (02) botón que permite volver al inició de la 
  * página (scroll top = 0) desde cualquier lugar 
  * hacia el inicio.
  */
-(function(){
+(function () {
 
     const conf = {
         show_hide: 200, // Tiempo en tarda en aparecer y desaparecer
@@ -21,62 +20,60 @@ import $ from 'jquery'
     // Elmina todos los eventos asociados
     // Permite limpiar el buffer de eventos
     const destroy = () => {
-        $(boton).off()
-        $(boton).remove()
+        window.removeEventListener("scroll", scrollHandler)
+        boton.removeEventListener("click", clickHandler)
+        boton.remove()
     }
 
     /**
      * Función que permite inicializar el módulo del botón
      */
-    var inicializar = ()=> {
+    var inicializar = () => {
 
-        // El elemento es un div con la clase .boton-inicio
-        boton = $("<div class='boton-inicio'></div>")
-        $(boton).hide() // Oculta el elemnto
+        boton = document.createElement("div")
+        boton.className = "boton-inicio"
+        boton.style.display = "none"
 
         // Se carga el botón al body
-        $("body").append(boton)
-    }
+        document.body.appendChild(boton)
 
-    var scroll = () => {
+        window.addEventListener("scroll", scrollHandler)
 
-        // Evento scroll del evento 
-        // de la ventana cuando supera 
-        // a 100px se muestra el botón
-        $(window).on("scroll", (e) => {
-            if($(e.target).scrollTop() > conf.limit){
-                $(boton).show(conf.show_hide) 
-            }else {
-                $(boton).hide(conf.show_hide)
-            }
-        })
+        boton.addEventListener("click", clickHandler)
     }
 
     /**
-     * Permite que cuando se hace click al botón
-     * llevar el scroll de la venta  a 0
+     * Sección de handler para los eventos scroll y click 
+     * del botón.
      */
-    var activar = () => {
-        $(boton).on("click", () => {
-            $("html, body").animate({
-                scrollTop: 0
-            }, conf.scroll)
-         
+    const clickHandler = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
         })
     }
-    var BotonInicio =  {
-        iniciar: ()=> {
+
+    const scrollHandler = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Evento scroll del evento 
+        // de la ventana cuando supera 
+        // a 100px se muestra el botón
+        if (scrollTop > conf.limit) boton.style.display = "block"
+        else boton.style.display = "none"
+    }
+
+    const BotonInicio = {
+        iniciar: () => {
             inicializar()
-            scroll()
-            activar()
         },
 
         destroy: () => destroy()
     }
+
     // Se carga el elemento en la ventana
     window.BotonInicio = BotonInicio
 })()
 
 // Exporta el elemento 
 // Se lo inicializa en el archivo app.js
-export default BotonInicio
+export default window.BotonInicio

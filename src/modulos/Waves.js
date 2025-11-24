@@ -161,4 +161,4 @@ import ERR from "./GestionErrores"
     return Waves;
 })();
 
-export default Waves;
+export default window.Waves;

@@ -66,4 +66,4 @@
     window.Alerta = Alerta
 })()
 
-export default Alerta;
+export default window.Alerta;
