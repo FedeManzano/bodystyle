@@ -15,8 +15,8 @@
 
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
-  <img src="https://img.shields.io/badge/tests-65%20passing-brightgreen" alt="Tests">
-  <img src="https://img.shields.io/badge/coverage-17%25-yellow" alt="Coverage">
+  <img src="https://img.shields.io/badge/tests-70%20passing-brightgreen" alt="Tests">
+  <img src="https://img.shields.io/badge/coverage-18%25-yellow" alt="Coverage">
   <img src="https://img.shields.io/badge/jQuery-removed-success" alt="jQuery Free">
 </p>
 
