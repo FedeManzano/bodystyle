@@ -30,8 +30,8 @@ describe('ColeccionFlotante', () => {
     test('debería inicializar correctamente con configuración válida', () => {
         const config = {
             contexto: '#test-context',
-            fondoItem: 'bg-test',
-            colorTexto: 'text-test',
+            fondoItem: 'fd-test',
+            colorTexto: 'c-test',
             altura: 150
         };
 
@@ -48,8 +48,8 @@ describe('ColeccionFlotante', () => {
         expect(document.querySelector('.lista-float-der .abrir').style.display).toBe('none');
 
         // Verificar clases añadidas
-        expect(document.querySelector('.lista-float-der .lista-item').classList.contains('bg-test')).toBe(true);
-        expect(document.querySelector('.lista-float-der .lista-item').classList.contains('text-test')).toBe(true);
+        expect(document.querySelector('.lista-float-der .lista-item').classList.contains('fd-test')).toBe(true);
+        expect(document.querySelector('.lista-float-der .lista-item').classList.contains('c-test')).toBe(true);
     });
 
     test('debería manejar eventos de click para abrir y cerrar (derecha)', () => {
