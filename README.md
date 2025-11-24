@@ -10,7 +10,14 @@
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V2.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
-  <a href="https://github.com/FedeManzano/bodystyle/releases/tag/v5.0.0"><img src="https://img.shields.io/badge/VERSION-5.0.0-red" alt="Version"></a>
+  <a href="https://github.com/FedeManzano/bodystyle/releases/tag/v5.8.0"><img src="https://img.shields.io/badge/VERSION-5.8.0-red" alt="Version"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
+  <img src="https://img.shields.io/badge/tests-15%20passing-brightgreen" alt="Tests">
+  <img src="https://img.shields.io/badge/coverage-Waves%20100%25-brightgreen" alt="Coverage">
+  <img src="https://img.shields.io/badge/jQuery-removed-success" alt="jQuery Free">
 </p>
 
 <p align="center">

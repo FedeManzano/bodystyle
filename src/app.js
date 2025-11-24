@@ -1,14 +1,14 @@
 
 
 /*!
- * BodyStyle v5.0.0
+ * BodyStyle v5.8.0
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
  */
 
 import Modal from "./modulos/Modal"
-import Waves from  "./modulos/Waves"
+import Waves from "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import Toast from "./modulos/Toast"
 import ScrollSpy from "./modulos/ScrollSpy"
@@ -35,7 +35,7 @@ import Personalizado from "./modulos/Personalizado"
 import Navigation from "./modulos/Navigation"
 import SidebarDrop from "./modulos/SidebarDrop"
 
-(function(){
+(function () {
 
     /************************** MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
     /******************************************************************************/
@@ -76,9 +76,9 @@ import SidebarDrop from "./modulos/SidebarDrop"
     /**
      * Función de iniciación del efecto Waves
      */
-    const WavesInit =  () => {
-        Waves.destroy() 
-        Waves.iniciar() 
+    const WavesInit = () => {
+        Waves.destroy()
+        Waves.iniciar()
     }
 
     /**
@@ -86,7 +86,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * en el efecto liberando recursos no utilizados
      * @returns 
      */
-    const WavesDestroy = () => Waves.destroy() 
+    const WavesDestroy = () => Waves.destroy()
 
 
     /************************* Objetos Dinámicos  **********************************/
@@ -182,10 +182,10 @@ import SidebarDrop from "./modulos/SidebarDrop"
      */
     const CodigoHtmlInit = (config) => Html.iniciar(config)
 
-     /**
-     * Perimite inicializar el módulo para pintar el código
-     * JS dentro las etiquetas pre de html.
-     */
+    /**
+    * Perimite inicializar el módulo para pintar el código
+    * JS dentro las etiquetas pre de html.
+    */
     const CodigoJsInit = (config) => Js.iniciar(config)
 
     /**
@@ -235,7 +235,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * @returns Instancia del objeto Coleccon
      * @see /modulos/Coleccion
      */
-    const Colecciones = () => new Coleccion 
+    const Colecciones = () => new Coleccion
 
     /************************* Imagenes *******************************************/
 
@@ -249,13 +249,13 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * Inicializa el módulo que permite realizarle 
      * zoom a la imagen.
      */
-    const ImagenesInit = ()=> Imagenes.iniciar()
+    const ImagenesInit = () => Imagenes.iniciar()
 
     /**
      * Desvincula los eventos asociados al click que permite 
      * establecer el zoom en una imagen.
      */
-    const ImagenesDestroy = ()=> Imagenes.destroy()
+    const ImagenesDestroy = () => Imagenes.destroy()
 
     /************************* ScrollSpy *******************************************/
     /**
@@ -337,7 +337,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
      * todos los módulos de la librería.
      */
     const BS = {
-        
+
         //////////////////////////////////////////////////
         /////////////////////DINÁMICOS ///////////////////
         DynamicsAutoInit: () => DynamicsInit(),
@@ -350,7 +350,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
         PersonalizedInit: (conf) => PersonalizadoInit(conf),
         PersonalizedDestroy: () => PersonalizadoDestroy(),
 
-         // Dropdown
+        // Dropdown
         DropDownInit: (config) => DropDownInit(config),
         DropDownDestroy: (elemento) => DropDownDestroy(elemento),
 
@@ -358,7 +358,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
         Toast: (config) => Toast.ejecutar(config),
 
         // Tooltips
-        ToolTipsInit: () =>  ToolTipsInit(),
+        ToolTipsInit: () => ToolTipsInit(),
         ToolTipsDestroy: () => ToolTipsDestroy(),
 
         // Comentarios
@@ -375,7 +375,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // Modales
         ModalInit: (config) => ModalInit(config),
         ModalDestroy: () => ModalDestroy(),
-        
+
         // ScrollSpy
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         ScrollSpyDestroy: () => ScrollSpyDestroy(),
@@ -407,7 +407,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
         // Template
         TemplateDestroy: () => TemplateDestroy(),
 
-        SidebarDropInit: (conf)=> SidebarDropInit(conf),
+        SidebarDropInit: (conf) => SidebarDropInit(conf),
         NavigationInit: (id, border) => NavigationInit(id, border),
         NavigationDestroy: () => NavigationDestroy(),
 
@@ -416,19 +416,19 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         //////////////////////////////////////////////////
         ///////////////////// CÓDIGO PINTADO /////////////
-       
-        CodigoHtmlInit: (config) =>  CodigoHtmlInit(config),
-        CodigoCssInit: (config) =>  CodigoCssInit(config),
-        CodigoJsInit: (config) =>  CodigoJsInit(config),
-        CodigoJavaInit: (config) =>  CodigoJavaInit(config),
-        CodigoCInit: (config) =>  CodigoCInit(config),
+
+        CodigoHtmlInit: (config) => CodigoHtmlInit(config),
+        CodigoCssInit: (config) => CodigoCssInit(config),
+        CodigoJsInit: (config) => CodigoJsInit(config),
+        CodigoJavaInit: (config) => CodigoJavaInit(config),
+        CodigoCInit: (config) => CodigoCInit(config),
 
         // Alias
-        CodeHtmlInit: (config) =>  CodigoHtmlInit(config),
-        CodeCssInit: (config) =>  CodigoCssInit(config),
-        CodeJsInit: (config) =>  CodigoJsInit(config),
-        CodeJavaInit: (config) =>  CodigoJavaInit(config),
-        CodeCInit: (config) =>  CodigoCInit(config),
+        CodeHtmlInit: (config) => CodigoHtmlInit(config),
+        CodeCssInit: (config) => CodigoCssInit(config),
+        CodeJsInit: (config) => CodigoJsInit(config),
+        CodeJavaInit: (config) => CodigoJavaInit(config),
+        CodeCInit: (config) => CodigoCInit(config),
 
 
         CodeAutoInit: (config) => {
@@ -459,7 +459,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
         InputHandlerInit: () => InputHandlerInit()
     }
 
-    
+
     window.BS = BS
 })()
 

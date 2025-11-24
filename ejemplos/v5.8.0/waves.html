@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Ejemplos Waves Effect</title>
+</head>
+
+<body>
+
+    <div class="container mt-3 d-flex just-around" id="test-waves">
+        <button class="waves btn fd-bodyui" data-color="bg-red">Botón</button>
+        <button class="waves btn fd-bodyui" data-color="bg-blue">Botón</button>
+        <button class="waves btn fd-bodyui" data-color="bg-green">Botón</button>
+        <button class="waves btn fd-bodyui" data-color="bg-yellow">Botón</button>
+    </div>
+
+    <!-- Sección de prueba dinámica -->
+    <div class="container mt-3">
+        <h3 class="ta-c">Prueba de Elementos Dinámicos</h3>
+        <div class="ta-c mt-2">
+            <button id="add-dynamic-btn" class="btn bg-purple c-white">
+                ➕ Agregar Botón Dinámico
+            </button>
+        </div>
+    </div>
+
+
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        // Esperar a que el DOM esté listo
+        window.onload = () => {
+            setTimeout(() => {
+                BS.WavesInit();
+            }, 100)
+        }
+
+        // Función para agregar elementos dinámicamente
+        function agregarBotonDinamico() {
+            const container = document.getElementById('test-waves');
+
+            // Colores disponibles
+            const colores = ['bg-red', 'bg-blue', 'bg-green', 'bg-yellow', 'bg-purple', 'bg-orange'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+
+            // Crear nuevo botón
+            const nuevoBoton = document.createElement('button');
+            nuevoBoton.className = 'waves btn fd-bodyui';
+            nuevoBoton.setAttribute('data-color', colorAleatorio);
+            nuevoBoton.textContent = 'Dinámico';
+
+            // Agregar al contenedor
+            container.appendChild(nuevoBoton);
+
+            console.log('✅ Botón dinámico agregado con color:', colorAleatorio);
+            BS.WavesDestroy();
+            BS.WavesInit();
+        }
+
+        // Event listener para el botón de agregar
+        document.getElementById('add-dynamic-btn').addEventListener('click', agregarBotonDinamico);
+    </script>
+</body>
+
+</html>

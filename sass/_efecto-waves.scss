@@ -9,6 +9,22 @@
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    position: relative;
+}
+
+/// Animación de expansión del efecto waves
+@keyframes waves-expand {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
 }
 
 /// Elemento de la onda
@@ -16,10 +32,13 @@
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    opacity: 0.8;
     padding: 0;
     margin: 0;
     transform: translate3d(-50%, -50%, 0);
     -webkit-transform: translate3d(-50%, -50%, 0);
     -moz-transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+    animation: waves-expand 500ms ease-out forwards;
+    -webkit-animation: waves-expand 500ms ease-out forwards;
+    -moz-animation: waves-expand 500ms ease-out forwards;
 }
