@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Dynamics</title>
+</head>
+
+
+
+<body>
+    <div class="container my-3">
+        <h1>Elementos estáticos</h1>
+    </div>
+    <div class="container d-flex flex-wrap just-around">
+        <button class="btn fd-bodyui tips-ele" data-tips="Esto es un Tips">Tooltips</button>
+        <button class="btn fd-bodyui com-trigger" data-info="Esto es un comentario">Comentario</button>
+        <button class="btn fd-bodyui disparador" data-info="Esto es un comentario personalizado">Personalizado</button>
+        <button class="btn fd-bodyui dropdown-toggle" data-target="#dropdown">Personalizado</button>
+    </div>
+
+
+    <div class="container my-3">
+        <h1>Elementos Dinámicos</h1>
+    </div>
+    <div class="container mt-3 d-flex flex-wrap just-around" id="dinamicos">
+
+    </div>
+
+
+    <div class="dropdown" id="dropdown">
+        <ul>
+            <li><a href="">items</a></li>
+            <li><a href="">items</a></li>
+            <li><a href="">items</a></li>
+            <li><a href="">items</a></li>
+        </ul>
+    </div>
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                BS.DynamicsAutoInit()
+                BS.PersonalizedInit({ ori: "disparador", ele: "alert-op-black" })
+            }, 50);
+        }
+
+        document.getElementById("dinamicos").innerHTML = `
+        
+        <button class="btn fd-bodyui tips-ele" data-tips="Esto es un Tips">Tooltips</button>
+        <button class="btn fd-bodyui com-trigger" data-info="Esto es un comentario">Comentario</button>
+        <button class="btn fd-bodyui disparador" data-info="Esto es un comentario personalizado">Personalizado</button>
+        <button class="btn fd-bodyui dropdown-toggle" data-target="#dropdown">Dropdown</button>
+        `
+    </script>
+</body>
+
+</html>
