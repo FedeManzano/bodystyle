@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import ERR from './Errores'
 
 /**
@@ -16,11 +15,24 @@ class ColeccionFlotante {
      * limpia el buffer de eventos.
      * @param {ID de la colección que permite gestionar su lógica} contexto 
      */
-    destroy (contexto) {
-        $(contexto + " .lista-float-der .cerrar").off()
-        $(contexto + " .lista-float-der .abrir").off()
-        $(contexto + " .lista-float-izq .cerrar").off()
-        $(contexto + " .lista-float-izq .abrir").off()
+    destroy(contexto) {
+        const selectors = [
+            `${contexto} .lista-float-der .cerrar`,
+            `${contexto} .lista-float-der .abrir`,
+            `${contexto} .lista-float-izq .cerrar`,
+            `${contexto} .lista-float-izq .abrir`
+        ];
+
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                // Clonar el nodo elimina los event listeners
+                const newEl = el.cloneNode(true);
+                if (el.parentNode) {
+                    el.parentNode.replaceChild(newEl, el);
+                }
+            });
+        });
     }
 
     /**
@@ -28,70 +40,83 @@ class ColeccionFlotante {
      * de los elementos que conforman la colección
      * @param {JSON de Configuración de la lista} c 
      */
-    inicializarElemento(c){
+    inicializarElemento(c) {
+
+        // Helper para seleccionar elementos
+        const select = (selector) => document.querySelectorAll(`${c.contexto} ${selector}`);
 
         // Configuración de la propiedad TOP
         // Distancia entre la lista y el inicio de la página
-        $(c.contexto + " .lista-float-der").css("top", c.altura)
-        $(c.contexto + " .lista-float-izq").css("top", c.altura)
+        const altura = typeof c.altura === 'number' ? `${c.altura}px` : c.altura;
+
+        select(".lista-float-der").forEach(el => el.style.top = altura);
+        select(".lista-float-izq").forEach(el => el.style.top = altura);
 
         // Configurar la visibilidad del botón para mostrar
         // o ocultar la lista en lista flotantes que se 
         // encuentran a la derecha.
-        $(c.contexto + " .lista-float-der .cerrar").show()
-        $(c.contexto + " .lista-float-der .abrir").hide()
+        select(".lista-float-der .cerrar").forEach(el => el.style.display = 'block');
+        select(".lista-float-der .abrir").forEach(el => el.style.display = 'none');
 
         // Configurar la visibilidad del botón para mostrar
         // o ocultar la lista en lista flotantes que se 
         // encuentran a la derecha.
-        $(c.contexto + " .lista-float-izq .cerrar").show()
-        $(c.contexto + " .lista-float-izq .abrir").hide()
+        select(".lista-float-izq .cerrar").forEach(el => el.style.display = 'block');
+        select(".lista-float-izq .abrir").forEach(el => el.style.display = 'none');
 
         /// Configuración del color de fondo de la lista
-        $(c.contexto + " .lista-float-der .lista-item").addClass(c.fondoItem)
-        $(c.contexto + " .lista-float-izq .lista-item").addClass(c.fondoItem)
+        select(".lista-float-der .lista-item").forEach(el => el.classList.add(c.fondoItem));
+        select(".lista-float-izq .lista-item").forEach(el => el.classList.add(c.fondoItem));
 
         // Configuración del color del texto de los elementos internos de la lista
-        $(c.contexto + " .lista-float-der .lista-item *").addClass(c.colorTexto)
-        $(c.contexto + " .lista-float-izq .lista-item *").addClass(c.colorTexto)
+        select(".lista-float-der .lista-item *").forEach(el => el.classList.add(c.colorTexto));
+        select(".lista-float-izq .lista-item *").forEach(el => el.classList.add(c.colorTexto));
 
 
         /**
          * evento click para el botón que oculta la lista
          */
-        $(c.contexto + " .lista-float-der .cerrar").click(function(){
-            $(this).parent().css("right", "-230px")
-            $(this).hide()
-            $(c.contexto + " .lista-float-der .abrir").show()
-        })
+        select(".lista-float-der .cerrar").forEach(el => {
+            el.addEventListener('click', function () {
+                this.parentNode.style.right = "-230px";
+                this.style.display = "none";
+                select(".lista-float-der .abrir").forEach(btn => btn.style.display = "block");
+            });
+        });
 
         /**
          * evento click para el botón que muestra la lista
          */
-        $(c.contexto + " .lista-float-der .abrir").click(function(){
-            $(this).parent().css("right", 0)
-            $(this).hide()
-            $(c.contexto + " .lista-float-der .cerrar").show()
-        })
+        select(".lista-float-der .abrir").forEach(el => {
+            el.addEventListener('click', function () {
+                this.parentNode.style.right = "0";
+                this.style.display = "none";
+                select(".lista-float-der .cerrar").forEach(btn => btn.style.display = "block");
+            });
+        });
 
 
         /**
          * evento click para el botón que oculta la lista
          */
-        $(c.contexto + " .lista-float-izq .cerrar").click(function(){
-            $(this).parent().css("left", "-230px")
-            $(this).hide()
-            $(c.contexto + " .lista-float-izq .abrir").show()
-        })
+        select(".lista-float-izq .cerrar").forEach(el => {
+            el.addEventListener('click', function () {
+                this.parentNode.style.left = "-230px";
+                this.style.display = "none";
+                select(".lista-float-izq .abrir").forEach(btn => btn.style.display = "block");
+            });
+        });
 
         /**
          * evento click para el botón que muestra la lista
          */
-        $(c.contexto + " .lista-float-izq .abrir").click(function(){
-            $(this).parent().css("left", 0)
-            $(this).hide()
-            $(c.contexto + " .lista-float-izq .cerrar").show()
-        })
+        select(".lista-float-izq .abrir").forEach(el => {
+            el.addEventListener('click', function () {
+                this.parentNode.style.left = "0";
+                this.style.display = "none";
+                select(".lista-float-izq .cerrar").forEach(btn => btn.style.display = "block");
+            });
+        });
     }
 
     /**
@@ -109,24 +134,24 @@ class ColeccionFlotante {
      */
     validarColeecion(c) {
         const MODULO = "Error BodyStyle dice: M09" // Módulo N°9
-        if(!ERR.id.validacion.test(c.contexto)){
+        if (!ERR.id.validacion.test(c.contexto)) {
             console.error(MODULO + ERR.id.mensaje)
             return false
         }
 
 
-        if(!ERR.clasesColorFondo.validacion.test(c.fondoItem)){
+        if (!ERR.clasesColorFondo.validacion.test(c.fondoItem)) {
             console.error(MODULO + ERR.clasesColorFondo.mensaje)
             return false
         }
 
 
-        if(!ERR.clasesColorTexto.validacion.test(c.colorTexto)){
+        if (!ERR.clasesColorTexto.validacion.test(c.colorTexto)) {
             console.error(MODULO + ERR.clasesColorTexto.mensaje)
             return false
         }
 
-        if(!ERR.positivos.validacion(c.altura)){
+        if (!ERR.positivos.validacion(c.altura)) {
             console.error(MODULO + ERR.positivos.mensaje)
             return false
         }
@@ -135,7 +160,7 @@ class ColeccionFlotante {
     }
 
 
-    iniciar({contexto="vacio", fondoItem="fd-gris-az-o", colorTexto="c-blanco", altura = 100} = {}) {
+    iniciar({ contexto = "vacio", fondoItem = "fd-gris-az-o", colorTexto = "c-blanco", altura = 100 } = {}) {
 
         var c = {
             contexto,
@@ -143,9 +168,9 @@ class ColeccionFlotante {
             colorTexto,
             altura
         }
-        if(!this.validarColeecion(c))
+        if (!this.validarColeecion(c))
             return
-            
+
         this.inicializarElemento(c)
     }
 }
