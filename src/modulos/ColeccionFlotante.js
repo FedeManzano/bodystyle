@@ -65,8 +65,14 @@ class ColeccionFlotante {
         select(".lista-float-izq .abrir").forEach(el => el.style.display = 'none');
 
         /// Configuración del color de fondo de la lista
-        select(".lista-float-der .lista-item").forEach(el => el.classList.add(c.fondoItem));
-        select(".lista-float-izq .lista-item").forEach(el => el.classList.add(c.fondoItem));
+        select(".lista-float-der .lista-item").forEach(el => {
+            el.classList.add(c.fondoItem);
+            el.classList.add(c.colorTexto);
+        });
+        select(".lista-float-izq .lista-item").forEach(el => {
+            el.classList.add(c.fondoItem);
+            el.classList.add(c.colorTexto);
+        });
 
         // Configuración del color del texto de los elementos internos de la lista
         select(".lista-float-der .lista-item *").forEach(el => el.classList.add(c.colorTexto));

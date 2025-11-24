@@ -1,4 +1,4 @@
-(function(){
+(function () {
     const ERR = {
         clasesColorFondo: {
             validacion: /^((fd|bg)-.+)/,
@@ -8,8 +8,8 @@
             validacion: /^#([a-f]|[A-F]|[0-9]){3,}$/,
             mensaje: "02 Número hexadecimal del color: \n Los numeros hexadecimales de los colores comienzan con #valor (A-F 0-9)"
         },
-        clasesColorTexto:{
-            validacion: /^c-./,
+        clasesColorTexto: {
+            validacion: /^c-.+/,
             mensaje: "03 Clase color de texto: \n Las clases referentes a los colores del texto comienzan con el prefijo c-"
         },
         id: {
@@ -28,11 +28,11 @@
 
         efecto: {
             validacion: (val) => val === "lateral" || val === "fade",
-            mensaje:  "07 Efecto slider erroneo: \n Los valores posibles para el efecto son {lateral|fade}"
+            mensaje: "07 Efecto slider erroneo: \n Los valores posibles para el efecto son {lateral|fade}"
         },
 
         posicion: {
-            validacion: (val) => val === "arriba" ||  val === "abajo" || val === "izquierda" || val === "derecha",  
+            validacion: (val) => val === "arriba" || val === "abajo" || val === "izquierda" || val === "derecha",
             mensaje: "08 posición erronea: \n Los valores posibles la posición son {arriba|abajo|izquierda|derecha}"
         }
     }
