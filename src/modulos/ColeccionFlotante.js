@@ -90,6 +90,7 @@ class ColeccionFlotante {
             });
         });
 
+
         /**
          * evento click para el botón que muestra la lista
          */
