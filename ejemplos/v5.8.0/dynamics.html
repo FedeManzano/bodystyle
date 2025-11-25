@@ -19,6 +19,7 @@
         <button class="btn fd-bodyui com-trigger" data-info="Esto es un comentario">Comentario</button>
         <button class="btn fd-bodyui disparador" data-info="Esto es un comentario personalizado">Personalizado</button>
         <button class="btn fd-bodyui dropdown-toggle" data-target="#dropdown">Personalizado</button>
+        <button class="btn fd-bodyui" onclick="MostrarToast()">Mostrar Toast</button>
     </div>
 
 
@@ -29,7 +30,7 @@
 
     </div>
 
-
+    <button class="btn fd-bodyui" onclick="MostrarToast()">Mostrar Toast</button>
     <div class="dropdown" id="dropdown">
         <ul>
             <li><a href="">items</a></li>
@@ -54,6 +55,15 @@
         <button class="btn fd-bodyui disparador" data-info="Esto es un comentario personalizado">Personalizado</button>
         <button class="btn fd-bodyui dropdown-toggle" data-target="#dropdown">Dropdown</button>
         `
+
+        function MostrarToast() {
+            BS.Toast({
+                html: "Hola soy un Toast",
+                clases: ["fd-verde", "bor-rad-10"],
+                tiempo: 5000,
+                cerrar: true
+            })
+        }
     </script>
 </body>
 
