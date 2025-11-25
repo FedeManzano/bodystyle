@@ -1,7 +1,8 @@
 
-import $ from 'jquery'
+
 import ERR from "./Errores"
 import { slideUp, slideDown } from './Animaciones';
+
 
 
 const timeEffect = 300 // tiempo del efecto acordeón
