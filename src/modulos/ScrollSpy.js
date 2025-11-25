@@ -1,4 +1,4 @@
-import $ from 'jquery'
+
 import ERR from "./Errores"
 
 /**
@@ -6,62 +6,63 @@ import ERR from "./Errores"
  * de manera tal que el usuario conozca en cada momento 
  * el lugar de la página en la cual se encuentra. 
  */
-(function() {
+(function () {
 
     var c = {}
-    var cantidad = $(".scroll-item").length;
+    var cantidad = document.querySelectorAll(".scroll-item").length;
     var ids = new Array(cantidad)
 
 
     const destroy = () => {
-        $(".lista-scroll ul li").off()
+        window.removeEventListener("scroll", eventoScroll)
     }
 
 
-    const validarListaScroll = ( 
-        modulo, 
-        ancho, 
-        tamFuente, 
-        colorBorde, 
-        alturaBorde, 
-        separacion, 
-        colorSeleccionado, 
-        colorNoSeleccionado 
+
+    const validarListaScroll = (
+        modulo,
+        ancho,
+        tamFuente,
+        colorBorde,
+        alturaBorde,
+        separacion,
+        colorSeleccionado,
+        colorNoSeleccionado
     ) => {
 
 
-        if(!ERR.positivos.validacion(ancho)){
+        if (!ERR.positivos.validacion(ancho)) {
             console.error(modulo + ERR.positivos.mensaje)
             return false
         }
 
-        if(!ERR.positivos.validacion(tamFuente)){
+        if (!ERR.positivos.validacion(tamFuente)) {
             console.error(modulo + ERR.positivos.mensaje)
             return false
         }
 
 
-        if(!ERR.clasesColorFondo.validacion.test(colorBorde)){
+        if (!ERR.clasesColorFondo.validacion.test(colorBorde)) {
             console.error(modulo + ERR.clasesColorFondo.mensaje)
             return false
         }
 
-        if(!ERR.positivos.validacion(alturaBorde)){
+        if (!ERR.positivos.validacion(alturaBorde)) {
             console.error(modulo + ERR.positivos.mensaje)
             return false
         }
 
-        if(!ERR.positivos.validacion(separacion)){
+        if (!ERR.positivos.validacion(separacion)) {
             console.error(modulo + ERR.separacion.mensaje)
             return false
         }
 
-        if(!ERR.hexadecimal.validacion.test(colorSeleccionado)){
+        if (!ERR.hexadecimal.validacion.test(colorSeleccionado)) {
             console.error(modulo + ERR.hexadecimal.mensaje)
             return false
         }
 
-        if(!ERR.hexadecimal.validacion.test(colorNoSeleccionado)){
+        if (!ERR.hexadecimal.validacion.test(colorNoSeleccionado)) {
             console.error(modulo + ERR.hexadecimal.mensaje)
             return false
         }
@@ -71,71 +72,82 @@ import ERR from "./Errores"
 
 
 
-    var inicializarIds = 
-    ({
-        ancho = 15, 
-        tamFuente = 18, 
-        colorBorde = "fd-azul-c",
-        alturaBorde = 30, 
-        separacion = 120, 
-        colorSeleccionado = "#000", 
-        colorNoSeleccionado = "#666"
-    } = {}) => {
+    var inicializarIds =
+        ({
+            ancho = 15,
+            tamFuente = 18,
+            colorBorde = "fd-azul-c",
+            alturaBorde = 30,
+            separacion = 120,
+            colorSeleccionado = "#000",
+            colorNoSeleccionado = "#666"
+        } = {}) => {
 
 
-    const MODULO = "Error BodyStyle dice: M21" 
-    if(!validarListaScroll(MODULO, ancho, tamFuente, colorBorde, alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado)) {
-        return 
-    }
-
-
-
-        $(".scroll-item").each( (index, element) => {
-            if($(element).attr("id") !== null && $(element).attr("id") !== undefined )
-                ids[index]= $(element).attr("id")
-        })
-
-
-        c.ancho = ancho
-        c.tamFuente = tamFuente
-        c.colorBorde = colorBorde
-        c.alturaBorde = alturaBorde
-        c.separacion = separacion
-        c.colorSeleccionado = colorSeleccionado
-        c.colorNoSeleccionado = colorNoSeleccionado
+            const MODULO = "Error BodyStyle dice: M21"
+            if (!validarListaScroll(MODULO, ancho, tamFuente, colorBorde, alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado)) {
+                return
+            }
 
 
 
-        $(".lista-scroll").css("width", c.ancho + "%")
-        $(".lista-scroll ul li a").css("font-size", c.tamFuente)
-        $(".elemento-seleccionado").addClass(c.colorBorde)
-        $(".lista-scroll").css("top", c.separacion)
+            document.querySelectorAll(".scroll-item").forEach((element, index) => {
+                const id = element.getAttribute("id");
+                if (id !== null && id !== undefined) {
+                    ids[index] = id;
+                }
+            })
 
-        eventoScroll(null)
-    } 
+
+            c.ancho = ancho
+            c.tamFuente = tamFuente
+            c.colorBorde = colorBorde
+            c.alturaBorde = alturaBorde
+            c.separacion = separacion
+            c.colorSeleccionado = colorSeleccionado
+            c.colorNoSeleccionado = colorNoSeleccionado
+
+
+            document.querySelectorAll(".lista-scroll").forEach((e) => e.style.width = c.ancho + "%")
+            document.querySelectorAll(".lista-scroll ul li a").forEach((e) => e.style.fontSize = c.tamFuente + "px")
+            document.querySelectorAll(".elemento-seleccionado").forEach((e) => e.classList.add(c.colorBorde))
+            document.querySelectorAll(".lista-scroll").forEach((e) => e.style.top = c.separacion + "px")
+            eventoScroll(null)
+        }
 
     const eventoScroll = (el) => {
-
         ids.forEach((e) => {
-            if($(window).scrollTop() >= $("#" + e).offset().top - 200)
-            {
-                seleccionarIndice(ids.indexOf(e) + 1)
+            const elemento = document.getElementById(e);
+            if (!elemento) return;
+
+            const top = window.pageYOffset;
+            const scrollElemento = elemento.offsetTop;
+
+            if (top >= scrollElemento - 200) {
+                seleccionarIndice(ids.indexOf(e) + 1);
             }
-        })
+        });
     }
 
-    var seleccionarIndice = (indice)=> {
-        $(".elemento-seleccionado").remove()
-        $(".lista-scroll ul li a").css("color", c.colorNoSeleccionado)
-        var elem = $("<p class='elemento-seleccionado " + c.colorBorde + "'></p>")
-        elem.css("height", c.alturaBorde)
-        $(".lista-scroll ul li:nth-child("+  indice + ") a")
-            .before(elem);
-        $(".lista-scroll ul li:nth-child("+ indice + ") a").css("color", c.colorSeleccionado)
+    var seleccionarIndice = (indice) => {
+        document.querySelectorAll(".elemento-seleccionado").forEach((e) => e.remove())
+        document.querySelectorAll(".lista-scroll ul li a").forEach((ele) => {
+            ele.style.color = c.colorNoSeleccionado
+        })
+        let elemento = document.createElement("p")
+        elemento.classList.add("elemento-seleccionado", c.colorBorde)
+        elemento.style.height = c.alturaBorde + "px"
+        const anchor = document.querySelector(".lista-scroll ul li:nth-child(" + indice + ") a");
+        if (anchor) {
+            // Insertar 'elemento' ANTES del 'anchor'
+            anchor.insertAdjacentElement('beforebegin', elemento);
+            // Cambiar color del anchor
+            anchor.style.color = c.colorSeleccionado;
+        }
     }
 
     var inicializar = () => {
-        $(window).scroll((e) => eventoScroll(e))
+        window.addEventListener("scroll", eventoScroll)
     }
 
     var ScrollSpy = {

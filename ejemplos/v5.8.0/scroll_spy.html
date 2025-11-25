@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Scroll Spy</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="1">Sección 1</h2>
+            <div class="mt-2">
+                <a href="../scrollspy.html#t4" class="link">Volver a la Documentación</a>
+            </div>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="2">Sección 2</h2>
+        </div>
+        <div class="p-1 bg-red c-white mb-3" style="height: 700px;">
+            <h2 class="scroll-item" id="3">Sección 3</h2>
+        </div>
+    </div>
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#1">Sección 1</a></li>
+            <li><a href="#2">Sección 2</a></li>
+            <li><a href="#3">Sección 3</a></li>
+        </ul>
+    </div>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        let conf = {
+            ancho: 15, // Ancho en porcentaje del scrollspy
+            tamFuente: 17, // Tamaño de la fuenta
+            colorBorde: "fd-bodyui", // color del borde
+            alturaBorde: 30, // Altura del elemento dinámico borde
+            separacion: 150, // Separación con respecto al inicio de la pantalla propiedad TOP
+            colorSeleccionado: "#000", // Color del enlace seleccionado
+            colorNoSeleccionado: "#666" // Color del enlace no seleccionado
+        }
+
+        // Inicialización con la conf
+        BS.ScrollSpyInit(conf)
+    </script>
+</body>
+
+</html>

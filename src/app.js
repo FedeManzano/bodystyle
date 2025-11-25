@@ -34,6 +34,7 @@ import ComentarioDinamico from "./modulos/ComentarioDinamico"
 import Personalizado from "./modulos/Personalizado"
 import Navigation from "./modulos/Navigation"
 import SidebarDrop from "./modulos/SidebarDrop"
+import { slideUp, slideDown, fadeIn, fadeOut } from "./modulos/Animaciones"
 
 (function () {
 
@@ -456,7 +457,45 @@ import SidebarDrop from "./modulos/SidebarDrop"
 
         // Permite cargar la clase i-error en campos requeridos
         // Permite seleccionar un archivo desde input file
-        InputHandlerInit: () => InputHandlerInit()
+        InputHandlerInit: () => InputHandlerInit(),
+
+        //////////////////////////////////////////////////
+        ///////////////////// ANIMACIONES ////////////////
+
+        /**
+         * Desliza (slide-up) un elemento ocultándolo con animación.
+         * @param {HTMLElement|NodeList} elemento - Elemento a ocultar
+         * @param {number} duration - Duración en ms (default: 300)
+         * @param {Function} callback - Callback opcional
+         */
+        slideUp: (elemento, duration, callback) => slideUp(elemento, duration, callback),
+
+        /**
+         * Desliza (slide-down) un elemento mostrándolo con animación.
+         * @param {HTMLElement|NodeList} elemento - Elemento a mostrar
+         * @param {number} duration - Duración en ms (default: 300)
+         * @param {Function} callback - Callback opcional
+         */
+        slideDown: (elemento, duration, callback) => slideDown(elemento, duration, callback),
+
+        /**
+         * Desvanece (fade-in) un elemento mostrándolo con animación de opacidad.
+         * @param {HTMLElement|NodeList} elemento - Elemento a mostrar
+         * @param {number} duration - Duración en ms (default: 300)
+         * @param {Function} callback - Callback opcional
+         */
+        fadeIn: (elemento, duration, callback) => fadeIn(elemento, duration, callback),
+
+        /**
+         * Desvanece (fade-out) un elemento ocultándolo con animación de opacidad.
+         * @param {HTMLElement|NodeList} elemento - Elemento a ocultar
+         * @param {number} duration - Duración en ms (default: 300)
+         * @param {Function} callback - Callback opcional
+         */
+        fadeOut: (elemento, duration, callback) => fadeOut(elemento, duration, callback)
+
+        //////////////////////////////////////////////////
+        ///////////////////// FIN ANIMACIONES ////////////
     }
 
 
