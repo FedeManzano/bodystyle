@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Desativado Ejemplos</title>
+</head>
+
+<body>
+
+
+    <div class="container mt-3">
+        <h1 class="mb-1">Elementos estáticos</h1>
+        <a href="#" id="link-des" class="link desactivado">Enlace desactivado</a>
+        <input type="text" class="desactivado" id="input-des">
+        <input type="submit" class="desactivado" id="submit-des">
+        <button onclick="BS.Toast({html:'hola'})" class="desactivado btn fd-bodyui" id="boton-des">Boton
+            desactivado</button>
+
+        <button onclick="activar('link-des')" class="mt-1 btn fd-bodyui">Activar</button>
+        <button onclick="activarInput('input-des')" class="mt-1 btn fd-bodyui">Activar Input</button>
+        <button onclick="activarSubmit('submit-des')" class="mt-1 btn fd-bodyui">Activar Submit</button>
+        <button onclick="activarBoton('boton-des')" class="mt-1 btn fd-bodyui">Activar Boton</button>
+
+    </div>
+
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+
+        function activar(id) {
+            let l = document.getElementById(id);
+            l.classList.remove("desactivado");
+        }
+
+        function activarInput(id) {
+            let i = document.getElementById(id);
+            i.classList.remove("desactivado");
+        }
+
+        function activarSubmit(id) {
+            let s = document.getElementById(id);
+            s.classList.remove("desactivado");
+        }
+
+        function activarBoton(id) {
+            let b = document.getElementById(id);
+            b.classList.remove("desactivado");
+        }
+    </script>
+</body>
+
+</html>
