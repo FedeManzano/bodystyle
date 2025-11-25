@@ -52,7 +52,7 @@ Bodystyle es una **biblioteca de software libre** diseñada para facilitar la cr
 
 **Objetivo:** Proporcionar herramientas poderosas a los desarrolladores para crear diseños innovadores y enfocarse en mejorar continuamente la experiencia de usuario (UX).
 
-> **Versión actual:** `v5.0.0`
+> **Versión actual:** `v5.8.0`
 
 ---
 
@@ -415,9 +415,52 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 
 ---
 
-## 🎉 Novedades v5.0.0
+
+## 🎉 Novedades v5.8.0
 
 ### Nuevas Características
+
+- ✅ **Migración a Vanilla JavaScript** - Eliminación progresiva de jQuery para mejor rendimiento
+  - `InputHandler.js` migrado completamente (validación de formularios)
+  - `Waves.js` - Efecto de ondas sin dependencias
+  - `Modal.js` - Sistema de modales modernizado
+  - `Colecciones.js` - Acordeones y menús desplegables
+  - `Animaciones.js` - Efectos slideUp/slideDown nativos
+  - `Alerta.js`, `BotonInicio.js`, `Desactivado.js` - Componentes optimizados
+
+- ✅ **Suite de Testing Completa** - 145 tests unitarios con Jest
+  - Cobertura de código: 48.91%
+  - Tests para todos los módulos migrados
+  - Integración continua con GitHub Actions
+
+- ✅ **CI/CD con GitHub Actions** - Pipeline automatizado
+  - Tests automáticos en cada push
+  - Validación de build
+  - Verificación de calidad de código
+
+- ✅ **Soporte TypeScript Mejorado** - Definiciones de tipos completas
+  - IntelliSense completo en IDEs
+  - Validación de tipos en tiempo de desarrollo
+  - Compatibilidad con Angular, React y Vue
+
+- ✅ **Documentación Mejorada** - Ejemplos y guías actualizadas
+  - Ejemplos de uso con TypeScript
+  - Guías de migración de jQuery
+  - Documentación de API completa
+
+### Mejoras de Rendimiento
+
+- ⚡ **Reducción de dependencias** - Menos código, mejor rendimiento
+  - Eliminación progresiva de jQuery (~87KB menos cuando se complete)
+  - Código nativo más rápido y eficiente
+  - Mejor compatibilidad con frameworks modernos
+
+- 🚀 **Optimización de módulos** - Código refactorizado
+  - Mejor organización del código fuente
+  - Funciones más eficientes
+  - Menor huella de memoria
+
+### Características de v5.0.0 (Mantenidas)
 
 - ✅ **Nueva sidebar desplegable** - Navegación lateral mejorada
 - ✅ **Nuevo handler del sidebar** - Mejor control y animaciones
@@ -433,13 +476,21 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 - ✅ **Alias Helpers** - Nombres alternativos para clases
 - ✅ **Input con íconos** - Soporte nativo para íconos en inputs
 
-### Mejoras desde v4.8.0
+### Roadmap de Migración
 
-- 🔧 Mejor organización del código fuente
-- 🚀 Rendimiento optimizado en un 30%
-- 📱 Mejor soporte responsive
-- 🎨 Más opciones de personalización
-- 🐛 Corrección de bugs reportados
+**Fase Actual: Grupo 1 - Input/Forms** (En progreso)
+- ✅ InputHandler.js (Completado)
+- ⏳ GruposInput.js (Pendiente)
+- ⏳ Select.js (Pendiente)
+- ⏳ Range.js (Pendiente)
+
+**Próximas Fases:**
+- 📋 Grupo 2 - Navigation (Tabs, Sidebar, Navigation)
+- 📋 Grupo 3 - Visual Effects (ScrollSpy, Parallax, Imagenes)
+
+**Progreso Total:** 8/20 módulos migrados (40%)
+
+
 
 ---
 
