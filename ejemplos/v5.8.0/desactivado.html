@@ -21,11 +21,17 @@
             id="boton-des">Boton
             desactivado</button>
 
+        <div class="input-g">
+            <div class="grupo">
+                <span class="span-grupo">@</span>
+                <input type="email" class="desactivado" id="email-des">
+            </div>
+        </div>
         <button onclick="activar('link-des')" class="mt-1 btn fd-bodyui">Activar</button>
         <button onclick="activarInput('input-des')" class="mt-1 btn fd-bodyui">Activar Input</button>
         <button onclick="activarSubmit('submit-des')" class="mt-1 btn fd-bodyui">Activar Submit</button>
         <button onclick="activarBoton('boton-des')" class="mt-1 btn fd-bodyui">Activar Boton</button>
-
+        <button onclick="activarEmail('email-des')" class="mt-1 btn fd-bodyui">Activar Email</button>
     </div>
 
 
@@ -51,6 +57,10 @@
         function activarBoton(id) {
             let b = document.getElementById(id);
             b.classList.remove("desactivado");
+        }
+        function activarEmail(id) {
+            let e = document.getElementById(id);
+            e.classList.remove("desactivado");
         }
     </script>
 </body>

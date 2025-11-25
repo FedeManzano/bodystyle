@@ -8,7 +8,7 @@ module.exports = {
     path: path.join(__dirname, 'dist/js'),
   },
   resolve: {
-    extensions: ['.js', '.css']
+    extensions: ['.js', '.ts', '.css']
   },
   module: {
     rules: [

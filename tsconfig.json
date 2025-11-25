@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        // Target ES6 for modern browser compatibility
+        "target": "ES6",
+        "module": "ES6",
+        "lib": [
+            "ES6",
+            "DOM"
+        ],
+        // Allow JavaScript files
+        "allowJs": true,
+        "checkJs": false,
+        // Generate .d.ts files
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "declarationDir": "./src/types",
+        // Module resolution
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        // Strict type checking (disabled for JS compatibility)
+        "strict": false,
+        "noImplicitAny": false,
+        // Skip lib check for faster compilation
+        "skipLibCheck": true,
+        // Output directory
+        "outDir": "./dist",
+        // Source maps for debugging
+        "sourceMap": false,
+        // Allow default imports from modules with no default export
+        "allowSyntheticDefaultImports": true,
+        // Force consistent casing in file names
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "coverage",
+        "ejemplos",
+        "**/*.test.js",
+        "**/__tests__/**"
+    ]
+}

@@ -15,9 +15,10 @@
 
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
-  <img src="https://img.shields.io/badge/tests-117%20passing-brightgreen" alt="Tests">
+  <img src="https://img.shields.io/badge/tests-122%20passing-brightgreen" alt="Tests">
   <img src="https://img.shields.io/badge/coverage-44%25-yellow" alt="Coverage"/>
   <img src="https://img.shields.io/badge/jQuery-removed-success" alt="jQuery Free">
+  <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Support">
 </p>
 
 <p align="center">
@@ -32,6 +33,7 @@
 - [Características Principales](#-características-principales)
 - [Inicio Rápido](#-inicio-rápido)
 - [Instalación](#-instalación)
+- [TypeScript Support](#-typescript-support)
 - [Core de Bodystyle](#-core-de-bodystyle)
 - [Documentación](#-documentación)
 - [Desarrollo](#-desarrollo)
@@ -127,7 +129,169 @@ npm install
 
 ---
 
-## 📚 Core de Bodystyle
+## � TypeScript Support
+
+Bodystyle ahora incluye **definiciones de tipos completas** para TypeScript, proporcionando autocompletado, validación de tipos y mejor experiencia de desarrollo.
+
+### Instalación con TypeScript
+
+```bash
+npm install bodyui2
+```
+
+Las definiciones de tipos se incluyen automáticamente. No necesitas instalar `@types` adicionales.
+
+### Uso Básico con TypeScript
+
+```typescript
+import BS from 'bodyui2';
+import { Waves } from 'bodyui2';
+import { slideUp, slideDown } from 'bodyui2';
+
+// TypeScript proporciona autocompletado y validación de tipos
+BS.Toast({
+  mensaje: 'Hola TypeScript!',
+  duracion: 3000,
+  posicion: 'top' // TypeScript valida que sea 'top' | 'bottom'
+});
+
+// Inicializar waves con tipos
+Waves.iniciar();
+
+// Animaciones con tipos completos
+const element = document.querySelector('.my-element') as HTMLElement;
+slideDown(element, 300, () => {
+  console.log('Animación completada');
+});
+```
+
+### Integración con Frameworks
+
+<details>
+<summary><strong>Angular</strong></summary>
+
+```typescript
+// app.component.ts
+import { Component, OnInit } from '@angular/core';
+import BS from 'bodyui2';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+  ngOnInit() {
+    // TypeScript proporciona IntelliSense completo
+    BS.WavesInit();
+    BS.ToolTipsInit();
+    BS.ModalInit();
+  }
+  
+  showNotification() {
+    BS.Toast({
+      mensaje: 'Notificación desde Angular',
+      duracion: 3000,
+      color: 'bg-success'
+    });
+  }
+}
+```
+
+</details>
+
+<details>
+<summary><strong>React</strong></summary>
+
+```typescript
+// App.tsx
+import React, { useEffect } from 'react';
+import BS from 'bodyui2';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Inicializar componentes con tipos
+    BS.WavesInit();
+    BS.ToolTipsInit();
+    
+    return () => {
+      // Cleanup con tipos
+      BS.WavesDestroy();
+      BS.ToolTipsDestroy();
+    };
+  }, []);
+  
+  const handleClick = () => {
+    BS.Toast({
+      mensaje: 'Notificación desde React',
+      duracion: 3000,
+      posicion: 'top'
+    });
+  };
+  
+  return (
+    <div className="contenedor">
+      <button className="btn bg-blue waves" onClick={handleClick}>
+        Click me
+      </button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+</details>
+
+<details>
+<summary><strong>Vue</strong></summary>
+
+```typescript
+// App.vue
+<script setup lang="ts">
+import { onMounted, onUnmounted } from 'vue';
+import BS from 'bodyui2';
+
+onMounted(() => {
+  // TypeScript proporciona validación de tipos
+  BS.WavesInit();
+  BS.ToolTipsInit();
+});
+
+onUnmounted(() => {
+  BS.WavesDestroy();
+  BS.ToolTipsDestroy();
+});
+
+const showToast = () => {
+  BS.Toast({
+    mensaje: 'Notificación desde Vue',
+    duracion: 3000,
+    color: 'bg-primary'
+  });
+};
+</script>
+
+<template>
+  <div class="contenedor">
+    <button class="btn bg-blue waves" @click="showToast">
+      Click me
+    </button>
+  </div>
+</template>
+```
+
+</details>
+
+### Ejemplo Completo
+
+Consulta [`typescript-example.ts`](./typescript-example.ts) para ver ejemplos completos de uso con TypeScript.
+
+
+
+---
+
+## �📚 Core de Bodystyle
 
 Bodystyle está compuesto por **cuatro módulos independientes** que pueden descargarse por separado:
 
