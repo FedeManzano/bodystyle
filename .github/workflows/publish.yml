@@ -1,0 +1,84 @@
+name: Publish Package
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (e.g., 5.8.0)'
+        required: false
+
+jobs:
+  publish:
+    name: Build & Publish Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        registry-url: 'https://registry.npmjs.org'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run tests
+      run: npm test
+    
+    - name: Build project
+      run: npm run build
+    
+    # Publicar en npm (requiere NPM_TOKEN en secrets)
+    - name: Publish to npm
+      if: github.event_name == 'release'
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      continue-on-error: true
+    
+    # Configurar para GitHub Packages
+    - name: Setup Node.js for GitHub Packages
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@fedemanzano'
+    
+    # Publicar en GitHub Packages
+    - name: Publish to GitHub Packages
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    # Crear artifact con el build
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: bodystyle-${{ github.event.release.tag_name || 'manual' }}
+        path: |
+          dist/
+          package.json
+          README.md
+          LICENSE
+        retention-days: 90
+    
+    # Adjuntar archivos al release
+    - name: Upload Release Assets
+      if: github.event_name == 'release'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          dist/css/bodystyle.css
+          dist/css/bodystyle.min.css
+          dist/js/bodystyle.js
+          dist/js/bodystyle.min.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
