@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import { fadeIn, fadeOut } from './Animaciones'
 import ERR from "./GestionErrores"
 
 /**
@@ -7,7 +7,7 @@ import ERR from "./GestionErrores"
  * y puede ser utilizada por el usuario hasta el momento que presiona fuera
  * del área del elemento y el sidebar se oculta.
  */
-(function() {
+(function () {
 
     const MODULO = "Error BodyStyle dice: M17"
     /**
@@ -24,7 +24,7 @@ import ERR from "./GestionErrores"
         "sidebar": null, // Almacena el ID del Sidebar
         "btnMenu": null, // Almacena el botón de menú disparador del evento
         "complement": "bs-nav-complement", // Clase del complemento, permite ocultar el sidebar
-        "complementElement": null, // Complemento elemento de JQUERY
+        "complementElement": null, // Complemento elemento del DOM
         "sm": 55, // Altura del nav pequeño SM
         "md": 65, // Altura del nav mediamo MD
         "lg": 75, // Altura del nav grande LG
@@ -37,17 +37,22 @@ import ERR from "./GestionErrores"
      */
     const Destroy = () => {
 
-        // Retira el evento click del botón de menú
-        $(state.btnMenu).off()
+        if (state.btnMenu) {
+            // Retira el evento click del botón de menú
+            state.btnMenu.removeEventListener("click", Toggle)
 
-        // Retira las etquetas label dentro del botón que le dan su apariencia
-        $(state.btnMenu).children("label").remove()
+            // Retira las etquetas label dentro del botón que le dan su apariencia
+            state.btnMenu.innerHTML = ""
+        }
 
         // Retira el evento resize de la ventana
-        $(window).on("resize").off()
+        window.removeEventListener("resize", Clear)
 
         // Elimina el evento click del complemento
-        $(state.complementElement).on("click").off()
+        if (state.complementElement) {
+            state.complementElement.removeEventListener("click", Clear)
+            state.complementElement.remove() // También removemos el elemento del DOM
+        }
     }
 
     /**
@@ -57,12 +62,10 @@ import ERR from "./GestionErrores"
      * @param {variable que define si el nav tiene borde inferior} border 
      * @returns void
      */
-    const InitialNavigation = (id = null, border = false) => 
-    {
+    const InitialNavigation = (id = null, border = false) => {
 
         // Validación del ID de contexto
-        if(!ERR.contexto.val(id))
-        {
+        if (!ERR.contexto.val(id)) {
             // Si el ID no posee el formato adecuado 
             // El módulo no se inicializa
             console.error(MODULO + ERR.contexto.mje)
@@ -72,85 +75,91 @@ import ERR from "./GestionErrores"
         /**
          * Solo admite valores true / false
          */
-        if(!ERR.bool.val(border))
-        {
+        if (!ERR.bool.val(border)) {
             // El valor booleano es incorrecto
             console.error(MODULO + ERR.bool.mje)
             return
         }
-        
+
         // Configura el contexto
         state.context = id
+        const contextElement = document.querySelector(id)
+
+        if (!contextElement) {
+            console.error(MODULO + " El elemento de contexto no existe.")
+            return
+        }
 
         // Obtiene el ID del sidevar
-        state.sidebar =  $(id).data("target")
-        
+        // En jQuery: $(id).data("target")
+        // En Vanilla: getAttribute("data-target")
+        let targetId = contextElement.getAttribute("data-target")
+        if (targetId) targetId = targetId.replace("#", "")
+
+        state.sidebar = document.getElementById(targetId)
+
         // Si la estructura del nav no es correcta 
         // se produce un error que no permite inicializar el módulo
-        if(!$(state.sidebar).hasClass("bs-nav-sidebar"))
-        {
+        if (!state.sidebar || !state.sidebar.classList.contains("bs-nav-sidebar")) {
             console.error(MODULO + "Error en el elemento referenciado por el data-target.")
             return
         }
 
-        // Obtine el OBJETO de Jquery para gestionarlo
-        state.btnMenu = $(id).children().children("." + state.classBtnMenu)
+        // Obtine el OBJETO para gestionarlo
+        // $(id).children().children("." + state.classBtnMenu)
+        // Buscamos dentro del contexto el botón con la clase
+        state.btnMenu = contextElement.querySelector("." + state.classBtnMenu)
 
         // Si el botón no posee la clase btn-menu
         // el módulo no se inicializa
-        if(!$(state.btnMenu).hasClass("btn-menu"))
-        {
+        if (!state.btnMenu) {
             console.error(MODULO + "El botón de menú no posee la clase .btn-menu.")
             return
         }
 
         // Cambia el display de sidebar de none a block
-        $(state.sidebar).fadeIn()
+        fadeIn(state.sidebar)
 
         // Añade los laben dentro del .btn-menu para dale la apariencia
-        $(state.btnMenu).append("<label></label><label></label><label></label>")
-        
+        state.btnMenu.innerHTML = "<label></label><label></label><label></label>"
+
         // Oculta el sidebar fuera de la ventana
-        $(state.sidebar).css("left", -state.widthSidebar)
+        state.sidebar.style.left = `-${state.widthSidebar}px`
 
         // Si tine borde el elemento toma el valor 1
         // Caso contrario 0
         state.border = border ? 1 : 0
 
         // Evalua que tipo de nav se está utilizando
-        // Si es un mediano aplicará la propiedad top
-        // correspondiente a esta medida de NAV
-        if( $(state.context).children().hasClass("bs-nav-md"))
-            $(state.sidebar).css("top", state.md + state.border)
+        const firstChild = contextElement.firstElementChild
 
-        // Evalua que tipo de nav se está utilizando
-        // Si es un chico aplicará la propiedad top
-        // correspondiente a esta medida de NAV
-        else if( $(state.context).children().hasClass("bs-nav-sm"))
-            $(state.sidebar).css("top", state.sm + state.border)
+        if (firstChild) {
+            if (firstChild.classList.contains("bs-nav-md"))
+                state.sidebar.style.top = `${state.md + state.border}px`
+            else if (firstChild.classList.contains("bs-nav-sm"))
+                state.sidebar.style.top = `${state.sm + state.border}px`
+            else if (firstChild.classList.contains("bs-nav-lg"))
+                state.sidebar.style.top = `${state.lg + state.border}px`
+        }
 
-        // Evalua que tipo de nav se está utilizando
-        // Si es un grande aplicará la propiedad top
-        // correspondiente a esta medida de NAV
-        else if($(state.context).children().hasClass("bs-nav-lg"))
-            $(state.sidebar).css("top", state.lg + state.border)
-
-        // Complemento como objeto de JQUERY
-        state.complementElement = $(`<div class="${state.complement}"></div>`)
+        // Complemento
+        state.complementElement = document.createElement("div")
+        state.complementElement.className = state.complement
+        state.complementElement.style.display = "none" // Inicialmente oculto
 
         // Añade al body el complemento
-        $("body").append(state.complementElement)
+        document.body.appendChild(state.complementElement)
 
         // Evento click en el menu
-        $(state.btnMenu).on("click", Toggle)
+        state.btnMenu.addEventListener("click", Toggle)
 
         // Evento resize de la venta que limpa 
         // e inicializa los estos de los elementos
-        $(window).on("resize", Clear)
+        window.addEventListener("resize", Clear)
 
         // Evento click del complemento
         // Inicializa los elementos.
-        $(state.complementElement).on("click", Clear)
+        state.complementElement.addEventListener("click", Clear)
     }
 
     /**
@@ -158,14 +167,12 @@ import ERR from "./GestionErrores"
      * conmutando el esto del mismo.
      */
     const Toggle = () => {
-        if (!state.open)
-        {
-            $(state.complementElement).fadeIn()
-            $(state.sidebar).css("left", 0)
-        }else 
-        {
-            $(state.complementElement).fadeOut()
-            $(state.sidebar).css("left", -state.widthSidebar)
+        if (!state.open) {
+            fadeIn(state.complementElement)
+            state.sidebar.style.left = "0px"
+        } else {
+            fadeOut(state.complementElement)
+            state.sidebar.style.left = `-${state.widthSidebar}px`
         }
         // Cambio de estado cada vez que se presiona
         // el botón de menú
@@ -178,9 +185,9 @@ import ERR from "./GestionErrores"
      * y configura el state.open en false
      */
     const Clear = () => {
-        $(state.complementElement).fadeOut()
-        $(state.sidebar).css("left", -state.widthSidebar)
-        state.open = false 
+        if (state.complementElement) fadeOut(state.complementElement)
+        if (state.sidebar) state.sidebar.style.left = `-${state.widthSidebar}px`
+        state.open = false
     }
 
 
@@ -189,7 +196,7 @@ import ERR from "./GestionErrores"
         Destroy: () => Destroy()
     }
 
-   window.Navigation = Navigation  
+    window.Navigation = Navigation
 })()
 
 
