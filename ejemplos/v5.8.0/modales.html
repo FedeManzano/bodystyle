@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+</head>
+
+<body>
+
+    <!--Elemento disparador CLASE: activar-modal ID: #modal1 -->
+    <button class="btn bg-blue bor-pill activar-modal" data-target="#mo">Disparador</button>
+
+
+    <div class="modal-fondo" id="mo">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <div class="modal-cuerpo ta-c fd-blanco">
+                <p class="c-black">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem
+                    repudiandae labore! Soluta harum, ducimus et vel facere voluptates
+                    eligendi nemo vitae fugit?
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.ModalInit();
+    </script>
+</body>
+
+</html>
