@@ -15,9 +15,9 @@
 
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
-  <img src="https://img.shields.io/badge/tests-122%20passing-brightgreen" alt="Tests">
-  <img src="https://img.shields.io/badge/coverage-44%25-yellow" alt="Coverage"/>
-  <img src="https://img.shields.io/badge/jQuery-removed-success" alt="jQuery Free">
+  <img src="https://img.shields.io/badge/tests-145%20passing-brightgreen" alt="Tests">
+  <img src="https://img.shields.io/badge/coverage-48.91%25-yellow" alt="Coverage"/>
+  <img src="https://img.shields.io/badge/jQuery-migrating-orange" alt="jQuery Migration">
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Support">
 </p>
 
@@ -285,7 +285,7 @@ const showToast = () => {
 
 ### Ejemplo Completo
 
-Consulta [`typescript-example.ts`](./typescript-example.ts) para ver ejemplos completos de uso con TypeScript.
+Consulta los ejemplos en la carpeta [`ejemplos/`](./ejemplos/) para ver casos de uso completos con TypeScript y JavaScript.
 
 
 
@@ -405,13 +405,13 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 
 ## 🔧 Dependencias
 
-| Dependencia | Versión | Descripción |
-|-------------|---------|-------------|
-| [Webpack](https://webpack.js.org/) | 5.102.0 | Empaquetador de módulos |
-| [Babel](https://babeljs.io/) | 6.23.0 | Transpilador de JavaScript |
-| [jQuery](https://jquery.com/) | 3.5.1 | Biblioteca JavaScript |
-| [DynamicsTips](https://github.com/FedericoManzano/dynamics-tips) | 1.8.0 | Sistema de tooltips |
-| [Show-Code](https://github.com/FedericoManzano/show-code) | 1.1.1 | Resaltado de código |
+| Dependencia | Versión | Descripción | Estado |
+|-------------|---------|-------------|--------|
+| [Webpack](https://webpack.js.org/) | 5.102.0 | Empaquetador de módulos | ✅ Activo |
+| [Babel](https://babeljs.io/) | 6.23.0 | Transpilador de JavaScript | ✅ Activo |
+| [jQuery](https://jquery.com/) | 3.5.1 | Biblioteca JavaScript | 🔄 En migración |
+| [dynamics-tips](https://github.com/FedericoManzano/dynamics-tips) | 1.8.0 | Sistema de tooltips y componentes | ✅ Activo |
+| [show-sintax](https://github.com/FedericoManzano/show-sintax) | 1.1.1 | Resaltado de código | ✅ Activo |
 
 ---
 
