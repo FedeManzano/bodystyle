@@ -208,6 +208,16 @@ sass -s compressed sass/bodystyle.scss dist/css/bodystyle.min.css
 ```bash
 npm run build
 ```
+### Ejecutar pruebas
+
+```bash
+npm test          # Ejecuta la suite completa
+npm test:watch    # Ejecuta pruebas en modo watch
+npm test:coverage # Genera reporte de cobertura
+```
+
+Los resultados se mostrarán en la consola y el reporte de cobertura se guardará en `coverage/`.
+
 
 Esto generará `dist/js/bodystyle.min.js` con todo el código transpilado y optimizado.
 
