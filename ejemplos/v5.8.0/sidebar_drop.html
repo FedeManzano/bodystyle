@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Sidebar Drop</title>
+</head>
+
+<body>
+
+    <!-- Como puede observarse el NAV tiene un ID único -->
+    <!--Las clases bs-nav y bs-nav-fixed permiten definirle los estilos -->
+    <nav id="nav" class="bs-nav bs-nav-fixed">
+        <div class="bs-nav-md align-left-list">
+
+            <!-- Botón disparador y controlador del sidebar-->
+            <a class="btn-menu"></a>
+
+            <!--Logo perteneciente a la entidad o persona -->
+            <a href="#" class="logo-container">
+                <img src="../../logo/logo.png" alt="Foto de perfil">
+            </a>
+
+            <!--Lista con el menú principal del nav -->
+            <div>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        Aca está el SIDEBAR, notese el id ya que tiene que tener uno
+        y ser el mismo que el que se envía por parámetro de la función 
+        de inicialización.
+
+        La clase bs-sidebar-drop-light TEMA CLARO
+        La clase bs-sidebar-drop-dark  TEMA OSCURO
+     -->
+    <div id="sidebar" class="bs-sidebar-drop-light ">
+
+        <!--
+            Cada elemento está asociado a un submenu 
+            el attr (data-target) va a apuntar 
+            al listado a desplegar, en este caso #l1 y contendrá 
+            la clase "bs-sidebar-title"    
+        -->
+        <div class="bs-sidebar-title" data-target="#l1">
+            <label>Inicio</label>
+        </div>
+
+        <!-- 
+            Este es el submenu que desplegará el elemento (Inicio).
+            Notese que lleva la clase ("bs-sidebar-drop-list") con 
+            el ID = l1 necesario para vincular el elemento anterior 
+            con el submenú a desplegar
+         -->
+        <div class="bs-sidebar-drop-list" id="l1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+        <div class="bs-sidebar-title" data-target="#l2">
+            <label>Repositorios</label>
+        </div>
+
+        <div class="bs-sidebar-drop-list" id="l2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l3">
+            <label>Archivos</label>
+        </div>
+
+        <div class="bs-sidebar-drop-list" id="l3">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+
+        <div class="bs-sidebar-title" data-target="#l4">
+            <label>Cuentas</label>
+        </div>
+
+        <div class="bs-sidebar-drop-list" id="l4">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Perfiles</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Correos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar" })
+    </script>
+</body>
+
+</html>

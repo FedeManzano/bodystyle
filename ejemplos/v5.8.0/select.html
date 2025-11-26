@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="select-mod-dark mt-3" id="idselect"> <!--ID igual a lo que pasamos por parámetro-->
+            <select name="Selector">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+
+        <div class="select-mod-white mt-3" id="idselect-light"> <!--ID igual a lo que pasamos por parámetro-->
+            <select name="Selector">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.SelectInit().iniciar("#idselect", "borde")
+        BS.SelectInit().iniciar("#idselect-light", "borde")
+    </script>
+</body>
+
+</html>

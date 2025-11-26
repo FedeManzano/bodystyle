@@ -21,10 +21,10 @@ class Select {
      * @param {ID del select} contexto 
      * @param {Efecto hover asociado} efecto 
      */
-    inicializar(contexto, efecto){
+    inicializar(contexto, efecto) {
         const MODULO = "Error BodyStyle dice: M20"
-      
-        if(!ERR.id.validacion.test(contexto)) {
+
+        if (!ERR.id.validacion.test(contexto)) {
             console.error(MODULO + ERR.id.mensaje)
             return
         }
@@ -35,42 +35,41 @@ class Select {
 
         $(contexto).append("<span class='seleccionado'></span>")
         $(contexto + " .seleccionado").text($(opciones[0]).text())
-        if($(opciones[0]).hasClass("inactivo")) {
+        if ($(opciones[0]).hasClass("inactivo")) {
             $(contexto + " .seleccionado").addClass("inactivo")
         }
 
-        
+
         $(contexto).append("<div class='lista'><ul></ul></div>")
-        $(opciones).each(function(){
-            if(!$(this).hasClass("inactivo")){
+        $(opciones).each(function () {
+            if (!$(this).hasClass("inactivo")) {
                 $(contexto).children(".lista")
                     .children("ul").append(
-                            `<li class=${efecto}>
-                                <option> ${$(this).text()}</option>
-                            </li>`
+                        `<li class=${efecto}><option>${$(this).text()}</option></li>`
                     )
             }
         })
 
-        $(contexto + " .lista ul li").click(function(){
+        $(contexto + " .lista ul li").click(function (event) {
+            event.stopPropagation();
             $(contexto + " .seleccionado").removeClass("inactivo")
-            var ind =  ($(this).index() + 1).toString()
-            $(contexto + " select option").attr("selected", false)
-            $(contexto + " select option[value=" + ind +"]").attr("selected", true)
-            $(contexto + " .seleccionado").text($(this).children("option").text())
+            var ind = ($(this).index() + 1).toString()
+            $(contexto + " select option").prop("selected", false).removeAttr("selected");
+            $(contexto + " select option[value=" + ind + "]").prop("selected", true).attr("selected", "selected");
+            $(contexto + " .seleccionado").text($(this).children("option").text().trim())
 
         })
 
-        $(contexto).click(function(){
-            
-            if(visible === false){
+        $(contexto).click(function () {
+
+            if (visible === false) {
                 $(contexto).children("div").slideDown(300)
-                $(this).css("border" , "1px solid rgba(135, 217, 255)")
+                $(this).css("border", "1px solid rgba(135, 217, 255)")
                 visible = true
             }
-            else{
+            else {
                 $(contexto).children("div").slideUp(300)
-                $(this).css("border" , "1px solid rgb(207, 207, 207)")
+                $(this).css("border", "1px solid rgb(207, 207, 207)")
                 visible = false
             }
         })
@@ -78,17 +77,17 @@ class Select {
 
     iniciar(contexto, hover = "none") {
 
-        switch(hover){
-            case "none": 
+        switch (hover) {
+            case "none":
                 this.inicializar(contexto, "none")
-            break;
+                break;
             case "borde":
                 this.inicializar(contexto, "e-borde-izq-verde-5")
-             break;
-            case "fondo": 
+                break;
+            case "fondo":
                 this.inicializar(contexto, "hover")
-            break;
-            default: 
+                break;
+            default:
                 const MODULO = "Error BodyStyle dice: M20"
                 console.error(MODULO + ERR.hover.mensaje)
         }
