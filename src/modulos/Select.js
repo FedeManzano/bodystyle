@@ -1,10 +1,17 @@
 import ERR from "./Errores"
 import { slideUp, slideDown } from "./Animaciones"
 
+
 /**
  * Módulo (21) Clase que permite gestionar el Select de bodystyle
  */
 class Select {
+
+
+    constructor() {
+        this.context = ""
+        this.visible = false
+    }
 
     /**
      * Método que permite desasociar la lógica del elemento SELECT
@@ -33,12 +40,14 @@ class Select {
             return
         }
 
+        this.context = contexto
+
         const container = document.querySelector(contexto);
         if (!container) return;
 
         const selectElement = container.querySelector('select');
         const opciones = selectElement ? selectElement.querySelectorAll('option') : [];
-        let visible = false;
+        this.visible = false;
 
         // Crear elemento seleccionado
         const seleccionado = document.createElement('span');
@@ -99,25 +108,31 @@ class Select {
 
                     // Disparar evento change
                     selectElement.dispatchEvent(new Event('change'));
+
+                    this.show_hide_list(contexto)
                 });
             }
         });
 
         // Evento click en el contenedor principal
-        container.addEventListener('click', function () {
-            const divLista = container.querySelector('.lista');
+        container.addEventListener('click', () => this.show_hide_list(contexto));
+    }
 
-            if (visible === false) {
-                slideDown(divLista, 300);
-                container.style.border = "1px solid rgba(135, 217, 255)";
-                visible = true;
-            }
-            else {
-                slideUp(divLista, 300);
-                container.style.border = "1px solid rgb(207, 207, 207)";
-                visible = false;
-            }
-        });
+    show_hide_list(contexto) {
+        console.log(contexto)
+        const container = document.querySelector(contexto);
+        const divLista = container.querySelector('.lista');
+
+        if (this.visible === false) {
+            slideDown(divLista, 300);
+            container.style.border = "1px solid rgba(135, 217, 255)";
+        }
+        else {
+            slideUp(divLista, 300);
+            container.style.border = "1px solid rgb(207, 207, 207)";
+        }
+
+        this.visible = !this.visible;
     }
 
     iniciar(contexto, hover = "none") {
