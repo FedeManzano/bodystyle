@@ -1,130 +1,202 @@
-import $ from 'jquery'
 import ERR from "./Errores"
 
 class Tab {
 
-
     destroy(contexto) {
-        $(contexto + " .tab-borde .op-tab-borde label").off()
-        $(contexto + " .tab .op-tab label").off()
+        // Remover event listeners de tabs con borde
+        const borderedLabels = document.querySelectorAll(`${contexto} .tab-borde .op-tab-borde label`);
+        borderedLabels.forEach(label => {
+            const newLabel = label.cloneNode(true);
+            label.parentNode.replaceChild(newLabel, label);
+        });
+
+        // Remover event listeners de tabs regulares
+        const regularLabels = document.querySelectorAll(`${contexto} .tab .op-tab label`);
+        regularLabels.forEach(label => {
+            const newLabel = label.cloneNode(true);
+            label.parentNode.replaceChild(newLabel, label);
+        });
     }
+
     /**
      * Inicializa el Tab de tipo solapa
      * @param {ID del contenedor padre de todo el tab} contexto 
      */
     inicializar(contexto) {
-
-        const MODULO = "Error BodyStyle dice: M24"
-        if(!ERR.id.validacion.test(contexto)){
-            console.error(MODULO + ERR.id.mensaje)
-            return 
+        const MODULO = "Error BodyStyle dice: M24";
+        if (!ERR.id.validacion.test(contexto)) {
+            console.error(MODULO + ERR.id.mensaje);
+            return;
         }
 
-        var encontrado = 0
-        $(contexto + " .contenido-tab").hide()
-        $(contexto + " .tab .op-tab label").each(function(){
-            if( !$(this).hasClass("desactivado") && encontrado === 0){
-                $(this).addClass("activo")
-                var idCont = $($(this)).data("target")
-                $(idCont).show()
-                encontrado = 1
-            }
-        })
-    }
+        let encontrado = 0;
 
+        // Ocultar todos los contenidos de tabs
+        const contenidos = document.querySelectorAll(`${contexto} .contenido-tab`);
+        contenidos.forEach(contenido => {
+            contenido.style.display = "none";
+        });
+
+        // Buscar el primer tab no desactivado y activarlo
+        const labels = document.querySelectorAll(`${contexto} .tab .op-tab label`);
+        labels.forEach(label => {
+            if (!label.classList.contains("desactivado") && encontrado === 0) {
+                label.classList.add("activo");
+                const idCont = label.dataset.target || label.getAttribute("data-target");
+                const contenido = document.querySelector(idCont);
+                if (contenido) {
+                    contenido.style.display = "block";
+                }
+                encontrado = 1;
+            }
+        });
+    }
 
     /**
      * Inicializa el Tab tipo borde
      * @param {Obj Json con la configuración} c 
      */
-    inicializarBorde(c){
-        $(c.contexto + " .tab-borde .op-tab-borde ul").addClass(c.colorFondo)
-        $(c.contexto + " .tab-borde .op-tab-borde label").addClass(c.colorFuente)
-        $(c.contexto + " .contenido-tab").hide()
-        var encontrado = 0
-        $(c.contexto + " .tab-borde .op-tab-borde label").each(function(){
-            
-            if(!$(this).hasClass("desactivado") && encontrado === 0 ){
-                var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
-                $(this).append(borde)
-                var id = $($(this)).data("target")
-                $(id).show()
-                encontrado = 1
+    inicializarBorde(c) {
+        // Agregar clases de color al contenedor
+        const ul = document.querySelector(`${c.contexto} .tab-borde .op-tab-borde ul`);
+        if (ul) {
+            ul.classList.add(c.colorFondo);
+        }
+
+        // Agregar clase de color a los labels
+        const labels = document.querySelectorAll(`${c.contexto} .tab-borde .op-tab-borde label`);
+        labels.forEach(label => {
+            label.classList.add(c.colorFuente);
+        });
+
+        // Ocultar todos los contenidos
+        const contenidos = document.querySelectorAll(`${c.contexto} .contenido-tab`);
+        contenidos.forEach(contenido => {
+            contenido.style.display = "none";
+        });
+
+        let encontrado = 0;
+
+        // Buscar el primer tab no desactivado y activarlo
+        labels.forEach(label => {
+            if (!label.classList.contains("desactivado") && encontrado === 0) {
+                const borde = document.createElement("span");
+                borde.className = `activo ${c.colorBorde}`;
+                label.appendChild(borde);
+
+                const id = label.dataset.target || label.getAttribute("data-target");
+                const contenido = document.querySelector(id);
+                if (contenido) {
+                    contenido.style.display = "block";
+                }
+                encontrado = 1;
             }
-        })
+        });
     }
 
     cambiarBorde(c) {
-        $(c.contexto + " .tab-borde .op-tab-borde label").click(function() {
+        const labels = document.querySelectorAll(`${c.contexto} .tab-borde .op-tab-borde label`);
 
-            if(!$(this).hasClass("desactivado")) {
-                $(c.contexto + " .tab-borde .op-tab-borde label span").remove()
-                var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
-                $(this).append(borde)
-                $(c.contexto + " .contenido-tab").hide()
-                var id = $($(this)).data("target")
-                $(id).show()
-            }
-        })
+        labels.forEach(label => {
+            label.addEventListener("click", () => {
+                if (!label.classList.contains("desactivado")) {
+                    // Remover todos los bordes activos
+                    const spans = document.querySelectorAll(`${c.contexto} .tab-borde .op-tab-borde label span`);
+                    spans.forEach(span => span.remove());
+
+                    // Agregar borde al tab clickeado
+                    const borde = document.createElement("span");
+                    borde.className = `activo ${c.colorBorde}`;
+                    label.appendChild(borde);
+
+                    // Ocultar todos los contenidos
+                    const contenidos = document.querySelectorAll(`${c.contexto} .contenido-tab`);
+                    contenidos.forEach(contenido => {
+                        contenido.style.display = "none";
+                    });
+
+                    // Mostrar el contenido correspondiente
+                    const id = label.dataset.target || label.getAttribute("data-target");
+                    const contenido = document.querySelector(id);
+                    if (contenido) {
+                        contenido.style.display = "block";
+                    }
+                }
+            });
+        });
     }
 
-    cambiarSolapa(contexto){
-        $(contexto + " .tab .op-tab label").click(function() {
-            if(!$(this).hasClass("desactivado")){
-                $(contexto + " .tab .op-tab label").removeClass("activo")
-                $(this).addClass("activo")
-                var idInfo = $($(this)).data("target")
-                $(contexto + " .contenido-tab").hide()
-                $(idInfo).show()
-            }
-        })
-    } 
+    cambiarSolapa(contexto) {
+        const labels = document.querySelectorAll(`${contexto} .tab .op-tab label`);
+
+        labels.forEach(label => {
+            label.addEventListener("click", () => {
+                if (!label.classList.contains("desactivado")) {
+                    // Remover clase activo de todos los labels
+                    const allLabels = document.querySelectorAll(`${contexto} .tab .op-tab label`);
+                    allLabels.forEach(l => l.classList.remove("activo"));
+
+                    // Agregar clase activo al label clickeado
+                    label.classList.add("activo");
+
+                    // Ocultar todos los contenidos
+                    const contenidos = document.querySelectorAll(`${contexto} .contenido-tab`);
+                    contenidos.forEach(contenido => {
+                        contenido.style.display = "none";
+                    });
+
+                    // Mostrar el contenido correspondiente
+                    const idInfo = label.dataset.target || label.getAttribute("data-target");
+                    const contenido = document.querySelector(idInfo);
+                    if (contenido) {
+                        contenido.style.display = "block";
+                    }
+                }
+            });
+        });
+    }
 
     iniciar(contexto) {
-        this.inicializar(contexto)
-        this.cambiarSolapa(contexto)
+        this.inicializar(contexto);
+        this.cambiarSolapa(contexto);
     }
 
-    iniciarBorde({contexto = "vacio", colorFuente = "c-negro", colorFondo = "fd-blanco", colorBorde = "fd-negro"} = {}){
+    iniciarBorde({ contexto = "vacio", colorFuente = "c-negro", colorFondo = "fd-blanco", colorBorde = "fd-negro" } = {}) {
+        const MODULO = "Error BodyStyle dice: M28";
 
-
-        const MODULO = "Error BodyStyle dice: M28"
-        if(!ERR.id.validacion.test(contexto)){
-            console.error(MODULO + ERR.id.mensaje)
-            return 
+        if (!ERR.id.validacion.test(contexto)) {
+            console.error(MODULO + ERR.id.mensaje);
+            return;
         }
 
-        if(!ERR.clasesColorTexto.validacion.test(colorFuente)){
-            console.error(MODULO + ERR.clasesColorTexto.mensaje)
-            return
+        if (!ERR.clasesColorTexto.validacion.test(colorFuente)) {
+            console.error(MODULO + ERR.clasesColorTexto.mensaje);
+            return;
         }
 
-        if(!ERR.clasesColorFondo.validacion.test(colorFondo)){
-            console.error(MODULO + ERR.clasesColorFondo.mensaje)
-            return
+        if (!ERR.clasesColorFondo.validacion.test(colorFondo)) {
+            console.error(MODULO + ERR.clasesColorFondo.mensaje);
+            return;
         }
 
-        if(!ERR.clasesColorFondo.validacion.test(colorBorde)){
-            console.error(MODULO + ERR.clasesColorFondo.mensaje)
-            return
+        if (!ERR.clasesColorFondo.validacion.test(colorBorde)) {
+            console.error(MODULO + ERR.clasesColorFondo.mensaje);
+            return;
         }
 
-
-        var c = {
+        const c = {
             contexto,       // ID del contenido
             colorFuente,    // Color de la fuente de los Tabs
             colorFondo,     // Color de Fondo de la barra 
             colorBorde      // Color del borde seleccionado
-        }
+        };
 
         // Inicializa el Tab con borde
-        this.inicializarBorde(c)
+        this.inicializarBorde(c);
 
         // Inicializa el Tab con solapa
-        this.cambiarBorde(c)
+        this.cambiarBorde(c);
     }
-
 }
 
-
-export default Tab
+export default Tab;

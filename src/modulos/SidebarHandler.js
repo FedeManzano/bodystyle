@@ -1,6 +1,3 @@
-import $ from "jquery"
-
-
 /**
  * Módulo (23)
  * Manejador del sidebar drop
@@ -13,81 +10,110 @@ import $ from "jquery"
  * 
  * Bodystyle 5.0.0 
  */
-(function(){
+class SidebarHandler {
+    constructor() {
+        // Configuración Inicial
+        this.conf = {
+            nav: "", // ID DEL NAV
+            sidebar: "", // ID DEL SIDEBAR
+        };
 
-    // Configuración Inicial
-    const conf = {
-        nav: "", // ID DEL NAV
-        sidebar: "", // ID DEL SIDEBAR
+        // TRUE Visible, FALSE Oculto
+        this.state = false;
+
+        // Ancho del Sidebar
+        this.width = 240;
+
+        // Referencias a event listeners para poder removerlos
+        this.resizeHandler = null;
+        this.menuClickHandler = null;
+        this.complementClickHandler = null;
     }
 
-    // TRUE Visible
-    // FALSE Oculto
-    let state = false
-
-    const width = 240 // Ancho del Sidebar
-
-
     /**
-     * Función de inicialización del manejador de
-     * del sidebar.
-     * @param {*} idNav  // ID del nav
-     * @param {*} idSidebar  // ID del sidebar
+     * Función de inicialización del manejador del sidebar.
+     * @param {string} idNav - ID del nav
+     * @param {string} idSidebar - ID del sidebar
      */
-    const Init = (idNav, idSidebar) => {
-        /**ID DEL NAV (CONTROLADOR) */
-        conf.nav = idNav
+    Init(idNav, idSidebar) {
+        // ID DEL NAV (CONTROLADOR)
+        this.conf.nav = idNav;
 
-        /**ID DEL SIDEBAR (CONTROLADO) */
-        conf.sidebar = idSidebar
-
-        // Evaluar si el sidebar se debe mostrar o no.
-        show_hide()
+        // ID DEL SIDEBAR (CONTROLADO)
+        this.conf.sidebar = idSidebar;
 
         // Añade al body la cubierta que permite ocultar el Sidebar
         // Un contenedor fijo que cubre toda la pantalla
-        $("body").append("<div class='bs-nav-complement'></div>")
+        document.body.insertAdjacentHTML('beforeend', "<div class='bs-nav-complement'></div>");
 
-        // Configura el botón de menú que será el disparador de del evento show-hide
-        $(conf.nav + " .bs-nav-md .btn-menu").append("<label></label><label></label><label></label>")
-        $(conf.nav + " .bs-nav-sm .btn-menu").append("<label></label><label></label><label></label>")
-        $(conf.nav + " .bs-nav-lg .btn-menu").append("<label></label><label></label><label></label>")
+        // Evaluar si el sidebar se debe mostrar o no
+        this.show_hide();
 
+        // Configura el botón de menú que será el disparador del evento show-hide
+        const navMd = document.querySelector(`${this.conf.nav} .bs-nav-md .btn-menu`);
+        const navSm = document.querySelector(`${this.conf.nav} .bs-nav-sm .btn-menu`);
+        const navLg = document.querySelector(`${this.conf.nav} .bs-nav-lg .btn-menu`);
+
+        if (navMd) navMd.insertAdjacentHTML('beforeend', "<label></label><label></label><label></label>");
+        if (navSm) navSm.insertAdjacentHTML('beforeend', "<label></label><label></label><label></label>");
+        if (navLg) navLg.insertAdjacentHTML('beforeend', "<label></label><label></label><label></label>");
 
         // Cada vez que se modifica el ancho de la ventana
-        // Ocultará o mostrará el sidebar.
-        $(window).on("resize", () => show_hide())
+        // Ocultará o mostrará el sidebar
+        this.resizeHandler = () => this.show_hide();
+        window.addEventListener("resize", this.resizeHandler);
 
-        ///Manejador del evento click, ocultará o mostrará el sidebar
-        $(conf.nav + " .bs-nav-md, " + conf.nav + " .bs-nav-sm, " + conf.nav + " .bs-nav-lg").on("click",".btn-menu", (e) => {
-            if(!state)
-                show()
-            else
-                hide()
-        })
+        // Manejador del evento click, ocultará o mostrará el sidebar
+        this.menuClickHandler = (e) => {
+            if (e.target.closest('.btn-menu')) {
+                if (!this.state) {
+                    this.show();
+                } else {
+                    this.hide();
+                }
+            }
+        };
 
-        // Oculta el sidebar cualdo se hace click en cualquier lugar de la pantalla
+        // Agregar event listener a los contenedores de navegación
+        const navContainers = document.querySelectorAll(
+            `${this.conf.nav} .bs-nav-md, ${this.conf.nav} .bs-nav-sm, ${this.conf.nav} .bs-nav-lg`
+        );
+        navContainers.forEach(container => {
+            container.addEventListener("click", this.menuClickHandler);
+        });
+
+        // Oculta el sidebar cuando se hace click en cualquier lugar de la pantalla
         // Solo disponible en pantallas menores a 1030px
-        $(".bs-nav-complement").on("click", () => hide())
+        this.complementClickHandler = () => this.hide();
+        const complement = document.querySelector(".bs-nav-complement");
+        if (complement) {
+            complement.addEventListener("click", this.complementClickHandler);
+        }
     }
 
     /**
      * Función que permite ocultar y mostrar el sidebar 
      * en función al tamaño de la ventana
      */
-    const show_hide = () => {
-        $(".bs-nav-complement").hide()
-        if($(window).width() > 1030)
-        {
+    show_hide() {
+        const complement = document.querySelector(".bs-nav-complement");
+        if (complement) {
+            complement.style.display = "none";
+        }
+
+        const sidebar = document.querySelector(this.conf.sidebar);
+        if (!sidebar) return;
+
+        if (window.innerWidth > 1030) {
             // Si el dispositivo es mayor a 1030px 
             // el sidebar se muestra siempre
-            $(conf.sidebar).css("left", 0)
-            state = true // Activo
+            sidebar.style.left = "0px";
+            this.state = true; // Activo
         } else {
             // Si la pantalla es menor a 1030px
             // Se oculta siempre
-            $(conf.sidebar).css("left", -260)
-            state = false
+            sidebar.style.left = "-260px";
+            this.state = false;
         }
     }
 
@@ -96,29 +122,38 @@ import $ from "jquery"
      * en equipos con pantallas menores a 1030px
      * aparece el complemento.
      */
-    const show = () => {
-        if($(window).width() < 1030)
-        {
-            $(".bs-nav-complement").show()
+    show() {
+        if (window.innerWidth < 1030) {
+            const complement = document.querySelector(".bs-nav-complement");
+            if (complement) {
+                complement.style.display = "block";
+            }
         }
-        $(conf.sidebar).css("left", 0)
-        state = true
-    }
 
-    const hide = () => {
-        if($(window).width() < 1030)
-        {
-            $(".bs-nav-complement").hide()
+        const sidebar = document.querySelector(this.conf.sidebar);
+        if (sidebar) {
+            sidebar.style.left = "0px";
         }
-        $(conf.sidebar).css("left", -width)
-        state = false
+        this.state = true;
     }
 
-    const SidebarHandler = {
-        Init: (idNav, idSidebar) => Init(idNav, idSidebar)
+    /**
+     * Función para ocultar el sidebar
+     */
+    hide() {
+        if (window.innerWidth < 1030) {
+            const complement = document.querySelector(".bs-nav-complement");
+            if (complement) {
+                complement.style.display = "none";
+            }
+        }
+
+        const sidebar = document.querySelector(this.conf.sidebar);
+        if (sidebar) {
+            sidebar.style.left = `-${this.width}px`;
+        }
+        this.state = false;
     }
+}
 
-    window.SidebarHandler = SidebarHandler
-})()
-
-export default SidebarHandler
+export default new SidebarHandler();
