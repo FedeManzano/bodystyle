@@ -31,7 +31,7 @@
 
 - [Acerca de Bodystyle](#acerca-de-bodystyle)
 - [Características Principales](#características-principales)
-- [Inicio Rápido](#inicio-rápido)
+- [Inicio Rápido](#-inicio-rápido)
 - [Instalación](#instalación)
 - [TypeScript Support](#typescript-support)
 - [Core de Bodystyle](#core-de-bodystyle)
