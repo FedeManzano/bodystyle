@@ -16,6 +16,9 @@ export function slideUp(elemento, duration = 300, callback) {
     if (!el || !(el instanceof HTMLElement)) return;
     el.style.opacity = '1';
     const startHeight = el.scrollHeight;
+
+
+
     const animation = el.animate(
         [
             { height: `${startHeight}px` },
@@ -45,6 +48,8 @@ export function slideDown(elemento, duration = 300, callback) {
     if (!elemento) return;
     const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
     if (!el || !(el instanceof HTMLElement)) return;
+
+
 
     // Aseguramos que el elemento sea visible para calcular su altura natural
     el.style.opacity = '1';

@@ -121,10 +121,12 @@ class Select {
         const divLista = container.querySelector('.lista');
 
         if (this.visible === false) {
+            divLista.children[0].style.opacity = "1";
             slideDown(divLista, 300);
             container.style.border = "1px solid rgba(135, 217, 255)";
         }
         else {
+            divLista.children[0].style.opacity = "0";
             slideUp(divLista, 300);
             container.style.border = "1px solid rgb(207, 207, 207)";
         }
