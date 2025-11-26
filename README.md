@@ -29,20 +29,20 @@
 
 ## 📋 Tabla de Contenidos
 
-- [Acerca de Bodystyle](#acerca-de-bodystyle)
-- [Características Principales](#características-principales)
+- [Acerca de Bodystyle](#-acerca-de-bodystyle)
+- [Características Principales](#-características-principales)
 - [Inicio Rápido](#-inicio-rápido)
-- [Instalación](#instalación)
-- [TypeScript Support](#typescript-support)
-- [Core de Bodystyle](#core-de-bodystyle)
-- [Documentación](#documentación)
-- [Desarrollo](#desarrollo)
-- [Compatibilidad de Navegadores](#compatibilidad-de-navegadores)
-- [Dependencias](#dependencias)
-- [Novedades v5.0.0](#novedades-v500)
-- [Contribuir](#contribuir)
-- [Licencia](#licencia)
-- [Autor](#autor)
+- [Instalación](#-instalación)
+- [TypeScript Support](#-typescript-support)
+- [Core de Bodystyle](#-core-de-bodystyle)
+- [Documentación](#-documentación)
+- [Desarrollo](#-desarrollo)
+- [Compatibilidad de Navegadores](#-compatibilidad-de-navegadores)
+- [Dependencias](#-dependencias)
+- [Novedades v5.8.0](#-novedades-v580)
+- [Contribuir](#-contribuir)
+- [Licencia](#-licencia)
+- [Autor](#-autor)
 
 ---
 
