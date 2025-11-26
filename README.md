@@ -15,8 +15,8 @@
 
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
-  <img src="https://img.shields.io/badge/tests-174%20passing-brightgreen" alt="Tests">
-  <img src="https://img.shields.io/badge/coverage-56%25-yellow" alt="Coverage"/>
+  <img src="https://img.shields.io/badge/tests-198%20passing-brightgreen" alt="Tests">
+  <img src="https://img.shields.io/badge/coverage-74%25-green" alt="Coverage"/>
   <img src="https://img.shields.io/badge/jQuery-Free-orange" alt="jQuery Migration">
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Support">
 </p>
@@ -428,8 +428,8 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
   - `Animaciones.js` - Efectos slideUp/slideDown nativos
   - `Alerta.js`, `BotonInicio.js`, `Desactivado.js` - Componentes optimizados
 
-- ✅ **Suite de Testing Completa** - 145 tests unitarios con Jest
-  - Cobertura de código: 48.91%
+- ✅ **Suite de Testing Completa** - 198 tests unitarios con Jest
+  - Cobertura de código: 74%
   - Tests para todos los módulos migrados
   - Integración continua con GitHub Actions
 
@@ -481,14 +481,14 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 **Fase Actual: Grupo 1 - Input/Forms** (En progreso)
 - ✅ InputHandler.js (Completado)
 - ⏳ GruposInput.js (Pendiente)
-- ⏳ Select.js (Pendiente)
+- ✅ Select.js (Completado)
 - ⏳ Range.js (Pendiente)
 
 **Próximas Fases:**
 - 📋 Grupo 2 - Navigation (Tabs, Sidebar, Navigation)
 - 📋 Grupo 3 - Visual Effects (ScrollSpy, Parallax, Imagenes)
 
-**Progreso Total:** 8/20 módulos migrados (40%)
+**Progreso Total:** 9/20 módulos migrados (45%)
 
 
 
