@@ -91,7 +91,7 @@ export function fadeIn(elemento, duration = 300, callback) {
     if (!el || !(el instanceof HTMLElement)) return;
 
     // Asegurar que el elemento sea visible
-    el.style.display = el.style.display === 'none' ? 'block' : el.style.display || 'block';
+    el.style.display = el.style.display === 'none' ? 'flex' : el.style.display || 'flex';
     el.style.opacity = '0';
 
     const animation = el.animate(
@@ -137,6 +137,7 @@ export function fadeOut(elemento, duration = 300, callback) {
 
     animation.onfinish = () => {
         el.style.opacity = '0';
+        el.style.display = 'none';
         if (typeof callback === 'function') callback();
     };
 }

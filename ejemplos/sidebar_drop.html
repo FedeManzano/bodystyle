@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
+    <!-- CDN -->
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+
     <title>Document</title>
 </head>
+
 <body class="fd-negro">
 
-    <nav  id="nav"  class="bs-nav fd-gris-n bs-nav-bor-grey bs-nav-fixed">
-            <div  class="bs-nav-md align-right-list">
+    <nav id="nav" class="bs-nav fd-gris-n bs-nav-bor-grey bs-nav-fixed">
+        <div class="bs-nav-md align-right-list">
 
-                <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
-                <a  class="btn-menu"></a>
+            <!--Botón que se oculta solo en dispositivos Grande Med >= 1030px no se muestra -->
+            <a class="btn-menu"></a>
 
 
-                <a  href="#"  class="logo-container">
-                    <img  src="../logo/logo.png"  alt="Foto de perfil">
-                </a>
-                <div  class="ocultar-desde-medianos">
-                    <ul>
-                        <li><a  href="#">Inicio</a></li>
-                        <li><a  href="#">Porfolio</a></li>
-                        <li><a  href="#">Galeria</a></li>
-                    </ul>
-                </div>
-                <div  class="right-content">
-                    <div  class="btn-grupo">
-                        <button  class="btn-sm bg-white c-black">Login</button>
-                        <button  class="btn-sm fd-gris-n">Sign Up</button>
-                    </div>
+            <a href="#" class="logo-container">
+                <img src="../logo/logo.png" alt="Foto de perfil">
+            </a>
+            <div class="ocultar-desde-medianos">
+                <ul>
+                    <li><a href="#"><i class="bs-play c-rojo-ro fz-22">&nbsp;</i> Inicio</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">Galeria</a></li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <div class="btn-grupo">
+                    <button class="btn-sm bg-white c-black">Login</button>
+                    <button class="btn-sm fd-gris-n">Sign Up</button>
                 </div>
             </div>
-        </nav> 
+        </div>
+    </nav>
 
 
     <div id="sidebar" class="bs-sidebar-drop-dark ">
         <div class="bs-sidebar-title waves" data-target="#l1">
             <label><i class="bs-play c-rojo-ro fz-22">&nbsp;</i>Inicio</label>
         </div>
-        
+
         <div class="bs-sidebar-drop-list" id="l1">
             <ul>
                 <li><a href="">Home</a></li>
@@ -54,7 +58,7 @@
         <div class="bs-sidebar-title waves" data-target="#l2">
             <label><i class="bs-github-2 fz-22">&nbsp;</i>Repositorios</label>
         </div>
-        
+
         <div class="bs-sidebar-drop-list" id="l2">
             <ul>
                 <li><a href="">Home</a></li>
@@ -67,7 +71,7 @@
         <div class="bs-sidebar-title waves" data-target="#l3">
             <label><i class="bs-folder fz-22 c-red">&nbsp;</i>Archivos</label>
         </div>
-   
+
         <div class="bs-sidebar-drop-list" id="l3">
             <ul>
                 <li><a href="">Home</a></li>
@@ -80,7 +84,7 @@
         <div class="bs-sidebar-title waves" data-target="#l4">
             <label><i class="bs-happy fz-22 c-yellow">&nbsp;</i>Cuentas</label>
         </div>
-        
+
         <div class="bs-sidebar-drop-list" id="l4">
             <ul>
                 <li><a href="">Home</a></li>
@@ -93,7 +97,8 @@
 
     <script src="../dist/js/bodystyle.js"></script>
     <script>
-        BS.SidebarDropInit({idNav: "#nav", idSidebar: "#sidebar", submenu:"#l1"})
+        BS.SidebarDropInit({ idNav: "#nav", idSidebar: "#sidebar", submenu: "#l1" })
     </script>
 </body>
+
 </html>

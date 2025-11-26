@@ -44,10 +44,10 @@ import SidebarHandler from "./SidebarHandler"
                 target: e.dataset.target
             }
             elements[index] = ele
-        })
-
-        sidebarTitles.forEach(title => {
-            title.insertAdjacentHTML('beforeend', arrow_right)
+            // Insert arrow only if it doesn't exist
+            if (!e.querySelector('.arrow-right') && !e.querySelector('.arrow-bottom')) {
+                e.insertAdjacentHTML('beforeend', arrow_right)
+            }
         })
 
 
@@ -58,8 +58,9 @@ import SidebarHandler from "./SidebarHandler"
                         const submenuElement = document.querySelector(submenu)
                         if (submenuElement) {
                             slideDown(submenuElement, time)
-                            const arrow = e.obj.querySelector("i")
-                            if (arrow) arrow.remove()
+                            // Remove only arrow icons, not user icons
+                            const arrowRight = e.obj.querySelector('.arrow-right')
+                            if (arrowRight) arrowRight.remove()
                             e.obj.insertAdjacentHTML('beforeend', arrow_bottom)
                             e.state = true
                         }
@@ -77,35 +78,38 @@ import SidebarHandler from "./SidebarHandler"
         const sidebarTitles = document.querySelectorAll(conf.idSidebar + " .bs-sidebar-title")
         sidebarTitles.forEach(title => {
             title.addEventListener("click", (e) => {
-                // If clicked on a child element, get the parent .bs-sidebar-title
-                const targetElement = e.target.closest('.bs-sidebar-title')
-                if (targetElement) {
-                    Toogle(targetElement)
-                }
+                Toogle(e.currentTarget)
             })
         })
     }
 
     const Toogle = (targetElement) => {
-        const targetData = targetElement.dataset.target
+
+        let idTarget = targetElement.dataset.target
+
+
 
         elements.forEach((ele) => {
-            if (targetData === ele.obj.dataset.target) {
-                const arrow = targetElement.querySelector("i")
-                if (arrow) arrow.remove()
 
-                const targetEl = document.querySelector(ele.target)
-
+            if (ele.obj === targetElement) {
+                const submenu = document.querySelector(targetElement.getAttribute("data-target"))
                 if (!ele.state) {
-                    if (targetEl) slideDown(targetEl, time)
+                    // Remove arrow-right, add arrow-bottom
+                    const arrowRight = targetElement.querySelector('.arrow-right')
+                    if (arrowRight) arrowRight.remove()
+                    slideDown(submenu, time)
                     targetElement.insertAdjacentHTML('beforeend', arrow_bottom)
                 }
                 else {
-                    if (targetEl) slideUp(targetEl, time)
+                    // Remove arrow-bottom, add arrow-right
+                    const arrowBottom = targetElement.querySelector('.arrow-bottom')
+                    if (arrowBottom) arrowBottom.remove()
+                    slideUp(submenu, time)
                     targetElement.insertAdjacentHTML('beforeend', arrow_right)
                 }
                 ele.state = !ele.state
             }
+
         })
     }
 
