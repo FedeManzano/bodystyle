@@ -9,7 +9,6 @@ class Select {
 
 
     constructor() {
-        this.context = ""
         this.visible = false
     }
 
@@ -39,8 +38,6 @@ class Select {
             console.error(MODULO + ERR.id.mensaje)
             return
         }
-
-        this.context = contexto
 
         const container = document.querySelector(contexto);
         if (!container) return;
