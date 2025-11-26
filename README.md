@@ -500,7 +500,7 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 
 **Progreso Total:** 20/20 módulos migrados (100%) **Menos las dependencias**
 
---
+---
 
 ## 🤝 Contribuir
 

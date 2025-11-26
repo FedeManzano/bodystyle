@@ -54,6 +54,7 @@ export function slideDown(elemento, duration = 300, callback) {
     // Aseguramos que el elemento sea visible para calcular su altura natural
     el.style.opacity = '1';
     el.style.display = 'block';
+
     const targetHeight = el.scrollHeight;
     el.style.height = '0px';
     el.style.overflow = 'hidden';
@@ -135,7 +136,6 @@ export function fadeOut(elemento, duration = 300, callback) {
     );
 
     animation.onfinish = () => {
-        el.style.display = 'none';
         el.style.opacity = '0';
         if (typeof callback === 'function') callback();
     };
