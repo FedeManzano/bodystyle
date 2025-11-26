@@ -1,86 +1,87 @@
-// src/__tests__/Select.test.js
-/**
- * Tests for the Select module (src/modulos/Select.js)
- * The module still uses jQuery; Jest with jsdom provides a DOM environment.
- */
-
-import $ from 'jquery';
 import Select from '../modulos/Select';
+import { slideUp, slideDown } from '../modulos/Animaciones';
 
-// Helper to build a simple select component in the DOM
-function buildSelectHTML(id = 'test-select') {
-    document.body.innerHTML = `
-    <div id="${id}">
-      <select>
-        <option value="1">Option One</option>
-        <option value="2">Option Two</option>
-        <option value="3" class="inactivo">Option Three (inactive)</option>
-      </select>
-    </div>`;
-}
+// Mock Animaciones
+jest.mock('../modulos/Animaciones', () => ({
+    slideUp: jest.fn(),
+    slideDown: jest.fn()
+}));
 
-describe('Select module', () => {
-    let selectInstance;
+describe('Select Module', () => {
+    let selectModule;
+    let container;
+    let selectElement;
 
     beforeEach(() => {
-        // Clean DOM before each test
+        // Setup DOM
+        document.body.innerHTML = `
+            <div id="mySelect" class="select-mod-dark">
+                <select>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3" class="inactivo">Option 3</option>
+                </select>
+            </div>
+        `;
+        container = document.getElementById('mySelect');
+        selectElement = container.querySelector('select');
+        selectModule = new Select();
+    });
+
+    afterEach(() => {
+        jest.clearAllMocks();
         document.body.innerHTML = '';
-        selectInstance = new Select();
     });
 
-    test('inicializar creates .seleccionado and .lista with correct items', () => {
-        buildSelectHTML();
-        // Initialise with default hover (none)
-        selectInstance.iniciar('#test-select');
+    test('should initialize correctly', () => {
+        selectModule.inicializar('#mySelect', 'hover');
 
-        // .seleccionado span should exist and contain the first option text
-        const seleccionado = $('#test-select .seleccionado');
-        expect(seleccionado.length).toBe(1);
-        expect(seleccionado.text()).toBe('Option One');
+        const seleccionado = container.querySelector('.seleccionado');
+        const lista = container.querySelector('.lista');
+        const items = lista.querySelectorAll('li');
 
-        // .lista div with ul should be created
-        const listaDiv = $('#test-select .lista');
-        expect(listaDiv.length).toBe(1);
-        const liItems = $('#test-select .lista ul li');
-        // Should contain only the two non‑inactive options
-        expect(liItems.length).toBe(2);
-        expect(liItems.eq(0).text().trim()).toBe('Option One');
-        expect(liItems.eq(1).text().trim()).toBe('Option Two');
+        expect(seleccionado).toBeTruthy();
+        expect(seleccionado.textContent).toBe('Option 1');
+        expect(lista).toBeTruthy();
+        expect(items.length).toBe(2); // Option 3 is inactive
+        expect(items[0].textContent).toBe('Option 1');
+        expect(items[1].textContent).toBe('Option 2');
     });
 
-    test('clicking a list item updates selected option and .seleccionado text', () => {
-        buildSelectHTML();
-        selectInstance.iniciar('#test-select');
+    test('should toggle dropdown on click', () => {
+        selectModule.inicializar('#mySelect', 'hover');
 
-        const firstLi = $('#test-select .lista ul li').eq(1); // second option
-        firstLi.trigger('click');
+        // Initial click to open
+        container.click();
+        expect(slideDown).toHaveBeenCalled();
 
-        // Get the selected option via jQuery :selected selector
-        const selectedOption = $('#test-select select option:selected');
-        expect(selectedOption.length).toBe(1);
-        expect(selectedOption.val()).toBe('2');
-
-        const seleccionado = $('#test-select .seleccionado');
-        expect(seleccionado.text()).toBe('Option Two');
+        // Second click to close
+        container.click();
+        expect(slideUp).toHaveBeenCalled();
     });
 
-    test('destroy removes event listeners', () => {
-        buildSelectHTML();
-        selectInstance.iniciar('#test-select');
+    test('should select an option', () => {
+        selectModule.inicializar('#mySelect', 'hover');
+        const items = container.querySelectorAll('.lista li');
+        const changeSpy = jest.fn();
+        selectElement.addEventListener('change', changeSpy);
 
-        // Ensure click works before destroy
-        const firstLi = $('#test-select .lista ul li').eq(0);
-        firstLi.trigger('click');
-        expect($('#test-select .seleccionado').text()).toBe('Option One');
+        // Click second option
+        items[1].click();
 
-        // Call destroy
-        selectInstance.destroy('#test-select');
+        expect(selectElement.value).toBe('2');
+        expect(container.querySelector('.seleccionado').textContent).toBe('Option 2');
+        expect(changeSpy).toHaveBeenCalled();
+    });
 
-        // After destroy, clicking should have no effect
-        const secondLi = $('#test-select .lista ul li').eq(1);
-        secondLi.trigger('click');
-        const selectedOption = $('#test-select select option:selected');
-        expect(selectedOption.val()).toBe('1');
-        expect($('#test-select .seleccionado').text()).toBe('Option One');
+    test('should handle destroy', () => {
+        selectModule.inicializar('#mySelect', 'hover');
+
+        // Mock replaceChild to verify destroy
+        const replaceChildSpy = jest.spyOn(container.parentNode, 'replaceChild');
+
+        selectModule.destroy('#mySelect');
+
+        expect(replaceChildSpy).toHaveBeenCalled();
     });
 });

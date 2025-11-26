@@ -2,78 +2,79 @@
  * Módulo (13) Permite agregar un dropdown al input-g 
  * de los formularios de bodystyle.
  */
-(function () {
+class GruposInput {
 
-    var inicializar = () => {
-        // PASO 1: Agregar span a todos los dropdown-toggle
-        document.querySelectorAll(".input-g .grupo .dropdown-toggle").forEach(element => {
-            const span = document.createElement("span");
-            span.className = "f-abajo-grupo";
-            element.appendChild(span);
-        });
+    iniciar() {
+        // Seleccionar todos los toggles dentro de grupos de input
+        const toggles = document.querySelectorAll(".input-g .grupo .dropdown-toggle");
 
-        // PASO 2: Agregar clases a elementos con texto
-        document.querySelectorAll(".input-g .grupo .dropdown-toggle").forEach(element => {
-            const text = element.textContent.trim();
-            if (text !== "" && text !== undefined) {
-                element.classList.add("a-ajuste-btn", "combo-box");
-            }
-        });
-
-        // PASO 3: Configurar eventos de click
-        document.querySelectorAll(".combo-box").forEach(comboElement => {
-            // Ocultar drop-complemento
-            const dropComplemento = document.querySelector(".drop-complemento");
-            if (dropComplemento) {
-                dropComplemento.style.display = "none";
+        toggles.forEach(toggle => {
+            // Agregar span para la flecha si no existe
+            if (!toggle.querySelector('.f-abajo-grupo')) {
+                const span = document.createElement("span");
+                span.className = "f-abajo-grupo";
+                toggle.appendChild(span);
             }
 
-            // Obtener ID del dropdown asociado
-            const idDrop = comboElement.dataset.target;
-            if (!idDrop) return;
+            // Agregar clases si tiene texto
+            const text = toggle.textContent.trim();
+            if (text !== "") {
+                toggle.classList.add("a-ajuste-btn", "combo-box");
+            }
 
-            // Obtener el dropdown
-            const dropElement = document.querySelector(idDrop);
-            if (!dropElement) return;
+            // Configurar eventos si es un combo-box
+            if (toggle.classList.contains("combo-box")) {
+                this.configurarEventos(toggle);
+            }
+        });
+    }
 
-            // Navegar 3 niveles: dropdown > children > children > children
-            // Equivalente a: $(idDrop).children().children().children()
-            const items = dropElement.querySelectorAll("ul li a, ul li button");
+    configurarEventos(toggle) {
+        // Obtener ID del dropdown asociado
+        const idDrop = toggle.dataset.target;
+        if (!idDrop) return;
 
-            // Agregar evento click a cada item
-            items.forEach(item => {
-                item.addEventListener("click", function () {
-                    // Buscar el combo-box correspondiente
-                    let targetCombobox = null;
-                    document.querySelectorAll(".combo-box").forEach(cb => {
-                        if (cb.dataset.target === idDrop) {
-                            targetCombobox = cb;
-                        }
-                    });
+        // Obtener el dropdown
+        const dropElement = document.querySelector(idDrop);
+        if (!dropElement) return;
 
-                    if (targetCombobox) {
-                        // Actualizar texto del combobox
-                        targetCombobox.textContent = this.textContent;
+        // Ocultar drop-complemento si existe (lógica original)
+        const dropComplemento = document.querySelector(".drop-complemento");
+        if (dropComplemento) {
+            dropComplemento.style.display = "none";
+        }
 
-                        // Reagregar el span a TODOS los dropdown-toggle
-                        document.querySelectorAll(".input-g .grupo .dropdown-toggle").forEach(toggle => {
-                            const span = document.createElement("span");
-                            span.className = "f-abajo-grupo";
-                            toggle.appendChild(span);
-                        });
-                    }
-                });
+        // Obtener items del dropdown
+        const items = dropElement.querySelectorAll("ul li a, ul li button");
+
+        items.forEach(item => {
+            // Usar una función nombrada o arrow function para el listener
+            // Nota: En la lógica original, se agregaba un listener a CADA item por CADA toggle.
+            // Si hay múltiples toggles apuntando al mismo dropdown, se agregarían múltiples listeners.
+            // Para evitar duplicados, podríamos clonar el nodo o verificar si ya tiene listener.
+            // Sin embargo, dado que 'iniciar' se llama una vez, asumiremos que está bien.
+            // Pero mejor aún, adjuntamos el evento al item que actualiza ESPECÍFICAMENTE este toggle.
+
+            item.addEventListener("click", (e) => {
+                // Actualizar texto del toggle
+                // Guardamos el span de la flecha
+                const arrowSpan = toggle.querySelector('.f-abajo-grupo');
+
+                // Actualizamos el texto (esto borra el span si es hijo directo)
+                toggle.textContent = item.textContent.trim();
+
+                // Restauramos el span
+                if (arrowSpan) {
+                    toggle.appendChild(arrowSpan);
+                } else {
+                    // Si por alguna razón no estaba, lo creamos
+                    const span = document.createElement("span");
+                    span.className = "f-abajo-grupo";
+                    toggle.appendChild(span);
+                }
             });
         });
     }
+}
 
-    var GruposInput = {
-        iniciar: () => {
-            inicializar()
-        }
-    }
-
-    window.GruposInput = GruposInput
-})()
-
-export default GruposInput
+export default new GruposInput();

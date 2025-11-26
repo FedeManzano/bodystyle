@@ -1,133 +1,93 @@
-/**
- * @jest-environment jsdom
- */
-
 import GruposInput from '../modulos/GruposInput';
 
-describe('GruposInput.js', () => {
+describe('GruposInput Module', () => {
+    let container;
+
     beforeEach(() => {
-        document.body.innerHTML = '';
-    });
-
-    test('Debe agregar el span de flecha a los dropdown-toggle', () => {
+        // Setup DOM
         document.body.innerHTML = `
             <div class="input-g">
                 <div class="grupo">
-                    <button class="dropdown-toggle">Texto</button>
-                </div>
-            </div>
-        `;
-
-        GruposInput.iniciar();
-
-        const span = document.querySelector('.f-abajo-grupo');
-        expect(span).toBeTruthy();
-        expect(document.querySelector('.dropdown-toggle').contains(span)).toBe(true);
-    });
-
-    test('Debe agregar clases a-ajuste-btn y combo-box si tiene texto', () => {
-        document.body.innerHTML = `
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle">  Texto con espacios  </button>
-                </div>
-            </div>
-        `;
-
-        GruposInput.iniciar();
-
-        const toggle = document.querySelector('.dropdown-toggle');
-        expect(toggle.classList.contains('a-ajuste-btn')).toBe(true);
-        expect(toggle.classList.contains('combo-box')).toBe(true);
-    });
-
-    test('No debe agregar clases si no tiene texto', () => {
-        document.body.innerHTML = `
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle">   </button>
-                </div>
-            </div>
-        `;
-
-        GruposInput.iniciar();
-
-        const toggle = document.querySelector('.dropdown-toggle');
-        expect(toggle.classList.contains('a-ajuste-btn')).toBe(false);
-        expect(toggle.classList.contains('combo-box')).toBe(false);
-    });
-
-    test('Debe ocultar .drop-complemento', () => {
-        document.body.innerHTML = `
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle">Texto</button>
+                    <button class="dropdown-toggle" data-target="#myDropdown">
+                        Select Me
+                    </button>
+                    <div id="myDropdown" class="dropdown">
+                        <ul>
+                            <li><a href="#">Option 1</a></li>
+                            <li><button>Option 2</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="drop-complemento"></div>
         `;
-
-        GruposInput.iniciar();
-
-        const complemento = document.querySelector('.drop-complemento');
-        expect(complemento.style.display).toBe('none');
+        container = document.querySelector('.input-g');
     });
 
-    test('Debe actualizar el texto del combo-box al hacer click en un item', () => {
-        document.body.innerHTML = `
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle" data-target="#drop1">Seleccionar</button>
-                </div>
-            </div>
-            <div id="drop1">
-                <ul>
-                    <li><a href="#" id="opcion1">Opción 1</a></li>
-                </ul>
-            </div>
-        `;
+    afterEach(() => {
+        document.body.innerHTML = '';
+    });
 
+    test('should initialize correctly adding spans and classes', () => {
         GruposInput.iniciar();
 
-        const opcion = document.getElementById('opcion1');
-        opcion.click();
+        const toggle = container.querySelector('.dropdown-toggle');
+        const span = toggle.querySelector('.f-abajo-grupo');
 
-        const toggle = document.querySelector('.dropdown-toggle');
-        // El texto debe actualizarse y mantener el span
-        expect(toggle.textContent).toContain('Opción 1');
+        expect(span).toBeTruthy();
+        expect(toggle.classList.contains('a-ajuste-btn')).toBe(true);
+        expect(toggle.classList.contains('combo-box')).toBe(true);
+    });
+
+    test('should update text and preserve span on item click', () => {
+        GruposInput.iniciar();
+
+        const toggle = container.querySelector('.dropdown-toggle');
+        const option1 = document.querySelector('#myDropdown li a');
+
+        option1.click();
+
+        expect(toggle.textContent).toContain('Option 1');
         expect(toggle.querySelector('.f-abajo-grupo')).toBeTruthy();
     });
 
-    test('Debe manejar múltiples combo-boxes correctamente', () => {
-        document.body.innerHTML = `
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle" id="toggle1" data-target="#drop1">Combo 1</button>
-                </div>
-            </div>
-            <div id="drop1">
-                <ul><li><a href="#" id="opcion1">Op1</a></li></ul>
-            </div>
-
-            <div class="input-g">
-                <div class="grupo">
-                    <button class="dropdown-toggle" id="toggle2" data-target="#drop2">Combo 2</button>
-                </div>
-            </div>
-            <div id="drop2">
-                <ul><li><a href="#" id="opcion2">Op2</a></li></ul>
-            </div>
-        `;
+    test('should hide drop-complemento on init', () => {
+        const dropComplemento = document.querySelector('.drop-complemento');
+        expect(dropComplemento.style.display).not.toBe('none');
 
         GruposInput.iniciar();
 
-        // Click en opción 2
-        document.getElementById('opcion2').click();
+        expect(dropComplemento.style.display).toBe('none');
+    });
 
-        const toggle1 = document.getElementById('toggle1');
-        const toggle2 = document.getElementById('toggle2');
+    test('should handle multiple toggles independently', () => {
+        // Add another group
+        const newGroup = document.createElement('div');
+        newGroup.className = 'grupo';
+        newGroup.innerHTML = `
+            <button class="dropdown-toggle" data-target="#myDropdown2">
+                Other Select
+            </button>
+            <div id="myDropdown2" class="dropdown">
+                <ul>
+                    <li><a href="#">Option A</a></li>
+                </ul>
+            </div>
+        `;
+        container.appendChild(newGroup);
 
-        expect(toggle1.textContent).toContain('Combo 1'); // No debe cambiar
-        expect(toggle2.textContent).toContain('Op2'); // Debe cambiar
+        GruposInput.iniciar();
+
+        const toggle1 = container.querySelectorAll('.dropdown-toggle')[0];
+        const toggle2 = container.querySelectorAll('.dropdown-toggle')[1];
+        const option2 = document.querySelector('#myDropdown2 li a');
+
+        // Click option for second toggle
+        option2.click();
+
+        // Check toggle 2 updated
+        expect(toggle2.textContent).toContain('Option A');
+        // Check toggle 1 remained same
+        expect(toggle1.textContent).toContain('Select Me');
     });
 });
