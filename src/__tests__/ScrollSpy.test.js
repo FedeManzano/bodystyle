@@ -28,8 +28,8 @@ describe('ScrollSpy.js', () => {
 
     afterEach(() => {
         // Limpiar event listeners
-        if (window.ScrollSpy && window.ScrollSpy.destroy) {
-            window.ScrollSpy.destroy();
+        if (ScrollSpy && ScrollSpy.destroy) {
+            ScrollSpy.destroy();
         }
     });
 
@@ -43,10 +43,10 @@ describe('ScrollSpy.js', () => {
     });
 
     test('Debe tener los métodos iniciar y destroy', () => {
-        expect(window.ScrollSpy.iniciar).toBeDefined();
-        expect(typeof window.ScrollSpy.iniciar).toBe('function');
-        expect(window.ScrollSpy.destroy).toBeDefined();
-        expect(typeof window.ScrollSpy.destroy).toBe('function');
+        expect(ScrollSpy.iniciar).toBeDefined();
+        expect(typeof ScrollSpy.iniciar).toBe('function');
+        expect(ScrollSpy.destroy).toBeDefined();
+        expect(typeof ScrollSpy.destroy).toBe('function');
     });
 
     test('Debe exportar correctamente el módulo', () => {
@@ -77,19 +77,19 @@ describe('ScrollSpy.js', () => {
 
         test('Debe inicializar sin errores con configuración por defecto', () => {
             expect(() => {
-                window.ScrollSpy.iniciar();
+                ScrollSpy.iniciar();
             }).not.toThrow();
         });
 
         test('Debe aplicar ancho a .lista-scroll', () => {
-            window.ScrollSpy.iniciar({ ancho: 20 });
+            ScrollSpy.iniciar({ ancho: 20 });
 
             const listaScroll = document.querySelector('.lista-scroll');
             expect(listaScroll.style.width).toBe('20%');
         });
 
         test('Debe aplicar tamaño de fuente a los links', () => {
-            window.ScrollSpy.iniciar({ tamFuente: 16 });
+            ScrollSpy.iniciar({ tamFuente: 16 });
 
             const links = document.querySelectorAll('.lista-scroll ul li a');
             links.forEach(link => {
@@ -98,14 +98,14 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe aplicar separación (top) a .lista-scroll', () => {
-            window.ScrollSpy.iniciar({ separacion: 100 });
+            ScrollSpy.iniciar({ separacion: 100 });
 
             const listaScroll = document.querySelector('.lista-scroll');
             expect(listaScroll.style.top).toBe('100px');
         });
 
         test('Debe agregar clase de color al elemento seleccionado', () => {
-            window.ScrollSpy.iniciar({ colorBorde: 'fd-rojo' });
+            ScrollSpy.iniciar({ colorBorde: 'fd-rojo' });
 
             const elementoSeleccionado = document.querySelector('.elemento-seleccionado');
             if (elementoSeleccionado) {
@@ -143,7 +143,7 @@ describe('ScrollSpy.js', () => {
             };
 
             expect(() => {
-                window.ScrollSpy.iniciar(config);
+                ScrollSpy.iniciar(config);
             }).not.toThrow();
 
             const listaScroll = document.querySelector('.lista-scroll');
@@ -152,7 +152,7 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe usar valores por defecto si no se proporciona configuración', () => {
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             const listaScroll = document.querySelector('.lista-scroll');
             expect(listaScroll.style.width).toBe('15%'); // Default
@@ -182,7 +182,7 @@ describe('ScrollSpy.js', () => {
         test('Debe agregar event listener de scroll al inicializar', () => {
             const addEventListenerSpy = jest.spyOn(window, 'addEventListener');
 
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             expect(addEventListenerSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
 
@@ -190,7 +190,7 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe crear elemento indicador al inicializar', () => {
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             // Debería haber creado al menos un elemento-seleccionado
             const elementoSeleccionado = document.querySelector('.elemento-seleccionado');
@@ -218,7 +218,7 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe crear elemento <p> con clase elemento-seleccionado', () => {
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             const elemento = document.querySelector('.elemento-seleccionado');
             expect(elemento).toBeTruthy();
@@ -226,7 +226,7 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe aplicar altura al elemento seleccionado', () => {
-            window.ScrollSpy.iniciar({ alturaBorde: 50 });
+            ScrollSpy.iniciar({ alturaBorde: 50 });
 
             const elemento = document.querySelector('.elemento-seleccionado');
             if (elemento) {
@@ -235,7 +235,7 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe insertar elemento antes del anchor', () => {
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             const primerLink = document.querySelector('.lista-scroll ul li:first-child a');
             const elementoAnterior = primerLink?.previousElementSibling;
@@ -266,8 +266,8 @@ describe('ScrollSpy.js', () => {
         test('Debe remover event listener de scroll', () => {
             const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener');
 
-            window.ScrollSpy.iniciar();
-            window.ScrollSpy.destroy();
+            ScrollSpy.iniciar();
+            ScrollSpy.destroy();
 
             expect(removeEventListenerSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
 
@@ -275,16 +275,16 @@ describe('ScrollSpy.js', () => {
         });
 
         test('Debe ejecutarse sin errores', () => {
-            window.ScrollSpy.iniciar();
+            ScrollSpy.iniciar();
 
             expect(() => {
-                window.ScrollSpy.destroy();
+                ScrollSpy.destroy();
             }).not.toThrow();
         });
 
         test('Debe poder destruir sin haber inicializado', () => {
             expect(() => {
-                window.ScrollSpy.destroy();
+                ScrollSpy.destroy();
             }).not.toThrow();
         });
     });
@@ -305,7 +305,7 @@ describe('ScrollSpy.js', () => {
             `;
 
             expect(() => {
-                window.ScrollSpy.iniciar();
+                ScrollSpy.iniciar();
             }).not.toThrow();
         });
 
@@ -315,7 +315,7 @@ describe('ScrollSpy.js', () => {
             `;
 
             expect(() => {
-                window.ScrollSpy.iniciar();
+                ScrollSpy.iniciar();
             }).not.toThrow();
         });
 
@@ -331,7 +331,7 @@ describe('ScrollSpy.js', () => {
             `;
 
             expect(() => {
-                window.ScrollSpy.iniciar();
+                ScrollSpy.iniciar();
             }).not.toThrow();
         });
     });
@@ -359,7 +359,7 @@ describe('ScrollSpy.js', () => {
             `;
 
             expect(() => {
-                window.ScrollSpy.iniciar();
+                ScrollSpy.iniciar();
             }).not.toThrow();
 
             const items = document.querySelectorAll('.scroll-item');
@@ -380,7 +380,7 @@ describe('ScrollSpy.js', () => {
                 <div class="scroll-item" id="c">C</div>
             `;
 
-            window.ScrollSpy.iniciar({ tamFuente: 18 });
+            ScrollSpy.iniciar({ tamFuente: 18 });
 
             const links = document.querySelectorAll('.lista-scroll ul li a');
             expect(links.length).toBe(3);

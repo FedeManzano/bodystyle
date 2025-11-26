@@ -1,25 +1,28 @@
-import $ from 'jquery'
 /**
  * Módulo (18) Permite establecer el efecto paralax
  * en las imágenes seleccionadas.
  */
-(function(){
+class Paralax {
+    iniciar() {
+        // Ocultar todas las imágenes dentro de .paralax-contenedor
+        document.querySelectorAll(".paralax-contenedor img").forEach(img => {
+            img.style.opacity = "0";
+        });
 
-    var inicializar = () => {
-        $(".paralax-contenedor img").css("opacity", 0)
-        $(".paralax-contenedor").each(function(e, i){
-            var ruta = $(this).children(".paralax").attr("src")
-            $(this).css("background-image", "url("+ ruta +")")
-            $(this).css("background-attachment", "fixed")
-        })
+        // Iterar sobre cada contenedor para configurar el fondo
+        document.querySelectorAll(".paralax-contenedor").forEach(contenedor => {
+            const img = contenedor.querySelector(".paralax");
+            if (img) {
+                const ruta = img.getAttribute("src");
+                if (ruta) {
+                    contenedor.style.backgroundImage = `url(${ruta})`;
+                    contenedor.style.backgroundAttachment = "fixed";
+                }
+            }
+        });
     }
+}
 
-    var Paralax = {
-        iniciar: () => inicializar()
-    }
-
-    window.Paralax = Paralax
-})()
-
-
-export default Paralax
+const paralaxInstance = new Paralax();
+window.Paralax = paralaxInstance;
+export default paralaxInstance;
