@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
   <img src="https://img.shields.io/badge/tests-226%20passing-brightgreen" alt="Tests">
-  <img src="https://img.shields.io/badge/coverage-75%25-green" alt="Coverage"/>
+  <img src="https://img.shields.io/badge/coverage-85%25-green" alt="Coverage"/>
   <img src="https://img.shields.io/badge/jQuery-Free_Partial-orange" alt="jQuery Migration">
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Support">
 </p>
@@ -151,8 +151,9 @@ import { slideUp, slideDown } from 'bodyui2';
 // TypeScript proporciona autocompletado y validación de tipos
 BS.Toast({
   mensaje: 'Hola TypeScript!',
+  clases: ['bg-red', 'bor-rad-10', 'c-white'], // Color de fondo, radio de borde y color de texto
   duracion: 3000,
-  posicion: 'top' // TypeScript valida que sea 'top' | 'bottom'
+  cerrar: true // Permite cerrar el toast manualmente
 });
 
 // Inicializar waves con tipos
@@ -192,7 +193,7 @@ export class AppComponent implements OnInit {
     BS.Toast({
       mensaje: 'Notificación desde Angular',
       duracion: 3000,
-      color: 'bg-success'
+      color: ['bg-green']
     });
   }
 }
@@ -267,7 +268,7 @@ const showToast = () => {
   BS.Toast({
     mensaje: 'Notificación desde Vue',
     duracion: 3000,
-    color: 'bg-primary'
+    color: ['bg-blue']
   });
 };
 </script>
@@ -286,8 +287,6 @@ const showToast = () => {
 ### Ejemplo Completo
 
 Consulta los ejemplos en la carpeta [`ejemplos/`](./ejemplos/) para ver casos de uso completos con TypeScript y JavaScript.
-
-
 
 ---
 
@@ -421,20 +420,20 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 ### Nuevas Características
 
 - ✅ **Migración a Vanilla JavaScript** - Eliminación progresiva de jQuery para mejor rendimiento
-  - `InputHandler.js` migrado completamente (validación de formularios)
-  - `Waves.js` - Efecto de ondas sin dependencias
-  - `Modal.js` - Sistema de modales modernizado
-  - `Colecciones.js` - Acordeones y menús desplegables
-  - `Animaciones.js` - Efectos slideUp/slideDown nativos
-  - `Range.js` - Input range con gradientes dinámicos
-  - `SidebarHandler.js` - Gestor de sidebar responsive
-  - `Navigation.js` - Sistema de navegación con sidebar
+  - ✅ `InputHandler.js` migrado completamente (validación de formularios)
+  - ✅ `Waves.js` - Efecto de ondas sin dependencias
+  - ✅ `Modal.js` - Sistema de modales modernizado
+  - ✅ `Colecciones.js` - Acordeones y menús desplegables
+  - ✅ `Animaciones.js` - Efectos slideUp/slideDown nativos
+  - ✅ `Range.js` - Input range con gradientes dinámicos
+  - ✅ `SidebarHandler.js` - Gestor de sidebar responsive
+  - ✅ `Navigation.js` - Sistema de navegación con sidebar
   - ✅ `Tabs.js` - Sistema de pestañas y navegación
   - ✅ `ScrollSpy.js` - Rastreo de scroll y navegación lateral
-  - `Alerta.js`, `BotonInicio.js`, `Desactivado.js`, `GruposInput.js`, `Select.js` - Componentes optimizados
+  - ✅ `Alerta.js`, `BotonInicio.js`, `Desactivado.js`, `GruposInput.js`, `Select.js` - Componentes optimizados
 
 - ✅ **Suite de Testing Completa** - 239 tests unitarios con Jest
-  - Cobertura de código: 75%
+  - Cobertura de código: 85%
   - Tests para todos los módulos migrados
   - Integración continua con GitHub Actions
 
@@ -499,11 +498,9 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 - ✅ Parallax.js (Completado)
 - ✅ Imagenes.js (Completado)
 
-**Progreso Total:** 17/20 módulos migrados (85%)
+**Progreso Total:** 20/20 módulos migrados (100%) **Menos las dependencias**
 
-
-
----
+--
 
 ## 🤝 Contribuir
 
