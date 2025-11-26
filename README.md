@@ -29,8 +29,6 @@
 
 ## 📋 Tabla de Contenidos
 
-## 📋 Tabla de Contenidos
-
 - [Acerca de Bodystyle](#acerca-de-bodystyle)
 - [Características Principales](#características-principales)
 - [Inicio Rápido](#inicio-rápido)
