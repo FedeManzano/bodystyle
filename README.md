@@ -312,8 +312,8 @@ Bodystyle está compuesto por **cuatro módulos independientes** que pueden desc
 - [Documentación Online](https://bodystyle.webcindario.com) - Navegación interactiva
 
 ### Descargas
-- [Documentación v3.0.0]() - **En Desarrollo**
-- [Documentación v2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Última versión**
+- Documentación v3.0.0 - **En Desarrollo**
+- [Documentación v2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk)
 - [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
 <details>
