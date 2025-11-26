@@ -5,7 +5,7 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
   <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"><img src="https://img.shields.io/badge/Documentation-Download-blue" alt="Docs Download"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V2.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml"><img src="https://github.com/FedeManzano/bodystyle/actions/workflows/ci.yml/badge.svg" alt="CI/CD Status"></a>
   <img src="https://img.shields.io/badge/tests-226%20passing-brightgreen" alt="Tests">
-  <img src="https://img.shields.io/badge/coverage-85%25-green" alt="Coverage"/>
+  <img src="https://img.shields.io/badge/coverage-87%25-green" alt="Coverage"/>
   <img src="https://img.shields.io/badge/quality-8.7%2F10-brightgreen" alt="Quality Score">
   <img src="https://img.shields.io/badge/jQuery-Free_Partial-orange" alt="jQuery Migration">
   <img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript Support">
@@ -115,8 +115,8 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-
-- [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI) - **Última versión**
+- [Bodystyle v5.8.0](https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc) - **Última versión**
+- [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
 - [Bodystyle v4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
 - [Bodystyle v4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww)
 - [Bodystyle v4.0.0](https://mega.nz/file/cQMHGSDS#kK6bvOzeLMdLy15qLuqAwYaY_j_UnDWuyVAudZCYoTw)
@@ -292,7 +292,7 @@ Consulta los ejemplos en la carpeta [`ejemplos/`](./ejemplos/) para ver casos de
 
 ---
 
-## �📚 Core de Bodystyle
+## 📚 Core de Bodystyle
 
 Bodystyle está compuesto por **cuatro módulos independientes** que pueden descargarse por separado:
 
@@ -312,7 +312,7 @@ Bodystyle está compuesto por **cuatro módulos independientes** que pueden desc
 - [Documentación Online](https://bodystyle.webcindario.com) - Navegación interactiva
 
 ### Descargas
-
+- [Documentación v3.0.0]() - **En Desarrollo**
 - [Documentación v2.0.0](https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk) - **Última versión**
 - [Todas las versiones](https://mega.nz/folder/VdMHERDR#gjbVQoWuKsIjNYJ39X1Dcw)
 
