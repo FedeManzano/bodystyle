@@ -180,20 +180,74 @@ slideDown(element, 300, () => {
 <details>
 <summary><strong>React</strong></summary>
 
+
+#### :file: App.js
 ```js
-// Para imporar los estilos de Bodystyle en React
-import 'bodyui2/dist/css/bodystyle.min.css';
+/****************************************************************************************************** 
+ * App.js Archivo del componente principal
+ */
 
-// Para importar los componentes de Bodystyle en React
-import  'bodyui2/dist/js/bodystyle.min.js';
+import { useEffect } from 'react';
 
-window.onload = () => {
-    setTimeout(() => {
-        BS.ToolTipsInit();
-        BS.WavesInit();
-    }, 100);   
+function App() {
+  useEffect(() => {
+    // Inicializar Bodystyle después de que el componente se monte
+    if (window.BS) {
+      window.BS.ToolTipsInit();
+      window.BS.CommentInit();
+    }
+  }, []); // Array vacío = solo se ejecuta una vez al montar
+
+  return (
+    <div className="App">
+      <div className='container mt-3'>
+        <button
+          type="button"
+          className="com-trigger btn fd-bodyui"
+          data-info="Hello Soy un Tips !!"
+        >
+          Tips
+        </button>
+      </div>
+    </div>
+  );
 }
+
+export default App;
 ```
+
+#### :file: index.js
+
+```js
+/********************************************************************
+ * Archivo index.js 
+ */
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+// Importar CSS y JS de Bodystyle globalmente
+import "bodyui2/dist/css/bodystyle.min.css";
+import "bodyui2/dist/js/bodystyle.min.js";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
 
 </details>
 

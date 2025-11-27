@@ -1,6 +1,6 @@
 {
   "name": "bodyui2",
-  "version": "5.8.1",
+  "version": "5.8.2",
   "description": "Biblioteca de estilos estáticos y dinámicos para la creación del Front-End WEB.",
   "main": "dist/js/bodystyle.js",
   "types": "src/types/index.d.ts",
