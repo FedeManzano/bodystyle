@@ -35,6 +35,7 @@
 - [Inicio Rápido](#-inicio-rápido)
 - [Instalación](#-instalación)
 - [TypeScript Support](#-typescript-support)
+- [Migración desde Bootstrap](#-migración-desde-bootstrap)
 - [Core de Bodystyle](#-core-de-bodystyle)
 - [Documentación](#-documentación)
 - [Desarrollo](#-desarrollo)
@@ -173,7 +174,7 @@ slideDown(element, 300, () => {
 <details>
 <summary><strong>Angular</strong></summary>
 
-[Guia de integración con Angular](./ANGULAR_INTEGRATION.md)
+[Guía de integración con Angular](./ANGULAR_INTEGRATION.md)
 
 </details>
 
@@ -255,6 +256,42 @@ reportWebVitals();
 ### Ejemplo Completo
 
 Consulta los ejemplos en la carpeta [`ejemplos/`](./ejemplos/) para ver casos de uso completos con TypeScript y JavaScript.
+
+---
+
+## 🔄 Migración desde Bootstrap
+
+¿Vienes de Bootstrap? Tenemos guías completas para ayudarte a migrar tu proyecto a Bodystyle:
+
+### 📘 Guías de Migración por Framework
+
+- **[Migración desde Bootstrap para React](./MIGRATION_FROM_BOOTSTRAP_REACT.md)** - Guía completa con ejemplos de componentes, hooks personalizados y solución de problemas
+- **[Migración desde Bootstrap para Angular](./MIGRATION_FROM_BOOTSTRAP_ANGULAR.md)** - Guía detallada con servicios, directivas y guards
+
+### 🎯 ¿Por qué migrar a Bodystyle?
+
+| Ventaja | Descripción |
+|---------|-------------|
+| 🚀 **Menor tamaño** | ~30% más ligero que Bootstrap |
+| 📦 **Sin dependencias** | No requiere Popper.js ni otras librerías externas* |
+| 💪 **TypeScript nativo** | Tipos incluidos, sin necesidad de @types |
+| ⚡ **100% Vanilla JS** | Sin jQuery, mejor rendimiento |
+| 🎨 **Componentes únicos** | Waves, Parallax, ScrollSpy y más |
+| 🔧 **Fácil migración** | Sintaxis similar, curva de aprendizaje baja |
+
+> *Excepto `dynamics-tips` y `show-sintax` para componentes específicos
+
+### 📊 Comparación Rápida
+
+```html
+<!-- Bootstrap -->
+<button class="btn btn-primary btn-lg">Click me</button>
+
+<!-- Bodystyle -->
+<button class="btn bg-blue fz-18">Click me</button>
+```
+
+Consulta las guías completas para ver mapeos detallados de todos los componentes, clases CSS y APIs de JavaScript.
 
 ---
 
