@@ -5,7 +5,7 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
   <a href="https://mega.nz/file/dMVCXDDB#NjUByyoEAFTZKKITqbqSyvF9FXN4j4H--NtKDdy2xEk"><img src="https://img.shields.io/badge/Documentation-Download-blue" alt="Docs Download"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V2.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
@@ -115,7 +115,7 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v5.8.0](https://mega.nz/file/wMF0GBKZ#_Z_xmxODWC6WAfqUF7fB0zowVo2qJYvc6BJn6nYkmjc) - **Última versión**
+- [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw) - **Última versión**
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
 - [Bodystyle v4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
 - [Bodystyle v4.5.0](https://mega.nz/file/JcdFVbDS#NqtpoN3LjrfFkyzzB0O6RUMa1FZSPWnHgTRXVSjhgww)
@@ -174,6 +174,26 @@ slideDown(element, 300, () => {
 <summary><strong>Angular</strong></summary>
 
 [Guia de integración con Angular](./ANGULAR_INTEGRATION.md)
+
+</details>
+
+<details>
+<summary><strong>React</strong></summary>
+
+```js
+// Para imporar los estilos de Bodystyle en React
+import 'bodyui2/dist/css/bodystyle.min.css';
+
+// Para importar los componentes de Bodystyle en React
+import  'bodyui2/dist/js/bodystyle.min.js';
+
+window.onload = () => {
+    setTimeout(() => {
+        BS.ToolTipsInit();
+        BS.WavesInit();
+    }, 100);   
+}
+```
 
 </details>
 
