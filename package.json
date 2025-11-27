@@ -17,9 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/FedeManzano/bodystyle"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "files": [
     "dist/{css,js}/*.{css,js,map}",
     "src/{modulos}/**/*.{js}",

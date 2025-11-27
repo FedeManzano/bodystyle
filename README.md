@@ -176,15 +176,17 @@ slideDown(element, 300, () => {
 ```typescript
 // app.component.ts
 import { Component, OnInit } from '@angular/core';
-import BS from 'bodyui2';
+
+// Declarar el objeto global BS que se carga desde el script
+declare const BS: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
+export class AppComponent implements AfterViewInit {
+  ngAfterViewInit() {
     // TypeScript proporciona IntelliSense completo
     BS.WavesInit();
     BS.ToolTipsInit();
