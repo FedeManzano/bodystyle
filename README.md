@@ -175,7 +175,7 @@ slideDown(element, 300, () => {
 
 ```typescript
 // app.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 // Declarar el objeto global BS que se carga desde el script
 declare const BS: any;
