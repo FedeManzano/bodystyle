@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
     <title>Document</title>
 </head>
+
 <body>
 
-    <div  id="lis1"> <!--IMP Es el contexto-->
-        <div  class="lista-float-der">
-            <div  class="lista-item"> 
-                <a  href="#t1">Lista Fixed</a>
+    <div id="lis1"> <!--IMP Es el contexto-->
+        <div class="lista-float-der">
+            <div class="lista-item">
+                <a href="#t1">Lista Fixed</a>
             </div>
-            <div  class="lista-item"> 
-                <a  href="#t2">Inicialización</a>
+            <div class="lista-item">
+                <a href="#t2">Inicialización</a>
             </div>
-            <div  class="lista-item"> 
-                <a  href="#t3">Parámetros</a>
+            <div class="lista-item">
+                <a href="#t3">Parámetros</a>
             </div>
-            <div  class="lista-item"> 
-                <a  href="#t4">Ejemplo</a>
+            <div class="lista-item">
+                <a href="#t4">Ejemplo</a>
             </div>
 
-            <div  class="abrir bg-white forma-ventana bg-black"  style="height: 20px; width: 20px;"></div>
-            <div  class="cerrar bg-white forma-cerrar bg-black"  style="height: 20px; width: 20px;"></div>
+            <div class="abrir bg-white forma-ventana bg-black" style="height: 20px; width: 20px;"></div>
+            <div class="cerrar bg-white forma-cerrar bg-black" style="height: 20px; width: 20px;"></div>
         </div>
     </div>
 
@@ -34,7 +37,9 @@
 
     <script src="../dist/js/bodystyle.js"></script>
     <script>
-        BS.ColeccionFlot().iniciar({contexto:"#lis1", fondoItem:"bg-black", colorTexto:"c-blanco", altura:100} )
+        BS.ColeccionFlot().iniciar({ contexto: "#lis1", fondoItem: "bg-black", colorTexto: "c-blanco", altura: 100 })
+        BS.alerta("operacion exitosa", "success")
     </script>
 </body>
+
 </html>
