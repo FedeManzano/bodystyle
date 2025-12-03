@@ -3,12 +3,12 @@
  */
 
 // Mock the external dynamics-tips Toast module
-jest.mock('dynamics-tips/src/modulos/Toast', () => ({
+jest.mock('dytips/src/modulos/Toast', () => ({
     toast: jest.fn()
 }));
 
 import Toast from '../modulos/Toast';
-import Ts from 'dynamics-tips/src/modulos/Toast';
+import Ts from 'dytips/src/modulos/Toast';
 
 describe('Toast module', () => {
     beforeEach(() => {

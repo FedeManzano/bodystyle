@@ -36,7 +36,7 @@
   "style": "dist/css/bodystyle.css",
   "sass": "sass/bodystyle.scss",
   "dependencies": {
-    "dytips": "^2.5.4",
+    "dytips": "^3.0.0",
     "show-sintax": "^1.1.1"
   },
   "devDependencies": {

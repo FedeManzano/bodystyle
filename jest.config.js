@@ -7,6 +7,11 @@ module.exports = {
         '^.+\\.js$': 'babel-jest',
     },
 
+    // Allow dytips to be transformed
+    transformIgnorePatterns: [
+        '/node_modules/(?!dytips)/'
+    ],
+
     // Extensiones de archivos a procesar
     moduleFileExtensions: ['js'],
 

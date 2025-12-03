@@ -22,7 +22,7 @@ import ToolTips from '../modulos/ToolTips';
  * creamos un "mock" (simulación) para no depender de la librería real.
  * Esto hace los tests más rápidos y controlables.
  */
-jest.mock('dynamics-tips/src/modulos/ToolTips', () => ({
+jest.mock('dytips/src/modulos/ToolTips', () => ({
     __esModule: true,
     default: {
         // Creamos funciones simuladas que podemos espiar
@@ -32,7 +32,7 @@ jest.mock('dynamics-tips/src/modulos/ToolTips', () => ({
 }));
 
 // Importamos el mock para poder verificar las llamadas
-import Tips from 'dynamics-tips/src/modulos/ToolTips';
+import Tips from 'dytips/src/modulos/ToolTips';
 
 /**
  * SUITE DE TESTS:

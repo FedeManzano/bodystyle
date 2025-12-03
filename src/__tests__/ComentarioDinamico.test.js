@@ -17,7 +17,7 @@ import ComentarioDinamico from '../modulos/ComentarioDinamico';
  * funciona (eso es responsabilidad de sus propios tests), sino si
  * nuestro código la llama correctamente.
  */
-jest.mock('dynamics-tips/src/modulos/ComentariosDinamicos', () => ({
+jest.mock('dytips/src/modulos/ComentariosDinamicos', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn(),
@@ -26,7 +26,7 @@ jest.mock('dynamics-tips/src/modulos/ComentariosDinamicos', () => ({
 }));
 
 // Importamos el mock para verificar las llamadas
-import Comentario from 'dynamics-tips/src/modulos/ComentariosDinamicos';
+import Comentario from 'dytips/src/modulos/ComentariosDinamicos';
 
 describe('ComentarioDinamico.js', () => {
 

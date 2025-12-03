@@ -4,7 +4,7 @@
 import DropDown from '../modulos/Dropdown';
 
 // Mock de la dependencia dynamics-tips
-jest.mock('dynamics-tips/src/modulos/DropDown', () => ({
+jest.mock('dytips/src/modulos/DropDown', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn(),
@@ -12,7 +12,7 @@ jest.mock('dynamics-tips/src/modulos/DropDown', () => ({
     }
 }));
 
-import Drop from 'dynamics-tips/src/modulos/DropDown';
+import Drop from 'dytips/src/modulos/DropDown';
 
 describe('Dropdown.js', () => {
     beforeEach(() => {

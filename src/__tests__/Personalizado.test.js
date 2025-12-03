@@ -15,7 +15,7 @@ import Personalizado from '../modulos/Personalizado';
  * Simulamos 'dynamics-tips/src/modulos/Personalizado'
  * para aislar el test y evitar ejecutar código que depende de jQuery.
  */
-jest.mock('dynamics-tips/src/modulos/Personalizado', () => ({
+jest.mock('dytips/src/modulos/Personalizado', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn(),
@@ -24,7 +24,7 @@ jest.mock('dynamics-tips/src/modulos/Personalizado', () => ({
 }));
 
 // Importamos el mock para poder hacer aserciones sobre él
-import Per from 'dynamics-tips/src/modulos/Personalizado';
+import Per from 'dytips/src/modulos/Personalizado';
 
 describe('Personalizado.js', () => {
 
