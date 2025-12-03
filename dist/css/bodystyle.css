@@ -4,6 +4,11 @@
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
  */
+/*!
+ * Dynamics-Tips 2.5.0
+ * Repositorio: https://github.com/FedeManzano/dynamics-tips
+ * @author: Federico Manzano
+ */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .tips,
 .com-dinamico,
@@ -45,7 +50,6 @@
   transform: translate(0);
   transition: transform 0.3s ease;
 }
-
 .tips .mueca-der {
   position: absolute;
   border-top: 5px solid transparent;
@@ -54,7 +58,6 @@
   top: calc(50% - 4.5px);
   left: calc(100% - 1px);
 }
-
 .tips .mueca-izq {
   position: absolute !important;
   border-top: 5px solid transparent !important;
@@ -63,7 +66,6 @@
   top: calc(50% - 4.5px) !important;
   left: -4px !important;
 }
-
 .tips .mueca-arr {
   position: absolute;
   border-left: 5px solid transparent;
@@ -72,7 +74,6 @@
   top: -4px;
   left: calc(50% - 4.5px);
 }
-
 .tips .mueca-aba {
   position: absolute;
   border-left: 5px solid transparent;
@@ -127,13 +128,11 @@
   transform: translate(0);
   transition: transform 0.3s;
 }
-
 .dropdown ul {
   list-style: none !important;
   padding: 0px !important;
   margin: 0px !important;
 }
-
 .dropdown ul li a {
   display: block;
   width: 100%;
@@ -143,7 +142,6 @@
   white-space: nowrap;
   margin: 0px !important;
 }
-
 .dropdown ul li a:hover {
   background-color: rgba(0, 0, 0, 0.068);
 }
@@ -205,7 +203,6 @@
     top: 75px;
   }
 }
-
 * {
   padding: 0;
   margin: 0;
