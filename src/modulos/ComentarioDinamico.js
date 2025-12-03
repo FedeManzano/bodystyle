@@ -1,11 +1,11 @@
-import Comentario from "dynamics-tips/src/modulos/ComentariosDinamicos"
+import Comentario from "dytips/src/modulos/ComentariosDinamicos"
 
 /**
  * Módulo (10) Permite desplegar un comentario 
  * descriptivo asociado a un elemento y permitirle al
  * usuario orientarse respecto al contenido de la página.
  */
-(function(){
+(function () {
 
     const ComentarioDinamico = {
         iniciar: () => Comentario.iniciar(),

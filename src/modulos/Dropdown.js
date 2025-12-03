@@ -1,5 +1,5 @@
 
-import Drop from "dynamics-tips/src/modulos/DropDown"
+import Drop from "dytips/src/modulos/DropDown"
 
 /**
  * Módulo (12) Perimite desplegar un listado asociado a un elemento
@@ -8,7 +8,7 @@ import Drop from "dynamics-tips/src/modulos/DropDown"
  */
 (function () {
 
-   
+
     const DropDown = {
         iniciar: () => {
             Drop.iniciar()

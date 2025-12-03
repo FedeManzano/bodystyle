@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/app.js',
 
   output: {
-    filename: 'bodystyle.bundled.js',
+    filename: 'bodystyle.js',
     path: path.join(__dirname, 'dist/js'),
   },
   resolve: {
@@ -16,5 +16,5 @@ module.exports = {
       { test: /\.css$/i, use: ["style-loader", "css-loader"] },
     ]
   },
-  mode: "production"
+  mode: "development"
 };

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
+    <link rel="stylesheet"
+        href="https://rawcdn.githack.com/FedeManzano/bodystyle-icons/refs/heads/master/iconos/bs-iconos.min.css">
     <link rel="stylesheet" href="../dist/css/bodystyle.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="container mt-3">
         <a href="#" class="btn fd-bodyui tips-ele" data-tips="Esto es un tips"></a>
         <a href="#" class="btn fd-bodyui com-trigger" data-info="Esto es un comentario"></a>
@@ -17,21 +20,25 @@
 
     <!-- Elemento disparador del drop -->
     <!-- El atributo del data-target contiene el ID de la lista a desplegar -->
-     <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-desplegar">Disparador</button>
+    <button class="btn bg-pink-d-1 dropdown-toggle" data-target="#drop-desplegar">Disparador</button>
 
     <!-- Lista desplegable que puede incluirse en cualquir logar del DOM -->
-    <div  class="dropdown fd-gris-az"  id="drop-desplegar"  style="user-select: none;">
-        <a  href="#"  class="c-white">Inicio</a>
-        <a  href="#"  class="c-white">Servicios</a>
-        <a  href="#"  class="c-white">Galeria</a>
-        <a  href="#"  class="c-white">Porfolio</a>
+    <div class="dropdown fd-gris-az" id="drop-desplegar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Porfolio</a></li>
+        </ul>
+
     </div>
 
-    
+
     <script src="../dist/js/bodystyle.js"></script>
     <script>
         BS.DynamicsAutoInit()
         //BS.DynamicsAutoDestroy()
     </script>
 </body>
+
 </html>
