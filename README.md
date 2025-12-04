@@ -5,7 +5,7 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/MNUXQRqI#E9JOeb0a3ytvIFpTXdZiFq6OO3y297KkH0VR-NgchGc"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
   <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"><img src="https://img.shields.io/badge/Documentation-Download-blue" alt="Docs Download"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V3.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
@@ -116,7 +116,7 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v6.0.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw) - **Última versión**
+- [Bodystyle v6.0.0](https://mega.nz/file/MNUXQRqI#E9JOeb0a3ytvIFpTXdZiFq6OO3y297KkH0VR-NgchGc) - **Última versión**
 - [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
 - [Bodystyle v4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
@@ -304,8 +304,8 @@ Bodystyle está compuesto por **cuatro módulos independientes** que pueden desc
 |--------|---------|-------------|----------|
 | **Grid** | 4.0.0 | Sistema de grilla responsive para layouts | [Descargar](https://mega.nz/file/9VkXUAxS#IlslEq6oGi1BEPeRL3od0NxOLk5-x5B6xd97VOOhQIM) |
 | **Utils** | 5.0.0 | Utilidades de texto, espaciado y Flexbox | [Descargar](https://mega.nz/file/IFUFEJYY#IFXT7wOqocaCoOe-KVPBFyYmV0li0UiNpGhBBV-X030) |
-| **Dynamics** | 3.0.0 | Componentes dinámicos e interactivos (dytips) | [Descargar](https://mega.nz/file/pEsyDAYY#lEve_WyproRQAN1MnZx0Mba40HgZFjcHJ9rFN95wWYk) |
-| **Show-Code** | 3.0.0 | Resaltado de sintaxis para código | [Descargar](https://mega.nz/file/5UkDQRTb#7TigjabmAZTkEyoey2IFnYsVJtSjNBTTRXjQ65HN1sM) |
+| **Dynamics** | 3.0.0 | Componentes dinámicos e interactivos (dytips) | [Descargar](https://mega.nz/file/hI9RWToJ#H6No147H25Bxh6hE8Q2jlGSB-JBbTYHBgoGBptaFnUw) |
+| **Show-Code** | 3.0.0 | Resaltado de sintaxis para código | [Descargar](https://mega.nz/file/xVVFCaxR#oBrMTHaTmhwca9ajcSyM65XpoP_UHJH3g-qbv3ymP3w) |
 
 ---
 
