@@ -2,8 +2,7 @@
  * @jest-environment jsdom
  */
 
-// Mock de jQuery
-jest.mock('jquery', () => jest.fn());
+
 
 // Mock de Animaciones
 jest.mock('../modulos/Animaciones', () => ({

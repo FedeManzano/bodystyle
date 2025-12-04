@@ -41,6 +41,7 @@
         "coverage",
         "ejemplos",
         "**/*.test.js",
-        "**/__tests__/**"
+        "**/__tests__/**",
+        "**/*.d.ts"
     ]
 }
