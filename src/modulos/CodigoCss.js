@@ -1,15 +1,15 @@
 
-import CodigoCss from "show-sintax/src/modulos/CodigoCss"
+import CodigoCss from "@bodystyle/show-code/src/modulos/CodigoCss"
 
 /**
  * Módulo (04) de la dependencia de Bodystyle para colorear el código en lenguaje 
  * CSS dentro las etiquetas PRE de Html.
- * Repositorio: https://github.com/FedericoManzano/show-sintax
+ * Repositorio: https://github.com/FedeManzano/show-code
  */
-(function() {
-   
+(function () {
+
     const inicializar = (config) => {
-       CodigoCss.iniciar(config)
+        CodigoCss.iniciar(config)
     }
 
     const Css = {
@@ -23,5 +23,5 @@ import CodigoCss from "show-sintax/src/modulos/CodigoCss"
 
 export default Css
 
-        
+
 

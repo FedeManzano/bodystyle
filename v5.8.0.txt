@@ -1,6 +1,0 @@
-Actualizaciones de la versión 5.8.0
-
-- Eliminación de Jquery
-- Test unitarios para los módulos
-- Travis CI 
-

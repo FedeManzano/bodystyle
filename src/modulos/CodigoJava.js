@@ -1,5 +1,5 @@
 
-import CodigoJava from "show-sintax/src/modulos/CodigoJava"
+import CodigoJava from "@bodystyle/show-code/src/modulos/CodigoJava"
 
 /**
  * Módulo (06) de la dependencia de Bodystyle para colorear el código en lenguaje 
@@ -21,4 +21,3 @@ import CodigoJava from "show-sintax/src/modulos/CodigoJava"
 })()
 
 export default Java
-     

@@ -3,15 +3,15 @@
  */
 import Java from '../modulos/CodigoJava';
 
-// Mock de la dependencia show-sintax
-jest.mock('show-sintax/src/modulos/CodigoJava', () => ({
+// Mock de la dependencia @bodystyle/show-code
+jest.mock('@bodystyle/show-code/src/modulos/CodigoJava', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn()
     }
 }));
 
-import CodigoJava from 'show-sintax/src/modulos/CodigoJava';
+import CodigoJava from '@bodystyle/show-code/src/modulos/CodigoJava';
 
 describe('CodigoJava.js', () => {
     beforeEach(() => {

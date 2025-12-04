@@ -1,11 +1,11 @@
-import CodigoJs from "show-sintax/src/modulos/CodigoJs"
+import CodigoJs from "@bodystyle/show-code/src/modulos/CodigoJs"
 
 /**
  * Módulo (07) de la dependencia de Bodystyle para colorear el código en lenguaje 
  * JS dentro las etiquetas PRE de Html.
- * Repositorio: https://github.com/FedericoManzano/show-sintax
+ * Repositorio: https://github.com/FedeManzano/show-code
  */
-(function() {
+(function () {
 
     const inicializar = (config) => {
         CodigoJs.iniciar(config)
@@ -23,5 +23,5 @@ import CodigoJs from "show-sintax/src/modulos/CodigoJs"
 
 export default Js
 
-        
+
 

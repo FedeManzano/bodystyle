@@ -1,5 +1,5 @@
 /**
- * TypeScript definitions for Bodystyle v5.8.0
+ * TypeScript definitions for Bodystyle v6.0.0
  * Biblioteca de estilos estáticos y dinámicos para la creación del Front-End WEB
  * @author Federico Manzano
  * @license MIT
@@ -10,6 +10,8 @@ export * from './Waves';
 export * from './Animaciones';
 export * from './Colecciones';
 export * from './modules';
+export * from './show-code';
+export * from './dytips';
 
 // Global namespace for window.BS
 declare global {

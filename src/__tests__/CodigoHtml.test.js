@@ -3,15 +3,15 @@
  */
 import Html from '../modulos/CodigoHtml';
 
-// Mock de la dependencia show-sintax
-jest.mock('show-sintax/src/modulos/CodigoHtml', () => ({
+// Mock de la dependencia @bodystyle/show-code
+jest.mock('@bodystyle/show-code/src/modulos/CodigoHtml', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn()
     }
 }));
 
-import CodigoHtml from 'show-sintax/src/modulos/CodigoHtml';
+import CodigoHtml from '@bodystyle/show-code/src/modulos/CodigoHtml';
 
 describe('CodigoHtml.js', () => {
     beforeEach(() => {

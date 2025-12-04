@@ -3,15 +3,15 @@
  */
 import Css from '../modulos/CodigoCss';
 
-// Mock de la dependencia show-sintax
-jest.mock('show-sintax/src/modulos/CodigoCss', () => ({
+// Mock de la dependencia @bodystyle/show-code
+jest.mock('@bodystyle/show-code/src/modulos/CodigoCss', () => ({
     __esModule: true,
     default: {
         iniciar: jest.fn()
     }
 }));
 
-import CodigoCss from 'show-sintax/src/modulos/CodigoCss';
+import CodigoCss from '@bodystyle/show-code/src/modulos/CodigoCss';
 
 describe('CodigoCss.js', () => {
     beforeEach(() => {
