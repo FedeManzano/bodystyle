@@ -5,7 +5,7 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/MNUXQRqI#E9JOeb0a3ytvIFpTXdZiFq6OO3y297KkH0VR-NgchGc"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
   <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"><img src="https://img.shields.io/badge/Documentation-Download-blue" alt="Docs Download"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V3.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
@@ -116,7 +116,7 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v6.0.0](https://mega.nz/file/MNUXQRqI#E9JOeb0a3ytvIFpTXdZiFq6OO3y297KkH0VR-NgchGc) - **Última versión**
+- [Bodystyle v6.0.0](https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s) - **Última versión**
 - [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
 - [Bodystyle v4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
@@ -413,7 +413,7 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 |-------------|---------|-------------|--------|
 | [Webpack](https://webpack.js.org/) | 5.102.0 | Empaquetador de módulos | ✅ Activo |
 | [Babel](https://babeljs.io/) | 6.23.0 | Transpilador de JavaScript | ✅ Activo |
-| [dytips](https://github.com/FedericoManzano/dynamics-tips) | 3.0.0 | Sistema de tooltips y componentes | ✅ Activo |
+| [dytips](https://github.com/FedeManzano/dynamics-tips) | 3.0.0 | Sistema de tooltips y componentes | ✅ Activo |
 | [@bodystyle/show-code](https://github.com/FedeManzano/show-code) | 3.0.0 | Resaltado de código | ✅ Activo |
 
 ---

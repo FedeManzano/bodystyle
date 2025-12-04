@@ -14,7 +14,7 @@ Bodystyle es una **biblioteca CSS/JavaScript moderna y completa** para desarroll
 
 ```
 ╔════════════════════════════════════════╗
-║   CALIDAD GENERAL: 9.5/10 (Excelente) ║
+║   CALIDAD GENERAL: 9.5/10 (Excelente)  ║
 ╚════════════════════════════════════════╝
 ```
 
