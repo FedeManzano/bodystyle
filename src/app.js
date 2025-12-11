@@ -35,6 +35,7 @@ import Personalizado from "./modulos/Personalizado"
 import Navigation from "./modulos/Navigation"
 import SidebarDrop from "./modulos/SidebarDrop"
 import { slideUp, slideDown, fadeIn, fadeOut } from "./modulos/Animaciones"
+import EfectoScroll from "./modulos/EfectoScroll"
 
 (function () {
 
@@ -60,6 +61,9 @@ import { slideUp, slideDown, fadeIn, fadeOut } from "./modulos/Animaciones"
 
     // Permite manejar a los input file    
     InputHandler.iniciar()
+
+    // Inicializa el efecto scroll
+    EfectoScroll.iniciar()
 
     // Inicializa al módulo de comentarios dinámicos
     // Para elementos dinámicos se tiene que inicializar manulamente
