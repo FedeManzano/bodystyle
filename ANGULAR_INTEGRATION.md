@@ -30,19 +30,7 @@ En la sección `architect > build > options`:
 ]
 ```
 
-### B. Ajustar Presupuestos (Budgets)
-
-Dado que Bodystyle es una librería completa, puede exceder los límites predeterminados de Angular para el bundle inicial. Ajusta los valores en `configurations > production > budgets`:
-
-```json
-{
-  "type": "initial",
-  "maximumWarning": "2mb",
-  "maximumError": "4mb"
-}
-```
-
-## 3. Declaración de Tipos (TypeScript)
+## 2. Declaración de Tipos (TypeScript)
 
 Bodystyle funciona como una librería global (`BS`). Para usarla en TypeScript sin errores, debes declarar la variable global.
 
@@ -57,27 +45,23 @@ declare var BS: any;
 
 Esto hará que `BS` esté disponible en **todos** los componentes y servicios de tu aplicación automáticamente.
 
-## 4. Uso en Componentes
+## 3. Uso en Componentes
 
-Ahora puedes usar `BS` directamente en tus componentes. Se recomienda inicializar los efectos dinámicos en `ngAfterViewInit` para asegurar que el DOM ya existe.
+Ahora puedes usar `BS` directamente en tus componentes. Se recomienda inicializar los efectos dinámicos en `OnInit` para asegurar que el DOM ya existe.
 
 ```typescript
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     // Inicializar componentes de Bodystyle
     BS.DynamicsAutoInit();
-    BS.WavesInit();
-    
-    // Ejemplo de uso de otras funciones
-    // BS.alerta('Hola Mundo');
   }
 }
 ```
@@ -86,5 +70,3 @@ export class AppComponent implements AfterViewInit {
 
 Para evitar el paso 3 en el futuro, se recomienda incluir el archivo de definición de tipos directamente en el paquete npm `bodyui2`.
 
-1.  Crear un archivo `index.d.ts` en la raíz del paquete con `declare var BS: any; export = BS;` (o similar).
-2.  Agregar `"types": "index.d.ts"` en el `package.json` de la librería.
