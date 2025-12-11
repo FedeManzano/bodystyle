@@ -38,7 +38,7 @@
         },
 
         positivo: {
-            val: (numero) => numero > 0,
+            val: (numero) => typeof numero === "number" && numero > 0,
             mje: `Error bodystyle dice: 08 El parametro debe ser un valor positivo`
         },
 

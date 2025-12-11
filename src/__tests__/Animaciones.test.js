@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { slideUp, slideDown } from '../modulos/Animaciones';
+import { slideUp, slideDown, fadeIn, fadeOut } from '../modulos/Animaciones';
 
 describe('Módulo Animaciones', () => {
     let testElement;
@@ -277,6 +277,263 @@ describe('Módulo Animaciones', () => {
             mockAnimation.onfinish();
 
             expect(callOrder).toEqual(['down', 'up']);
+        });
+    });
+
+    describe('fadeIn', () => {
+        test('Debe existir como función exportada', () => {
+            expect(fadeIn).toBeDefined();
+            expect(typeof fadeIn).toBe('function');
+        });
+
+        test('Debe manejar elemento null o undefined', () => {
+            expect(() => fadeIn(null)).not.toThrow();
+            expect(() => fadeIn(undefined)).not.toThrow();
+        });
+
+        test('Debe aceptar un HTMLElement', () => {
+            fadeIn(testElement);
+            expect(testElement.animate).toHaveBeenCalled();
+        });
+
+        test('Debe aceptar un NodeList', () => {
+            const nodeList = document.querySelectorAll('div');
+            fadeIn(nodeList);
+            expect(testElement.animate).toHaveBeenCalled();
+        });
+
+        test('Debe llamar a animate con parámetros correctos', () => {
+            const duration = 500;
+            fadeIn(testElement, duration);
+
+            expect(testElement.animate).toHaveBeenCalledWith(
+                expect.arrayContaining([
+                    expect.objectContaining({ opacity: '0' }),
+                    expect.objectContaining({ opacity: '1' })
+                ]),
+                expect.objectContaining({
+                    duration: duration,
+                    easing: 'ease-in-out',
+                    fill: 'forwards'
+                })
+            );
+        });
+
+        test('Debe usar duración por defecto de 300ms', () => {
+            fadeIn(testElement);
+
+            expect(testElement.animate).toHaveBeenCalledWith(
+                expect.anything(),
+                expect.objectContaining({
+                    duration: 300
+                })
+            );
+        });
+
+        test('Debe establecer display a flex si está oculto', () => {
+            testElement.style.display = 'none';
+            fadeIn(testElement);
+            expect(testElement.style.display).toBe('flex');
+        });
+
+        test('Debe mantener display si ya tiene valor', () => {
+            testElement.style.display = 'block';
+            fadeIn(testElement);
+            expect(testElement.style.display).toBe('block');
+        });
+
+        test('Debe establecer opacity a 0 antes de animar', () => {
+            fadeIn(testElement);
+            expect(testElement.style.opacity).toBe('0');
+        });
+
+        test('Debe establecer opacity a 1 al finalizar', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeIn(testElement);
+            mockAnimation.onfinish();
+
+            expect(testElement.style.opacity).toBe('1');
+        });
+
+        test('Debe ejecutar callback al finalizar', () => {
+            const callback = jest.fn();
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeIn(testElement, 300, callback);
+            mockAnimation.onfinish();
+
+            expect(callback).toHaveBeenCalled();
+        });
+
+        test('No debe fallar si no se proporciona callback', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeIn(testElement);
+            expect(() => mockAnimation.onfinish()).not.toThrow();
+        });
+    });
+
+    describe('fadeOut', () => {
+        test('Debe existir como función exportada', () => {
+            expect(fadeOut).toBeDefined();
+            expect(typeof fadeOut).toBe('function');
+        });
+
+        test('Debe manejar elemento null o undefined', () => {
+            expect(() => fadeOut(null)).not.toThrow();
+            expect(() => fadeOut(undefined)).not.toThrow();
+        });
+
+        test('Debe aceptar un HTMLElement', () => {
+            fadeOut(testElement);
+            expect(testElement.animate).toHaveBeenCalled();
+        });
+
+        test('Debe aceptar un NodeList', () => {
+            const nodeList = document.querySelectorAll('div');
+            fadeOut(nodeList);
+            expect(testElement.animate).toHaveBeenCalled();
+        });
+
+        test('Debe llamar a animate con parámetros correctos', () => {
+            const duration = 500;
+            fadeOut(testElement, duration);
+
+            expect(testElement.animate).toHaveBeenCalledWith(
+                expect.arrayContaining([
+                    expect.objectContaining({ opacity: '1' }),
+                    expect.objectContaining({ opacity: '0' })
+                ]),
+                expect.objectContaining({
+                    duration: duration,
+                    easing: 'ease-in-out',
+                    fill: 'forwards'
+                })
+            );
+        });
+
+        test('Debe usar duración por defecto de 300ms', () => {
+            fadeOut(testElement);
+
+            expect(testElement.animate).toHaveBeenCalledWith(
+                expect.anything(),
+                expect.objectContaining({
+                    duration: 300
+                })
+            );
+        });
+
+        test('Debe establecer opacity a 0 al finalizar', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeOut(testElement);
+            mockAnimation.onfinish();
+
+            expect(testElement.style.opacity).toBe('0');
+        });
+
+        test('Debe ocultar el elemento al finalizar', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeOut(testElement);
+            mockAnimation.onfinish();
+
+            expect(testElement.style.display).toBe('none');
+        });
+
+        test('Debe ejecutar callback al finalizar', () => {
+            const callback = jest.fn();
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeOut(testElement, 300, callback);
+            mockAnimation.onfinish();
+
+            expect(callback).toHaveBeenCalled();
+        });
+
+        test('No debe fallar si no se proporciona callback', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeOut(testElement);
+            expect(() => mockAnimation.onfinish()).not.toThrow();
+        });
+    });
+
+    describe('Integración de todas las animaciones', () => {
+        test('slideDown seguido de slideUp', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            slideDown(testElement);
+            mockAnimation.onfinish();
+            expect(testElement.style.display).not.toBe('none');
+
+            slideUp(testElement);
+            mockAnimation.onfinish();
+            expect(testElement.style.display).toBe('none');
+        });
+
+        test('fadeIn seguido de fadeOut', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            fadeIn(testElement);
+            mockAnimation.onfinish();
+            expect(testElement.style.opacity).toBe('1');
+
+            fadeOut(testElement);
+            mockAnimation.onfinish();
+            expect(testElement.style.opacity).toBe('0');
+            expect(testElement.style.display).toBe('none');
+        });
+
+        test('Múltiples callbacks en secuencia', () => {
+            const mockAnimation = {
+                onfinish: null
+            };
+            testElement.animate = jest.fn(() => mockAnimation);
+
+            const callOrder = [];
+            const callback1 = jest.fn(() => callOrder.push('slideDown'));
+            const callback2 = jest.fn(() => callOrder.push('fadeIn'));
+            const callback3 = jest.fn(() => callOrder.push('fadeOut'));
+
+            slideDown(testElement, 300, callback1);
+            mockAnimation.onfinish();
+
+            fadeIn(testElement, 300, callback2);
+            mockAnimation.onfinish();
+
+            fadeOut(testElement, 300, callback3);
+            mockAnimation.onfinish();
+
+            expect(callOrder).toEqual(['slideDown', 'fadeIn', 'fadeOut']);
         });
     });
 });
