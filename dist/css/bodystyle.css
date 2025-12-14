@@ -20767,7 +20767,7 @@ table thead tr th {
 .bs-alert-dark .bs-alert-green:hover,
 .bs-alert-dark .bs-alert-gray:hover,
 .bs-alert-dark .bs-alert-white:hover {
-  box-shadow: 0 3px 5px 2px rgba(83, 83, 83, 0.3), inset 0 0 2px rgba(90, 90, 90, 0.2);
+  box-shadow: 0 3px 5px 2px rgba(83, 83, 83, 0.466), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
 }
 .bs-alert-dark .bs-alert-red .title,
@@ -20873,7 +20873,7 @@ table thead tr th {
 .bs-alert-light .bs-alert-green:hover,
 .bs-alert-light .bs-alert-gray:hover,
 .bs-alert-light .bs-alert-white:hover {
-  box-shadow: 0 3px 10px 2px rgba(214, 214, 214, 0.34), inset 0 0 0px rgba(182, 182, 182, 0.11);
+  box-shadow: 0 3px 10px 2px rgba(182, 182, 182, 0.251), inset 0 0 0px rgba(182, 182, 182, 0.11);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-red .title,
