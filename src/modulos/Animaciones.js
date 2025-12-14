@@ -14,10 +14,20 @@ export function slideUp(elemento, duration = 300, callback) {
     if (!elemento) return;
     const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
     if (!el || !(el instanceof HTMLElement)) return;
-    el.style.opacity = '1';
+
+    // Cancelar animaciones previas para evitar conflictos
+    if (el.__slideAnimation) {
+        el.__slideAnimation.cancel();
+    }
+
+    // Asegurar que el elemento sea visible para obtener su altura actual
+    const wasHidden = el.style.display === 'none';
+    if (wasHidden) {
+        el.style.display = 'block';
+    }
+
     const startHeight = el.scrollHeight;
-
-
+    el.style.overflow = 'hidden';
 
     const animation = el.animate(
         [
@@ -31,9 +41,13 @@ export function slideUp(elemento, duration = 300, callback) {
         }
     );
 
+    el.__slideAnimation = animation;
+
     animation.onfinish = () => {
         el.style.display = 'none';
         el.style.removeProperty('height');
+        el.style.removeProperty('overflow');
+        el.__slideAnimation = null;
         if (typeof callback === 'function') callback();
     };
 }
@@ -49,15 +63,20 @@ export function slideDown(elemento, duration = 300, callback) {
     const el = (elemento instanceof NodeList) ? elemento[0] : elemento;
     if (!el || !(el instanceof HTMLElement)) return;
 
-
+    // Cancelar animaciones previas para evitar conflictos
+    if (el.__slideAnimation) {
+        el.__slideAnimation.cancel();
+    }
 
     // Aseguramos que el elemento sea visible para calcular su altura natural
-    el.style.opacity = '1';
     el.style.display = 'block';
+    el.style.overflow = 'hidden';
+    el.style.height = '0px';
+
+    // Forzar reflow para que el cambio de display se aplique antes de animar
+    void el.offsetHeight;
 
     const targetHeight = el.scrollHeight;
-    el.style.height = '0px';
-    el.style.overflow = 'hidden';
 
     const animation = el.animate(
         [
@@ -71,10 +90,12 @@ export function slideDown(elemento, duration = 300, callback) {
         }
     );
 
+    el.__slideAnimation = animation;
+
     animation.onfinish = () => {
         el.style.removeProperty('height');
         el.style.removeProperty('overflow');
-        el.style.removeProperty('opacity');
+        el.__slideAnimation = null;
         if (typeof callback === 'function') callback();
     };
 }

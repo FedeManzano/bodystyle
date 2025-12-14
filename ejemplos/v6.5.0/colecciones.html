@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+</head>
+
+<body>
+
+            <div  class="container mar-3">
+
+            <div  class="list-container bg-white">
+                <div  id="coleccion_desplegable">
+                    <div  class="l-colapso fd-white">
+                        <a  class="lista-item fz-30"  data-target="#menu1">Servicios</a>
+                        <div  class="desplegable fd-gris p-2"  id="menu1">
+                            <table class="table-sm selector vertical-border mb-3 fd-blanco">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Descripción</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum nisi debitis, vitae veritatis aliquam blanditiis impedit consequuntur, quo sunt, quis porro sed saepe hic provident quidem natus dolorum voluptas ab.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas esse quo blanditiis, iste sed saepe nisi tempore exercitationem illo dignissimos illum neque labore nam porro aut explicabo in amet et?</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div  class="l-colapso">
+                        <a  class="lista-item"  data-target="#menu2">Facturación</a>
+                        <div  class="desplegable fd-gris-o-2"  id="menu2">
+                            <ul>
+                                <li><a  href="#">Medios de Pagos</a></li>
+                                <li><a  href="#">Precios</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+       BS.Colecciones().iniciar({ contexto : "#coleccion_desplegable", colorFondo : "fd-white",colorTexto : "c-verde-c",  colorFlechas : "#000" })
+    </script>
+</body>
+
+</html>
