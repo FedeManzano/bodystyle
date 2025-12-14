@@ -5,7 +5,14 @@
 /// Componentes de alerta para notificaciones
 ////
 
+////
+/// @deprecated Use `.bs-alert-dark` or `.bs-alert-light` instead.
+/// Las clases antiguas de alerta (`.alerta-*`, `.alert-*`) están deprecadas.
+/// Por favor, migra a los nuevos componentes de alerta con sistema de variantes oscuro/claro.
+////
+
 /// Estilos base para alertas
+/// @deprecated Use `.bs-alert-dark` or `.bs-alert-light` instead
 .alerta-roja,
 .alert-red,
 .alerta-azul,
@@ -44,30 +51,35 @@
 }
 
 /// Alerta azul
+/// @deprecated Use `.bs-alert-dark .bs-alert-blue` or `.bs-alert-light .bs-alert-blue` instead
 .alerta-azul,
 .alert-blue {
     border-left: variables.$alerta-azul-borde;
 }
 
 /// Alerta roja
+/// @deprecated Use `.bs-alert-dark .bs-alert-red` or `.bs-alert-light .bs-alert-red` instead
 .alerta-roja,
 .alert-red {
     border-left: variables.$alerta-roja-borde;
 }
 
 /// Alerta verde
+/// @deprecated Use `.bs-alert-dark .bs-alert-green` or `.bs-alert-light .bs-alert-green` instead
 .alerta-verde,
 .alert-green {
     border-left: variables.$alerta-verde-borde;
 }
 
 /// Alerta gris
+/// @deprecated Use `.bs-alert-dark .bs-alert-gray` or `.bs-alert-light .bs-alert-gray` instead
 .alerta-gris,
 .alert-grey {
     border-left: variables.$alerta-gris-borde;
 }
 
 /// Alerta negra
+/// @deprecated Use `.bs-alert-dark` instead
 .alerta-negra,
 .alert-black {
     border: none !important;
@@ -77,12 +89,14 @@
 }
 
 /// Alerta blanca
+/// @deprecated Use `.bs-alert-light .bs-alert-white` instead
 .alerta-blanca,
 .alert-white {
     border-left: variables.$alerta-blanca-borde;
 }
 
 /// Estilos base para alertas opacas
+/// @deprecated Use `.bs-alert-dark` or `.bs-alert-light` with color variants instead
 .alerta-op-rojo,
 .alert-op-red,
 .alerta-op-verde,
@@ -113,6 +127,7 @@
 }
 
 /// Alerta opaca roja
+/// @deprecated Use `.bs-alert-dark .bs-alert-red` or `.bs-alert-light .bs-alert-red` instead
 .alerta-op-rojo,
 .alert-op-red {
     background-color: variables.$alerta-op-rojo-bg;
@@ -121,6 +136,7 @@
 }
 
 /// Alerta opaca verde
+/// @deprecated Use `.bs-alert-dark .bs-alert-green` or `.bs-alert-light .bs-alert-green` instead
 .alerta-op-verde,
 .alert-op-green {
     background-color: variables.$alerta-op-verde-bg;
@@ -129,6 +145,7 @@
 }
 
 /// Alerta opaca azul
+/// @deprecated Use `.bs-alert-dark .bs-alert-blue` or `.bs-alert-light .bs-alert-blue` instead
 .alerta-op-azul,
 .alert-op-blue {
     background-color: variables.$alerta-op-azul-bg;
@@ -137,6 +154,7 @@
 }
 
 /// Alerta opaca negra
+/// @deprecated Use `.bs-alert-dark` instead
 .alerta-op-negro,
 .alert-op-black {
     background-color: variables.$alerta-op-negro-bg;
@@ -145,6 +163,7 @@
 }
 
 /// Alerta opaca gris
+/// @deprecated Use `.bs-alert-dark .bs-alert-gray` or `.bs-alert-light .bs-alert-gray` instead
 .alerta-op-gris,
 .alert-op-grey {
     background-color: variables.$alerta-op-gris-bg;
@@ -161,6 +180,7 @@
 }
 
 /// Botón para cerrar alerta
+/// @deprecated Esta clase sigue siendo funcional pero se recomienda usar la nueva estructura de alertas
 .alerta-cerrar,
 .alert-close {
     position: relative;
@@ -188,28 +208,28 @@
 $pd: 25px;
 $br: 15px;
 
-$bs-dark:           0 1px 3px rgba(143, 143, 143, 0.15), 
-                    0 1px 2px rgba(184, 184, 184, 0.2),
-                    0 2px 10px rgba(121, 121, 121, 0.3),
-                    inset 0 0 1px rgba(185, 185, 185, 0.7);
+$bs-dark:           0 1px 3px 3px rgba(83, 83, 83, 0.15), 
+                    0 1px 2px 2px rgba(71, 71, 71, 0.2),
+                    0 2px 10px 0px rgba(73, 73, 73, 0.3),
+                    inset 0 0 0px rgba(54, 54, 54, 0.7);
 
 
-$bs-hover-dark:     0 0px 5px 1px  rgba(87, 87, 87, 0.2), 
-                    0 0px 5px 1px  rgba(87, 87, 87, 0.3),
-                    0 0px 5px 1px  rgba(101, 101, 101, 0.25),
+$bs-hover-dark:     0 2px 5px 1px  rgba(87, 87, 87, 0.2), 
+                    0 2px 5px 1px  rgba(87, 87, 87, 0.3),
+                    0 2px 5px 1px  rgba(101, 101, 101, 0.25),
                     inset 0 0 2px rgba(90, 90, 90, 0.2);
 
 
-$bs-light:           0 1px 3px rgba(214, 214, 214, 0.15), 
-                    0 1px 2px rgba(184, 184, 184, 0.2),
-                    0 2px 10px rgba(121, 121, 121, 0.3),
+$bs-light:           0 1px 1px 4px rgba(214, 214, 214, 0.15), 
+                    0 1px 1px rgba(184, 184, 184, 0.2),
+                    0 1px 5px rgba(121, 121, 121, 0.3),
                     inset 0 0 1px rgba(185, 185, 185, 0.7);
 
 
-$bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2), 
-                    0 0px 5px 1px  rgba(158, 158, 158, 0.3),
-                    0 0px 5px 1px  rgba(153, 153, 153, 0.25),
-                    inset 0 0 2px rgba(182, 182, 182, 0.1);
+$bs-hover-light:     0 2px 2px 2px  rgba(139, 139, 139, 0.11), 
+                    0 2px 2px 5px  rgba(158, 158, 158, 0.11),
+                    0 2px 2px 0px  rgba(153, 153, 153, 0.11),
+                    inset 0 0 0px rgba(182, 182, 182, 0.11);
 
 
 .bs-alert-dark{
@@ -230,6 +250,7 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     overflow: hidden;
+    
 
     
     
@@ -248,14 +269,20 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     $h4_bb: #3d3d3d 1px solid;
     $h4_mb: 12px;
     $h4_fs: 25px;
-
+    $color_content: white;
 
     // Transición general
     $transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
    
+.bs-alert-red,
+.bs-alert-blue,
+.bs-alert-yellow,
+.bs-alert-green,
+.bs-alert-gray,
+.bs-alert-white {
 
-    .bs-alert-red {
+        border: 1px solid #ffffff29;
         overflow: hidden;
         position: relative;
         background: $bg;
@@ -270,17 +297,19 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
             transform: translateY(-2px);
         }
 
-        h4{
+        .title{
             color: $h4_color;
             padding-bottom: $h4_pb;
             border-bottom: $h4_bb;
             margin-bottom: $h4_mb;
             font-size: $h4_fs;
         }
-        p{
-            color: white;
+        .content{
+            color: $color_content;
         }
+    }
 
+    .bs-alert-red {
         &::before{
             content: "";
             position: absolute;
@@ -293,31 +322,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-blue {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-dark;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-dark;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: white;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -330,31 +334,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-yellow {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-dark;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-dark;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: white;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -367,31 +346,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-green {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-dark;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-dark;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: white;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -404,31 +358,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-gray {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-dark;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-dark;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: white;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -441,31 +370,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-white {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-dark;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-dark;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: white;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -481,8 +385,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
 
 .bs-alert-light
 {
-    
-
     * {
         font-family: 'Inter', -apple-system,
             BlinkMacSystemFont,
@@ -517,13 +419,19 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     $h4_fs: 25px;
 
 
-    $p: rgb(0, 0, 0);
+    $color_content: rgb(0, 0, 0);
 
     // Transición general
     $transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     
 
-    .bs-alert-red {
+    .bs-alert-red,
+    .bs-alert-blue,
+    .bs-alert-yellow,
+    .bs-alert-green,
+    .bs-alert-gray,
+    .bs-alert-white {
+        border: 1px solid #00000010;
         overflow: hidden;
         position: relative;
         background: $bg;
@@ -538,17 +446,19 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
             transform: translateY(-2px);
         }
 
-        h4{
+        .title{
             color: $h4_color;
             padding-bottom: $h4_pb;
             border-bottom: $h4_bb;
             margin-bottom: $h4_mb;
             font-size: $h4_fs;
         }
-        p{
-            color: $p;
+        .content{
+            color: $color_content;
         }
+    }
 
+    .bs-alert-red {
         &::before{
             content: "";
             position: absolute;
@@ -561,31 +471,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-blue {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-light;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-light;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: $p;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -598,31 +483,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-yellow {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-light;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-light;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: $p;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -635,31 +495,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-green {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-light;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-light;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: $p;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -672,31 +507,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-gray {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-light;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-light;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: $p;
-        }
-
         &::before{
             content: "";
             position: absolute;
@@ -709,31 +519,6 @@ $bs-hover-light:     0 0px 5px 1px  rgba(139, 139, 139, 0.2),
     }
 
     .bs-alert-white {
-        overflow: hidden;
-        position: relative;
-        background: $bg;
-        padding: $pd;
-        border-radius: $br;
-        box-shadow: $bs-light;
-
-        transition: $transition;
-
-        &:hover {
-            box-shadow: $bs-hover-light;
-            transform: translateY(-2px);
-        }
-
-        h4{
-            color: $h4_color;
-            padding-bottom: $h4_pb;
-            border-bottom: $h4_bb;
-            margin-bottom: $h4_mb;
-            font-size: $h4_fs;
-        }
-        p{
-            color: $p;
-        }
-
         &::before{
             content: "";
             position: absolute;
