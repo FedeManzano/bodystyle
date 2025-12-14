@@ -7680,6 +7680,10 @@ a.link:hover {
   overflow: scroll !important;
 }
 
+.ov-auto {
+  overflow: auto !important;
+}
+
 .fd-rojo,
 .bg-red {
   background-color: rgb(228, 22, 22) !important;
@@ -20162,7 +20166,7 @@ table,
 }
 
 table.selector tbody tr:nth-child(2n+1) > td {
-  background-color: rgba(0, 0, 0, 0.145) !important;
+  background-color: rgba(0, 0, 0, 0.053) !important;
 }
 
 .centrada {
