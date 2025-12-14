@@ -20752,14 +20752,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(255, 9, 9, 0.15), 0 1px 2px rgba(255, 9, 9, 0.2), 0 2px 10px rgba(255, 9, 9, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-red:hover {
-  box-shadow: 0 0px 3px -3px rgba(255, 9, 9, 0.2), 0 0px 3px -3px rgba(255, 9, 9, 0.3), 0 0px 10px -3px rgba(255, 9, 9, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-red h4 {
   color: white;
@@ -20786,14 +20784,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(53, 17, 255, 0.15), 0 1px 2px rgba(53, 17, 255, 0.2), 0 2px 10px rgba(53, 17, 255, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-blue:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-blue h4 {
   color: white;
@@ -20820,14 +20816,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0px 3px -3px rgba(21, 170, 131, 0.2), 0 0px 10px -3px rgba(26, 171, 162, 0.3), 0 0px 10px -3px rgba(30, 169, 179, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-yellow:hover {
-  box-shadow: 0 1px 3px rgba(233, 178, 13, 0.15), 0 1px 2px rgba(233, 178, 13, 0.2), 0 2px 10px rgba(233, 178, 13, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-yellow h4 {
   color: white;
@@ -20854,14 +20848,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(26, 185, 143, 0.15), 0 1px 2px rgba(32, 185, 129, 0.2), 0 2px 10px rgba(24, 147, 143, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-green:hover {
-  box-shadow: 0 0px 3px -3px rgba(24, 162, 125, 0.2), 0 0px 10px -3px rgba(28, 186, 112, 0.3), 0 0px 10px -3px rgba(25, 200, 133, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-green h4 {
   color: white;
@@ -20888,14 +20880,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(206, 206, 206, 0.15), 0 1px 2px rgba(206, 206, 206, 0.2), 0 2px 10px rgba(206, 206, 206, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-gray:hover {
-  box-shadow: 0 1px 3px rgba(206, 206, 206, 0.15), 0 1px 2px rgba(206, 206, 206, 0.2), 0 2px 10px rgba(206, 206, 206, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-gray h4 {
   color: white;
@@ -20922,14 +20912,12 @@ table thead tr th {
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(206, 206, 206, 0.15), 0 1px 2px rgba(206, 206, 206, 0.2), 0 2px 10px rgba(206, 206, 206, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(143, 143, 143, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-white:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(87, 87, 87, 0.2), 0 0px 5px 1px rgba(87, 87, 87, 0.3), 0 0px 5px 1px rgba(101, 101, 101, 0.25), inset 0 0 2px rgba(90, 90, 90, 0.2);
   transform: translateY(-2px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
-  backdrop-filter: blur(0.3px);
 }
 .bs-alert-dark .bs-alert-white h4 {
   color: white;
@@ -20964,11 +20952,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(255, 9, 9, 0.15), 0 1px 2px rgba(255, 9, 9, 0.2), 0 2px 10px rgba(255, 9, 9, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-red:hover {
-  box-shadow: 0 0px 3px -3px rgba(255, 9, 9, 0.2), 0 0px 3px -3px rgba(255, 9, 9, 0.3), 0 0px 10px -3px rgba(255, 9, 9, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-red h4 {
@@ -20996,11 +20984,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(53, 17, 255, 0.15), 0 1px 2px rgba(53, 17, 255, 0.2), 0 2px 10px rgba(53, 17, 255, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-blue:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-blue h4 {
@@ -21028,11 +21016,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(233, 178, 13, 0.15), 0 1px 2px rgba(233, 178, 13, 0.2), 0 2px 10px rgba(233, 178, 13, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-yellow:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-yellow h4 {
@@ -21060,11 +21048,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(26, 185, 143, 0.15), 0 1px 2px rgba(32, 185, 129, 0.2), 0 2px 10px rgba(24, 147, 143, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-green:hover {
-  box-shadow: 0 0px 3px -3px rgba(24, 162, 125, 0.2), 0 0px 10px -3px rgba(28, 186, 112, 0.3), 0 0px 10px -3px rgba(25, 200, 133, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-green h4 {
@@ -21092,11 +21080,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(206, 206, 206, 0.15), 0 1px 2px rgba(206, 206, 206, 0.2), 0 2px 10px rgba(206, 206, 206, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-gray:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-gray h4 {
@@ -21124,11 +21112,11 @@ table thead tr th {
   background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px rgba(206, 206, 206, 0.15), 0 1px 2px rgba(206, 206, 206, 0.2), 0 2px 10px rgba(206, 206, 206, 0.3), inset 0 0 1px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 1px 3px rgba(214, 214, 214, 0.15), 0 1px 2px rgba(184, 184, 184, 0.2), 0 2px 10px rgba(121, 121, 121, 0.3), inset 0 0 1px rgba(185, 185, 185, 0.7);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-white:hover {
-  box-shadow: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 0 0px 10px -3px rgba(53, 17, 255, 0.3), 0 0px 10px -3px rgba(53, 17, 255, 0.25), inset 0 0 2px rgba(174, 174, 174, 0.7);
+  box-shadow: 0 0px 5px 1px rgba(139, 139, 139, 0.2), 0 0px 5px 1px rgba(158, 158, 158, 0.3), 0 0px 5px 1px rgba(153, 153, 153, 0.25), inset 0 0 2px rgba(182, 182, 182, 0.1);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-white h4 {
