@@ -74,5 +74,5 @@
 /// @param {Number} $var - Variable a incrementar
 /// @return {Number} Variable incrementada
 @function incrementar($var) {
-    @return $var +0.5;
+    @return $var + 0.5;
 }

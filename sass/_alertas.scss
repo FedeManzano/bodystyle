@@ -20,7 +20,7 @@
 .alert-black {
 
     * {
-        font-family: 'Roboto', -apple-system,
+        font-family: 'Inter', -apple-system,
             BlinkMacSystemFont,
             "Segoe UI",
             "Helvetica Neue",
@@ -180,5 +180,679 @@
 
     &::after {
         transform: rotate(-45deg);
+    }
+}
+
+
+
+$pd: 25px;
+$br: 15px;
+
+.bs-alert-dark{
+
+
+    * {
+        font-family: 'Inter', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";
+    }
+
+    overflow: hidden;
+
+    // Box shadow base
+    $bs:        0 1px 3px rgba(0, 0, 0, 0.12), 
+                0 1px 2px rgba(0, 0, 0, 0.24),
+                0 2px 10px rgba(107, 107, 107, 0.5),
+                inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    // Box shadow hover
+    $bs-hover:  0 0px 3px -3px rgba(0, 0, 0, 0.12), 0 0px 10px -3px rgba(0, 0, 0, 0.24),
+                0 0px 10px -3px rgba(107, 107, 107, 0.5),
+                inset 0 0 2px rgba(174, 174, 174, 0.7);
+    
+    // Radio del borde
+    border-radius: $br;
+
+    // Gradiente de todas las alertas oscuras
+    $bg: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
+
+    // Filtro de sombra y desenfoque al hacer hover
+    $filtro: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
+
+    // Estilos para los títulos h4 dentro de las alertas
+    $h4_color: white;
+    $h4_pb: 5px;
+    $h4_bb: #3d3d3d 1px solid;
+    $h4_mb: 12px;
+    $h4_fs: 25px;
+
+
+    // Transición general
+    $transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+   // Box shadows específicos por color
+    $bs-red:        0 1px 3px rgba(255, 9, 9, 0.15), 
+                    0 1px 2px rgba(255, 9, 9, 0.2),
+                    0 2px 10px rgba(255, 9, 9, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+    $bs-red-hover:  0 0px 3px -3px rgba(255, 9, 9, 0.2), 
+                    0 0px 3px -3px rgba(255, 9, 9, 0.3),
+                    0 0px 10px -3px rgba(255, 9, 9, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-blue:       0 1px 3px rgba(53, 17, 255, 0.15), 
+                    0 1px 2px rgba(53, 17, 255, 0.2),
+                    0 2px 10px rgba(53, 17, 255, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    $bs-blue-hover: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 
+                    0 0px 10px -3px rgba(53, 17, 255, 0.3),
+                    0 0px 10px -3px rgba(53, 17, 255, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-green-hover: 0 0px 3px -3px rgba(24, 162, 125, 0.2), 
+                    0 0px 10px -3px rgba(28, 186, 112, 0.3),
+                    0 0px 10px -3px rgba(25, 200, 133, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-yellow:     0 0px 3px -3px rgba(21, 170, 131, 0.2), 
+                    0 0px 10px -3px rgba(26, 171, 162, 0.3),
+                    0 0px 10px -3px rgba(30, 169, 179, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+    $bs-yellow-hover:     0 1px 3px rgba(233, 178, 13, 0.15), 
+                    0 1px 2px rgba(233, 178, 13, 0.2),
+                    0 2px 10px rgba(233, 178, 13, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+     $bs-green:     0 1px 3px rgba(26, 185, 143, 0.15), 
+                    0 1px 2px rgba(32, 185, 129, 0.2),
+                    0 2px 10px rgba(24, 147, 143, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    $bs-gray:       0 1px 3px rgba(206, 206, 206, 0.15), 
+                    0 1px 2px rgba(206, 206, 206, 0.2),
+                    0 2px 10px rgba(206, 206, 206, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+    $bs-white:       0 1px 3px rgba(206, 206, 206, 0.15), 
+                    0 1px 2px rgba(206, 206, 206, 0.2),
+                    0 2px 10px rgba(206, 206, 206, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+     $bs-gray-hover:       0 1px 3px rgba(206, 206, 206, 0.15), 
+                    0 1px 2px rgba(206, 206, 206, 0.2),
+                    0 2px 10px rgba(206, 206, 206, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    .bs-alert-red {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-red;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-red-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #f00909 25%, #f00909bc 50%, #f009096a 75% , #f009090d 100%);
+        }
+    }
+
+    .bs-alert-blue {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-blue;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #3511ff 25%, #3511ffaf 50%, #3511ff61 75% , #3511ff08 100%);
+        }
+    }
+
+    .bs-alert-yellow {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-yellow;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-yellow-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #e9b20d 25%, #e9b20dae 50%, #e9b20d5c 75% , #e9b20d14 100%);
+        }
+    }
+
+    .bs-alert-green {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-green;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-green-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #0cd887 25%, #0cd886a6 50%, #0cd88650 75% , #0cd88612 100%);
+        }
+    }
+
+    .bs-alert-gray {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-gray;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-gray-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #b0b0b0 25%, #b0b0b0bf 50%, #b0b0b06e 75% , #b0b0b00f 100%);
+        }
+    }
+
+    .bs-alert-white {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-white;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+            filter: $filtro;
+            backdrop-filter: blur(0.3px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: white;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #ffffff 25%, #ffffffc1 50%, #ffffff61 75% , #ffffff0b 100%);
+        }
+    }
+}
+
+
+.bs-alert-light
+{
+    
+
+    * {
+        font-family: 'Inter', -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji";
+    }
+
+    overflow: hidden;
+
+    // Box shadow base
+    $bs:        0 1px 3px rgba(0, 0, 0, 0.12), 
+                0 1px 2px rgba(0, 0, 0, 0.24),
+                0 2px 10px rgba(107, 107, 107, 0.5),
+                inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    // Box shadow hover
+    $bs-hover:  0 0px 3px -3px rgba(0, 0, 0, 0.12),
+                0 0px 3px -3px rgba(107, 107, 107, 0.5),
+                inset 0 0 2px rgba(174, 174, 174, 0.7);
+    
+    // Radio del borde
+    border-radius: $br;
+
+    // Gradiente de todas las alertas oscuras
+    $bg: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
+
+    // Filtro de sombra y desenfoque al hacer hover
+    $filtro: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
+
+    // Estilos para los títulos h4 dentro de las alertas
+    $h4_color: rgb(0, 0, 0);
+    $h4_pb: 5px;
+    $h4_bb: #0000001c 1px solid;
+    $h4_mb: 12px;
+    $h4_fs: 25px;
+
+
+    $p: rgb(0, 0, 0);
+
+    // Transición general
+    $transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    // Box shadows específicos por color
+    $bs-red:        0 1px 3px rgba(255, 9, 9, 0.15), 
+                    0 1px 2px rgba(255, 9, 9, 0.2),
+                    0 2px 10px rgba(255, 9, 9, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+    $bs-red-hover:  0 0px 3px -3px rgba(255, 9, 9, 0.2), 
+                    0 0px 3px -3px rgba(255, 9, 9, 0.3),
+                    0 0px 10px -3px rgba(255, 9, 9, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-blue:       0 1px 3px rgba(53, 17, 255, 0.15), 
+                    0 1px 2px rgba(53, 17, 255, 0.2),
+                    0 2px 10px rgba(53, 17, 255, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    $bs-blue-hover: 0 0px 3px -3px rgba(53, 17, 255, 0.2), 
+                    0 0px 10px -3px rgba(53, 17, 255, 0.3),
+                    0 0px 10px -3px rgba(53, 17, 255, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-green-hover: 0 0px 3px -3px rgba(24, 162, 125, 0.2), 
+                    0 0px 10px -3px rgba(28, 186, 112, 0.3),
+                    0 0px 10px -3px rgba(25, 200, 133, 0.25),
+                    inset 0 0 2px rgba(174, 174, 174, 0.7);
+
+    $bs-yellow:     0 1px 3px rgba(233, 178, 13, 0.15), 
+                    0 1px 2px rgba(233, 178, 13, 0.2),
+                    0 2px 10px rgba(233, 178, 13, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+     $bs-green:     0 1px 3px rgba(26, 185, 143, 0.15), 
+                    0 1px 2px rgba(32, 185, 129, 0.2),
+                    0 2px 10px rgba(24, 147, 143, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+
+    $bs-gray:       0 1px 3px rgba(206, 206, 206, 0.15), 
+                    0 1px 2px rgba(206, 206, 206, 0.2),
+                    0 2px 10px rgba(206, 206, 206, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+    $bs-white:       0 1px 3px rgba(206, 206, 206, 0.15), 
+                    0 1px 2px rgba(206, 206, 206, 0.2),
+                    0 2px 10px rgba(206, 206, 206, 0.3),
+                    inset 0 0 1px rgba(174, 174, 174, 0.7);
+
+    .bs-alert-red {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-red;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-red-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #f00909 25%, #f00909bc 50%, #f009096a 75% , #f009090d 100%);
+        }
+    }
+
+    .bs-alert-blue {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-blue;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #3511ff 25%, #3511ffaf 50%, #3511ff61 75% , #3511ff08 100%);
+        }
+    }
+
+    .bs-alert-yellow {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-yellow;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #e9b20d 25%, #e9b20dae 50%, #e9b20d5c 75% , #e9b20d14 100%);
+        }
+    }
+
+    .bs-alert-green {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-green;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-green-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #0cd887 25%, #0cd886a6 50%, #0cd88650 75% , #0cd88612 100%);
+        }
+    }
+
+    .bs-alert-gray {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-gray;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #b0b0b0 25%, #b0b0b0bf 50%, #b0b0b06e 75% , #b0b0b00f 100%);
+        }
+    }
+
+    .bs-alert-white {
+        overflow: hidden;
+        position: relative;
+        background: $bg;
+        padding: $pd;
+        border-radius: $br;
+        box-shadow: $bs-white;
+
+        transition: $transition;
+
+        &:hover {
+            box-shadow: $bs-blue-hover;
+            transform: translateY(-2px);
+        }
+
+        h4{
+            color: $h4_color;
+            padding-bottom: $h4_pb;
+            border-bottom: $h4_bb;
+            margin-bottom: $h4_mb;
+            font-size: $h4_fs;
+        }
+        p{
+            color: $p;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, #ffffff 25%, #ffffffc1 50%, #ffffff61 75% , #ffffff0b 100%);
+        }
     }
 }
