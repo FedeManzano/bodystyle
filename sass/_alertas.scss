@@ -208,22 +208,17 @@
 $pd: 25px;
 $br: 15px;
 
-$bs_dark:           inset 0 0 0 1px rgba(198, 198, 198, 0.3),
-                    0 1px 3px 3px rgba(150, 150, 150, 0.1);
+$bs_dark:            0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(77, 77, 77, 0.1);
+
+
+$bs-hover-dark:      0 6px 12px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 20px rgba(212, 212, 212, 0.15), 0 0 0 1px rgba(127, 127, 127, 0.2);
 
 
 
-$bs-hover-dark:     inset 0px 0px 0 2px rgba(155, 155, 155, 0.2),
-                    0 -1px 2px 1px rgba(110, 110, 110, 0.55),
-                    0 -1px 2px 5px rgba(154, 154, 154, 0.047);
+$bs-light:           0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1px rgba(0, 0, 0, 0.05);
 
 
-$bs-light:           0 2px 5px 0px rgba(214, 214, 214, 0.34), 
-                     inset 0 0 2px rgba(185, 185, 185, 0.7);
-
-
-$bs-hover-light:     3px 3px 10px 2px  rgba(182, 182, 182, 0.251),    
-                    inset 0 0 20px 6px rgba(182, 182, 182, 0.11);
+$bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 20px rgba(59, 130, 246, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15);
 
 
 .bs-alert-dark{
