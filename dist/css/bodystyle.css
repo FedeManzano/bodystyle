@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * BodyStyle v6.0.0
  * Copyright Federico Manzano
@@ -20137,6 +20138,176 @@ a.link:hover {
   background-color: rgb(255, 255, 255);
 }
 
+.carousel-red,
+.carousel-blue,
+.carousel-green,
+.carousel-gray,
+.carousel-black {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+}
+.carousel-red::scroll-button(right), .carousel-red::scroll-button(left),
+.carousel-blue::scroll-button(right),
+.carousel-blue::scroll-button(left),
+.carousel-green::scroll-button(right),
+.carousel-green::scroll-button(left),
+.carousel-gray::scroll-button(right),
+.carousel-gray::scroll-button(left),
+.carousel-black::scroll-button(right),
+.carousel-black::scroll-button(left) {
+  content: "→";
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(187, 0, 56);
+  color: white;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  position-anchor: --carousel;
+  position-area: right center;
+  padding-bottom: 0.2em;
+  transform: translateX(-25px);
+}
+.carousel-red::-webkit-scrollbar,
+.carousel-blue::-webkit-scrollbar,
+.carousel-green::-webkit-scrollbar,
+.carousel-gray::-webkit-scrollbar,
+.carousel-black::-webkit-scrollbar {
+  display: none;
+}
+.carousel-red::scroll-button(right):disabled, .carousel-red::scroll-button(left):disabled,
+.carousel-blue::scroll-button(right):disabled,
+.carousel-blue::scroll-button(left):disabled,
+.carousel-green::scroll-button(right):disabled,
+.carousel-green::scroll-button(left):disabled,
+.carousel-gray::scroll-button(right):disabled,
+.carousel-gray::scroll-button(left):disabled,
+.carousel-black::scroll-button(right):disabled,
+.carousel-black::scroll-button(left):disabled {
+  opacity: 0.5;
+}
+.carousel-red::scroll-button(left),
+.carousel-blue::scroll-button(left),
+.carousel-green::scroll-button(left),
+.carousel-gray::scroll-button(left),
+.carousel-black::scroll-button(left) {
+  content: "←";
+  position-anchor: --carousel;
+  position-area: left center;
+  transform: translateX(25px);
+}
+.carousel-red .item,
+.carousel-blue .item,
+.carousel-green .item,
+.carousel-gray .item,
+.carousel-black .item {
+  scroll-snap-align: start;
+  flex: 0 0 20em;
+  aspect-ratio: 5/3;
+  text-align: center;
+  border-radius: 0.5em;
+  color: white;
+  align-content: center;
+  overflow: hidden;
+}
+.carousel-red .item img,
+.carousel-blue .item img,
+.carousel-green .item img,
+.carousel-gray .item img,
+.carousel-black .item img {
+  width: 100% !important;
+  height: 100% !important;
+}
+@media (max-with: 500px) {
+  .carousel-red .item,
+  .carousel-blue .item,
+  .carousel-green .item,
+  .carousel-gray .item,
+  .carousel-black .item {
+    flex: 0 0 100%;
+  }
+}
+
+.carousel-blue::scroll-button(right), .carousel-blue::scroll-button(left) {
+  background-color: rgb(0, 35, 110);
+}
+
+/*    
+.carousel{
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+
+}
+.carousel::scroll-button(right),
+.carousel::scroll-button(left)
+{
+    content: "→";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 50px ;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    padding-bottom: 0.2em;
+    transform: translateX(-25px);
+}
+.carousel::scroll-button(right):disabled,
+.carousel::scroll-button(left):disabled
+{
+    opacity: 0.5;
+}
+.carousel::scroll-button(left)
+{
+    content: "←";
+    position-anchor: --carousel;
+    position-area: left center;
+    transform: translateX(25px);
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.item
+{
+    scroll-snap-align: start;
+    flex: 0 0 20em;
+    aspect-ratio: 5 / 3;
+    text-align: center;
+    padding: .5em;
+    border-radius: 0.5em;
+    background-color: red;
+    color: white;
+    align-content: center;
+}
+@media(max-with: 500px){
+    .item{
+        flex: 0 0 100%;
+    }
+}
+@media(max-with: 500px){
+    .contenedor{
+        width: 100%;
+    }
+}*/
 .scroll-effect {
   opacity: 0;
   transform: translateY(50px);
@@ -20756,13 +20927,12 @@ table thead tr th {
 .bs-alert-dark .bs-alert-green,
 .bs-alert-dark .bs-alert-gray,
 .bs-alert-dark .bs-alert-white {
-  border: 1px solid rgba(255, 255, 255, 0.1607843137);
   overflow: hidden;
   position: relative;
   background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 1px 3px 3px rgba(83, 83, 83, 0.3), inset 0 0 0px rgba(54, 54, 54, 0.7);
+  box-shadow: inset 0 0 0 1px rgba(198, 198, 198, 0.3), 0 1px 3px 3px rgba(150, 150, 150, 0.1);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-red:hover,
@@ -20771,7 +20941,7 @@ table thead tr th {
 .bs-alert-dark .bs-alert-green:hover,
 .bs-alert-dark .bs-alert-gray:hover,
 .bs-alert-dark .bs-alert-white:hover {
-  box-shadow: 3px 3px 5px 5px rgba(83, 83, 83, 0.159), inset 0 0 20px 6px rgba(90, 90, 90, 0.101);
+  box-shadow: inset 0px 0px 0 2px rgba(155, 155, 155, 0.2), 0 -1px 2px 1px rgba(110, 110, 110, 0.55), 0 -1px 2px 5px rgba(154, 154, 154, 0.047);
   transform: translateY(-2px);
 }
 .bs-alert-dark .bs-alert-red .title,

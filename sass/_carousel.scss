@@ -1,0 +1,108 @@
+
+@use 'globales/variables';
+
+.carousel-red,
+.carousel-blue,
+.carousel-green,
+.carousel-gray,
+.carousel-black {
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+
+
+    &::scroll-button(right),
+    &::scroll-button(left)
+    {
+        content: "→";
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$fd-rosa-o-1;
+        color: white;
+        height: 50px;
+        width: 50px ;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        position: fixed;
+        position-anchor: --carousel;
+        position-area: right center;
+        padding-bottom: 0.2em;
+        transform: translateX(-25px);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::scroll-button(right):disabled,
+    &::scroll-button(left):disabled
+    {
+        opacity: 0.5;
+    }
+    &::scroll-button(left)
+    {
+        content: "←";
+        position-anchor: --carousel;
+        position-area: left center;
+        transform: translateX(25px);
+    }
+
+
+    .item
+    {
+        scroll-snap-align: start;
+        flex: 0 0 20em;
+        aspect-ratio: 5 / 3;
+        text-align: center;
+        border-radius: 0.5em;
+    
+        color: white;
+        align-content: center;
+        overflow: hidden;
+
+        img {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    @media(max-with: 500px){
+        .item{
+            flex: 0 0 100%;
+        }
+    }
+}
+
+.carousel-blue {
+    &::scroll-button(right),
+    &::scroll-button(left)
+    {
+        background-color: variables.$fd-azul-o-1;
+    }
+}
+.carousel-green {
+    &::scroll-button(right),
+    &::scroll-button(left)
+    {
+        background-color: variables.$fd-verde-o-1;
+    }
+}
+.carousel-gray {
+    &::scroll-button(right),
+    &::scroll-button(left)
+    {
+        background-color: variables.$fd-gris-o-1;
+    }
+}
+.carousel-black {
+    &::scroll-button(right),
+    &::scroll-button(left)
+    {
+        background-color: variables.$fd-negro;
+    }
+}
