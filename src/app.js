@@ -37,6 +37,7 @@ import SidebarDrop from "./modulos/SidebarDrop"
 import { slideUp, slideDown, fadeIn, fadeOut } from "./modulos/Animaciones"
 import EfectoScroll from "./modulos/EfectoScroll"
 
+
 (function () {
 
     /************************** MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
