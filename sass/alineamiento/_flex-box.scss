@@ -15,25 +15,21 @@
 }
 
 /// Dirección: Fila
-.flex-fila,
 .flex-row {
     flex-direction: row;
 }
 
 /// Dirección: Columna
-.flex-columna,
 .flex-column {
     flex-direction: column;
 }
 
 /// Dirección: Fila Reversa
-.flex-fila-reversa,
 .flex-row-reverse {
     flex-direction: row-reverse;
 }
 
 /// Dirección: Columna Reversa
-.flex-columna-reversa,
 .flex-column-reverse {
     flex-direction: column-reverse;
 }
@@ -49,98 +45,83 @@
 }
 
 /// Wrap: Wrap Reverse
-.flex-wrap-reversa,
 .flex-wrap-reverse {
     flex-wrap: wrap-reverse !important;
 }
 
 
 /// Justify Content: Start
-.just-inicio,
 .just-start {
     justify-content: flex-start !important;
 }
 
 /// Justify Content: End
-.just-final,
 .just-end {
     justify-content: flex-end !important;
 }
 
 /// Justify Content: Center
-.just-centrada,
 .just-center {
     justify-content: center !important;
 }
 
 /// Justify Content: Space Around
-.just-cobertura,
 .just-around {
     justify-content: space-around !important;
 }
 
 /// Justify Content: Space Between
-.just-cobertura-tope,
 .just-between {
     justify-content: space-between !important;
 }
 
 /// Align Items: Center
-.ali-centrada,
 .ali-center {
     align-items: center !important;
 }
 
 /// Align Items: Start
-.ali-inicio,
 .ali-start {
     align-items: flex-start !important;
 }
 
 /// Align Items: End
-.ali-final,
 .ali-end {
     align-items: flex-end !important;
 }
 
 /// Align Items: Baseline
-.ali-fuente,
 .ali-baseline {
     align-items: baseline !important;
 }
 
 /// Align Items: Stretch
-.ali-cobertura,
 .ali-stretch {
     align-items: stretch !important;
 }
 
 /// Align Content: Center
-.ali-contenido-centrada,
 .ali-content-center {
     align-content: center;
 }
 
 /// Align Content: Start
-.ali-contenido-inicio,
 .ali-content-start {
     align-content: flex-start;
 }
 
 /// Align Content: End
-.ali-contenido-final,
 .ali-content-end {
     align-content: flex-end;
 }
 
 /// Align Content: Stretch
-.ali-contenido-cobertura,
 .ali-content-stretch {
     align-content: stretch;
 }
 
 /// Columnas Extra Small (cxs)
-@for $i from 0 through 50 {
+@for $i from 0 through 10 {
     .gap-#{$i} {
         gap: #{$i * 5}px;
     }
@@ -155,23 +136,18 @@
         -o-display: flex !important;
         -ms-display: flex !important;
     }
-
-    .flex-fila-m,
     .flex-row-m {
         flex-direction: row !important;
     }
 
-    .flex-columna-m,
     .flex-column-m {
         flex-direction: column !important;
     }
 
-    .flex-fila-reversa-m,
     .flex-row-reverse-m {
         flex-direction: row-reverse !important;
     }
 
-    .flex-columna-reversa-m,
     .flex-column-reverse-m {
         flex-direction: column-reverse !important;
     }
@@ -184,83 +160,63 @@
         flex-wrap: wrap !important;
     }
 
-    .flex-wrap-reversa-m,
     .flex-wrap-reverse-m {
         flex-wrap: wrap-reverse !important;
     }
 
-
-    .just-inicio-m,
     .just-start-m {
         justify-content: flex-start !important;
     }
 
-    .just-final-m,
     .just-end-m {
         justify-content: flex-end !important;
     }
 
-    .just-centrada-m,
     .just-center-m {
         justify-content: center !important;
     }
 
-    .just-cobertura-m,
     .just-around-m {
         justify-content: space-around !important;
     }
 
-    .just-cobertura-tope-m,
     .just-between-m {
         justify-content: space-between !important;
     }
-
-    .ali-centrada-m,
     .ali-center-m {
         align-items: center !important;
     }
-
-    .ali-inicio-m,
     .ali-start-m {
         align-items: flex-start !important;
     }
-
-    .ali-final-m,
     .ali-end-m {
         align-items: flex-end !important;
     }
 
-    .ali-fuente-m,
     .ali-baseline-m {
         align-items: baseline !important;
     }
 
-    .ali-cobertura-m,
     .ali-stretch-m {
         align-items: stretch !important;
     }
-
-    .ali-contenido-centrada-m,
     .ali-centent-center-m {
         align-content: center !important;
     }
 
-    .ali-contenido-inicio-m,
     .ali-content-start-m {
         align-content: flex-start;
     }
 
-    .ali-contenido-final-m,
     .ali-content-end-m {
         align-content: flex-end;
     }
 
-    .ali-contenido-cobertura-m,
     .ali-content-stretch-m {
         align-content: stretch;
     }
 
-    @for $i from 0 through 50 {
+    @for $i from 0 through 10 {
         .gap-m-#{$i} {
             gap: #{$i * 5}px;
         }
@@ -277,22 +233,18 @@
         -ms-display: flex !important;
     }
 
-    .flex-fila-s,
     .flex-row-s {
         flex-direction: row !important;
     }
 
-    .flex-columna-s,
     .flex-column-s {
         flex-direction: column !important;
     }
 
-    .flex-fila-reversa-s,
     .flex-row-reverse-s {
         flex-direction: row-reverse !important;
     }
 
-    .flex-columna-reversa-s,
     .flex-column-reverse-s {
         flex-direction: column-reverse !important;
     }
@@ -305,82 +257,67 @@
         flex-wrap: wrap !important;
     }
 
-    .flex-wrap-reversa-s,
     .flex-wrap-reverse-s {
         flex-wrap: wrap-reverse !important;
     }
 
-    .just-inicio-s,
     .just-start-s {
         justify-content: flex-start !important;
     }
 
-    .just-final-s,
     .just-end-s {
         justify-content: flex-end !important;
     }
 
-    .just-centrada-s,
     .just-center-s {
         justify-content: center !important;
     }
 
-    .just-cobertura-s,
     .just-around-s {
         justify-content: space-around !important;
     }
 
-    .just-cobertura-tope-s,
     .just-between-s {
         justify-content: space-between !important;
     }
 
-    .ali-centrada-s,
     .ali-center-s {
         align-items: center !important;
     }
 
-    .ali-inicio-s,
     .ali-start-s {
         align-items: flex-start !important;
     }
 
-    .ali-final-s,
     .ali-end-s {
         align-items: flex-end !important;
     }
 
-    .ali-fuente-s,
     .ali-baseline-s {
         align-items: baseline !important;
     }
 
-    .ali-cobertura-s,
     .ali-stretch-s {
         align-items: stretch !important;
     }
 
-    .ali-contenido-centrada-s,
     .ali-content-center-s {
         align-content: center;
     }
 
-    .ali-contenido-inicio-s,
     .ali-content-start-s {
         align-content: flex-start;
     }
-
-    .ali-contenido-final-s,
+    
     .ali-content-end-s {
         align-content: flex-end;
     }
 
-    .ali-contenido-cobertura-s,
     .ali-content-stretch-s {
         align-content: stretch;
     }
 
-    @for $i from 0 through 50 {
+    @for $i from 0 through 10 {
         .gap-s-#{$i} {
             gap: #{$i * 5}px;
         }
@@ -397,22 +334,18 @@
         -ms-display: flex !important;
     }
 
-    .flex-fila-xs,
     .flex-row-xs {
         flex-direction: row !important;
     }
 
-    .flex-columna-xs,
     .flex-column-xs {
         flex-direction: column !important;
     }
 
-    .flex-fila-reversa-xs,
     .flex-row-reverse-xs {
         flex-direction: row-reverse !important;
     }
 
-    .flex-columna-reversa-xs,
     .flex-column-reverse-xs {
         flex-direction: column-reverse !important;
     }
@@ -425,83 +358,67 @@
         flex-wrap: wrap !important;
     }
 
-    .flex-wrap-reversa-xs,
     .flex-wrap-reverse-xs {
         flex-wrap: wrap-reverse !important;
     }
 
-    .just-inicio-xs,
     .just-start-xs {
         justify-content: flex-start !important;
     }
 
-    .just-final-xs,
     .just-end-xs {
         justify-content: flex-end !important;
     }
 
-    .just-centrada-xs,
     .just-center-xs {
         justify-content: center !important;
     }
 
-    .just-cobertura-xs,
     .just-around-xs {
         justify-content: space-around !important;
     }
 
-    .just-cobertura-tope-xs,
     .just-between-xs {
         justify-content: space-between !important;
     }
 
-
-    .ali-centrada-xs,
     .ali-center-xs {
         align-items: center !important;
     }
 
-    .ali-inicio-xs,
     .ali-start-xs {
         align-items: flex-start !important;
     }
 
-    .ali-final-xs,
     .ali-end-xs {
         align-items: flex-end !important;
     }
 
-    .ali-fuente-xs,
     .ali-baseline-xs {
         align-items: baseline !important;
     }
 
-    .ali-cobertura-xs,
     .ali-stretch-xs {
         align-items: stretch !important;
     }
 
-    .ali-contenido-centrada-xs,
     .ali-content-center-xs {
         align-content: center;
     }
 
-    .ali-contenido-inicio-xs,
     .ali-content-start-xs {
         align-content: flex-start;
     }
 
-    .ali-contenido-final-xs,
     .ali-content-end-xs {
         align-content: flex-end;
     }
 
-    .ali-contenido-cobertura-xs,
     .ali-content-stretch-xs {
         align-content: stretch;
     }
 
-    @for $i from 0 through 50 {
+    @for $i from 0 through 10 {
         .gap-xs-#{$i} {
             gap: #{$i * 5}px;
         }
