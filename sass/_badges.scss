@@ -189,7 +189,7 @@
 .badge-label-red,
 .badge-label-green,
 .badge-label-blue,
-.badge-label-grey,
+.badge-label-gray,
 .badge-label-white,
 .badge-label-black,
 .badge-label-bodyui {
@@ -308,7 +308,7 @@
 
 
 .badge-etiqueta-gris,
-.badge-label-grey {
+.badge-label-gray {
     background-color: variables.$b-etiqueta-gris;
     color: black;
 
@@ -495,7 +495,7 @@
 }
 
 .badge-mje-gris,
-.badge-mje-grey {
+.badge-mje-gray {
     border: 1px solid variables.$fd-gris;
     color: variables.$fd-negro;
     background-color: variables.$fd-gris;
@@ -562,11 +562,17 @@
 
 /// Badge para compartir
 .badge-compartir-gris,
+.badge-share-gray,
 .badge-compartir-rojo,
+.badge-share-red,
 .badge-compartir-verde,
+.badge-share-green,
 .badge-compartir-azul,
+.badge-share-blue,
 .badge-compartir-negro,
-.badge-compartir-blanco {
+.badge-share-black,
+.badge-compartir-blanco,
+.badge-share-white {
     padding: 9px;
     background-color: rgb(218, 218, 218);
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
@@ -615,7 +621,8 @@
     }
 }
 
-.badge-compartir-rojo {
+.badge-compartir-rojo,
+.badge-share-red {
     background-color: variables.$fd-rojo;
     color: white;
 
@@ -628,7 +635,8 @@
     }
 }
 
-.badge-compartir-verde {
+.badge-compartir-verde,
+.badge-share-green {
     background-color: variables.$fd-verde;
     color: white;
 
@@ -641,7 +649,8 @@
     }
 }
 
-.badge-compartir-azul {
+.badge-compartir-azul,
+.badge-share-blue {
     background-color: variables.$fd-azul;
     color: white;
 
@@ -655,7 +664,8 @@
 }
 
 
-.badge-compartir-negro {
+.badge-compartir-negro,
+.badge-share-black {
     background-color: variables.$fd-negro;
     color: white;
 
@@ -668,7 +678,8 @@
     }
 }
 
-.badge-compartir-blanco {
+.badge-compartir-blanco,
+.badge-share-white {
     background-color: variables.$fd-blanco;
     color: black;
 
@@ -679,6 +690,20 @@
     &:hover {
         background-color: variables.$fd-gris-o-1;
         color: white;
+    }
+}
+
+.badge-compartir-gris,
+.badge-share-gray {
+    background-color: variables.$fd-gris;
+    color: white;
+
+    span {
+        color: rgb(34, 34, 34);
+    }
+
+    &:hover {
+        background-color: variables.$fd-gris-o-1;
     }
 }
 
@@ -694,7 +719,7 @@
 .badge-solapa-negro,
 .badge-flap-black,
 .badge-solapa-gris,
-.badge-flap-grey,
+.badge-flap-gray,
 .badge-flap-bodyui {
 
     @include mixins.posicionamiento-absoluto(15px, null, null, -19px);
@@ -719,6 +744,14 @@
     }
 }
 
+.badge-solapa-rojo,
+.badge-flap-red {
+    background-color: variables.$fd-rojo;
+
+    &::before {
+        background-color: variables.$fd-rojo-o-2;
+    }
+}
 
 .badge-solapa-azul,
 .badge-flap-blue {
@@ -739,7 +772,7 @@
 }
 
 .badge-solapa-gris,
-.badge-flap-grey {
+.badge-flap-gray {
     background-color: variables.$fd-gris-c;
     color: black;
 

@@ -3,9 +3,43 @@
 ////
 /// @group Layout
 /// Utilidades de Flexbox
+///
+/// Este módulo proporciona clases utilitarias para trabajar con Flexbox.
+/// Incluye utilidades para:
+/// - Controlar el tipo de display (block, inline, inline-block, flex)
+/// - Definir la dirección de los elementos flexibles
+/// - Controlar el flujo y envoltorio de elementos
+/// - Alinear contenido horizontal y vertical
+/// - Gestionar espacios entre elementos
+/// - Versiones responsive para diferentes puntos de quiebre (m, s, xs)
 ////
 
-/// Display Flex
+/// ============================================================================
+/// SECCIÓN 1: UTILIDADES DE DISPLAY
+/// ============================================================================
+/// Define los tipos básicos de display para los elementos
+
+/// Display block: Ocupa todo el ancho disponible
+.d-block {
+    display: block !important;
+}
+
+/// Display inline-block: Combina características de inline y block
+.d-inline-block {
+    display: inline-block !important;
+}
+
+/// Display inline: Solo ocupa el espacio necesario
+.d-inline {
+    display: inline !important;
+}
+
+/// ============================================================================
+/// SECCIÓN 2: ACTIVAR FLEXBOX
+/// ============================================================================
+/// Clase principal para activar el contexto de Flexbox
+
+/// Display flex: Activa el contenedor flexbox con prefijos de compatibilidad
 .d-flex {
     display: flex;
     -webkit-display: flex;
@@ -14,121 +48,173 @@
     -ms-display: flex;
 }
 
-/// Dirección: Fila
+/// ============================================================================
+/// SECCIÓN 3: DIRECCIÓN DEL FLUJO (flex-direction)
+/// ============================================================================
+/// Controla la dirección en que se organizan los elementos dentro del flexbox
+
+/// Dirección: Fila (izquierda a derecha)
 .flex-row {
     flex-direction: row;
 }
 
-/// Dirección: Columna
+/// Dirección: Columna (arriba a abajo)
 .flex-column {
     flex-direction: column;
 }
 
-/// Dirección: Fila Reversa
+/// Dirección: Fila Reversa (derecha a izquierda)
 .flex-row-reverse {
     flex-direction: row-reverse;
 }
 
-/// Dirección: Columna Reversa
+/// Dirección: Columna Reversa (abajo a arriba)
 .flex-column-reverse {
     flex-direction: column-reverse;
 }
 
-/// Wrap: No Wrap
+/// ============================================================================
+/// SECCIÓN 4: ENVOLTORIO (flex-wrap)
+/// ============================================================================
+/// Controla si los elementos se envuelven cuando no caben en el contenedor
+
+/// Wrap: Sin envoltura (todos en una línea)
 .flex-no-wrap {
     flex-wrap: nowrap !important;
 }
 
-/// Wrap: Wrap
+/// Wrap: Envoltura activada (múltiples líneas)
 .flex-wrap {
     flex-wrap: wrap !important;
 }
 
-/// Wrap: Wrap Reverse
+/// Wrap: Envoltura reversa (inicia desde la última línea)
 .flex-wrap-reverse {
     flex-wrap: wrap-reverse !important;
 }
 
+/// ============================================================================
+/// SECCIÓN 5: ALINEACIÓN HORIZONTAL (justify-content)
+/// ============================================================================
+/// Controla la distribución de elementos en el eje principal (horizontal)
 
-/// Justify Content: Start
+/// Justify Content: Al inicio del contenedor
 .just-start {
     justify-content: flex-start !important;
 }
 
-/// Justify Content: End
+/// Justify Content: Al final del contenedor
 .just-end {
     justify-content: flex-end !important;
 }
 
-/// Justify Content: Center
+/// Justify Content: Centrado
 .just-center {
     justify-content: center !important;
 }
 
-/// Justify Content: Space Around
+/// Justify Content: Distribuido con espacio alrededor
 .just-around {
     justify-content: space-around !important;
 }
 
-/// Justify Content: Space Between
+/// Justify Content: Distribuido con espacio entre elementos
 .just-between {
     justify-content: space-between !important;
 }
 
-/// Align Items: Center
+/// ============================================================================
+/// SECCIÓN 6: ALINEACIÓN VERTICAL (align-items)
+/// ============================================================================
+/// Controla la alineación de elementos en el eje transversal (vertical)
+
+/// Align Items: Centrado verticalmente
 .ali-center {
     align-items: center !important;
 }
 
-/// Align Items: Start
+/// Align Items: Al inicio (arriba)
 .ali-start {
     align-items: flex-start !important;
 }
 
-/// Align Items: End
+/// Align Items: Al final (abajo)
 .ali-end {
     align-items: flex-end !important;
 }
 
-/// Align Items: Baseline
+/// Align Items: Alineado a la línea base del texto
 .ali-baseline {
     align-items: baseline !important;
 }
 
-/// Align Items: Stretch
+/// Align Items: Estirarse para llenar el contenedor
 .ali-stretch {
     align-items: stretch !important;
 }
 
-/// Align Content: Center
+/// ============================================================================
+/// SECCIÓN 7: ALINEACIÓN DE CONTENIDO (align-content)
+/// ============================================================================
+/// Controla la distribución de líneas cuando hay múltiples filas/columnas
+
+/// Align Content: Centrado
 .ali-content-center {
     align-content: center;
 }
 
-/// Align Content: Start
+/// Align Content: Al inicio
 .ali-content-start {
     align-content: flex-start;
 }
 
-/// Align Content: End
+/// Align Content: Al final
 .ali-content-end {
     align-content: flex-end;
 }
 
-/// Align Content: Stretch
+/// Align Content: Estirarse para llenar
 .ali-content-stretch {
     align-content: stretch;
 }
 
-/// Columnas Extra Small (cxs)
+/// ============================================================================
+/// SECCIÓN 8: ESPACIADO ENTRE ELEMENTOS (gap)
+/// ============================================================================
+/// Utilidades generadas dinámicamente para controlar el espacio entre elementos
+/// Valores: gap-0 (0px) hasta gap-10 (50px) en incrementos de 5px
+
 @for $i from 0 through 10 {
+    /// Gap de #{$i * 5}px entre elementos flexibles
     .gap-#{$i} {
         gap: #{$i * 5}px;
     }
 }
 
-/// Flexbox Responsive (Medium)
+/// ============================================================================
+/// SECCIÓN 9: UTILIDADES RESPONSIVE - MEDIUM (m)
+/// ============================================================================
+/// Clases aplicadas cuando el ancho máximo es inferior a la medida 'm'
+/// Proporcionan las mismas utilidades de flexbox con el sufijo '-m'
+
 @media (max-width: funciones.dameMedida(m)) {
+
+    /// Display block responsive (medium)
+    .d-block-m {
+        display: block !important;
+    }
+
+    /// Display inline-block responsive (medium)
+    .d-inline-block-m {
+        display: inline-block !important;
+    }
+
+    /// Display inline responsive (medium)
+    .d-inline-m {
+        display: inline !important;
+    }
+
+    /// Display flex responsive (medium)
     .d-flex-m {
         display: flex !important;
         -webkit-display: flex !important;
@@ -136,86 +222,113 @@
         -o-display: flex !important;
         -ms-display: flex !important;
     }
+
+    /// Dirección: Fila responsive (medium)
     .flex-row-m {
         flex-direction: row !important;
     }
 
+    /// Dirección: Columna responsive (medium)
     .flex-column-m {
         flex-direction: column !important;
     }
 
+    /// Dirección: Fila Reversa responsive (medium)
     .flex-row-reverse-m {
         flex-direction: row-reverse !important;
     }
 
+    /// Dirección: Columna Reversa responsive (medium)
     .flex-column-reverse-m {
         flex-direction: column-reverse !important;
     }
 
+    /// Wrap: Sin envoltura responsive (medium)
     .flex-no-wrap-m {
         flex-wrap: nowrap !important;
     }
 
+    /// Wrap: Envoltura responsive (medium)
     .flex-wrap-m {
         flex-wrap: wrap !important;
     }
 
+    /// Wrap: Envoltura reversa responsive (medium)
     .flex-wrap-reverse-m {
         flex-wrap: wrap-reverse !important;
     }
 
+    /// Justify Content: Al inicio responsive (medium)
     .just-start-m {
         justify-content: flex-start !important;
     }
 
+    /// Justify Content: Al final responsive (medium)
     .just-end-m {
         justify-content: flex-end !important;
     }
 
+    /// Justify Content: Centrado responsive (medium)
     .just-center-m {
         justify-content: center !important;
     }
 
+    /// Justify Content: Espacio alrededor responsive (medium)
     .just-around-m {
         justify-content: space-around !important;
     }
 
+    /// Justify Content: Espacio entre responsive (medium)
     .just-between-m {
         justify-content: space-between !important;
     }
+
+    /// Align Items: Centrado responsive (medium)
     .ali-center-m {
         align-items: center !important;
     }
+
+    /// Align Items: Al inicio responsive (medium)
     .ali-start-m {
         align-items: flex-start !important;
     }
+
+    /// Align Items: Al final responsive (medium)
     .ali-end-m {
         align-items: flex-end !important;
     }
 
+    /// Align Items: Baseline responsive (medium)
     .ali-baseline-m {
         align-items: baseline !important;
     }
 
+    /// Align Items: Estirarse responsive (medium)
     .ali-stretch-m {
         align-items: stretch !important;
     }
+
+    /// Align Content: Centrado responsive (medium)
     .ali-centent-center-m {
         align-content: center !important;
     }
 
+    /// Align Content: Al inicio responsive (medium)
     .ali-content-start-m {
         align-content: flex-start;
     }
 
+    /// Align Content: Al final responsive (medium)
     .ali-content-end-m {
         align-content: flex-end;
     }
 
+    /// Align Content: Estirarse responsive (medium)
     .ali-content-stretch-m {
         align-content: stretch;
     }
 
+    /// Gap responsive (medium): gap-m-0 (0px) hasta gap-m-10 (50px)
     @for $i from 0 through 10 {
         .gap-m-#{$i} {
             gap: #{$i * 5}px;
@@ -223,8 +336,29 @@
     }
 }
 
-/// Flexbox Responsive (Small)
+/// ============================================================================
+/// SECCIÓN 10: UTILIDADES RESPONSIVE - SMALL (s)
+/// ============================================================================
+/// Clases aplicadas cuando el ancho máximo es inferior a la medida 's'
+/// Proporcionan las mismas utilidades de flexbox con el sufijo '-s'
+
 @media (max-width: funciones.dameMedida(s)) {
+    /// Display block responsive (small)
+    .d-block-s {
+        display: block !important;
+    }
+
+    /// Display inline-block responsive (small)
+    .d-inline-block-s {
+        display: inline-block !important;
+    }
+
+    /// Display inline responsive (small)
+    .d-inline-s {
+        display: inline !important;
+    }
+
+    /// Display flex responsive (small)
     .d-flex-s {
         display: flex !important;
         -webkit-display: flex !important;
@@ -233,90 +367,112 @@
         -ms-display: flex !important;
     }
 
+    /// Dirección: Fila responsive (small)
     .flex-row-s {
         flex-direction: row !important;
     }
 
+    /// Dirección: Columna responsive (small)
     .flex-column-s {
         flex-direction: column !important;
     }
 
+    /// Dirección: Fila Reversa responsive (small)
     .flex-row-reverse-s {
         flex-direction: row-reverse !important;
     }
 
+    /// Dirección: Columna Reversa responsive (small)
     .flex-column-reverse-s {
         flex-direction: column-reverse !important;
     }
 
+    /// Wrap: Sin envoltura responsive (small)
     .flex-no-wrap-s {
         flex-wrap: nowrap !important;
     }
 
+    /// Wrap: Envoltura responsive (small)
     .flex-wrap-s {
         flex-wrap: wrap !important;
     }
 
+    /// Wrap: Envoltura reversa responsive (small)
     .flex-wrap-reverse-s {
         flex-wrap: wrap-reverse !important;
     }
 
+    /// Justify Content: Al inicio responsive (small)
     .just-start-s {
         justify-content: flex-start !important;
     }
 
+    /// Justify Content: Al final responsive (small)
     .just-end-s {
         justify-content: flex-end !important;
     }
 
+    /// Justify Content: Centrado responsive (small)
     .just-center-s {
         justify-content: center !important;
     }
 
+    /// Justify Content: Espacio alrededor responsive (small)
     .just-around-s {
         justify-content: space-around !important;
     }
 
+    /// Justify Content: Espacio entre responsive (small)
     .just-between-s {
         justify-content: space-between !important;
     }
 
+    /// Align Items: Centrado responsive (small)
     .ali-center-s {
         align-items: center !important;
     }
 
+    /// Align Items: Al inicio responsive (small)
     .ali-start-s {
         align-items: flex-start !important;
     }
 
+    /// Align Items: Al final responsive (small)
     .ali-end-s {
         align-items: flex-end !important;
     }
 
+    /// Align Items: Baseline responsive (small)
     .ali-baseline-s {
         align-items: baseline !important;
     }
 
+    /// Align Items: Estirarse responsive (small)
     .ali-stretch-s {
         align-items: stretch !important;
     }
 
+    /// Align Content: Centrado responsive (small)
     .ali-content-center-s {
         align-content: center;
     }
 
+    /// Align Content: Al inicio responsive (small)
     .ali-content-start-s {
         align-content: flex-start;
     }
     
+    /// Align Content: Al final responsive (small)
     .ali-content-end-s {
         align-content: flex-end;
     }
 
+    /// Align Content: Estirarse responsive (small)
     .ali-content-stretch-s {
         align-content: stretch;
     }
 
+    /// Gap responsive (small): gap-s-0 (0px) hasta gap-s-10 (50px)
     @for $i from 0 through 10 {
         .gap-s-#{$i} {
             gap: #{$i * 5}px;
@@ -324,8 +480,30 @@
     }
 }
 
-/// Flexbox Responsive (Extra Small)
+/// ============================================================================
+/// SECCIÓN 11: UTILIDADES RESPONSIVE - EXTRA SMALL (xs)
+/// ============================================================================
+/// Clases aplicadas cuando el ancho máximo es inferior a la medida 'xs'
+/// Proporcionan las mismas utilidades de flexbox con el sufijo '-xs'
+/// Útil para dispositivos móviles y pantallas muy pequeñas
+
 @media (max-width: funciones.dameMedida(xs)) {
+    /// Display block responsive (extra small)
+    .d-block-xs {
+        display: block !important;
+    }
+
+    /// Display inline-block responsive (extra small)
+    .d-inline-block-xs {
+        display: inline-block !important;
+    }
+
+    /// Display inline responsive (extra small)
+    .d-inline-xs {
+        display: inline !important;
+    }
+
+    /// Display flex responsive (extra small)
     .d-flex-xs {
         display: flex !important;
         -webkit-display: flex !important;
@@ -334,90 +512,112 @@
         -ms-display: flex !important;
     }
 
+    /// Dirección: Fila responsive (extra small)
     .flex-row-xs {
         flex-direction: row !important;
     }
 
+    /// Dirección: Columna responsive (extra small)
     .flex-column-xs {
         flex-direction: column !important;
     }
 
+    /// Dirección: Fila Reversa responsive (extra small)
     .flex-row-reverse-xs {
         flex-direction: row-reverse !important;
     }
 
+    /// Dirección: Columna Reversa responsive (extra small)
     .flex-column-reverse-xs {
         flex-direction: column-reverse !important;
     }
 
+    /// Wrap: Sin envoltura responsive (extra small)
     .flex-no-wrap-xs {
         flex-wrap: nowrap !important;
     }
 
+    /// Wrap: Envoltura responsive (extra small)
     .flex-wrap-xs {
         flex-wrap: wrap !important;
     }
 
+    /// Wrap: Envoltura reversa responsive (extra small)
     .flex-wrap-reverse-xs {
         flex-wrap: wrap-reverse !important;
     }
 
+    /// Justify Content: Al inicio responsive (extra small)
     .just-start-xs {
         justify-content: flex-start !important;
     }
 
+    /// Justify Content: Al final responsive (extra small)
     .just-end-xs {
         justify-content: flex-end !important;
     }
 
+    /// Justify Content: Centrado responsive (extra small)
     .just-center-xs {
         justify-content: center !important;
     }
 
+    /// Justify Content: Espacio alrededor responsive (extra small)
     .just-around-xs {
         justify-content: space-around !important;
     }
 
+    /// Justify Content: Espacio entre responsive (extra small)
     .just-between-xs {
         justify-content: space-between !important;
     }
 
+    /// Align Items: Centrado responsive (extra small)
     .ali-center-xs {
         align-items: center !important;
     }
 
+    /// Align Items: Al inicio responsive (extra small)
     .ali-start-xs {
         align-items: flex-start !important;
     }
 
+    /// Align Items: Al final responsive (extra small)
     .ali-end-xs {
         align-items: flex-end !important;
     }
 
+    /// Align Items: Baseline responsive (extra small)
     .ali-baseline-xs {
         align-items: baseline !important;
     }
 
+    /// Align Items: Estirarse responsive (extra small)
     .ali-stretch-xs {
         align-items: stretch !important;
     }
 
+    /// Align Content: Centrado responsive (extra small)
     .ali-content-center-xs {
         align-content: center;
     }
 
+    /// Align Content: Al inicio responsive (extra small)
     .ali-content-start-xs {
         align-content: flex-start;
     }
 
+    /// Align Content: Al final responsive (extra small)
     .ali-content-end-xs {
         align-content: flex-end;
     }
 
+    /// Align Content: Estirarse responsive (extra small)
     .ali-content-stretch-xs {
         align-content: stretch;
     }
 
+    /// Gap responsive (extra small): gap-xs-0 (0px) hasta gap-xs-10 (50px)
     @for $i from 0 through 10 {
         .gap-xs-#{$i} {
             gap: #{$i * 5}px;

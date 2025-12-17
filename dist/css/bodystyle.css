@@ -11773,6 +11773,18 @@ a.link:hover {
     padding-right: 7.5em !important;
   }
 }
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
 .d-flex {
   display: flex;
   -webkit-display: flex;
@@ -11910,6 +11922,15 @@ a.link:hover {
 }
 
 @media (max-width: 1030px) {
+  .d-block-m {
+    display: block !important;
+  }
+  .d-inline-block-m {
+    display: inline-block !important;
+  }
+  .d-inline-m {
+    display: inline !important;
+  }
   .d-flex-m {
     display: flex !important;
     -webkit-display: flex !important;
@@ -12015,6 +12036,15 @@ a.link:hover {
   }
 }
 @media (max-width: 770px) {
+  .d-block-s {
+    display: block !important;
+  }
+  .d-inline-block-s {
+    display: inline-block !important;
+  }
+  .d-inline-s {
+    display: inline !important;
+  }
   .d-flex-s {
     display: flex !important;
     -webkit-display: flex !important;
@@ -12120,6 +12150,15 @@ a.link:hover {
   }
 }
 @media (max-width: 400px) {
+  .d-block-xs {
+    display: block !important;
+  }
+  .d-inline-block-xs {
+    display: inline-block !important;
+  }
+  .d-inline-xs {
+    display: inline !important;
+  }
   .d-flex-xs {
     display: flex !important;
     -webkit-display: flex !important;
@@ -23572,6 +23611,60 @@ input.btn-cover-lg-o {
 }
 .card .card-description-light small {
   color: rgb(156, 156, 156);
+}
+
+.card-notification-light,
+.card-notification-dark {
+  padding: 1em !important;
+  border-radius: 5px !important;
+  max-width: 300px;
+  min-width: 250px;
+}
+.card-notification-light .title,
+.card-notification-dark .title {
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+}
+.card-notification-light .content,
+.card-notification-dark .content {
+  font-size: 13px !important;
+}
+.card-notification-light .card-logo,
+.card-notification-dark .card-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-notification-light {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), inset 0px 0px 1px 1px rgba(189, 189, 189, 0.1);
+  transition: 0.3s;
+  max-width: 300px;
+  background-color: rgb(236, 236, 236);
+}
+.card-notification-light .content {
+  color: rgb(128, 128, 128);
+}
+
+.card-notification-dark {
+  box-shadow: 0 4px 8px 0 rgba(84, 84, 84, 0.134), inset 0px 0px 1px 1px rgba(255, 255, 255, 0.095);
+  transition: 0.3s;
+  max-width: 300px;
+  background-color: rgb(30, 32, 41);
+}
+.card-notification-dark .title {
+  color: rgb(255, 255, 255);
+}
+.card-notification-dark .content {
+  color: rgb(255, 255, 255);
+}
+
+.card-notification-light:hover {
+  box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.2), inset 0px 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-notification-dark:hover {
+  box-shadow: 0 0px 16px 0 rgba(255, 255, 255, 0.137), inset 0px 0px 1px 2px rgba(255, 255, 255, 0.108);
 }
 
 .modal-fondo {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+
+    <style>
+        .shadow-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                        inset 0px 0px 1px 1px rgba(189, 189, 189, 0.1);
+            transition: 0.3s;
+            max-width: 300px;
+        }
+        .shadow-card:hover {
+            box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.2),
+                        inset 0px 0px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .shadow-card-dark {
+            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.134),
+                        inset 0px 0px 1px 1px rgba(255, 255, 255, 0.095);
+            transition: 0.3s;
+            max-width: 300px;
+        }
+        .shadow-card-dark:hover {
+            box-shadow: 0 0px 16px 0 rgba(255, 255, 255, 0.137),
+            inset 0px 0px 1px 2px rgba(255, 255, 255, 0.108);;
+        }
+        .card-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+
+
+    <div class="container mt-5">
+        <div class="p-2 bor-rad-5 bg-gray-s shadow-card">
+            <div class="row ali-center">
+                <div class="cl-4 card-logo">
+                    <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
+                </div>
+                <div class="cl-8">
+                    <h4 class="fz-16 c-dark mb-1">Federico Manzano</h4>
+                    <p class="lh-10 fz-13 c-gray mb-0">Estudiante de Ingeniería Informática En la <span class="c-black f-w-7">Universidad Nacional de la Matanza</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="p-2 bor-rad-5 fd-gris-az bor-grey-d-1 shadow-card-dark">
+            <div class="row ali-center">
+                <div class="cl-4 card-logo">
+                     <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
+                </div>
+                <div class="cl-8">
+                    <h4 class="fz-16 c-white mb-1">Bodystyle Framework</h4>
+                    <p class="lh-10 fz-13 c-gray-s mb-0">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="card-notification-light"> 
+            <div class="row">
+                <div class="cl-4 card-logo">
+                     <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
+                </div>
+                <div class="cl-8">
+                    <h4 class="title">Bodystyle Framework</h4>
+                    <p class="content">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card-notification-dark"> 
+            <div class="row">
+                <div class="cl-4 card-logo">
+                     <img class="img-responsive bor-rad-por-50" src="https://bodystyle.webcindario.com/imagenes/20191106_205049.png" alt="Logo Bodystyle" width="60" height="60">
+                </div>
+                <div class="cl-8">
+                    <h4 class="title">Bodystyle Framework</h4>
+                    <p class="content">Librería CSS completa para construir interfaces modernas y responsivas con facilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+</body>
+
+</html>
