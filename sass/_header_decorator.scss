@@ -1,0 +1,107 @@
+@use "globales/variables";
+
+
+.bs-header-decorator {
+    
+    padding-bottom: 12px;
+}
+
+// Colores
+$rojo: linear-gradient(90deg, variables.$fd-rojo 0%, #ff000000 100%);
+$azul: linear-gradient(90deg, variables.$fd-azul 0%, #ff000000 100%);
+$verde: linear-gradient(90deg, variables.$fd-verde 0%, #ff000000 100%);
+$gris: linear-gradient(90deg, variables.$fd-gris 0%, #ff000000 100%);
+$negro: linear-gradient(90deg, variables.$fd-negro 0%, #ffffff00 100%);
+$blanco: linear-gradient(90deg, variables.$fd-blanco 0%, #ffffff00 100%);
+
+.header-red {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $rojo;
+    }
+}
+
+.header-blue {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $azul;
+    }
+}
+
+.header-green {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $verde;
+    }
+}
+
+.header-gray {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $gris;
+    }
+}
+
+
+.header-black {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $negro;
+    }
+}
+
+
+.header-white {
+    position: relative;
+    &::before{
+
+        content: "";
+        border-radius: 99999px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 5px;
+        background: $blanco;
+    }
+}

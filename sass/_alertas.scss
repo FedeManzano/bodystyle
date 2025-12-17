@@ -208,17 +208,24 @@
 $pd: 25px;
 $br: 15px;
 
-$bs_dark:            0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(77, 77, 77, 0.1);
+$bs_dark:            0 4px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
 
-$bs-hover-dark:      0 6px 12px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 20px rgba(212, 212, 212, 0.15), 0 0 0 1px rgba(127, 127, 127, 0.2);
+$bs-hover-dark:      0 0px 4px 2px rgba(0, 0, 0, 0.4), 0 0px 4px 3px rgba(0, 0, 0, 0.3), inset 0 0px 0 2px rgba(255, 255, 255, 0.08), 0 0 20px rgba(212, 212, 212, 0.15);
 
 
 
-$bs-light:           0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1px rgba(0, 0, 0, 0.05);
+$bs-light:              0 2px 4px rgba(0, 0, 0, 0.08),
+                        0 4px 8px rgba(0, 0, 0, 0.06),
+                        inset 0 0px 0px 1px rgba(0, 0, 0, 0.085),
+                        0 0 0 1px rgba(0, 0, 0, 0.05);
 
 
-$bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 20px rgba(59, 130, 246, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15);
+$bs-hover-light:        0 4px 8px rgba(0, 0, 0, 0.1),
+                        0 8px 16px rgba(0, 0, 0, 0.08),
+                        inset 0 0px 0px 2px rgba(0, 0, 0, 0.085),
+                        0 0 20px rgba(59, 130, 246, 0.1),
+                        0 0 0 1px rgba(59, 130, 246, 0.15);
 
 
 .bs-alert-dark{
@@ -247,7 +254,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
     border-radius: $br;
 
     // Gradiente de todas las alertas oscuras
-    $bg: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
+    $bg: linear-gradient(135deg, #090909 0%, #131313 100%);
 
     // Filtro de sombra y desenfoque al hacer hover
     $filtro: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
@@ -283,6 +290,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
 
         &:hover {
             box-shadow: $bs-hover-dark;
+            border-color: rgba(0, 0, 0, 0.2);
             transform: translateY(-2px);
         }
 
@@ -298,6 +306,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
         }
     }
 
+
     .bs-alert-red {
         &::before{
             content: "";
@@ -306,7 +315,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
             top: 0;
             bottom: 0;
             width: 6px;
-            background: linear-gradient(180deg, #f00909 25%, #f00909bc 50%, #f009096a 75% , #f009090d 100%);
+            background: linear-gradient(180deg, #ff0808 0%, #ff080800 100%);
         }
     }
 
@@ -395,7 +404,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
     border-radius: $br;
 
     // Gradiente de todas las alertas oscuras
-    $bg: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
+    $bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 
     // Filtro de sombra y desenfoque al hacer hover
     $filtro: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) blur(0.1px);
@@ -420,7 +429,7 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
     .bs-alert-green,
     .bs-alert-gray,
     .bs-alert-white {
-        border: 1px solid #00000010;
+     
         overflow: hidden;
         position: relative;
         background: $bg;
@@ -450,8 +459,9 @@ $bs-hover-light:     0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08
     .bs-alert-red {
         &::before{
             content: "";
+            z-index: 10;
             position: absolute;
-            left: 0;
+            left: -1px;
             top: 0;
             bottom: 0;
             width: 6px;

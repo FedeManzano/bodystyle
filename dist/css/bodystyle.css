@@ -227,28 +227,40 @@ body {
   font-size: 16px;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p, .p,
+a,
+span {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 h1,
 .h1 {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2,
 .h2 {
   font-size: 1.6em;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h3,
 .h3 {
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h4,
 .h4 {
   font-size: 1.15em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h5,
@@ -8117,6 +8129,94 @@ a.link:hover {
   background-color: #E34514 !important;
 }
 
+.bs-header-decorator {
+  padding-bottom: 12px;
+}
+
+.header-red {
+  position: relative;
+}
+.header-red::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(228, 22, 22) 0%, rgba(255, 0, 0, 0) 100%);
+}
+
+.header-blue {
+  position: relative;
+}
+.header-blue::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(16, 69, 183) 0%, rgba(255, 0, 0, 0) 100%);
+}
+
+.header-green {
+  position: relative;
+}
+.header-green::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(0, 124, 103) 0%, rgba(255, 0, 0, 0) 100%);
+}
+
+.header-gray {
+  position: relative;
+}
+.header-gray::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(128, 128, 128) 0%, rgba(255, 0, 0, 0) 100%);
+}
+
+.header-black {
+  position: relative;
+}
+.header-black::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.header-white {
+  position: relative;
+}
+.header-white::before {
+  content: "";
+  border-radius: 99999px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 .contenedor,
 .container {
   width: 70%;
@@ -11783,6 +11883,10 @@ a.link:hover {
 
 .d-inline {
   display: inline !important;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .d-flex {
@@ -19318,10 +19422,10 @@ table thead tr th {
 .bs-alert-dark .bs-alert-white {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, #090909 50%, #1b1b1b 100%);
+  background: linear-gradient(135deg, #090909 0%, #131313 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(77, 77, 77, 0.1);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-dark .bs-alert-red:hover,
@@ -19330,7 +19434,8 @@ table thead tr th {
 .bs-alert-dark .bs-alert-green:hover,
 .bs-alert-dark .bs-alert-gray:hover,
 .bs-alert-dark .bs-alert-white:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 20px rgba(212, 212, 212, 0.15), 0 0 0 1px rgba(127, 127, 127, 0.2);
+  box-shadow: 0 0px 4px 2px rgba(0, 0, 0, 0.4), 0 0px 4px 3px rgba(0, 0, 0, 0.3), inset 0 0px 0 2px rgba(255, 255, 255, 0.08), 0 0 20px rgba(212, 212, 212, 0.15);
+  border-color: rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 .bs-alert-dark .bs-alert-red .title,
@@ -19360,7 +19465,7 @@ table thead tr th {
   top: 0;
   bottom: 0;
   width: 6px;
-  background: linear-gradient(180deg, #f00909 25%, rgba(240, 9, 9, 0.737254902) 50%, rgba(240, 9, 9, 0.4156862745) 75%, rgba(240, 9, 9, 0.0509803922) 100%);
+  background: linear-gradient(180deg, #ff0808 0%, rgba(255, 8, 8, 0) 100%);
 }
 .bs-alert-dark .bs-alert-blue::before {
   content: "";
@@ -19421,13 +19526,12 @@ table thead tr th {
 .bs-alert-light .bs-alert-green,
 .bs-alert-light .bs-alert-gray,
 .bs-alert-light .bs-alert-white {
-  border: 1px solid rgba(0, 0, 0, 0.062745098);
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, #f2f2f2 50%, #ffffff 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06), inset 0 0px 0px 1px rgba(0, 0, 0, 0.085), 0 0 0 1px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .bs-alert-light .bs-alert-red:hover,
@@ -19436,7 +19540,7 @@ table thead tr th {
 .bs-alert-light .bs-alert-green:hover,
 .bs-alert-light .bs-alert-gray:hover,
 .bs-alert-light .bs-alert-white:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 20px rgba(59, 130, 246, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08), inset 0 0px 0px 2px rgba(0, 0, 0, 0.085), 0 0 20px rgba(59, 130, 246, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.15);
   transform: translateY(-2px);
 }
 .bs-alert-light .bs-alert-red .title,
@@ -19461,8 +19565,9 @@ table thead tr th {
 }
 .bs-alert-light .bs-alert-red::before {
   content: "";
+  z-index: 10;
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 0;
   bottom: 0;
   width: 6px;
@@ -19540,7 +19645,7 @@ table thead tr th {
 }
 
 .badge-gris,
-.badge-grey {
+.badge-gray {
   background-color: rgb(63, 63, 63);
   color: white !important;
 }
@@ -19692,7 +19797,7 @@ table thead tr th {
 .badge-label-red,
 .badge-label-green,
 .badge-label-blue,
-.badge-label-grey,
+.badge-label-gray,
 .badge-label-white,
 .badge-label-black,
 .badge-label-bodyui {
@@ -19712,7 +19817,7 @@ table thead tr th {
 .badge-label-red:hover,
 .badge-label-green:hover,
 .badge-label-blue:hover,
-.badge-label-grey:hover,
+.badge-label-gray:hover,
 .badge-label-white:hover,
 .badge-label-black:hover,
 .badge-label-bodyui:hover {
@@ -19728,7 +19833,7 @@ table thead tr th {
 .badge-label-red:hover::before,
 .badge-label-green:hover::before,
 .badge-label-blue:hover::before,
-.badge-label-grey:hover::before,
+.badge-label-gray:hover::before,
 .badge-label-white:hover::before,
 .badge-label-black:hover::before,
 .badge-label-bodyui:hover::before {
@@ -19744,7 +19849,7 @@ table thead tr th {
 .badge-label-red::before,
 .badge-label-green::before,
 .badge-label-blue::before,
-.badge-label-grey::before,
+.badge-label-gray::before,
 .badge-label-white::before,
 .badge-label-black::before,
 .badge-label-bodyui::before {
@@ -19827,21 +19932,21 @@ table thead tr th {
 }
 
 .badge-etiqueta-gris,
-.badge-label-grey {
+.badge-label-gray {
   background-color: rgb(231, 231, 231);
   color: black;
 }
 .badge-etiqueta-gris::before,
-.badge-label-grey::before {
+.badge-label-gray::before {
   content: "";
   background-color: rgb(231, 231, 231);
 }
 .badge-etiqueta-gris:hover,
-.badge-label-grey:hover {
+.badge-label-gray:hover {
   background-color: rgb(196, 196, 196);
 }
 .badge-etiqueta-gris:hover::before,
-.badge-label-grey:hover::before {
+.badge-label-gray:hover::before {
   background-color: rgb(196, 196, 196);
 }
 
@@ -20002,13 +20107,13 @@ table thead tr th {
 }
 
 .badge-mje-gris,
-.badge-mje-grey {
+.badge-mje-gray {
   border: 1px solid rgb(128, 128, 128);
   color: rgb(0, 0, 0);
   background-color: rgb(128, 128, 128);
 }
 .badge-mje-gris::before,
-.badge-mje-grey::before {
+.badge-mje-gray::before {
   border: 1px solid rgb(128, 128, 128);
   background-color: rgb(128, 128, 128);
 }
@@ -20060,11 +20165,17 @@ table thead tr th {
 }
 
 .badge-compartir-gris,
+.badge-share-gray,
 .badge-compartir-rojo,
+.badge-share-red,
 .badge-compartir-verde,
+.badge-share-green,
 .badge-compartir-azul,
+.badge-share-blue,
 .badge-compartir-negro,
-.badge-compartir-blanco {
+.badge-share-black,
+.badge-compartir-blanco,
+.badge-share-white {
   padding: 9px;
   background-color: rgb(218, 218, 218);
   box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
@@ -20081,19 +20192,31 @@ table thead tr th {
   position: relative;
 }
 .badge-compartir-gris:hover,
+.badge-share-gray:hover,
 .badge-compartir-rojo:hover,
+.badge-share-red:hover,
 .badge-compartir-verde:hover,
+.badge-share-green:hover,
 .badge-compartir-azul:hover,
+.badge-share-blue:hover,
 .badge-compartir-negro:hover,
-.badge-compartir-blanco:hover {
+.badge-share-black:hover,
+.badge-compartir-blanco:hover,
+.badge-share-white:hover {
   background-color: rgba(0, 0, 0, 0.219);
 }
 .badge-compartir-gris span,
+.badge-share-gray span,
 .badge-compartir-rojo span,
+.badge-share-red span,
 .badge-compartir-verde span,
+.badge-share-green span,
 .badge-compartir-azul span,
+.badge-share-blue span,
 .badge-compartir-negro span,
-.badge-compartir-blanco span {
+.badge-share-black span,
+.badge-compartir-blanco span,
+.badge-share-white span {
   display: inline-block;
   position: absolute;
   min-width: 100%;
@@ -20108,11 +20231,17 @@ table thead tr th {
   background-color: rgb(255, 255, 255);
 }
 .badge-compartir-gris span::before,
+.badge-share-gray span::before,
 .badge-compartir-rojo span::before,
+.badge-share-red span::before,
 .badge-compartir-verde span::before,
+.badge-share-green span::before,
 .badge-compartir-azul span::before,
+.badge-share-blue span::before,
 .badge-compartir-negro span::before,
-.badge-compartir-blanco span::before {
+.badge-share-black span::before,
+.badge-compartir-blanco span::before,
+.badge-share-white span::before {
   content: "";
   width: 7px;
   height: 7px;
@@ -20125,60 +20254,89 @@ table thead tr th {
   background-color: white;
 }
 
-.badge-compartir-rojo {
+.badge-compartir-rojo,
+.badge-share-red {
   background-color: rgb(228, 22, 22);
   color: white;
 }
-.badge-compartir-rojo span {
+.badge-compartir-rojo span,
+.badge-share-red span {
   color: rgb(34, 34, 34);
 }
-.badge-compartir-rojo:hover {
+.badge-compartir-rojo:hover,
+.badge-share-red:hover {
   background-color: rgb(164, 0, 0);
 }
 
-.badge-compartir-verde {
+.badge-compartir-verde,
+.badge-share-green {
   background-color: rgb(0, 124, 103);
   color: white;
 }
-.badge-compartir-verde span {
+.badge-compartir-verde span,
+.badge-share-green span {
   color: rgb(34, 34, 34);
 }
-.badge-compartir-verde:hover {
+.badge-compartir-verde:hover,
+.badge-share-green:hover {
   background-color: rgb(0, 96, 85);
 }
 
-.badge-compartir-azul {
+.badge-compartir-azul,
+.badge-share-blue {
   background-color: rgb(16, 69, 183);
   color: white;
 }
-.badge-compartir-azul span {
+.badge-compartir-azul span,
+.badge-share-blue span {
   color: rgb(34, 34, 34);
 }
-.badge-compartir-azul:hover {
+.badge-compartir-azul:hover,
+.badge-share-blue:hover {
   background-color: rgb(0, 30, 94);
 }
 
-.badge-compartir-negro {
+.badge-compartir-negro,
+.badge-share-black {
   background-color: rgb(0, 0, 0);
   color: white;
 }
-.badge-compartir-negro span {
+.badge-compartir-negro span,
+.badge-share-black span {
   color: rgb(34, 34, 34);
 }
-.badge-compartir-negro:hover {
+.badge-compartir-negro:hover,
+.badge-share-black:hover {
   background-color: rgb(51, 51, 51);
 }
 
-.badge-compartir-blanco {
+.badge-compartir-blanco,
+.badge-share-white {
   background-color: rgb(255, 255, 255);
   color: black;
 }
-.badge-compartir-blanco span {
+.badge-compartir-blanco span,
+.badge-share-white span {
   color: rgb(34, 34, 34);
 }
-.badge-compartir-blanco:hover {
+.badge-compartir-blanco:hover,
+.badge-share-white:hover {
   background-color: rgb(51, 51, 51);
   color: white;
+}
+
+.badge-compartir-gris,
+.badge-share-gray {
+  background-color: rgb(128, 128, 128);
+  color: white;
+}
+.badge-compartir-gris span,
+.badge-share-gray span {
+  color: rgb(34, 34, 34);
+}
+.badge-compartir-gris:hover,
+.badge-share-gray:hover {
+  background-color: rgb(51, 51, 51);
 }
 
 .badge-solapa-rojo,
@@ -20192,7 +20350,7 @@ table thead tr th {
 .badge-solapa-negro,
 .badge-flap-black,
 .badge-solapa-gris,
-.badge-flap-grey,
+.badge-flap-gray,
 .badge-flap-bodyui {
   position: absolute;
   top: 15px;
@@ -20220,7 +20378,7 @@ table thead tr th {
 .badge-solapa-negro::before,
 .badge-flap-black::before,
 .badge-solapa-gris::before,
-.badge-flap-grey::before,
+.badge-flap-gray::before,
 .badge-flap-bodyui::before {
   content: "";
   position: absolute;
@@ -20232,6 +20390,15 @@ table thead tr th {
   -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%);
   background-color: rgb(141, 0, 0);
   z-index: -1;
+}
+
+.badge-solapa-rojo,
+.badge-flap-red {
+  background-color: rgb(228, 22, 22);
+}
+.badge-solapa-rojo::before,
+.badge-flap-red::before {
+  background-color: rgb(141, 0, 0);
 }
 
 .badge-solapa-azul,
@@ -20253,12 +20420,12 @@ table thead tr th {
 }
 
 .badge-solapa-gris,
-.badge-flap-grey {
+.badge-flap-gray {
   background-color: rgb(236, 236, 236);
   color: black;
 }
 .badge-solapa-gris::before,
-.badge-flap-grey::before {
+.badge-flap-gray::before {
   background-color: rgb(51, 51, 51);
 }
 
