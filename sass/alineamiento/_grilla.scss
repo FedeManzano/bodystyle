@@ -21,7 +21,7 @@
     /// Columnas Extra Small (cxs)
     @for $i from 1 through 12 {
         .cxs-#{$i} {
-            grid-column: span $i ;
+            grid-column: span $i;
         }
     }
 
@@ -48,11 +48,11 @@
 
     /// Offsets Extra Small
     @for $i from 1 through 12 {
-        $off: $i + 1;
+        $off: $i;
 
         @for $j from 1 through 12 {
             .offset-xs-#{$i}-#{$j} {
-                grid-column: #{$off} / span #{$j}
+                grid-column: #{$off} / span #{$j};
             }
         }
     }
@@ -60,22 +60,22 @@
 
     /// Offsets Small
     @for $i from 1 through 12 {
-        $off: $i + 1;
+        $off: $i;
 
         @for $j from 1 through 12 {
             .offset-s-#{$i}-#{$j} {
-                grid-column: #{$off} / span #{$j}
+                grid-column: #{$off} / span #{$j};
             }
         }
     }
 
     /// Offsets Medium
     @for $i from 1 through 12 {
-        $off: $i + 1;
+        $off: $i;
 
         @for $j from 1 through 12 {
             .offset-m-#{$i}-#{$j} {
-                grid-column: #{$off} / span #{$j}
+                grid-column: #{$off} / span #{$j};
             }
         }
     }
@@ -86,14 +86,14 @@
 
         @for $j from 1 through 12 {
             .offset-l-#{$i}-#{$j} {
-                grid-column: #{$off} / span #{$j}
+                grid-column: #{$off} / span #{$j};
             }
         }
     }
 
 
     /// Grilla Responsive (Medium)
-    @media (max-width: funciones.dameMedida(m)) {
+    @media (max-width: #{funciones.dameMedida(m)}) {
 
         @for $i from 1 through 12 {
             .cxs-#{$i} {
@@ -118,7 +118,7 @@
 
             @for $j from 1 through 12 {
                 .offset-xs-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }
@@ -127,9 +127,8 @@
             $off: $i;
 
             @for $j from 1 through 12 {
-
                 .offset-s-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }
@@ -139,14 +138,14 @@
 
             @for $j from 1 through 12 {
                 .offset-m-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }
     }
 
     /// Grilla Responsive (Small)
-    @media (max-width: funciones.dameMedida(s)) {
+    @media (max-width: #{funciones.dameMedida(s)}) {
 
         @for $i from 1 through 12 {
             .cxs-#{$i} {
@@ -165,7 +164,7 @@
 
             @for $j from 1 through 12 {
                 .offset-xs-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }
@@ -175,15 +174,14 @@
 
             @for $j from 1 through 12 {
                 .offset-s-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }
     }
 
     /// Grilla Responsive (Extra Small)
-    @media (max-width: funciones.dameMedida(xs)) {
-
+    @media (max-width: #{funciones.dameMedida(xs)}) {
 
         @for $i from 1 through 12 {
             .cxs-#{$i} {
@@ -196,7 +194,7 @@
 
             @for $j from 1 through 12 {
                 .offset-xs-#{$i}-#{$j} {
-                    grid-column: #{$off} / span #{$j}
+                    grid-column: #{$off} / span #{$j};
                 }
             }
         }

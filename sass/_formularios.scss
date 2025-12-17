@@ -58,7 +58,7 @@
     }
 
 
-    @media (max-width: funciones.dameMedida(s)) {
+    @media (max-width: #{funciones.dameMedida(s)}) {
         display: block;
 
         *:last-child:not(input):not(select):not(.input-icon) {

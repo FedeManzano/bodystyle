@@ -18,7 +18,7 @@
 }
 
 /// Tamaños de fuente responsive (Medium)
-@media (max-width: funciones.dameMedida(m)) {
+@media (max-width: #{funciones.dameMedida(m)}) {
     @for $i from 8 through 300 {
         .fz-m-#{$i} {
             font-size: #{$i}px !important;
@@ -27,7 +27,7 @@
 }
 
 /// Tamaños de fuente responsive (Small)
-@media (max-width: funciones.dameMedida(s)) {
+@media (max-width: #{funciones.dameMedida(s)}) {
     @for $i from 8 through 300 {
         .fz-s-#{$i} {
             font-size: #{$i}px !important;
@@ -36,7 +36,7 @@
 }
 
 /// Tamaños de fuente responsive (Extra Small)
-@media (max-width: funciones.dameMedida(xs)) {
+@media (max-width: #{funciones.dameMedida(xs)}) {
     @for $i from 8 through 300 {
         .fz-xs-#{$i} {
             font-size: #{$i}px !important;

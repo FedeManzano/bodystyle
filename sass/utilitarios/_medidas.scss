@@ -28,7 +28,7 @@
 
 
 /// Ancho y alto responsive (Medium)
-@media (max-width: funciones.dameMedida(m)) {
+@media (max-width: #{funciones.dameMedida(m)}) {
     @for $i from 1 through 100 {
         @if(funciones.multiplo5($i)) {
 
@@ -49,7 +49,7 @@
 }
 
 /// Ancho y alto responsive (Small)
-@media (max-width: funciones.dameMedida(s)) {
+@media (max-width: #{funciones.dameMedida(s)}) {
     @for $i from 1 through 100 {
         @if(funciones.multiplo5($i)) {
 
@@ -72,7 +72,7 @@
 }
 
 /// Ancho y alto responsive (Extra Small)
-@media (max-width: funciones.dameMedida(xs)) {
+@media (max-width: #{funciones.dameMedida(xs)}) {
     @for $i from 1 through 100 {
         @if(funciones.multiplo5($i)) {
 

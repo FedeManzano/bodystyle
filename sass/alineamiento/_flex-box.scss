@@ -202,7 +202,7 @@
 /// Clases aplicadas cuando el ancho máximo es inferior a la medida 'm'
 /// Proporcionan las mismas utilidades de flexbox con el sufijo '-m'
 
-@media (max-width: funciones.dameMedida(m)) {
+@media (max-width: #{funciones.dameMedida(m)}) {
 
     /// Display block responsive (medium)
     .d-block-m {
@@ -217,6 +217,10 @@
     /// Display inline responsive (medium)
     .d-inline-m {
         display: inline !important;
+    }
+
+    .d-none-m {
+        display: none !important;
     }
 
     /// Display flex responsive (medium)
@@ -347,7 +351,7 @@
 /// Clases aplicadas cuando el ancho máximo es inferior a la medida 's'
 /// Proporcionan las mismas utilidades de flexbox con el sufijo '-s'
 
-@media (max-width: funciones.dameMedida(s)) {
+@media (max-width: #{funciones.dameMedida(s)}) {
     /// Display block responsive (small)
     .d-block-s {
         display: block !important;
@@ -361,6 +365,10 @@
     /// Display inline responsive (small)
     .d-inline-s {
         display: inline !important;
+    }
+
+    .d-none-s {
+        display: none !important;
     }
 
     /// Display flex responsive (small)
@@ -492,7 +500,7 @@
 /// Proporcionan las mismas utilidades de flexbox con el sufijo '-xs'
 /// Útil para dispositivos móviles y pantallas muy pequeñas
 
-@media (max-width: funciones.dameMedida(xs)) {
+@media (max-width: #{funciones.dameMedida(xs)}) {
     /// Display block responsive (extra small)
     .d-block-xs {
         display: block !important;
@@ -506,6 +514,10 @@
     /// Display inline responsive (extra small)
     .d-inline-xs {
         display: inline !important;
+    }
+
+    .d-none-xs {
+        display: none !important;
     }
 
     /// Display flex responsive (extra small)

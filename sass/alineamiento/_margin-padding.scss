@@ -186,7 +186,7 @@ $m: funciones.inicializarVariable();
 }
 
 /// Márgenes y Padding Responsivos (Medium)
-@media (max-width: funciones.dameMedida(m)) {
+@media (max-width: #{funciones.dameMedida(m)}) {
     $m: funciones.inicializarVariable();
 
     @for $i from 0 through 15 {
@@ -338,7 +338,7 @@ $m: funciones.inicializarVariable();
 }
 
 /// Márgenes y Padding Responsivos (Small)
-@media (max-width: funciones.dameMedida(s)) {
+@media (max-width: #{funciones.dameMedida(s)}) {
     $m: funciones.inicializarVariable();
 
     @for $i from 0 through 15 {
@@ -501,7 +501,7 @@ $m: funciones.inicializarVariable();
 }
 
 /// Márgenes y Padding Responsivos (Extra Small)
-@media (max-width: funciones.dameMedida(xs)) {
+@media (max-width: #{funciones.dameMedida(xs)}) {
     $m: funciones.inicializarVariable();
 
     @for $i from 0 through 15 {
