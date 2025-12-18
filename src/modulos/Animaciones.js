@@ -28,6 +28,7 @@ export function slideUp(elemento, duration = 300, callback) {
 
     const startHeight = el.scrollHeight;
     el.style.overflow = 'hidden';
+    el.style.opacity = '1';
 
     const animation = el.animate(
         [
@@ -72,6 +73,7 @@ export function slideDown(elemento, duration = 300, callback) {
     el.style.display = 'block';
     el.style.overflow = 'hidden';
     el.style.height = '0px';
+    el.style.opacity = '1';
 
     // Forzar reflow para que el cambio de display se aplique antes de animar
     void el.offsetHeight;
@@ -95,6 +97,7 @@ export function slideDown(elemento, duration = 300, callback) {
     animation.onfinish = () => {
         el.style.removeProperty('height');
         el.style.removeProperty('overflow');
+        el.style.removeProperty('opacity');
         el.__slideAnimation = null;
         if (typeof callback === 'function') callback();
     };
