@@ -435,7 +435,7 @@ Bodystyle está compuesto por **cuatro módulos independientes** que pueden desc
 
 | Módulo | Versión | Descripción | Descarga |
 |--------|---------|-------------|----------|
-| **Grid** | 4.0.0 | Sistema de grilla responsive para layouts | [Descargar](https://mega.nz/file/9VkXUAxS#IlslEq6oGi1BEPeRL3od0NxOLk5-x5B6xd97VOOhQIM) |
+| **Grid** | 6.5.0 | Sistema de grilla responsive para layouts | [Descargar](https://mega.nz/file/tZcVlayD#mETMP2ASl16Vclfc_z7N4ROLrMLGbo7Pm5y_8T9BLO8) |
 | **Utils** | 5.0.0 | Utilidades de texto, espaciado y Flexbox | [Descargar](https://mega.nz/file/IFUFEJYY#IFXT7wOqocaCoOe-KVPBFyYmV0li0UiNpGhBBV-X030) |
 | **Dynamics** | 3.0.0 | Componentes dinámicos e interactivos (dytips) | [Descargar](https://mega.nz/file/hI9RWToJ#H6No147H25Bxh6hE8Q2jlGSB-JBbTYHBgoGBptaFnUw) |
 | **Show-Code** | 3.0.0 | Resaltado de sintaxis para código | [Descargar](https://mega.nz/file/xVVFCaxR#oBrMTHaTmhwca9ajcSyM65XpoP_UHJH3g-qbv3ymP3w) |
