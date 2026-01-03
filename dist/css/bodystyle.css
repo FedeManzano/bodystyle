@@ -715,87 +715,87 @@ a.link:hover {
   border: 10px solid rgb(0, 0, 0) !important;
 }
 
-.bor-grey-1 {
+.bor-gris-1 {
   border: 1px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-1 {
+.bor-gray-1 {
   border: 1px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-2 {
+.bor-gris-2 {
   border: 2px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-2 {
+.bor-gray-2 {
   border: 2px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-3 {
+.bor-gris-3 {
   border: 3px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-3 {
+.bor-gray-3 {
   border: 3px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-4 {
+.bor-gris-4 {
   border: 4px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-4 {
+.bor-gray-4 {
   border: 4px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-5 {
+.bor-gris-5 {
   border: 5px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-5 {
+.bor-gray-5 {
   border: 5px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-6 {
+.bor-gris-6 {
   border: 6px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-6 {
+.bor-gray-6 {
   border: 6px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-7 {
+.bor-gris-7 {
   border: 7px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-7 {
+.bor-gray-7 {
   border: 7px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-8 {
+.bor-gris-8 {
   border: 8px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-8 {
+.bor-gray-8 {
   border: 8px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-9 {
+.bor-gris-9 {
   border: 9px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-9 {
+.bor-gray-9 {
   border: 9px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-10 {
+.bor-gris-10 {
   border: 10px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-10 {
+.bor-gray-10 {
   border: 10px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-c-1 {
+.bor-gris-c-1 {
   border: 1px solid rgb(236, 236, 236) !important;
 }
 
@@ -803,7 +803,7 @@ a.link:hover {
   border: 1px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-2 {
+.bor-gris-c-2 {
   border: 2px solid rgb(236, 236, 236) !important;
 }
 
@@ -811,7 +811,7 @@ a.link:hover {
   border: 2px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-3 {
+.bor-gris-c-3 {
   border: 3px solid rgb(236, 236, 236) !important;
 }
 
@@ -819,7 +819,7 @@ a.link:hover {
   border: 3px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-4 {
+.bor-gris-c-4 {
   border: 4px solid rgb(236, 236, 236) !important;
 }
 
@@ -827,7 +827,7 @@ a.link:hover {
   border: 4px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-5 {
+.bor-gris-c-5 {
   border: 5px solid rgb(236, 236, 236) !important;
 }
 
@@ -835,7 +835,7 @@ a.link:hover {
   border: 5px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-6 {
+.bor-gris-c-6 {
   border: 6px solid rgb(236, 236, 236) !important;
 }
 
@@ -843,7 +843,7 @@ a.link:hover {
   border: 6px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-7 {
+.bor-gris-c-7 {
   border: 7px solid rgb(236, 236, 236) !important;
 }
 
@@ -851,7 +851,7 @@ a.link:hover {
   border: 7px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-8 {
+.bor-gris-c-8 {
   border: 8px solid rgb(236, 236, 236) !important;
 }
 
@@ -859,7 +859,7 @@ a.link:hover {
   border: 8px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-9 {
+.bor-gris-c-9 {
   border: 9px solid rgb(236, 236, 236) !important;
 }
 
@@ -867,7 +867,7 @@ a.link:hover {
   border: 9px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-10 {
+.bor-gris-c-10 {
   border: 10px solid rgb(236, 236, 236) !important;
 }
 
@@ -22781,7 +22781,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=fd-gris],
 .btn-cover-lg:hover[class*=fd-gris] {
   background-color: rgb(34, 34, 34) !important;
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 .btn:hover[class*=bg-gray],
 .btn-lg:hover[class*=bg-gray],
@@ -22793,7 +22793,7 @@ input.btn-cover-lg-o {
 .btn-cover-sm:hover[class*=bg-gray],
 .btn-cover-lg:hover[class*=bg-gray] {
   background-color: rgb(34, 34, 34) !important;
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 .btn:hover[class*=fd-negro],
 .btn-lg:hover[class*=fd-negro],
@@ -23333,20 +23333,32 @@ input.btn-cover-lg-o {
   font-size: 12px;
 }
 .btn-grupo .fd-gris,
+.btn-grupo .bg-gray,
 .btn-group .fd-gris,
+.btn-group .bg-gray,
 .btn-grupo-lg .fd-gris,
+.btn-grupo-lg .bg-gray,
 .btn-group-lg .fd-gris,
+.btn-group-lg .bg-gray,
 .btn-grupo-sm .fd-gris,
-.btn-group-sm .fd-gris {
+.btn-grupo-sm .bg-gray,
+.btn-group-sm .fd-gris,
+.btn-group-sm .bg-gray {
   background-color: #3b3b3b;
   color: white;
 }
 .btn-grupo .fd-gris:hover,
+.btn-grupo .bg-gray:hover,
 .btn-group .fd-gris:hover,
+.btn-group .bg-gray:hover,
 .btn-grupo-lg .fd-gris:hover,
+.btn-grupo-lg .bg-gray:hover,
 .btn-group-lg .fd-gris:hover,
+.btn-group-lg .bg-gray:hover,
 .btn-grupo-sm .fd-gris:hover,
-.btn-group-sm .fd-gris:hover {
+.btn-grupo-sm .bg-gray:hover,
+.btn-group-sm .fd-gris:hover,
+.btn-group-sm .bg-gray:hover {
   background-color: #111111;
 }
 .btn-grupo .btn:first-child, .btn-grupo .btn-sm:first-child, .btn-grupo .btn-lg:first-child,

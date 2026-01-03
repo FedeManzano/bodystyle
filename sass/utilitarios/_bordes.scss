@@ -40,11 +40,11 @@
 
 /// Generador de borde gris sólido (1px - 10px)
 @for $i from 1 through 10 {
-    .bor-grey-#{$i} {
+    .bor-gris-#{$i} {
         border: 0px + $i solid variables.$fd-gris !important;
     }
 
-    .bor-grey-#{$i} {
+    .bor-gray-#{$i} {
         border: 0px + $i solid variables.$fd-gris !important;
     }
 }
@@ -52,10 +52,10 @@
 
 /// Generador de borde gris claro sólido (1px - 10px)
 @for $i from 1 through 10 {
-    .bor-grey-c-#{$i} {
+    .bor-gris-c-#{$i} {
         border: 0px + $i solid variables.$fd-gris-c !important;
     }
-
+    
     .bor-grey-s-#{$i} {
         border: 0px + $i solid variables.$fd-gris-c !important;
     }

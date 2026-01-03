@@ -127,12 +127,12 @@ input.btn-cover-lg-o {
 
     &:hover[class*="fd-gris"] {
         background-color: rgb(34, 34, 34) !important;
-        color: variables.$fd-negro !important;
+        color: variables.$fd-blanco !important;
     }
 
     &:hover[class*="bg-gray"] {
         background-color: rgb(34, 34, 34) !important;
-        color: variables.$fd-negro !important;
+        color: variables.$fd-blanco !important;
     }
 
     &:hover[class*="fd-negro"] {
@@ -464,7 +464,8 @@ input.btn-cover-lg-o {
         font-size: 12px;
     }
 
-    .fd-gris {
+    .fd-gris,
+    .bg-gray {
         background-color: #3b3b3b;
         color: white;
 
