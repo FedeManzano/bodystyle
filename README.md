@@ -5,12 +5,13 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
-  <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"><img src="https://img.shields.io/badge/Documentation-Download-blue" alt="Docs Download"></a>
-  <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V3.0.0-blue" alt="Documentation"></a>
+  <a href="https://mega.nz/file/MNkDRbKI#y1KCa4MkRsRx5ymrjAONHHplXwtlsrfYFKml079ql1E"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"><img src="https://img.shields.io/badge/Documentation-v3.0.0-blue" alt="Docs Download"></a>
+  <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-Online-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
   <a href="https://github.com/FedeManzano/bodystyle/releases/tag/v6.5.0"><img src="https://img.shields.io/badge/VERSION-6.5.0-red" alt="Version"></a>
+  <a href="./MODAL_ACCESIBILIDAD.md"><img src="https://img.shields.io/badge/♿-Accesibilidad-blue" alt="Accessibility"></a>
 </p>
 
 <p align="center">
@@ -47,7 +48,8 @@
 - [Desarrollo](#-desarrollo)
 - [Compatibilidad de Navegadores](#-compatibilidad-de-navegadores)
 - [Dependencias](#-dependencias)
-- [Novedades v5.8.0](#-novedades-v580)
+- [Novedades v6.5.0](#-novedades-v650)
+- [Novedades v6.0.0](#-novedades-v600)
 - [📊 Informe de Calidad](QUALITY.md)
 - [Contribuir](#-contribuir)
 - [Licencia](#-licencia)
@@ -61,7 +63,7 @@ Bodystyle es una **biblioteca de software libre** diseñada para facilitar la cr
 
 **Objetivo:** Proporcionar herramientas poderosas a los desarrolladores para crear diseños innovadores y enfocarse en mejorar continuamente la experiencia de usuario (UX).
 
-> **Versión actual:** `v6.0.0`
+> **Versión actual:** `v6.5.0` - ♿ **Con Accesibilidad WCAG 2.1**
 
 ---
 
@@ -157,6 +159,55 @@ Bodystyle es una **biblioteca de software libre** diseñada para facilitar la cr
 
 ## 🚀 Inicio Rápido
 
+### Crear un Modal Accesible (v6.5.0)
+
+```html
+<!-- Botón para abrir modal -->
+<button class="btn bg-blue activar-modal" data-target="#miModal">
+    Abrir Modal
+</button>
+
+<!-- Modal con accesibilidad WCAG 2.1 -->
+<div id="miModal" class="modal-fondo">
+    <div class="modal">
+        <!-- Cabecera -->
+        <div class="modal-cabecera">
+            <h2 class="modal-titulo">Título del Modal</h2>
+            <button class="modal-salir" aria-label="Cerrar modal"></button>
+        </div>
+        
+        <!-- Contenido -->
+        <div class="modal-cuerpo">
+            <p>Tu contenido aquí...</p>
+        </div>
+        
+        <!-- Pie (opcional) -->
+        <div class="modal-pie">
+            <button class="btn bg-gris">Cancelar</button>
+            <button class="btn bg-blue">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Inicializar -->
+<script src="dist/js/bodystyle.min.js"></script>
+<script>
+    BS.ModalInit()
+</script>
+```
+
+**Características:**
+- ✅ Presiona **ESC** para cerrar
+- ✅ Navega con **Tab**
+- ✅ Compatible con lectores de pantalla
+- ✅ Focus visible en todos los elementos
+
+[📖 Ver documentación completa](./MODAL_ACCESIBILIDAD.md) | [🎯 Ver ejemplos interactivos](./ejemplos/v6.5.0/modales.html)
+
+---
+
+### Ejemplo Básico (CDN)
+
 La forma más rápida de empezar es usando el CDN:
 
 ```html
@@ -197,7 +248,8 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v6.0.0](https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s) - **Última versión**
+- [Bodystyle v6.5.0](https://github.com/FedeManzano/bodystyle/releases/tag/v6.5.0) - **Última versión con Accesibilidad WCAG 2.1**
+- [Bodystyle v6.0.0](https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s)
 - [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
 - [Bodystyle v4.8.0](https://mega.nz/file/UZEzQI5K#9ULEwt4p7DlILAaXz8Mu5z2O-Rsgr-7V360fWUxqs58)
@@ -499,6 +551,50 @@ Bodystyle es compatible con las versiones modernas de los principales navegadore
 
 ---
 
+
+## 🎉 Novedades v6.5.0
+
+### ♿ Mejoras de Accesibilidad en Modales (WCAG 2.1)
+
+Implementación completa de estándares de accesibilidad en el componente Modal:
+
+- ✅ **Atributos ARIA Completos**
+  - `role="dialog"` - Identifica el elemento como diálogo
+  - `aria-modal="true"` - Indica que es modal
+  - `aria-labelledby` - Conecta con el título del modal
+  - `aria-label` - Botón de cerrar accesible
+  - `aria-hidden` - Gestión de visibilidad para lectores de pantalla
+
+- ✅ **Navegación con Teclado**
+  - **Tecla Escape** - Cierra el modal (estándar WCAG)
+  - **Tab/Shift+Tab** - Navegación entre elementos
+  - **Enter/Espacio** - Activa botón de cerrar
+
+- ✅ **Gestión de Focus**
+  - Focus automático al primer elemento interactivo
+  - Restauración del focus al cerrar
+  - Soporte para modales anidados
+
+- ✅ **Indicadores Visuales**
+  - Focus visible con outline azul
+  - Hover effects mejorados
+  - Contraste de colores optimizado
+
+- ✅ **Compatibilidad con Tecnologías Asistivas**
+  - Soporte para lectores de pantalla (NVDA, JAWS, VoiceOver)
+  - Estructura semántica correcta
+  - Estados ARIA actualizados dinámicamente
+
+### Ejemplos Mejorados
+
+- 📌 Modal simple con estructura completa
+- 📝 Modal con formulario interactivo
+- ⚠️ Modal de confirmación
+- 📖 Modal con contenido largo (scroll)
+
+**Documentación:** [MODAL_ACCESIBILIDAD.md](./MODAL_ACCESIBILIDAD.md)
+
+---
 
 ## 🎉 Novedades v6.0.0
 
