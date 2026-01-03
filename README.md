@@ -10,7 +10,7 @@
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-V3.0.0-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
   <a href="https://github.com/FedeManzano/bodystyle/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-purple" alt="License"></a>
-  <a href="https://github.com/FedeManzano/bodystyle/releases/tag/v6.0.0"><img src="https://img.shields.io/badge/VERSION-6.0.0-red" alt="Version"></a>
+  <a href="https://github.com/FedeManzano/bodystyle/releases/tag/v6.5.0"><img src="https://img.shields.io/badge/VERSION-6.5.0-red" alt="Version"></a>
 </p>
 
 <p align="center">

@@ -66,7 +66,6 @@
   }
 }
 
-/** Borde radio % y px*/
 .bor-rad-por-0 {
   border-radius: 0% !important;
 }
@@ -404,87 +403,87 @@
   border: 10px solid rgb(0, 0, 0) !important;
 }
 
-.bor-grey-1 {
+.bor-gris-1 {
   border: 1px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-1 {
+.bor-gray-1 {
   border: 1px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-2 {
+.bor-gris-2 {
   border: 2px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-2 {
+.bor-gray-2 {
   border: 2px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-3 {
+.bor-gris-3 {
   border: 3px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-3 {
+.bor-gray-3 {
   border: 3px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-4 {
+.bor-gris-4 {
   border: 4px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-4 {
+.bor-gray-4 {
   border: 4px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-5 {
+.bor-gris-5 {
   border: 5px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-5 {
+.bor-gray-5 {
   border: 5px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-6 {
+.bor-gris-6 {
   border: 6px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-6 {
+.bor-gray-6 {
   border: 6px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-7 {
+.bor-gris-7 {
   border: 7px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-7 {
+.bor-gray-7 {
   border: 7px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-8 {
+.bor-gris-8 {
   border: 8px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-8 {
+.bor-gray-8 {
   border: 8px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-9 {
+.bor-gris-9 {
   border: 9px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-9 {
+.bor-gray-9 {
   border: 9px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-10 {
+.bor-gris-10 {
   border: 10px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-10 {
+.bor-gray-10 {
   border: 10px solid rgb(128, 128, 128) !important;
 }
 
-.bor-grey-c-1 {
+.bor-gris-c-1 {
   border: 1px solid rgb(236, 236, 236) !important;
 }
 
@@ -492,7 +491,7 @@
   border: 1px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-2 {
+.bor-gris-c-2 {
   border: 2px solid rgb(236, 236, 236) !important;
 }
 
@@ -500,7 +499,7 @@
   border: 2px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-3 {
+.bor-gris-c-3 {
   border: 3px solid rgb(236, 236, 236) !important;
 }
 
@@ -508,7 +507,7 @@
   border: 3px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-4 {
+.bor-gris-c-4 {
   border: 4px solid rgb(236, 236, 236) !important;
 }
 
@@ -516,7 +515,7 @@
   border: 4px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-5 {
+.bor-gris-c-5 {
   border: 5px solid rgb(236, 236, 236) !important;
 }
 
@@ -524,7 +523,7 @@
   border: 5px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-6 {
+.bor-gris-c-6 {
   border: 6px solid rgb(236, 236, 236) !important;
 }
 
@@ -532,7 +531,7 @@
   border: 6px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-7 {
+.bor-gris-c-7 {
   border: 7px solid rgb(236, 236, 236) !important;
 }
 
@@ -540,7 +539,7 @@
   border: 7px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-8 {
+.bor-gris-c-8 {
   border: 8px solid rgb(236, 236, 236) !important;
 }
 
@@ -548,7 +547,7 @@
   border: 8px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-9 {
+.bor-gris-c-9 {
   border: 9px solid rgb(236, 236, 236) !important;
 }
 
@@ -556,7 +555,7 @@
   border: 9px solid rgb(236, 236, 236) !important;
 }
 
-.bor-grey-c-10 {
+.bor-gris-c-10 {
   border: 10px solid rgb(236, 236, 236) !important;
 }
 
@@ -564,7 +563,6 @@
   border: 10px solid rgb(236, 236, 236) !important;
 }
 
-/** Bordes rojos */
 .bor-rojo-1 {
   border: 1px solid rgb(228, 22, 22) !important;
 }
@@ -845,7 +843,6 @@
   border: 10px solid rgb(164, 0, 0) !important;
 }
 
-/** Bordes rojos verdes*/
 .bor-verde-1 {
   border: 1px solid rgb(0, 124, 103) !important;
 }
@@ -1126,7 +1123,6 @@
   border: 10px solid rgb(0, 42, 48) !important;
 }
 
-/*bordes azules*/
 .bor-azul-1 {
   border: 1px solid rgb(16, 69, 183) !important;
 }
@@ -2134,9 +2130,6 @@
   margin: 0 10px;
 }
 
-/*
-    Trabajando con los textos 
-*/
 .a-c,
 .ta-c {
   text-align: center !important;
@@ -2242,17 +2235,17 @@
 }
 
 .c-gris,
-.c-grey {
+.c-gray {
   color: rgb(128, 128, 128) !important;
 }
 
 .c-gris-c,
-.c-grey-s {
+.c-gray-s {
   color: rgb(236, 236, 236) !important;
 }
 
 .c-gris-o,
-.c-grey-d {
+.c-gray-d {
   color: rgb(41, 41, 41) !important;
 }
 
@@ -7385,6 +7378,10 @@
 
 .ov-scroll {
   overflow: scroll !important;
+}
+
+.ov-auto {
+  overflow: auto !important;
 }
 
 .p-0 {

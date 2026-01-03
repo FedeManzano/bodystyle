@@ -1,7 +1,7 @@
 
 
 /*!
- * BodyStyle v6.0.0
+ * BodyStyle v6.5.0
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/bodystyle)
