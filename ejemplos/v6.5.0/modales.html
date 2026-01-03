@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Ejemplos de Modales - v6.5.0</title>
+    <style>
+        body {
+            padding: 2em;
+            background-color: #f5f5f5;
+        }
+        .ejemplo-section {
+            margin-bottom: 2em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ejemplo-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 1em;
+            color: #333;
+        }
+        .botones-demo {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="margin-bottom: 2em; color: #333;">🎯 Ejemplos de Modales - v6.5.0</h1>
+    <p style="margin-bottom: 2em; color: #666;">
+        Los modales ahora incluyen mejoras de accesibilidad WCAG 2.1: 
+        Tecla Escape para cerrar, navegación con Tab, aria-labels, y gestión correcta del focus.
+    </p>
+
+    <!-- EJEMPLO 1: Modal Simple -->
+    <div class="ejemplo-section">
+        <h2 class="ejemplo-title">📌 Ejemplo 1: Modal Simple</h2>
+        <p style="margin-bottom: 1.5em; color: #666;">
+            Modal básico con estructura completa (header, body, footer).
+            Presiona Escape para cerrar o haz click en el fondo.
+        </p>
+        <div class="botones-demo">
+            <button class="btn bg-blue bor-pill activar-modal" data-target="#modal1">
+                ✏️ Abrir Modal Simple
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal-fondo" id="modal1">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <!-- Cabecera con título y botón cerrar -->
+            <div class="modal-cabecera">
+                <h2 class="modal-titulo">Modal Simple</h2>
+                <button class="modal-salir" aria-label="Cerrar modal"></button>
+            </div>
+            
+            <!-- Cuerpo del modal -->
+            <div class="modal-cuerpo">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem 
+                    repudiandae labore! Soluta harum, ducimus et vel facere voluptates 
+                    eligendi nemo vitae fugit?
+                </p>
+                <p style="margin-top: 1em; font-size: 0.9em; color: #666;">
+                    💡 Tip: Presiona ESC para cerrar o haz click en el fondo oscuro
+                </p>
+            </div>
+            
+            <!-- Pie con botones -->
+            <div class="modal-pie">
+                <button class="btn bg-gris">Cancelar</button>
+                <button class="btn bg-blue">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 2: Modal con Formulario -->
+    <div class="ejemplo-section">
+        <h2 class="ejemplo-title">📝 Ejemplo 2: Modal con Formulario</h2>
+        <p style="margin-bottom: 1.5em; color: #666;">
+            Modal interactivo con campos de formulario. 
+            Navega entre campos con Tab y usa Enter en el botón de envío.
+        </p>
+        <div class="botones-demo">
+            <button class="btn bg-green bor-pill activar-modal" data-target="#modal2">
+                📋 Abrir Formulario
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal-fondo" id="modal2">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <div class="modal-cabecera">
+                <h2 class="modal-titulo">Formulario de Contacto</h2>
+                <button class="modal-salir" aria-label="Cerrar modal"></button>
+            </div>
+            
+            <div class="modal-cuerpo">
+                <form id="contactForm">
+                    <div style="margin-bottom: 1.5em;">
+                        <label for="nombre" style="display: block; margin-bottom: 0.5em; font-weight: 500;">
+                            Nombre:
+                        </label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" 
+                               style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5em;">
+                        <label for="email" style="display: block; margin-bottom: 0.5em; font-weight: 500;">
+                            Email:
+                        </label>
+                        <input type="email" id="email" placeholder="tu@email.com" 
+                               style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5em;">
+                        <label for="mensaje" style="display: block; margin-bottom: 0.5em; font-weight: 500;">
+                            Mensaje:
+                        </label>
+                        <textarea id="mensaje" placeholder="Tu mensaje" 
+                                  style="width: 100%; padding: 0.75em; border: 1px solid #ddd; border-radius: 4px; 
+                                         resize: vertical; min-height: 100px;"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-pie">
+                <button class="btn bg-gris">Limpiar</button>
+                <button class="btn bg-green">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 3: Modal de Confirmación -->
+    <div class="ejemplo-section">
+        <h2 class="ejemplo-title">⚠️ Ejemplo 3: Modal de Confirmación</h2>
+        <p style="margin-bottom: 1.5em; color: #666;">
+            Modal para confirmaciones críticas. Los botones están bien diferenciados.
+        </p>
+        <div class="botones-demo">
+            <button class="btn bg-red bor-pill activar-modal" data-target="#modal3">
+                🗑️ Eliminar
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-fondo" id="modal3">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <div class="modal-cabecera" style="background-color: #fee;">
+                <h2 class="modal-titulo" style="color: #d32f2f;">Eliminar Elemento</h2>
+                <button class="modal-salir" aria-label="Cerrar modal"></button>
+            </div>
+            
+            <div class="modal-cuerpo">
+                <p style="font-size: 1.1em; margin-bottom: 1.5em;">
+                    <strong>⚠️ Advertencia:</strong> Esta acción no se puede deshacer.
+                </p>
+                <p style="color: #666;">
+                    ¿Estás seguro de que deseas eliminar este elemento? Esta acción es permanente.
+                </p>
+            </div>
+            
+            <div class="modal-pie">
+                <button class="btn bg-gris">Cancelar</button>
+                <button class="btn bg-red">Sí, Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EJEMPLO 4: Modal Grande con Scroll -->
+    <div class="ejemplo-section">
+        <h2 class="ejemplo-title">📖 Ejemplo 4: Modal con Contenido Largo</h2>
+        <p style="margin-bottom: 1.5em; color: #666;">
+            Modal que se ajusta cuando el contenido es muy largo.
+        </p>
+        <div class="botones-demo">
+            <button class="btn bg-purple bor-pill activar-modal" data-target="#modal4">
+                📚 Abrir Contenido Largo
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-fondo" id="modal4">
+        <div class="modal ancho-50 ancho-m-70 ancho-s-90 ancho-xs-99">
+            <div class="modal-cabecera">
+                <h2 class="modal-titulo">Términos y Condiciones</h2>
+                <button class="modal-salir" aria-label="Cerrar modal"></button>
+            </div>
+            
+            <div class="modal-cuerpo" style="max-height: 400px; overflow-y: auto;">
+                <h3 style="margin-top: 0; margin-bottom: 1em;">1. Introducción</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                
+                <h3 style="margin-bottom: 1em;">2. Términos de Uso</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                
+                <h3 style="margin-bottom: 1em;">3. Privacidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                
+                <h3 style="margin-bottom: 1em;">4. Limitación de Responsabilidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+                
+                <h3 style="margin-bottom: 1em;">5. Cambios en los Términos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quaerat similique reprehenderit unde cupiditate fuga voluptatem repudiandae labore! Soluta harum, ducimus et vel facere voluptates eligendi nemo vitae fugit?</p>
+            </div>
+            
+            <div class="modal-pie">
+                <button class="btn bg-gris">Rechazar</button>
+                <button class="btn bg-blue">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información de Accesibilidad -->
+    <div class="ejemplo-section" style="background-color: #e3f2fd; border-left: 4px solid #2196f3;">
+        <h2 class="ejemplo-title">♿ Características de Accesibilidad v6.5.0</h2>
+        <ul style="color: #333; line-height: 1.8; margin: 0; padding-left: 1.5em;">
+            <li><strong>Tecla Escape:</strong> Presiona ESC para cerrar cualquier modal</li>
+            <li><strong>Navegación con Teclado:</strong> Usa Tab para navegar entre elementos</li>
+            <li><strong>Focus Visible:</strong> Los elementos tienen outline azul cuando tienen focus</li>
+            <li><strong>Atributos ARIA:</strong> Soporte completo para lectores de pantalla</li>
+            <li><strong>Botón de Cerrar Accesible:</strong> El botón X funciona con click, Enter y Espacio</li>
+            <li><strong>Gesión de Focus:</strong> El focus se restaura al elemento que abrió el modal</li>
+            <li><strong>Roles Semánticos:</strong> Estructura WCAG 2.1 compliant</li>
+        </ul>
+    </div>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.ModalInit()
+    </script>
+
+</body>
+
+</html>
