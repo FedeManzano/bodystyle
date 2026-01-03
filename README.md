@@ -248,7 +248,7 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v6.5.0](https://github.com/FedeManzano/bodystyle/releases/tag/v6.5.0) - **Última versión con Accesibilidad WCAG 2.1**
+- [Bodystyle v6.5.0](https://mega.nz/file/MNkDRbKI#y1KCa4MkRsRx5ymrjAONHHplXwtlsrfYFKml079ql1E) - **Última versión con Accesibilidad WCAG 2.1**
 - [Bodystyle v6.0.0](https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s)
 - [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
