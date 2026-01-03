@@ -282,8 +282,8 @@ Las definiciones de tipos se incluyen automáticamente. No necesitas instalar `@
 
 ```typescript
 import BS from 'bodyui2';
-import { Waves } from 'bodyui2';
-import { slideUp, slideDown } from 'bodyui2';
+import  Waves  from 'bodyui2/modulos/Waves';
+import { slideUp, slideDown } from 'bodyui2/modulos/Animaciones';
 
 // TypeScript proporciona autocompletado y validación de tipos
 BS.Toast({
