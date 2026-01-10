@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+
+    <style>
+        #formulario{
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25),
+                        0 0 0 1px rgba(0,0,0,0.05),
+                        inset 0 1px 0 rgba(255,255,255,0.6);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        #formulario:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35),
+                        0 0 0 1px rgba(0,0,0,0.05),
+                        inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div  class="container mt-3">
+        <div id="formulario" class="p-3 px-s-1 bg-gray-s bor-rad-20">
+            <form action="">
+                <div class="row">
+                    <div class="cs-12">
+                        <h2 >Formulario de Registro</h2>
+                    </div>
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="dni">🆔 DNI</label>
+                            <input type="text" id="dni" name="dni" class="form-control" placeholder="Ingrese su DNI">
+                            <small>EJ: 12345678</small>
+                        </div>
+                    </div>
+
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="nombre">👤 Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su Nombre">
+                            <small>EJ: Carlos</small>
+                        </div>
+                    </div>
+
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="apellido">👤 Apellido</label>
+                            <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingrese su Apellido">
+                            <small>EJ: Pérez</small>
+                        </div>
+                    </div>
+
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="email">📬 Email</label>
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Ingrese su Email">
+                            <small>EJ: ejemplo@correo.com</small>
+                        </div>
+                    </div>
+
+                    <div class="cs-12">
+                        <div class="form-group">
+                            <label for="telefono">📱 Teléfono</label>
+                            <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Ingrese su Teléfono">
+                            <small>EJ: +34 123 456 789</small>
+                        </div>
+                    </div>
+
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="clave">🔑 Clave</label>
+                            <input type="password" id="clave" name="clave" class="form-control" placeholder="Ingrese su Teléfono">
+                            <small>EJ: Letras y números de 8 a 16 caracteres</small>
+                        </div>
+                    </div>
+                    <div class="cs-12 cm-6">
+                        <div class="form-group">
+                            <label for="clave_repetir">🔑 Repetir Clave</label>
+                            <input type="password" id="clave_repetir" name="clave_repetir" class="form-control" placeholder="Ingrese su Teléfono">
+                            <small>EJ: Letras y números de 8 a 16 caracteres</small>
+                        </div>
+                    </div>
+                    <div class="cs-12 d-flex just-end mt-3">
+                        <button type="submit" class="btn fd-bodyui">Registrarse</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        // Inicialización de los módulos
+    </script>
+</body>
+
+</html>

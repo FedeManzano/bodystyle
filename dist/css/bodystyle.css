@@ -1996,64 +1996,84 @@ a.link:hover {
   .ancho-m-100 {
     width: 100% !important;
   }
-  .height-m-5 .alto-m-5 {
+  .height-m-5,
+  .alto-m-5 {
     height: 5% !important;
   }
-  .height-m-10 .alto-m-10 {
+  .height-m-10,
+  .alto-m-10 {
     height: 10% !important;
   }
-  .height-m-15 .alto-m-15 {
+  .height-m-15,
+  .alto-m-15 {
     height: 15% !important;
   }
-  .height-m-20 .alto-m-20 {
+  .height-m-20,
+  .alto-m-20 {
     height: 20% !important;
   }
-  .height-m-25 .alto-m-25 {
+  .height-m-25,
+  .alto-m-25 {
     height: 25% !important;
   }
-  .height-m-30 .alto-m-30 {
+  .height-m-30,
+  .alto-m-30 {
     height: 30% !important;
   }
-  .height-m-35 .alto-m-35 {
+  .height-m-35,
+  .alto-m-35 {
     height: 35% !important;
   }
-  .height-m-40 .alto-m-40 {
+  .height-m-40,
+  .alto-m-40 {
     height: 40% !important;
   }
-  .height-m-45 .alto-m-45 {
+  .height-m-45,
+  .alto-m-45 {
     height: 45% !important;
   }
-  .height-m-50 .alto-m-50 {
+  .height-m-50,
+  .alto-m-50 {
     height: 50% !important;
   }
-  .height-m-55 .alto-m-55 {
+  .height-m-55,
+  .alto-m-55 {
     height: 55% !important;
   }
-  .height-m-60 .alto-m-60 {
+  .height-m-60,
+  .alto-m-60 {
     height: 60% !important;
   }
-  .height-m-65 .alto-m-65 {
+  .height-m-65,
+  .alto-m-65 {
     height: 65% !important;
   }
-  .height-m-70 .alto-m-70 {
+  .height-m-70,
+  .alto-m-70 {
     height: 70% !important;
   }
-  .height-m-75 .alto-m-75 {
+  .height-m-75,
+  .alto-m-75 {
     height: 75% !important;
   }
-  .height-m-80 .alto-m-80 {
+  .height-m-80,
+  .alto-m-80 {
     height: 80% !important;
   }
-  .height-m-85 .alto-m-85 {
+  .height-m-85,
+  .alto-m-85 {
     height: 85% !important;
   }
-  .height-m-90 .alto-m-90 {
+  .height-m-90,
+  .alto-m-90 {
     height: 90% !important;
   }
-  .height-m-95 .alto-m-95 {
+  .height-m-95,
+  .alto-m-95 {
     height: 95% !important;
   }
-  .height-m-100 .alto-m-100 {
+  .height-m-100,
+  .alto-m-100 {
     height: 100% !important;
   }
 }
@@ -25578,8 +25598,8 @@ textarea::placeholder {
 .form-grupo label,
 .form-group label,
 .form-grupo-linea label {
-  font-size: 1.125em !important;
-  line-height: 2.5em;
+  font-size: 1em !important;
+  line-height: 1.7em;
   color: black;
   white-space: nowrap;
 }
