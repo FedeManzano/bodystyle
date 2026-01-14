@@ -234,6 +234,11 @@ describe('InputHandler.js', () => {
             const span = document.querySelector('.archivo-seleccionado');
 
             // Simular selección de archivo
+            Object.defineProperty(input, 'files', {
+                writable: true,
+                value: [{ name: 'documento.pdf' }]
+            });
+
             Object.defineProperty(input, 'value', {
                 writable: true,
                 value: 'C:\\fakepath\\documento.pdf'
@@ -241,12 +246,17 @@ describe('InputHandler.js', () => {
 
             input.dispatchEvent(new Event('change'));
 
-            expect(span.textContent).toBe('C:\\fakepath\\documento.pdf');
+            expect(span.textContent).toBe('documento.pdf');
         });
 
         test('Debe cambiar color a verde cuando se selecciona archivo', () => {
             const input = document.getElementById('file-input');
             const span = document.querySelector('.archivo-seleccionado');
+
+            Object.defineProperty(input, 'files', {
+                writable: true,
+                value: [{ name: 'documento.pdf' }]
+            });
 
             Object.defineProperty(input, 'value', {
                 writable: true,
@@ -264,6 +274,11 @@ describe('InputHandler.js', () => {
             const span = document.querySelector('.archivo-seleccionado');
 
             // Primero seleccionar un archivo
+            Object.defineProperty(input, 'files', {
+                writable: true,
+                value: [{ name: 'documento.pdf' }]
+            });
+
             Object.defineProperty(input, 'value', {
                 writable: true,
                 value: 'C:\\fakepath\\documento.pdf'
@@ -271,6 +286,11 @@ describe('InputHandler.js', () => {
             input.dispatchEvent(new Event('change'));
 
             // Luego limpiar
+            Object.defineProperty(input, 'files', {
+                writable: true,
+                value: []
+            });
+
             Object.defineProperty(input, 'value', {
                 writable: true,
                 value: ''
