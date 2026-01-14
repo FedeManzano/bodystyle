@@ -5,7 +5,7 @@
 <h1 align="center">Bodystyle</h1>
 
 <p align="center">
-  <a href="https://mega.nz/file/MNkDRbKI#y1KCa4MkRsRx5ymrjAONHHplXwtlsrfYFKml079ql1E"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
+  <a href="https://mega.nz/file/8cFFjSYZ#y82eMpvPRGRoQZUA8Lktuj3oHmFVMonJAE8hgFHj1MA"><img src="https://img.shields.io/badge/MEGA-Download-green" alt="MEGA Download"></a>
   <a href="https://mega.nz/file/dFMVnaSD#Bl1jtd8F_wN4Egd-_ijJdodQPOkI0owOw8N3kT7sgCo"><img src="https://img.shields.io/badge/Documentation-v3.0.0-blue" alt="Docs Download"></a>
   <a href="https://bodystyle.webcindario.com"><img src="https://img.shields.io/badge/Documentation-Online-blue" alt="Documentation"></a>
   <a href="https://www.npmjs.com/package/bodyui2"><img src="https://img.shields.io/badge/NPM-bodyui2-orange" alt="NPM"></a>
@@ -248,7 +248,7 @@ npm install bodyui2
 ```
 
 ### Opción 2: Descarga Directa
-- [Bodystyle v6.5.0](https://mega.nz/file/MNkDRbKI#y1KCa4MkRsRx5ymrjAONHHplXwtlsrfYFKml079ql1E) - **Última versión con Accesibilidad WCAG 2.1**
+- [Bodystyle v6.5.0](https://mega.nz/file/8cFFjSYZ#y82eMpvPRGRoQZUA8Lktuj3oHmFVMonJAE8hgFHj1MA) - **Última versión con Accesibilidad WCAG 2.1**
 - [Bodystyle v6.0.0](https://mega.nz/file/pVFWWBDa#cxmhYVVSguG1mPhhqUruEEKNmvXuvbYH0lWBlGxJD_s)
 - [Bodystyle v5.8.0](https://mega.nz/file/IEtFjbhL#9avwQbK0EicykZx_vGLWaMUemt53lhvpDZHRYykynNw)
 - [Bodystyle v5.0.0](https://mega.nz/file/UQk3WQhS#e_TBHmfNXsHuJzE9rxir387MSVM_NFv8SdEZe1VAlZI)
@@ -281,12 +281,12 @@ Las definiciones de tipos se incluyen automáticamente. No necesitas instalar `@
 ### Uso Básico con TypeScript
 
 ```typescript
-import BS from 'bodyui2';
+import 'bodyui2/dist/js/bodystyle.bundle.js'; // OBJETO GLOBAL BS => window.BS
 import  Waves  from 'bodyui2/modulos/Waves';
 import { slideUp, slideDown } from 'bodyui2/modulos/Animaciones';
 
 // TypeScript proporciona autocompletado y validación de tipos
-BS.Toast({
+window.BS.Toast({
   mensaje: 'Hola TypeScript!',
   clases: ['bg-red', 'bor-rad-10', 'c-white'], // Color de fondo, radio de borde y color de texto
   duracion: 3000,
@@ -435,8 +435,8 @@ Bodystyle está compuesto por **cuatro módulos independientes** que pueden desc
 
 | Módulo | Versión | Descripción | Descarga |
 |--------|---------|-------------|----------|
-| **Grid** | 6.5.0 | Sistema de grilla responsive para layouts | [Descargar](https://mega.nz/file/tZcVlayD#mETMP2ASl16Vclfc_z7N4ROLrMLGbo7Pm5y_8T9BLO8) |
-| **Utils** | 5.0.0 | Utilidades de texto, espaciado y Flexbox | [Descargar](https://mega.nz/file/IFUFEJYY#IFXT7wOqocaCoOe-KVPBFyYmV0li0UiNpGhBBV-X030) |
+| **Grid** | 6.5.0 | Sistema de grilla responsive para layouts | [Descargar](https://mega.nz/file/0AMFRJTI#m7jZbhubbQyecdwasf5hA1goQEAT0YTNNxPoxh_i_sI) |
+| **Utils** | 6.5.0 | Utilidades de texto, espaciado y Flexbox | [Descargar](https://mega.nz/file/IVskib6T#x7cYUGISEbASO6wj6k24gV5uhQK5ZYSFXO1rgVIglO80) |
 | **Dynamics** | 3.0.0 | Componentes dinámicos e interactivos (dytips) | [Descargar](https://mega.nz/file/hI9RWToJ#H6No147H25Bxh6hE8Q2jlGSB-JBbTYHBgoGBptaFnUw) |
 | **Show-Code** | 3.0.0 | Resaltado de sintaxis para código | [Descargar](https://mega.nz/file/xVVFCaxR#oBrMTHaTmhwca9ajcSyM65XpoP_UHJH3g-qbv3ymP3w) |
 
