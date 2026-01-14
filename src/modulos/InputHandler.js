@@ -71,12 +71,20 @@
     var archivoSeleccionado = () => {
         // Crea el elemento que permite mostrar la leyenda 
         // Seleccionar archivo ...
-        const elemento = document.createElement("span")
-        elemento.className = "archivo-seleccionado"
-        elemento.textContent = "Seleccionar un archivo ..."
-
         document.querySelectorAll(".f-label").forEach((label) => {
-            label.appendChild(elemento.cloneNode(true))
+            // Verificar si ya existe el span, si no, crearlo
+            let archivoSpan = label.querySelector(".archivo-seleccionado")
+            if (!archivoSpan) {
+                const elemento = document.createElement("span")
+                elemento.className = "archivo-seleccionado"
+                elemento.textContent = "Seleccionar un archivo ..."
+                label.appendChild(elemento)
+            } else {
+                // Si existe, asegurarse que tenga el texto por defecto
+                if (archivoSpan.textContent === "") {
+                    archivoSpan.textContent = "Seleccionar un archivo ..."
+                }
+            }
         })
 
         document.querySelectorAll(".input-file").forEach((input) => {
@@ -89,7 +97,9 @@
                     archivoSpan.style.color = "rgb(56, 56, 56)"
                     archivoSpan.style.borderBottom = "1px solid rgb(136, 136, 136)"
                 } else {
-                    archivoSpan.textContent = input.value
+                    // Extraer solo el nombre del archivo
+                    const nombreArchivo = input.files[0].name
+                    archivoSpan.textContent = nombreArchivo
                     archivoSpan.style.color = "rgb(22, 112, 60)"
                     archivoSpan.style.borderBottom = "1px solid rgb(22, 112, 60)"
                 }
