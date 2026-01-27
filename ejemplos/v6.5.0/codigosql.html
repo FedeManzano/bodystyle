@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces de CSS de Bodystyle -->
+    <link rel="stylesheet" href="../../dist/css/bodystyle.css">
+    <link rel="stylesheet" href="../../dist/css/show-code/show-dark.css">
+    <title>Plantilla de Ejemplos Reutilizables</title>
+</head>
+
+<body class="bg-black">
+
+    <pre class="cod-sql">
+        SELECT * 
+        FROM usuarios 
+        WHERE estado = 'activo' 
+        ORDER BY fecha_creacion DESC;
+    </pre>
+
+    <!-- Enlaces de JS de Bodystyle -->
+    <script src="../../dist/js/bodystyle.js"></script>
+    <script>
+        BS.CodigoSqlInit()
+    </script>
+</body>
+
+</html>

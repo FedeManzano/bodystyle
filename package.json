@@ -1,6 +1,6 @@
 {
   "name": "bodyui2",
-  "version": "6.5.1",
+  "version": "6.5.2",
   "description": "Biblioteca de estilos estáticos y dinámicos para la creación del Front-End WEB.",
   "main": "dist/js/bodystyle.js",
   "types": "src/types/index.d.ts",
@@ -36,7 +36,7 @@
   "style": "dist/css/bodystyle.css",
   "sass": "sass/bodystyle.scss",
   "dependencies": {
-    "@bodystyle/show-code": "^2.0.0",
+    "@bodystyle/show-code": "^2.5.1",
     "dytips": "^3.0.0"
   },
   "devDependencies": {

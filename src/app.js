@@ -30,6 +30,7 @@ import Js from "./modulos/CodigoJs"
 import Css from "./modulos/CodigoCss"
 import Java from "./modulos/CodigoJava"
 import C from "./modulos/CodigoC"
+import CodigoSql from "./modulos/CodigoSql"
 import ComentarioDinamico from "./modulos/ComentarioDinamico"
 import Personalizado from "./modulos/Personalizado"
 import Navigation from "./modulos/Navigation"
@@ -40,6 +41,7 @@ import EfectoScroll from "./modulos/EfectoScroll"
 
 (function () {
 
+ 
     /************************** MÓDULOS INICIADOS AUTOMÁTICAMNTE ******************/
     /******************************************************************************/
 
@@ -211,6 +213,8 @@ import EfectoScroll from "./modulos/EfectoScroll"
      * C dentro las etiquetas pre de html.
      */
     const CodigoCInit = (config) => C.iniciar(config)
+
+    const CodigoSqlInit = (config) => CodigoSql.Init(config)
 
     /************************* Navegación **********************************/
 
@@ -428,7 +432,7 @@ import EfectoScroll from "./modulos/EfectoScroll"
         CodigoJsInit: (config) => CodigoJsInit(config),
         CodigoJavaInit: (config) => CodigoJavaInit(config),
         CodigoCInit: (config) => CodigoCInit(config),
-
+        CodigoSqlInit: (config) => CodigoSqlInit(config),
         // Alias
         CodeHtmlInit: (config) => CodigoHtmlInit(config),
         CodeCssInit: (config) => CodigoCssInit(config),
