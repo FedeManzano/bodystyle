@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/app.js',
 
   output: {
-    filename: 'bodystyle.min.js',
+    filename: 'bodystyle.bundle.js',
     path: path.join(__dirname, 'dist/js'),
   },
   resolve: {
