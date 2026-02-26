@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://fotos.miarroba.com/bodystyle/19-bodystylecss" width="300px" alt="Bodystyle Logo" />
+  <img src="https://fotos.miarroba.com/th/e029/2A6A4EBA8C2C69A08A0D2B69A089FA.png" width="300px" alt="Bodystyle Logo" />
 </p>
+
 
 <h1 align="center">Bodystyle</h1>
 
