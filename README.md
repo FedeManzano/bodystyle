@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo/logo_bodystyle.svg" width="250px" alt="Bodystyle Logo" />
+  <img src="[logo/logo_bodystyle.svg](https://fotos.miarroba.com/bodystyle/19-bodystylecss/)" width="300px" alt="Bodystyle Logo" />
 </p>
 
 <h1 align="center">Bodystyle</h1>
