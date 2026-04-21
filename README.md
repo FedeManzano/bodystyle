@@ -220,17 +220,17 @@ La forma más rápida de empezar es usando el CDN:
     <title>Mi Proyecto con Bodystyle</title>
     
     <!-- Bodystyle CSS -->
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/css/bodystyle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bodyui2@6.5.4/dist/css/bodystyle.min.css">
 </head>
 <body>
     
     <h1 class="ta-c c-blue fz-50">¡Hola Bodystyle!</h1>
     <div class="contenedor">
-        <button class="btn bg-blue">Mi Botón</button>
+        <button class="btn bg-blue com-trigger" data-info="Esto es un botón azul de Bodystyle">Mi Botón</button>
     </div>
 
     <!-- Bodystyle JS -->
-    <script src="https://rawcdn.githack.com/FedeManzano/bodystyle/refs/heads/master/dist/js/bodystyle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bodyui2@6.5.4/dist/js/bodystyle.min.js"></script>
     <script>
         BS.ToolTipsInit();
     </script>
